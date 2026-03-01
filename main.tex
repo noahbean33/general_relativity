@@ -1,0 +1,217 @@
+% file: main.tex
+
+\documentclass[10pt,a4paper,oneside]{article}
+\usepackage{setspace}
+%\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+%\renewcommand{\rmdefault}{phv}
+%\renewcommand{\sfdefault}{phv}
+\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\onehalfspacing
+
+\setcounter{tocdepth}{2} % to get subsubsections in toc 
+% cf. http://www.latex-community.org/forum/viewtopic.php?f=47&p=44760
+
+\usepackage{amssymb,latexsym}
+\usepackage{amsmath, amsthm}
+
+%for bibliography; installation using 'sudo tlmgr install amsrefs'
+\usepackage{amsrefs}
+
+\usepackage{graphics}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue}
+
+\usepackage{cancel} % http://jansoehlke.com/2010/06/strikethrough-in-latex/
+
+\usepackage{listings} % http://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+% http://olmjo.com/files/teaching/PSC505/LaTeXandR.pdf
+
+% package for flower symbol (\ding(96))
+\usepackage{pifont}
+% required installation: sudo apt-get install texlive-fonts-recommended (30MB)
+% http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf
+
+\usepackage{tikz} % for diagrams
+\usetikzlibrary{matrix,positioning,arrows,calc,decorations.pathmorphing,shapes}
+% for snaky lines (http://tex.stackexchange.com/questions/209942/curved-arrows-in-tikz) 
+\tikzset{snake it/.style={-stealth,
+decoration={snake, 
+    amplitude = .4mm,
+    segment length = 2mm,
+    post length=0.9mm},decorate}}
+
+\usepackage[parfill]{parskip}
+
+\usepackage{framed} %for putting some text in boxes using \begin{framed}
+
+\usepackage{enumerate}
+
+%for displaying tensor indices properly. requires installation of tensor package using 'sudo tlmgr install tensor'
+\usepackage{tensor}
+
+%for placing captions of figures on the side instead of above/below the figure
+\usepackage{sidecap}
+\linespread{1.2}
+
+%plain makes sure that we have page numbers
+\pagestyle{plain}
+
+\theoremstyle{plain}
+\newtheorem{axiom}{Axiom}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem*{main}{Main Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{notation}{Notation}
+
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{theorem}{section}
+
+%symbol for maps
+\renewcommand{\to}{\longrightarrow}
+\newcommand{\injmapto}{\hookrightarrow}
+\newcommand{\surjmapto}{\twoheadrightarrow}
+\newcommand{\linearmapto}{\stackrel{\sim}{\longrightarrow}}
+\newcommand{\projmapto}{\stackrel{\pi}{\longrightarrow}}
+
+%for real numbers
+\newcommand{\R}{\mathbb{R}}
+
+% manifold, atlas and topology
+\newcommand{\A}{\mathcal{A}}
+%\newcommand{\O}{\mathcal{O}}
+\newcommand{\mfd}{(M, \mathcal{O}, \mathcal{A})}
+
+\newcommand{\after}{\circ}
+\newcommand{\stdtop}{\mathcal{O}_{std}}
+\newcommand{\cibasis}[2][]{\frac{\partial #1}{\partial #2}}
+
+%connection coefficient functions or gammas
+\newcommand{\ccf}[2]{\Gamma\indices{^{#1}_{#2}}}
+\newcommand{\ccfx}[3]{\left(\Gamma_{#3}\right)\indices{^{#1}_{#2}}} % with chart index
+
+%set theory symbols
+%\renewcommand{\exists}{\exists\,}
+%\renewcommand{\forall}{\forall\,}
+
+%This defines a new command \questionhead which takes one argument and prints out Question #. with some space.
+\newcommand{\questionhead}[1]
+  {
+   \noindent{\small\bf Question #1.}
+  }
+
+\newcommand{\problemhead}[1]
+  {
+   \noindent{\small\bf Problem #1.}
+  }
+
+\newcommand{\exercisehead}[1]
+  { \smallskip
+   \noindent{\small\bf Exercise #1.}
+  }
+
+\newcommand{\solutionhead}[1]
+  {
+   \noindent{\small\bf Solution #1.}
+  }
+
+\newcommand{\bubblethis}[2]{
+  \tikz[remember picture,baseline]{\node[anchor=base,inner sep=0,outer sep=0](#1) {#1};\node[overlay,cloud callout,callout relative pointer={(0.2cm,-0.7cm)}, aspect=2.5,fill=white!90] at ($(#1.north)+(-0.5cm,1.6cm)$) {#2};}
+}
+
+%-----------------------------------
+\begin{document}
+
+%-----------------------------------
+
+\title{Lecture Notes on General Relativity (GR)}
+\author{lazierthanthou \\ (\url{https://github.com/lazierthanthou/Lecture_Notes_GR})}
+%\thanks{}
+%\keywords{General Relativity, Gravity, Differential Geometry, Manifolds, Integration, mathematics, physics}
+\date{\today}
+
+\maketitle
+
+\tableofcontents
+
+\begin{abstract}
+These are lecture notes on General Relativity.
+
+They are based on the \href{https://www.youtube.com/channel/UCUHKG3S9N_QeIE2jQXd2-VQ/feed}{Central Lecture Course} by \textbf{Dr. Frederic P. Schuller} (\textbf{A thorough introduction to the theory of general relativity}) introducing the mathematical and physical foundations of the theory in 24 self-contained lectures at the International Winter School on Gravity and Light in Linz/Austria for the WE Heraeus International Winter School of Gravity and Light, 2015 in Linz as part of the world-wide celebrations of the 100th anniversary of Einstein's theory of general relativity and the International Year of Light 2015.
+
+These lectures develop the theory from first principles and aim at an audience ranging from ambitious undergraduate students to beginning PhD students in mathematics and physics. Satellite Lectures (see other videos on this channel) by Bernard F Schutz (Gravitational Waves), Domenico Giulini (Canonical Formulation of Gravity), Marcus C Werner (Gravitational Lensing) and Valeria Pettorino (Cosmic Microwave Background) expand on the topics of this central lecture course and take students to the research frontier.
+
+Spacetime is the physical key object, we shall be concerned about.
+
+\begin{framed}
+\textbf{Spacetime} is a \textbf{4-dimensional topological manifold} with a \textbf{smooth atlas} carrying a \textbf{torsion-free connection} compatible with a \textbf{Lorentzian metric} and a \textbf{time orientation} satisfying the \textbf{Einstein equations}.
+\end{framed}
+
+\end{abstract}
+
+\include{lecture1} % Topology
+%\include{tutorial1}
+
+\include{lecture2} % Manifolds
+%\include{tutorial2}
+
+\include{lecture3} % Multilinear Algebra
+
+\include{lecture4} % Differentiable Manifolds
+%\include{tutorial4}
+
+\include{lecture5} % Tangent Spaces
+
+\include{lecture6} % Fields
+
+\include{lecture7} % Connections
+%\include{tutorial4}
+
+\include{lecture8} % Parallel Transport & Curvature
+%\include{tutorial8}
+
+\include{lecture9} % Newtonian spacetime is curved!
+
+\include{lecture10} % Metric Manifolds
+%\include{tutorial9}
+
+\include{lecture11} % Symmetry
+%\include{tutorial11}
+
+\include{lecture12} % Integration
+\include{lecture13} % Relativistic Spacetime
+\include{lecture14} % Matter
+
+\include{lecture15} % Einstein Gravity
+%\include{tutorial13} % Schwarzschild Spacetime
+
+\include{lecture18} % Canonical Formulation of GR-I
+
+\include{lecture22} % Black Holes
+
+%\include{lecture-others}
+
+\begin{bibdiv}
+\begin{biblist}
+\bib{mse465672}{misc}{
+    title={Are there simple examples of Riemannian manifolds with zero curvature and nonzero torsion},    
+    author={Sepideh Bakhoda (http://math.stackexchange.com/users/36591/sepideh-bakhoda)},    
+    note={URL: http://math.stackexchange.com/q/465672 (version: 2013-08-12)},    
+    eprint={http://math.stackexchange.com/q/465672},    
+    organization={Mathematics Stack Exchange}  
+}
+\end{biblist}
+\end{bibdiv}
+
+\end{document}

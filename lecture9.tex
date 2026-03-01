@@ -1,0 +1,183 @@
+\section{Newtonian spacetime is curved!}
+
+\begin{axiom}[Newton I:]
+  A body on which \emph{no} force acts moves uniformly along a straight line.
+\end{axiom}
+
+\begin{axiom}[Newton II:]
+Deviation of a body's motion from such uniform straight motion is effected by a force, reduced by a factor of the body's reciprocal mass.  
+\end{axiom}
+
+\textit{Remarks: \begin{enumerate}
+\item[(1)] 1st axiom - in order to be relevant - must be read as a measurement prescription for the geometry of space. If somehow, we know that no force acts on a particle, we know that the path it takes is a straight line -- thus, we learn about the geometry of space. After all, unlike in maths, there is no obvious way to tell what is a straight line. Remember, if we don't know what a straight line is, we don't know what a deviation from a straight line is.
+\item[(2)] Since gravity universally acts on every particle, in a universe with at least two particles, gravity must not be considered a force if Newton I is supposed to remain applicable.  
+\end{enumerate}}
+
+\subsection{Laplace's questions}
+\underline{Question}: Can gravity be encoded in a curvature of space, such that its effects show if particles under the influence of (no other) force we postulated to more along straight lines in this curved space?
+
+\underline{Answer}: No!
+
+\begin{proof}
+Gravity, as a force point of view:
+\[
+m\ddot{x}^{\alpha}(t) = \underbrace{mf^{\alpha}}_{force : F^{\alpha}}(x(t))
+\]
+where $-\partial_{\alpha} f^{\alpha} = 4 \pi G \rho$ (Poisson); $\rho =$ mass density of matter. \\
+The same $m$ appearing on both sides of the equation is an experimental fact, also known as the \textbf{weak equivalence principle}.
+\[
+\therefore \ddot{x}^{\alpha}(t) - f^{\alpha}(x(t)) = 0
+\]
+Laplace asks: Is this ($\ddot{x}(t)$) of the form $\ddot{x}^{\alpha}(t) + \ccf{\alpha}{\beta \gamma}(x(t)) \dot{x}^{\beta}(t) \dot{x}^{\gamma}(t) = 0$? That is, does it take the form of autoparallel equation?
+
+No. Because the $\Gamma$ can only depend on the point $x$ where you are, but the velocities $\dot{x}^{\beta}(t)$ and $\dot{x}^{\gamma}(t)$ can take any value and therefore the $\Gamma$s cannot take care of the $f^{\alpha}$ in the preceding equation. Had there been such $\Gamma$s, we would be able to find the notion of straight line that could have absorbed the effect that we usually attribute to a force.
+
+Conclusion: One cannot find $\Gamma$ s such that Newton's equation takes the form of an autoparallel equation.
+\end{proof}
+
+\subsection{The full wisdom of Newton I}
+Laplace asked: Can we find a curvature of space such that particles move along straight lines?
+
+Use the information from Newton's first law that particles (under influence of no force) move not just in straight line, but also \textbf{uniformly}. A curve, after all, is not just a set of points, but also how their parameter is associated with the points.
+
+Introduce the appropriate setting to talk about the difference easily. How? We use spacetime instead of just space. By using the extra coordinate viz. time, we do not need to keep track of the curve parameter since we can just refer to time to ascertain uniformity of the motion.
+
+\textbf{Insight:} $\boxed{\text{Uniform \& straight motion}}$ in space is simply straight motion in \textbf{spacetime}. We do not need to say uniform. This can be seen by drawing the path of the particle in a t-x graph, wherein straight line results only when the motion is uniform. So let's try in spacetime: \\ 
+
+$\boxed{\left. \begin{aligned}
+  \text{Let } x : \mathbb{R} \to \mathbb{R}^3 \\
+  \text{\quad be a particle's} \\
+  \text{trajectory in space} \end{aligned} \right\rbrace \longleftrightarrow \left\lbrace \right.
+\begin{aligned}
+  & \text{worldline (history) of the particle} \\
+  X : & \mathbb{R} \to \mathbb{R}^4 \\
+  & t \mapsto (t, x^1(t), x^2(t), x^3(t)) := (X^0(t), X^1(t), X^2(t), X^3(t)) \end{aligned}}$
+
+That's all it takes. Let us assume that $x : \mathbb{R} \to \mathbb{R}^3$ satisfies Newton's law concerning gravitational force, i.e. we can omit $m$ on both sides of the equation $\ddot{x}^\alpha = - f^\alpha(x(t))$. \\
+Trivial rewritings: \\
+$\dot{X}^0 =1$
+\[
+\Longrightarrow \boxed{\begin{aligned}
+  & \ddot{X}^0 & = 0 \\
+  & \underbrace{\ddot{X}^{\alpha} - f^{\alpha}(X(t))\cdot \dot{X}^0 \cdot \dot{X}^0}_{(\alpha = 1,2,3)} & = 0
+\end{aligned} } \quad \, \Longrightarrow \begin{gathered}
+  a = 0,1,2,3 \\
+  \boxed{\ddot{X}^a + \ccf{a}{bc} \dot{X}^b \dot{X}^c = 0} \\
+  \text{autoparallel eqn. in spacetime}
+\end{gathered}
+\]
+
+Yes, choosing $\ccf{0}{ab} = 0, \quad \ccf{\alpha}{\beta \gamma} = 0 = \ccf{\alpha}{0 \beta} = \ccf{\alpha}{\beta 0}$. Only $\boxed{\ccf{\alpha}{00} \overset{!}{=} -f^{\alpha}}$.
+
+\textbf{Question}: Is this a coordinate-choice artifact? \\
+No, since $R\indices{^{\alpha}_{0 \beta 0}} = - \cibasis{x^{\beta}} f^{\alpha}$ (only non-vanishing components) (tidal force tensor, $-$ the Hessian of the force component)
+
+Ricci tensor $\Longrightarrow  R_{00} = R\indices{^m_{0m0}} = -\partial_{\alpha} f^{\alpha} = 4 \pi G \rho$
+
+Poisson: $-\partial_{\alpha} f^{\alpha} = 4 \pi G\cdot \rho$
+
+\underline{writing}: $T_{00} = \frac{1}{2}s$
+\[
+\Longrightarrow \boxed{ R_{00} = 8 \pi G T_{00}}
+\]
+Einstein in 1912 $ \boxed{\xcancel{R_{ab} = 8\pi G T_{ab}}}$
+
+\underline{Conclusion}: Laplace's idea works in spacetime
+
+\underline{Remark}
+\[
+\begin{gathered}
+  \ccf{\alpha}{00} = -f^{\alpha} \\
+  R\indices{^{\alpha}_{\beta \gamma \delta}} = 0 \quad \quad \, \alpha, \beta , \gamma, \delta = 1,2,3 \\
+  \boxed{R_{00} = 4 \pi G \rho}
+\end{gathered}
+\]
+
+\underline{Q}: What about transformation behavior of LHS of
+\[
+\underbrace{\ddot{x}^a + \ccf{a}{bc} \dot{X}^b \dot{X}^c}_{\underbrace{(\nabla_{v_X}v_X)^a}_{:= a^a \text{``acceleration \underline{vector}''}}} = 0
+\]
+
+\subsection{The foundations of the geometric formulation of Newton's axiom}
+\begin{definition}
+A \textbf{Newtonian spacetime} is a quintuple $(M, \mathcal{O}, \mathcal{A}, \nabla, t)$ where $(M, \mathcal{O}, \mathcal{A})$ is a 4-dimensional smooth manifold, and \\
+$t : M \to \mathbb{R} \text{ smooth function }$
+
+\begin{enumerate}
+\item[(i)] ``There is an absolute space'' \quad $(dt)_p \neq 0 \quad \quad \, \forall \, p \in M$
+\item[(ii)] ``Absolute time flows uniformly''
+\[
+\underbrace{\nabla dt}_{(0,2)\text{-tensor field}} = 0 \quad \quad \text{everywhere}
+\]
+
+\item[(iii)] add to axioms of Newtonian spacetime $\nabla = 0$ torsion free
+\end{enumerate}
+\end{definition}
+
+\begin{definition}
+Absolute space at time $\tau$
+\[
+S_{\tau} := \lbrace p \in M | t(p) = \tau \rbrace \\
+\xrightarrow{dt \neq 0} M = \coprod S_{\tau}
+\]
+\end{definition}
+
+\begin{definition} A vector $X \in T_pM$ is called
+\begin{enumerate}[(a)]
+\item \textbf{future-directed}, if $dt(X) > 0$
+\item \textbf{spatial}, if $dt(X) = 0$
+\item \textbf{past-directed}, if $dt(X) < 0$
+\end{enumerate}
+\end{definition}
+
+\underline{Picture}
+\underline{Newton I}: The worldline of a particle under the influence of no force (gravity isn't one, anyway) is a \underline{future-directed autoparallel} i.e.
+\[
+\begin{gathered}
+  \nabla_{v_{X}} v_{X} = 0 \\
+  dt(v_{X}) > 0 
+\end{gathered}
+\]
+
+\underline{Newton II}: \\
+$\nabla_{v_{X}} v_X = \frac{F}{m} \Longleftrightarrow m \cdot a = F$ \\
+where $F$ is a spatial vector field: $dt(F) = 0$.
+
+\textbf{Convention}: restrict attention to atlases $\mathcal{A}_{stratified}$ whose charts $(U,x)$ have the property
+\[
+\begin{aligned}
+  & x^0 : U \to \mathbb{R} \\
+  & x^1 : U \to \mathbb{R} \\
+  & \vdots \quad \, \vdots \\
+  & x^3
+\end{aligned}
+\quad \quad \,
+x^0 = \left. t \right|_{U} \quad\quad \, \Longrightarrow \begin{gathered} 0 \overset{\text{``absolute time flows uniformly''} }{=} \nabla dt \\
+0 = \nabla_{\cibasis{x^a}} dx^0 = - \ccf{0}{ba} \quad \quad \, a = 0,1,2,3
+\end{gathered}
+\]
+
+Let's evaluate in a chart $(U,x)$ of a stratified atlas $\mathcal{A}_{sheet}$: Newton II: \\
+$\nabla_{v_X} v_X = \frac{F}{m}$ \\
+in a chart.
+\begin{align*}
+(X^0)'' + \cancel{\ccf{0}{cd} (X^a)' (X^b)' }^{ \text{stratified atlas}} = 0  \\
+(X^{\alpha})'' + \ccf{\alpha}{\gamma \delta} X^{\gamma'} X^{\delta'} + \ccf{\alpha}{00} X^{0'} X^{0'} + 2\ccf{\alpha}{\gamma 0} X^{\gamma'} X^{0'} = \frac{F^{\alpha}}{m} \quad \quad \, \alpha = 1,2,3
+\end{align*}
+
+\[
+\begin{gathered}
+\Longrightarrow (X^0)''(\lambda) = 0 \Longrightarrow X^0(\lambda) = a\lambda + b \quad \, \text{ constants $a,b$ } \text{ with} \\
+X^0(\lambda) = (x^0 \after X)(\lambda) \overset{\text{stratified}}{=} (t \after X)(\lambda)
+\end{gathered}
+\]
+\underline{convention} parametrize worldline by absolute time
+\[
+\frac{d}{d\lambda} = a \frac{d}{dt}
+\]
+\[
+\begin{gathered}
+a^2 \ddot{X}^{\alpha} + a^2 \ccf{\alpha}{\gamma \delta} \dot{X}^{\gamma} \dot{X}^{\delta} + a^2 \ccf{\alpha}{00} \dot{X}^0 \dot{X}^0 + 2\ccf{\alpha}{\gamma 0} \dot{X}^{\gamma} \dot{X}^{0} = \frac{F^{\alpha}}{m} \\
+\Longrightarrow \underbrace{\ddot{X}^{\alpha} + \ccf{\alpha}{\gamma \delta} \dot{X}^{\gamma} \dot{X}^{\delta} + \ccf{\alpha}{00} \dot{X}^0 \dot{X}^0 + 2\ccf{\alpha}{\gamma 0} \dot{X}^{\gamma} \dot{X}^{0}}_{a^{\alpha}} = \frac{1}{a^2} \frac{F^{\alpha}}{m}
+\end{gathered}
+\]

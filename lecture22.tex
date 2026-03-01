@@ -1,0 +1,172 @@
+\section{Lecture 22: \underline{Black Holes}}
+
+Only depends on Lectures 1-15, so does lecture on ``Wednesday''
+
+Schwarzschild solution also vacuum solution (from tutorial EY : oh no, must do tutorial)
+
+Study the Schwarzschild as a vacuum solution of the Einstein equation:
+
+$m = G_N M$ where $M$ is the ``mass''
+\[
+g = \left( 1 - \frac{2m}{r} \right) dt \otimes dt - \frac{1}{ 1 - \frac{2m}{r} } dr \otimes dr - r^2 ( d\theta \otimes d\theta + \sin^2{\theta} d\varphi \otimes d\varphi
+\]
+in the so-called \underline{Schwarzschild coordinates}  $\begin{aligned} & & & & \quad \\
+ t \quad & r \quad & \theta \quad & \varphi \\ 
+ (-\infty,\infty) \quad & (0,\infty) \quad & (0,\pi) \quad & (0,2\pi) \end{aligned}$
+
+What staring at this metric for a while, two questions naturally pose themselves:
+
+\begin{enumerate}
+\item[(i)] What exactly happens \@ $r= 2m$?
+
+$\begin{aligned} & & & & \quad \\
+ t \quad & r \quad & \theta \quad & \varphi \\ 
+ (-\infty,\infty) \quad & (0,2m) \cup ( 2m, \infty) \quad & (0,\pi) \quad & (0,2\pi) \end{aligned}$
+
+
+\item[(ii)] Is there anything (in the real world) beyond $\begin{aligned} & \quad \\
+  & t \to -\infty \\
+  & t\to +\infty \end{aligned}$?
+
+\underline{idea}: Map of Linz, blown up
+
+Insight into these two issues is afforded by stopping to stare.  
+
+Look at \emph{geodesic} of $g$, instead.
+
+\end{enumerate}
+
+\subsection{Radial null geodesics}
+
+null - $g(v_{\gamma},v_{\gamma} ) = 0$
+
+Consider null geodesic in ``\underline{Schd}''
+
+\[
+S[\gamma ] = \int d\lambda \left[ \left( 1 - \frac{2m}{r} \right)\dot{t}^2 - \left(1 - \frac{2m}{r} \right)^{-1} \dot{r}^2 - r^2( \dot{\theta}^2 + \sin^2{\theta} \dot{\varphi}^2 ) \right]
+\]
+with $[\dots ] =0$
+
+and one has, in particular, the $t$-eqn. of motion:
+
+\[
+\left( \left( 1-  \frac{2m}{r} \right) \dot{t} \right)^{.} = 0
+\]
+$\Longrightarrow$
+\[
+\boxed{ \left( 1 - \frac{2m}{r} \right)\dot{t} = k } = \text{ const. }
+\]
+Consider \underline{radial} null geodesics \\
+$\theta \overset{!}{=} \text{ const. }$ \quad \quad \, $\varphi = \text{ const. }$
+
+From $\Box $ and $\Box $
+\[
+\Longrightarrow \dot{r}^2 = k^2 \leftrightarrow \dot{r} = \pm k
+\]
+\[
+\Longrightarrow r(\lambda) = \pm k \cdot \lambda
+\]
+Hence, we may consider 
+\[
+\widetilde{t}(r) := t(\pm k\lambda)
+\]
+
+\underline{Case A:} $\oplus$
+
+\[
+\frac{d\widetilde{t}}{dr} = \frac{ \dot{ \widetilde{t}} }{ \dot{r}} = \frac{k}{ \left( 1 - \frac{2m}{r} \right) k } = \frac{r}{r-2m}
+\]
+\[
+\Longrightarrow \widetilde{t}_+(r) = r + 2m \ln{ |r-2m | }
+\]
+(\textbf{outgoing} null geodesics)
+
+\underline{Case b.} $\pm$ (Circle around $-$, consider $-$):
+
+\[
+\widetilde{t}_-(r) = -r - 2m \ln{ |r - 2m | }
+\]
+(\textbf{ingoing} null geodesics)
+
+Picture
+
+\subsection{Eddington-Finkelstein}
+
+Brilliantly simple idea: 
+
+change (on the domain of the Schwarzschild coordinates) to different coordinates, s.t.  \\ 
+in those new coordinates, \\
+\emph{ingoing} null geodesics appear as straight lines, of slope $-1$ 
+
+This is achieved by 
+
+\[
+\bar{t}(t,r,\theta, \varphi) := t + 2m \ln{ | r-2m | }
+\]
+\underline{Recall}: ingoing null geodesic has 
+\[
+\widetilde{t}(r) = -(r + 2m \ln{ |r-2m |} )  \quad \quad \, (Schd coords)
+\]
+
+\[
+\Longleftrightarrow \bar{t} - 2m \ln{ |r-2m |} = -r - 2m \ln{ |r-2m |} + \text{ const. }
+\]
+\[
+\therefore \bar{t} = -r + \text{ const. }
+\]
+
+(Picture)
+
+\emph{outgoing} null geodesics
+
+\[
+\bar{t} = r + 4 m \ln{ |r - 2m| } + \text{ const. }
+\]
+
+Consider the new chart $(V,g)$ while $(U,x)$ was the Schd chart.
+
+\[
+\underbrace{U}_{\text{Schd}} \bigcup \lbrace \text{ horizon } \rbrace = V
+\]
+``chart image of the horizon''
+
+Now calculate the \emph{Schd metric $g$ } w.r.t. Eddington-Finkelstein coords.
+
+\[
+\begin{aligned}
+  & \bar{t}(t,r,\theta,\varphi) = t + 2m\ln{ |r -2m | } \\
+  & \bar{r}(t,r,\theta,\varphi) = r \\
+  & \bar{\theta}(t,r,\theta,\varphi) = \theta \\
+  & \bar{\varphi}(t,r,\theta,\varphi) = \varphi
+\end{aligned}
+\]
+
+EY : 20150422 I would suggest that after seeing this, one would calculate the metric by your favorite CAS.  I like the Sage Manifolds package for Sage Math.  
+
+\href{https://github.com/ernestyalumni/diffgeo-by-sagemnfd/blob/master/Schwarzschild_BH.sage}{Schwarzschild\_BH.sage on github}
+
+\href{https://www.patreon.com/file?s=645287&h=2254352&i=108637}{Schwarzschild\_BH.sage on Patreon}
+
+\href{https://drive.google.com/file/d/0B1H1Ygkr4EWJdllTR3czQU9DeW8/view?usp=sharing}{Schwarzschild\_BH.sage on Google Drive}
+
+\lstset{language=Python,basicstyle=\scriptsize\ttfamily,
+    commentstyle=\ttfamily\color{gray}}
+\begin{lstlisting}[frame=single]
+sage: load(``Schwarzschild_BH.sage'')
+4-dimensional manifold 'M'
+  expr = expr.simplify_radical()
+Levi-Civita connection 'nabla_g' associated with the Lorentzian metric 'g' on the 4-dimensional manifold 'M'
+Launched png viewer for Graphics object consisting of 4 graphics primitives
+\end{lstlisting}
+
+Then calculate the Schwarzschild metric $g$ but in Eddington-Finkelstein coordinates.  Keep in mind to calculate the set of coordinates that uses $\bar{t}$, not $\widetilde{t}$: 
+
+\begin{lstlisting}[frame=single]
+sage: gI.display()
+gI = (2*m - r)/r dt*dt - r/(2*m - r) dr*dr + r^2 dth*dth + r^2*sin(th)^2 dph*dph
+sage: gI.display( X_EF_I_null.frame())
+gI = (2*m - r)/r dtbar*dtbar + 2*m/r dtbar*dr + 2*m/r dr*dtbar + (2*m + r)/r dr*dr + r^2 dth*dth + r^2*sin(th)^2 dph*dph
+\end{lstlisting}
+
+
+

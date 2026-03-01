@@ -1,0 +1,243 @@
+\section{Symmetry}
+\begin{framed}
+This lecture is about symmetry but we will pick a number of elementary techniques in differential geometry that we will need in Einstein's theory. We shall motivate these techniques by appealing to the feeling that the round sphere $(S^2, \mathcal{O}, \mathcal{A},g^{\text{round}})$ has rotational symmetry, while the potato $(S^2, \mathcal{O},\mathcal{A}, g^{\text{potato}})$ does not.
+
+So far we have considered symmetry by having inner product first, and then demanding that w.r.t. that inner product we classify linear maps $A$ acting on vectors $X$ and $Y$ such that inner product of $AX$ and $AY$ results in inner product $XY$.
+
+Here we talk about an altogether different idea. Firstly, since the distinction between the two is entirely contained in $g$, we are talking about the rotational symmetry of $g^{\text{round}}$. Secondly, while an inner product is on one tangent space, there are many different tangent spaces with different inner products. $g$ talks about the distribution of these inner products over the sphere, and that distribution in some sense is rotationally invariant or not.
+
+Therefore, the question is: How to describe the symmetries of a metric? This is important because nobody has solved Einstein's Equations without assuming some sort of additional assumptions such as symmetry of the solution.
+\end{framed}
+
+\subsection{Push-forward map}
+\begin{definition}
+Let $M$ and $N$ be smooth manifolds with tangent bundles $TM$ and $TN$ respectively. Let $\phi : M \to N$ be a smooth map. Then, the \textbf{push-forward map} of $\phi$ is the map
+\begin{align}
+\phi_{\ast} : & TM \to TN \nonumber \\
+& X \mapsto \phi_\ast(X) \nonumber \\
+\label{eq_defPushForwardMap}\text{where } & \phi_\ast(X) f := X (f \after \phi) && (\forall \, f \in C^\infty(N))
+\end{align}
+\end{definition}
+
+\begin{SCfigure}[5][h]
+\label{fig:L11_pushForwardMap}
+  \centering
+	\begin{tikzpicture}
+	  \matrix (m) [matrix of math nodes, row sep=4em, column sep=6em, minimum width=2em]
+	  {
+		TM	&	TN	& \\
+		M	&	N	& \mathbb{R} \\
+	  };
+	  \path[->]  
+	  (m-1-1) edge node [auto] {$\phi_\ast$} (m-1-2)
+	          edge node [auto] {$\pi_{TM}$} (m-2-1)
+	  (m-1-2) edge node [auto] {$\pi_{TN}$} (m-2-2)
+	  (m-2-2) edge node [auto] {$f$} (m-2-3)
+	  (m-2-1) edge node [auto] {$\phi$} (m-2-2)
+	          edge [bend right=30] node [auto] {$f \after \phi$} (m-2-3);
+	\end{tikzpicture}
+    \caption{\textbf{Push-forward map}: $\phi_\ast$ takes a vector $X \in T_pM$ in the tangent space at the point $p \in M$ to the vector $\phi_\ast(X) \in T_qN$ in the tangent space at the point $\phi(p) = q \in N$, such that the action of $\phi_\ast(X)$ on any smooth function $f \in C^\infty(N)$ results in the same value as the action of $X$ on the function $(f \after \phi)$.}
+\end{SCfigure}
+
+\textbf{Note}: If we take an entire fibre at the point $p \in M$, applying $\phi_\ast$ on it remains within the fibre at the point $\phi(p) \in N$. That is \\
+\[
+\phi_\ast(T_pM) \subseteq T_{\phi(p)}N
+\]
+
+\textit{Mnemonic: ``vectors are pushed forward'' across tangent bundles in a manner dictated by the underlying map.}
+
+\textbf{Components of push-forward $\phi_\ast$ w.r.t charts $(U,x) \in \mathcal{A}_M$ and $(V,y) \in \mathcal{A}_N$}: Let $p \in U$ and $\phi(p) \in V$. Since $\cibasis{x^i}_p$ is a vector, we have $\phi_\ast(\cibasis{x^i}_p)$ as a vector in N. Then we can select a component of this vector by using $dy^a$ as follows: \\
+\begin{equation} \label{eq_pushForwardComponents}
+\underbrace{dy^a\left(\phi_\ast\left(\left(\cibasis{x^i}\right)_p\right)\right)}_{:= \phi^a_{\ast i}} = \phi_\ast\left(\left(\cibasis{x^i}\right)_p\right)y^a = \left(\cibasis{x^i}\right)_p (y^a \after \phi) = \left(\cibasis{x^i}\right)_p (y \after \phi)^a := \left(\cibasis[\hat{\phi}^a]{x^i}\right)_p
+\end{equation}
+
+\begin{SCfigure}[5][h]
+  \centering
+	\begin{tikzpicture}
+	  \matrix (m) [matrix of math nodes, row sep=4em, column sep=6em, minimum width=2em]
+	  {
+		M \supseteq U	&	V \subseteq N \\
+		\underbrace{x(U)}_{\subseteq \mathbb{R}^{\text{dim }M}}		&	\underbrace{y(V)}_{\subseteq \mathbb{R}^{\text{dim }N}}\\
+	  };
+	  \path[->]  
+	  (m-1-1) edge node [auto] {$\phi$} (m-1-2)
+	          edge node [auto] {$x$} (m-2-1)
+	          edge node [sloped, anchor=center, above] {$y \after \phi =: \hat{\phi}$} (m-2-2)
+	  (m-1-2) edge node [auto] {$y$} (m-2-2)
+	  (m-2-1) edge node [below] {$y \after \phi \after x^{-1}$} (m-2-2);
+	\end{tikzpicture}
+    \caption{Components of push-forward map w.r.t charts $(U,x) \in \mathcal{A}_M$ and $(V,y) \in \mathcal{A}_N$.}
+\end{SCfigure}
+
+\begin{theorem}
+If $\gamma : \mathbb{R} \to M$ is a curve in $M$, then $\phi \after \gamma : \mathbb{R} \to N$ is a curve in $N$. Then, $\phi_\ast$ pushes the tangent to a curve $\gamma$ (velocity) to the tangent to the curve $(\phi \after \gamma)$, i.e.,
+\begin{equation}
+\phi_\ast\left(v_{\gamma, p}\right) = v_{(\phi \after \gamma), \phi(p)}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Let $p = \gamma(\lambda_0)$. Then $\forall \, f \in C^\infty(N)$,
+\begin{align*}
+\phi_\ast\left(v_{\gamma, p}\right) f & = v_{\gamma, p} (f \after \phi) && (\text{by Eq.~\ref{eq_defPushForwardMap}}) \\
+& = ((f \after \phi) \after \gamma)^\prime (\lambda_0) && (\text{by Eq.~\ref{eq_velocity}}) \\
+& = (f \after (\phi \after \gamma))^\prime (\lambda_0) && (\text{by associativity of composition}) \\
+& = v_{(\phi \after \gamma), \phi(\gamma(\lambda_0))} f && (\text{by Eq.~\ref{eq_velocity}}) \\
+& = v_{(\phi \after \gamma), \phi(p)} f && (\gamma(\lambda_0) = p) \\
+\implies \phi_\ast\left(v_{\gamma, p}\right) & = v_{(\phi \after \gamma), \phi(p)}
+\end{align*}
+\end{proof}
+
+\subsection{Pull-back map}
+\begin{definition}
+Let $M$ and $N$ be smooth manifolds with cotangent bundles $T^\ast M$ and $T^\ast N$ respectively. Let $\phi : M \to N$ be a smooth map. Then, the \textbf{pull-back map} of $\phi$ is the map
+\begin{align}
+\phi^{\ast} : & T^\ast N \to T\ast M \nonumber \\
+& \omega \mapsto \phi^\ast(\omega) \nonumber \\
+\label{eq_defPullBackMap}\text{where } & \phi^\ast(\omega)(X) := \omega (\phi_\ast(X)) && (\forall \, X \in T_pM)
+\end{align}
+\end{definition}
+
+\textbf{Components of pull-back $\phi^\ast$ w.r.t charts $(U,x) \in \mathcal{A}_M$ and $(V,y) \in \mathcal{A}_N$}: Let $p \in U$ and $\phi(p) \in V$. Since $dy^a$ is a covector, we have $\phi^\ast(dy^a_p)$ as a covector in N. Then we can select a component of this covector by using $\cibasis{x^i}$ as follows: \\
+\begin{align*}
+\phi^{\ast a} & := \phi^\ast\left(\left(dy^a\right)_{\phi(p)}\right) \left(\left(\cibasis{x^i}\right)_p\right) \\
+& = \left(dy^a\right)_{\phi(p)} \phi_\ast \left(\left(\cibasis{x^i}\right)_p\right) && (\text{by Eq.~\ref{eq_defPullBackMap}}) \\
+& = \left(\cibasis[\hat{\phi}^a]{x^i}\right)_p  = \phi^a_{\ast i} && (\text{by Eq.~\ref{eq_pushForwardComponents}})
+\end{align*}
+Thus, the components of the push-forward and pull-back maps are exactly the same.
+\begin{align*}
+\left(\phi_\ast\left(X\right)\right)^a & = \phi^a_{\ast i} X^i \\
+\left(\phi^\ast\left(\omega\right)\right)_i & = \phi^a_{\ast i} \omega_a
+\end{align*}
+Remember, $a = (1, \dotsc, \text{dim} N)$ and $i = (1, \dotsc, \text{dim} M)$.
+
+Claim: $\phi^\ast(df) = d(f \after \phi)$. 
+
+\textit{Mnemonic: ``covectors are pulled back'' across tangent bundles in a manner dictated by the underlying map.}
+
+\textbf{Important application}:
+\begin{definition}
+Let $M$ and $N$ be smooth manifolds. Let $\phi : M \injmapto N$ be an injective map. If we know a metric $g$ on $N$, then the \textbf{induced metric} $g_M$ in $M$ is defined using the push-forward map $\phi_\ast$ as follows:
+\begin{equation}\label{eq_inducedMetric}
+\boxed{g_M(X,Y) := g\left(\phi_\ast(X),\phi_\ast(Y)\right)} \quad \quad (\forall \, X, Y \in T_pM)
+\end{equation}
+\end{definition}
+In terms of components,
+\begin{equation}
+\left(\left(g_M\right)_{ij}\right)_p = \left(g_{ab}\right)_{\phi(p)} \left(\cibasis[\hat{\phi}^a]{x^i}\right)_{\phi(p)} \left(\cibasis[\hat{\phi}^b]{x^j}\right)_{\phi(p)}
+\end{equation}
+\textbf{Example}: $N = (\mathbb{R}^3, \stdtop, \mathcal{A})$ and $M = (S^2, \mathcal{O}, \mathcal{A})$, then we can have several injective maps $\phi : S^2 \injmapto \mathbb{R}^3$. For example, $S^2$ could live in $\mathbb{R}^3$ either as a potato or a round sphere. However, suppose $\mathbb{R}^3$ is equipped with the Euclidean metric $g_E$ ...(TODO complete this example)
+
+\subsection{Flow of a complete vector field}
+\begin{definition}
+Let $X$ be a vector field on a smooth manifold $(M,\mathcal{O},\mathcal{A})$. A curve $\gamma : I \subseteq \mathbb{R} \to M$ is called an \textbf{integral curve of $X$} if 
+\[
+v_{\gamma,\gamma(\lambda)} = X_{\gamma(\lambda)}
+\]
+\end{definition}
+
+\begin{definition} A vector field $X$ is \textbf{complete} if all integral curves have $I = \mathbb{R}$ (i.e. domain is all of $\mathbb{R}$).
+\end{definition}
+
+\begin{theorem}
+Compactly supported smooth vector field is complete.  
+\end{theorem}
+
+\begin{definition} The \textbf{flow of a complete vector field $X$} on a manifold $M$ is a 1-parameter family
+\begin{align*}
+h^X : & \mathbb{R} \times M \to M \\
+& (\lambda, p) \mapsto \gamma_p(\lambda)
+\end{align*}
+where $\gamma_p : \mathbb{R} \to M$ is the integral curve of $X$ with $\gamma(0) = p$. 
+\end{definition}
+
+Then for fixed $\lambda \in \mathbb{R}$, $h_{\lambda}^X : M \to M$ is smooth.
+
+\textbf{Picture}: If $S$ is a set of points in $M$, then $h^X_{\lambda}(S)$ can be seen as the new position of these points under the flow $h^X$ after the passage of $\lambda$ units of parameter. In general, $h^X_{\lambda}(S) \neq S (\text{ if } X \neq 0)$.
+
+\subsection{Lie subalgebras of the Lie algebra $(\Gamma(TM), [\cdot, \cdot])$ of vector fields}
+We know that $\Gamma(TM) = \lbrace \text{ set of all vector fields } \rbrace$, which can be seen as a $C^{\infty}(M)$-module, or as a $\mathbb{R}$-vector space.
+
+$(\Gamma(TM), [\cdot, \cdot])$ with $[X,Y]$ defined by its action on a function $f$ by $[X,Y] f := X(Yf) - Y(Xf)$ is a Lie algebra since $X,Y \in \Gamma(TM) \implies [X,Y] \in \Gamma(TM)$ and the following properties are satisfied:
+\begin{enumerate}[(i)]
+\item \textbf{Anticommutativity}: $[X,Y] = -[Y,X]$ 
+\item \textbf{Linearity}: $[\lambda X + Z, Y] = \lambda [X,Y] + [Z,Y]$ where $\lambda \in \mathbb{R}$
+\item \textbf{Jacobi identity}: $[X,[Y,Z]] + [Z,[X,Y]] + [Y,[Z,X]] = 0$ 
+\end{enumerate}
+
+Let $X_1, \dotsc, X_s$ be $s$ (many) vector fields on $M$, such that
+\[
+\forall i,j \in \lbrace 1,\dotsc,s \rbrace \quad [X_i,X_j] = \underbrace{C^k_{ij} X_k}_{\text{linear combination of }X_k s} \quad \quad \text{where } C^k_{ij} \in \mathbb{R}
+\]
+$C^k_{ij}$ are called \textbf{structure constants}.
+
+Let $\text{span}_{\mathbb{R}} \lbrace X_1,\dotsc,X_s \rbrace := \lbrace \text{all linear combinations of }X_k \rbrace$. Then $\left(\text{span}_{\mathbb{R}} \lbrace X_1,\dotsc,X_s \rbrace, [\cdot, \cdot]\right)$ is a Lie subalgebra of $(\Gamma(TM), [\cdot, \cdot])$.
+
+\textbf{Example}: In $S^2$, assume that the vector fields $X_1,X_2,X_3$ satisfy $[X_1,X_2] = X_3$, $[X_2,X_3] = X_1$ and $[X_3,X_1] = X_2$. Then $\left(\text{span}_{\mathbb{R}} \lbrace X_1,X_2,X_3 \rbrace, [\cdot, \cdot]\right)$ ($= SO(3)$) is a Lie subalgebra. An instance of vector fields satisfying these conditions is (with $X_i, \theta, \phi$ all taken at a point $p$, and $x^1 = \theta, x^2 = \phi$)
+\begin{align*}
+& X_1 = - \sin\phi \cibasis{\theta} - \cot\theta \cos\phi \cibasis{\phi} \\
+& X_2 = \cos\phi \cibasis{\theta} - \cot\theta \cos\phi \cibasis{\phi} \\
+& X_3 = \cibasis{\phi}
+\end{align*}
+Note that the above is defined on a merely smooth manifold without any additional structure like metric.
+
+\subsection{Symmetry}
+\begin{definition}
+A finite-dimensional Lie subalgebra $(L,[\cdot,\cdot])$ is said to be a \textbf{symmetry} of a metric tensor field $g$ if
+\[
+\boxed{g \left( \left(h^X_\lambda\right)_\ast (A), \left(h^X_\lambda\right)_\ast (B) \right) = g(A,B)} \quad\quad (\forall X \text{ (complete vector field) } \in L, \quad \forall \lambda \in \mathbb{R}, \quad \forall A, B \in T_pM)
+\]
+\end{definition}
+
+In another formulation (using pullback), $\boxed{\left(h^X_\lambda\right)^\ast g = g}$. The pullback of $\phi : M \to M$ on $g$, itself, is defined as follows:
+\[
+(\phi^\ast g)(A, B) := g(\phi_\ast(A), \phi_\ast(B))
+\]
+
+%\textbf{Example}: 
+
+\subsection{Lie derivative}
+It can be shown that the following expression is precisely the Lie derivative of $g$ w.r.t a vector field
+\begin{equation}
+\boxed{\mathcal{L}_X g := \lim_{\lambda \to 0} \frac{\left( h_\lambda^X \right)^\ast g - g}{\lambda}}
+\end{equation}
+Clearly, $L$ is a symmetry of $g$, iff $\mathcal{L}_X g = 0$.
+
+\begin{definition}
+The \textbf{Lie derivative} $\mathcal{L}$ on a smooth manifold $(M, \mathcal{O}, \mathcal{A})$ a pair of a vector field $X$ and a $(p,q)$-tensor field $T$ to a $(p,q)$-tensor field such that
+\begin{enumerate}[(i)]
+\item $\mathcal{L}_X f = Xf \quad \forall f \in C^{\infty}M$
+
+\item $\mathcal{L}_X Y = [X, Y] \quad\quad \text{ where }X, Y \text{ are vector fields}$
+\begin{framed}
+This condition sucks in information about the vector field $X$. It is not $C^{\infty}$-linear in the lower index. If it were, the derivative would be independent of values of $X$ at nearby points to the point where derivative is evaluated. This is an important difference between the covariant derivative $\nabla$ and the Lie derivative.
+\end{framed}
+
+\item $\mathcal{L}_X (T + S) = \mathcal{L}_X T + \mathcal{L}_X S \quad \text{ where }T, S \text{ are } (p,q) \text{-tensors}$
+
+\item \textbf{Leibnitz rule: } $\mathcal{L}_X T(\omega_1,\dotsc,\omega_p,Y_1,\dotsc,Y_q) = (\mathcal{L}_X T)(\omega_1,\dotsc,\omega_p,Y_1,\dotsc,Y_q) \\
++ T(\mathcal{L}_X \omega_1,\dotsc,\omega_p,Y_1,\dotsc,Y_q) + \dotsb + T(\omega_1,\dotsc,\mathcal{L}_X \omega_p,Y_1,\dotsc,Y_q) \\
++ T(\omega_1,\dotsc,\omega_p,\mathcal{L}_X Y_1,\dotsc,Y_q) + \dotsb + T(\omega_1,\dotsc,\omega_p,Y_1,\dotsc,\mathcal{L}_X Y_q) \quad \text{ where }T \text{ is a }(p,q)\text{-tensor}$
+\begin{framed}
+Note that for a $(p,q)$-tensor $T$ and a $(r,s)$-tensor $S$, since: \\
+$(T \otimes S) (\omega_{(1)}, \dotsc, \omega_{(p+r)}, Y_{(1)}, \dotsc, Y_{(q+s)}) = \\ T(\omega_{(1)}, \dotsc, \omega_{(p)}, Y_{(1)}, \dotsc, Y_{(q)} ) \cdot S( \omega_{(p+1)}, \dotsc, \omega_{(p+r)} , Y_{(q+1)}, \dotsc, Y_{(q+s)})$, \\
+Leibnitz rule implies $\mathcal{L}_X (T \otimes S) = (\mathcal{L}_X T) \otimes S + T \otimes (\mathcal{L}_X S)$.
+\end{framed}
+
+\item $\mathcal{L}_{X+Y} T = \mathcal{L}_X T + \mathcal{L}_Y T$
+\end{enumerate}
+\end{definition}
+
+Observe that, in chart $(U,x)$
+\[
+\left(\mathcal{L}_X Y\right)^i = X^m \cibasis{x^m}(Y^i) - \underbrace{\cibasis{x^s} (X^i)}_{\text{requires knowing } X \text{ around the point} } Y^s
+\]
+However, for covariant derivative
+\[
+\left(\nabla_X Y\right)^i = X^m \cibasis{x^m}(Y^i) + \ccf{i}{sm} X^m Y^s
+\]
+In general, for a $(1,1)$-tensor $T$
+\[
+\left(\mathcal{L}_X T \right)\indices{^i_j} = X^m \cibasis{x^m}(T\indices{^i_j}) \underbrace{- \cibasis[X^i]{x^s} T\indices{^x_j}}_{('-' \text{ for lower index})} \underbrace{+ \cibasis[X^s]{x^j} T\indices{^i_s}}_{('+' \text{ for upper index})}
+\]
+
+\textbf{Application}: As above, it is easy to calculate components of Lie derivative of metric g, $\mathcal{L}_X g$. Thus, by checking whether the derivative equals $0$ or not, it can be determined whether a metric features a symmetry.

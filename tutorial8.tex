@@ -1,0 +1,165 @@
+\section*{Tutorial 8 Parallel transport \& Curvature}
+
+\exercisehead{1}
+
+\exercisehead{2}\textbf{: Where connection coefficients appear}
+
+It was suggested in the tutorial sheets and hinted in the lecture that the following should be committed to memory.
+
+\questionhead{: Recall the autoparallel equation for a curve $\gamma$}
+\begin{enumerate}
+\item[(a)] \[
+\nabla_{v_{\gamma}} v_{\gamma} = 0 
+\]
+\item[(b)]
+\[
+\nabla_{v_{\gamma}} v_{\gamma} = \nabla_{ \dot{\gamma} \frac{ \partial }{ \partial x^{\mu}} } v_{\gamma} = \dot{\gamma}^{\nu} \nabla_{ \partial_{\nu}} v_{\gamma} = \dot{\gamma}^{\nu} \left[ \frac{ \partial v^{\mu}_{\gamma}}{ \partial x^{\nu} } + \Gamma^{\rho}_{\mu \nu} v_{\gamma}^{\mu} \right] \frac{ \partial }{ \partial x^{\rho }} = \dot{\gamma}^{\nu} \left[ \frac{ \partial \dot{\gamma}^{\rho }}{ \partial x^{\nu}} + \Gamma^{\rho}_{\mu \nu} \dot{\gamma}^{\mu} \right] \frac{ \partial }{ \partial x^{\rho }} = 0
+\]
+\[
+\Longrightarrow \boxed{ \ddot{\gamma}^{\rho} + \Gamma^{\rho}_{\mu \nu} \dot{\gamma}^{\mu} \dot{\gamma}^{\nu} }
+\]
+as, for example, for $F(x(t))$, 
+\[
+\frac{dF(x(t))}{dt} = \dot{x} \frac{ \partial F}{ \partial x} = \frac{d}{dt} F
+\]
+so that 
+\[
+\dot{\gamma}^{\nu} \frac{ \partial v_{\gamma}^{\mu} }{ \partial x^{\nu}} = \frac{d}{d\lambda} v_{\gamma}^{\mu} = \frac{d^2}{d\lambda^2} \gamma^{\mu}
+\]
+\end{enumerate}
+
+\questionhead{: Determine the coefficients of the Riemann tensor with respect to a chart $(U,x)$}
+
+Recall this manifestly covariant definition
+
+\[
+\text{Riem}(\omega, Z,X,Y) = \omega ( \nabla_X \nabla_Y Z - \nabla_Y \nabla_X Z - \nabla_{[X,Y]}Z )
+\]
+We want $R^i_{ \, \, jab}$.  
+
+now
+\[
+\begin{gathered}
+  \nabla_X \nabla_Y Z = \nabla_X ( ( Y^{\mu} \frac{ \partial }{ \partial x^{\mu }} Z^{\rho} + \Gamma^{\rho}_{\mu \nu } Z^{\mu} Y^{\nu} ) \frac{\partial}{ \partial x^{\rho}} ) = (X^{\alpha} \frac{ \partial }{ \partial x^{\alpha}} (Y^{\mu} \frac{ \partial }{ \partial x^{\mu}} Z^{\rho} + \Gamma^{\rho}_{ \mu \nu} Z^{\mu} Y^{\nu}  ) + \Gamma^{\rho}_{\alpha \beta} (Y^{\mu} \frac{ \partial }{ \partial x^{\mu} } Z^{\alpha} + \Gamma^{\alpha}_{\mu \nu} Z^{\mu} Y^{\nu} ) X^{\beta} )\frac{\partial }{ \partial x^{\rho }}
+\end{gathered}
+\]
+
+For $X = \partial_a$, $Y = \partial_b$, $Z=\partial_j$, then the partial derivatives of the coefficients of the input vectors become zero.  
+
+\[
+\Longrightarrow \nabla_{ \partial_a} \nabla_{\partial_b} \partial_j = \frac{ \partial }{ \partial x^a} (\Gamma^i_{ jb} ) + \Gamma^i_{\alpha a} \Gamma^{\alpha}_{jb}
+\]
+
+Now
+\[
+[X,Y]^i = X^j \frac{ \partial }{ \partial x^j} Y^i - Y^j \frac{ \partial X^i}{ \partial x^j}
+\]
+For coordinate vectors, $[\partial_i, \partial_j] = 0$ $\forall \, i,j = 0, 1 \dots d$.  
+
+Thus
+\[
+\boxed{ R^i_{ \, \, jab} = \frac{ \partial }{ \partial x^a} \Gamma^i_{jb} - \frac{ \partial }{ \partial x^b} \Gamma^i_{ja} + \Gamma^i_{\alpha a} \Gamma^{\alpha}_{jb} -\Gamma^i_{\alpha b} \Gamma^{\alpha}_{ja} }
+\]
+
+
+\questionhead{:$\text{Ric}(X,Y):=\text{Riem}^m_{ \, \, amb} X^a Y^b$ define $(0,2)$-tensor?}
+
+Yes, transforms as such:
+
+\[
+\begin{gathered}
+  \end{gathered}
+\]
+
+\subsection*{EY developments}
+
+I roughly follow the spirit in Theodore Frankel's \textbf{The Geometry of Physics: An Introduction} Second Ed. 2003, Chapter 9 Covariant Differentiation and Curvature, Section 9.3b. The Covariant Differential of a Vector Field. P.S. EY : 20150320 I would like a copy of the Third Edition but I don't have the funds right now to purchase the third edition: go to my tilt crowdfunding campaign, \url{http://ernestyalumni.tilt.com}, and help with your financial support if you can or send me a message on my various channels and ernestyalumni gmail email address if you could help me get a hold of a digital or hard copy as a pro bono gift from the publisher or author.  
+
+The spirit of the development is the following:
+\begin{quote}
+``How can we express connections and curvatures in terms of forms?'' -Theodore Frankel.  
+\end{quote}
+
+From Lecture 7, connection $\nabla$ on vector field $Y$, in the ``direction'' $X$,
+\[
+\begin{gathered}
+  \nabla_{ \frac{ \partial }{ \partial x^k } } Y = \left( \frac{ \partial Y^i }{ \partial x^k } + \Gamma^i_{jk} Y^j  \right) \frac{ \partial }{ \partial x^i }
+\end{gathered}
+\]
+Make the ansatz (approche, impostazione) that the connection $\nabla$ acts on $Y$, the vector field, first:
+\[
+\begin{gathered}
+  \nabla Y(X) = \left( X^k \frac{ \partial Y^i}{ \partial x^k} + \Gamma^i_{jk} Y^j X^k \right) \frac{ \partial}{ \partial x^i } = X^k \left( \nabla_{ \frac{ \partial }{ \partial x^k} } Y \right)^i \frac{ \partial }{ \partial x^i} = (\nabla_X Y)^i \frac{ \partial}{ \partial x^i} = \nabla_XY
+\end{gathered}
+\]
+
+Now from Lecture 7, Definition for $\Gamma$, 
+\[
+dx^i \left( \nabla_{ \frac{  \partial }{ \partial x^k } } \frac{ \partial }{ \partial x^j } \right) = \Gamma^i_{jk}
+\]
+
+Make this ansatz (approche, impostazine)
+\[
+\nabla \frac{ \partial}{ \partial x^j } = \left( \Gamma^i_{jk} dx^k \right) \otimes \frac{ \partial }{ \partial x^i} \in \Omega^1(M,TM) = T^*M \otimes TM
+\]
+where $\Omega^1(M,TM) = T^*M \otimes TM$ is the set of all $TM$ or vector-valued 1-forms on $M$, with the 1-form being the following:
+\[
+\Gamma^i_{jk} dx^k = \Gamma^i_{ \, \, j } \in \Omega^1(M) \quad \quad \, \begin{aligned}
+  & \quad \\
+  & i = 1 \dots \text{dim}(M) \\ 
+  & j = 1\dots \text{dim}(M) \end{aligned}
+\]
+So $\Gamma^i_{ \, \, j}$ is a $\text{dim}M \times \text{dim}M$ matrix of 1-forms (EY !!!). 
+
+Thus
+\[
+\nabla Y = (d(Y^i) + \Gamma^i_j Y^j ) \otimes \frac{ \partial }{ \partial x^i}
+\]
+
+So the connection is a (smooth) map from $TM$ to the set of all vector-valued 1-forms on $M$, $\Omega^1(M,TM)$, and then, after ``eating'' a vector $Y$, yields the ``covariant derivative'':
+\[
+\begin{aligned}
+  & \nabla: TM \to \Omega^1(M,TM) = T^*M \otimes TM \\ 
+  & \nabla : Y \mapsto \nabla Y \\ 
+  & \nabla Y : TM \to TM \\
+  & \nabla Y(X) \mapsto \nabla Y(X) = \nabla_X(Y)
+\end{aligned}
+\]
+
+Now
+\[
+\left[ \frac{ \partial }{ \partial x^i} , \frac{ \partial }{ \partial x^j} \right] f = \frac{ \partial }{ \partial x^i } \left( \frac{ \partial }{ \partial x^j} \right) - \frac{ \partial }{ \partial x^j } \left( \frac{ \partial }{ \partial x^i} \right) = 0 
+\]
+(this is okay as on $p \in (U,x)$; $x$-coordinates on same chart $(U,x)$)
+
+EY : 20150320 My question is when is this nontrivial or nonvanishing (i.e. not equal to $0$).
+\[
+[e_a,e_b] = ?
+\]
+for a frame $(e_c)$ and would this be the difference between a tangent bundle $TM$ vs. a (general) vector bundle?
+
+Wikipedia helps here. cf. wikipedia, ``Connection (vector bundle)''
+
+\[
+\begin{gathered}
+  \nabla : \Gamma(E) \to \Gamma(T^*M \otimes E) = \Omega^1(M,E) \\
+  \nabla e_a = \omega^c_{ab} f^b \otimes e_c \\ 
+  f^b \in T^*M \text{ (this is the dual basis for $TM$ and, note, this is for the manifold, $M$ } \\
+  \nabla_{f_b}e_a = \omega^c_{ab} e_c \in E
+\end{gathered}
+\]
+\[
+\omega^c_a  = \omega^c_{ab} f^b \in \Omega^1(M)
+\]
+is the connection 1-form, with $a,c = 1 \dots \text{dim}V$.  EY : 20150320 This $V$ is a vector space living on each of the fibers of $E$.   I know that $\Gamma(T^*M \otimes E)$ looks like it should take values in $E$, but it's meaning that it takes vector values of $V$.  Correct me if I'm wrong: ernestyalumni at gmail and various social media.
+
+Let $\sigma \in \Gamma(E)$, $\sigma = \sigma^ae_a$  
+\[
+\begin{gathered}
+  \nabla \sigma = (d\sigma^c + \omega^c_{ab} \sigma^a f^b) \otimes e_c \text{ with } \\ 
+  d\sigma^c = \frac{ \partial \sigma^c}{ \partial x^b } f^b 
+\end{gathered}
+\]
+\[
+\Longrightarrow \nabla_X \sigma = \left( X^b \frac{ \partial \sigma^c}{ \partial x^b} + \omega^c_{ab} \sigma^a X^b \right)e_c = X^b \left( \frac{ \partial \sigma^c}{ \partial x^b } + \omega^c_{ab} \sigma^a \right)e_c
+\]

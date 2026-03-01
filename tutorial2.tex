@@ -1,0 +1,163 @@
+\section*{Tutorial Topological manifolds}
+
+filename: \verb|Sheet_1.2.pdf|
+
+%\exercisehead{1}
+
+\exercisehead{4: Before the invention of the wheel}
+
+\emph{Another one-dimensional topological manifold. Another one?}
+
+Consider set $F^1:= \lbrace (m,n)\in \mathbb{R}^2 | m^4 + n^4=1 \rbrace$, equipped with subset topology $\left. \mathcal{O}_{\text{std}} \right|_{F^1}$
+
+\questionhead{$x:F^1 \to \mathbb{R}$ is what?}
+
+\solutionhead{} EY : 20150525 The tutorial video \url{https://youtu.be/ghfEQ3u_B6g} is really good and this solution is how I'd write it, but it's really the same (I needed the practice).
+
+\[
+\boxed{ \begin{aligned}
+   x : F^1 & \to \mathbb{R} \\ 
+  (m,n) & \mapsto m
+\end{aligned} }
+\]
+
+If $m=0$, $n^4=1$ so $n=\pm 1$ so it's not injective.  
+
+Let the closed $n$-dim. upper half-space $\mathbb{H}^n \subseteq \mathbb{R}^1$.  Then
+\[
+\begin{aligned}
+  \mathbb{H}^n = \lbrace (x_1 \dots x_n) \in \mathbb{R}^n | x_n \geq 0 \rbrace \\ 
+  \text{int}\mathbb{H}^n = \lbrace (x_1 \dots x_n) \in \mathbb{R}^n | x_n > 0 \rbrace \\
+  - \mathbb{H}^n = \lbrace (x_1 \dots x_n) \in \mathbb{R}^n | x_n \leq 0 \rbrace \\ 
+  -\text{int}\mathbb{H}^n = \lbrace (x_1 \dots x_n) \in \mathbb{R}^n | x_n <0 \rbrace
+\end{aligned}
+\]
+
+\questionhead{This map $x$ may be made injective by restricting its domain to either of 2 maximal open subsets of $F^1$. Which ones?}
+
+\solutionhead{}
+
+Let 
+\[
+\begin{aligned}
+  & U_+ = F^1 \cap \text{int}\mathbb{H}^2 \\
+  & U_- = F^1 \cap -\text{int}\mathbb{H}^2
+\end{aligned}
+\]
+
+Look at 
+\[
+\begin{aligned}
+  & x^4 = 1 - n^4 \\ 
+  \Longrightarrow & x = \pm ( 1 - n^4)^{1/4}
+\end{aligned}
+\]
+
+Then for 
+\[
+\begin{aligned}
+  x_+^{-1}: (-1,1) \subseteq \mathbb{R} & \to U_+ \\ 
+  m & \mapsto (m,(1-m^4)^{1/4}) \\
+  x_-^{-1}: (-1,1) \subseteq \mathbb{R} & \to U_- \\ 
+  m & \mapsto (m,-(1-m^4)^{1/4}) \\
+\end{aligned}
+\]
+$x_+$,$x_-$ injective (since left inverse exists).  
+
+
+\questionhead{Construct injective $y$}
+
+\solutionhead{}
+
+Let 
+\[
+\begin{aligned}
+  & V_+ = F^1 \cap \text{int}\mathbb{H}^1 \\
+  & V_- = F^1 \cap -\text{int}\mathbb{H}^1
+\end{aligned}
+\]
+
+Then
+\[
+\begin{aligned}
+  y_+:  V_+ & \to  (-1,1) \subseteq \mathbb{R} \\ 
+  (m,n) & \mapsto n \\
+  y_-: V_-  & \to  (-1,1) \subseteq \mathbb{R}  \\ 
+  (m,n) & \mapsto n
+\end{aligned}
+\]
+
+\questionhead{Construct inverse $y^{-1}$}
+\solutionhead{}
+
+
+For 
+\[
+\begin{aligned}
+  y_+^{-1}: (-1,1) \subseteq \mathbb{R} & \to V_+ \\ 
+  n & \mapsto ((1-n^4)^{1/4},n) \\
+  y_-^{-1}: (-1,1) \subseteq \mathbb{R} & \to V_- \\ 
+  n & \mapsto (-(1-n^4)^{1/4},n) \\
+\end{aligned}
+\]
+$y_+$,$y_-$ injective (since left inverse exists).  
+
+
+
+Note $\begin{aligned} & \quad \\ 
+  & (-1,0) \notin U_+,U_- \\
+  & (1,0) \notin U_+,U_- \\
+\end{aligned}$
+
+and 
+
+ $\begin{aligned} & \quad \\ 
+  & (0,1) \notin V_+,V_- \\
+  & (0,-1) \notin V_+,V_- \\
+\end{aligned}$
+
+
+\questionhead{construct \emph{transition map } $x \circ y^{-1}$}
+
+\solutionhead{}
+
+\[
+\begin{aligned}
+& 
+\begin{aligned}
+   x_+y_+^{-1} : (0,1) \subseteq \mathbb{R} & \to (0,1) \subseteq \mathbb{R} \\ 
+  n & \mapsto (1-n^4)^{1/4} 
+\end{aligned}   \\ 
+& 
+\begin{aligned}
+   x_-y_+^{-1} : (-1,0) \subseteq \mathbb{R} & \to (0,1) \subseteq \mathbb{R} \\ 
+  n & \xrightarrow{ y_+^{-1} } ( (1-n^4)^{1/4}, n) \xrightarrow{ x_- } (1-n^4)^{1/4} 
+\end{aligned}   \\ 
+& \begin{aligned}
+   x_+y_-^{-1} : (0,1) \subseteq \mathbb{R} & \to (-1,0) \subseteq \mathbb{R} \\ 
+  n & \mapsto -(1-n^4)^{1/4} 
+\end{aligned}   \\ 
+& \begin{aligned}
+   x_-y_-^{-1} : (-1,0) \subseteq \mathbb{R} & \to (-1,0) \subseteq \mathbb{R} \\ 
+  n & \mapsto -(1-n^4)^{1/4} 
+\end{aligned}   
+\end{aligned}
+\]
+
+\questionhead{\dots Does the collection of these domains and maps form an atlas of $F^1$?}
+
+Yes, with atlas
+
+\[
+\mathcal{A} = \lbrace \begin{aligned} & (U_+,x_+) \\
+  & (U_-,x_-) \end{aligned}, \, \begin{aligned} & (V_+,y_+) \\ & (V_-,y_-) \end{aligned} \rbrace
+\]
+
+Clearly 
+\[
+\begin{gathered}
+  U_+ \cup U_- \cup V_+ \cup V_- = (F^1 \cap \text{int}\mathbb{H}^2) \cup (F^1 \cap -\text{int}\mathbb{H}^2)\cup (F^1 \cap \text{int}\mathbb{H}^1) \cup (F^1 \cap -\text{int}\mathbb{H}^1) = \\
+= F^1 \cap \mathbb{R}^2\backslash \lbrace (0,0) \rbrace = F^1
+\end{gathered}
+\]
+and (the point is that) $x_{\pm},y_{\pm}$ are homeomorphisms of open sets of $F^1$ onto open sets of 1 dim. $\mathbb{R}^1$ (namely $(-1,1) \subseteq \mathbb{R}^1$), and so $\mathcal{A}$ is an atlas of $F^1$.  

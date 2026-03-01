@@ -1,0 +1,165 @@
+# Lecture Notes: Tangent Spaces
+
+**International Winter School on Gravity and Light 2015**
+
+---
+
+## 1. Introduction: The Lead Question
+
+The central inquiry of this lecture is: **On a manifold, what is the velocity of a curve $\gamma$ at a point $P$?**. It is essential to distinguish between **velocity** and **speed**:
+
+* 
+**Velocity:** A vector defined in the tangent space.
+
+
+* 
+**Speed:** A scalar that cannot be defined until a **metric** is introduced to the manifold.
+
+
+
+Students are encouraged to "erase everything" previously learned about velocities to rediscover the concept through an intrinsic, mathematical lens.
+
+---
+
+## 2. Formal Definition of Velocity
+
+Velocity is defined as a **linear map**.
+
+### The Setup
+
+* 
+**Manifold:** A smooth manifold $M$ with a smooth atlas.
+
+
+* 
+**Curve:** A curve $\gamma: \mathbb{R} \to M$ that is at least $C^1$ (once continuously differentiable).
+
+
+* 
+**Point $P$:** The curve hits point $P$ at some parameter value $\lambda_0$, such that $\gamma(\lambda_0) = P$.
+
+
+
+### The Map
+
+The velocity $V_{\gamma, P}$ is a linear map from the vector space of smooth functions $C^\infty(M)$ to the real numbers $\mathbb{R}$:
+
+
+$$V_{\gamma, P}: C^\infty(M) \to \mathbb{R}$$
+
+The rule for this map, acting on a function $f$, is defined as the derivative of the composition of $f$ and $\gamma$:
+
+
+$$V_{\gamma, P}(f) = (f \circ \gamma)'(\lambda_0)$$
+
+> 
+> **Intuition:** Velocity is a **directional derivative**. Like a child running through the world feeling a temperature function $f$, the velocity captures the rate of change of that function as they move along the curve.
+> 
+> 
+
+---
+
+## 3. The Tangent Space ($T_p M$)
+
+The tangent space at a point $P$, denoted $T_p M$, is the **set of all possible velocity vectors** of all possible smooth curves passing through $P$.
+
+### Intrinsic vs. Extrinsic View
+
+Historically, there was a debate on whether to define manifolds and tangent spaces **intrinsically** (within the manifold) or **extrinsically** (embedded in a larger ambient space).
+
+* 
+**Extrinsic:** Visualizing a plane touching a sphere.
+
+
+* 
+**Intrinsic:** Defining vectors as linear maps/directional derivatives.
+In General Relativity, we prefer the **intrinsic view** because it is uneconomical and physically unnecessary to refer to an "ambient space" outside our own universe.
+
+
+
+---
+
+## 4. Vector Space Structure of $T_p M$
+
+The set $T_p M$ can be equipped with addition and scalar multiplication to become a vector space.
+
+### Proof of Closure
+
+For $T_p M$ to be a vector space, the sum of two velocities must itself be the velocity of some third curve:
+
+1. 
+**Scalar Multiplication:** Given a velocity $V_{\gamma, P}$ and a scalar $\alpha$, we can construct a new curve $\tau(\lambda) = \gamma(\alpha \lambda)$ whose velocity is $\alpha V_{\gamma, P}$.
+
+
+2. 
+**Addition:** Given $V_{\gamma, P}$ and $V_{\delta, P}$, we construct a curve $\sigma$ (using a chart) such that its velocity is the sum of the two. Although the construction uses a chart, the resulting tangent vector is **chart-independent**.
+
+
+
+**Warning:** While velocities form a vector space, **positions** on a manifold do not. Adding position vectors is meaningless in curved spacetime.
+
+---
+
+## 5. Components and the Chart-Induced Basis
+
+To reconcile abstract vectors with calculations, we use a **chart** $(U, x)$.
+
+### Chart-Induced Basis
+
+For a chart $x$, the basis vectors of $T_p M$ are the partial derivatives with respect to the coordinate entries:
+
+
+$$\left\{ \left. \frac{\partial}{\partial x^1} \right|_P, \dots, \left. \frac{\partial}{\partial x^d} \right|_P \right\}$$
+
+These are often denoted simply as $\partial_i$.
+
+### Vector Components
+
+The components $v^i$ of a velocity vector are the derivatives of the curve's coordinates in the chart:
+
+
+$$v^i = (x^i \circ \gamma)'(\lambda_0)$$
+
+Any vector $X \in T_p M$ can then be written as:
+
+
+$$X = X^i \frac{\partial}{\partial x^i}$$
+
+---
+
+## 6. Transformation Laws
+
+While the **vector itself is invariant** (the physical velocity of a bird), its **components change** when we switch from chart $x$ to chart $y$.
+
+| Object | Transformation Formula |
+| --- | --- |
+| **Vector Components** | <br>$X^j_y = \frac{\partial y^j}{\partial x^i} X^i_x$ 
+
+ |
+| **Co-vector Components** | <br>$\omega_{i, y} = \frac{\partial x^j}{\partial y^i} \omega_{j, x}$ 
+
+ |
+
+The matrices representing these transformations are **inverses** of each other.
+
+---
+
+## 7. Cotangent Spaces and Gradients
+
+The **cotangent space** $T^*_p M$ is the dual of the tangent space, consisting of linear maps from $T_p M$ to $\mathbb{R}$.
+
+### The Gradient as a Co-vector
+
+The gradient of a function $f$ (denoted $df$) is a **co-vector** (a 0,1 tensor), not a vector.
+
+* It acts on a vector to produce a real number: $df(X) = X(f)$.
+
+
+* Its components are the partial derivatives $\frac{\partial f}{\partial x^i}$.
+
+
+* It transforms via the **chain rule** of standard analysis, which naturally follows the co-vector transformation law.
+
+
+
+---

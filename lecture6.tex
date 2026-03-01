@@ -1,0 +1,192 @@
+\section{Fields}
+
+So far, we have focussed technically on a single tangent space and a vector/ covector in it, a basis if we chose a chart. As physicists, we are interested in things such as vector fields such that at any point of a manifold, there is a vector. The proper way to deal with it technically is \textit{theory of bundles}.
+
+\subsection{Bundles}
+
+\begin{definition}
+A \textbf{bundle} is a triple $\boxed{E \projmapto M}$, where \\
+$E$ is a smooth manifold, called the \textbf{total space}, \\
+$M$ is a smooth manifold, called the \textbf{base space}, and \\
+$\pi$ is a smooth map (surjective), called the \textbf{projection map}. \\
+\end{definition}
+
+\begin{definition}
+Let $E \projmapto M$ be a bundle and $p \in M$. Then, \textbf{fibre over} $p := \text{preim}_{\pi}(\lbrace p \rbrace)$. \\
+\end{definition}
+
+\begin{definition}
+A \textbf{section} $\sigma$ of a bundle $E \projmapto M$ is the map $\sigma : M \to E$ such that $\pi \after \sigma = id_M$. \\
+\end{definition}
+
+\begin{tikzpicture}
+  \matrix (m) [matrix of math nodes, row sep=3em, column sep=8em, minimum width=1em]
+  { E & M \\ };
+  \path[->]
+  (m-1-1) edge node [above] {$\pi$} (m-1-2)
+  (m-1-2) edge [bend left=30] node [below] {$\sigma$} (m-1-1);
+\end{tikzpicture}
+
+\underline{Example}: $E$ is a cylinder, $M$ a circle and $\pi$ maps vertical lines on the cylinder to the point of intersection of this line with the circle.
+
+\underline{Example}: If the fibre of $p \in M$ is a tangent space, the section would pick one vector from the tangent space.
+
+\underline{Aside}: In quantum mechanics, $\psi : M \to \mathbb{C}$ is called a wavefunction, but it is actually a section which selects one value from $\mathbb{C}$ for each $p \in M$.
+
+
+\subsection{Tangent bundle of smooth manifold}
+For this entire subsection, let $\mfd$ be a smooth manifold and let $d := dim \, M$. 
+
+Define the set, 
+\begin{equation}
+\boxed{TM : = \dot{\bigcup}_{p \in M} T_pM}
+\end{equation}
+
+Now define a surjective map $\pi$ as follows:
+\begin{equation}
+\boxed{\begin{split}
+  \pi : & TM \to M \\
+  & X \mapsto \pi(X) := p \in M \text{ such that } X \in T_pM
+\end{split}}
+\end{equation}
+
+\underline{Situation}:  $\underbrace{TM}_{\text{set}} \underbrace{ \projmapto}_{\text{surjective map}} \underbrace{M}_{\text{smooth manifold}}$
+
+For a bundle, $TM$ should be a smooth manifold and $\pi$ a smooth map. Let us construct a topology on $TM$ that is the coarsest topology such that $\pi$ is just continuous. (\textbf{initial topology} with respect to $\pi$). Define
+
+\begin{equation}
+\boxed{\mathcal{O}_{TM} := \lbrace \text{preim}_{\pi}(U) | U \in \mathcal{O} \rbrace}
+\end{equation}
+
+It can be shown that $(TM,\mathcal{O}_{TM})$ is a topological space. But we need a smooth atlas.\\
+
+\underline{Construction of a $C^{\infty}$-atlas on $TM$ from the $C^{\infty}$-atlas $\A$ on $M$} \\
+Define
+\begin{equation}\label{eq:atlasTangentBundle}
+\boxed{
+\begin{split}
+\A_{TM} := & \lbrace (TU,\xi_x) \, | \, (U,x) \in \A \rbrace \text{ where } \\
+  \xi_x : & TU \to \R^{2d} \\
+  & X \mapsto \left(\underbrace{(x^1 \after \pi)(X), \dotsc, (x^d \after \pi)(X)}_{(U,x)-\text{ coords of } \pi(X) \, (d\text{-many})}, \underbrace{(dx^1)_{\pi(X)}(X), \dotsc, (dx^d)_{\pi(X)}(X)}_{\text{components of $X$ w.r.t } (U,x) \, (d\text{-many})}\right)
+\end{split}
+}
+\end{equation}
+
+In the above, $(x^1 \after \pi)(X) = x^1(\pi(X)) = x^1(p) = x^1 \text{-coordinate}$, and \\
+$X \in T_{\pi(X)}M \implies X = X_{(x)}^i \left(\cibasis{x^i}\right)_{\pi(X)} \implies (dx^j)_{\pi(X)}(X) = (dx^j)_{\pi(X)} \left(X^i_{(x)}\left(\cibasis{x^i}\right)_{\pi(X)} \right) = X^i_{(x)}\delta_i^j = X^j_{(x)}$. \\
+Thus $\xi_x$ maps $X$ to the coordinates of its base point $\pi(X)$ under the chart $(U,x)$ and the components of the vector $X$ w.r.t the basis induced by this chart.
+
+We can write $\xi_x^{-1}$ as follows:
+\begin{equation}\label{eq:xiInverseTangentBundle}
+\boxed{
+\begin{split}
+\xi_x^{-1} \, : \, & \underbrace{\xi_x(TU)}_{\subseteq \R^{2d}} \to TU \\
+& (\alpha^1, \dotsc, \alpha^d, \beta^1, \dotsc, \beta^d) := \beta^i \left(\cibasis{x^i}\right)_{\underbrace{x^{-1}(\alpha^1, \dotsc, \alpha^d)}_{\pi(X)}}
+\end{split}
+}
+\end{equation}
+
+Now we check, whether the atlas $\A_{TM}$ smooth. That is, are the transitions between its charts smooth?
+
+\begin{theorem}
+$\A_{TM}$ is a smooth atlas.
+\end{theorem}
+
+\begin{proof}
+Let $(U,\xi_x) \in \A_{TM}, \quad (V,\xi_y) \in \A_{TM} \quad \text{ and } \quad U \cap V \ne \emptyset$. Calculate the chart transition
+\begin{align*}
+& (\xi_y \after \xi_x^{-1})(\alpha^1, \dotsc, \alpha^d, \beta^1, \dotsc, \beta^d) = \xi_y \left(\beta^i \left(\cibasis{x^i} \right)_{x^{-1}(\alpha^1, \dotsc, \alpha^d)}\right) && \text{by Eq.~\ref{eq:xiInverseTangentBundle}} \\
+& = \left(\dotsc, (y^i \after \pi)\left(\beta^m \cdot \left(\cibasis{x^m}\right)_{x^{-1}(\alpha^1, \dotsc, \alpha^d)}\right), \dotsc, \dotsc, (dy^i)_{x^{-1}(\alpha^1, \dotsc, \alpha^d)} \left(\beta^m \left(\cibasis{x^m} \right)_{x^{-1}(\alpha^1, \dotsc, \alpha^d)} \right), \dotsc \right) && \text{by Eq.~\ref{eq:atlasTangentBundle}}  \\
+& = \left(\dotsc, y^i \left(\underbrace{\pi\left(\beta^m \cdot \left(\cibasis{x^m}\right)_{x^{-1}(\alpha^1, \dotsc, \alpha^d)}\right)}_{\text{the base point,}\, x^{-1}(\alpha^1, \dotsc, \alpha^d)}\right), \dotsc, \dotsc, (\beta^m \underbrace{(dy^i)_{x^{-1} (\alpha^1, \dotsc, \alpha^d)} \left( \left(\cibasis{x^m}\right)_{x^{-1}(\alpha^1, \dotsc, \alpha^d)} \right)}_{\left(\cibasis[y^i]{x^m}\right)_{x^{-1}(\alpha^1, \dotsc, \alpha^d)}}, \dotsc \right) \\
+& = \left(\dotsc, (y^i \after x^{-1})(\alpha^1, \dotsc, \alpha^d), \dotsc, \dotsc, \beta^m \left(\left(\cibasis[y^i]{x^m}\right)_{x^{-1}(\alpha^1, \dotsc, \alpha^d)} \right), \dotsc\right) \\
+& = \left(\dotsc, (y^i \after x^{-1})(\alpha^1, \dotsc, \alpha^d), \dotsc, \dotsc, \beta^m \left(\partial_m (y^i \after x^{-1})( x (x^{-1}(\alpha^1, \dotsc, \alpha^d))) \right), \dotsc\right) \\
+& = \left(\dotsc, \underbrace{(y^i \after x^{-1})(\alpha^1, \dotsc, \alpha^d)}_{\text{smooth } \because \mathcal(A) \text{ is smooth atlas}}, \dotsc, \dotsc, \underbrace{\beta^m \left(\partial_m (y^i \after x^{-1})(\alpha^1, \dotsc, \alpha^d)\right)}_{\text{smooth } \because \text{ chart transition map is } C^\infty \text{ smooth}}, \dotsc\right) \\
+& \implies (\xi_y \after \xi_x^{-1}) \text{ is smooth} \implies \A_{TM} \text{ is smooth}
+\end{align*}
+\end{proof}
+
+Further, the surjective map $\pi$ is a smooth map because, in the chart representation, $\pi$ takes the $2d$ components of $X \in TM$ to the $d$-coordinates of the base point in $M$, which can be seen to happen smoothly by seeing how the components are mapped. Therefore, we have the following definition. 
+\begin{definition}
+Then, using the smooth manifold $\mfd$ as the base space and the smooth manifold $(TM, \mathcal{O}_{TM}, \A_{TM})$ as the total space, the \textbf{tangent bundle} is the triple
+\begin{equation}\label{eq:TangentBundle}
+\boxed{TM \projmapto M}
+\end{equation}
+\end{definition}
+
+\subsection{Vector fields}
+Why did we put so much effort in making a smooth atlas on $TM$ and defining a tangent bundle? The answer is in the following definition of \emph{smooth} vector field, not just any vector field.
+
+\begin{definition}
+For a tangent bundle $TM \projmapto M$, a \textbf{smooth vector field} $\chi$ is a smooth map such that $\pi \after \chi = id_{M}$, $\chi$ is a \textit{smooth section}.
+\end{definition}
+
+\begin{tikzpicture}
+  \matrix (m) [matrix of math nodes, row sep=3em, column sep=8em, minimum width=1em]
+  { TM & M \\ };
+  \path[->]
+  (m-1-1) edge node [above] {$\pi$} (m-1-2)
+  (m-1-2) edge [bend left=30] node [below] {$\chi$} (m-1-1);
+\end{tikzpicture}
+
+\textit{Remarks: $\chi$ is a section, which couldn't have been a smooth map unless we had both $M$ and $TM$ as smooth manifolds.}
+
+\subsection{The $C^{\infty}(M)$-module $\Gamma(TM)$}
+We already know that $C^{\infty}(M)$, the collection of all smooth functions is a vector space with S-multiplication with $\R$. So we may also consider the structure $(C^{\infty}(M),+,\cdot)$ with point-wise addition between elements of $C^{\infty}(M)$ and point-wise multiplication between elements of $C^{\infty}(M)$. This structure satisfies all the requirements of a field (commutativity, associativity, neutral element, inverse element under both operations, and distributivity) except that there is no inverse for all non-zero elements under multiplication. This is so because a function that is not zero everywhere, may be zero at some points and then point-wise multiplication with no function would result in the value 1 everywhere. Such a structure is called a \textit{ring}. 
+
+A module over a ring is a generalization of the notion of vector space over a field, wherein the corresponding scalars are the elements of an arbitrary given ring.
+
+Let us consider the module made from the set of all smooth vector fields over the ring $C^{\infty}(M)$. Define \\
+\begin{equation}
+\Gamma(TM) = \lbrace \chi \, : \, M \to TM \, | \, \chi \text{ is a smooth section} \rbrace
+\end{equation}
+
+\begin{definition}
+$(\Gamma(TM),\oplus,\odot)$ is a $C^{\infty}(M)$-module over the ring of $C^{\infty}(M)$ functions with $\chi, \widetilde{\chi} \in \Gamma(TM)$ and $g \in C^{\infty}(M)$, such that \\
+$(\chi \oplus \widetilde{\chi})(f) := (\chi f) \underbrace{+}_{C^{\infty}(M)} (\widetilde{\chi}f)$ \\
+$(g \odot \chi)(f) := g \underbrace{\cdot}_{C^{\infty}(M)} (\chi f)$
+\end{definition}
+
+\underline{Facts}: Besides other differences, there are following 2 important facts:
+\begin{enumerate}
+\item[(1)] Proving that \textit{every vector space has a basis} depends upon the choice of set theory; in particular, on the Axiom of Choice in ZFC theory.
+\item[(2)] No such result exists for modules.  
+\end{enumerate}
+
+This is a shame, because otherwise, we could have chosen (for any manifold) vector fields, $\chi_{(1)}, \dotsc, \chi_{(d)} \in \Gamma(TM)$ and would be able to write every vector field $\chi$ in terms of component functions $f^i$ as $\chi = f^i \cdot \chi_{(i)}$.
+
+\textbf{Simple counterexample:} Take a sphere. Can we find a smooth vector field over the entire sphere. Can you comb the sphere? No. For the field to be smooth, there is a problem. Morse Theory tells us that every smooth vector field on a sphere must vanish at 2 points $\implies$ basis cannot be chosen. We cannot choose a global basis. Therefore, if required, we only expand a vector field in terms of a basis on a domain where it is possible.
+
+
+\textit{Remarks: Although we cannot have a global basis for $\Gamma(TM)$, it is possible to do so locally. Thus, for the chart $(U,x)$ we can take the \textbf{chart-induced basis of the vector field} in the chart domain $U$ as the map \\
+\begin{equation}
+\begin{split}
+  \cibasis{x^i} : & \, U \xrightarrow{\text{ smooth }} TU \\
+  & p \mapsto \left(\cibasis{x^i}\right)_p
+\end{split}
+\end{equation}
+}
+
+\subsection{Tensor fields}
+So far we have constructed the sections over the tangent bundle. That is, $\Gamma(TM) = $''set of smooth vector fields'' as a $C^{\infty}(M)$-module.
+
+Exactly along the same lines we can construct the \textbf{cotangent bundle} $\Gamma(T^*M) = $ ``set of covector fields'' as a $C^{\infty}(M)$-module, by mapping a covector to the coordinates of its base point and components of the covector. $\Gamma(TM)$ and $\Gamma(T^*M)$ are the basic building blocks for every tensor field.
+
+\begin{definition}
+An \textbf{$(r,s)$-tensor field} $T$ is a $C^{\infty}(M)$ multilinear map
+\begin{equation}
+T:\underbrace{\Gamma(T^*M) \times \dotsb \times \Gamma(T^*M)}_{r} \times \underbrace{\Gamma(TM) \times \dotsb \times \Gamma(TM)}_{s} \linearmapto C^{\infty}(M)
+\end{equation}
+\end{definition}
+
+\textit{Remarks: the multilinearity is in $C^{\infty}(M)$, in terms of addition in the modules and S-multiplication with functions in $C^{\infty}(M)$.}
+
+\textbf{Example:} Let $f\in C^{\infty}(M)$. Then, define a ($0,1$)-tensor field $df$ as
+\[
+\begin{gathered}
+  \begin{aligned} 
+    df : & \Gamma(TM) \linearmapto C^{\infty}(M) \\ 
+    & \chi \mapsto df(\chi) := \chi f && \text{ such that } (\chi f)(\underbrace{p}_{ \in M}) := \underbrace{\chi(p)}_{\in T_pM}f
+\end{aligned}
+\end{gathered}
+\]
+It can be checked that $df$ is $C^{\infty}-$linear.

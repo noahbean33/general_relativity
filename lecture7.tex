@@ -1,0 +1,172 @@
+\section{Connections}
+\begin{framed}
+\textbf{Motivation}: So far, all we have dealt with (e.g., sets, topological manifolds, smooth manifolds, fields, bundles, etc.) are structures that we have to provide by hand before we can start doing physics as we know it. Why? Because we don't have equations which determine what we have done so far. These are assumptions you need to submit before you can do physics.
+
+In this lecture we introduce yet another structure called connections which are determined by Einstein's equations. Everything from now on will be objects that are the subject of Einstein's equations depending on the matter in the Universe. Connections are also called covariant derivatives. Even though these are different, for our purposes we shall not distinguish the two and use the more general connections.
+\end{framed}
+
+So far, we saw that a vector field $X$ can be used to provide a directional derivative of a function $f \in C^{\infty}(M)$ in the direction $X$\\
+\begin{equation*}
+\nabla_X f := Xf
+\end{equation*}
+Isn't this a notational overkill? We already know \\
+\begin{equation*}
+\nabla_X f = Xf = (df)X
+\end{equation*}
+Actually, they are not quite the same because
+\[
+\begin{aligned}
+  X : C^{\infty}(M) \to C^{\infty}(M) \\ 
+  df : \Gamma(TM) \to C^{\infty}(M) \\
+  \nabla_X : C^{\infty}(M) \to C^{\infty}(M)
+\end{aligned}
+\]
+where $\nabla_X$ can be generalized to eat an arbitrary $(p,q)$-tensor field and yield a $(p,q)$-tensor field whereas $X$ can only eat functions. \\
+\[
+\begin{tikzpicture}
+\matrix (m) [matrix of nodes, row sep=3em, column sep=3em, minimum width=1em]
+{
+$\nabla_X : C^{\infty}(M)$ & $C^{\infty}(M)$ \\
+$\nabla_X : (p,q)$-tensor field & $(p,q)$-tensor field \\ };
+\path[->]
+  (m-1-1) edge (m-1-2);
+\path[->]
+  (m-2-1) edge (m-2-2);
+\path[->]
+  (m-1-1) edge[snake it] node[left] {$\vdots$} (m-2-1);
+\path[->]
+  (m-1-2) edge[snake it] node[left] {$\vdots$} (m-2-2);
+\end{tikzpicture}
+\]
+
+We need $\nabla_X$ to provide the new structure to allow us to talk about directional derivatives of tensor fields and vector fields. Of course, only in cases where $\nabla_X$ acts on function $f$ which is a $(0,0)$-tensor, it is exactly the same as $Xf$. 
+
+\subsection{Directional derivatives of tensor fields}
+We formulate a wish list of properties which $\nabla_X$ acting on a tensor field should have. We put this in form of a definition. There may be many structures that satify this wish list. Any remaining freedom in choosing such a $\nabla$ will need to be provided as additional structure beyond the structure we already have. And we assume all this takes place on a smooth manifold.
+
+\begin{definition}\label{def:connection}
+A \textbf{connection} $\nabla$ on a smooth manifold $\mfd$ is a map that takes a pair consisting of a vector (field) $X$ and a $(p,q)$-tensor field $T$ and sends them to a $(p,q)$-tensor (field) $\nabla_X T$ satisfying
+\begin{enumerate}[i)]
+\item $\nabla_X f = Xf \quad \forall f \in C^{\infty}M$
+
+\item $\nabla_X (T + S) = \nabla_X T + \nabla_X S \quad \text{ where }T, S \text{ are } (p,q) \text{-tensors}$
+
+\item \textbf{Leibnitz rule: } $\nabla_X T(\omega_1,\dotsc,\omega_p,Y_1,\dotsc,Y_q) = (\nabla_X T)(\omega_1,\dotsc,\omega_p,Y_1,\dotsc,Y_q) \\
++ T(\nabla_X \omega_1,\dotsc,\omega_p,Y_1,\dotsc,Y_q) + \dotsb + T(\omega_1,\dotsc,\nabla_X \omega_p,Y_1,\dotsc,Y_q) \\
++ T(\omega_1,\dotsc,\omega_p,\nabla_X Y_1,\dotsc,Y_q) + \dotsb + T(\omega_1,\dotsc,\omega_p,Y_1,\dotsc,\nabla_X Y_q) \quad \text{ where }T \text{ is a }(p,q)\text{-tensor}$
+\begin{framed}
+Note that for a $(p,q)$-tensor $T$ and a $(r,s)$-tensor $S$, since: \\
+$(T \otimes S) (\omega_{(1)}, \dotsc, \omega_{(p+r)}, Y_{(1)}, \dotsc, Y_{(q+s)}) = \\ T(\omega_{(1)}, \dotsc, \omega_{(p)}, Y_{(1)}, \dotsc, Y_{(q)} ) \cdot S( \omega_{(p+1)}, \dotsc, \omega_{(p+r)} , Y_{(q+1)}, \dotsc, Y_{(q+s)})$, \\
+Leibnitz rule implies $\nabla_X (T \otimes S) = (\nabla_X T) \otimes S + T \otimes (\nabla_X S)$.
+\end{framed}
+
+\item \textbf{$C^{\infty}$-linearity: }$\forall f \in C^{\infty}(M), \nabla_{fX+Z} T = f\nabla_X T + \nabla_Z T$
+\begin{framed}
+$C^{\infty}$-linearity means that no matter how the function $f$ scales the vectors at different points of the manifold, the effect of the scaling at any point is independent of scaling in the neighbourhood and depends only on how the scaling happens at that point.
+\end{framed}
+\end{enumerate}
+\end{definition}
+
+A \textbf{manifold with a connection} $\nabla$ is a quadruple $(M, \mathcal{O}, \A, \nabla)$, where $M$ is a set, $\mathcal{O}$ is a topology and $\A$ is a smooth atlas.
+
+Remark: If $\nabla_X (\cdot)$ can be seen as an extension of $X$, \\
+then $\nabla_{(\cdot)}(\cdot)$ can be seen as an extension of $d$.
+
+\subsection{New structure on $\mfd$ required to fix $\nabla$}
+How much freedom do we have in choosing such a structure?
+
+Consider vector fields $X, Y$ and chart $(U,x) \in \A$. Then
+\begin{align*}
+\nabla_X Y & = \nabla_{\left(X^i \cibasis{x^i}\right)} \left(Y^m \cibasis{x^m}\right) && \text{by expanding in chart-induced basis} \\
+& = X^i \cdot \nabla_{\left(\cibasis{x^i}\right)} \left(Y^m \cibasis{x^m}\right) && \text{by }C^\infty\text{-linearity} \\
+& = X^i \underbrace{\left(\nabla_{\left(\cibasis{x^i}\right)} Y^m\right)}_{=\cibasis{x^i} Y^m} \cibasis{x^m} + X^i \cdot Y^m \cdot \underbrace{\left(\nabla_{\left(\cibasis{x^i}\right)} \cibasis{x^m}\right)}_{\text{a vector field, by defn.}} && \text{using Leibnitz rule} \\
+& =  X^i \left(\cibasis{x^i} Y^m\right) \cibasis{x^m} + X^i \cdot Y^m \cdot \left(\ccf{q}{mi} \cibasis{x^q}\right)
+\end{align*}
+
+Thus, by change of indices, 
+\begin{equation}
+\boxed{\left(\nabla_X Y\right)^i = X^m \left(\cibasis{x^m} Y^i\right) + X^m \cdot Y^n \cdot \ccf{i}{nm}}
+\end{equation}
+So we need $(dim\,M)^3$-many functions to define directional derivative of a vector field.
+
+\begin{definition}
+Given $(M, \mathcal{O}, \A, \nabla)$ and $(U,x) \in \A$, then the \textbf{connection coefficient functions} ($\Gamma$s) on $M$ of $\nabla$ w.r.t $(U,x)$ are $(dim\,M)^3$-many functions given by
+\begin{align}
+\ccf{i}{jk} : \quad & U \to \R \nonumber \\ 
+& p \mapsto \ccf{i}{jk}(p) := \left(dx^i \left(\nabla_{\left(\cibasis{x^k}\right)} \cibasis{x^j}\right)\right)(p)
+\end{align}
+\end{definition}
+
+\textit{Note: $\cibasis{x^j}$ is a vector field; $\therefore\,\nabla_{\left(\cibasis{x^k}\right)} \cibasis{x^j}$ is a vector field, and $dx^i$ is a covector which will result in a function after acting on a vector field.}
+
+On a chart domain $U$, choice of the $(dim\,M)^3$-many functions $\ccf{i}{jk}$ suffices to fix the action of $\nabla$ on a vector field. What about the directional derivative of a covector field, or a tensor field? Will we have to provide more and more coefficients? Fortunately, the same $(dim\,M)^3$-many functions fix the action of $\nabla$ on any tensor field.
+
+We know that, for a covector, $\nabla_{\cibasis{x^m}}\left(dx^i\right) = \Sigma\indices{^{i}_{jm}} dx^j$, since $dx^i$ form a dual basis. Are these $\Sigma$s independent of $\Gamma$s? Consider the following.
+\begin{align*}
+& \displaystyle\nabla_{\cibasis{x^m}} \left(dx^i \left(\cibasis{x^j}\right)\right) = \nabla_{\cibasis{x^m}} \delta^i_j = \cibasis{x^m}(\delta^i_j) = 0 \\
+& \implies \displaystyle\left(\nabla_{\cibasis{x^m}} dx^i \right)\left(\cibasis{x^j}\right) + dx^i \underbrace{\left(\nabla_{\cibasis{x^m}} \cibasis{x^j}\right)}_{\ccf{q}{jm}\cibasis{x^q}} = 0 \\
+& \implies \displaystyle\left(\nabla_{\cibasis{x^m}} dx^i \right)\left(\cibasis{x^j}\right) + dx^i \ccf{q}{jm} \cibasis{x^q} = 0 \\
+& \implies \left(\nabla_{\cibasis{x^m}} dx^i \right)\left(\cibasis{x^j}\right) = - dx^i \ccf{q}{jm} \cibasis{x^q} = - \ccf{q}{jm} dx^i \cibasis{x^q} = - \ccf{q}{jm} \delta^i_q = - \ccf{i}{jm} \\
+& \implies \left(\nabla_{\cibasis{x^m}} dx^i \right)\underbrace{\left(\cibasis{x^j}\right) dx^j}_{= \delta^j_j = 1} = -\ccf{i}{jm} dx^j \\
+& \implies \boxed{\nabla_{\cibasis{x^m}} dx^i = -\ccf{i}{jm} dx^j} \\
+& \implies \boxed{\left(\nabla_{\cibasis{x^m}} dx^i\right)_j = -\ccf{i}{jm}}
+\end{align*}
+In summary,
+\begin{align}
+  \displaystyle\left(\nabla_X Y\right)^i & = X(Y^i) + \ccf{i}{jm} Y^j X^m \\
+  \displaystyle\left(\nabla_X \omega\right)_i & = X\left(\omega_i\right) - \ccf{j}{im} \omega_j X^m
+\end{align}
+Note that for the immediately above expression for $(\nabla_X Y)^i$, in the second term on the right hand side, $\ccf{i}{jm}$ has the last entry at the bottom, $m$ going in the direction of $X$, so that it matches up with $X^m$. This is a good mnemonic to memorize the index positions of $\ccf{}{}$.
+
+Similarly, as an example, by further application of Leibnitz rule, for a $(1,2)$-tensor field $T$,
+\begin{align*}
+  \left(\nabla_X T\right)\indices{^i_{jk}} = X\left(T\indices{^i_{jk}}\right) + \ccf{i}{sm} T\indices{^s_{jk}} X^m - \ccf{s}{jm} T\indices{^i_{sk}} X^m - \ccf{s}{km} T\indices{^i_{js}} X^m
+\end{align*}
+
+%Student's Question: If in a Euclidean space, do the $\Gamma$s all vanish in a global chart? Yes, it is so by definition. But what is a Euclidean space? \\
+%$\left(M = \R^n, \mathcal{O}_{\text{st}}, \A\right)$ smooth manifold. \\
+%Assume $(\R^n, \text{id}_{\R^n} ) \in \A$ and 
+%\[
+%\ccfx{i}{jk}{(x)} = dx^i \left( (\nabla_{\text{\underline{E}}})_{\cibasis{x^k}}\cibasis{x^j} \right) \overset{!}{=} 0 
+%\]
+
+\subsection{Change of $\Gamma$'s under change of chart}
+Let $(U,x)$, $(V,y) \in \A$ and $U \cap V \neq \emptyset$.
+\begin{align*}
+\ccfx{i}{jk}{(y)} & := dy^i \left(\nabla_{\cibasis{y^k}} \cibasis{y^j} \right) \\
+& = \cibasis[y^i]{x^q} dx^q \left(\nabla_{\cibasis[x^p]{y^k} \cibasis{x^p}} \cibasis[x^s]{y^j} \cibasis{x^s} \right) \\
+& = \cibasis[y^i]{x^q} dx^q \left(\cibasis[x^p]{y^k} \left[ \left(\nabla_{\cibasis{x^p}} \cibasis[x^s]{y^j} \right) \cibasis{x^s} + \cibasis[x^s]{y^j} \left(\nabla_{\cibasis{x^p}} \cibasis{x^s} \right) \right] \right) && \because \nabla \text{ is } C^{\infty}-linear \\
+& = \cibasis[y^i]{x^q} \underbrace{\cibasis[x^p]{y^k} \cibasis{x^p}}_{\cibasis{y^k}} \cibasis[x^s]{y^j} \delta^q_s + \cibasis[y^i]{x^q} \cibasis[x^p]{y^k} \cibasis[x^s]{y^j} \ccfx{q}{sp}{(x)}
+\end{align*}
+
+\begin{equation}\label{Eq:WEHCG0703_changeofGamma}
+\ccfx{i}{jk}{(y)} = \cibasis[y^i]{x^q} \frac{\partial^2 x^q}{\partial y^k \partial y^j} + \cibasis[y^i]{x^q} \cibasis[x^s]{y^j} \cibasis[x^p]{y^k} \ccfx{q}{sp}{(x)}
+\end{equation}
+
+Eq. (\ref{Eq:WEHCG0703_changeofGamma}) is the change of connection coefficient function under the change of chart $(U\cap V,x) \to (U\cap V,y)$. $\ccf{}{}$ is not a tensor due to the first term on left hand side in Eq. (\ref{Eq:WEHCG0703_changeofGamma}). However, for linear transformation between coordinates in two charts, the term $\frac{\partial^2 x^q}{\partial y^k \partial y^j}$ always vanishes and then, if $\Gamma$s are zero in one chart, they will be zero in the other chart too. However, there is no reason not to select a coordinate which is not a linear transformation of another one.
+
+\subsection{Normal Coordinates}
+Can we find a coordinate system that makes the $\ccf{}{}$s vanish?
+
+\begin{theorem}
+Let $p \in M$ of $(M, \mathcal{O}, \A, \nabla)$. Having chosen a point $p$, one can construct a chart $(U,x)$ with $p \in U$ such that the symmetric part of $\Gamma$s vanish at the point $p$ (not necessarily in any neighbourhood). That is, \\
+$\displaystyle\forall \, p \in M, \, \exists \, (U,x) \in \A \, : \, p \in U \text{ and } \ccfx{i}{(jk)}{(x)}(p) = 0$. \\
+Such $(U,x)$ is called a \textbf{normal coordinate chart} of $\nabla$ at $p \in M$.
+\end{theorem}
+
+\begin{proof}
+Let $(V,y) \in \A$ and $p \in V$. Then consider a new chart $(U,x)$ to which one transits using the map $(x \after y^{-1})$ whose $i^{th}$ component is given by\\
+\begin{align*}
+\left(x \after y^{-1}\right)^i\left(\alpha^1,\dotsc,\alpha^d\right) := \alpha^i - \ccfx{i}{(jk)}{(y)} \alpha^j \alpha^k && \text{ where the } \ccf{}{} \text{s are taken at the point } p \\ 
+\implies \displaystyle\cibasis[x^i]{y^j} = \partial_j\left(x^i \after y^{-1}\right) = \delta^i_j - \ccfx{i}{(jm)}{(y)} \alpha^m \\
+\implies \displaystyle\frac{\partial^2 x^i}{\partial y^k \partial y^j} = - \ccfx{i}{(jk)}{(y)} \\
+\end{align*}
+To end the proof one can see that, without loss of generality, the coordinates of $y$ can be chosen so that the chart coordinates vanish at $p$. Then in applying formula (\ref{Eq:WEHCG0703_changeofGamma}) one has to evaluate derivatives at point $p$. Also, given that $\delta$ is its own inverse.
+\begin{align*}
+\implies & \ccfx{i}{jk}{(x)}(p) = \ccfx{i}{(jk)}{(y)}(p) - \ccfx{i}{(jk)}{(y)}(p) = \ccfx{i}{[jk]}{(y)}(p) \\
+\implies & \ccfx{i}{(jk)}{(x)}(p) = 0.
+\end{align*}
+\end{proof}
+
+We can say that, up to a \textit{torsion}, we can make the $\Gamma$s vanish.
+Later in the course one should see that the antisymmetric part of the $\Gamma$s is in fact a tensor and that can ce set consistently to zero. I can then look at special kind of connections where the $\Gamma^{i}_{~[jk]}$ vanishes, those are \textit{torsion-free connections}.

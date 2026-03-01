@@ -1,0 +1,226 @@
+\section{Integration}
+\begin{framed}
+This lecture will be the completion of our ``lift'' of analysis on charts to the manifold level. We want to be able to integrate a function $f$ over a manifold $M$. This $\int_{M} f$ will be an important tool for writing down the action on Einstein Equations.
+
+However, to define integral we need a mild new structure on the smooth manifold $\mfd$. It requires \\
+(i) a choice of a certain tensor field, the so-called \textbf{volume form} and \\
+(ii) a restriction on the atlas $\A$, which is called '\textbf{orientation}'.
+\end{framed}
+
+\subsection{Review of integration on $\mathbb{R}^d$}
+We review this because this is what, after all, happens on charts; and we want to use this knowledge to have a well-defined integration on manifolds.
+\begin{enumerate}[a)]
+\item If $F : \R \to \R$, we assume a notion of integration is known. We define an integral over an interval $(a,b)$ as follows: \\
+\[
+\int_{(a,b)} F := \int_a^b dx \, F(x) \quad\quad \text{(which is understood in terms of, say, Riemann's integral)}.
+\]
+
+\item If $F : \R^k \to \R$, then
+\begin{enumerate}[(i)]
+\item on a box-shaped domain, $Box = (a,b) \times (c,d) \times \dotsb \times (u,v) \subseteq \R^k$, the integral on the box is a series of integrals which have to be evaluated one after the other as follows \\
+\[
+\int_{Box} F := \int_a^b dx^1 \int_c^d dx^2 \dotsi \int_u^v dx^k \, F(x^1, x^2, \dotsc, x^k)
+\]
+\item for other domains, $G \subseteq \R^k$, we first introduce an \textbf{indicator function} $\mu_G : \R^k \to \R$ such that
+\[
+\mu_G(x) = \begin{cases}
+               1, \quad \quad x \in G \\
+               0, \quad \quad x \not\in G
+            \end{cases}
+\]
+and then define
+\[
+\int_{G} F := \int_{-\infty}^{+\infty} dx^1 \int_{-\infty}^{+\infty} dx^2 \dotsi \int_{-\infty}^{+\infty} dx^k \, \mu_G(x) \cdot F(x^1, x^2, \dotsc, x^k)
+\]
+While this may not be a practical definition, it tells us what we mean by an integral over a function from $\R^k$ to $\R$ over an arbitrary domain $G$.
+\end{enumerate}
+\end{enumerate}
+
+\textit{\textbf{Note}: All of the above comes with the disclaimer '\textbf{if the integral exists}' since there could be many issues that do not allow the existence of the integral as defined above.}
+
+\textbf{Change of variables}, which may also be called integration by substitution.
+
+\begin{theorem}
+If $F : \R^k \ni G \to \R$ and $\phi : preim_\phi(G) (\in \R^k) \to G$, then
+\[
+\int_G F(x) = \int_{preim_\phi(G)} \underbrace{\left\lvert det(\partial x)(y) \right\rvert}_{\text{Jacobian of }\phi} \cdot (F \after \phi)(y)
+\]
+\end{theorem}
+
+\begin{tikzpicture}
+  \matrix (m) [matrix of math nodes, row sep=4em, column sep=6em, minimum width=2em]
+  {
+    \R^k \ni preim_\phi(G) & G \in \R^k \\
+    & \R \\
+  };
+  \path[->]
+  (m-1-1) edge node[auto] {$\phi$} (m-1-2)
+          edge node[sloped, anchor=center, below] {$F \after \phi$} (m-2-2)
+  (m-1-2) edge node[auto] {$F$} (m-2-2);
+\end{tikzpicture}
+
+\textbf{Example}: Consider the domain $G \subset \R^2$, which includes the entire $R^2$ except the x-axis. Let
+\begin{align*}
+\phi : & \R^+ \times \lbrace(0,\pi) \cup (\pi,2\pi)\rbrace \to G \\
+& (r, \varphi) \mapsto (r\cos\varphi, r\sin\varphi)
+\end{align*}
+Thus, $G$ is in Cartesian coordinates and $preim_\phi(G)$ is in polar coordinates. Let us calculate the Jacobian.
+\begin{align*}
+(\partial_a x^b) (r, \varphi) & = \begin{vmatrix}
+\cos\varphi & \sin\varphi \\
+-r\sin\varphi & r\cos\varphi
+\end{vmatrix} \\
+det(\partial_a x^b) (r, \varphi) & = r \\
+\implies \int_G \underbrace{dx^1 \, dx^2}_{\text{volume element}} \, F(x^1,x^2) & = \int_0^\infty \int_0^{2\pi} \underbrace{dr \, d\varphi \, r}_{\text{volume element}} F(r\cos\varphi, r\sin\varphi)
+\end{align*}
+
+\subsection{Integration on one chart}
+Let $\mfd$ be a smooth manifold, $f : M \to \R$ and choose charts $(U,x), (U,y) \in \A$
+
+\begin{tikzpicture}
+  \matrix (m) [matrix of math nodes, row sep=5em, column sep=7em, minimum width=2em]
+  {
+    y(U) \in \R^k &  \\
+    U & \R \\
+    x(U) \in \R^k &  \\
+  };
+  \path[->]
+  (m-2-1) edge node[auto] {$f$} (m-2-2)
+          edge node[auto] {$y$} (m-1-1)
+          edge node[auto] {$x$} (m-3-1)
+  (m-1-1) edge node[sloped, anchor=center, above] {$f_{(y)} := f \after y^{-1}$} (m-2-2)
+  (m-3-1) edge node[sloped, anchor=center, below] {$f_{(x)} := f \after x^{-1}$} (m-2-2)
+  (m-3-1) edge [bend left=40] node[left] {$y \after x^{-1}$} (m-1-1);
+\end{tikzpicture}
+
+Consider $\int_U f$
+\[
+\int_U f := \int_{x(U)} d^k\alpha \, f_{(x)}(\alpha)
+\]
+\subsection{Volume forms}
+
+\begin{definition}
+On a smooth manifold $(M,\mathcal{O},\mathcal{A})$ \\
+a $(0,\text{dim}M)$-tensor field $\Omega$ is called a \underline{volume form} if 
+\begin{enumerate}
+\item[(a)] $\Omega$ vanishes nowhere (i.e. $\Omega \neq 0 \, \, \forall \, p \in M$) 
+\item[(b)] totally antisymmetric 
+\[
+\Omega(\dots , \underbrace{X}_{i\text{th}} , \dots , \underbrace{Y}_{j\text{th}} \dots ) = - \Omega(\dots , \underbrace{Y}_{i\text{th}} , \dots , \underbrace{X}_{j\text{th}} \dots )
+\]
+\end{enumerate}
+
+In a chart: 
+\[
+\Omega_{i_1 \dots i_d} = \Omega_{ [i_1 \dots i_d ]}
+\]
+\end{definition}
+
+\underline{Example} $(M,\mathcal{O}, \mathcal{A},g)$ metric manifold
+
+construct volume form $\Omega$ from $g$
+
+In \underline{any} chart: $(U,x)$
+
+\[
+\Omega_{i_1 \dots i_d} := \sqrt{ \text{det}(g_{ij}(x)) } \epsilon_{i_1 \dots i_d} 
+\]
+where \textbf{Levi-Civita symbol} $\epsilon_{i_1 \dots i_d}$ is \underline{defined} as $\begin{aligned} & \quad \\ 
+& \epsilon_{123 \dots d} = +1 \\ 
+& \epsilon_{1\dots d} = \epsilon_{[i_1 \dots i_d]} \end{aligned}$
+
+\begin{proof} (well-defined) Check: What happens under a change of charts
+\[
+\begin{aligned}
+\Omega(y)_{i_1 \dots i_d} & = \sqrt{ \text{det}(g(y)_{ij}) } \epsilon_{i_1 \dots i_d} = \\
+& = \sqrt{ \text{det}(g_{mn}(x) \frac{ \partial x^m}{ \partial y^i} \frac{ \partial x^n}{ \partial y^j} )} \frac{ \partial y^{m_1} }{ \partial x^{i_1} } \dots \frac{ \partial y^{m_d}}{ \partial x^{i_d}} \epsilon_{ [m_1 \dots m_d] } = \\
+& = \sqrt{ | \text{det}g_{ij}(x) | } \left| \text{det}\left( \frac{ \partial x}{ \partial y} \right) \right| \text{det}\left( \frac{ \partial y}{ \partial x} \right) \epsilon_{i_1 \dots i_d} = \sqrt{ \text{det}g_{ij}(x)} \epsilon_{i_1 \dots i_d} \text{sgn}\left( \text{det}\left( \frac{ \partial x}{ \partial y} \right) \right)
+\end{aligned}
+\]
+\end{proof}
+
+EY : 20150323 
+
+Consider the following:
+\[
+\begin{aligned}
+\Omega(y)(Y_{(1)} \dots Y_{(d)} ) & = \Omega(y)_{i_1 \dots i_d}Y_{(1)}^{i_1} \dots Y_{(d)}^{i_d} =  \\
+& = \sqrt{ \text{det}(g_{ij}(y)) } \epsilon_{i_1 \dots i_d} Y^{i_1}_{(1)} \dots Y^{i_d}_{(d)} = \\
+& = \sqrt{ \text{det}(g_{mn}(x)) \frac{ \partial x^m}{ \partial y^i} \frac{ \partial x^n }{ \partial y^j} } \epsilon_{i_1 \dots i_d} \frac{ \partial y^{i_1}}{ \partial x^{m_1} } \dots \frac{ \partial y^{i_d} }{ \partial x^{m_d} } X^{m_1} \dots X^{m_d}  = \\
+& = \sqrt{ \text{det}(g_{mn}(x))\frac{ \partial x^m}{ \partial y^i} \frac{ \partial x^n}{ \partial y^j}} \text{det}\left( \frac{ \partial y}{ \partial x}\right) \epsilon_{m_1 \dots m_d} X^{m_1} \dots X^{m_d} = \\
+& = \sqrt{ \text{det}(g_{mn}(x)) } \left| \text{det}\left( \frac{ \partial x}{ \partial y} \right) \right| \text{det}\left( \frac{ \partial y}{ \partial x} \right) \epsilon_{m_1 \dots m_d} X^{m_1} \dots X^{m_d} = \\
+& = \sqrt{\text{det}(g_{mn}(x))} \epsilon_{m_1 \dots m_d} \text{sgn}\left(\text{det}\left( \frac{ \partial x}{ \partial y} \right) \right) X^{m_1} \dots X^{m_d} = \text{sgn}(\text{det}\left( \frac{ \partial x}{ \partial y} \right)) \Omega_{m_1 \dots m_d}(x) X^{m_1} \dots X^{m_d}
+\end{aligned}
+\]
+
+If $\text{det}\left( \frac{ \partial y}{ \partial x} \right) > 0$, 
+\[
+\Omega(y)(Y_{(1)} \dots Y_{(d)})  = \Omega(x)(X_{(1)} \dots X_{(d)} )
+\]
+This works also if Levi-Civita symbol $\epsilon_{i_1\dots i_d}$ doesn't change at all under a change of charts. (around 42:43 \url{https://youtu.be/2XpnbvPy-Zg})
+
+\hrulefill
+
+Alright, let's require, \\
+\phantom{\quad \, } restrict the smooth atlas $\mathcal{A}$ \\
+\phantom{\quad \quad \, } to a subatlas ($\mathcal{A}^{\uparrow}$ still an atlas) 
+\[
+\mathcal{A}^{\uparrow} \subseteq \mathcal{A}
+\]
+s.t. $\forall \, (U,x), (V,y)$ have chart transition maps $\begin{aligned} & \quad \\ 
+& y\circ x^{-1} \\ 
+& x\circ y^{-1} \end{aligned}$
+
+s.t. $\text{det}\left( \frac{ \partial y}{ \partial x} \right) >0$  \\
+\phantom{ \quad \, } such $\mathcal{A}^{\uparrow} $ called an \textbf{oriented} atlas 
+
+\[
+(M, \mathcal{O}, \mathcal{A},g) \Longrightarrow (M,\mathcal{O},\mathcal{A}^{\uparrow} ,g)
+\]
+Note: associated bundles.
+
+Note also:
+$ \text{det}\left( \frac{ \partial y^b}{ \partial x^a} \right) = \text{det}(\partial_a(y^bx^{-1}))$ \phantom{ \quad \quad \, } $\frac{ \partial y^b}{ \partial x^a}$ is an endomorphism on vector space $V$.  $\begin{aligned} & \quad \\ 
+& \varphi : V \to V \\
+& \text{det}\varphi \quad \, \text{ independent of choice of basis } \end{aligned}$
+
+\phantom{\quad \quad \, } $g$ is a $(0,2)$ tensor field, not endomorphism (not independent of choice of basis) $\sqrt{ |\text{det}(g_{ij}(y)) | }$
+
+\begin{definition} $\Omega$ be a volume form on $(M,\mathcal{O}, \mathcal{A}^{\uparrow} )$ and consider chart $(U,x)$ 
+\begin{definition} $\omega_{(X)} := \Omega_{i_1\dots i_d} \epsilon^{i_1\dots i_d}$
+same way $\begin{aligned} & \quad \\ 
+& \epsilon^{12 \dots d} = +1 \\ 
+& \epsilon^{[\dots ]} \end{aligned}$
+
+one can show
+
+\[
+\boxed{ \omega_{(y)} = \text{det}\left( \frac{ \partial x}{ \partial y} \right) \omega_{(x)} } \quad \quad \, \text{ scalar density }
+\]
+\end{definition}
+\end{definition}
+
+\subsection{Integration on \underline{one} chart domain $U$}
+
+\begin{definition}
+\begin{equation}
+\boxed{ \int_U f :\overset{ (U,y) }{=} \int_{y(U)} d^d\beta \omega_{(y)}(y^{-1}(\beta)) f_{(y)}(\beta) }
+\end{equation}
+\end{definition}
+
+\begin{proof}: Check that it's (well-defined), how it changes under change of charts
+\[
+\begin{gathered}
+\int_U f :\overset{ (U,y) }{=} \int_{y(U)} d^d\beta \omega_{(y)}(y^{-1}(\beta)) f_{(y)}(\beta) = \underset{ (U,y)}{=} \int_{x(U)} \int d^d\alpha \left| \text{det}\left( \frac{ \partial y }{ \partial x}\right) \right| f_{(x)}(\alpha) \omega_{(x)}(x^{-1}(\alpha) \text{det}\left( \frac{ \partial x}{ \partial y } \right) = \\
+= \int_{x(U)} d^d \alpha \omega_{(x)}(x^{-1}(x)) f_{(x)}(\alpha)
+\end{gathered}
+\]
+\end{proof}
+
+On an oriented metric manifold $(M,\mathcal{O}, \mathcal{A}^{\uparrow}, g)$
+\[
+\int_Uf:= \int_{x(U)} d^d\alpha  \underbrace{  \sqrt{ \text{det}(g_{ij}(x))(x^{-1}(\alpha)) } }_{\sqrt{g}}  f_{(x)}(\alpha)
+\]
+
+\subsection{Integration on the entire manifold}
+

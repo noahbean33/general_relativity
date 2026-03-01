@@ -1,0 +1,234 @@
+\section{Lecture 13: Relativistic spacetime}
+
+Recall, from Lecture 9, the definition of Newtonian spacetime
+\[
+(M, \mathcal{O}, \mathcal{A}, \nabla, t) \quad \quad \quad \, \begin{aligned}
+& \nabla \text{ torsion free } \\
+& t \text{(the so-called absolute time) } \in C^{\infty}(M) \\ 
+& dt \neq 0 \\
+& \nabla dt = 0   \quad \, \text{ (uniform time) }
+\end{aligned}
+\]
+and the definition of relativistic spacetime (before Lecture 1)
+\[
+(M, \mathcal{O}, \mathcal{A}^{\uparrow}, \nabla, g, T ) \quad \quad \quad \, \begin{aligned}
+& \nabla \text{ torsion-free } \\
+& g \text{ Lorentzian metric} (+---) \\ 
+& T \text{ time-orientation }
+\end{aligned}
+\]
+The role played by $t$ in Newtonian spacetime is played by the interplay of two new structures $g$ and $T$ in relativistic spacetime.
+
+\subsection{Time orientation}
+
+\begin{definition}
+  $(M,\mathcal{O},\mathcal{A}^{\uparrow},g)$ a Lorentzian manifold.  Then a time-orientation is given by a vector field $T$ that 
+\begin{enumerate}
+\item[(i)] does \textbf{not} vanish anywhere 
+\item[(ii)] $g(T,T)>0$
+\end{enumerate}
+\end{definition}
+
+Newtonian vs. relativistic \\
+Recall that a vector $X$ in Newtonian spacetime was called future-directed if $dt(X) > 0$.
+
+$\forall \, p \in M$, take half plane, half space of $T_pM$ \\
+also stratified atlas so make planes of constant $t$ straight \\
+relativistic \\
+half cone $\forall \, p, q \in M$, half-cone $\subseteq T_pM$ \\
+
+This definition of \underline{spacetime}
+
+Question \\
+I see how the cone structure arises from the new metric. I don't understand however, how the $T$, the time orientation, comes in \\
+
+Answer \\
+$(M,\mathcal{O}, \mathcal{A},g)$ $g \xleftarrow (+---)$
+
+requiring $g(X,X)>0$, select cones \\
+$T$ chooses which cone \\
+
+This definition of \underline{spacetime} has been made to enable the following physical postulates:
+\begin{enumerate}
+\item[(P1)] The worldline $\gamma$ of a \underline{massive} particle satisfies
+\begin{enumerate}
+  \item[(i)] $g_{\gamma(\lambda)}(v_{\gamma, \gamma(lambda)} , v_{\gamma,\gamma(\lambda)} ) >0$
+  \item[(ii)] $g_{\gamma(\lambda)}(T, v_{\gamma,\gamma(\lambda)}) >0$
+\end{enumerate}
+\item[(P2)] Worldlines of \underline{massless} particles satisfy
+\begin{enumerate}
+\item[(i)] $g_{\gamma(\lambda)}(v_{\gamma,\gamma(\lambda)}, v_{\gamma,\gamma(\lambda)}) = 0$
+\item[(ii)] $g_{\gamma(\lambda)}(T,v_{\gamma,\gamma(\lambda)}) >0$
+\end{enumerate}
+\underline{picture}: spacetime:
+\end{enumerate}
+
+Answer (to a question) $T$ is a smooth vector field, $T$ determines future vs. past, ``general relativity: we have such a time orientation; smoothness makes it less arbitrary than it seems'' -FSchuller,
+
+
+\underline{Claim}: $9/10$ of a metric are determined by the cone
+
+spacetime determined by distribution, only one-tenth error 
+
+\subsection{Observers} $(M,\mathcal{O}, \mathcal{A}^{\uparrow},\nabla ,g, T)$
+\begin{definition}
+  An \underline{observer} is a worldline $\gamma$ with
+\[
+\begin{aligned}
+  & g(v_{\gamma}, v_{\gamma}) >  0 \\ 
+  & g(T,v_{\gamma}) > 0 
+\end{aligned}
+\]
+together with a choice of basis
+\[
+v_{\gamma,\gamma(\lambda)} \equiv e_0(\lambda) , e_1(\lambda), e_2(\lambda), e_3(\lambda)
+\]
+of each $T_{\gamma(\lambda)}M$ where the observer worldline passes, if $g(e_a(\lambda), e_b(\lambda)) = \eta_{ab} = \left[ \begin{matrix} 1 & & & \\ & -1 & & \\ & & -1 & \\ & & & -1 \end{matrix} \right]_{ab}$
+
+\underline{precise}: observer $=$ \underline{smooth} curve in the frame bundle $LM$ over $M$
+\end{definition}
+
+\subsubsection{Two physical postulates}
+
+\begin{enumerate}
+  \item[(P3)] A \textbf{clock} carried by a specific observer $(\gamma, e)$ will measure a \textbf{time}
+\[
+\tau := \int_{\lambda_0}^{\lambda_1} d\lambda \sqrt{ g_{\gamma(\lambda)}(v_{\gamma,\gamma(\lambda)}, v_{\gamma,\gamma(\lambda)}) }
+\]
+between the two ``\underline{events}''
+\[
+\gamma(\lambda_0) \quad \quad \quad \, \text{ ``start the clock'' }
+\]
+and 
+\[
+\gamma(\lambda_1) \quad \quad \quad \, \text{ ``stop the clock'' }
+\]
+\underline{Compare} with Newtonian spacetime:
+\[
+t(p)=7
+\]
+
+Thought bubble: \underline{proper time/eigentime} $\tau$
+
+\underline{Application/Example.}
+$\begin{aligned}
+& M = \mathbb{R}^4 \\ 
+ & \mathcal{O} = \mathcal{O}_{\text{st}} \\
+  & \mathcal{A} \ni (\mathbb{R}^4, \text{id}_{\mathbb{R}^4} ) \\ 
+  & g : g_{(x)ij} = \eta_{ij} \quad \, ; \quad \quad \, T_{(x)}^i =(1,0,0,0)^i
+\end{aligned}
+$
+\[
+\Longrightarrow \Gamma_{(x) \, \, jk }^i = 0 \text{ everywhere }
+\]
+$\Longrightarrow (M,\mathcal{O}, \mathcal{A}^{\uparrow},g,T,\nabla)$ \quad \, $\text{Riemm}=0$ \\
+$\Longrightarrow $ spacetime is flat
+
+This situation is called special relativity.
+
+Consider two observers: 
+\[
+\begin{aligned} & 
+\begin{aligned}
+& \gamma : (0,1) \to M \\ 
+ & \gamma_{(x)}^i = (\lambda , 0 ,0  ,0 )^i \end{aligned} \\
+& 
+\begin{aligned}
+  & \delta :(0,1) \to M \\
+\alpha \in (0,1) :   & \delta_{(x)}^i = \begin{cases} ( \lambda , \alpha \lambda , 0 , 0)^i & \lambda \leq \frac{1}{2} \\ 
+    (\lambda, (1-\lambda)\alpha, 0,0)^i & \lambda > \frac{1}{2} \end{cases}
+\end{aligned}
+\end{aligned}
+\]
+let's calculate:
+\[
+\begin{aligned}
+  & \tau_{\gamma}:= \int_0^1 \sqrt{ g_{(x)ij} \dot{\gamma}^i_{(x)} \dot{\gamma}^j_{(x)} } = \int_0^1 d\lambda 1 = 1 \\
+  & \tau_{\delta} := \int_0^{1/2} d\lambda \sqrt{ 1- \alpha^2} + \int_{1/2}^1 \sqrt{ 1^2 - (-\alpha)^2 } = \int_0^1 \sqrt{ 1 - \alpha^2 } = \sqrt{ 1 - \alpha^2}
+\end{aligned}
+\]
+Note: piecewise integration
+
+Taking the clock postulate (P3) seriously, one better come up with a realistic clock design that supports the postulate. 
+\underline{idea}.
+
+2 little mirrors
+\item[(P4)] \underline{Postulate}
+
+Let $(\gamma, e)$ be an observer, and \\
+$\delta$ be a \emph{massive} particle worldline that is parametrized s.t. $g(v_{\gamma}, v_{\gamma})=1$ (for parametrization/normalization convenience)
+
+Suppose the observer and the particle \emph{meet} somewhere (in spacetime)
+\[
+\delta(\tau_2) = p = \gamma(\tau_1)
+\]
+
+\emph{This} observer measures the 3-velocity (spatial velocity) of this particle as 
+\begin{equation}\label{Eq:spatialv}
+v_{\delta}: \epsilon^{\alpha}( v_{\delta, \delta(\tau_2)} ) e_{\alpha} \quad \quad \quad \, \alpha =1,2,3
+\end{equation}
+where $\epsilon^0, \boxed{ \epsilon^1,\epsilon^2,\epsilon^3}$ is the unique dual basis of $e_0,\boxed{ e_1,e_2,e_3}$
+\end{enumerate}
+
+EY:20150407
+
+There might be a major correction to Eq. (\ref{Eq:spatialv}) from the Tutorial 14 : Relativistic spacetime, matter, and Gravitation, see the second exercise, Exercise 2, third question:
+\begin{equation}
+v := \frac{ \epsilon^{\alpha}({v}_{\delta} ) }{ \epsilon^0({v}_{\delta}) } e_{\alpha}
+\end{equation}
+
+\underline{Consequence}:
+An observer $(\gamma, e)$ will extract quantities measurable in his laboratory from objective spacetime quantities always like that.
+
+\underline{Ex}: $F$ Faraday $(0,2)$-tensor of electromagnetism:
+
+\[
+F(e_a,e_b) = F_{ab} = \left[ \begin{matrix} 0 & E_1 & E_2 & E_3 \\ 
+    -E_1 & 0 & B_3 & -B_2 \\ 
+    -E_2 & -B_3 & 0 & B_1 \\
+    -E_3 & B_2 & -B_1 & 0 \end{matrix} \right]
+\]
+observer frame $e_a,e_b$
+
+$E_{\alpha} := F(e_0,e_{\alpha})$ \\
+$B^{\gamma}:= F(e_{\alpha},e_{\rho})\epsilon^{\alpha \beta \gamma}$
+where 
+$\epsilon^{123} = +1$ totally antisymmetric
+
+\subsection{Role of the Lorentz transformations}
+
+Lorentz transformations emerge as follows: \\
+Let $(\gamma,e)$ and $(\widetilde{\gamma},\widetilde{e})$ be observers with $\gamma(\tau_1) = \widetilde{\gamma}(\tau_2)$
+
+(for simplicity $\gamma(0) = \widetilde{\gamma}(0)$
+
+Now 
+\[
+\begin{gathered}
+  e_0 , \dots , e_1 \quad \quad \quad \, \text{ at } \tau = 0 \\
+  \text{ and } 
+  \widetilde{e}_0 , \dots , \widetilde{e}_1 \quad \quad \quad \, \text{ at }  \tau = 0 \\
+\end{gathered}
+\]
+both bases for the same $T_{\gamma(0)}M$
+
+\underline{Thus}: $\widetilde{e}_a = \Lambda^b_{ \, \, a} e_b $ \quad \quad \, $\Lambda \in GL(4)$
+
+Now:
+
+\[
+\begin{aligned}
+  \eta_{ab} = g(\widetilde{e}_a, \widetilde{e}_b) & = g(\Lambda^m_{ \, \, a}e_m, \Lambda^n_{ \, \, b} e_n ) = \\
+  & = \Lambda^m_{ \, \, a} \Lambda^n_{ \, \, b} \underbrace{g(e_m,e_n)}_{ \eta_{mn}}
+\end{aligned}
+\]
+i.e. $\Lambda \in O(1,3)$
+
+\underline{Result}: Lorentz transformations relate the \emph{frames} of \emph{any two observers} at the same point.
+
+``$\widetilde{x}^{\mu} - \Lambda^{\mu}_{ \, \, \nu} x^{\nu}$'' is utter nonsense
+
+\subsection*{Tutorial}
+
+I didn't see a tutorial video for this lecture, but I saw that the Tutorial sheet number 14 had the relevant topics.  Go there.
+

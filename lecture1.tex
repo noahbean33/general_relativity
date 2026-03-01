@@ -1,0 +1,123 @@
+\section{Topology}
+\begin{framed}
+\textbf{Motivation}: At the coarsest level, spacetime is a set. But, a set  is not enough to talk about continuity of maps, which is required for classical physics notions such as trajectory of a particle. We do not want jumps such as a particle disappearing at some point on its trajectory and appearing somewhere. So we require continuity of maps. There could be many structures that allow us to talk about continuity, e.g., distance measure. But we need to be very minimal and very economic in order not to introduce undue assumptions. So we are interested in the weakest structure that can be established on a set which allows a good definition of continuity of maps. Mathematicians know that the weakest such structure is topology. This is the reason for studying topological spaces.
+\end{framed}
+
+\subsection{Topological Spaces}
+\begin{definition}
+  Let $M$ be a set and $\mathcal{P}(M)$ be the power set of $M$, i.e., the set of all subsets of $M$.   \\
+A set $\mathcal{O} \subseteq \mathcal{P}(M)$ is called a \textbf{topology}, if it satisfies the following:
+\begin{enumerate}
+  \item[(i)] $\emptyset \in \mathcal{O}$, $M \in \mathcal{O}$ 
+\item[(ii)] $U \in \mathcal{O}$, \, $V \in \mathcal{O} \implies U \cap V \in \mathcal{O}$ 
+\item[(iii)] $U_{\alpha} \in \mathcal{O}$, \, $\alpha \in \mathcal{A}$ ($\mathcal{A} \text{ is an index set } \implies \left( \bigcup_{\alpha \in \mathcal{A}} U_{\alpha} \right) \in \mathcal{O}$
+\end{enumerate}
+\end{definition}
+
+\textbf{Terminology}:
+\begin{enumerate}
+\item the tuple $(M , \mathcal{O})$ is a \textbf{topological space}.
+\item $\mathcal{U} \in M$ is an \textbf{open set} if $\mathcal{U} \in \mathcal{O}$.
+\item $\mathcal{U} \in M$ is a \textbf{closed set} if $M \setminus \mathcal{U} \in \mathcal{O}$.
+\end{enumerate}
+
+\begin{definition}
+  $(M , \mathcal{O})$, where $\mathcal{O} = \lbrace \emptyset, M\rbrace$ is called the \textbf{chaotic topology}.
+\end{definition}
+
+\begin{definition}
+  $(M , \mathcal{O})$, where $\mathcal{O} = \mathcal{P}(M)$ is called the \textbf{discrete topology}.
+\end{definition}
+
+\begin{definition}
+A \textbf{soft ball} at the point $p$ in $\R^d$ is the set
+\begin{equation}
+\displaystyle\mathcal{B}_r(p) := \left\{ (q_1, q_2, ..., q_d) \quad | \quad \sum_{i=1}^{d} (q_i - p_i)^2 < r^2 \right\} \text{ where } r \in \R^+
+\end{equation}
+\end{definition}
+
+\begin{definition}
+  $(\R^d, \stdtop)$ is the \textbf{standard topology}, provided that $U \in \stdtop$ iff \\
+  $\forall p \in U, \exists r \in \R^+: \mathcal{B}_r(p) \subseteq U$
+\end{definition}
+
+\begin{proof}
+$\emptyset \in \stdtop$ since $\forall \, p \in \emptyset$, $\exists r \in \R^+$: $\mathcal{B}_r(p) \subseteq \emptyset$ (i.e. satisfied ``vacuously'') \\
+$\R^d \in \stdtop$ since $\forall p \in \R^d$, $\exists r = 1 \in \R^+$: $\mathcal{B}_r(p) \subseteq \R^d$
+ 
+Suppose $U, V \in \stdtop$. Let $p \in U \cap V \implies \exists \, r_1, r_2 \in \R^+$ s.t. $\quad \mathcal{B}_{r_1}(p) \subseteq U, \quad \mathcal{B}_{r_2}(p) \subseteq V$. \\
+Let $r=\min{ \lbrace r_1, r_2 \rbrace} \implies \mathcal{B}_r(p) \subseteq U$ and $\mathcal{B}_r(p) \subseteq V \implies \mathcal{B}_r(p) \subseteq U \cap V \implies U \cap V \in \stdtop$.
+
+Suppose, $U_{\alpha} \in \stdtop, \forall \, \alpha \in \mathcal{A}$. Let $p \in \bigcup_{\alpha \in \mathcal{A}} U_{\alpha} \implies \exists \alpha \in \mathcal{A}: p \in U_{\alpha} \\
+\implies \exists \, r \in \R^+ : \mathcal{B}_{r}(p) \subseteq U_{\alpha} \subseteq \bigcup_{\alpha \in \mathcal{A}} U_{\alpha} \implies \bigcup_{\alpha \in \mathcal{A}} U_{\alpha} \in \stdtop$.
+\end{proof}
+
+\subsection{Continuous maps}
+A map $f$, $f: M \to N$, connects each element of a set $M$ (domain set) to an element of a set $N$ (target set).
+
+\textbf{Terminology}: 
+\begin{enumerate}
+\item If $f$ maps $m \in M$ to $n \in N$, then we may say $f(m) = n$, or $m$ maps to $n$, or $m \mapsto f(m)$ or $m \mapsto n$.
+\item If $V \subseteq N, \text{preim}_{f}(V) := \lbrace m \in M | f(m) \in V \rbrace$
+\item If $\forall n \in N, \exists m \in M : n = f(m)$, then $f$ is \textbf{surjective}. Or, $f : M \surjmapto N$.
+\item If $m_1, m_2 \in M, m_1 \neq m_2 \implies f(m_1) \neq f(m_2)$, then $f$ is \textbf{injective}. Or, $f : M \injmapto N$.
+\end{enumerate}
+
+\begin{definition}
+  Let $(M , \mathcal{O}_{M})$ and $(N, \mathcal{O}_{N})$ be topological spaces. A map $f: M \to N$ is called \textbf{continuous} w.r.t. $\mathcal{O}_{M}$ and $\mathcal{O}_{N}$ if $V \in \mathcal{O}_{N} \implies (\text{preim}_{f}(V)) \in \mathcal{O}_{M}$.
+\end{definition}
+
+\textit{\textbf{Mnemonic}: A map is continuous iff the preimages of all open sets are open sets.}
+
+\subsection{Composition of continuous maps}
+\begin{definition}
+If $f: M \to N$ and $g: N \to P$, then \\
+\begin{equation*}
+g \after f: M \to P \text{ such that } m \mapsto (g \after f)(m) := g(f(m))
+\end{equation*}
+\end{definition}
+
+\begin{theorem}
+If $f: M \to N$ is continuous w.r.t. $\mathcal{O}_{M}$ and $\mathcal{O}_{N}$ and $g: N \to P$ is continuous w.r.t. $\mathcal{O}_{N}$ and $\mathcal{O}_{P}$, then $g \after f: M \to P$ is continuous w.r.t. $\mathcal{O}_{M}$ and $\mathcal{O}_{P}$.
+\end{theorem}
+
+\begin{proof}
+Let $W \in \mathcal{O}_{P}$. \begin{align*}
+\text{preim}_{g \after f}(W) &= \lbrace m \in M | g(f(m)) \in W \rbrace &\because (g \after f)(m) = g(f(m)) \\
+&= \lbrace m \in M | f(m) \in \text{preim}_{g}(W) \rbrace & \text{preim}_{g}(W) \in \mathcal{O}_{N} \because g \text{ is continuous} \\
+&= \text{preim}_{f}(\text{preim}_{g}(W)) &\in \mathcal{O}_{M} \because f \text{ is continuous} \\
+&\implies g \after f \text{ is continuous}
+\end{align*}
+\end{proof}
+
+\subsection{Inheriting a topology}
+Given a topological space $(M, \mathcal{O}_{M})$, one way of inheriting a topology from it is the subspace topology.
+
+\begin{theorem}
+If $(M, \mathcal{O}_{M})$ is a topological space and $S \subseteq M$, then the set $\mathcal{O}|_S \subseteq \mathcal{P}(S)$ such that $\mathcal{O}|_S := \lbrace S \cap U | U \in \mathcal{O}_{M} \rbrace$ is a topology. $\mathcal{O}|_S$ is called the \textbf{subspace topology} inherited from $\mathcal{O}_{M}$.
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}
+%empty set & entire set condition
+\item $\emptyset, S \in \mathcal{O}|_S \because \emptyset = S \cap \emptyset, S = S \cap M$.
+
+%intersection condition
+\item $S_1, S_2 \in \mathcal{O}|_S \implies \exists U_1, U_2 \in \mathcal{O}_{M} : S_1 = S \cap U_1, S_2 = S \cap U_2 \implies U_1 \cap U_2 \in \mathcal{O}_{M} \\
+\implies S \cap (U_1 \cap U_2) \in \mathcal{O}|_S \implies (S \cap U_1) \cap (S \cap U_2) \in \mathcal{O}|_S \implies S_1 \cap S_2 \in \mathcal{O}|_S$.
+
+%union condition
+\item Let $\alpha \in \mathcal{A}$, where $\mathcal{A}$ is an index set. Then $S_{\alpha} \in \mathcal{O}|_S \implies \exists U_{\alpha} \in \mathcal{O}_{M} : S_{\alpha} = S \cap U_{\alpha}$. \\
+Further, let $\mathcal{U} = \left( \bigcup_{\alpha \in \mathcal{A}} U_{\alpha} \right)$. Therefore, $\mathcal{U} \in \mathcal{O}_{M}$. \\
+Now, $\left( \bigcup_{\alpha \in \mathcal{A}} S_{\alpha} \right) = \left( \bigcup_{\alpha \in \mathcal{A}} (S \cap U_{\alpha}) \right) = S \cap \left( \bigcup_{\alpha \in \mathcal{A}} U_{\alpha} \right) = S \cap \mathcal{U} \implies \left( \bigcup_{\alpha \in \mathcal{A}} S_{\alpha} \right) \in \mathcal{O}|_S$.
+\end{enumerate}
+\end{proof}
+
+\begin{theorem}
+If $(M, \mathcal{O}_{M})$ and $(N, \mathcal{O}_{N})$ are topological spaces, and $f: M \to N$ is continuous w.r.t $\mathcal{O}_{M}$ and $\mathcal{O}_{N}$, then the restriction of $f$ to $S \subseteq M, f|_S: S \to N$ s.t. $f|_S(s \in S) = f(s)$, is continuous w.r.t $\mathcal{O}|_S$ and $\mathcal{O}_{N}$.
+\end{theorem}
+
+\begin{proof}
+Let $V \in \mathcal{O}_N$. Then, $\text{preim}_{f}(V) \in \mathcal{O}_M$. \\
+Now $\text{preim}_{f|_S}(V) = S \cap \text{preim}_{f}(V) \implies \text{preim}_{f|_S}(V) \in \mathcal{O}|_S \implies f|_S$ is continuous. 
+\end{proof}

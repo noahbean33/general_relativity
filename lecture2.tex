@@ -1,0 +1,84 @@
+\section{Manifolds}
+\begin{framed}
+\textbf{Motivation}: There exist so many topological spaces that mathematicians cannot even classify them. For spacetime physics, we may focus on topological spaces $(M, \mathcal{O})$ that can be charted, analogously to how the surface of the earth is charted in an atlas.
+\end{framed}
+
+\subsection{Topological manifolds}
+\begin{definition}
+  A topological space $(M, \mathcal{O})$ is called a \textbf{d-dimensional topological manifold} if \\
+  $\forall p \in M : \exists U \in \mathcal{O} : p \in U, \exists x : U \to x(U) \subseteq \R^d$ satisfying the following:
+\begin{enumerate}
+\item[(i)] \textbf{$x$ is invertible}: $x^{-1} : x(U) \to U$
+\item[(ii)] \textbf{$x$ is continuous} w.r.t. $(M, \mathcal{O})$ and $(\R^d, \mathcal{O}_{std})$
+\item[(iii)] \textbf{$x^{-1}$ is continuous}
+\end{enumerate}
+\end{definition}
+
+\subsection{Terminology}
+\begin{enumerate}
+\item The tuple $(U , x)$ is a \textbf{chart} of $(M, \mathcal{O})$,
+\item An \textbf{atlas} of $(M, \mathcal{O})$ is a set $\A = \lbrace (U_{\alpha}, x_{\alpha}) | \alpha \in A, \text{an index set} \rbrace : \bigcup_{\alpha \in A}U_{\alpha} = M$.
+\item The map $x : U \to x(U) \subseteq \R^d$ is called the \textbf{chart map}.
+\item The chart map $x$ maps a point $ p \in U$ to a d-tuple of real numbers $x(p) = (x^1(p), x^2(p), \dots , x^d(p))$. This is equivalent to d-many maps $x^i(p): U \to \R$, which are called the \textbf{coordinate maps}. 
+\item If $p \in U$, then $x^i(p)$ is the \textbf{ith coordinate of $p$} w.r.t. the chart $(U, x)$.
+\end{enumerate}
+
+\subsection{Chart transition maps}
+Imagine 2 charts $(U, x)$ and $(V, y)$ with overlapping regions, i.e., $U \cap V \neq \emptyset$.
+
+\[
+\begin{tikzpicture}
+\matrix (m) [matrix of nodes, row sep=3em, column sep=5em, text height=1.5ex, text depth=0.25ex]
+{  \text{ } & $U \cap V$ & \text{ } \\
+$\R^d \supseteq x(U \cap V)$ & \text{ } & $y(U \cap V) \subseteq \R^d$ \\ };
+\path[->]
+(m-1-2) edge node[above] {$y$} (m-2-3)
+        edge node[below] {$x$} (m-2-1);
+\path[->]
+(m-2-1) edge[bend left=20] node[above] {$x^{-1}$} (m-1-2)
+        edge node[below] {$y \after x^{-1}$} (m-2-3);
+\end{tikzpicture}
+\]
+
+The map $y \after x^{-1}$ is called the \textbf{chart transition map}, which maps an open set of $\R^d$ to another open set of $\R^d$. This map is continuous because it is composition of two continuous maps, Informally, these chart transition maps contain instructions on how to glue together the charts of an atlas,
+
+\subsection{Manifold philosophy}
+Often it is desirable (or indeed the only way) to define properties (e.g., `continuity') of real-world object (e.g., the curve $\gamma : \R \to M$) by judging suitable coordinates not on the `real-world' object itself, but on a chart-representation of that real world object.
+
+For example, in the picture below, we can use the map $x \after \gamma$ to infer the continuity of the curve $\gamma$ in $U \subseteq M$.
+\[
+\begin{tikzpicture}
+\matrix (m) [matrix of nodes, row sep=3em, column sep=5em, text height=1.5ex, text depth=0.25ex]
+{  $\R$ & $U \subseteq M$ \\
+\text{ } & $x(U) \subseteq \R^d$ \\ };
+\path[->]
+(m-1-1) edge node[above] {$\gamma$} (m-1-2)
+        edge node[sloped, anchor=center, below] {$x \after \gamma$} (m-2-2);
+\path[->]
+(m-1-2) edge node[right] {$x$} (m-2-2);
+\end{tikzpicture}
+\]
+
+However, we need to ensure that the defined property does not change if we change our chosen chart. For example, in the picture below, continuity in $x \after \gamma$ should imply $y \after \gamma$. This is true, since
+$y \after \gamma = y \after (x^{-1} \after x) \after \gamma = (y \after x^{-1}) \after (x \after \gamma)$ is continuous because it is a composition of two continuous functions, thanks to the continuity of the chart transition map $y \after x^{-1}$.
+
+\[
+\begin{tikzpicture}
+\matrix (m) [matrix of nodes, row sep=4em, column sep=5em, text height=1.5ex, text depth=0.25ex]
+{  \text{ } & $y(U) \subseteq \R^d$ \\
+$\R$ & $U \subseteq M$ \\
+\text{ } & $x(U) \subseteq \R^d$ \\ };
+\path[->]
+(m-2-1) edge node[above] {$\gamma$} (m-2-2)
+        edge node[sloped, anchor=center, above] {$y \after \gamma$} (m-1-2)
+        edge node[sloped, anchor=center, below] {$x \after \gamma$} (m-3-2);
+\path[->]
+(m-2-2) edge node[right] {$y$} (m-1-2)
+        edge node[right] {$x$} (m-3-2);
+\path[->]
+(m-3-2) edge[bend left=20] node[left] {$x^{-1}$} (m-2-2)
+        edge[bend right=50] node[right] {$y \after x^{-1}$} (m-1-2);
+\end{tikzpicture}
+\]
+
+What about differentiability? Does differentiability of $x \after \gamma$ guarantee differentiability of $y \after \gamma$? No. Since composition of a differentiable map and a continuous map might only be continuous, The solution is to restrict the atlas by removing those charts which are not differentiable. Thus, we have got rid of our problem. However, we must remember that with the present structure, we cannot define differentiability at manifold level since we do not know how to subtract or divide in $U \subseteq M$. Therefore, differentiability of $\gamma : \R \to M$ makes no sense yet. 

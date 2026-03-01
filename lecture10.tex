@@ -1,0 +1,231 @@
+\section{Metric Manifolds}
+We establish a structure on a smooth manifold that allows one to assign vectors in each tangent space a length (and an angle between vectors in the same tangent space). From this structure, one can then define a notion of length of a curve. Then we can look at shortest curves (which will be called \textbf{geodesics}).
+
+Requiring then that the shortest curves coincide with the straight curves (w.r.t. $\nabla$) will result in $\nabla$ being determined by the metric structure $g$. $\nabla$, in turn determines the curvature given by $Riem$. Thus
+\[
+g  \overset{\substack{\text{straight} = \text{shortest/} \\ \text{longest/ stationary curves} \\ T =0}}{\rightsquigarrow}  \nabla \rightsquigarrow Riem
+\]
+
+\subsection{Metrics}
+\begin{definition}
+  A metric $g$ on a smooth manifold $\mfd$ is a $(0,2)$-tensor field satisfying
+\begin{enumerate}[(i)]
+\item \textbf{symmetry: }$g(X,Y) = g(Y,X) \quad \forall \, X, Y \text{ vector fields}$
+\item \textbf{non-degeneracy: }the \underline{musical map}
+\begin{align*}
+  \text{``flat''} \, \,  \flat : \Gamma(TM) & \to \Gamma(T^*M) \\ 
+  X \mapsto \flat(X) \\
+\text{ where } & \flat(X)(Y):= g(X,Y) \\
+  & \flat(X) \in \Gamma(T^*M)
+\end{align*}
+In thought bubble: $\flat(X) = g(X,\cdot)$
+
+\dots is a $C^{\infty}$-isomorphism in other words, it is invertible.
+\end{enumerate}
+\end{definition}
+
+\underline{Remark}: $(\flat(X))_a$ \quad \, or \\
+$X_a$ \\
+$(\flat(X))_a := g_{am} X^m$
+
+Thought bubble: $\flat^{-1} = \sharp$
+
+$\flat^{-1}(\omega)^a := g^{am}\omega_m$ \\
+$\flat^{-1}(\omega)^a := (g^{``-1''})^{am}\omega_m \implies$ not needed. (all of this is not needed)
+
+\begin{definition}
+The $(2,0)$-tensor field $g^{``-1''}$ with respect to a metric $g$ is the symmetric
+\begin{align*}
+  g^{``-1''} : \Gamma(T^*M) \times \Gamma(T^*M) \xrightarrow{ ~ } C^{\infty}(M) \\
+  (\omega, \sigma) \mapsto \omega(\flat^{-1}(\sigma)) \quad \quad \, \flat^{-1}(\sigma) \in \Gamma(TM))
+\end{align*}
+
+\underline{chart}: $g_{ab} = g_{ba} \quad \quad (g^{-1})^{am} g_{mb} = \delta^a_b$
+\end{definition}
+
+\underline{Example}: Consider $(S^2, \mathcal{O}, \A)$ and the chart $(U,x)$
+\begin{align*}
+\varphi \in (0,2\pi), & \quad \quad \theta \in (0,\pi)
+\end{align*}
+
+Define the metric \\
+\[
+g_{ij}(x^{-1}(\theta,\varphi)) = \left[ \begin{matrix} R^2 & 0 \\
+    0 & R^2\sin^2{\theta} \end{matrix} \right]_{ij}
+\]
+$R \in \R^+$
+
+``the metric of the \underline{round sphere of radius $R$}''
+
+\subsection{Signature}
+Linear algebra: \quad \quad \, $\begin{aligned} & A\indices{^a_{m}}v^m = \lambda v^a & \quad \quad \quad \, \left(\begin{matrix} \lambda_1 & & 0 \\
+    & \ddots & \\ 
+    0 & & \lambda_n \end{matrix} \right) \\
+  & g_{am} v^m = \lambda \cdot v^a ? \rightsquigarrow  & \quad \quad \quad \, \left( \begin{matrix} 
+    1        &   &    &        &    &   &        & \\
+    & \ddots &   &    &        &    &   &        & \\
+    &        & 1 &    &        &    &   &        & \\
+    &        &   & -1 &        &    &   &        & \\
+    &        &   &    & \ddots &    &   &        & \\
+    &        &   &    &        & -1 &   &        & \\
+    &        &   &    &        &    & 0 &        & \\
+    &        &   &    &        &    &   & \ddots & \\
+    &        &   &    &        &    &   &        & 0 \end{matrix} \right)
+\end{aligned}$
+
+$(1,1)$ tensor has eigenvalues \\
+$(0,2)$ has \underline{signature} $(p,q)$ (well-defined)
+
+$\left. \begin{aligned}
+  (+++) \\
+  (++-) \\
+  (+--) \\
+  (---) \end{aligned} \right\rbrace$ $d+1$ if $p+q = \text{dim}V$
+
+\begin{definition} A metric is called \textbf{Riemannian} if its signature is $(++ \dots +)$, and \textbf{Lorentzian} if it is $(+-\dots -)$.
+\end{definition}
+
+\subsection{Length of a curve}
+Let $\gamma$ be a smooth curve. Then we know its veloctiy $v_{\gamma,\gamma(\lambda)}$ at each $\gamma(\lambda) \in M$.
+
+\begin{definition}
+On a Riemannian metric manifold $(M, \mathcal{O}, \A, g)$, the \textbf{speed} of a curve at $\gamma(\lambda)$ is the number 
+\begin{equation}
+\boxed{s(\lambda) = (\sqrt{g(v_{\gamma}, v_{\gamma})})_{\gamma(\lambda)}}
+\end{equation}
+\end{definition}
+
+(I feel the need for speed, then I feel the need for a metric)
+
+\underline{Aside}: $[v^a] = \frac{1}{T}$ \\
+\phantom{Aside:} $[g_{ab}] = L^2 $ \\
+\phantom{Aside:} $[\sqrt{g_{ab}v^av^b}] = \sqrt{ \frac{L^2}{T^2}} = \frac{L}{T}$
+
+\begin{definition}
+Let $\gamma:(0,1) \to M$ a smooth curve. Then the \textbf{length of $\gamma$}, $L[\gamma] \in \R$ is the number
+\begin{equation}
+\boxed{L[\gamma] := \int_0^1 d\lambda s(\lambda) = \int_0^1 d\lambda \sqrt{ (g(v_{\gamma}, v_{\gamma}))_{\gamma(\lambda)}}}
+\end{equation}
+\end{definition}
+
+F. Schuller: ``velocity is more fundamental than speed, speed is more fundamental than length''
+
+\textbf{Example:} Reconsider the round sphere of radius $R$. Consider its equator:
+\begin{align*}
+\theta(\lambda) := (x^1 \after \gamma)(\lambda) = \frac{\pi}{2}, & \quad \varphi(\lambda) := (x^2 \after \gamma)(\lambda) = 2\pi \lambda^3 \\
+\implies \theta'(\lambda) = 0, & \quad \varphi'(\lambda) = 6\pi\lambda^2
+\end{align*}
+
+On the same chart $g_{ij} = \left[ \begin{matrix} R^2 & \\
+    & R^2 \sin^2{\theta} \end{matrix} \right]$
+
+Do everything in this chart
+\begin{align*}
+L[\gamma] & = \int_0^1 d\lambda \sqrt{g_{ij}(x^{-1}(\theta(\lambda), \varphi(\lambda)))(x^i \after \gamma)'(\lambda)(x^j \after \gamma)'(\lambda)} \\
+& = \int_0^1 d\lambda \sqrt{R^2 \cdot 0 + R^2\sin^2{(\theta(\lambda))} 36 \pi^2 \lambda^4} \\
+& = 6\pi R \int_0^1 d\lambda \lambda^2 = 6\pi R [\frac{1}{3} \lambda^3]^1_0 = 2\pi R
+\end{align*}
+
+\begin{theorem}
+$\gamma : (0,1) \to M$ and $\sigma :(0,1) \to (0,1)$ smooth bijective and \underline{increasing} ``reparametrization'' \\
+$L[\gamma] = L[\gamma \after \sigma]$
+\end{theorem}
+
+\begin{proof}
+  in Tutorials
+\end{proof}
+
+\subsection{Geodesics}
+\begin{definition}
+A curve $\gamma : (0,1) \to M$ is called a \textbf{geodesic} on a Riemannian manifold $(M, \mathcal{O}, \A, g)$ if it is a stationary curve with respect to a length functional $L$.
+\end{definition}
+
+Thought bubble: In classical mechanics, deform the curve a little, $\epsilon$ times this deformation, to first order, it agrees with $L[\gamma]$.
+
+\begin{theorem}
+$\gamma$ is geodesic iff it satisfies the Euler-Lagrange equations for the Lagrangian
+\end{theorem}
+\begin{align*}
+\mathcal{L} : & TM \to \R \\
+& X \mapsto \sqrt{g(X,X)}
+\end{align*}
+In a chart, the Euler Lagrange equations take the form:
+\[
+\left(\cibasis[\mathcal{L}]{\dot{x}^m}\right)^{\cdot} - \cibasis[\mathcal{L}]{x^m} = 0 
+\]
+F.Schuller: this is a chart dependent formulation
+
+here: 
+\[
+\mathcal{L}(\gamma^i, \dot{\gamma}^i) = \sqrt{g_{ij}(\gamma(\lambda)) \dot{\gamma}^i(\lambda) \dot{\gamma}^j(\lambda)}
+\]
+Euler-Lagrange equations:
+\begin{align*}
+\cibasis[\mathcal{L}]{\dot{\gamma}^m} = \frac{1}{\sqrt{\dots}} g_{mj}(\gamma(\lambda)) \dot{\gamma}^j(\lambda) \\
+\left(\cibasis[\mathcal{L}]{\dot{\gamma}^m}\right)^{\cdot} = \left(\frac{1}{\sqrt{\dots}} \right)^{\cdot} g_{mj}(\gamma(\lambda)) \cdot \dot{\gamma}^j(\lambda) + \frac{1}{\sqrt{\dots}} \left(g_{mj}(\gamma(\lambda)) \ddot{\gamma}^j(\lambda) + \dot{\gamma}^s(\partial_s g_{mj}) \dot{\gamma}^j(\lambda) \right)
+\end{align*}
+Thought bubble: reparametrize $g(\dot{\gamma}, \dot{\gamma}) = 1$ (it's a condition on my reparametrization)
+
+By a clever choice of reparametrization $(\frac{1}{\sqrt{\dots}})^{\cdot} = 0$
+\[
+\cibasis[\mathcal{L}]{\gamma^m} = \frac{1}{2\sqrt{\dots}} \partial_m g_{ij}(\gamma(\lambda)) \dot{\gamma}^i(\lambda) \dot{\gamma}^j(\lambda)
+\]
+putting this together as Euler-Lagrange equations:
+\begin{align*}
+g_{mj} \ddot{\gamma}^j + \partial_s g_{mj} \dot{\gamma}^s \dot{\gamma}^j - \frac{1}{2} \partial_m g_{ij} \dot{\gamma}^i \dot{\gamma}^j = 0 \\
+\ddot{\gamma^q} + (g^{-1})^{qm}(\partial_i g_{mj} - \frac{1}{2} \partial_m g_{ij}) \dot{\gamma}^i \dot{\gamma}^j = 0 && (\text{multiply on both sides }(g^{-1})^{qm}) \\
+\boxed{\ddot{\gamma^q} + (g^{-1})^{qm}\frac{1}{2} (\partial_i g_{mj} + \partial_j g_{mi} - \partial_m g_{ij}) \dot{\gamma}^i \dot{\gamma}^j = 0}
+\end{align*}
+geodesic equation for $\gamma$ in a chart.  
+\[
+\boxed{(g^{-1})^{qm}\frac{1}{2} (\partial_i g_{mj} + \partial_j g_{mi} - \partial_m g_{ij} ) =: \ccf{q}{ij}(\gamma(\lambda))
+}
+\]
+Thought bubble: $\left(\cibasis[\mathcal{L}]{\xi_x^{a+\text{dim}M}} \right)^{\cdot}_{\sigma(x)} - \left(\cibasis[\mathcal{L}]{xi^a_x} \right)_{\sigma(x)} = 0$
+
+\begin{definition}
+\textbf{Christoffel symbol} ${\,}^{\text{L.C.}}\Gamma$ are the connection coefficient functions of the so-called Levi-Civita connection ${\,}^{\text{L.C.}}\nabla$
+\end{definition}
+We usually make this choice of $\nabla$ if $g$ is given.  
+
+$(M, \mathcal{O}, \A, g) \to (M, \mathcal{O}, \A, g, {\,}^{\text{L.C.}}\nabla)$
+
+\underline{abstract way}: $\nabla g = 0$ and $T = 0$ (torsion) \\
+$\Longrightarrow \nabla = {\,}^{\text{L.C.}}\nabla$
+
+\begin{definition}
+\begin{enumerate}[(a)]
+\item The \textbf{Riemann-Christoffel curvature} is defined by 
+\begin{equation}
+\boxed{R_{abcd} := g_{am}R\indices{^m_{bcd}}}
+\end{equation}
+
+\item \textbf{Ricci}
+\begin{equation}
+\boxed{R_{ab} = R\indices{^m_{amb}}}
+\end{equation}
+Thought bubble: with a metric, ${\,}^{\text{L.C.}}\nabla$
+
+\item (Ricci) scalar curvature:
+\begin{equation}
+\boxed{R = g^{ab} R_{ab}}
+\end{equation}
+
+Thought bubble: ${\,}^{\text{L.C.}}\nabla$
+\end{enumerate}
+\end{definition}
+
+\begin{definition}
+\textbf{Einstein curvature} of $(M, \mathcal{O}, \A, g)$ is defined as
+\begin{equation}
+\boxed{G_{ab} := R_{ab} - \frac{1}{2} g_{ab} R}
+\end{equation}
+\end{definition}
+
+\underline{Convention}: $g^{ab} := (g^{``-1''})^{ab}$
+
+F. Schuller: these indices are not being pulled up, because what would you pull them up with
+
+(student) Question: Does the Einstein curvature yield new information? \\
+Answer: \\
+$g^{ab} G_{ab} = R_{ab} g^{ab} - \frac{1}{2} g_{ab} g^{ab} R = R - \delta^a_a R = R - \frac{1}{2} \text{dim}M \, R = (1- \frac{d}{2}) R$

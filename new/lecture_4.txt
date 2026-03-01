@@ -1,0 +1,155 @@
+Gemini said
+Lecture 4: Differentiable Manifolds
+International Winter School on Gravity and Light 2015
+
+This lecture explores the transition from topological manifolds to differentiable manifolds, focusing on the extra structures required to define physics-essential concepts like velocity and differentiability.
+
+1. The Motivation: Moving Beyond Continuity
+While a topological manifold (M,O) allows us to define continuous curves—trajectories that do not "jump"—it is insufficient for most of classical physics. In physics, we need to associate a velocity (a unique tangent vector) to a curve at every point.
+
+
+The Intuition: A curve with a sharp "edge" or "corner" is continuous but not differentiable; it lacks a unique velocity at the corner.
+
+
+The Problem: The structure of a topological manifold alone does not provide enough information to distinguish between a "smooth" curve and one with a sharp edge.
+
+
+The Strategy: To define differentiability on a manifold, we "lift" the undergraduate definition of differentiability from R 
+d
+  to the manifold using charts.
+
+2. The Strategy for Differentiability
+To determine if a curve γ:R→M is differentiable at a point, we follow these steps:
+
+
+Choose a Chart: Select a chart (U,x) that covers the portion of the curve in question.
+
+
+Map to R 
+d
+ : Use the chart map to create a representative of the curve in Euclidean space: x∘γ:R→R 
+d
+ .
+
+
+Apply Calculus: Judge the differentiability of this representative using standard "undergraduate" calculus (e.g., taking component-wise derivatives).
+
+The Issue of "Well-Definedness"
+A definition is only "well-defined" if it does not depend on the specific chart chosen by the observer. If we have two overlapping charts (U,x) and (V,y), one might suggest the curve is differentiable while the other does not.
+
+The relationship between the two representatives is governed by the chart transition map: y∘x 
+−1
+ .
+
+In a standard topological manifold, transition maps are only guaranteed to be continuous.
+
+Because the composition of a differentiable map and a continuous map is not necessarily differentiable, the "undergraduate" notion of differentiability can be destroyed during a chart change.
+
+3. Compatible Charts and "Flower" Manifolds
+To fix this, we must restrict our atlas to only include compatible charts. Two charts (U,x) and (V,y) are "flower-compatible" if their intersection is empty or if their transition maps exhibit a specific "undergraduate" property.
+
+Common Compatibility Types ("Flower" Properties)
+Flower Property	Undergraduate Meaning
+C 
+0
+ 	
+Transition maps are continuous (every topological atlas is C 
+0
+ ).
+
+C 
+1
+ 	
+Transition maps are once-differentiable with a continuous derivative.
+
+C 
+k
+ 	
+
+k-times continuously differentiable.
+
+C 
+∞
+  (Smooth)	
+Arbitrarily many times continuously differentiable.
+
+C 
+ω
+  (Analytic)	
+Transition maps can be Taylor expanded.
+
+Complex	
+Transition maps satisfy the Cauchy-Riemann equations (requires even dimensions).
+
+
+Note: The more "fancy" properties you want for objects on your manifold (like Taylor expandability), the more restrictive you must be in your choice of atlas.
+
+4. Smooth Manifolds and Whitney’s Theorem
+In practice, physicists almost always work with smooth (C 
+∞
+ ) manifolds.
+
+
+Whitney's Theorem: Any C 
+k
+  atlas (where k≥1) contains a C 
+∞
+  sub-atlas.
+
+While moving from C 
+0
+  to C 
+1
+  is a massive jump that may not be possible for all topological manifolds, once you have C 
+1
+ , you can "trickle down" to C 
+∞
+ .
+
+
+Definition: A smooth manifold is a triple (M,O,A) where A is a C 
+∞
+  atlas.
+
+5. Diffeomorphisms
+A diffeomorphism is the structure-preserving map of the smooth manifold category.
+
+
+Definition: Two C 
+∞
+  manifolds M and N are diffeomorphic if there exists a bijection ϕ:M→N such that both ϕ and ϕ 
+−1
+  are C 
+∞
+  maps.
+
+Differentiability of the map ϕ is checked locally using charts: y∘ϕ∘x 
+−1
+  must be undergraduate C 
+∞
+ .
+
+Significance: Smooth manifolds allow for "bending" and "stretching" but not "folding" or "creasing." For example, an ellipsoid and a sphere are diffeomorphic, but a sphere with a sharp creased edge is only homeomorphic (topologically the same) to a smooth sphere, not diffeomorphic.
+
+6. The "Exotic" Reality of Four Dimensions
+The number of distinct smooth structures (up to diffeomorphism) that can be placed on a topological manifold depends heavily on its dimension.
+
+Dimension	Number of Smooth Structures	Source/Theorem
+1, 2, 3	
+Exactly One.
+
+Moyes-Radon Theorems.
+
+4	
+
+Uncountably Infinitely Many (generically).
+
+Partial results for compact; generic for non-compact.
+
+5, 6, 7...	
+
+Finitely Many.
+
+Surgery Theory.
+
+This presents a profound challenge for physics: since spacetime is four-dimensional, there are uncountably many ways to define differentiability on the same underlying topological space. We cannot simply "let experiment decide" easily when faced with an infinite, uncountable number of mathematical choices.

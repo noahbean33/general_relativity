@@ -1,0 +1,188 @@
+\section{Multilinear Algebra}
+
+\begin{framed}
+\textbf{Motivation}: The essential object of study of linear algebra is vector space. However, a word of warning here. We will not equip space(time) with vector space structure. This is evident since, unlike in vector space, expressions such as $5 \cdot \text{Paris}$ and $\text{Paris} + \text{Vienna}$ do not make any sense. If multilinear algebra does not further our aim of studying spacetime, then why do we study it? The tangent spaces $T_pM$ (defined in Lecture 5) at a point $p$ of a smooth manifold $M$ (defined in Lecture 4) carries a vector space structure in a natural way even though the underlying position space(time) does not have a vector space structure. Once we have a notion of tangent space, we have a derived notion of a tensor. Tensors are very important in differential geometry. \\
+It is beneficial to study vector spaces (and all that comes with it) abstractly for two reasons: (i) for construction of $T_pM$, one needs an intermediate vector space $C^{\infty}(M)$, and (ii) tensor techniques are most easily understood in an abstract setting.
+\end{framed}
+
+\subsection{Vector Spaces}
+\begin{definition}
+A $\mathbb{R}$-\textbf{vector space} is a triple $(V, +, \cdot)$, where
+\begin{enumerate}[i)]
+\item $V$ is a set,
+\item $+ : V \times V \to V$ \quad (addition), and
+\item $. : \mathbb{R} \times V \to V$ \quad (S-multiplication)
+\end{enumerate}
+satisfying the following:
+\begin{enumerate}[a)]
+\item $\forall u, v \in V : u + v = v + u$ \quad (commutativity of +)
+\item $\forall u, v, w \in V : (u + v) + w = u + (v + w)$ \quad (associativity of +)
+\item $\exists O \in V : \forall v \in V : O + v = v$ \quad (neutral element in +)
+\item $\forall v \in V : \exists (-v) \in V : v + (-v) = 0$ \quad (inverse of element in +)
+
+\item $\forall \lambda, \mu \in \mathbb{R}, \forall v \in V : \lambda \cdot (\mu \cdot v) = (\lambda \cdot \mu) \cdot v$ \quad (associativity in $\cdot$)
+\item $\forall \lambda, \mu \in \mathbb{R}, \forall v \in V : (\lambda + \mu) \cdot v = \lambda \cdot v + \mu \cdot v$ \quad (distributivity of $\cdot$)
+\item $\forall \lambda \in \mathbb{R}, \forall u, v \in V : \lambda \cdot u + \lambda \cdot v = \lambda \cdot (u + v)$ \quad (distributivity of $\cdot$)
+\item $\exists 1 \in \mathbb{R} : \forall v \in V : 1 \cdot v = v$ \quad (unit element in $\cdot$)
+\end{enumerate}
+\end{definition}
+
+\textbf{Terminology}: If $(V,+,\cdot)$ is a vector space, an element of $V$ is often referred to, informally, as a \textbf{vector}. But, we should remember that it makes no sense to call an element of $V$ a vector unless the vector space itself is specified.
+
+\textbf{Example}: Consider a set of polynomials of fixed degree,
+\begin{equation*}
+P := \left\lbrace p:(-1,+1) \to \mathbb{R} \quad \Big| \quad p(x) = \displaystyle\sum_{n=0}^{N} p_n \cdot x^n, \text{ where } p_n \in \mathbb{R} \right\rbrace
+\end{equation*} \\
+with $\oplus : P \times P \to P$ with $(p,q) \mapsto p \oplus q : (p \oplus q)(x) = p(x) + q(x)$ and \\
+$\odot : \mathbb{R} \times P \to P$ with $(\lambda,p) \mapsto \lambda \odot p : (\lambda \odot p)(x) = \lambda \cdot p(x)$. \textbf{$(P,\oplus,\odot)$} is a vector space.
+
+\textbf{Caution}: \textit{We are considering real vector spaces, that is S-multiplication with the elements of $\mathbb{R}$. We shall often use same symbols `+' and `$\cdot$' for different vector spaces, but the context should make things clear. When $\mathbb{R}, \mathbb{R}^2$, etc. are used as vector spaces, the obvious (natural) operations shall be understood to be used.}
+
+\subsection{Linear Maps}
+These are the structure-respecting maps between vector spaces. 
+\begin{definition}
+If $(V,+_v,\cdot_v)$ and $(W,+_w,\cdot_w)$ are vector spaces, then $\phi : V \to W$ is called a \textbf{linear map} if
+\begin{enumerate}[i)]
+\item $\forall v, \tilde{v} \in V: \phi(v +_v \tilde{v}) = \phi(v) +_w \phi(\tilde{v})$, and
+\item $\forall \lambda \in \mathbb{R}, v \in V : \phi(\lambda \cdot_v v) = \lambda \cdot_w \phi(v)$.
+\end{enumerate}
+\end{definition}
+
+\textbf{Notation}: $\phi : V \to W \text{ is a linear map } \iff \phi : V \linearmapto W$
+
+\textbf{Example}: Consider the vector space $(P,\oplus,\odot)$ from the above example, \\
+Then, $\delta : P \to P$ with $p \mapsto \delta (p) := p^\prime$ is a linear map, because \\
+$\forall p,q \in P : \delta(p \oplus q) = (p \oplus q)^\prime = p^\prime \oplus q^\prime = \delta(p) \oplus \delta(q)$ and \\
+$\forall \lambda \in \mathbb{R}, p \in P : \delta(\lambda \odot p) = (\lambda \odot p)^\prime = \lambda \odot p^\prime$.
+
+\begin{theorem}
+If $\phi : U \linearmapto V$ and $\psi : V \linearmapto W$, then $\psi \after \phi : U \linearmapto W$.
+\end{theorem}
+\[
+\begin{tikzpicture}
+\matrix (m) [matrix of nodes, row sep=3em, column sep=5em, text height=1.5ex, text depth=0.25ex]
+{  $U$ & $V$ & $W$ \\
+};
+\path[->]
+(m-1-1) edge node[above] {$\phi$} (m-1-2)
+        edge[bend right = 30] node[below] {$\psi \after \phi$} (m-1-3);
+\path[->]
+(m-1-2) edge node[above] {$\psi$} (m-1-3);
+\end{tikzpicture}
+\]
+
+\begin{proof}
+$ \forall u, \tilde{u} \in U, (\psi \after \phi)(u +_u \tilde{u}) = \psi(\phi(u +_u \tilde{u})) = \psi(\phi(u) +_v \phi(\tilde{u})) = \psi(\phi(u)) +_w \psi(\phi(\tilde{u})) = (\psi \after \phi)(u) +_w (\psi \after \phi)(\tilde{u}) $.
+
+$ \forall \lambda \in \mathbb{R}, u \in U, (\psi \after \phi)(\lambda \cdot_u u) = \psi(\phi(\lambda \cdot_u u)) = \psi(\lambda \cdot_v \phi(u)) = \lambda \cdot_w \psi(\phi(u)) = \lambda \cdot_w (\psi \after \phi)(u) $
+\end{proof}
+
+\textbf{Example}: Consider the vector space $(P,\oplus,\odot)$ and the differential $\delta : P \to P$ with $p \mapsto \delta (p) := p^\prime$ from previous example. Then, $p^{\prime\prime}$, the second differential is also linear since it is composition of two linear maps, i.e., $\delta \after \delta : P \linearmapto P$.
+
+\subsection{Vector Space of Homomorphisms}
+\begin{definition}
+If $(V, +, \cdot)$ and $(W, +, \cdot)$ are vector spaces, then $Hom(V,W) := \left\lbrace \phi : V \linearmapto W \right\rbrace$.
+\end{definition}
+
+\begin{theorem}
+$(Hom(V,W),+,\cdot)$ is a vector space with \\
+$+ : Hom(V,W) \times Hom(V,W) \to Hom(V,W)$ with $(\phi,\psi) \mapsto \phi + \psi : (\phi + \psi)(v) = \phi(v) + \psi(v)$ and \\
+$\cdot : \mathbb{R} \times Hom(V,W) \to Hom(V,W)$ with $(\lambda,\phi) \mapsto \lambda \cdot \phi : (\lambda \cdot \phi)(v) = \lambda \cdot \phi(v)$.
+\end{theorem}
+
+\textbf{Example}: $(Hom(P,P),+,\cdot)$ is a vector space. $\delta \in Hom(P,P)$, $\delta \after \delta \in Hom(P,P)$, $\delta \after \delta \after \delta \in Hom(P,P)$, etc. Therefore, maps such as $5 \cdot \delta + \delta \after \delta \in Hom(P,P)$. Thus, mixed order derivatives are in $Hom(P,P)$, and hence linear.
+
+\subsection{Dual Vector Spaces}
+\begin{definition}
+If $(V, +, \cdot)$ is a vector space, and $V^{\ast} := \left\lbrace \phi : V \linearmapto \mathbb{R} \right\rbrace = Hom(V,\mathbb{R})$ then \\
+$(V^{\ast},+,\cdot)$ is called the \textbf{dual vector space to V}.
+\end{definition}
+
+\textbf{Terminology}: $\omega \in V^{\ast}$ is called, informally, a \textbf{covector}.
+
+\textbf{Example}: Consider $I : P \linearmapto \mathbb{R}$, i.e., $I \in P^\ast$. We define $I(p) := \int_0^1 \! p(x) \, \mathrm{d}x$, which can be easily checked to be linear with $I(p + q) = I(p) + I(q)$ and $I(\lambda \cdot p) = \lambda \cdot I(p)$. Thus $I$ is a covector, which is the integration operator $\int_0^1 \! ( \quad ) \, \mathrm{d}x$ which eats a function. 
+
+\textit{Remarks: We shall also see later that the gradient is a covector. In fact, lots of things in physicist's life, which are covectors, have been called vectors not to bother you with details. But covectors are neither esoteric nor unnatural.}
+
+\subsection{Tensors}
+We can think of tensors as multilinear maps.
+
+\begin{definition}
+Let $(V, +, \cdot)$ be a vector space. An \textbf{(r,s) -tensor} T over V is a multilinear map
+\begin{equation*}
+T : \underbrace{V^\ast \times V^\ast \times \dots \times V^\ast}_\text{r times} \times \underbrace{V \times V \times \dots \times V}_\text{s times} \linearmapto \mathbb{R}
+\end{equation*}
+\end{definition}
+
+\textbf{Example}: If T is a (1,1)-tensor, then \\
+$T(\omega_1 + \omega_2, v) = T(\omega_1, v) + T(\omega_2, v)$, \\
+$T(\omega, v_1 + v_2) = T(\omega, v_1) + T(\omega, v_2)$, \\
+$T(\lambda \cdot \omega, v) = \lambda \cdot T(\omega, v)$, and \\
+$T(\omega, \lambda \cdot v) = \lambda \cdot T(\omega, v)$. \\
+Thus, $T(\omega_1 + \omega_2, v_1 + v_2) = T(\omega_1, v_1) + T(\omega_1, v_2) + T(\omega_2, v_1) + T(\omega_2, v_2)$. \\
+
+\textit{Remarks}: Sometimes it is said that a (1,1)-tensor is something that eats a vector and outputs a vector. Here is why. For $T : V^\ast \times V \linearmapto \mathbb{R}$, define $\phi_T : V \linearmapto (V^\ast)^\ast$ with $v \mapsto T(( \cdot ), v)$. But, clearly $T(( \cdot ), v) : V^\ast \linearmapto \mathbb{R}$, which eats a covector and spits a number. In other words, $T(( \cdot ), v) \in (V^\ast)^\ast$. Although we are yet to define dimension, let us just trust, for the time being, that for finite-dimensional vector spaces, $(V^\ast)^\ast = V$. So, $\phi_T : V \linearmapto V$.
+
+\textbf{Example}: Let $g : P \times P \linearmapto \mathbb{R}$ with $(p,q) \mapsto \int_{-1}^1 \! p(x) \cdot q(x) \, \mathrm{d}x$. Then, $g$ is a (0,2)-tensor over $P$.
+
+\subsection{Vectors and Covectors as Tensors}
+\begin{theorem}
+If $(V,+,\cdot)$ is a vector space, $\omega \in V^\ast$ is a (0,1)-tensor.
+\end{theorem}
+\begin{proof}
+$\omega \in V^\ast$ and, by definition, $V^{\ast} := \left\lbrace \phi : V \linearmapto \mathbb{R} \right\rbrace$, which is a collection of (0,1)-tensors. 
+\end{proof}
+
+\begin{theorem}
+If $(V,+,\cdot)$ is a vector space, $v \in V$ is a (1,0)-tensor.
+\end{theorem}
+\begin{proof}
+We have already stated, without proof and without defining dimensions, that $V = (V^\ast)^\ast$ for finite-dimensional vector spaces. Therefore, $v \in V \implies v \in (V^\ast)^\ast \implies v \in \left\lbrace \phi : V^\ast \linearmapto \mathbb{R} \right\rbrace \implies$ $v$ is a (1,0)-tensor.
+\end{proof}
+
+\subsection{Bases}
+\begin{definition}
+Let $(V,+,\cdot)$ is a vector space. A subset $B \subseteq V$ is called a \textbf{basis} if \\
+$\forall v \in V, \exists ! finite v_1,v_2,\dotsc,v_n \in B, \exists ! f_1,f_2,\dotsc,f_n \in \mathbb{R} : v = \displaystyle\sum_{i=1}^n f_i \cdot v_i$. 
+\end{definition}
+
+\begin{definition}
+A vector space $(V,+,\cdot)$ with a basis $B$ is said to be \textbf{$d$-dimensional} if $B$ has $d$ elements. In other words, $dim V := d$.
+\end{definition}
+
+\textit{Remarks: The above definition is well-defined only if every basis of a vector space has the same number of elements.}
+
+\textbf{Remarks}: Let $(V,+,\cdot)$ is a vector space. Having chosen a basis $e_1,e_2,\dotsc,e_n$, we may uniquely associate $v \mapsto (v_1,v_2,\dotsc,v_n)$, these numbers being the components of $v$ w.r.t. chosen basis where $v = \displaystyle\sum_{i=1}^n v_i \cdot e_i$.
+
+\subsection{Basis for the Dual Space}
+Let $(V,+,\cdot)$ is a vector space. Having chosen a basis $e_1,e_2,\dotsc,e_n$ for $V$, we can choose a basis $\epsilon^1,\epsilon^2,\dotsc,\epsilon^n$ for $V^\ast$ entirely independent of basis of $V$. However, it is more economical to require that
+\begin{equation*}
+\epsilon^a (e_b) = \delta_b^a = \begin{cases}
+1 &\quad \text{if } a = b \\
+0 &\quad \text{if } a \neq b \\
+\end{cases}
+\end{equation*} This uniquely determines $\epsilon^1,\epsilon^2,\dotsc,\epsilon^n$ from choice of $e_1,e_2,\dotsc,e_n$.
+
+\textit{Remarks: The reason for using indices as superscripts or subscripts is to be able to use the Einstein summation convention, which will be helpful in dropping cumbersome $\sum$ symbols in several equations.}
+
+\begin{definition}
+For a basis $e_1,e_2,\dotsc,e_n$ of vector space $(V,+,\cdot)$, $\epsilon^1,\epsilon^2,\dotsc,\epsilon^n$ is called the \textbf{dual basis} of the dual space, if $\epsilon^a (e_b) = \delta_b^a$.
+\end{definition}
+
+\textbf{Example}: Consider polynomials $P$ of degree 3. Choose $e_0,e_1,e_2,e_3 \in P$ such that $e_0(x) = 1, e_1(x) = x, e_2(x) = x^2$ and $e_3(x) = x^3$. Then, it can be easily verified that the dual basis is $\epsilon^a = \displaystyle\frac{1}{a!}\partial^a\Big|_{x=0}$.
+
+\subsection{Components of Tensors}
+\label{ss:L3_TensorComponents}
+\begin{definition}
+Let $T$ be a $(r,s)$-tensor over a $d$-dimensional (finite) vector space $(V,+,\cdot)$. Then, with respect to some basis $\lbrace e_1, \dotsc, e_r \rbrace$ and the dual basis $\lbrace \epsilon^1, \dotsc, \epsilon^s \rbrace$, define $(r+s)^d$ real numbers
+\begin{equation*}
+T\indices{^{i_1 \dots i_r}_{j_1 \dots j_s}} := T(\epsilon^{i_1}, \dotsc, \epsilon^{i_r}, e_{j_1}, \dotsc, e_{j_s})
+\end{equation*} such that the indices $i_1, \dotsc, i_r, j_1, \dotsc, j_s$ take all possible values in the set $\lbrace 1,\dotsc,d \rbrace$. These numbers $T\indices{^{i_1 \dots i_r}_{j_1 \dots j_s}}$ are called the \textbf{components of the tensor} $T$ w.r.t. the chosen basis.
+\end{definition}
+
+This is useful because knowing components (and the basis w.r.t which these components have been chosen), one can reconstruct the entire tensor.
+
+\textbf{Example}: If $T$ is a $(1,1)$-tensor, then $T\indices{^{i}_{j}} := T(\epsilon^i,e_j)$. Then\\
+\begin{equation*}
+T(\omega,v) = T\left(\sum_{i=1}^d \omega_i \cdot \epsilon^i,\sum_{j=1}^d v^j \cdot e_j \right) = \sum_{i=1}^d \sum_{j=1}^d \omega_i v^j T(\epsilon^i,e_j) = \sum_{i=1}^d \sum_{j=1}^d \omega_i v^j T\indices{^{i}_{j}} =: \omega_i v^j T\indices{^{i}_{j}}
+\end{equation*}

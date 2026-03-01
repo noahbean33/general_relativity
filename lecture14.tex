@@ -1,0 +1,223 @@
+\section{Lecture 14: \underline{Matter}}
+
+two types of matter
+
+point matter
+
+\underline{field matter}
+
+\underline{point matter}
+
+massive point particle 
+
+more of a phenomenological importance
+
+\underline{field matter}
+ 
+electromagnetic field
+
+more fundamental from the GR point of view
+
+
+both classical matter types
+
+
+\subsection{Point matter}
+
+Our postulates (P1) and (P2) already constrain the possible particle worldlines.  
+
+But what is their precise law of motion, possibly in the presence of ``forces'',
+
+\begin{enumerate}
+\item[(a)] \underline{without external forces}
+\[
+S_{\text{massive}}[\gamma] := m \int d\lambda \sqrt{ g_{\gamma(\lambda)}( v_{\gamma,\gamma(\lambda)} , v_{\gamma,\gamma(\lambda) } ) }
+\]
+\underline{with}:
+\[
+g_{\gamma(\lambda)}(T_{\gamma(\lambda)}, v_{\gamma, \gamma(\lambda) } ) > 0 
+\]
+dynamical law Euler-Lagrange equation
+
+\underline{similarly}
+\[
+S_{\text{massless}}[\gamma,\mu] = \int d\lambda \mu g(v_{\gamma, \gamma(\lambda)} , v_{\gamma,\gamma(\lambda)} )
+\]
+\[
+\begin{aligned}
+  \delta_{\mu}  \quad \quad \, & g(v_{\gamma,\gamma(\lambda)}, v_{\gamma,\gamma(\lambda) } ) = 0 \\
+ \delta_{\gamma} \quad \quad \, & \text{e.o.m.}
+\end{aligned}
+\]
+
+Reason for describing equations of motion by actions is that composite systems have an action that is the sum of the actions of the parts of that system, possibly including ``\underline{interaction terms.}''
+
+\underline{Example}. \[
+S[\gamma] + S[\delta] + S_{\text{int}}[\gamma,\delta]
+\]
+\item[(b)] \underline{presence of external forces} \\
+or rather presence of \underline{fields} to which a particle ``\underline{couples}''
+
+\underline{Example}
+\[
+S[\gamma;A] = \int d\lambda m \sqrt{ g_{\gamma(\lambda)}(v_{\gamma, \gamma(\lambda)}, v_{\gamma,\gamma(\lambda)} ) } + qA(v_{\gamma,\gamma(\lambda)})
+\]
+where $A$ is a \textbf{covector field} on $M$. $A$ fixed
+(e.g. the electromagnetic potential)
+\end{enumerate}
+
+Consider Euler-Lagrange eqns. $L_{\text{int}} = q A_{(x)} \dot{\gamma}^m_{(x)}$
+\[
+m (\nabla_{v_{\gamma}} v_{\gamma})_a + \underbrace{ \dot{ \left( \frac{ \partial L_{\text{int}} }{ \partial \dot{\gamma}^m_{(x)} } \right) }- \frac{ \partial L_{\text{int}} }{ \partial \gamma^m_{(x)} } }_{*} = 0  \Longrightarrow \boxed{ m (\nabla_{v_{\gamma} } v_{\gamma})^a = \underbrace{ -q F^a_{ \, \, m } \dot{\gamma}^m }_{\text{Lorentz force on a charged particle in an electromagnetic field } } }
+\]
+\[
+\frac{ \partial L}{ \partial \dot{\gamma}^a} = qA_{(x)a}, \quad \quad \, \dot{ \left( \frac{ \partial L}{ \partial \dot{\gamma}^m} \right) } = q \cdot \frac{ \partial }{ \partial x^m} (A_{(x)m} ) \cdot \dot{\gamma}^m_{(x)}
+\]
+\[
+\frac{ \partial L}{ \partial \gamma^a} = q \cdot \frac{ \partial }{ \partial x^a} (A_{(x)m} ) \dot{\gamma}^m
+\]
+\[
+\begin{aligned}
+* & = q\left( \frac{ \partial A_a}{ \partial x^m} - \frac{ \partial A_m}{ \partial x^a} \right) \dot{\gamma}^m_{(x)}
+& = q \cdot F_{(x)am} \dot{\gamma}^m_{(x)}
+\end{aligned}
+\]
+$F \leftarrow $ Faraday
+
+\[
+S[\gamma] = \int(m\sqrt{g(v_{\gamma},v_{\gamma} ) } + q A(v_{\gamma}) ) d\lambda
+\]
+
+\subsection{Field matter}
+
+\begin{definition}
+  Classical (non-quantum) field matter is any tensor field on spacetime where equations of motion derive from an action.
+\end{definition}
+
+\underline{Example}: 
+\[
+S_{\text{Maxwell}}[A] = \frac{1}{4}\int_M d^4x \sqrt{-g}F_{ab}F_{cd}g^{ac}g^{bd}
+\]
+$A$ $(0,1)$-tensor field \\
+$=$ thought cloud: for \underline{simplicity} one chart covers all of $M$ \\
+$-$ for $\sqrt{-g}$ $(+---)$ \\
+
+$F_{ab} := 2\partial_{[a}A_{b]} = 2(\nabla_{[a} A)_{b]}$
+
+\underline{Euler-Lagrange equations for fields}
+\[
+0 = \frac{ \partial \mathcal{L}}{ \partial A_m} - \frac{ \partial }{ \partial x^s} \left( \frac{ \partial \mathcal{L}}{ \partial \partial _s A_m } \right) + \frac{ \partial }{ \partial x^s} \frac{ \partial }{ \partial x^t} \frac{ \partial^2 \mathcal{L}}{ \partial \partial_t \partial_s A_m }
+\]
+
+\underline{Example} \dots 
+\[
+(\nabla_{\frac{ \partial }{ \partial x^m} }F)^{ma} = j^a
+\]
+\textbf{in}homogeneous Maxwell
+
+thought bubble $j=qv_{\gamma}$
+
+\[
+\partial_{[a}F_{b]} - ()
+\]
+homogeneous Maxwell
+
+Other example well-liked by textbooks
+\[
+S_{\text{Klein-Gordon}}[\phi] := \int_M d^4x \sqrt{-g}[g^{ab}(\partial_a \phi) (\partial_b \phi ) - m^2\phi^2]
+\]
+$\phi$ $(0,0)$-tensor field
+
+\subsection{Energy-momentum tensor of matter fields}
+
+At some point, we want to write down an \underline{action} for the metric tensor field itself.
+
+But then, this action $S_{\text{grav}}[g]$ will be added to any $S_{\text{matter}}[A,\phi,\dots]$ in order to describe the total system.  
+
+\[
+S_{\text{total}}[g,A] = S_{\text{grav}}[g] + S_{\text{Maxwell}}[A,g]
+\]
+
+\[
+\begin{aligned}
+  & \delta A     & : \Longrightarrow \text{ Maxwell's equations } \\
+  & \delta g_{ab} & : \boxed{ \frac{1}{ 16 \pi G } G^{ab} } + (-2T^{ab} ) = 0 
+\end{aligned}
+\]
+$G$ Newton's constant
+
+\[
+G^{ab} = 8 \pi G_N T^{ab}
+\]
+
+\begin{definition}
+$  S_{\text{matter}}[\Phi,g] $ is a matter action, the \textbf{so-called energy-momentum tensor} is 
+\[
+T^{ab} := \frac{-2}{ \sqrt{-g}} \left( \frac{ \partial \mathcal{L}_{\text{matter}} }{ \partial g_{ab}} - \partial_s \frac{ \partial \mathcal{L}_{\text{matter}} }{ \partial \partial_s g_{ab}} + \dots \right)
+\]
+\end{definition}
+$-$ of $\frac{-2}{\sqrt{g}}$ is Schr\"{o}dinger minus (EY : 20150408 F.Schuller's joke? but wise)
+
+choose all sign conventions s.t.
+\[
+T(\epsilon^0,\epsilon^0) >0
+\]
+
+\underline{Example}: For $S_{\text{Maxwell}}$:
+\[
+T_{ab} = F_{am} F_{bn}g^{mn} - \frac{1}{4} F_{mn} F^{mn} g_{ab}
+\]
+$T_{ab} \equiv T_{\text{Maxwell}ab}$
+
+\[
+T(e_0,e_0) = \underline{E}^2+\underline{B}^2
+\]
+\[
+T(e_0,e_{\alpha}) = (E\times B)_{\alpha}
+\]
+
+\underline{Fact}: One often does not specify the fundamental action for some matter, but one is rather satisfied to assume certain properties / forms of 
+\[
+T_{ab}
+\]
+
+\underline{Example} Cosmology: (homogeneous \& isotropic)
+
+perfect fluid \\
+
+of pressure $p$ and density $\rho$
+modelled by
+\[
+T^{ab} = (\rho + p)u^a u^b - pg^{ab}
+\]
+
+radiative fluid
+
+What is a fluid of photons:
+
+observe: $\begin{aligned}
+  & T_{\text{Maxwell}}^{ \, \, ab} g_{ab} = 0 \\ 
+  & T_{\text{p.f.}}^{ \, \, ab} g_{ab} \overset{!}{=} 0 \\
+& = (\rho + p)u^a u^b g_{ab} - p\underbrace{ g^{ab} g_{ab} }_{ 4}
+\end{aligned}$
+
+\[
+\begin{aligned}
+ \leftrightarrow & \rho _ p 04p = 0 \\ 
+ & \rho = 3p
+\end{aligned}
+\]
+$p=\frac{1}{3}\rho$
+
+Reconvene at 3 pm?  (EY : 20150409 I sent a Facebook (FB) message to the International Winter School on Gravity and Light: there was no missing video; it continues on Lecture 15 immediately)
+
+\subsection*{Tutorial 14: Relativistic Spacetime, Matter and Gravitation}
+
+\exercisehead{2: Lorentz force law}
+
+\questionhead{electromagnetic potential}
+
+
+
+
+

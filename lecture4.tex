@@ -1,0 +1,191 @@
+\section{Differential Manifolds}
+\begin{framed}
+\textbf{Motivation}: So far we have dealt with topological manifolds which allow us to talk about continuity. But to talk about smoothness of curves on manifolds, or velocities along these curves, we need something like differentiability. Does the structure of topological manifold allow us to talk about differentiability? The answer is a resounding no.
+
+So this lecture is about figuring out what structure we need to add on a topological manifold $M$ to start talking about differentiability of curves ($\mathbb{R} \to M$) on a manifold, or differentiability of functions ($M \to \mathbb{R}$) on a manifold, or differentiability of maps ($M \to N$) from one manifold $M$ to another manifold $N$. 
+\end{framed}
+
+\subsection{Strategy}
+
+\begin{tikzpicture}[decoration=snake]
+  \matrix (m) [matrix of math nodes, row sep=2em, column sep=3em, minimum width=1em]
+  {
+\gamma : \mathbb{R} & U \\
+& x(U) \subseteq \mathbb{R}^d \\ 
+};
+  \path[->]
+  (m-1-1) edge node [above] {$$} (m-1-2)
+          edge node [sloped, anchor=center, below] {$x \circ \gamma$} (m-2-2)
+  (m-1-2) edge node [right] {$x$} (m-2-2);
+\end{tikzpicture}
+
+\underline{idea}. try to ``lift'' the undergraduate notion of differentiability of a curve on $\mathbb{R}^d$ to a notion of differentiability of a curve on $M$
+
+\underline{Problem} Can this be well-defined under change of chart?
+
+\begin{tikzpicture}[decoration=snake]
+  \matrix (m) [matrix of math nodes, row sep=4em, column sep=6em, minimum width=2em]
+  {
+    & y(U\cap V) \subseteq \mathbb{R}^d \\ 
+\gamma : \mathbb{R} & U \cap V \neq \emptyset \\
+& x(U\cap V) \subseteq \mathbb{R}^d \\ 
+};
+  \path[->]
+  
+  (m-2-1) edge node [auto] {$$} (m-2-2)
+          edge node [sloped, anchor=center, below] {$x \circ \gamma$} (m-3-2)
+          edge node [sloped, anchor=center, above] {$y \circ \gamma$} (m-1-2)
+  (m-2-2) edge node [auto] {$x$} (m-3-2)
+          edge node [auto] {$y$} (m-1-2)
+  (m-3-2) edge [bend right=40] node [right] {$y\circ x^{-1}$} (m-1-2);
+\end{tikzpicture}
+
+$x\circ \gamma$ undergraduate differentiable (``as a map $\mathbb{R} \to \mathbb{R}^d$'')
+
+\[
+\begin{gathered}
+  \underbrace{y \circ \gamma}_{\text{maybe only continuous, but not undergraduate differentiable} } =  \underbrace{ ( \overbrace{ y\circ x^{-1}}^{\mathbb{R}^d \to \mathbb{R}^d }   )}_{\text{continuous}}  \circ \underbrace{ \overbrace{ (x\circ \gamma) }^{\mathbb{R}\to \mathbb{R}^d} }_{ \text{ undergrad differentiable } }  = y \circ (x^{-1} \circ x) \circ \gamma
+\end{gathered}
+\]
+
+At first sight, strategy does not work out.  
+
+\subsection{Compatible charts}
+
+In section 1, we used any imaginable charts on the topological manifold $(M,\mathcal{O})$.  
+
+To emphasize this, we may say that we took $U$ and $V$ from the \emph{maximal atlas} $\mathcal{A}$ of $(M,\mathcal{O})$.  
+
+
+\begin{definition}
+Two charts $(U,x)$ and $(V,y)$ of a topological manifold are called \ding{96}-compatible if 
+either
+\begin{enumerate}
+  \item[(a)] $U \cap V = \emptyset$, or
+  \item[(b)] $U\cap V \neq \emptyset$ : chart transition maps
+ \[
+\begin{aligned}
+  & y \circ x^{-1} : x(U \cap V) \subseteq \mathbb{R}^d  \to y(U\cap V) \subseteq \mathbb{R}^d  \text{, and}\\
+  & x\circ y^{-1} : y(U\cap V) \subseteq \mathbb{R}^d   \to x(U\cap V) \subseteq \mathbb{R}^d
+\end{aligned}
+\]
+ have undergraduate \ding{96} property.
+\end{enumerate}
+\end{definition}
+Since both $y \circ x^{-1}$ and $y \circ x^{-1}$ are $\mathbb{R}^d \to \mathbb{R}^d$ maps, can use undergradate \ding{96} properties such as continuity or differentiability.
+
+
+\underline{Philosophy}: 
+
+\begin{definition}
+  An atlas $\mathcal{A}_{\text{\ding{96}}}$ is a \ding{96}-compatible atlas if any two charts in $\mathcal{A}_{\text{\ding{96}}}$ are \ding{96}-compatible.
+
+\end{definition}
+
+\begin{definition}
+  A \textbf{\ding{96}-manifold} is a triple $(\underbrace{ M,\mathcal{O} }_{\text{top. mfd.} }, \mathcal{A}_{\text{\ding{96}}})$ \quad \, $\mathcal{A}_{\text{\ding{96}}} \subseteq \mathcal{A}_{\text{maximal}} $
+\end{definition}
+
+
+\begin{tabular}{ l | c | p{11cm}}
+\ding{96} &  undergraduate  \ding{96} &  \\
+\hline
+$C^0$ & $C^0(\mathbb{R}^d \to \mathbb{R}^d) =$  &  continuous maps w.r.t. $\mathcal{O}$ (we know from section 1 that every atlas is $C^0$-compatible atlas.) \\
+$C^1$ & $C^1(\mathbb{R}^d \to \mathbb{R}^d) = $  &  differentiable (once) and is continuous  \\
+$C^k$ & & $k$-times continuously differentiable \\
+$D^k$ & & $k$-times differentiable \\
+$\vdots$ & & \\
+$C^{\infty}$ & $C^{\infty}(\mathbb{R}^d \to \mathbb{R}^d)$ & continuously differentiable arbitrarily many times; also called ``smooth manifolds''\\
+$\mathbin{\rotatebox[origin=c]{-90}{$\supseteq$}}$ & &  \\
+$C^{\omega}$ & & $\exists $ multi-dimensional Taylor expansion \\
+$\mathbb{C}^{\infty}$ & & satisfy Cauchy-Riemann equations, pair-wise \\
+\hline
+\end{tabular}
+
+
+EY : 20151109 Schuller says: $C^k$ is easy to work with because you can judge $k$-times continuously differentiability from existence of all partial derivatives \textbf{and} their continuity.  There are examples of maps that partial derivatives exist but are not $D^k$, $k$-times differentiable.  
+
+\begin{theorem}[Whitney\footnote{\url{http://mathoverflow.net/questions/8789/can-every-manifold-be-given-an-analytic-structure}}]
+%  Any $C^{k\geq 1}$-manifold $(M,\mathcal{O}, \mathcal{A}_{C^{k\geq 1}})$  
+  Any $C^{k\geq 1}$-atlas, $\mathcal{A}_{C^{k\geq 1}}$ of a topological manifold \emph{contains} a $C^{\infty}$-atlas.  
+
+Thus we may w.l.o.g. always consider $C^{\infty}$-manifolds (i.e., ``smooth manifolds''), unless we wish to define Taylor expandibility/complex differentiability \dots
+\end{theorem}
+
+\begin{definition}
+  A smooth manifold $(\underbrace{ M,\mathcal{O} }_{\text{top. mfd. } }, \underbrace{ \mathcal{A}}_{C^{\infty}-\text{atlas}} )$ 
+\end{definition}
+
+\textit{Remarks: We should distinguish the real physical object from the maps used to communicate them.}
+
+\begin{tikzpicture}
+  \matrix (m) [matrix of math nodes, row sep=4em, column sep=6em, minimum width=2em]
+  {
+ \mathbb{R} & M   \\
+&  \mathbb{R}^d \\ 
+};
+  \path[->]  
+  (m-1-1) edge node [auto] {$\gamma$} (m-1-2)
+          edge node [auto] {$x\circ \gamma$} (m-2-2)
+  (m-1-2) edge node [auto] {$x$} (m-2-2);
+\end{tikzpicture}
+
+\textit{While the physical object is the curve $\gamma : \mathbb{R} \to M$, but we communicate it using maps such as $x \circ \gamma : \mathbb{R} \to \mathbb{R}^d$ in physics. But, the thing of which we should require any properties is the real physical object (in this case, the curve $\gamma$).}
+
+\textit{Remarks: TODO from video 40:30 to 42:20}
+
+\subsection{Diffeomorphisms}
+
+We study isomorphisms, i.e., structure preserving bijections.
+
+If $M,N$ are naked sets (i.e., with no additional structure), then $M \cong_{\text{set}} N$, i.e., $M$ and $N$ are (set-theoretically) isomorphic to each other if $\exists \, $ bijection $\phi : M \to N$.
+
+\underline{Examples}.  $\mathbb{N} \cong_{\text{set}} \mathbb{Z}$, $\mathbb{N} \cong_{\text{set}} \mathbb{Q}$  (using diagonal counting scheme), $\mathbb{N} \cancel{\cong_{\text{set}}} \mathbb{R}$.
+
+Now $(M, \mathcal{O}_M) \cong_{\text{top}} (N,\mathcal{O}_N)$, i.e., they are topologically isomorphic (also called ``homeomorphic'') if $\exists \, $ bijection $\phi : M \to N$  s.t. $\phi$ and $\phi^{-1}$ are continuous.  
+
+Two vector spaces are isomorphic , i.e., $(V,+,\cdot) \cong_{\text{vec}} ( W,+_w,\cdot_w)$ if $\exists \, \text{ linear bijection } \phi : V \to W$.
+
+Finally,
+\begin{definition}
+Two $C^{\infty}$-manifolds $(M,\mathcal{O}_M, \mathcal{A}_M)$ and $(N,\mathcal{O}_N, \mathcal{A}_N)$ are said to be \textbf{diffeomorphic} if $\exists \, $ bijection $\phi : M \to N$ s.t. both $\phi : M \to N$ and $\phi^{-1} : N \to M$ are $C^{\infty}$-maps.
+
+\begin{tikzpicture}
+  \matrix (m) [matrix of math nodes, row sep=4em, column sep=6em, minimum width=2em]
+  {
+ \mathbb{R}^d & \mathbb{R}^e   \\
+M \supseteq U &  V\subseteq N   \\ 
+\mathbb{R}^d & \mathbb{R}^e \\
+};
+  \path[->]  
+  (m-1-1) edge node [auto] {$\widetilde{y} \circ \phi \circ \widetilde{x}^{-1}$} (m-1-2)
+  (m-2-1) edge node [auto] {$\widetilde{x}$} (m-1-1)
+          edge node [auto] {$\phi$} (m-2-2)
+          edge node [auto] {$x$} (m-3-1)
+  (m-3-1) edge node [auto] {$ \substack{ y\circ \phi \circ x^{-1} \\ 
+ \text{ undergraduate } C^{\infty} }$} (m-3-2)
+          edge [bend left=50] node [auto] {$C^{\infty}$} (m-1-1)
+  (m-2-2) edge node [auto] {$\widetilde{y}$} (m-1-2) 
+          edge node [auto] {$y$} (m-3-2)
+  (m-3-2) edge [bend right=50] node [auto] {$$} (m-1-2);
+\end{tikzpicture}
+
+\end{definition}
+
+\begin{theorem}
+  $\# = $ number of $C^{\infty}$-manifolds one can make out of a given $C^0$-manifolds (if any) - up to diffeomorphisms.  
+
+\begin{tabular}{l | c | r }
+$\text{dim }M$ &  $\#$ &  \\
+\hline
+1  & 1  & Morse-Radon theorems \\
+2  & 1  & Morse-Radon theorems \\
+3 & 1  & Morse-Radon theorems \\
+4 & uncountably infinite & \\
+5 &   finite  & surgery theory \\
+6 &  finite & surgery theory \\
+\vdots & finite & surgery theory \\
+\hline
+\end{tabular}
+
+\end{theorem}

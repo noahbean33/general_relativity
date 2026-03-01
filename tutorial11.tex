@@ -1,0 +1,209 @@
+\subsection*{Tutorial 11 Symmetry }
+
+\exercisehead{1}\textbf{: True or false?}
+
+\begin{enumerate}
+\item[(a)]
+\begin{itemize}
+\item
+\item $\phi^*:T^*N \to T*M$ i.e. $\phi^*\nu(X) = \nu(\phi_*X)$ for smooth $\phi:M \to N$, so the pullback of a covector $\nu \in T^*N$ maps to a covector in $T*M$.  
+\item
+\item
+\item
+\item
+\end{itemize}
+\item[(b)]
+\item[(c)]
+\end{enumerate}
+
+\exercisehead{2}: Pull-back and push-forward
+
+\questionhead{}Let's check this locally
+\[
+\begin{aligned}
+  & \phi^*(df)(X) = (df)(\phi_*X) = (df)(X^i \frac{ \partial y^j}{\partial x^i} \frac{ \partial }{ \partial y^j}  ) = X^i \frac{ \partial y^j}{ \partial x^i} \frac{ \partial f}{ \partial y^j} \text{ where } 
+  & \phi_* X = X^i \frac{ \partial y^j}{ \partial x^i} \frac{ \partial }{ \partial y^j} \\ 
+  & d(\phi^*f)(X) = d(f(\phi))(X) = \frac{ \partial f}{ \partial y^j} \frac{ \partial y^j}{ \partial x^i } dx^i(X) = X^i \frac{ \partial y^j}{ \partial x^i} \frac{ \partial f}{ \partial y^j}
+\end{aligned}
+\]
+So 
+\[
+\boxed{ \phi^*(df) = d(\phi^* f)  } \quad \quad \, \forall \, p \in M , \, \, \forall \, X \in \mathfrak{X}(M)
+\]
+The big idea is that this is a showing of the \textbf{naturality} of the pullback $\phi^*$ with $d$, i.e. that this commutes:
+
+\begin{tikzpicture}
+  \matrix (m) [matrix of math nodes, row sep=2em, column sep=3em, minimum width=1em]
+  {
+ \Omega^1(M)  &  \Omega^1(N)   \\
+C^{\infty}(M) & C^{\infty}(N)  \\  };
+%  \path[-stealth]
+  \path[->]
+  (m-1-2) edge node [above] {$\phi^*$} (m-1-1)
+%  edge node [left] {$\text{ev}_0$} (m-2-2)
+%  (m-1-1) edge node [left] {$\alpha$} (m-2-1)
+  (m-2-2) edge node [auto] {$d$} (m-1-2)
+%  edge node [below] {$\pi_M$} (m-2-2);
+  edge node [auto] {$\phi^*$} (m-2-1)
+  (m-2-1) edge node [left] {$d$} (m-1-1);
+\end{tikzpicture}
+
+\questionhead{}
+
+\[
+(\phi_*)^a_{ \, \, b} := (dy^a)(\phi_*( \frac{ \partial }{ \partial x^b } ) )
+\]
+\[
+\text{ Let } g \in C^{\infty}(N)
+\]
+\[
+\begin{gathered}
+  \phi_* \left( \frac{ \partial }{ \partial x^b} \right) g = \frac{ \partial x^b} g\phi(p) = \frac{ \partial }{ \partial x^b} g\phi x^{-1}x(p) = \frac{ \partial }{ \partial x^b}(gyy^{-1}\phi x^{-1})(x) = \\
+  = \frac{ \partial }{ \partial x^b}(gy^{-1}(y\phi x^{-1}(x(p))) ) = \left. \frac{ \partial g}{ \partial y}^b \right|_y \left. \frac{ \partial y^a}{ \partial x^b} \right|_x = \frac{ \partial y^a}{ \partial x^b} \frac{ \partial g}{ \partial y^a}
+\end{gathered}
+\]
+Then 
+\[
+\phi_*\left( \frac{ \partial }{ \partial x^b} \right) = \frac{ \partial y^a}{ \partial x^b} \frac{ \partial }{ \partial y^a}
+\]
+and so 
+\[
+(\phi_*)^a_{ \, \, b} = \frac{ \partial y^a}{ \partial x^b}
+\]
+
+\questionhead{}
+
+\exercisehead{3}\textbf{:Lie derivative-the pedestrian way}
+
+\questionhead{} While it is true that $\forall \, p \in S^2$, for $x(p) = (\theta, \varphi)$, and $(yix^{-1})(\theta,\varphi) = (y^1,y^2,y^3) \in \mathbb{R}^3$ and that, at this point $p$, $(y^1)^2/a^2 + (y^2)^2/b^2 +(y^3)^2/c^3 = 1$, this doesn't imply (EY: 20150321 I think) that, globally, it's an ellipsoid (yet).  In the familiar charts given, \\
+spherical chart $(U,x) \in \mathcal{A}$ and \\
+$(\mathbb{R}^3, y=\text{id}_{\mathbb{R}^3}) \in \mathcal{B}$ \\
+it looks like an ellipsoid, but change to another choice of charts, and it could look something very different.  
+
+\questionhead{}
+
+Equip $(\mathbb{R}^3, \mathcal{O}_{\text{st}}, \mathcal{B})$ with the Euclidean metric $g$, and pullback $g$.  
+
+Note that the pullback of the inclusion from $\mathbb{R}^3$ onto $S^2$ for the Euclidean metric is the following:
+\[
+i^* g\left( \frac{ \partial }{ \partial \theta^i }, \frac{ \partial }{ \partial \theta^j} \right) = g\left( i_*\frac{ \partial }{ \partial \theta^i }, i_*\frac{ \partial }{ \partial \theta^j} \right) = g\left( \frac{ \partial x^a}{ \partial \theta^i} \frac{ \partial }{ \partial x^a} , \frac{ \partial x^b}{ \partial \theta^j} \frac{ \partial }{ \partial x^b } \right) = g_{ab} \frac{ \partial x^a}{ \partial \theta^i} \frac{ \partial x^b}{ \partial \theta^j} 
+\]
+With $g_{ab}=\delta_{ab}$, the usual Euclidean metric, this becomes the following:
+\[
+g^{\text{ellipsoid}}_{ij} = \frac{ \partial x^a}{ \partial \theta^i} \frac{ \partial x^a}{ \partial \theta^j} 
+\]
+
+At this point, one should get smart (we are in the 21st century) and use some sort of CAS (Computer Algebra System). I like Sage Math (version 6.4 as of 20150322).  I also like the Sage Manifolds package for Sage Math.  
+
+I like Sage Math for the following reasons:
+\begin{itemize}
+\item Open source, so it’s open and freely available to anyone, which fits into my principle of making online education open and freely available to anyone, anytime
+\item Sage Math structures everything in terms of Category Theory and Categories and Morphisms naturally correspond to Classes and Class methods or functions in Object-Oriented Programming in Python and they’ve written it that way
+\end{itemize}
+and I like Sage Manifolds for roughly the same reasons, as manifolds are fit into a category theory framework that’s written into the Python code.  e.g.
+
+{\small \begin{verbatim}
+sage: S2 = Manifold(2, 'S^2', r'\mathbb{S}^2', start_index=1) ; print S2
+sage: print S2
+2-dimensional manifold 'S^2'
+sage: type(S2)
+<class 'sage.geometry.manifolds.manifold.Manifold_with_category'>
+\end{verbatim}}
+
+With code (I’ve provided for convenience; you can make your own as I wrote it based upon to example of $S^2$ on the sagemanifolds documentation website page), load it and do the following:
+
+cf. \url{https://github.com/ernestyalumni/diffgeo-by-sagemnfd/blob/master/S2.sage} \\
+\url{http://sagemanifolds.obspm.fr/examples.html}
+
+{\scriptsize \begin{verbatim}
+sage: load("S2.sage")
+sage: U_ep = S2.open_subset('U_{ep}')
+sage: eps.<the,phi> = U_ep.chart()
+sage: a = var(“a”)
+sage: b = var(“b”)
+sage: c = var("c")
+sage: inclus = S2.diff_mapping(R3, {(eps, cart): [ a*cos(phi)*sin(the), b*sin(phi)*sin(the),c*cos(the) ]} , name="inc",latex_name=r'\mathcal{i}')
+sage: inclus.pullback(h).display()
+inc_*(h) = (c^2*sin(the)^2 + (a^2*cos(phi)^2 + b^2*sin(phi)^2)*cos(the)^2) dthe*dthe - (a^2 - b^2)*cos(phi)*cos(the)*sin(phi)*sin(the) dthe*dphi 
+- (a^2 - b^2)*cos(phi)*cos(the)*sin(phi)*sin(the) dphi*dthe + (b^2*cos(phi)^2 + a^2*sin(phi)^2)*sin(the)^2 dphi*dphi
+sage: inclus.pullback(h)[2,2].expr()
+(b^2*cos(phi)^2 + a^2*sin(phi)^2)*sin(the)^2
+\end{verbatim}
+}
+A new open subset $U_{\text{ep}}$ was declared in $S^2$, a new chart $(U_{\text{ep}}, (\theta,\phi))$ was declared, the constants, $a,b,c$, were declared, and the inclusion map given in the problem
+\[
+y\circ \mathfrak{i} \circ x^{-1} : (\theta, \phi) \mapsto ( a\cos{\phi} \sin{\theta}, b \sin{\phi} \sin{\theta}, c\cos{\theta})
+\]
+Then the pullback of the inclusion map $\mathcal{i}$ was done on the Euclidean metric $h$, defined earlier in the file \begin{verbatim}S2.sage\end{verbatim}.  Then one can access the components of this metric and do, for example, \begin{verbatim}simplify_full(),full_simplify(), reduce_trig()\end{verbatim} on the expression.  
+
+In Python, I could easily do this, and give an answer quick in LaTeX:
+
+%{\scriptsize 
+\begin{verbatim}
+sage: for i in range(1,3): 
+....:     for j in range(1,3):
+....:         print inclus.pullback(h)[i,j].expr()
+....:         latex(inclus.pullback(h)[i,j].expr() )
+....:         
+c^2*sin(the)^2 + (a^2*cos(phi)^2 + b^2*sin(phi)^2)*cos(the)^2
+\end{verbatim}
+(EY: I'll suppress the LaTeX output but this sage math function gives you LaTeX code)
+%c^{2} \sin\left(\mathit{the}\right)^{2} + {\left(a^{2} \cos\left(\phi\right)^{2} + 
+%b^{2} \sin\left(\phi\right)^{2}\right)} \cos\left(\mathit{the}\right)^{2}
+%-(a^2 - b^2)*cos(phi)*cos(the)*sin(phi)*sin(the)
+%-{\left(a^{2} - b^{2}\right)} \cos\left(\phi\right) \cos\left(\mathit{the}\right) \sin\left(\phi\right) \sin\left(\mathit{the}\right)
+%-(a^2 - b^2)*cos(phi)*cos(the)*sin(phi)*sin(the)
+%-{\left(a^{2} - b^{2}\right)} \cos\left(\phi\right) \cos\left(\mathit{the}\right) \sin\left(\phi\right) \sin\left(\mathit{the}\right)
+%(b^2*cos(phi)^2 + a^2*sin(phi)^2)*sin(the)^2
+%{\left(b^{2} \cos\left(\phi\right)^{2} + a^{2} \sin\left(\phi\right)^{2}\right)} \sin\left(\mathit{the}\right)^{2}
+%
+%
+
+and so
+
+\[
+\boxed{ \begin{gathered}
+ i^* g = c^{2} \sin\left(\mathit{the}\right)^{2} + {\left(a^{2} \cos\left(\phi\right)^{2} + b^{2} \sin\left(\phi\right)^{2}\right)} \cos\left(\mathit{the}\right)^{2} d\theta \otimes d\theta + \\
+-2 {\left(a^{2} - b^{2}\right)} \cos\left(\phi\right) \cos\left(\mathit{the}\right) \sin\left(\phi\right) \sin\left(\mathit{the}\right) d\theta \otimes d\phi +  \\
+ + {\left(b^{2} \cos\left(\phi\right)^{2} + a^{2} \sin\left(\phi\right)^{2}\right)} \sin\left(\mathit{the}\right)^{2} d\phi \otimes d\phi 
+\end{gathered} }
+\]
+
+\questionhead{}
+
+{\small
+\begin{verbatim}
+sage: polar_vees = eps.frame()
+sage: X_1 = - sin(phi) * polar_vees[1] - cot( the ) * cos(phi) * polar_vees[2]
+sage: X_2 = cos( phi ) * polar_vees[1] - cot( the ) * sin( phi) * polar_vees[2]
+sage: X_3 = polar_vees[2]
+sage: X_2.lie_der(X_1).display()
+(cos(the)^2 - 1)/sin(the)^2 d/dphi
+sage: X_3.lie_der(X_1).display()
+cos(phi) d/dthe - cos(the)*sin(phi)/sin(the) d/dphi
+sage: X_3.lie_der(X_2).display()
+sin(phi) d/dthe + cos(phi)*cos(the)/sin(the) d/dphi
+\end{verbatim}
+}
+
+Indeed, one can check on a scalar field $f_{\text{eps}} \in C^{\infty}(S^2)$:
+{\small
+\begin{verbatim}
+sage: f_eps = S2.scalar_field({eps: function('f', the, phi ) }, name='f' )
+sage: (X_1( X_2(f_eps)) - X_2(X_1(f_eps) ) ).display()
+U_{ep} --> R
+(the, phi) |--> -D[1](f)(the, phi)
+sage: X_2.lie_der(X_1) == -X_3
+True
+sage: X_3.lie_der(X_1) == X_2
+True
+sage: X_3.lie_der(X_2) == -X_1
+True
+\end{verbatim}
+}
+
+\[
+\Longrightarrow \boxed{ [X_i, X_j] = -\epsilon_{ijk}X_k }
+\]
+So $\text{span}_{\mathbb{R}} \lbrace X_1,X_2,X_3 \rbrace$ equipped with $[ \, , \, ]$ constitute a Lie subalgebra on $S^2$ (It's closed under $[ \, , \, ]$
+

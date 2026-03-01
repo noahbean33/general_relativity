@@ -1,0 +1,72 @@
+\section*{Tutorial 7 Connections}
+
+\exercisehead{1}\textbf{: True or false?}
+
+\begin{enumerate}
+\item[(a)] 
+\begin{itemize}
+\item $\nabla_{fX}Y = f\nabla_XY$ by definition so $\nabla_{fX} = f\nabla_X$ i.e. $\nabla_X$ is $C^{\infty}(M)$-linear in $X$
+\item $f\in C^{\infty}(M)$ is a $(0,0)$-tensor field. $\nabla_Xf = Xf \equiv X(f)$ by definition.
+\item If the manifold is flat, I'm assuming that means that the manifold is globally a Euclidean space, and by definition, $\Gamma=0$.
+\[
+\nabla_X Y = X^j \frac{ \partial }{ \partial x^j} (Y^i) \frac{ \partial }{ \partial x^i } + \Gamma^i_{jk} Y^k X^k \frac{ \partial }{ \partial x^i} = X^j \frac{ \partial Y^i}{ \partial x^j} \frac{ \partial }{ \partial x^i} + 0
+\]
+and similarly for any $(p,q)$-tensor field, i.e.
+\[
+\nabla_X T = X^j \frac{ \partial T^{i_1 \dots i_p}_{ j_1 \dots j_q} }{ \partial x^j}
+\]
+\item \[
+\nabla_X f = X^j \frac{ \partial f}{ \partial x^j} = X\cdot \text{grad}(f)
+\]
+\item $\forall \, (U,x) \in \mathcal{A}$, locally (after working out the first few cases, and doing induction, one can look up the expression for the local form; I found it in Nakahara's \textbf{Geometry, Topology and Physics}, Eq. 7.26, and it needs to be modified for the convention of order of bottom indices for $\Gamma$:
+\[
+\nabla_{\nu} t^{\lambda_1 \dots \lambda_p }_{ \mu_1 \dots \mu_q} = \partial_{\nu} t^{\lambda_1 \dots \lambda_p}_{ \mu_1 \dots \mu_q} + \Gamma^{\lambda_1}_{ \,  \kappa \nu } t^{\kappa \lambda_2 \dots \lambda_p }_{\mu_1 \dots \mu_q} + \dots + \Gamma^{\lambda_p}_{ \kappa \nu } t^{\lambda_1 \dots \lambda_{p-1} \kappa }_{ \mu_1 \dots \mu_q} - \Gamma^{\kappa}_{  \mu_1 \nu} t^{\lambda_1 \dots \lambda_p }_{ \kappa \mu_2 \dots \mu_q} - \dots - \Gamma^{\kappa}_{  \mu_q \nu} t^{\lambda_1 \dots \lambda_p }_{\mu_1 \dots \mu_{q-1} \kappa }
+\]
+Clearly, $\nabla_X$ is uniquely fixed $\forall \, p \in M$ by choosing each of the $(\text{dim}M)^3$ many connection coefficient functions $\Gamma$. 
+\end{itemize}
+\item[(b)] 
+\begin{itemize}
+\item $\begin{aligned} & \quad \\ & \nabla: \mathfrak{X}(M) \to \mathfrak{X}(M) \\
+  & \nabla : (p,q)\text{-tensor field} \mapsto (p,q)\text{-tensor field} \end{aligned}$
+\item By definition, $\nabla$ satisfies the Leibniz rule. 
+\item
+\item
+\item
+\end{itemize}
+\end{enumerate}
+
+\exercisehead{2}: \textbf{Practical rules for how $\nabla$ acts}
+Torsion-free covariant derivative boils down to a connection coefficient function $\Gamma$ that is symmetric in the bottom indices.
+
+\begin{itemize}
+\item \[
+\nabla_Xf = X(f) = X^i \frac{ \partial f}{ \partial x^i }
+\]
+\item \[
+(\nabla_X Y)^a = X^i \frac{ \partial Y^a}{ \partial x^i} + \Gamma^a_{jk} Y^j X^k 
+\]
+\item \[
+(\nabla_X \omega)_a = X^i \frac{ \partial \omega_a}{ \partial x^j}  - \Gamma^i_{ak} \omega_i X^k
+\]
+\item \[
+(\nabla_m T)^a_{ \, \, bc} = \frac{ \partial }{ \partial x^m} (T^a_{ \, \, bc} ) + \Gamma^a_{ \, \, im} T^i_{bc} - \Gamma^i_{bm} T^a_{ic} - \Gamma^j_{cm} T^a_{bj}
+\]
+\item \[
+(\nabla_{ \left[ m \right. } A)_{ \left. n \right] } = (\nabla_m A)_n - (\nabla_n A)_m = \frac{ \partial A_n}{ \partial x^m } - \Gamma^i_{ nm} A_i - \left( \frac{ \partial A_m}{ \partial x^n} - \Gamma^i_{mn} A_i \right) = \frac{ \partial A_m}{ \partial x^m} - \frac{ \partial A_m}{ \partial x^n }
+\]
+\item \[
+(\nabla_m \omega)_{nr} = \frac{ \partial \omega_{nr}}{ \partial x^m} - \Gamma^i_{nm } \omega_{ir} - \Gamma^i_{rm} \omega_{ni}
+\]
+\end{itemize}
+
+
+\exercisehead{3}\textbf{: Connection coefficients}
+
+\questionhead{}
+
+The connection coefficient functions $\Gamma$ in chart $(U \cap V,y)$ is given, in terms of chart $(U\cap V,x)$ as follows:
+
+Recall Eq. (\ref{Eq:WEHCG0703_changeofGamma})
+\[
+\Gamma^i_{jk}(y) = \frac{ \partial y^i}{ \partial x^q} \frac{ \partial^2 x^q}{ \partial y^j \partial y^k} + \frac{ \partial y^i}{ \partial x^q } \frac{ \partial x^s }{ \partial y^j} \frac{ \partial x^p }{ \partial y^k} \Gamma^q_{sp}(x)
+\]

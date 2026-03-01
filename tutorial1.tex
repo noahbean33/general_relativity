@@ -1,0 +1,42 @@
+\section*{Topology Tutorial Sheet}
+filename : \texttt{main.pdf} \\
+The WE-Heraeus International Winter School on Gravity and Light: Topology \\
+
+EY : 20150524  
+
+What I won't do here is retype up the solutions presented in the Tutorial (cf. \url{https://youtu.be/_XkhZQ-hNLs}): the presenter did a very good job.  If someone wants to type up the solutions and copy and paste it onto this LaTeX file, in the spirit of open-source collaboration, I would encourage this effort. 
+
+Instead, what I want to encourage is the use of as much CAS (Computer Algebra System) and symbolic and numerical computation because, first, we're in the 21st century, second, to set the stage for further applications in research.  I use Python and Sage Math alot, mostly because they are open-source software (OSS) and fun to use.  Also note that the structure of Sage Math modules matches closely to Category Theory.  
+
+In checking whether a set is a topology, I found it strange that there wasn't already a function in Sage Math to check each of the axioms.  So I wrote my own; see my code snippet, which you can copy, paste, edit freely in the spirit of OSS here, titled \texttt{topology.sage}: 
+
+\href{https://gist.github.com/ernestyalumni/903eefd01be1f214598b}{gist github ernestyalumni topology.sage} \\
+\href{https://gist.githubusercontent.com/ernestyalumni/903eefd01be1f214598b/raw/67083e3b3dec2faf2087713236b413b741bd1180/topology.sage}{Download topology.sage}
+
+Loading \texttt{topology.sage}, after changing into (with the usual Linux terminal commands, cd, ls) by 
+\lstset{language=Python,basicstyle=\scriptsize\ttfamily,
+    commentstyle=\ttfamily\color{gray}}
+\begin{lstlisting}[frame=single]
+sage: load(``topology.sage'')
+\end{lstlisting}
+
+\exercisehead{2: Topologies on a simple set}
+
+\questionhead{Does $\mathcal{O}_1:= \dots$ constitute a topology \dots?}
+
+\textbf{Solution}: Yes, since we check by typing in the following commands in Sage Math:
+
+\begin{lstlisting}[frame=single]
+emptyset in O_1
+Axiom2check(O_1) # True
+Axiom3check(O_1) # True
+\end{lstlisting}
+
+\questionhead{What about $\mathcal{O}_2$ \dots ?}
+
+\textbf{Solution}: No since the 3rd. axiom fails, as can be checked by typing in the following commands in Sage Math:
+\begin{lstlisting}[frame=single]
+emptyset in O_2
+Axiom2check(O_2) # True
+Axiom3check(O_2) # False
+\end{lstlisting}

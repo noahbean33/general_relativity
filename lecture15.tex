@@ -1,0 +1,141 @@
+\section{Einstein gravity}
+
+Recall that in Newtonian spacetime, we were able to reformulate the Poisson law $\Delta \phi = 4\pi G_N \rho$ in terms of the Newtonian spacetime curvature as 
+\[
+R_{00} = 4\pi G_N \rho
+\]
+$R_{00}$ with respect to $\nabla_{\text{Newton}}$, and $G_N = $ Newtonian gravitational constant.
+
+This prompted Einstein to postulate that the relativistic field equations for the Lorentzian metric $g$ of (relativistic) spacetime
+\[
+R_{ab} = 8\pi G_N T_{ab}
+\]
+However, this equation suffers from a problem. We know from matter theory that in RHS, $(\nabla_a T)^{ab} = 0$ since this has been formulated from an action. But in LHS, $(\nabla_a R)^{ab} \neq 0$ generically. Einstein tried to argue this problem away. Nevertheless, the equations cannot be upheld.
+
+\subsection{Hilbert}
+Hilbert was a specialist for variational principles. To find the appropriate LHS of the gravitational field equations, Hilbert suggested to start from an action
+\[
+S_{\text{Hilbert}}[g] = \int_M \sqrt{-g} R_{ab} g^{ab}
+\]
+which, in a sense, is formulated in terms of ``simplest action''. \\
+\underline{Aim}: varying this w.r.t. metric $g_{ab}$ will result in some tensor $G^{ab}$.
+
+\subsection{Variation of $S_{\text{Hilbert}}$}
+\begin{align*}
+  0 \overset{!}{=} \underbrace{\delta}_{g_i} S_{\text{Hilbert}}[g] = \int_M [ \underbrace{\delta \sqrt{-g} }_{1} \, g^{ab}R_{ab} + \sqrt{-g} \, \underbrace{\delta g^{ab}}_{2} R_{ab} + \sqrt{-g} \, g^{ab} \underbrace{\delta R_{ab}}_{3} ] 
+\end{align*}
+
+ad 1: $\delta \sqrt{-g} = \frac{- (\text{det}g)g^{mn} \delta g_{mn}}{2 \sqrt{-g}} = \frac{1}{2} \sqrt{-g} g^{mn} \delta g_{mn}$ \\
+the above comes from $\delta \text{det}(g) = \text{det}(g) g^{mn} \delta g_{mn} \text{  e.g. from } \text{det}(g) = \exp{\text{tr}{\ln{g}}}$
+
+ad 2: $g^{ab}g_{bc} = \delta^a_c \implies (\delta g^{ab})g_{bc} + g^{ab}(\delta g_{bc}) = 0  \implies \delta g^{ab} = -g^{am} g^{bn} \delta g_{mn}$
+
+ad 3: \begin{align*}
+\Delta R_{ab} & \underbrace{=}_{\text{normal coords at point}} \delta \partial_b \ccf{m}{am} - \delta \partial_m \ccf{m}{ab} + \Gamma \Gamma - \Gamma \Gamma \\
+& = \partial_b \delta \ccf{m}{am} - \partial_m \delta \ccf{m}{ab} = \nabla_b (\delta \Gamma)\indices{^{m}_{am}} - \nabla_m (\delta \Gamma)\indices{^{m}_{ab}} \\
+& \implies \sqrt{-g} g^{ab} \delta R_{ab} = \sqrt{-g}
+\end{align*}
+``if you formulate the variation properly, you'll see the variation $\delta$ commute with $\partial _b$''
+%EY : 20150408 I think one uses the integration at the bounds, integration by parts trick
+
+$\ccfx{i}{jk}{(x)} - \widetilde{\Gamma_{(x)}}\indices{^i_{jk}}$ are the components of a $(1,2)$-tensor. \\
+Let us use the notation: $(\nabla_b A)\indices{^i_j} =: A\indices{^i_{j;b}}$
+
+\[
+\therefore \sqrt{-g} g^{ab} \delta R_{ab} \underbrace{=}_{ \nabla g = 0 } \sqrt{-g} (g^{ab} \delta \ccf{m}{am})_{;b} - \sqrt{-g} (g^{ab} \delta \ccf{m}{ab})_{ ; m} = \sqrt{-g} \, A\indices{^b_{;b}} - \sqrt{-g} \, B\indices{^m_{, m}}
+\]
+
+Question: Why is the difference of coefficients a tensor?
+
+Answer:
+\begin{align*}
+\ccfx{i}{jk}{(y)} = \cibasis[y^i]{x^m} \cibasis[x^m]{y^j} \cibasis[x^q]{y^k} \ccfx{m}{nq}{(x)} + \cibasis[y^i]{x^m} \frac{ \partial^2 x^m}{ \partial y^j \partial y^k}
+\end{align*}
+
+Collecting terms, one obtains
+\begin{align*}
+  0 & \overset{!}{=} \delta S_{\text{Hilbert}} = \int_M [ \frac{1}{2} \sqrt{-g} \, g^{mn} \delta g_{mn} g^{ab} R_{ab} - \sqrt{-g} \, g^{am} g^{bn} \delta g_{mn} R_{ab} +    \underbrace{(\sqrt{-g} \, A^a)_{ \, , a} }_{\text{surface}} - \underbrace{(\sqrt{-g} \, B^b)_{ \, , b }}_{\text{surface term}}] \\
+  & = \int_M \sqrt{-g} \, \delta \underbrace{g_{mn}}_{\text{arbitrary variation}} [\frac{1}{2} g^{mn} R - R^{mn}] \implies G^{mn} = R^{mn} - \frac{1}{2} g^{mn} R
+\end{align*}
+
+Hence Hilbert, from this ``mathematical'' argument, concluded that one may take
+\[
+\boxed{ R_{ab} - \frac{1}{2} g_{ab} R = 8 \pi G_N T_{ab} }  \\
+\]
+Einstein equations
+\[
+S_{E-H}[g] = \int_M \sqrt{-g} \, R
+\]
+
+\subsection{Solution of the $\nabla_a T^{ab} =0$ issue}
+One can show ($\to$ Tutorials) that the \underline{Einstein curvature}
+\[
+G_{ab} = R_{ab} - \frac{1}{2} g_{ab}R
+\]
+satisfy the so-called \underline{contracted differential Bianchi identity} $(\nabla_a G)^{ab} = 0$.
+
+\subsection{Variants of the field equations}
+\begin{enumerate}[(a)]
+\item a simple rewriting:
+\begin{align*}
+& R_{ab} - \frac{1}{2} g_{ab} R = 8 \pi G_N T_{ab} = T_{ab} && (G_N = \frac{1}{8\pi}) \\
+& R_{ab} - \frac{1}{2} g_{ab} R = T_{ab} \, || \, g^{ab} && (\text{contract on both sides with } g^{ab}) \\
+& R - 2R = T := T_{ab}g^{ab} \\
+\implies & R = -T \\
+\implies & R_{ab} + \frac{1}{2} g_{ab} T = T_{ab} \\
+\Longleftrightarrow & R_{ab} = (T_{ab} - \frac{1}{2} Tg_{ab}) =: \widehat{T}_{ab} \\
+\therefore \quad & \boxed{ R_{ab} = \widehat{T}_{ab}}
+\end{align*}
+
+\item $S_{E-H}[g] := \int_M \sqrt{-g} (R+ 2\Lambda)$ \quad \quad ($\Lambda$ is called cosmological constant)
+
+\underline{History:} \\
+1915: $\Lambda < 0$ (Einstein) in order to get a non-expanding universe \\
+$>$1915: $\Lambda = 0$ (Hubble) \\
+today: $\Lambda > 0$ to account for an accelerated expansion \\
+$\Lambda \neq 0$ can be interpreted as a contribution $-\frac{1}{2} \Lambda g$ to the energy-momentum of matter in spacetime. This energy, which does not interact with anything but contributes to the curvature is called ``dark energy''.
+
+Question: surface terms scalar?
+
+Answer: for a careful treatment of the surface terms which we discarded, see, e.g. E. Poisson, ``A relativist's toolkit'' C.U.P. ``excellent book''
+
+Question: What is a constant on a manifold? \\
+Answer: $\int \sqrt{-g} \, \Lambda = \Lambda \int \sqrt{-g} \, 1$
+
+[back to dark energy]
+
+[Weinberg used QCD to calculate $\Lambda$ using the idea that $\Lambda$ could arise as the vacuum energy of the standard model fields. It turns out that \\
+$\Lambda_{\text{calculated}} = 10^{120} \times \Lambda_{\text{obs}}$ \\
+which is called the ``worst prediction of physics''.
+
+
+\underline{Tutorials}: \underline{check that }
+\begin{itemize}
+\item Schwarzscheld metric (1916)
+\item FRW metric 
+\item pp-wave metric 
+\item Reisner-Nordstrom 
+\end{itemize}
+$\Longrightarrow $ are solutions to Einstein's equations
+\end{enumerate}
+
+in high school 
+
+$m\ddot{x} + m\omega^2 x^2=0$
+
+$x(t) = \cos{(\omega t)}$
+
+\underline{ET}: [elementary tutorials]
+
+study motion of particles \& observers in Schwarzschild S.T.
+
+\underline{Satellite lectures}: \\
+Marcus C. Werner: Gravitational lensing
+
+odd number of pictures Morse theory (EY:20150408 Morse Theory !!!)
+
+Domenico Giulini: Canonical Formulations of GR
+
+Hamiltonian form
+
+Key to Quantum Gravity
