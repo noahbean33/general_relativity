@@ -1,0 +1,179 @@
+These lecture notes provide a comprehensive overview of the mathematical formulation of numerical relativity, beginning with a physical review of Newtonian gravity and General Relativity (GR) before introducing the 3+1 decomposition.
+
+## 1. Course Introduction and Logistics
+
+The course focuses on developing numerical methods to solve Einstein’s field equations.
+
+* 
+**Notation:** A superscript "4" (e.g., ${^4}\Gamma$, ${^4}R$) is used to distinguish four-dimensional space-time objects from the three-dimensional spatial objects introduced later in the 3+1 formalism.
+
+
+
+---
+
+## 2. Newtonian Gravity: The Conceptual Template
+
+Newtonian gravity serves as a structural guide for developing the more complex framework of General Relativity.
+
+| Feature | Newtonian Description |
+| --- | --- |
+| **Central Object** | The gravitational potential $\phi$.
+
+ |
+| **Particle Motion** | Freely falling particles experience an acceleration $a_i = -\partial_i \phi$ (the gradient of the potential).
+
+ |
+| **Geodesic Deviation** | The distance between nearby falling objects involves the **second derivatives** of $\phi$.
+
+ |
+| **Field Equation** | The Poisson equation: $\nabla^2 \phi = 4\pi \rho$ (the trace of the second derivatives).
+
+ |
+| **Gauge Freedom** | Physical results remain unchanged if a constant is added to the potential ($\phi \rightarrow \phi + C$).
+
+ |
+
+---
+
+## 3. General Relativity: Mathematical Foundations
+
+In GR, gravity is described through the curvature of space-time rather than a force.
+
+### 3.1 The Central Object: The Metric
+
+The space-time metric $g_{ab}$ is used to measure proper distances $ds$ between events:
+
+
+$$ds^2 = g_{ab} dx^a dx^b$$
+
+
+
+### 3.2 Curvature and Parallel Transport
+
+Curvature is measured by observing how vectors change when moved "parallel" to themselves along a curve.
+
+* 
+**Covariant Derivative ($\nabla_a$):** Generalizes the partial derivative so the result remains a tensor.
+
+
+* 
+**Christoffel Symbols ($\Gamma^a_{bc}$):** Connection coefficients associated with the metric.
+
+
+* 
+**Geodesic Equation:** Freely falling objects follow paths where their four-velocity $u^a$ is parallel transported along itself:
+
+
+
+$$u^a \nabla_a u^b = 0$$
+
+
+This involves **first derivatives** of the metric, analogous to the Newtonian gradient.
+
+
+
+### 3.3 The Riemann and Ricci Tensors
+
+* 
+**Riemann Tensor ($R^a_{bcd}$):** Represents the second derivatives of the metric and measures curvature via geodesic deviation. It has $\frac{1}{12}n^2(n^2-1)$ independent components.
+
+
+* 
+**Ricci Tensor ($R_{ab}$):** The only non-trivial trace of the Riemann tensor ($R_{ab} = R^c_{acb}$).
+
+
+* 
+**Ricci Scalar ($R$):** The trace of the Ricci tensor ($R = g^{ab} R_{ab}$).
+
+
+
+---
+
+## 4. Einstein’s Field Equations
+
+The field equations relate the geometry of space-time to its energy and matter content.
+
+
+$$G_{ab} = 8\pi T_{ab}$$
+
+
+
+* 
+**Einstein Tensor ($G_{ab}$):** Defined as $R_{ab} - \frac{1}{2}g_{ab}R$.
+
+
+* 
+**Stress-Energy Tensor ($T_{ab}$):** Describes the density of energy, momentum, and stress.
+
+
+* 
+**Vacuum Case:** In the absence of matter, the equations reduce to $R_{ab} = 0$, though the full Riemann curvature may still be non-zero.
+
+
+* 
+**Cosmological Constant ($\Lambda$):** Typically assumed to be zero in numerical relativity because the scales of interest (e.g., black hole mergers) are much smaller than cosmological scales.
+
+
+
+---
+
+## 5. Analytical Solutions
+
+### 5.1 Weak Field Limit
+
+By perturbing the flat Minkowski metric ($g_{ab} = \eta_{ab} + h_{ab}$), the field equations can be linearized into a wave equation:
+
+* 
+**Quasi-static solutions:** Recover Newtonian gravity.
+
+
+* 
+**Dynamical solutions:** Predict the existence of gravitational waves.
+
+
+
+### 5.2 Spherical Symmetry and Stellar Models
+
+* 
+**Schwarzschild Solution:** The unique vacuum solution for a spherically symmetric mass. It features an event horizon at $r = 2M$.
+
+
+* 
+**Tolman-Oppenheimer-Volkoff (TOV) Equations:** Describe the hydrostatic equilibrium of a relativistic star.
+
+
+* 
+**Equation of State (EOS):** A relationship between pressure $p$ and density $\rho^*$ must be provided to solve for a stellar model.
+
+
+* 
+**Matching:** A complete stellar space-time is constructed by integrating fluid equations from the center to the surface ($p=0$) and matching the result to the exterior Schwarzschild solution.
+
+
+
+---
+
+## 6. Introduction to the 3+1 Decomposition
+
+To solve Einstein's equations numerically, the four-dimensional space-time is "chopped up" or foliated into a family of three-dimensional spatial slices $\Sigma_t$.
+
+* 
+**Foliation:** Slices are defined as level surfaces of a scalar time function $t$.
+
+
+* 
+**Normal Vector ($n^a$):** A unit vector normal to the slices, pointing in the direction of increasing $t$:
+
+
+
+$$n_a = -\alpha \nabla_a t$$
+
+
+
+
+
+* 
+**Lapse Function ($\alpha$):** A normalization constant that measures the rate of advance of proper time for a normal observer.
+
+
+
