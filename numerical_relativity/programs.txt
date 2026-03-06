@@ -1,0 +1,1361 @@
+#!/usr/bin/python
+
+# (C) Michael Puerrer, Sascha Husa
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+from math import pi
+
+from scipy.interpolate import UnivariateSpline
+from scipy import optimize
+
+#################
+
+def ODErhsExample(u,t):
+  [x, y] = u
+
+  XRHS = -x
+  YRHS = -y
+    
+  return np.array([XRHS, YRHS])
+  
+#################
+
+
+# ODE integrators
+def EulerStep(u,t,dt,rhs):
+  n=len(u)
+  up=np.zeros(n)
+  up=u + dt*rhs(u, t)
+  return up
+
+def RK2Step(u,t,dt,rhs):
+  n=len(u)
+  up=np.zeros(n)
+  k1=np.zeros(n)
+  k2=np.zeros(n)
+  
+  k1 = dt*rhs(u,t)
+  k2 = dt*rhs(u + k1, t + dt)
+  
+  up = u + 0.5*(k1 + k2)
+  return up
+
+def RK4Step(u,t,dt,rhs):
+  n=len(u)
+  up=np.zeros(n)
+  k1=np.zeros(n)
+  k2=np.zeros(n)
+  k3=np.zeros(n)
+  k4=np.zeros(n)
+
+  k1 = dt*rhs(u,t)
+  k2 = dt*rhs(u + 0.5*k1, t + 0.5*dt)
+  k3 = dt*rhs(u + 0.5*k2, t + 0.5*dt)
+  k4 = dt*rhs(u + k3, t + dt)
+
+  up = u + (k1 + 2*k2 + 2*k3 + k4) / 6.0
+  return up
+
+
+
+# ODE integration driver
+def ODEint(u0, dt, param, ODEstepper, ODErhs):
+
+  [tmax, nstepsmax, nequations] = param
+  nsteps = nstepsmax # we don't really know how many steps we'll need!
+  sol = np.zeros((nsteps,nequations)) # to store the solution
+  
+  t=0.0  
+  u = u0
+
+  n=0  
+  sol[0] = u
+  while n <= nsteps-1 and t < tmax: 
+    u = ODEstepper(u,t,dt,ODErhs)
+    n+=1
+    sol[n] = u
+    t+=dt
+    
+  return (t, sol[:n])
+
+def ODEsave(name, tEnd, sol, solnames):
+  coordvect = np.linspace(0.0,tEnd,len(sol))
+  
+  ts = np.column_stack([coordvect, (sol.transpose())[0]])
+
+  np.savetxt(name + solnames[0] + '.dat', ts, fmt='%.18e', delimiter=' ', newline='\n')
+
+
+def ODEplot(tEnd, sol, solnames):
+
+  components = len(sol[1])
+  timesteps  = len(sol)
+  
+  coordvect = np.linspace(0.0, tEnd, timesteps)
+
+  plt.figure(1)
+  for component in range(components):
+	plt.subplot(2,1,component)
+	values = sol.transpose()
+  	plt.plot(coordvect,values[component],'b-')
+  	plt.xlabel('t')
+  	plt.ylabel(solnames[component])
+  	plt.title(solnames[component])
+  
+  plt.show()
+  
+  
+if __name__ == "__main__":  # now we can import this file as a module without running 'main', or execute it as a script
+  
+  nequations = 3
+  u0 = [5., 6.]
+  tmax = 1
+  nstepsmax = 100000
+  param =[tmax, nstepsmax, nequations]
+
+  
+  dt0 = 0.005
+  
+  dt1 = dt0 # set stepsize
+  (tE1, sol1) = ODEint(u0, dt1, param)
+  print 'stopped at n = %d, t = %.4f, state vector = ' %(len(sol1), tE1) #, sol1[-1])   
+  ODEsave('dt1', tE1, sol1, ['x','y'])
+  ODEplot(tE1, sol1, ['x','y'])
+
+  dt2 = dt0/2 # set stepsize
+  (tE2, sol2) = ODEint(u0, dt2, param)
+  print 'stopped at n = %d, t = %.4f, state vector = ' %(len(sol2), tE2) #, sol2[-1])   
+  ODEsave('dt2', tE2, sol2, ['x','y'])
+  ODEplot(tE2, sol2, ['x','y'])
+
+  dt3 = dt0/4 # set stepsize
+  (tE3, sol3) = ODEint(u0, dt3, param)
+  print 'stopped at n = %d, t = %.4f, state vector = ' %(len(sol3), tE3) #, sol3[-1])   
+  ODEsave('dt3', tE3, sol3, ['x','y'])
+  ODEplot(tE3, sol3, ['x','y'])
+
+
+  diff12 = sol1                    - (sol2[::2])[:len(sol1)]
+  diff23 = (sol2[::2])[:len(sol1)] - (sol3[::4])[:len(sol1)]
+
+  ODEsave('diff12', tE1, diff12, '1-2')
+  ODEsave('diff23', tE1, diff23, '2-3')
+
+#!/usr/bin/python
+
+# (C) Michael Puerrer, Sascha Husa
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+from math import pi
+
+from scipy.interpolate import UnivariateSpline
+from scipy import optimize
+
+from ode_base import *
+
+#################
+
+def myODErhs(u,t):
+  [x,y] = u
+
+  XRHS = -x
+  YRHS = -y
+
+  return np.array([XRHS,YRHS])
+  
+#################
+
+
+if __name__ == "__main__":  # now we can import this file as a module without running 'main', or execute it as a script
+  
+  nequations = 2
+  tmax       = 100
+  nstepsmax  = 100000
+  param = [tmax, nstepsmax, nequations]
+
+  u0 = [1.,1.]
+  dt0 = 2.785
+    
+  dt1 = dt0 # set stepsize
+  (tE1, sol1) = ODEint(u0, dt1, param, RK4Step, myODErhs)
+  print 'stopped at n = %d, t = %.4f, state vector = ' %(len(sol1), tE1) #, sol1[-1])   
+  ODEsave('dt1', tE1, sol1, ['x','y'])
+  ODEplot(tE1, sol1, ['x','y'])
+
+  dt2 = dt0/2 # set stepsize
+  (tE2, sol2) = ODEint(u0, dt2, param, RK4Step, myODErhs)
+  print 'stopped at n = %d, t = %.4f, state vector = ' %(len(sol2), tE2) #, sol2[-1])   
+  ODEsave('dt2', tE2, sol2, ['x','y'])
+  ODEplot(tE2, sol2, ['x','y'])
+
+  dt3 = dt0/4 # set stepsize
+  (tE3, sol3) = ODEint(u0, dt3, param, RK4Step, myODErhs)
+  print 'stopped at n = %d, t = %.4f, state vector = ' %(len(sol3), tE3) #, sol3[-1])   
+  ODEsave('dt3', tE3, sol3, ['x','y'])
+  ODEplot(tE3, sol3, ['x','y'])
+
+
+  diff12 = sol1                    - (sol2[::2])[:len(sol1)]
+  diff23 = (sol2[::2])[:len(sol1)] - (sol3[::4])[:len(sol1)]
+
+  ODEsave('diff12', tE1, diff12, '1-2')
+  ODEsave('diff23', tE1, diff23, '2-3')
+
+#!/usr/bin/python
+
+# (C) Michael Puerrer, Sascha Husa
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+from math import pi
+
+from scipy.interpolate import UnivariateSpline
+from scipy import optimize
+
+# ODE integrators
+def EulerStep(u,t,dt,rhs):
+  up=u + dt*rhs(u, t)
+  return up
+
+def RK2Step(u,t,dt,rhs):
+  k1 = dt*rhs(u,t)
+  k2 = dt*rhs(u + k1, t + dt)
+  
+  up = u + 0.5*(k1 + k2)
+  return up
+
+def RK4Step(u,t,dt,rhs):
+  k1 = dt*rhs(u,t) 
+  k2 = dt*rhs(u + 0.5*k1, t + 0.5*dt)
+  k3 = dt*rhs(u + 0.5*k2, t + 0.5*dt)
+  k4 = dt*rhs(u + k3, t + dt)
+
+  up = u + (k1 + 2*k2 + 2*k3 + k4) / 6.0
+  return up
+
+
+# spatial finite differences
+def FD1(u,h): # 1st derivative
+  up = np.zeros(len(u))
+  up[1:-1] =  (u[2:] - u[:-2]) / (2.0*h) # interior of grid
+  # compute derivative at boundaries:
+  up[ 0] = (    -u[ 2] + 4.0*u[ 1] - 3.0*u[0]) / (2.0*h);
+  up[-1] = (-3.0*u[-1] + 4.0*u[-2] - u[-3])    / (2.0*h) # 2nd order accurate
+  return up
+
+def FD1periodic(u,h): # 1st derivative with periodic BCs
+  up = np.zeros(len(u))
+  up[1:-1] =  (u[2:] - u[:-2]) / (2.0*h) # interior of grid
+  # compute derivative at boundaries: identify points 0 and -1
+  up[ 0] = ( u[1] - u[-2] ) / (2.0*h);
+  up[-1] = ( u[1] - u[-2] ) / (2.0*h) # 2nd order accurate
+  return up
+
+
+def FD2periodic(u,h): # 2nd derivative with periodic BCs
+  ddu = np.zeros(len(u))
+  ddu[1:-1] = (u[2:] - 2.0*u[1:-1] + u[:-2]) / h**2
+  ddu[0]    = (u[1] - 2.0*u[ 0] + u[-2]) / h**2
+  ddu[-1]   = (u[1] - 2.0*u[-1] + u[-2]) / h**2
+  return ddu
+
+def FD2(u,h): # 2nd derivative at interior gridpoints
+  ddu = np.zeros(len(u))
+  ddu[1:-1] = (u[2:] - 2.0*u[1:-1] + u[:-2]) / h**2
+  # boundary terms missing!
+  return ddu
+  
+  
+
+# ODE integration driver
+def ODEint(u0, dt, param, solnames, ODEstepper, ODErhs):
+
+  gridlen = len(u0[0])
+
+  [tmax, nstepsmax, nequations, npoints, deltax, tsample, xsample] = param
+  nsteps = nstepsmax # we don't really know how many steps we'll need!
+  
+  t = 0.0  
+  n = 0 
+  
+  u = u0
+  while n <= nsteps-1 and t < tmax: 
+    up = ODEstepper(u,t,dt,ODErhs)
+    u = up
+
+    if np.mod(n,tsample) == 0:
+      for component in range(nequations):
+        ODEsave(solnames[component], t, u[component], param)
+
+    n+=1
+    t+=dt
+    
+  print 'stopped at n = %d, t = %.4f' %(n, t)
+    
+  return (t, u)
+
+def ODEsave(name, t, sol, param):
+
+  [tmax, nstepsmax, nequations, npoints, deltax, tsample, xsample] = param
+  
+  fname = name + '.dat' 
+  f_handle = file(fname, 'a')
+
+#  coordvect = grid = np.arange(npoints) * deltax
+#  ts = np.column_stack([coordvect, sol])
+  ts = sol[::xsample]
+
+  np.savetxt(f_handle, ts)
+  f_handle.write('\n\n')
+  f_handle.close()
+
+#!/usr/bin/python
+
+# (C) Michael Puerrer, Sascha Husa
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+from math import pi
+
+from scipy.interpolate import UnivariateSpline
+from scipy import optimize
+
+from mol_base import *
+
+global h
+
+#################
+
+def weqRHS(u,t):
+  [fi, pi] = u
+
+  fiRHS = pi
+  piRHS = FD2periodic(fi,h)
+
+  return np.array([fiRHS, piRHS])
+
+#################
+
+
+if __name__ == "__main__":  # now we can import this file as a module without running 'main', or execute it as a script
+
+# names for the solution components, used for filenames
+  solnames = ['fi', 'pi']  # global variable - we are lazy!
+    
+# grid parameters
+  deltax = 0.05
+  dt0    = 0.05
+
+  h = deltax
+
+  npoints = 1000
+  grid = np.arange(npoints) * deltax
+
+  np.savetxt('grid.dat', grid)
+
+# set up initial data
+  A     = 1.
+  xc    = 45.
+  sigma = 1.
+
+  Gaussian = lambda x: A*np.exp(-(x - xc)**2 / sigma)
+  u0 = np.array([Gaussian(grid), np.zeros(len(grid))]) # [u0,v0] -- time-symmetric data
+
+  np.savetxt('fi0.dat', u0[0])
+  np.savetxt('pi0.dat', u0[1])
+
+  nequations = 2
+  tmax = 10
+  nstepsmax = 100000
+
+# how much to output
+  tsample = 1
+  xsample = 1
+  param = [tmax, nstepsmax, nequations, npoints, deltax, tsample, xsample]
+
+ 
+  dt1 = dt0 # set stepsize
+  (tE1, sol1) = ODEint(u0, dt1, param, solnames, RK4Step, weqRHS)
+   
+
+
+#  dt2 = dt0/2 # set stepsize
+#  (tE2, sol2) = ODEint(u0, dt2, param, RK4Step, myODErhs)
+
+#  dt3 = dt0/4 # set stepsize
+#  (tE3, sol3) = ODEint(u0, dt3, param, RK4Step, myODErhs)
+
+
+#  diff12 = sol1                    - (sol2[::2])[:len(sol1)]
+#  diff23 = (sol2[::2])[:len(sol1)] - (sol3[::4])[:len(sol1)]
+
+#  ODEsave('diff12', tE1, diff12, '1-2')
+#  ODEsave('diff23', tE1, diff23, '2-3')
+
+#!/usr/bin/python
+
+# (C) Michael Puerrer, Sascha Husa
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+from math import pi
+
+from scipy.interpolate import UnivariateSpline
+from scipy import optimize
+
+from mol_base import *
+
+global h
+
+#################
+
+def advectRHS(u,t):
+  [fi, pi] = u
+
+  fiRHS = FD1periodic(fi,h)  # compare boundary conditions for derivative
+  piRHS = FD1(fi,h)
+
+  return np.array([fiRHS, piRHS])
+  
+#################
+
+
+if __name__ == "__main__":  # now we can import this file as a module without running 'main', or execute it as a script
+  
+  
+# names for the solution components, used for filenames
+  solnames = ['fi', 'pi']  # global variable - we are lazy!
+  
+# grid parameters
+  deltax = 0.05
+  dt0    = 0.05
+
+  h = deltax
+
+  npoints = 200
+  grid = np.arange(npoints) * deltax
+
+  np.savetxt('grid.dat', grid)
+
+# set up initial data
+  A     = 1.
+  xc    = 5.
+  sigma = 1.
+
+  Gaussian = lambda x: A*np.exp(-(x - xc)**2 / sigma)
+  u0 = np.array([Gaussian(grid), np.zeros(len(grid))]) # [u0,v0] -- time-symmetric data
+
+  np.savetxt('fi0.dat', u0[0])
+  np.savetxt('pi0.dat', u0[1])
+
+  nequations = 2
+  tmax = 10
+  nstepsmax = 100000
+  
+# how much to output
+  tsample = 1
+  xsample = 1
+  
+  param =[tmax, nstepsmax, nequations, npoints, deltax,tsample,xsample]
+
+ 
+  dt1 = dt0 # set stepsize
+  (tE1, sol1) = ODEint(u0, dt1, param, solnames, RK4Step, advectRHS)
+
+#  dt2 = dt0/2 # set stepsize
+#  (tE2, sol2) = ODEint(u0, dt2, param, RK4Step, myODErhs)
+
+#  dt3 = dt0/4 # set stepsize
+#  (tE3, sol3) = ODEint(u0, dt3, param, RK4Step, myODErhs)
+
+
+#  diff12 = sol1                    - (sol2[::2])[:len(sol1)]
+#  diff23 = (sol2[::2])[:len(sol1)] - (sol3[::4])[:len(sol1)]
+
+#  ODEsave('diff12', tE1, diff12, '1-2')
+#  ODEsave('diff23', tE1, diff23, '2-3')
+
+########################################################################
+#
+#   Remember to:   export QT_API=pyside
+#
+########################################################################
+
+import sys
+import burgers_sys as wv
+import matplotlib
+matplotlib.use('Qt4Agg')
+import numpy as np
+from matplotlib import pyplot as plt
+from matplotlib import animation
+
+try:
+    flux_arg = int(sys.argv[1])
+except:
+    print "Usage: ",sys.argv[0],"<flux> [ <slope> <idtype> <cfl> <boundary> <nx> ]"
+    print "\n This code animates the advection equation.  The flux argument is"
+    print "   flux     = 1 :   Godunov"
+    print "              2 :   Upwind"
+    print " "
+    print "   slope    = 1 :   Constant"
+    print "            = 2 :   Centered"
+    print "            = 3 :   minmod"
+    print "            = 4 :   MC"
+    print "            = 5 :   Superbee"
+    print " "
+    print "   idtype   = 1 :  Gaussian"
+    print "            = 2 :  Top hat"
+    print "            = 3 :  Sine"
+    print " "
+    print "   boundary = 1 :  Outflow"
+    print "              2 :  Periodic"
+    sys.exit(2)
+
+if len(sys.argv) > 2:
+    slope_arg = int(sys.argv[2])
+else:
+    slope_arg = 1    # default value
+
+if len(sys.argv) > 3:
+    id_arg = int(sys.argv[3])
+else:
+    id_arg = 1    # default value
+
+if len(sys.argv) > 4:
+    cfl_arg = float(sys.argv[4])
+else:
+    cfl_arg = 0.5    # default value
+
+if cfl_arg > 1.0 or cfl_arg <= 0.0:
+    print "cfl is unphysical.  cfl = ",cfl_arg,". Die here."
+    sys.exit(2)
+
+if len(sys.argv) > 5:
+    bc_arg = int(sys.argv[5])
+else:
+    bc_arg = 1
+
+if bc_arg != 1 and bc_arg != 2:
+    print "boundary must be 1 or 2.  boundary = ",bc_arg,". Die here."
+    sys.exit(2)
+
+if len(sys.argv) > 6:
+    nx_arg = int(sys.argv[6])
+else:
+    nx_arg = 51
+
+
+gxmin = -1.0
+gxmax =  1.0
+
+ng = 3
+N=nx_arg+ng
+w = wv.wave_system(gxmin,gxmax,N,add_ghost_zones=True)
+
+# ode solvers: Huen, RK2, Euler
+w.set_ode_type('Euler')
+
+if id_arg == 1:
+#w.set_u_n(wv.id_step,[1.0,0.2])
+    w.set_u_n(wv.id_gaussian,[1.0,0.0,0.25])
+elif id_arg == 2:
+    w.set_u_n(wv.id_box,[1.0,0.2])
+elif id_arg == 3:
+    w.set_u_n(wv.id_sine,[0.5,0.5])
+
+if slope_arg == 1:
+    w.set_slope_type('Constant')
+    slab = '+ Constant'
+elif slope_arg == 2:
+    w.set_slope_type('Centered')
+    slab = '+ Centered'
+elif slope_arg == 3:
+    w.set_slope_type('Minmod')
+    slab = '+ Minmod'
+elif slope_arg == 4:
+    w.set_slope_type('MC')
+    slab = '+ MC'
+elif slope_arg == 5:
+    w.set_slope_type('Superbee')
+    slab = '+ Superbee'
+else:
+    print "Unknown slope type " + slope_arg
+
+w.set_boundary_condition(bc_arg)
+w.set_flux_type(flux_arg)
+w.set_cfl(cfl_arg)
+
+if flux_arg == 1:
+    lab = 'Godunov' + slab
+elif flux_arg == 2:
+    lab = 'Upwind'
+elif flux_arg == 3:
+    lab = 'Lax-Friedrichs' + slab
+else:
+    lab = 'Unknown'
+
+#-----------------------------------------------------------------
+# animation
+#-----------------------------------------------------------------
+fig = plt.figure()
+ax = fig.add_subplot(111,xlim=(gxmin,gxmax), ylim=(-0.2,1.2), 
+     autoscale_on=False)
+
+
+line, = ax.plot(w.x(),w.u_n(),'o-',label=lab)
+ax.legend()
+
+def init():
+    line.set_data([],[])
+    return line,
+
+def animate(i):
+    w.step(1)
+    line.set_data(w.x(),w.u_n())
+    return line,
+    
+
+ani = animation.FuncAnimation(fig, animate, init_func=init, frames=5, blit=True )
+
+plt.show()
+
+
+########################################################################
+#
+#
+#
+########################################################################
+
+import numpy as np
+import math
+
+#-----------------------------------------------------------------------
+#
+#
+#
+#-----------------------------------------------------------------------
+class wave_system:
+    '''This class defines methods and updates for the scalar advection
+       equation.
+    '''
+    #-------------------------------------------------------------------
+    #   public methods
+    #-------------------------------------------------------------------
+    # The values xmin and xmax need to be modified if one is picky about
+    # periodic boundary conditions.
+    def __init__(self,xmin,xmax,Nx,add_ghost_zones=False):
+        self._N     = Nx
+        if add_ghost_zones == True:
+            ng = 3
+            self._dx    = float(xmax - xmin)/(Nx-1-ng)
+            self._xmin  = xmin - 2.0*self._dx
+            self._xmax  = xmax + self._dx
+        else:
+            self._dx    = float(xmax - xmin)/(Nx-1)
+            self._xmin  = xmin
+            self._xmax  = xmax
+ 
+        self._u_n   = np.zeros(Nx)
+        self._u1    = np.zeros(Nx)
+        self._u_np1 = np.zeros(Nx)
+        self._f_n   = np.zeros(Nx)
+        self._dt    = 0.1 * self._dx 
+        self._flux_type  = 1
+        self._time   = 0.0
+        self._bcond  = 1
+        self._ode_type = 'Huen'
+        self._slope_type = 'Constant'
+        print "dx = " + str(self._dx)
+        print "dt = " + str(self._dt)
+
+    #-------------------------------------------------------------------
+    def set_u_n(self, ivp, args):
+        self._u_n = ivp(self.x(), args)
+
+    #-------------------------------------------------------------------
+    def cal_flux(self):
+        if (self._flux_type == 1):
+          flux_godunov(self._f_n, self._u_n, self._slope_type, self._N)
+        elif (self._flux_type == 2):
+          flux_ftbs(self._f_n, self._u_n, self._N)
+        elif (self._flux_type == 3):
+          cfl = self._dt/self._dx
+          LaxF(self._f_n, self._u_n, cfl, self._N)
+        else:
+          print "Unknown flux_type ",self._flux_type
+
+    #-------------------------------------------------------------------
+    def set_boundary_condition(self, bctype):
+        self._bcond = bctype
+
+    #-------------------------------------------------------------------
+    def set_cfl(self, cfl):
+        self._dt = cfl * self._dx
+
+    #-------------------------------------------------------------------
+    def set_flux_type(self, ft):
+        self._flux_type = ft
+
+    #-------------------------------------------------------------------
+    def x(self):
+        return np.linspace(self._xmin, self._xmax, self._N)
+
+    #-------------------------------------------------------------------
+    def u_n(self):
+        return self._u_n[:]
+
+    #-------------------------------------------------------------------
+    def u_np1(self):
+        return self._u_np1[:]
+
+    #-------------------------------------------------------------------
+    def f_n(self):
+        return self._f_n[:]
+ 
+    #-------------------------------------------------------------------
+    def dx(self):
+        return self._dx
+
+    #-------------------------------------------------------------------
+    def dt(self):
+        return self._dt
+
+    #-------------------------------------------------------------------
+    def time(self):
+        return self._time
+
+    #-------------------------------------------------------------------
+    def flux_type(self):
+        return self._flux_type
+
+    #-------------------------------------------------------------------
+    def set_slope_type(self, slp):
+        self._slope_type = slp
+
+    #-------------------------------------------------------------------
+    def set_ode_type(self, ode):
+        self._ode_type = ode
+
+    #-------------------------------------------------------------------
+    def slope_type(self):
+        return self._slope_type
+
+    #-------------------------------------------------------------------
+    def ode_type(self):
+        return self._ode_type
+
+    #-------------------------------------------------------------------
+    def step(self, nsteps):
+        N = self._N
+        dx = self._dx
+        dt = self._dt
+        cfl = dt/dx
+
+        for ii in range (0,nsteps):
+            if self._ode_type == "Huen":
+                Huen(self._u_np1, self._u_n, self._u1, self._f_n, 
+                    self._slope_type, self._bcond, cfl, N)
+            elif self._ode_type == "RK2":
+                RK2(self._u_np1, self._u_n, self._u1, self._f_n,
+                    self._slope_type, self._bcond, cfl, N)
+            elif self._ode_type == "Euler":
+                Euler(self._u_np1, self._u_n, self._f_n, 
+                      self._slope_type, self._bcond, cfl, N)
+
+            #rotate pointers
+            temp = self._u_n; self._u_n = self._u_np1; self._u_np1 = temp
+            self._time += self._dt
+            print "...time now " + str(self._time)
+
+           
+#-------------------------------------------------------------------
+# Flux routines
+#-------------------------------------------------------------------
+def flux_ftbs(f, u, n):
+    for i in range(0,n-1):
+        f[i] = 0.5*u[i]**2
+    f[n-1] = f[n-2]
+
+def flux_godunov(f, u, slope, n):
+    ul, ur = Reconstruct(u, slope, n)
+    ustar = Riemann(ul, ur, n)
+    for i in range(n):
+        f[i] = 0.5*ustar[i]*ustar[i]
+
+
+def LaxF(f, u, cfl, n):
+    for i in range(0,n-1):
+        f[i] = 0.5*(0.5*u[i+1]*u[i+1] + u[i]*u[i]) - 0.5*(u[i+1] - u[i])/cfl
+    f[n-1] = f[n-2]
+
+def Reconstruct(u, slope, n):
+    ''' This routine calculates the reconstructions for the left and right
+        States.  
+           Note:  What I call slope here is really the divided difference,
+                  because I do not divide by dx.
+    '''
+    ul = np.zeros_like(u)
+    ur = np.zeros_like(u)
+    slp = np.zeros_like(u)
+
+    if slope == "Constant":
+        slp[:] = 0.0  # slp is already zero, but for good practice...
+
+    elif slope == "Centered":
+        for i in range(1,n-1):
+            slp[i] = 0.5*(u[i+1] + u[i-1]) 
+
+        slp[0] = 0.0   # should already be zero, but good practice...
+        slp[n-1] = 0.0
+
+    elif slope == "Minmod":
+        for i in range(1,n-1):
+            slp[i] = minmod(u[i+1]-u[i], u[i]-u[i-1])
+
+        slp[0] = 0.0   # should already be zero, but good practice...
+        slp[n-1] = 0.0
+
+    elif slope == "MC":
+        for i in range(1,n-1):
+            p = 2.0*minmod( u[i]-u[i-1], u[i+1]-u[i])
+            q = 0.5*(u[i+1]-u[i-1])
+            slp[i] = minmod(p, q)
+
+    elif slope == "Superbee":
+        for i in range(1,n-1):
+            p = minmod(u[i+1]-u[i], 2.0*(u[i]-u[i-1]))
+            q = minmod(u[i]-u[i-1], 2.0*(u[i+1]-u[i]))
+            slp[i] = maxmod(p, q)
+
+    else:
+        print "unknown slope " + slope
+    
+    for i in range(1,n):
+        ul[i]   = u[i] + 0.5*slp[i]
+        ur[i-1] = u[i] - 0.5*slp[i]
+
+    ul[0] = ul[1]
+    return ul, ur 
+
+def Riemann(ul, ur, n):
+    ''' This routine solves the Riemann Problem for Burger's Equation'''
+    ustar = np.zeros_like(ur)
+    for i in range(n):
+        if ul[i] >= ur[i]:
+            # Shock
+            s = 0.5*(ul[i] + ur[i])
+            if s > 0.0:
+                ustar[i] = ul[i]
+            else:
+                ustar[i] = ur[i]
+        else:
+            # Rarefaction
+            if ul[i] > 0.0:
+                ustar[i] = ul[i]
+            elif ur[i] < 0.0:
+                ustar[i] = ur[i]
+            else:
+                ustar[i] = 0.0
+
+    return ustar
+
+    
+def minmod(a,b):
+    if a*b > 0.0:
+        return np.sign(a)*min(abs(a),abs(b))
+    else:
+        return 0.0
+
+def maxmod(a,b):
+    if a*b > 0.0:
+        return np.sign(a)*max(abs(a),abs(b))
+    else:
+        return 0.0
+    
+#-------------------------------------------------------------------
+# Euler 
+#-------------------------------------------------------------------
+def Euler(u2, u, nf, slope_type, bcond, cfl, N):
+    ''' Take one step with Euler's method'''
+    flux_godunov(nf, u, slope_type, N)
+    u2[1:N-1] = u[1:N-1] - cfl*(nf[1:N-1] - nf[0:N-2])
+    set_bc(u2, bcond)
+
+
+#-------------------------------------------------------------------
+#  RK2
+#-------------------------------------------------------------------
+def RK2(u2, u, u1, nf, slope_type, bcond, cfl, N):
+    ''' Take one step with RK2 '''
+
+    flux_godunov(nf, u, slope_type, N)
+    u1[1:N-1] = u[1:N-1] - 0.5*cfl*(nf[1:N-1] - nf[0:N-2])
+    set_bc(u1, bcond)
+
+    flux_godunov(nf, u1, slope_type, N)
+    u2[1:N-1] = u[1:N-1] - cfl*(nf[1:N-1] - nf[0:N-2])
+    set_bc(u2, bcond)
+
+#-------------------------------------------------------------------
+#  Huen's method
+#-------------------------------------------------------------------
+def Huen(u2, u, u1, nf, slope_type, bcond, cfl, N):
+    ''' Take one step with Huen's method'''
+
+    flux_godunov(nf, u, slope_type, N)
+    u1[1:N-1] = u[1:N-1] - cfl*(nf[1:N-1] - nf[0:N-2])
+    set_bc(u1, bcond)
+
+    flux_godunov(nf, u1, slope_type, N)
+    u2[1:N-1] = 0.5*(u[1:N-1] + u1[1:N-1]) - 0.5*cfl*(nf[1:N-1] - nf[0:N-2])
+    set_bc(u2, bcond)
+
+
+
+#-------------------------------------------------------------------
+# Initial data routines
+#-------------------------------------------------------------------
+def id_step(x, args):
+    ul = args[0]
+    ur = args[1]
+    return np.where (x < 0, ul, ur)
+
+def exact_step(x, x0, args):
+    ul = args[0]
+    ur = args[1]
+    return np.where(x < x0, ul, ur)
+
+#-------------------------------------------------------------------
+#
+#  id_gaussian: Gaussian initial data
+#      Here args = [A, x0, sigma]
+#
+#-------------------------------------------------------------------
+def id_gaussian(x, args):
+    A = args[0]
+    x0 = args[1]
+    sigma = args[2]
+    return 0.1 + A*np.exp(-(x-x0)**2/sigma**2)
+
+def id_box(x, args):
+    ul = args[0]
+    ur = args[1]
+    return np.where (abs(x) < 0.5, ul, ur)
+
+def id_sine(x, args):
+    amp = args[0]
+    u0 = args[1]
+    return np.where( abs(x) < 0.5, u0 + amp*np.sin(2.0*math.pi*(x-0.5)), u0)
+
+def set_bc(f, bctype):
+    N = np.size(f)
+    if (bctype == 1):
+        f[0] = f[2]
+        f[1] = f[2]
+        f[N-2] = f[N-3]
+        f[N-1] = f[N-3]
+    elif (bctype ==2):
+        f[0] = f[N-4]
+        f[1] = f[N-3]
+        f[N-2] = f[2]
+        f[N-1] = f[3]
+    else:
+        print "unknown bctype = " + str(bctype)
+        exit(2)
+
+
+
+########################################################################
+#
+#   Remember to:   export QT_API=pyside
+#
+########################################################################
+
+import sys
+import advection_sys as wv
+import matplotlib
+matplotlib.use('Qt4Agg')
+import numpy as np
+from matplotlib import pyplot as plt
+from matplotlib import animation
+
+try:
+    flux_arg = int(sys.argv[1])
+except:
+    print "Usage: ",sys.argv[0],"<flux> [ <idtype> <cfl> <boundary> <nx> ]"
+    print "\n This code animates the advection equation.  The flux argument is"
+    print "   flux     = 1 :   Upwind"
+    print "              2 :   Centered"
+    print "              3 :   Lax-Friedrichs"
+    print "              4 :   Lax-Wendroff"
+    print "              5 :   Beam-Warming"
+    print " "
+    print "   idtype   = 1 :  Gaussian"
+    print "            = 2 :  Top hat"
+    print " "
+    print "   boundary = 1 :  Outflow"
+    print "              2 :  Periodic"
+    sys.exit(2)
+
+if len(sys.argv) > 2:
+    id_arg = int(sys.argv[2])
+else:
+    id_arg = 1    # default value
+
+if len(sys.argv) > 3:
+    cfl_arg = float(sys.argv[3])
+else:
+    cfl_arg = 0.5    # default value
+
+if cfl_arg > 1.0 or cfl_arg <= 0.0:
+    print "cfl is unphysical.  cfl = ",cfl_arg,". Die here."
+    sys.exit(2)
+
+if len(sys.argv) > 4:
+    bc_arg = int(sys.argv[4])
+else:
+    bc_arg = 2
+
+if bc_arg != 1 and bc_arg != 2:
+    print "boundary must be 1 or 2.  boundary = ",bc_arg,". Die here."
+    sys.exit(2)
+
+if len(sys.argv) > 5:
+    nx_arg = int(sys.argv[5])
+else:
+    nx_arg = 51
+
+
+
+ng = 3
+N=nx_arg+ng
+w = wv.wave_system(-1,1,N,add_ghost_zones=True)
+
+if id_arg == 1:
+#w.set_u_n(wv.id_step,[1.0,0.2])
+    w.set_u_n(wv.id_gaussian,[1.0,0.0,0.25])
+else:
+    w.set_u_n(wv.id_box,[1.0,0.2])
+
+w.set_boundary_condition(bc_arg)
+w.set_flux_type(flux_arg)
+w.set_cfl(cfl_arg)
+
+if flux_arg == 1:
+    lab = 'Upwind'
+elif flux_arg == 2:
+    lab = 'Centered'
+elif flux_arg == 3:
+    lab = 'Lax-Friedrichs'
+elif flux_arg == 4:
+    lab = 'Lax-Wendroff'
+elif flux_arg == 5:
+    lab = 'Beam-Warming'
+
+#-----------------------------------------------------------------
+# animation
+#-----------------------------------------------------------------
+fig = plt.figure()
+ax = fig.add_subplot(111,xlim=(-1,1), ylim=(-0.2,1.2), autoscale_on=False)
+
+
+line, = ax.plot(w.x(),w.u_n(),'o-',label=lab)
+ax.legend()
+
+def init():
+    line.set_data([],[])
+    return line,
+
+def animate(i):
+    w.step(1)
+    line.set_data(w.x(),w.u_n())
+    return line,
+    
+
+ani = animation.FuncAnimation(fig, animate, init_func=init, frames=5, blit=True )
+
+plt.show()
+
+
+########################################################################
+#
+#
+#
+########################################################################
+
+import numpy as np
+
+#-----------------------------------------------------------------------
+#
+#
+#
+#-----------------------------------------------------------------------
+class wave_system:
+    '''This class defines methods and updates for the scalar advection
+       equation.
+    '''
+    #-------------------------------------------------------------------
+    #   public methods
+    #-------------------------------------------------------------------
+    # The values xmin and xmax need to be modified if one is picky about
+    # periodic boundary conditions.
+    def __init__(self,xmin,xmax,Nx,add_ghost_zones=False):
+        self._N     = Nx
+        if add_ghost_zones == True:
+            ng = 3
+            self._dx    = float(xmax - xmin)/(Nx-1-ng)
+            self._xmin  = xmin - 2.0*self._dx
+            self._xmax  = xmax + self._dx
+        else:
+            self._dx    = float(xmax - xmin)/(Nx-1)
+            self._xmin  = xmin
+            self._xmax  = xmax
+ 
+        self._u_n   = np.zeros(Nx)
+        self._u_np1 = np.zeros(Nx)
+        self._f_n   = np.zeros(Nx)
+        self._dt    = 0.1 * self._dx 
+        self._flux_type  = 1
+        self._time   = 0.0
+        self._bcond  = 1
+        print "dx = " + str(self._dx)
+        print "dt = " + str(self._dt)
+
+    #-------------------------------------------------------------------
+    def set_u_n(self, ivp, args):
+        self._u_n = ivp(self.x(), args)
+#        self._u_n[self._N-1] =  self._u_n[0]
+
+    #-------------------------------------------------------------------
+    def cal_flux(self):
+        if (self._flux_type == 1):
+          flux_ftbs(self._f_n, self._u_n, self._N)
+        elif (self._flux_type == 2):
+          flux_ftcs(self._f_n, self._u_n, self._N)
+        elif (self._flux_type == 3):
+          cfl = self._dt/self._dx
+          LaxF(self._f_n, self._u_n, cfl, self._N)
+        elif (self._flux_type == 4):
+          cfl = self._dt/self._dx
+          LaxWendroff_advection(self._f_n, self._u_n, cfl, self._N)
+        elif (self._flux_type == 5):
+          cfl = self._dt/self._dx
+          BeamWarming_advection(self._f_n, self._u_n, cfl, self._N)
+        else:
+          print "Unknown flux_type ",self._flux_type
+
+    #-------------------------------------------------------------------
+    def set_boundary_condition(self, bctype):
+        self._bcond = bctype
+
+    #-------------------------------------------------------------------
+    def set_cfl(self, cfl):
+        self._dt = cfl * self._dx
+
+    #-------------------------------------------------------------------
+    def set_flux_type(self, ft):
+        self._flux_type = ft
+
+    #-------------------------------------------------------------------
+    def x(self):
+        return np.linspace(self._xmin, self._xmax, self._N)
+
+    #-------------------------------------------------------------------
+    def u_n(self):
+        return self._u_n[:]
+
+    #-------------------------------------------------------------------
+    def u_np1(self):
+        return self._u_np1[:]
+
+    #-------------------------------------------------------------------
+    def f_n(self):
+        return self._f_n[:]
+ 
+    #-------------------------------------------------------------------
+    def dx(self):
+        return self._dx
+
+    #-------------------------------------------------------------------
+    def dt(self):
+        return self._dt
+
+    #-------------------------------------------------------------------
+    def time(self):
+        return self._time
+
+    #-------------------------------------------------------------------
+    def flux_type(self):
+        return self._flux_type
+
+    #-------------------------------------------------------------------
+    def step(self, nsteps):
+        N = self._N
+        dx = self._dx
+        dt = self._dt
+        cfl = dt/dx
+#        up1 = self._u_np1
+#        u   = self._u_n
+        for ii in range (0,nsteps):
+#           print "...taking a step " + str(ii) + " cfl = " + str(cfl)
+            self.cal_flux()
+            for i in range(2,N-2):
+                self._u_np1[i] = self._u_n[i] - cfl*(self._f_n[i] - self._f_n[i-1])
+#            print "...applying boundary condition"
+#            self._u_np1[0] = self._u_n[0] - cfl*(self._u_n[0] - self._u_n[N-1])
+#            self._u_np1[0] = self._u_np1[2]
+#            self._u_np1[1] = self._u_np1[2]
+#            self._u_np1[N-2] = self._u_np1[N-3]
+#            self._u_np1[N-1] = self._u_np1[N-3]
+            set_bc(self._u_np1, self._bcond)
+            #rotate pointers
+            temp = self._u_n; self._u_n = self._u_np1; self._u_np1 = temp
+            self._time += self._dt
+            print "...time now " + str(self._time)
+
+    #-------------------------------------------------------------------
+#   def set_bc(f):
+#       if (self._bcond == 1):
+#           N = size(f)
+#           print "applying outflow bc's.  N = " + str(N)
+#            self._u_np1[0] = self._u_np1[2]
+#            self._u_np1[1] = self._u_np1[2]
+#            self._u_np1[N-2] = self._u_np1[N-3]
+#            self._u_np1[N-1] = self._u_np1[N-3]
+#           f[0] = f[2]
+#           f[1] = f[2]
+#           f[N-2] = f[N-3]
+#           f[N-1] = f[N-3]
+            
+#-------------------------------------------------------------------
+# Flux routines
+#-------------------------------------------------------------------
+def flux_ftbs(f, u, n):
+    for i in range(0,n-1):
+        f[i] = u[i]
+    f[n-1] = f[n-2]
+
+def flux_ftcs(f, u, n):
+    for i in range(0,n-1):
+        f[i] = 0.5*(u[i+1] + u[i])
+    f[n-1] = f[n-2]
+
+def LaxF(f, u, cfl, n):
+    for i in range(0,n-1):
+        f[i] = 0.5*(u[i+1] + u[i]) - 0.5*(u[i+1] - u[i])/cfl
+    f[n-1] = f[n-2]
+
+def LaxWendroff_advection(f, u, cfl, n):
+    for i in range(0,n-1):
+        f[i] = 0.5*(u[i+1] + u[i]) - 0.5*cfl*(u[i+1] - u[i])
+    f[n-1] = f[n-2]
+
+def BeamWarming_advection(f, u, cfl, n):
+    for i in range(1,n):
+        f[i] = u[i] + 0.5*(1.0 - cfl)*(u[i] - u[i-1])
+    f[0] = f[1]
+
+#-------------------------------------------------------------------
+# Initial data routines
+#-------------------------------------------------------------------
+def id_step(x, args):
+    ul = args[0]
+    ur = args[1]
+    return np.where (x < 0, ul, ur)
+
+def exact_step(x, x0, args):
+    ul = args[0]
+    ur = args[1]
+    return np.where(x < x0, ul, ur)
+
+#-------------------------------------------------------------------
+#
+#  id_gaussian: Gaussian initial data
+#      Here args = [A, x0, sigma]
+#
+#-------------------------------------------------------------------
+def id_gaussian(x, args):
+    A = args[0]
+    x0 = args[1]
+    sigma = args[2]
+    return A*np.exp(-(x-x0)**2/sigma**2)
+
+def id_box(x, args):
+    ul = args[0]
+    ur = args[1]
+    return np.where (abs(x) < 0.5, ul, ur)
+
+def set_bc(f, bctype):
+    N = np.size(f)
+    if (bctype == 1):
+        print "applying outflow bc's.  N = " + str(N)
+        f[0] = f[2]
+        f[1] = f[2]
+        f[N-2] = f[N-3]
+        f[N-1] = f[N-3]
+    elif (bctype ==2):
+        f[0] = f[N-4]
+        f[1] = f[N-3]
+        f[N-2] = f[2]
+        f[N-1] = f[3]
+    else:
+        print "unknown bctype = " + str(bctype)
+        exit(2)
+
+
+
+import pylab
+from scipy.integrate import ode
+
+
+Gamma0 = 
+K0 = 
+rho1 = 
+P1 = 
+K1 =
+
+R_km = 
+Msun = 
+
+def eos(rho):
+    if rho < rho1: return K0*rho**Gamma0
+    else: return K1*rho**Gamma1
+
+def inveos(P):
+    if P < P1: return (P/K0)**(1.0/Gamma0)
+    else: return (P/K1)**(1.0/Gamma1)
+
+def tov(r, y, arg1):
+    P, m = y[0], y[1]
+    rho = inveos(P)
+    dPdr = -G*(rho + P/c**2)*(m + 4.0*pi*r**3*P/c**2)
+    dPdr = dPdr/(r*(r - 2.0*G*m/c**2))
+    dmdr = 4.0*pi*r**2*rho
+    return [dPdr, dmdr]
+
+def tovsolve(rhoc):
+    r = pylab.arange (10.0, 20000.0, 10)
+    m = pylab.zeros_like(r)
+    P = pylab.zeros_like(r)
+    m[0] = 4.0*pi*r[0]**3*rhoc
+    P[0] = eos(rhoc)
+    sol = ode(tov).set_integrator('vode', method='adams', rtol=1.0e-10, 
+        atol=1.0e-10)
+    sol.set_initial_value([P[0], m[0]],r[0])
+    sol.set_f_params(1.0) 
+    i = 0
+    while P[i] > 0.0 and i < len(r) - 1 and sol.successful():
+        sol.integrate(r[i+1])
+        P[i+1] = sol.y[0]
+        m[i+1] = sol.y[1]
+        i = i + 1
+    return m[i-1]/Msun, r[i-1]/R_km
+
+
