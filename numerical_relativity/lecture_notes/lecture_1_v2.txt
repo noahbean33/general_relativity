@@ -1,0 +1,223 @@
+These lecture notes are based on the presentation by **Thomas Baumgarte** regarding the mathematical foundations of numerical relativity.
+
+---
+
+## I. Introduction & Pedagogy
+
+The course begins with a review of General Relativity (GR) aimed at establishing a physical intuition before diving into the formalisms required for numerical simulation. 
+
+* 
+**The Lecturer:** Thomas Baumgarte. 
+
+
+* 
+**Logistics:** The lecturer notes a personal condition called **face blindness** (prosopagnosia), requesting students to introduce themselves frequently. 
+
+
+* 
+**Style:** Interactive; students are encouraged to interrupt with questions rather than waiting for formal breaks. 
+
+
+
+---
+
+## II. Newtonian Gravity: The Conceptual Blueprint
+
+To understand GR, we first establish a four-step outline in Newtonian gravity that will be mirrored in the relativistic development. 
+
+### 1. The Central Object
+
+The central object of the theory is the **gravitational potential** $\phi$. 
+
+### 2. Motion (First Derivatives)
+
+Freely falling particles experience an acceleration $a$ related to the **first derivative** (gradient) of the potential: 
+
+$$a_i = -\partial_i \phi$$
+
+### 3. Geodesic Deviation (Second Derivatives)
+
+The distance between two nearby freely falling particles involves the **second derivatives** of the potential, often derived via a Taylor expansion. 
+
+### 4. Field Equation (The Trace)
+
+The field equation (Poisson's equation) involves the **trace** of the second derivatives (the Laplace operator): 
+
+$$\nabla^2 \phi = \partial^i \partial_i \phi = 4\pi \rho$$
+
+* 
+**Note:** This theory possesses a "gauge freedom" where adding a constant to $\phi$ does not change the physical results (the gradient remains the same). 
+
+
+
+---
+
+## III. General Relativity: The Geometric Framework
+
+Following the Newtonian outline, we translate these concepts into the language of four-dimensional curved spacetime. 
+
+### 1. The Central Object: The Metric
+
+The fundamental object is the **spacetime metric** $g_{ab}$, used to measure proper distances ($ds$) between events: 
+
+$$ds^2 = g_{ab} dx^a dx^b$$
+
+### 2. Measuring Curvature
+
+Curvature is measured through: 
+
+* 
+**Sum of angles in triangles:** Exceeding 180° in positively curved space. 
+
+
+* **Parallel Transport:** Moving a vector along a path such that it remains "as parallel as possible." In curved space, parallel transporting a vector around a closed loop results in a vector that does not point in its original direction. 
+
+
+
+### 3. The Covariant Derivative & Connection
+
+To generalize the partial derivative so the result remains a tensor, we introduce the **covariant derivative** $\nabla_a$ and the **Christoffel symbols** (connection coefficients) $\Gamma^c_{ab}$: 
+
+$$\nabla_a T^b = \partial_a T^b + \Gamma^b_{ac} T^c$$
+
+The Christoffel symbols are defined by first derivatives of the metric: 
+
+$$\Gamma^a_{bc} = \frac{1}{2} g^{ad} (\partial_c g_{db} + \partial_b g_{dc} - \partial_d g_{bc})$$
+
+* 
+**Notation Note:** A "4" index ($^4\Gamma$) is used to distinguish four-dimensional spacetime objects from the three-dimensional spatial objects introduced in later lectures. 
+
+
+
+---
+
+## IV. From Motion to Field Equations
+
+### 1. Geodesics (First Derivatives)
+
+Freely falling objects follow **geodesics**, parallel transporting their own four-velocity $u^a$: 
+
+$$u^a \nabla_a u^b = 0 \implies u^a \partial_a u^b + \Gamma^b_{ac} u^a u^c = 0$$
+
+Consistent with the Newtonian model, this involves **first derivatives** of the metric. 
+
+### 2. Riemann Tensor (Second Derivatives)
+
+**Geodesic deviation** (the acceleration between two nearby worldlines) leads to the **Riemann Tensor** $R^a{}_{bcd}$, which consists of **second derivatives** of the metric. 
+
+* It measures the non-commutativity of covariant derivatives: $[\nabla_a, \nabla_b] v^c = R^c{}_{dab} v^d$. 
+
+
+* In $n$ dimensions, it has $\frac{1}{12} n^2 (n^2 - 1)$ independent components. 
+
+
+
+### 3. Ricci Tensor and Scalar (The Trace)
+
+To form field equations, we take the trace of the Riemann tensor to get the **Ricci Tensor** $R_{ab}$: 
+
+$$R_{ab} = R^c{}_{acb}$$
+
+The **Ricci Scalar** is the trace of the Ricci tensor: $R = R^a{}_a$. 
+
+> 
+> **Three Ways to Compute the Ricci Tensor:** 1.  As a trace of the Riemann tensor (using $\Gamma$ and its first derivatives). 2.  Directly using second derivatives of the metric (four complex terms). 3.  Using a wave-operator form by absorbing terms into a contracted Christoffel symbol $\Gamma^c$. 
+> 
+> 
+
+---
+
+## V. Einstein’s Field Equations
+
+Guided by the Newtonian limit, we arrive at the field equations: 
+
+$$G_{ab} = 8\pi T_{ab}$$
+
+* 
+**Einstein Tensor ($G_{ab}$):** Defined as $R_{ab} - \frac{1}{2} g_{ab} R$. 
+
+
+* 
+**Stress-Energy Tensor ($T_{ab}$):** Represents energy, momentum, and stress densities. 
+
+
+* 
+**Cosmological Constant ($\Lambda$):** Assumed to be zero for numerical relativity purposes, as it only impacts cosmological scales. 
+
+
+* 
+**Vacuum Solutions:** In vacuum ($T_{ab} = 0$), the equations reduce to $R_{ab} = 0$. 
+
+
+
+---
+
+## VI. Analytical Solutions
+
+### 1. Weak Fields
+
+Assuming $g_{ab} = \eta_{ab} + h_{ab}$ (where $h_{ab} \ll 1$), the field equations become a **wave equation**: 
+
+* 
+**Quasi-static solutions:** Recover Newtonian gravity. 
+
+
+* 
+**Dynamical solutions:** Predict **Gravitational Waves**. 
+
+
+
+### 2. Strong Fields (Spherical Symmetry)
+
+* 
+**Schwarzschild Solution:** The unique vacuum solution for a static, spherically symmetric mass $M$. 
+
+
+* Features an event horizon at the **Schwarzschild radius** $r = 2M$ (a coordinate singularity). 
+
+
+* Features a physical singularity at $r = 0$. 
+
+
+
+
+* 
+**Tolman-Oppenheimer-Volkoff (TOV) Equations:** Describe the interior of a static star made of a perfect fluid. 
+
+
+* Requires an **Equation of State** $P(\rho)$ to solve. 
+
+
+* Stellar models are constructed by integrating from the center until $P=0$, then matching to the exterior Schwarzschild solution. 
+
+
+
+
+
+---
+
+## VII. The 3+1 Decomposition: The "Sad Moment"
+
+To solve these equations numerically, we must "undo" the 4D unification and treat spacetime as a sequence of 3D spatial slices evolving in time. 
+
+* 
+**Foliation:** We carve the 4D manifold into a family of non-intersecting spatial slices $\Sigma$, labeled by a time function $t$. 
+
+
+* 
+**Normal Vector ($n^a$):** A vector orthogonal to the slices, proportional to the gradient of the time function: 
+
+
+$$n_a = -\alpha \nabla_a t$$
+
+
+* 
+**Lapse Function ($\alpha$):** A normalization constant that measures the lapse of proper time between slices. 
+
+
+* 
+**Normalization:** $n^a n_a = -\epsilon$, where $\epsilon=1$ for Lorentzian spacetime (timelike normal) and $\epsilon=-1$ for Euclidean space. 
+
+
+
+---
