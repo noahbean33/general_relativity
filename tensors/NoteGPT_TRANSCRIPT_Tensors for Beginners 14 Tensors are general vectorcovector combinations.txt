@@ -1,0 +1,48 @@
+00:00:00
+So in this video, we're going to generalize what  we've learned so far with the tensor product, and talk about general tensors, that can be made  using any combination of any number of vectors and covectors. And just a reminder, I'm using non-standard tensor product notation, your textbooks will write it with a circle-times symbol. And I'm  just going to leave that symbol out. So so far, we've said that linear maps are really just  linear combinations of vector-covector pairs. And
+
+00:00:27
+using that point of view, we can easily get the  transformation rules, the multiplication formulas, and the array shapes, all for free. And we showed  that we can do the same thing for bilinear forms, we said that bilinear forms are just linear  combinations of covector-covector pairs. And again, this easily helps us get the transformation  rules, the multiplication formulas and the array shapes. So what I want to do now is introduce some  tensors you've never seen before. So we have this tensor D, which you can see is made up of pairs  of vectors. So it's a (2,0)-tensor. And also,
+
+00:01:02
+there's this tensor Q, which is made up of one  vector part and two covector parts. So it's a (1,2)-tensor. So we have these new tensors.  And I'm going to ask the same questions we've been asking all along. What are the coordinate  transformation rules? What is the multiplication formula for the action of Q acting on the input  D. And also, what are the array shapes? So the transformation rules are really easy, we just  write the tensor out as a linear combination. And we look at our transformation rules for basis  vectors and basis covectors. And so in this case,
+
+00:01:38
+we use this rule twice to move to the new vector  basis. So we get two "B" (for backward) terms, we pull these out in front, and we're done. And the  reverse transformation is just as easy. And again, we do the same thing with Q, it looks like we need  this rule and this rule to move to the new vector basis and the new covector basis. So we get one  B and two F's out of that. And we can pull these coefficients out in front. And we're done. And  again, the reverse transform is just as easy. So
+
+00:02:12
+transforming tensor components is really not that  hard. As long as you have these transformation rules for basis vectors and covectors. You can  just plug these transformations in, and you're already done. Basically, no work. Okay, so the next thing to figure out, what is the formula for Q acting on the input D? And  this is actually a bit of a trick question, because it turns out that there's no single way to  get Q to act on D. And I'll show you what I mean. So let's take the example of a linear map L acting  on a vector v. When we expand these out into their
+
+00:02:47
+linear combinations, we can see that we only  have one covector in L, and only one vector in the input v. So there's only one possible thing  that can happen, epsilon^j has to act on e_k. And even if you look over here at the matrix and  vector components, there's only one way we can do a summation over these, right? We have to sum over  the lower index of L and the upper index of v. So when it comes to figuring out L(v), there's only  one possible answer that we can come up with. Now on the other hand, Q and D are larger tensors  with more parts. And it turns out that when we
+
+00:03:23
+asked the question, what is Q(D), there are many  possible answers that we can come up with. And the reason for that is that there are many possible  ways that we can pass these input vectors to these covectors. So one option is that we can sum over  j and k like this. And that would involve passing the vectors to the covectors like this. And of  course, we would get an "a, j" Kronecker, Delta, and a "b, k" Kronecker delta. And that would give  us this formula for the coefficients here. Another
+
+00:03:54
+way to do this summation would be like this. So  notice, I've switched k and j here. And that would involve passing the vectors like this. So we get a  "b, j" Kronecker delta and an "a, k" Kronecker delta. This is yet another way. So here, we're only doing  one summation over k instead of two. And that would correspond to passing this one vector like  this, and leaving the other vector alone. Another way is to do the summation over j like this, and  that would involve passing this one vector here
+
+00:04:24
+and leaving the other vector alone. And you  could probably come up with many more ways to do summations over the Q and D tensor components.  Anyway, the point I'm trying to make here is that as we make these tensors, bigger and bigger with  more and more covariant, and contravariant parts, we end up with more and more ways to do the  summations and more and more ways to compute functions. So writing this Q(D) here, that's  kind of ambiguous. It doesn't tell us exactly what to do. To say what we really mean, we normally  need to write things out in the Einstein notation
+
+00:04:55
+like this. Okay, so the next thing to figure  out is the array shapes. So with D, we have a tensor product between two vectors. And that's a  bit like the Kronecker product between two column vectors. So let's look at the Kronecker product of  two column vectors, I'm just going to pull these v and w column vectors out of thin air here. So  we can see what the array shape looks like. So what I do is, I distribute this array on the left  into each component of the array on the right, and I get this, and that's really just a column  of columns. So D is a column of columns. Okay,
+
+00:05:32
+and we're going to do the same thing with Q. So  Q has one vector part and two covector parts. So we'll need to take the Kronecker product of a  vector array and two covector arrays. And we just distribute this over the first Kronecker products. And we get that. And we again, distribute this entire array on the left into all  the entries on the right, and we get this. So the array for Q is a row of rows of columns. And some  people like to think that since there are three parts in this tensor, they think that we should  visualize this tensor array instead as a 3d cube,
+
+00:06:11
+like over here. But I don't like to do that.  Because when we visualize it this way, we lose out on how many vector parts and how many covector  parts there are. And we sort of lose information about what type of tensor This is. But when I  write the tensor out like this as a row of rows of columns, I can still see by looking at this,  that this is a (1,2)-tensor, because there's one column aspect and two row aspects. Now, part of  the reason why writing tensors as arrays is useful is because it gives us a completely mechanical way  of carrying out the component multiplication using
+
+00:06:46
+the standard row column multiplication rule. For  example, if I want to get this matrix, which is a row of columns, to act on this column vector, I  just use the standard row column Multiplication Rule, which is first-times-first plus second-times-second, and I get the correct column vector as a result. But unfortunately, for larger tensors,  like Q and D, that have high type numbers, there are several possible multiplication rules, as we  discussed earlier, and because of that, there's no easy way to do the array multiplication, that's  guaranteed to give us the answer that we want,
+
+00:07:21
+there might be a way of doing it, but it's  probably too hard to be very useful to us. So with high type tensors, the array representation  becomes sort of less useful, and it tends to be better to stick with the more compact Einstein  notation to describe the multiplication rules of the components. So really, with high type tensors,  the abstract notation and the array notation have their limitations. When trying to express tensor  multiplication formulas, it's usually easier just to stick with the Einstein component notation. For  this reason, a lot of sources just write tensors
+
+00:07:54
+like this as their components only, and leave out  the basis vectors and covectors completely. But it's important to remember that tensor components  always come from a choice of basis. And the same tensor can have different components if we  choose to represent it in a different basis. So hopefully, after watching this, you can finally  appreciate the best definition of tensors. tensors are just collections of vectors and covectors  combined together using the tensor product. And no matter how crazy these tensors get, we  can still figure out the transformation rules,
+
+00:08:26
+just as we did with linear maps by linear forms,  and even tensors that we had never seen before like D and Q here. And well we can write tensors  out in the abstract or as arrays if we want when dealing with tensor multiplication for high type  tensors. It's usually better to write things out in the Einstein component notation, since  it makes the summation rules very obvious.
+

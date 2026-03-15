@@ -1,0 +1,84 @@
+00:00:00
+In this video, we're going to talk about raising  and lowering tensor indexes. And just a reminder, I'm using non-standard tensor product notation  in this video. Your textbooks will write the tensor product like this. I'm going to write  it like this. So at this point, we're pretty familiar with the vector spaces V and V*. "V" is  where vectors live. And "V*" is the "dual space" where the corresponding covectors live. So one  question we can ask is, is there any way that we
+
+00:00:29
+can create a correspondence between the vectors  of V and the covectors of V*? In other words, is there any meaningful way that we can take a  vector in V and find its "partner" in V*? Well, one way we could create a correspondence  would be to take the basis vector e_i in V, and pair it up with the basis covector, epsilon^i  in V*. So right off the bat, we're able to assign covector partners for all the basis vectors. So  this works in two dimensions, as you can see here, but it also works no matter what the dimension of  the space is. And if we want to find the covector
+
+00:01:08
+partner of any arbitrary vector v, we can expand  it as a linear combination of basis vectors, turn the basis vectors into basis covectors. And  we can say that the covector, which is equal to this linear combination is that vectors partner  in V*. So this seems nice at first, but there's actually a problem with this approach. And to see  why let's consider a change of basis. So let's say we change to a new basis by multiplying all  the old basis vectors by two. So we have our old basis, and we're basically making all the vectors  twice as big to get to the new basis. And this
+
+00:01:45
+is essentially using a forward transform where we  have 2s along the diagonals and zeros everywhere else. And of course, a backward transform would be  the opposite of multiplying all the vectors by 1/2. So the backward transform has 1/2 along  the diagonal, and zeros everywhere else. Now, the problem with that is that while basis vectors  are covariant, so that when we go from the old basis to the new basis, we transform the basis  vectors using the forward transform, but with basis covectors.. basis covectors are contravariant.  So that when we go from the old basis to the new
+
+00:02:23
+basis, we use the backward coefficients. And that  means to get the new basis of covectors, we would multiply the old covector basis by one half. So  this method of assigning partners doesn't work very well, because well, the correspondence might  look nice in one basis, it starts to look weird and ugly, and another choice of basis, right? The  coefficients here don't match up very well. Okay, so we need to try again. And this time, we  need to try avoiding using a basis at all. Introducing a basis is what made things ugly in  the first place. So here's what I'll propose: We
+
+00:03:00
+have a vector "v" in our vector space. And to get  its partner covector, we introduce the covector "v-dot-something" where this "something" is just an  input slot for another vector to go in. And you might be wondering, is this thing... is this really  a member of V*? Is this thing really a covector? And it turns out, yes, it is. First of all, this  is obviously a function from our vector space V to a scalar. Because if we supply a vector here,  the dot product of two vectors produces a number.
+
+00:03:31
+So "v-dot-something" is a function that takes a  vector and produces a number. But the members of V* can't just be any old function from vectors  to scalars. Right? They also have to be linear. So we can use the properties of the dot product to  show that this function is linear. For example, if we put in the input vector a scaled by some  number n, we're free to take this and out and put it in front like this. So this shows that we can  either scale the input or scale the output and get
+
+00:04:02
+the same result. Also, if we have a sum of vectors  in the input, the dot product is distributive. So we can distribute this "v" over the dot product and  get this here. So basically, we can add the inputs or add the outputs. So we've proven these two  properties here. So this means that the function, the dot something is linear, and that means that  it really is a member of V*. So "v-dot-something" really is a covector. It's a function from vectors  to scalars. And it also obeys linearity rules,
+
+00:04:35
+where we can add or scale the inputs, or add or  scale the outputs, just like we would expect with normal covectors. So the first correspondence  that we came up with was kind of ugly. The vector covector partners might look nice in one  basis, but a change of basis makes things ugly, because growing the vectors causes the  covectors to shrink. And this breaks the rule of establishing partners by replacing basis  vectors. With basis covectors, on the other hand, this new correspondence that we came up with where we partner, the vector v, with the covector
+
+00:05:08
+"v-dot-something" doesn't depend on a basis at all. And so we don't run into any problems when we change basis. Moreover, when we scale the vector by  two, we also scale its covector partner by two. So the vectors and their covector partners will  always grow and shrink by the same amount. Okay, so if "v-dot-something" really lives in the  vector space V*, that means that we should be able to build it out of basis covectors, right?  So what are the components of "v-dot-something"?
+
+00:05:37
+What are the "x" coefficients here that we can use  to build it as a linear combination of the epsilon covectors? So to figure that out, recall that the  result of the dot product of vectors v and w is given by passing the vectors to the metric tensor  "g". And remember, to compute the output of this, what we do is we just expand the metric tensor and  both vectors as linear combinations. And now we're going to pass these vectors to these covectors  like this. And it actually doesn't matter what
+
+00:06:10
+order we pass them in. We could do it this way. Or  we could do it the other way. And the reason the order doesn't matter is because the metric tensor  is symmetric, and the order of the inputs doesn't matter, we get the same result either way. So we  can bring these coefficients out in front. And we can rewrite these as Kronecker deltas. And now  using the index cancellation rule, we get this, and this is the familiar summation formula, we use  to get the output of the metric tensor. Now, to
+
+00:06:38
+get the components of "v-dot-something", we'll just  do the exact same thing again, except we're going to pass a single vector v to the metric tensor as  the input and leave the second input slot empty. So we expand g and v out as linear combinations.  And I can pass this vector e_j to one of these covectors, (it doesn't matter which because the  metric tensor is symmetric). I'm just going to pass it to this one here. So I'm going to take the  coefficient out in front and pass e_j to epsilon^k
+
+00:07:10
+here. And that gives us a Kronecker delta. So  we can cancel out these indexes. And there we go, these are the components of "v-dot-something" in  the epsilon basis. And we can also go through this same process again in another basis. And we would  get that the components of "v-dot-something" in the epsilon tilde basis are these components right here. Okay, so we know how to get the components of the covector "v-dot-something". So as an  alternative notation, rather than writing "g" with
+
+00:07:43
+downstairs indexes, and "v" with an upstairs index,  I'm just going to write "v" with a downstairs index. So with this notation here, it's almost as if  the metric tensor components are lowering the index of the components of "v" to give the covector  components of "v-dot-something". And the same thing can be done in any basis. So in summary,  a vector v can be written like this with the upstairs versions of the v components, and its  partner covector "v-dot-something" can be written
+
+00:08:17
+like this with the downstairs versions of the v  components. And the way we convert between the upstairs and downstairs versions of v is by doing  a summation with the metric tensor components. And I just want to clarify this because this is  really important: "v" with downstairs components, and "v" with upstairs components are NOT the  same thing. Okay? They are NOT equal. If we want to switch between them, we HAVE TO use the  metric tensor components and do a summation. The  only way that this equality is true, is in  the extremely special case where the metric
+
+00:08:53
+tensor components are given by the Kronecker  delta. And that's the extremely special case of an orthonormal coordinate system. Okay, so we  found a way to partner up vectors and covectors. And we've done that by pairing the vector v  with the covector "v-dot-something". And the way we get from the vector to the covector is  by using the metric tensor. We normally think of the metric tensor as a function from a pair  of vectors to scalars. But we could also think of it as a function from a single vector in  V to a covector in V*. Now, you might ask:
+
+00:09:27
+What about the reverse direction? How do we get  from a covector to its vector partner? Well, we know all about the metric tensor. Now we know  its components have to lower indexes. So it's a member of V*-tensor-V*. And now I'm going to  introduce what's called the "inverse metric tensor", which is sort of like the opposite of the  metric tensor. And it lives in V-tensor-V. And the inverse metric tensor is defined so  that when combined with the ordinary metric tensor in a summation We get the Kronecker  delta as a result. So this is by definition,
+
+00:10:04
+this is how we define the inverse metric tensor.  And we see that if we take this standard index lowering equation and multiply on both sides by  the inverse metric tensor, then these will cancel out and give a Kronecker delta. And then we use  the index cancellation rule and get this. Okay, so the ordinary metric tensor LOWERS indexes. But the  inverse metric tensor goes in the other direction and RAISES indexes. And of course, we could also  make this same definition in any other coordinate system and get similar results. So going from  vectors to covectors, we use the ordinary metric
+
+00:10:44
+tensor (or sometimes called the "covariant metric  tensor", because its components are covariant). And going in the other direction, from covectors  to vectors, we use the inverse metric tensor, which is sometimes called the "contravariant metric  tensor", because its components are contravariant. So we know about the components of the vector  v, we know about the components of the covector "v-dot-something", we know about the definition  of the inverse metric tensor. And we know that
+
+00:11:12
+the ordinary metric tensor lowers indexes, while  the inverse metric tensor raises indexes. Now, these raising and lowering operations don't just  apply to vector and covector components. We can also raise and lower the indexes on the components  of other tensors too. So take this tensor Q, which is a member of V-tensor-V*-tensor-V*, which has  these components here. And if we multiply by the inverse metric tensor and sum over "j" like this,  then we can raise the index upward. And we get
+
+00:11:45
+this new tensor Q-prime, which is a member of V-tensor-V-tensor-V*. Notice how this V* up here in the middle has been changed to a V down here, and  that corresponds with the raising of the middle index. And likewise, with the tensor D, which is a  member of V-tensor-V, we can take these components and use the ordinary metric tensor to lower the  a-indexes. And we get the components of a new tensor D-prime, which is a member of V*-tensor-V.  So it turns out that raising and lowering indexes can be done on the components of any tensor.  So all these vector spaces on this slide can
+
+00:12:27
+be traveled between using the ordinary metric  tensor to lower indexes, which means we travel in the direction of the blue arrow, or we can  use the inverse metric tensor to raise indexes, which here corresponds to going in the direction  of the red arrow. The last thing I'm going to mention is an alternate notation for converting  between vector and covector partners. So we know that this covector "v-dot-something" is also  equal to the metric tensor with just one input slot filled with the vector v. And an alternative  notation for writing this covector is like this,
+
+00:13:04
+the flat where the symbol for this flat operator  is the flat symbol you might recognize from music. So the upstairs v components are the components of  the vector v. But the downstairs v components are the components of the covector, "v-flat", so the  flat operator basically lowers the indexes. And that makes sense, because the flat symbol in music  will lower the pitch of a note, by one half step, like we have here from B to B-flat, the flat gives  it a lower pitch. Also, if you think about it,
+
+00:13:39
+the flat operator is transforming a vector arrow,  which is kind of pointy, into a covector stack, which is nice and flat. So you can think of this  as flattening the pointy arrow into a flat stack. On the other hand, if we have a covector alpha  defined like this as a vector "a-dot-something" which by the way, this is the same thing as the  inverse metric tensor taking the tau vector alpha in the first input slot, we can go from the  covector alpha to the vector "a" using the sharp
+
+00:14:14
+operator. So the covector alpha has components  with downstairs indexes, and the vector alpha-sharp has components with upstairs indexes. So the  sharp operator is basically raising the index. And that makes sense too, because in music, the sharp  symbol raises the pitch of a note by a half step, like we have here from F to F-sharp. Also,  the sharp operator is basically turning a flat covector stack into a sharp pointy arrow  vector. So the sharp and flat symbols... they're maybe a little bit silly, but I think they  fit these operations really well. And they
+
+00:14:53
+also correspond to turning sharp vectors into flat  covectors and flat covectors into Sharpe vectors. So to sum everything up, we created vector  covector partners by partnering vector v with "v-dot-something". The vector component  index goes upstairs on the vector and goes downstairs on the covector. We also learned the  definition of the inverse metric tensor. And we know how the ordinary and inverse metric  tensors can help us lower and raise indexes. respectively. And not only can this operation  be used on vector and covector components,
+
+00:15:30
+these operations can also be used on tensors  of any size. And finally, we learned the notation for the flat and sharp operators for  converting between vector and covector partners.
+

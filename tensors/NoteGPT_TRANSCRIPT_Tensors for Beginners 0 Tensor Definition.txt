@@ -1,0 +1,60 @@
+00:00:00
+All right, so welcome to this second video in my series on tensors. In the last video I tried to give you a few reasons for why you might want to learn about tensors. In this video I'm going to try and explain what exactly tensors are. So tensors are a little hard to describe if you've never heard of them before, so what I'm going to do is... I'm going to give you several different definitions that you might hear from different people when you ask them what a tensor is. And hopefully seeing all these different points of view will put you in
+
+00:00:32
+a good starting position so that you feel comfortable when we actually start doing real math in the next video. Ok so let's get started. Here's a first attempt at a definition for tensors. I'll just read it off. So a tensor is a multi-dimensional array of numbers... and by "array", I basically just mean "grid". So a grid of numbers. Ok, so let's see some examples of what this might look like. So the simplest example of a tensor is what we would call a "scalar", or
+
+00:01:02
+sometimes a "rank zero tensor". And a "scalar" is basically just a number. So any number like 1, 2, 5, 3/4, pi... these are all examples of "scalars". And we don't normally write scalars as arrays. But if we wanted to, we could write little square brackets around the scalar like this and sort of pretend it's an array. But we don't normally do that. Alright so so those are scalars. Another example of a tensor you've hopefully seen before is a "vector", or a "Rank 1 tensor". And we call
+
+00:01:35
+it a "Rank 1 tensor" because it's it's a list of numbers that extends downward in one dimension. So it's like a one-dimensional array.  So that's the vector. Another example you've probably heard of are "matrices", or "rank two tensors". And we call them "rank two" because they are a two-dimensional grid of numbers, so they extend up-down and left-to-right. And if you recall from the last video, I mentioned that the "metric tensor" from general relativity is a "rank two tensor". And
+
+00:02:05
+these little Greek letters that you see here actually stand for numbers that represent the row and column of the particular entry of the the matrix that we're talking about. So the metric tensor is really just a matrix. And we can go higher and higher. This is a "rank 3 tensor" because it's a three-dimensional grid of numbers, sort of arranged in a cube. And we can go on and on... rank four, five, six, as high as we want. So any multi-dimensional array of numbers is a "tensor". So I call this the "array definition of tensors". Okay so I
+
+00:02:38
+said that this was a first attempt at a definition. And it does give us some idea of what a "tensor" is, but this definition is actually wrong. And here's why: So tensors can be represented as multi-dimensional arrays but that's not what they fundamentally are. Tensors aren't just a bunch of numbers that we toss together... Tensors actually have real geometrical meaning. And if we just think of tensors as these multi-dimensional arrays, we sort of miss out on the geometrical meaning behind them. So if we casually toss the word "tensor" around to
+
+00:03:14
+mean "a multi-dimensional array of numbers", you know that's sort of fine. There's nothing wrong with that. But if we're thinking seriously like mathematicians and we want to understand geometry, this definition the array definition is simply just wrong. So it's no good to us. Okay, so let's try again. So here's another attempt at a definition. I'll just read it: a "tensor" is an object that is "invariant" under a change of coordinates, and has components that
+
+00:03:42
+change in a "special predictable way" under a change of coordinates. Okay so that's that's certainly a mouthful, so what does that mean? So let's start with the top part: what does it mean to be "invariant under a change of coordinates"? Well, to explain that I'd like you to try picking up a pencil and point the pencil toward the nearest door that you can see. So there are a few things that we can say about this pencil that are just facts, and they don't depend on any
+
+00:04:10
+coordinate system. So for example, the length of the pencil... the length won't depend on our choice of coordinate system. The length is an "intrinsic" or "invariant" quantity. Also this pencil is pointing toward the door, and that's just a fact. It doesn't depend on what coordinate system we use, the pencil's orientation is "intrinsic" or "invariant" under the choice of coordinate system. Now the second part: what does it mean for components to "transform predictably under a change of coordinates"? Well to
+
+00:04:40
+start off, let's introduce a coordinate system here... So we have a nice 3D coordinate system with three vectors here...  they give us the main coordinate directions. And what we can do is, we can measure the pencil using this coordinate system. Alright so it looks like this pencil is made up of two yellow arrows, one green arrow, and then two blue arrows. All right, so we can write this pencil as a linear combination of the the coordinate vectors here... Okay so what we just did here by breaking down the pencil into the coordinate vectors is, we
+
+00:05:18
+measured the pencil's "components". The "components" are just the amount of each coordinate vector that we need to construct the pencil. Right? So in this... With this coordinate system the components are [2, 1, 2]. Now I introduced this coordinate system here and you might think it's a pretty sensible coordinate system because all the directions actors are the same length, and they're all perpendicular to each other. So that's kind of nice. But really there's nothing special about this coordinate system. Right? I could just as
+
+00:05:48
+easily introduce another coordinate system like this where the vectors are all different lengths and they all sit at weird angles relative to each other. But mathematically neither of these is more correct than another; they're simply just different choices. And so with this second coordinate system I can sort of do the same thing... I can measure the pencil along each each coordinate vector and I can see that this pencil is made up of two black vectors, three purple vectors, and then one red vector. And again I can write the pencil as a linear
+
+00:06:22
+combination of these vectors, and I get the components [1, 3, 2]. So you'll notice when I measure the pencil using different coordinate systems I actually get different components. Right? And this is a this is a really important idea: The pencil's components are not "invariant".  Right? They changed depending on the coordinate system they use. Okay, so the pencil is "invariant" but the coordinates are not "invariant". Okay that's, and again that's a very
+
+00:06:54
+important idea. So now it turns out that if we know how to change one coordinate system into another coordinate system... Right? So if we know how to go back and forth between these two coordinate systems... then we should also be able to figure out how to change back and forth between these different sets of components. And this this process of going back and forth between coordinate systems and components... that's what I'm going to call "forward" and "backward" transformations. And I'm going to talk about those in the next video. All right
+
+00:07:25
+so backing up, what a tensor is a tensor is an object that is "invariant" (it doesn't depend on a coordinate system) but its components--which do depend on the coordinate system--change in some special predictable way that we can figure out using these "forward" and "backward" transformations. And this is what I'm going to call the "coordinate definition of a tensor". And this definition is actually pretty good... it does get to what the heart of a tensor is.
+
+00:07:54
+It's an object that's "invariant" but whose components change, but it turns out that we can come up with an even better definition. And so I'm going to switch to that one here. So here's our third final definition. I'm just going to read it off. A "tensor" is a collection of "vectors" and "covectors" combined together using the "tensor product". So this definition ends up being really nice it's really short and sweet. There's just one problem: if you've never studied tensors before you
+
+00:08:23
+may have heard of "vectors". But you've probably never heard of a "covector" and you've probably never heard of the "tensor product". So the downside of this definition is that we need to put in a little bit of work before we can even understand what it means. But once we understand what all these things mean, it's actually a really simple definition. "Tensors" are just "vectors" and "covectors" combined together in different ways using this this thing called the t'ensor
+
+00:08:48
+product". So this is what I call the "abstract definition of a tensor". So this is really the best definition of a tensor we can we can come up with and I'll get to this definition later on in the video series once we have the basics down. Alright. And I have a little bonus part here so for those who do have a calculus background... I'm going to talk about how tensors pop up in calculus and that's when we see tensors as partial derivatives and gradients that transform
+
+00:09:20
+with the Jacobian matrix. So you can skip this section if you aren't feeling very strong with your calculus skills. It's it's an extremely interesting use of tensors and it's very important for the curved geometry we might see in general relativity, but if you don't if you're not comfortable with calculus you can feel free to skip over this part.  Alright, so this is sort of the end of the introduction. I spent the last two videos just sort of preparing your brain for what "tensors" are. In the next video I'm actually going to start doing real math
+
+00:09:50
+and we're going to start with "forward" and "backward" transformations so I will see you in the next one
+

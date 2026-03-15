@@ -1,0 +1,51 @@
+00:00:00
+Welcome back to the video series on tensors. In  the last video we covered forward and backward transformations. And in this video we're going to  talk about our first example of a tensor, which is the vector. So what is a vector exactly? Much  like tensors, you might get different answers to that question depending on who you ask. So this is  one definition you might hear: a vector is a list of numbers, or a vector is a one-dimensional array of  numbers. So that's a nice easy definition and here
+
+00:00:32
+are a couple examples of vectors V and W and  they're just lists of numbers. So you probably already know if we want to add these lists  together, we just add them like this. Right? We just add the corresponding elements to get the new  vector with elements V_1 + W_1,  V_2 + W_2 and so on and so forth. So that's vector addition with  lists. And you probably also know that we can scale vectors using a scaling constant like this. So we  just take the scaling number "a" and give it to each
+
+00:01:04
+number inside the list and multiply each number  inside by "a". So this definition of a vector is easy enough, but there is a problem. And the problem  is that these lists of numbers are actually vector *components*, not the vectors themselves. So if you'll  recall I said before that vectors are invariant under a change of coordinates whereas vector  components are not invariant under a change of coordinates. So it's really important to remember  that a vector and a vector's components are really,
+
+00:01:38
+really not the same thing and we should never  confuse the two. So much like saying that a tensor is a multi-dimensional array of numbers... saying  that a vector is just a list of numbers really misses the geometrical truth that lies behind  the numbers in the list. Right? Because vectors are geometrical objects that have geometrical  meaning. So this definition isn't really very good. So let's try again. Definition number two: a vector  is like an arrow... just like an arrow floating in
+
+00:02:10
+space. So this is a more geometric answer. We can  draw arrows and we don't really need to refer to a coordinate system in order to understand  them. And just like before, we can add vectors together. To do this geometrically, we just place  the tail of the second vector on the tip of the first vector like this. Some people call this "tip- to-tail" addition. And the resulting vector is just the vector that goes from the initial point on  the first vector to the final point on the second
+
+00:02:41
+vector. Another way of thinking about this is that  we are creating a parallelogram using the vectors V and W, and the addition of V and W is just the  vector that points to the opposite corner of the parallelogram. So that's the vector addition under  the arrow interpretation of vectors. And also just like before we can scale vectors. So if we take the  vector W and scale it by 2 we would just get a new vector that points in the same direction but is  twice as long. And again we can do that with any
+
+00:03:15
+other number like 5 or 3/4 or PI or whatever  number we choose. Also if we have some vector V and we scale it by "-1", that means that we  keep the vector length the same and just reverse the direction like this. So that's the vector  scaling under the arrow interpretation. So the arrow interpretation is pretty good. It makes it  really easy to draw pictures and visualize vectors. You'll notice I've been using this interpretation  all throughout the video series so far, and I plan
+
+00:03:49
+on continuing to do that. But there is a problem  here. And that problem is that not all vectors can be visualized as arrows. So unless you've studied  a bunch of linear algebra this might actually be a bit surprising to you, because a lot of teachers  just teach vectors as if they are arrows floating in space like this. So these arrow type vectors  are actually just a special kind of vector called a "Euclidean vector". But there are other types of  vectors out there that can look pretty different.
+
+00:04:22
+I'm gonna leave that until another video to  explain what I mean, but now just remember that not all vectors are Euclidean vectors. Okay  so let's try one last time, and this definition says that: a vector is a member of a vector space.  So what is a "vector space"? So a "vector space" is a collection of four things. The first thing is a set  of vectors "V", which are the vectors themselves. The second thing "S" is a set of scalars. So these are  the things that we use to make vectors bigger and
+
+00:04:57
+smaller. The third thing (+) is some sort of addition rule that lets us combine two vectors together. So we could add say a vector V and a vector W and  get some new vector V +W like this. And the fourth thing (·) is some sort of scaling rule, which  I'm denoting as dot, and that lets us use scalars on vectors to change their size. Usually instead  of writing a dot (·) I just write the scalar right next to the vector, but you could put the dot  there if you really wanted to. So really, what
+
+00:05:29
+all this means is that vectors are things that we  can add together using the "+" addition rule and that we can scale using the "·" rule and a scalar.  So this is a pretty abstract definition there's no numbers that we can do number crunching with and  there's there's no pictures that we can draw. All we really have at the end of the day are a bunch  of rules. So even though it's abstract, the reason this definition is so great is that there are a  ton of things in math that can be added together
+
+00:06:01
+and scaled. And even if we can't draw them as  arrows, we can still apply vector rules to them. So if this definition seems a bit strange to you,  I wouldn't worry about it much for now. I think it will make more sense in the future. For this video  and many videos later on, we're just gonna stick with Euclidean vectors since they're easy to draw  pictures with and easy to visualize in our heads. So now that we have some idea of what a vector  is, let's talk about how vectors behave under a
+
+00:06:30
+change of coordinates. So you might remember from  the previous video, I had two coordinate systems: the "old basis" and the "new basis". And we figured  out the forward and backward transformations let us move between them. So let's say we have a  vector V sitting here in this space, and we want to figure out the vector's components. Well, since  we have two different coordinate systems, we can measure V using two different bases. So let's start  with the old basis "e_1, e_2". How can we write V as a
+
+00:06:58
+linear combination of e_1 and e_2? Well it looks  like we need 1 copy of e_1 and 1.5 copies of e_2. So I can write this out "V = 1 e_1 + 1.5 e_2". Now let's do the same thing in the new basis. So it looks like we use 1 e_1 tilde and 2  e_2 tildes. So "V = 1 e_1~ + 2 e_2~" And because I have the components now, I can  write V as a column vector. So in the old basis the components are [1, 1.5], and I've put a little "e_i" down here to remind us that we're measuring in the
+
+00:07:39
+old basis. And in the new basis, the components are [1, 2]. And again I've put a little "e_i~" here to remind us that we're measuring in the new basis.  Alright, so how are these two sets of components related to each other? OK let's think about  that... remember with the old and new basis the forward transformation "F" brings us from the old basis to  the new basis. And the backward transformation "B" brings us from the new basis to the old basis. Now  maybe that works with the components too, right? So
+
+00:08:11
+let's let's try applying the forward matrix F  to the old basis components and see what we get. Okay so that's not right. So what  happened here? Did we do the math wrong? Like, what's up? So this might sound  crazy but I'm going to suggest that we try using the backward transformation on the old  coordinates instead. So let's give that a try. Okay so, aha! By applying the backward  transformation on the old components, we ended up with the new components. So for  basis vectors, *forward* brings us from old to
+
+00:08:52
+new, and *backward* brings us from new to  old. But with vector components it's the opposite! *Forward* brings us from new to  old, and *backward* brings us from old to new. So what's up with that? Right? This  this might seem really weird at first, but it actually makes complete and total sense.  And I would actually be a little bit worried if this wasn't true. So to understand why this  happens you'll have to check out the next video.
+

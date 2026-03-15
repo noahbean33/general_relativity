@@ -1,0 +1,30 @@
+00:00:00
+In this quick video I'd like to clarify the  difference between the tensor product and something called the Kronecker product, which I've  used in a previous video but I haven't actually mentioned it by name. Both products are denoted by  the same symbol, which is this circle-times symbol. And I'm guessing that's probably a little bit  confusing so the circle-times symbol has a number of different meanings in math. And the two I'm  going to discuss in this video are the "tensor
+
+00:00:23
+product", which is an operation on tensors, and the  "Kronecker product", which is an operation on arrays. And the basic summary is that the "tensor product"  combines two tensors into a new third tensor, and the "Kronecker product" combines two arrays into  a new third array. So we'll start with the tensor product. So just to review, we write the basis for the vector space V as these vectors e_1 and e_2, and the basis for the dual space V star are these  covectors epsilon^1 and epsilon^2. And the
+
+00:00:53
+covectors are linear functions that are defined by  these rules here where the covector epsilon^i acting on the vector e_j gives the Kronecker Delta  as a result. And that just means we get 1 if and "i" and "j" are the same and we get 0 if they're different. So earlier I said that the tensor product takes two tensors and produces a new tensor. So in this  case we have a vector e_i and a covector epsilon^j. And these are both tensors. And we're going to  combine them together using the tensor product,
+
+00:01:22
+and the result is e_i circle-times epsilon^j.  And this thing is also a tensor which happens to be a linear map. So to convince you this is  a linear map, we can just try passing an input vector "v". So to get the output we can just pass  "v" to this covector here and we expand "v" as a linear combination of basis vectors. Then we  bring the components outside since covectors are linear functions, and we can scale before or  scale after... and here this covector acting on a
+
+00:01:53
+vector becomes a Kronecker Delta by definition.  And by the Kronecker Delta index cancellation rule, we can cancel out the "k" indexes and get "j". And so we get this vector as an output. So this here... this really is a function that takes a vector input and produces a vector output, so we really did construct a linear map using a vector and a  covector. So that's what the tensor product does: it lets us take two tensors and combine them to create a new third  type of tensor. Now for the Kronecker product, the
+
+00:02:25
+Kronecker product will take these two arrays (which  happen to be a column vector and a row vector in this case) and it will produce a third array. So  it does that by taking the first array on the left and distributing it to every element in the  array on the right. So we get this, and multiplying the alpha coefficients in, we get this, which is  basically a row of columns. And if we were to take this and take the Kronecker product with  another column vector, we do the same thing: we just distribute this array into every element of  the other array on the right. And so we get this.
+
+00:02:56
+And again, multiplying the omegas in, we get this, which is basically a column of rows of columns. So that's how the Kronecker product works we  just distribute the array on the left into the array on the right. Now, the tensor product and the  Kronecker product are technically different things but they're also highly related to each other. And  I'll show you why here. so let's say we have the tensor product between a vector v and a covector  alpha. So this whole thing is a new tensor which
+
+00:03:25
+is really a linear map. And we can expand out  v and alpha into linear combinations of basis vectors and bring out the coefficients in front  to get this. So here we have linear combinations of basis tensors, or in this case basis linear  maps, and these basis linear maps are a bit like those special matrices that are zeros everywhere  except for a single entry which is 1. So that would make these coefficients here like the entries of  a matrix. Now if we took the Kronecker product of the column vector associated with v and the row  vector associated with alpha, this would give us a
+
+00:04:01
+row of columns, or basically a matrix. And remember  that I said that these coefficients here are like the entries of a matrix. Well, here that matrix is  right here. So really the tensor product and the Kronecker product are basically doing the same  kind of thing it's just that the tensor product is combining the abstract vector and the abstract  covector in the land of algebraic symbols, and the Kronecker product is combining the vector array  and the covector array in the land of arrays.
+
+00:04:30
+But the components that we get from the tensor  product are just the components of the matrix that we get from the Kronecker product. So really  the tensor product and the Kronecker product are sort of like the same operation, they're  just doing the work in different contexts.
+

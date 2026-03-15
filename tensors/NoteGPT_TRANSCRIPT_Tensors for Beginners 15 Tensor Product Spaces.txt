@@ -1,0 +1,90 @@
+00:00:00
+In the past few videos, I've talked about how  the tensor product works and how it behaves, but I haven't really formally defined it. So in  this video, I'm going to formally define what the tensor product is, and also introduce the  idea of tensor product spaces. Also be warned that I'm using non standard notation for the  tensor product. Your textbooks will write it like this with a circle time symbol, I'm going  to leave that symbol out and write the tensor product like this. So in previous videos,  I've shown how combining a vector and a
+
+00:00:26
+covector together using the tensor product can  give us a linear map. And the coefficients of this linear map are really just the entries of  an array given by the Kronecker product of the column vector representing the vector and the row  vector representing the covector. We also showed that combining two covectors using the tensor  product can give us a bi linear form, whose coefficients are really just the entries of the  array given by the Kronecker product of the two row vectors associated with these covectors. So in  this video, we're finally going to properly define
+
+00:00:56
+what the tensor product operation is. So recall  all of this tensor product stuff started off with a suggestion of doing array multiplication with  a column on the left and a row on the right. Now consider what happens if we scale this by some  number "n". Well, that's the same thing as scaling the column by "n", or scaling the row by "n". In  both cases, we get the same result, which is this matrix up here. Likewise, when we have the  tensor product between a vector and a covector,
+
+00:01:24
+that scale by some number "n", we can either scale  the vector by "n" or scale the covector "n", and we'll get the same result. So all three of these things  here are the same linear map. And if we wanted to, we could rewrite these array multiplications  as chronic or products, and rewrite these tensor products using the circle time symbol, it's  basically all the same thing. Now let's consider addition. So let's say we have two column row  array multiplications, that are added together,
+
+00:01:52
+where the column on the left is the same in both  terms. Well, in this case, we can factor out the column and write things like this, both of these  will result in the same matrix. And likewise, if we have a sum of two tensor products, where  the tensor on the left is the same in both terms, we can just factor that out like this. And  both of these would give the same linear map. Alternatively, if we have a sum like  this, where the row is the same in both terms, we can factor out the row like this. And the same  thing goes with the tensor product, we can factor
+
+00:02:23
+out the tensor on the right to get this and both  of these would be the same linear map. Finally, with this case, where we have two array terms  that have nothing in common, there's basically no factor and we can do so we could multiply all this  out and do the addition to get a single array. But there's no way that we can take this expression  and factor it into something simpler. And the same thing goes when we have a sum of tensor products,  when the two terms have nothing in common, we
+
+00:02:47
+can't simplify it at all, we just have to leave it  as it is. And of course, we can rewrite the array multiplications as Kronecker products. And we can  rewrite the tensor products with this circle time symbol notation, it's all the same thing. Okay, so  what we've just done is we've come up with scaling and adding rules. And we can write them out either  in this notation, which is the notation I use. Or we can use the circle times notation that you'll  find in textbooks. So basically, what this scaling
+
+00:03:15
+rule is saying is that when we have a bunch of  tensors, that are producted, together like this, and we scale the entire collection of tensors by  some number, and we can basically choose to move this and inside and scale any one of the tensors  that we'd like. So we can choose "a" or "b" or "c" or "d" or "e", but we can only choose to scale one of  them. And if you wanted to use the notation with the circle times, instead, we would write things  like this. So we can move the "n" inside and scale
+
+00:03:41
+any one of the five tensors that we like. And what  the adding rules are saying is that when we have a sum of tensor products like this, whenever both  terms have something in common on the left, we can factor it out. So in this case, we can factor  out "ab". And whenever both terms have something in common on the right, we can factor that out. So in  this case, we can factor out "de". And if we were to write this using the circle times notation,  we'd get this. So we can factor out "a-tensor-b"
+
+00:04:07
+here, and then factor out "d-tensor-e" here. And  that's the same thing, we just write it a little bit differently. Okay, so we've come up with  scaling and adding rules. And hopefully you know what that means. If we can scale and we can add,  that means that we have a vector space. So we know that these vectors "v", "w", "e_1" and "e_2", these  vectors all live in the vector space, capital V. And we also know that covectors like alpha, beta,  epsilon^1 and epsilon^2, these all live in the
+
+00:04:36
+vector space V*. Now we know that we can make  vector-covector pairs like v-alpha or v-beta, or w-alpha, and any of these other examples, and  we can add them and scale them using these rules that we just talked about here. So that means  that these must be vectors in a vector space. So what vector space do they live in? And the  answer is, all of these live in the vector space "V-tensor-V*". And you'll notice that we're  using this circle time symbol here again. And this is actually a new use of the circle time  symbol that we've never seen before. Because
+
+00:05:11
+rather than combining vectors or tensors,  we're combining vector spaces. So in total, we've come across three different uses of the  circle time symbol, there's the Kronecker product, which combines two arrays into a new array,  there is the tensor product of tensors, which combines two tensors into a new tensor. And  now we have the tensor product of vector spaces, which combines two vector spaces into a new vector  space. So the term tensor product can refer to two different things here, there's the tensor product  of tensors, which I like to think of as the little
+
+00:05:44
+tensor product, because it combines individual  tensors. But there's also the tensor product of vector spaces, which I like to think of as the big  tensor product, because it combines entire vector spaces together. Alright, so we've discovered this  new vector space by combining V and V* together, and the vectors in this vector space, follow  these scaling and adding rules up here. So we have this vector space V-tensor-V*. So what are the  elements of this vector space? Well, the members
+
+00:06:13
+of this vector space, our one, one tensors,  are basically vector covector pairs and their linear combinations. So what can these tensors do?  Well, remember that vector components are always going to have an upstairs index, while covector  components are always going to have a downstairs index. So if we focus on these "i"-coefficients  here, if we do a summation with vector components like this over "j", we end up with vector components  as the output because we have one upstairs,
+
+00:06:44
+"i" index that's left. So vector in vector out,  in this case, L is acting as a map from V to V, or essentially a linear map. But we could also do  a summation with covector components like this, and sum over "i" and our output would have "j" as  the downstairs index. So we would basically end up with covector components as the output. So  covector in / covector out... this is a map from V* to V*. Also, we can provide L with both vector  components and covector components. And we could
+
+00:07:17
+do two summations over i and j. And that would  give us a scalar as the output since there are no indexes left to sum over. So in this case, L can  be viewed as a function from a pair of vectors and covectors to scalars. And finally, we could do the  same thing, but reverse the order of the inputs. And in this case, L is a function from a covector-vector pair to scalars. So the elements of this vector space V-tensor-V* can be interpreted as any  of these things, depending on the number and the type of inputs that we give it. So all of these  are (1,1)-tensors, and all of them are members
+
+00:07:54
+of the vector space V-tensor-V*. So let's consider  something else, we have the same old rules for the tensor product. But what if we use the tensor  product to combine two covectors together, so covectors like alpha-beta and the epsilons live  in V*. So when we have covector-covector pairs, like "alpha-beta", or "epsilon1-epsilon2", it  turns out that they all live in the vector space, V*-tensor-V*. So elements of V*-tensor-V* are (0,2)-tensors, which are covector-covector pairs and
+
+00:08:29
+their linear combinations. And we know already if we take these B-components and do two summatons with two sets of vector components like this,  then we end up with a scalar. And this, of course, is a bilinear form, which takes a pair of  vectors and outputs a scalar. But we could also do a single summation over "i" with one set  of vector components, and we'd be left with the index "j" downstairs. So the output would be a  set of covector components. So in this case, "B" is a map from vectors to covectors, or a map  from V to V*. Also, we could instead choose to
+
+00:09:05
+do a summation with vector components over the "j" index. And then we end up with covector components with the "i" index on the bottom. And so this would  be another map from V to V*. But it would be a different map than this one up here, because we're doing the summation differently. So elements of V*-tensor-V*, which are (0,2)-tensors, can be any  of these things depending on the inputs that we give it. So really, the basic building block  of all these vector spaces are the two vector
+
+00:09:34
+spaces V and V*, and those contain tensors, whose  components are here. Remember, vector components have an upstairs index, and covector components  have a downstairs index. And we can combine these two vector spaces into new vector spaces using  the tensor product. And these vector spaces would have these components here. And again,  recall that indexes from V go upstairs and end From V* go downstairs. And we can continue to  make larger and larger vector spaces using the tensor product. And all these vector spaces  contain tensors with components that have
+
+00:10:11
+different combinations of upstairs and downstairs  indexes, depending on whether they are constructed using V or V*. So if we have some new tensor  from a vector space we've never seen before, we can easily get the correct component  indexes just by looking at the vector spaces. So looking at these vector spaces, we see  that the basis would be made up of a covector, a vector, a covector, and another covector in  combination. And we get the components just by placing the indexes in the opposite position that  we see in the basis, so that all the summations
+
+00:10:44
+work out properly. And now we can ask how can  this tensor T act on other tensors? Well, we can basically do any summations we like, as long as  the upstairs indexes are matched with downstairs indexes, and downstairs indexes are matched with  upstairs indexes. So we could do something like this with four summations. And you can see all the  indexes are positioned properly. Or we can do this again with four summations and again, the indexes  workout, or here, we could do three summations, and the three indexes involved are positioned  correctly, and we'd be left with the index "i" and
+
+00:11:18
+the output. Or we could do these two summations  here where we have the indexes, "k" and "l" and the output. So in the first example, T is acting  like a function that takes a vector, covector, vector, and vector as inputs and outputs a number,  since all the indexes are summed over. Here, where we have components with three upper indexes.  (And remember components with upper indexes mean vector components.) So these tensor components  are from a V-tensor-V-tensor-V vector space. And
+
+00:11:46
+these are just covector components. So that's  from V*. And again, we would output a scalar. Since all the coefficients are summed over here,  we have covector components. So that's from V*, and components with two upper indexes. So those  components are from V-tensor-V. And since the lower "i" index isn't summed over, we're left with  a covector. So that's an element from V* as the output, and here we have an input with one upper  and one lower index. So those are components from
+
+00:12:14
+a tensor from V-tensor-V*. And since the two lower  indexes that remain "k" and "l" aren't summed over, we end up with an output from V*-tensor-V*. So we  have all these functions here. And I'm sure you could come up with even more examples of what T  could do. But what do all these functions have in common? Well, let's take a look at this function  here. It has four inputs, and we're going to take all the inputs except one and make them constant.  So it's like they're fixed in stone, and they'll
+
+00:12:42
+never change. Notice that if we scale the input "w",  we can just bring the scaling coefficient outside. So basically, we can either scale the input  before or scale the output after. And also, if we replace these input vector components,  with a sum of two sets of vector components, I can just distribute these out and get this  sum here. So basically, I can add the inputs, or I can add the outputs. And the same thing  goes for this example here. If I freeze all the inputs except one in stone, I can scale  the remaining input before or scale the output
+
+00:13:18
+after also I can choose to either add inputs or  add outputs. So basically, with all these maps, all these maps are linear, if I choose to hold  all inputs constant except one, and there's a word for that we call functions that behave in  this way "multilinear maps". So a multilinear map is a function that is linear when all inputs  except one are held constant. So in other words, a multilinear map is a function that's going  to obey these two properties here. So this first property says that when all inputs except one are  held constant, if we scale the input variable,
+
+00:13:57
+that's the same thing as scaling the output  of the function. And the second property here, when we hold all inputs except one constant,  when we do a sum in this input slot, that's the same thing as doing a sum of these  two outputs here. So we can add these two inputs, or we can add these two outputs separately  and get the same answer. And just to be clear, these properties need to be true for all the  input slots. So it doesn't matter which inputs we hold as constant, and which input we allow  to vary, these properties have to be true for
+
+00:14:33
+all inputs. Another way of saying that is that  multilinear functions are linear in each input variable. So saying that tensors are "multilinear  maps", we're just saying that tensors when they're used as functions, they obey these two multi  linearity properties here. So to summarize what we learned in this video, we learned  the formal definition of the tensor product, which was a way of combining tensors that obeys  these scaling and adding rules. We also learned The tensors we get from the tensor  product form new vector spaces,
+
+00:15:04
+which are denoted using the tensor product  of vector spaces like this. And finally, we learned that all tensors are multilinear maps,  which means that they are functions that take some number of inputs and they are linear in each input  variable while all other inputs are held constant.
+

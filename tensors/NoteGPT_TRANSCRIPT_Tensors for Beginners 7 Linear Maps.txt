@@ -1,0 +1,69 @@
+00:00:00
+So we've finished up our discussion of covectors.  In this video, we're going to be talking about our third example of a tensor, which are linear maps. So linear maps are transformations that take a vector as an input and produce some new vector  as an output. So just like I did with vectors and covectors... to introduce linear maps I'm going to  start with a coordinate definition, where linear maps are arrays of numbers. Then I'm going to give  a geometrical definition where you can think of
+
+00:00:28
+linear maps in terms of pictures. And finally I'm  going to give you an abstract definition which is purely algebraic, and in some sense this is the  best or the truest definition of linear maps. So I'm going to introduce these definitions and I'm  also going to show you how they are all related to each other. So the coordinate representation of  linear maps ends up being matrices... a matrix being a two-dimensional array of numbers. So just as  column vectors are the coordinate representation
+
+00:00:55
+of vectors, and row vectors are the coordinate  representation of covectors... matrices are the coordinate representation of linear maps. So  let's take a look at how matrices transform vectors. So here we have a 2-by-2 matrix acting on  a 2-by-1 column vector. And the way we determine the output vector is: we use the standard matrix  multiplication rules. So what that means is... first we take the dot product of the column vector  with the first row of the matrix, and then we take the dot product of the column vector with  the second row of the matrix. And the output ends
+
+00:01:30
+up being the column vector [2, 0]. Now it might be  confusing to understand what a matrix is doing just by looking at the numbers inside the matrix. But there's an easy interpretation for what all these numbers mean. Notice that if I use the  column vector [1, 0] as the input, I'll get the first column of the matrix as the output. And  if I put in the column vector [0, 1] as the input, I'll get the second matrix column as the output. Now these column vectors [1,0] and [0,1], these are
+
+00:01:59
+sort of like "copies" of the basis vectors e_1 and  e_2. And I say that these are like "copies" because of this very important point here: linear maps  transform vectors but, linear maps do not transform the basis. So when we transform vectors using a  linear map, the basis isn't changing. We aren't moving the basis. While the output vector might  be different than the input vector, we're still going to be measuring the output vector using the  same basis. But with that said, with matrices the
+
+00:02:31
+i-th column tells you where to map a copy of the i-th basis vector. So let's take a look at that visually. So here we have a basis "e_1, e_2" and vectors V and W, which are sort of like copies of the e_1 and e_2 basis vectors. And here we have a matrix with the  first column [5, 3] and the second column [-1,4]. So where would this matrix send the vector V,  which is like a copy of the first basis vector? Well, we just look back at the first column of the  matrix, which represents the vector "5 e_1 + 3 e_2"
+
+00:03:07
+and that's what the output of the linear map looks  like for V. So L(V) is equal to this vector here. And if we ask what this matrix does to W, which is  a copy of the second basis vector, well that's just the second matrix column, which gives us "-1 e_1 + 4 e_2". And that vector looks like that. So that's L(W). And once again note that the  basis vectors haven't moved because linear maps don't change the basis. We're still measuring  the output vectors with the same basis. Okay
+
+00:03:37
+so matrices are the coordinate interpretation of  linear maps. Let's try and get a more geometrical definition. So the geometrical definition says that  linear maps are spatial transforms that keep lines parallel, keep lines evenly spaced, and keeps the  origin stationary. So to get an idea of what that looks like visually, let's start with a 2d space  here with a bunch of grid lines overlaid on top. And here we have three examples of linear maps. So this linear map is basically a stretch in the
+
+00:04:09
+horizontal direction. This linear map here is like  a rotation. And this linear map is doing a sort of skew transformation, which you could think of as  maybe like a rotation in this direction followed by a stretch along this axis. And as we can see,  in all of these cases the gridlines in the output space are still parallel to each other... they're  all evenly spaced (even if the spacing might be different than the input space) and the origin  hasn't moved. So these are examples of the types
+
+00:04:40
+of things that linear maps can do. and I'll just  mention quickly here that translations are not actually linear maps under this definition. Even  though translations keep gridlines parallel and evenly spaced, translations do move the origin. So translations are not actually true linear maps. Okay so that's a geometric definition that  we can visualize. Finally I'm going to give an abstract definition which, as usual, might seem  confusing at first but it's actually the best definition that we can give. So abstractly, a  linear map is a function which maps vectors
+
+00:05:16
+to vectors. So in this case we have a linear  map L mapping vectors from a vector space V to a vector space W. A lot of the examples I've  shown (and will show in the future) involve linear maps where the input and output spaces are the  same... so map's going from V to V. But in general the input and output spaces can be different. And  also, linear maps obey these two properties here: that we can add the inputs or add the outputs  of the linear map and get the same answer... and also we can scale the input or scale the output  and also get the same answer. And so this is the
+
+00:05:52
+same thing we had with covectors and these two  properties here are called "linearity". So both covectors and linear maps are linear functions.  The only difference is that covectors output a scalar and linear maps output vectors/ Okay and  you might ask: how the heck did people come up with this abstract definition? The other two definitions  seemed a little more concrete but this one seems to come a little bit out of nowhere. So I'm going  to show you how the abstract definition relates
+
+00:06:20
+back to the other definitions that we saw. So  here we have this abstract property of linear maps that says we can add the inputs or add the  outputs and get the same answer. So to show the geometrical meaning of this, I'm going to draw  the input vectors on this grid. So here we have the vector V in green and the vector W and purple. And there's some V+W I'll write in black. Now here are those three examples of linear maps which I showed. The stretch, the rotate, and the skew. And I'm going
+
+00:06:51
+to show you how these three linear maps obey this  algebraic property up here. So first I'll draw the green vector V and all these output spaces. So  basically I'm going to stretch V, rotate V, and skew V. And now I'm going to do the same thing  for the purple vector W. So stretch W, rotate W, and skew W. And last of all I'm going to do the  same thing with this black vector so stretch V+W, rotate, and skew. So you can see here in all  these output spaces... the addition law still works.
+
+00:07:24
+The transformation of V, plus the transformation  of W, is the same thing as the transformation of the sum V+W. So this abstract rule, even though  it's algebraic, it still describes the linear maps that we've been talking about all along. And I'm  going to do the same thing for the scaling rule. We can scale the input or scale the output to  get the same answer. So in the input space I'm going to draw this vector V in green, and I'm  also going to draw the scaled version 2V here
+
+00:07:54
+in black. So again I'll transform the vector V  according to these three rules: stretch, rotate, skew. And now I'll transform 2V: stretch, rotate, skew. And as you can see, the scaling rule in the output space is still obeyed. So scaling and then  transforming is the same thing as transforming and then scaling. So this abstract rule just describes the transformations we've been talking about all along. So hopefully we can see how the abstract and  geometrical definitions are related to each other.
+
+00:08:28
+But we still don't really understand where the  coordinate definition comes in. So this formula for matrix multiplication... it can seem really  weird if you don't know the reasoning behind it. And it turns out that the matrix multiplication  rule actually comes from this abstract definition that we introduced before. So to show that let's  start off by saying that we have a linear map L that acts on a vector V to produce some output  vector W. And if we expand the vector V into its
+
+00:09:00
+components, we get this. And by applying the  linearity rules of L we get this. Now this L(e_1) and L(e_2), these are just vectors, right? So we might ask how can we express these vectors in terms of the basis e_1 and e_2. And I'm kind of making a simplifying assumption here. I'm assuming that L is a function from V to V. So the input vector space is the same as the output vector space. So since the output vector space V still has  the basis e_1 and e_2, that means we can still write these output vectors as linear combinations  of the same old basis e_1 and e_2. So I've done
+
+00:09:40
+that here. And the coefficients of these linear  combinations L^1_1, L^2_1, and so forth... These 1s and  2s are just labels. So I've chosen to write one label on top and the other label on the bottom for a reason. I'll get to why I did that later. But the important thing is that these L coefficients help us build up the output vectors of the linear  map using the "e" basis vectors. All right so I can rewrite the output vectors as linear combinations  of the basis, and I can switch things around here
+
+00:10:10
+to group the terms by basis vector. And now since  I have W written as a linear combination of the basis vectors, these coefficients are really just  the components of W: W^1 and W^2. And so now we've  derived how to transform the V coefficients  into the W coefficients using these formulas  here And these formulas here... these are really  just what you get when you do the standard 2-by-2 matrix multiplied by a 2-by-1 column vector OK, so to sum all that up... If we have a linear map L that transforms a vector V into another vector  W like this. Where W can be written as a linear
+
+00:10:49
+combination of basis vectors. And we know how L  transforms basis vectors (or maybe it would be better to say we know how L transforms basis  vector copies) using these L coefficients. And so that means we can transform the V components  into the W components using these formulas here. And if we repeat this argument for any number  of dimensions... if we have a linear map L in n-dimensions we would get all the L coefficients  from this formula here then we can transform the V components into the W components using  this formula here. And once again this formula
+
+00:11:28
+that we've derived is just the standard matrix  multiplication formula for multiplying matrices and vectors together. So what we've done is, we've  derived the matrix multiplication formulas just from the abstract linearity properties of linear  maps. So if you've ever wondered why the matrix multiplication formula works the way it does, it's just the direct result of the abstract linearity properties of linear maps. All right  so that sums up what linear maps are. Next I'm
+
+00:11:58
+going to talk about the transformation rules  that linear maps undergo when we change basis.
+

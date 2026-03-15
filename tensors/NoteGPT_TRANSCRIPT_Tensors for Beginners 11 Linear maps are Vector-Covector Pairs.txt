@@ -1,0 +1,63 @@
+00:00:00
+Alright, so I've spent a good 10 or so videos  talking about a whole bunch of different types of tensors. We've got vectors, covectors, linear  maps, bilinear forms, we've got all these tensors, and all these transformation rules. So now  it's time to level up. So this video marks the beginning of a bit of a shift. In this video  series, we're going to stop talking about new types of tensors. And instead, change the way  we think about the tensors that we've already seen. So recall, I proposed this better definition  of tensors, where rather than defining tensors,
+
+00:00:34
+in terms of transformation rules, we define them  as collections of vectors and covectors combined using the tensor product. And the reason this  definition is so good is because it's going to help us simplify our lives. A lot of the  things that we learned in the previous videos, we can sort of forget about because it's going  to come naturally out of this new definition. So what we're going to do here is, we're going  to introduce the idea of the tensor product. And we're going to upgrade our definition  of tensors to something new. And this new
+
+00:01:04
+and different perspective is going to give us  a better understanding of what tensors are. So in this video, I'm going to take the first  step into introducing the tensor product. And that first step is talking about what I call  vector-covector pairs. And I'm just going to warn you that I'm going to use some non-standard  notation that I made up just for these videos. So some of the things that I write down  in the next few videos, you're not going to find it written that way in textbooks  or other articles, you'll read online.
+
+00:01:34
+Okay, so we're saying that tensors are collections  of vectors and covectors combined together using the tensor product. Now, we've already learned  about vectors and covectors. And according to that definition, all other tensors are just  vectors and covectors combined together. So vectors and covectors are like the fundamental  building blocks for all other tensors. Now that makes us think that these other tensors  over here, linear maps, and by linear forms, it makes us think that these can somehow be built  out of vectors and covectors. And that's exactly
+
+00:02:08
+correct. So let's see how we can build linear  maps out of vectors and covectors. So we already know that when we multiply a row vector and a  column vector like this, with the row vector, first, we end up with just a scalar. But if we reverse the order and put the column vector first, we'll get something  different. So instead of a scalar, we'll end up with a matrix. And the entries of that matrix would be these here. Okay, so we have a matrix. And a matrix is basically a linear map,  right? So there we go. We've combined a vector
+
+00:02:41
+and a covector together to get a linear map. So  this method of combining column vectors and row vectors is sort of the first step to understanding  the tensor product. But we'll need to explore it a bunch more before we can say what the tensor  product is. So to go a bit deeper here, I'm going to get you to consider something. Let's say that we  have this linear map here represented as a matrix with the components [[4, 400], [8, 800]]. Now, can we go in  the reverse direction? Can we figure out the right
+
+00:03:11
+components ABCD, that would break this matrix back up into a column vector and a row vector? And so if you want, you can pause the video and give this a try. But I'm going to go ahead and give the answer. So if we have the column vector,  [4, 8] and the row vector, [1, 100], we can multiply them together to get this matrix  here. Okay, so now consider this example, where we have the same matrix, but the 800 has been changed  to a 1200. Can we do the same thing and break this matrix up into a column vector and a row vector? And you can try as hard as you like, but it turns
+
+00:03:47
+out that this is impossible. And I'll prove that  to you. So if we want to separate this matrix into a column vector and a row vector, the matrix  elements have to be equal to AC, BC, AD, and BD. And so following that reasoning, that means that  AC has to be equal to 4, BC =8, AD = 400, and BD = 1200. So the first thing  to realize is that these two first equations tell us that B = 2A. So I'll show that  here. If you just follow this reasoning, you'll get that B is equal to 2A. And we can apply  similar reasoning for the second two rows here.
+
+00:04:28
+If we just do some substitutions and follow the  reasoning, we can show that B is equal to 3A, so how can B be equal to both 2A and 3A at the same time? Well, that would imply 2A = 3A and that means that A has to be  equal to zero. And that obviously isn't true. Otherwise, the entire first row of this matrix  would need to be zero, and it's not. So this A = 0 is a contradiction here. And what  that means is it's impossible to solve for A, B, C and D in such a way that this column and  this row will multiply to get this matrix.
+
+00:05:07
+So what we've learned here is that there are some  matrices that can be broken up into column vectors and row vectors and other matrices can't  be. So we have two categories of matrices here. And these are called pure and impure matrices.  So pure matrix components can be written as a product of column vector and row vector components  like this. Whereas impure matrix components can't be written as this product. So here are a couple  examples of pure matrices here. And it turns out that pure matrices are actually really boring  when they're used as linear maps. And that's
+
+00:05:42
+because all the output vectors exist along the  same direction. And the reason for that is, you'll notice that with pure matrices, the columns of the  matrix are all scalar multiples of each other. So [4, 8] multiplied by 100, gives us [400, 800].  And [1/2 ,1] multiplied by 2 gives us [1, 2]. And recall that since the matrix columns tell us  where each basis vector copy goes, when it's put through a linear map, if all the matrix columns  are multiples of each other, that means that all
+
+00:06:16
+the basis vectors give outputs that point in the  same direction. And that means that all possible vector inputs going through the linear map are  sent to the same direction. So that's why pure matrices are kind of not very interesting: the set  of transformations they can do is really limited. But impure matrices are the more interesting  ones, they can send basis vectors to different directions so we can get more interesting  transformations. So we have a bit of a problem here: we can construct pure matrices using column  vector / row vector products, but they're the boring
+
+00:06:52
+ones. So how can we construct impure matrices, the  interesting ones, using column vector / row vector products? So what I'm going to do is I'm going  to define four special vector-covector pairs, using the old e basis and the old epsilon dual  basis. So this matrix with a one in the top left and zeros everywhere else, this can be written as  this product here, which is really just a product of e_1 and epsilon^1. And we can do the same  thing for these other basis vectors and covectors,
+
+00:07:25
+we get e_1-epsilon^2, e_2-epsilon^1.  and e_2-epsilon^2. And so we have these four matrices here. And you'll notice that these  four matrices, when taken in linear combination... so when we scale each matrix by a different  amount, and then add them all together we can get any general two-by-two matrix that we like just  by picking the right scaling numbers. So really, this set of four products forms a basis for all  matrices that are linear maps from the vector space V to itself. So any general linear map L  can be written as this linear combination here,
+
+00:08:03
+if we pick the coefficients, right, and we can  summarize this using the Einstein notation, and see that any linear map L can be written using  these components, L^i_j. Now you might be thinking, "all I see here is a vector and a covector written  next to each other. How can this be a linear map?" Well, if we think of some linear map L as a  linear combination of these basis linear maps, and we also have a vector v, which is a  linear combination of these basis vectors, what would we get when L acts on the input v? Well, to do that, we just substitute this in for L,
+
+00:08:44
+and substitute this in for v. And as you can  see here, this epsilon dual basis vector, it's acting on the input vector. And that's  totally fine, right? That's what covectors do they act on vectors. So we can use the linearity of  epsilon to take out this scaling coefficient v^k, and put it out in front. And now we're left  with epsilon^j acting on e)k. And remember, by definition, this is just the Kronecker delta^j_k. And by the Kronecker delta index cancellation rule, we can cancel out the ks and replace this  with j. And finally, we get this. So this is our
+
+00:09:25
+output vector written as a linear combination of  the basis vectors. And these coefficients. These are just the numbers that we get from the standard  matrix multiplication rule. So as you can see, this e-epsilon product pair, this really is a  linear map, it took an input vector transformed it and gave us an output vector. So vector-covector pairs really are linear maps. Now, earlier, I gave you this set of four  linear maps and so that they formed a basis for all possible linear maps from V to V. But just like with vectors, there's nothing
+
+00:10:02
+special about this basis, we could just as easily  choose another basis. Right? Even though these matrices look really nice and simple, we could  just as easily pick another set of basis matrices. So for example, these four matrices here, they all  form a basis for the set of two-by-two matrices. And that might look pretty hard to believe. But in  fact, if we choose these scaling numbers, right, we can indeed get any two by two matrix that we  want. And likewise, we don't have to choose this
+
+00:10:33
+set of four linear maps as our basis, we could  just as easily choose this set of four linear maps instead. So the set of new basis vector  and new dual basis covector pairs, and that would be an equally valid choice of basis. So to sum up what we learned in this video, we learned that we can combine vectors and covectors  to get linear maps. So doing it with arrays, we put the column vector first on the left and the  row vector second on the right, and the result of that multiplication is a matrix. And we can also  do things algebraically, by just writing the
+
+00:11:08
+vector next to the covector like this. And this is  a linear map that can take a vector as an input, just like we showed before. But the problem  is that a single vector and a single covector combined together like this creates a pure matrix  or a pure linear map. And those are really boring because they send all the output vectors to the  same direction. So to get the more interesting linear maps, we need to combine a bunch of pure  linear maps together in linear combination. And that will help us get more interesting impure  linear maps. And the last thing I'll note is that
+
+00:11:45
+these vector-covector pairs, this is actually  the tensor product of a vector and a covector. I like to write them like this. But your textbooks  are probably going to write them like this with a circle-times symbol in the middle.  For now I'm going to stick with this notation. I'll talk about this circle-times notation more in a future video.
+

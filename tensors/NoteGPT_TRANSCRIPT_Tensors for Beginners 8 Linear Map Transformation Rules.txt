@@ -1,0 +1,63 @@
+00:00:00
+In this video, we're going to go over the transformation rules that linear maps obey when we go from one basis to another. Okay, so let's say I have a linear map given by this matrix here. And this is expressed in the "e" basis. And as a reminder, this linear map turns e_1 into 0.5 e_1, and it turns e_2 into 2 e_2. So those are just the outputs of the linear map. But remember, the basis isn't changing, we're still measuring the outputs of the linear map using the same basis. Okay, so let's say that we have this
+
+00:00:34
+vector V with components [1,1]. and L transforms V into this vector here. So what would be the components of the vector L(V)? Well, to figure that out, we just multiply the column vector that represents a V by the matrix that represents L. And we'll get the components [1/2, 2]. So the components of L(V) are [1/2, 2]. And all of that is done in the "e" basis. Now remember, if we take these components in the old basis and apply the backward transform, we can get these components in the new basis. And remember, we're using
+
+00:01:11
+the backward transform since vector components are contravariant. So from here, we might ask, what are the components of the output vector in the new basis? Well, we can't use this matrix anymore, since that only works in the old basis. So what we need to do is we need to find a new matrix that tells us how to build output vectors using the e~ basis vectors. So we need to figure out these L~ coefficients here. Okay, so let's try and figure this out. So we're taking L of e_i~, and we're writing the output
+
+00:01:47
+vector as a linear combination of the tilde basis vectors using these L~ coefficients. And we need to solve for what these l tilde coefficients are. So first, we're going to use our forward transform to rewrite the new basis vectors in terms of the old basis vectors. And now we're going to use the linearity of L to take the sum and scaling coefficients outside the function. And now we're going to use this definition here to write the output L(e_j) as linear combinations of the old basis vectors. Now we rearrange the sums a
+
+00:02:21
+little bit. And now we rewrite the old basis vectors in terms of the new basis vectors using the backward transform. And so we rearrange the sums one more time to get this. And so on the left here, we have a linear combination of e~ basis vectors using the summation index "q". And on the right, we have a linear combination of the e~ basis vectors again, but with the summation index "l". So we have a linear combination of e~ basis vectors on both sides, but with different summation indexes. But really, our choice of letter
+
+00:02:57
+for the summation doesn't really matter, right, we could choose any letter we wanted. So what I'm going to do is I'm just going to change all these "q"s to "l"s. And now we can see that these L~ coefficients are equal to all of this here. So really, what this is saying is that to transform the matrix coordinates from the old basis to the new basis, we multiply the old matrix by the backward transform on the left, and by the forward transform on the right. So matrices or linear maps transform with
+
+00:03:28
+both the forward transform and the backward transform. And I'll show you why that makes sense. So the L~ matrix takes us from the input vector components to the output vector components in the new basis, right. So instead of traveling along this arrow here, using the l tilde matrix, we're sort of going to go in a roundabout way like this. So to travel along this arrow to transform the new vector components into the old vector components, we use the forward transform. And here to transform the components of the input vector
+
+00:04:02
+into the components of the output vector in the old basis, we just use the matrix L. And finally, to get from the old vector components to the new vector components for the output vector, we use the backward transform. So moving along this arrow, which is multiplication by the L~ matrix, is really the same thing as moving along these three arrows. So forward, and then L and then backward. So the idea of transforming matrix components using both the forward and backward transformations make sense. So let's see how this works in
+
+00:04:34
+practice. So here to get our matrix L~ in the new basis, we start with the matrix and the old basis and multiply on the left by "B" and on the right by "F". So if we churn through all these multiplications, we get this matrix here. And this tells us how to write the outputs of the linear map as linear combinations of the new basis vectors. So let's see if that worked. We want to transform these new basis vector components. So let's apply the new matrix we just got. And we get the components 9/8, and 7/2.
+
+00:05:12
+So let's just check if that makes sense. Let's measure L(V) using the new basis. So it looks like slightly more than one e_1~ one tilde is necessary. So that is about 9/8. And we need about three and a half e_2~. And three and a half is just another way of saying 7/2. So it turns out that this new L~ matrix does transform vector components in the new basis. So this matrix does do what we want. Now I want to do one thing before ending this video that will make your life easier. So just remember this derivation that we did here to transform matrix components, I would
+
+00:05:51
+say this is all pretty ugly, right? There's a ton to write out, we have to run out a ton of summation signs. So it's really not very fun. But fortunately, there's a way to make all of this much, much easier. And the key is to notice something interesting about summations. Notice that up here, this summation is over "k". So we have "k" up top and "k" down low here. And notice that this summation is over "j". And again, we have "j" up top and "j" down low.
+
+00:06:22
+And same thing over here, we have a sum over "l", so "l" up top and "l" down low. So it turns out that anytime we have an index letter on top and on the bottom, we end up summing over that index letter. So really, we don't need to write out any of these summation signs at all, we can just sort of pretend that they're there. Because when we see an index repeated on the top and bottom, we know that there's a summation that's going to happen. So let me show you using this notation of dropping the summation signs, how much easier
+
+00:06:55
+that this will make our lives. So let's try this derivation again. But this time not writing the summation signs, we just have to tell ourselves that if there's an index that appears on top and on the bottom, that there's a summation going on. So we start by writing L(e_i~) tilde as a linear combination of the tilde basis. And now we invoke the forward transform here. And now using the linearity of L. And now we use this definition for the L coefficients. And we invoke the backward transform. And we change this summation index from "q" to "l".
+
+00:07:33
+And that's it, we're done. So look at how much space we saved here. In the derivation before we took up the entire slide, but but look at all of this blank space. Now using this new trick of just dropping the summation signs, this derivation becomes a lot easier and a lot more clear. And I'm going to show you another trick that's actually going to make our lives easier. Let's consider what happens when we multiply a matrix M by the identity matrix, we should just get back M as the output, right? Well, let's consider
+
+00:08:03
+the components of this matrix. Let's look at the components "i,k" of the matrix M times identity. So this is just the multiplication of the M and identity matrices, right? So we can write this out as a multiplication of the m components with the Kronecker delta. Remember, because the Kronecker delta gives us the components of the identity matrix. Now again, we can just forget the summation sign is here at all, because we see a "j" index on top and on the bottom, okay, but all of this should just be equal to M^i_k, right?
+
+00:08:36
+Because the identity matrix shouldn't change the components of M, "M times identity", and "M" should have the same components. So really, what this Kronecker delta is doing is it sort of cancels out summation indices, right? It's almost as if this summation index "j" is being canceled out, and we're just left with the "i" on top and the "k" on the bottom. So using this notation, we can sort of think of the Kronecker delta as a bit like a summation
+
+00:09:02
+index canceller. So let's use all the tricks that we've learned just now and derive the backward transform for matrix components. So we have the forward transform here, where we move from the old components L to the new components L~. And we just have to remember here that the forward and backward matrices multiply to give the identity or the Kronecker delta. So we want to get the normal coefficients L isolated on one side, right? Well, to do that, we need to get rid of the B and the F. And we can do that by multiplying on the
+
+00:09:38
+left side by F and on the right side by B, because Fs and Bs should cancel out, right? So let's just do that. Now. We multiply both sides by F on the left and by B on the right. Now these would cancel to give us the Kronecker delta^s_k, and these would cancel to give us the Kronecker delta^j_t. Okay, so we're left with two chronic deltas on the right side of the equation here. Now remember, the Kronecker deltas are like summation index cancellers. So here, this Kronecker delta cancels out the j index, so we're left with
+
+00:10:12
+t on the bottom. And this Kronecker delta cancels out the k index. So we're left with s on top. And we're done. So in just five lines, we've managed to convert the forward transformation for matrices into the backward transformation. So this trick of leaving out summation signs is super, super useful, it makes writing things out a lot easier. And we call this way of writing out tensor components, Einstein's notation. So we're going to be writing tensors out in Einstein's notation like this, from now on, because of how easy
+
+00:10:45
+it makes our lives. Okay, now to sum up everything we've learned so far, we learned that basis covectors, as well as vector components, transformed using the contravariant law. And from now on, we're going to be calling these (1,0)-tensors. And we also learned that basis vectors and covector components transformed using the covariant law. And from now on, we're going to be calling these (0,1)-tensors. And just now we learned that linear maps transform using both the forward and backward matrices. So in a sense, they're both contravariant
+
+00:11:21
+and covariant. And because of that, we're going to be calling them (1,1)-tensors. So that finishes up linear maps. In the next video, we're going to give our final example of a tensor, which is the metric tensor.
+

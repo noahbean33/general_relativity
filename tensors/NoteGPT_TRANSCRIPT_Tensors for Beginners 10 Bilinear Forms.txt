@@ -1,0 +1,57 @@
+00:00:00
+Hey everyone. So my original plan with this video series was to do two more videos on the tensor product, and just leave things there. And that would be the end of the video series, or at least the end of the videos that don't involve calculus. But thinking about things more, I realized that I needed to spend a little more time on the tensor product in order to explain it properly. And part of that involves doing this short video, which you can see is on bilinear forms, which are another type of tensor. But this video
+
+00:00:30
+won't be too long, because you've already seen a bilinear form before, the metric tensor is actually a very specific example of a bilinear form. But I wanted to talk about by linear forms in general before moving on to the tensor product. So we'll talk about by linear forms really quick, and then we'll get started on the tensor product. So just to quickly review, the metric tensor, the metric tensor is a tensor whose components in a given vector bases are given by the dot products of the basis vectors. And since the
+
+00:01:00
+dot product doesn't care about the order of the inputs, that means that the i,j-component of the metric tensor is equal to the j,i-component. So what that means is the metric tensor is symmetric about this diagonal line here. So these two triangles are like mirror images of each other. And the metric tensor can be used to get the length of vectors and the angles between any pair of vectors using these formulas here. So really, the metric tensor is like a function that takes two vector inputs from a vector space V, and produces a scalar
+
+00:01:30
+as the output, so when we want to get an angle, we put in two different vectors. And when we want to get vector length, we put in the same vector twice. So this is the formula for computing the output of the metric tensor when it acts on two vectors. And we could write this out as a series of matrices like this. Now, let's consider the properties of this formula. What would happen if we multiply this entire thing by some number "a"? Well, we could give this a to any one of these three arrays, right? So multiplying
+
+00:02:00
+this whole thing by "a" is the same thing as multiplying the "v" vector by "a", and that would scale all these components by "a". Alternatively, we could scale the "w" vector by "a", and that would scale all of w's components by "a". Now writing everything out as arrays is kind of annoying. So if we switch to the summation notation, multiplying all this by "a" is the same as multiplying "v" by "a", or multiplying "w" by "a". And if we get a little more abstract,
+
+00:02:30
+and just look at the function and its inputs, multiplying the output of the function by A is the same thing as multiplying the first input by "a", or alternatively, multiplying the second input by "a". Now I'm going to warn you now at some point in your life, you're probably going to get the urge to do this. And don't do this, okay, you need to give the "a" to one input, or the other, not both. In fact, if you scaled both inputs by "a", that would mean the output would be scaled by a squared, right? Because you have to take both
+
+00:03:02
+of them out in front. Anyway, that's the scaling rule for the metric tensor. Now, let's consider addition. Let's say that we have two vectors that are added together like this on the left side of the metric tensor, what would we get? Well, we would just distribute this stuff to both of the vectors, right. So we end up with these two terms added together. And if we consider the summation notation, if we have two vectors added here, we just distribute this part to each of them. And more abstractly, if the metric tensor has two vectors added
+
+00:03:34
+together as the first input, we could also write this as the sum of two functions, where the first inputs are each of these vectors, and the second input is the same for both. And we could also consider doing the same thing, but for the right side of the metric tensor. So we have this vector sum here. And we could just distribute this part to both vectors. And in summation notation, that would look like this. And finally, in the abstract form, we would take this single function with a sum in the second input, and write it as
+
+00:04:03
+a sum of two functions where each of these vectors become the second inputs. And the first input is the same for both. So these are the two addition rules for the metric tensor inputs. And I'm going to warn you again, at some point in your life, you're probably going to get the urge to do this. Don't do this, okay, this isn't right. If we want to sort this out, we need to follow these rules up here, one at a time. So we can start by distributing the first input to get these two terms. And then we can distribute the
+
+00:04:33
+second input in each of these like so. So there are four output terms in total here. So please try to remember that. Okay, so we have the properties of the metric tensor up here. It's a function that takes two input vectors from a vector space V and returns a scalar. The scaling rule tells us that we can scale the output or scale either one of the inputs, and the two adding rules tells us that when we have a vector sum in one of the inputs, we can just attribute the vectors in the sum, while holding the other input constant. And in a given basis,
+
+00:05:06
+we compute the output of the metric tensor using this formula here. Okay, so now it's time to define bilinear forms. And the definition of bilinear forms is actually everything we just stated up here. So by linear form is a function that takes two inputs from a vector space V and returns a scalar output. And it follows these adding and scaling rules here. And just like the metric tensor, to compute the output of the function in a given basis, we use this formula where B ij, are the components of a matrix. And just like
+
+00:05:37
+the metric tensor bilinear forms are (0,2)-tensors. So they transform using two covariant rules when we change coordinate systems. Okay, so why do we call these by linear forms. So I'll start with the word "form", a "form" is basically just a function that takes vectors as inputs and outputs a number. So covectors are also sometimes called linear forms, because they are forms that follow the linearity properties. And we also sometimes call them "one-forms" since they take one input. So by linear forms are sometimes called "two-forms", obviously
+
+00:06:15
+their form since they take two vector inputs and output a scalar. But let's be specific about what we mean when we say bilinear. So if you look at the by linear form rules, and focus only on the rules that involve the first input, and pretend the second input is fixed, so it's like it's locked away in stone, and will never change. B looks an awful lot like a covector or a linear form, right? We can scale the input or the output and get the same answer. And we can add the inputs or the outputs and get the same answer. Alternatively,
+
+00:06:46
+if we focus only on the rules that involves the second input, and pretend the first input is fixed and locked in stone, B also looks like a covector or a linear form, where we can add or scale the inputs and outputs and get the same answer. So when we say that B is a bilinear form, it's because it's a form where each individual input is linear, while the other input is held constant. Now, so far, I've made it seem like metric tensors, bilinear forms are the same thing, right? Because they both obey two covariant transformation rules. And they have similar
+
+00:07:23
+properties. But they're not actually the exact same. So what's the difference between them? So as I said before, the metric tensor is a bilinear form. But it's a very specific example of a bilinear form. In fact, the metric tensor has two extra properties that other bilinear forms might not have. So remember, since the metric tensor components are symmetric, we can swap "i" and "j" here. And this actually means that the order of the input vectors in the metric tensor doesn't matter. So with the metric tensor, we can swap the inputs
+
+00:07:56
+without changing anything. But we can't necessarily do that with bilinear forms. Another thing is that, since the metric tensor measures vector lengths, when we put the same vector in twice, we always get an answer that's greater than or equal to zero, right? Because it doesn't make sense to get a negative squared length as the output. But again, this isn't necessarily true for some bilinear forms. So certain bilinear forms are valid metric tensors, and others aren't. So some examples of bilinear forms could be valid metric tensors.
+
+00:08:31
+For example, these two matrices that we talked about in the previous video, these are valid metric tensors, because you'll notice that they have symmetric matrices. And also when we put the same input in twice, we'll always get answers that are non negative. So you can try whatever v1 and v2 you like in these formulas, the answer will always be positive or zero, it's impossible to get a negative number. But on the other hand, some examples of bilinear forms aren't valid metric tensors as we have over here. So this first example,
+
+00:09:03
+obviously isn't symmetric. So it's not a valid metric tensor. And over here, while this matrix is symmetric, it's possible to get a negative output if we choose v1 and v2 correctly. So for example, the input components, one one would give a result of negative eight. So metric tensors are a very special example of bilinear forms. Basically, if this box is the set of all by linear forms, this smaller green box inside would be the set of all metric tensors. So just to repeat everything once more bilinear forms take two vector inputs
+
+00:09:37
+and output a scalar. They follow these adding and scaling rules, and we compute their output in a given basis using this formula. And finally, their components use two covariant transformation rules when we change coordinates
+

@@ -1,0 +1,414 @@
+00:00:00
+this program is being presented to you by the heras international winter school on gravity and [Music] light so good morning and welcome to the international winter school on gravity in light here at the Johannes Kepler University in Lind um we're now joined by 50 participants from all over the world for the remainder of the school for the actual physical part and um we'll start with lecture 13 where the first 12 lectures dealt with the mathematical foundations of general relativity and now the character of the
+
+00:00:40
+course will change we will now employ the mathematical tools we've uh introduced in order to describe relativistic SpaceTime and general relativity so um that means now we need to argue about uh why we choose which structure and these are rather vague arguments because it's about physics and physics is more complicated than mathematics because ma mathematics everything is clear it's just self-referential and uh that is exactly its power that it mathematics per se has nothing to to do with the world and it
+
+00:01:19
+wants nothing to do with the world and exactly that it's it is its power now in physics uh that's a more dirty subject because you need to relate your Notions to to the world and at the end you need to make predictions so um a lot more hand waving and a lot more arguing is required having said that of course we want to reduce that to a minimum we nevertheless we still want to develop a as consistent a set of Notions as possible in order to meaningfully talk about what we are talking and of course the picture we're
+
+00:01:55
+going to present may need revision one day maybe maybe we already do have the experiments that require that we revise the theory and nobody at the moment knows how deep this revision will go but of course in order to surgically change the theory somewhere you need to understand the old Theory the current the standard Theory currently everybody's working with so this is the theory we're presenting here and only towards the end of the school I will go into uh some more detail about how this
+
+00:02:29
+Theory might be changed and if you go about that how this might be done so the topic today is relativistic spacetime and um if you recall from lecture N9 the definition of Newtonian space time there we had a set equipped with a topology such that it was a four-dimensional manifold we equi it with a smooth structure and a torsion free connection and additionally a so-called absolute time and this absolute time was a smooth function on the four manifold and there were two compatibility conditions no there was one definition
+
+00:03:34
+on uh having really uh time slices that is that the gradient of this absolute time function nowhere vanish and the second condition was that time flow uniformly that was that nabler DT was Zero um if you recall this definition of Newtonian space time and at the same time the definition I gave you at the beginning of this lecture course in lecture one and the definition of relativistic SpaceTime I gave in lecture one so actually before lecture one which at the time may have been quite incomprehensible but now it no longer is
+
+00:04:24
+and I no longer write down the words because we now know better we can write down this is a manifold a topological manifold of four dimensions uh we find a smooth Atlas for it and back then we said it's equipped with a torsion free connection excellent torsion free so far it seems the same but then for a manifold uh SpaceTime manifold a relativistic one we have two more structures so here we had this absolute time and here we have two more structures what are they they are a lorenzian metric on the
+
+00:05:06
+manifold lorenzian metric and I remind you we had the signature convention plusus minus minus and the T here is a so-called time orientation and I'll tell you in a second what that is technically so but what I want you to observe is that what the role played in neonian space time by the absolute time function is now played by the interplay of two additional structures or two different structures a lenum metric and a Time orientation so first time orientation what is that because all the other Notions appearing in here and in
+
+00:05:55
+fact appearing in this longish definition I provided at the beginning of the lecture course in lecture one um all the remaining Concepts here are already clarified you know what Loren symetric is a connection and so on so what's the time orientation definition let m o a g we don't need to talk about the connection yet we just look at this a lenan manifold and probably we want an oriented Atlas so we take an oriented Atlas later on we need that let this be a loreny manifold then a Time orientation is
+
+00:06:50
+given by a vector field t Okay so we're relieved this is nothing more complicated than a tensor a vector field this T by Vector field t uh that a does not vanish anywhere so it's a nowhere Vanishing tensor field and that second has the following property that if you calculate G of TT at any point in SpaceTime the result is always positive so um let me draw pictures here let's go back to Newtonian SpaceTime first and then to relativistic space time yes Pardon Me Oh does not yeah yeah I I missed that
+
+00:07:48
+thank you very much it does not vanish otherwise it's rather pointless thank you okay thank you very much so um let's look at the situation so let's go back to Newtonian SpaceTime in Newtonian SpaceTime you go to a particular Point say this one this the four-dimensional SpaceTime manifold in neonian physics and at this point the absolute time function has a certain value right so if I have the absolute time function yellow here it has a certain value and because it's smooth it will have the same value
+
+00:08:36
+elsewhere um I'm just drawing a one plus one two-dimensional picture of Newtonian SpaceTime okay so um this would probably in a threedimensional picture which is still one dimension too little would more look like this in this point lies in here and this is where T is constant okay but I even go down further Dimension and look at it like this okay in order to draw diagrams so I reduced the picture by two Dimensions so this is the this is this and now you know that the gradient of the DT it's a co- Vector
+
+00:09:15
+it's not a vector so when it's tempted to say this is the gradient well at least if the next level line so say this was tal 1 this if this goes like this then you would say this is the direction of the gradient but we know that the gradient is a co- vector and in fact the gradient is best understood as this little plane attached to here okay and what this allows you is the definition of a future directed Vector so re recall a vector X in in space time was called future pointing or future
+
+00:10:08
+directed if DT of X is greater than zero which meant that any direction that was up here anything here any Vector in this half space and this is a picture in the tangent space right so you have a point here and this little plane here uh this already lies in the cotangent space an element of the cotangent space and these this shaded area is that subset of the tangent space at this point so let me say this is a subset of the tangent space at this point where all the vectors lie that are future directed
+
+00:10:56
+okay and the ones that lie on here they are annihilated by DT that's the standard theorem and the ones that point backwards they have a negative sign under DT okay so these are the future directions where you can go okay now if you draw the same picture down here what you get is the following first of all you start from a point and now the first thing is you do do not have an absolute time function you just don't have it what you have instead is a lorenzian metric the lorenzian metric provides in each
+
+00:11:40
+tangent space so if I again draw now a picture in the tangent space at that point the metric the lorencia metric you know gives you a structure like this in a tangent space we did this also in the the tutorials I think okay this is what Loren metric gives you and um we now would like to have a SIM similar definition uh because these future directed vectors were important because we said particles are always world have World lines in neonian SpaceTime whose tangents are future directed okay we're
+
+00:12:23
+now going to talk about future directed particle World lines but we would like to restrict to particle World lines whose tangent vectors lie inside this cone or possibly on its boundary but they shouldn't run backwards and they shouldn't lie outside the motivation will be to go from here to here that we want to implement the idea that no massive particle can overtake light okay here you have future pointing tangent vectors future pointing velocities which can be arbit which can have arbitrarily well in
+
+00:13:16
+quotation mark High Velocity you know velocity is a vector what's a high velocity if we haven't a metric yet let's not talk about this but that's the intuition and so here we're interested in distinguishing one half of this double cone so all the vectors and of course it continues right but the second half we're not interested in we really just want half a cone not a double cone for the same reasons we up here in neutronium mechanics only want a half space so we want to get rid of this guy
+
+00:13:53
+so how do we do that well we have here the metric and this time orientation and if you look at this you have a metric at every point of the manifold you have a metric and hence uh uh in every tangent space at every point so also at another Point Q you may have another cone okay and how dare I write only the half cone because what what about this half I just just eliminated so these are pictures in different tangent spaces this is a picture in tqm okay so the cones live in the tangent spaces they don't live in the
+
+00:14:41
+manifold they live in the tangent spaces well the point is of course this Vector field T I introduced over here this time orientation first of all the G gives you a double cone but then if you have a vector field with that property say a vector that's inside the cone here and here it's inside the cone there and if you emphasize that it is a smooth Vector field then it's clear you wouldn't all of a sudden flip from here to the opposite cone but this would be smoothly chosen okay so the combination of a
+
+00:15:20
+lorenzian metric and a Time orientation gives you a distribution of cones over all the tangent spaces in your space time as much as in newtonium mechanics the absolute time gives you a distribution of half spaces of the tangent space everywhere along the space time manifold okay now in neonian theory we could always introduce a stratified atas on so that it always looks like you have the um equal time function like this and then from wherever you are now again a picture in Tangent space these are the future directions right um
+
+00:16:12
+here gener generically it won't be possible to find an atlas such the cones all stand upright but anyway the cone standing upright or not uh is a artifact of the chart you chose okay okay anyway so um this is the basic idea um I tried to convey the motivation to change an absolute time function to this combined structure but I will now make this more precise so um in particular let me emphasize I did not argue that in utonium mechanics you have a metric in three space and now we have a metric in
+
+00:16:55
+Force Space well that's all true you can also introduce here metric if you wish at some stage in inertial systems and so on but the first and foremost task of the lenan metric is not to measure any length the first and foremost task is to produce these cones okay good so that's the um that's the time orientation um this definition of relativistic space type and from now on I will only refer to it as SpaceTime and I will only say Newtonian SpaceTime if we talk about the non-relativistic version yes I
+
+00:17:45
+understand velocity Vector I still don't see okay okay um so um okay so the question was uh what exactly is the role of the T well if I just provide you with a manifold with a lorenzian metric here then you go to an arbitrary point of the manifold and in the tangent space at that point you get the following structure of vectors where the vectors lying on here satisfy gxx equals z and the vectors in here satisfy gxx greater than zero but also the vectors in down here satisfy gxx greater than zero and all the vectors
+
+00:18:43
+lying outside here satisfy G XX less than zero so by requiring that a vector have positive sign if this is my sign convention I select the interior of this upper cone and the interior of the lower cone however in order to now make a particle definition which I'm going to make I want to talk about future and past I want particles to run forward rather than backward so I need to eliminate one of these cones but the metric doesn't distinguish between them so I need an extra choice of a vector
+
+00:19:23
+field that lies either inside here or inside here so I choose the T and say the t is this one then this chooses this part of the cone that's enough information to say which part I mean and I can eliminate that one and then I get A Spacetime picture an objective SpaceTime picture where each tangent space of the space time there lives a half cone that's that's the role of the team so um this definition of SpaceTime uh has been made to enable the following um physical postulates or rather enable us to
+
+00:20:26
+stipulate the following physical post and um so that's the first physical postulate one the world line gamma of a massive particle of a massive particle um satisfies by this postulate two conditions first it lies inside the cone so the veloc sorry the the tangent to it at every point along the curve lies inside either the forward or the backward double cone but what is the forward in the backward double cone second condition uh gamma G gamma of Lambda T comma V gamma gamma of Lambda is also greater than
+
+00:21:31
+zero so the picture for this is you have a trajectory in space time in m a smooth curve in m and now what you need to check is whether at every point of the curve say at this point it is true or it is not true that the cone that lives at that point anyway okay you need to look how what does the cone look like well you need to look at the tangent Vector to this curve I draw it like this although I shouldn't it's a directional derivative you need so we're starting to do a tangent space picture right so let me be
+
+00:22:13
+precise here and as soon as I start drawing this I'm talking here about elements all of a sudden in the tension space whereas of course the curve was running in the manifold that this tangent Vector here lies in inside the cone that we have at this point so the cone however is given a priority because I know the space time and I know it's one of the two cones whether it lies in the cone in which also the T lies because then the inner product of these two with respect to this metric will be positive if the T
+
+00:22:57
+had selected a the the this cone then the inner product of this velocity with this T and this Loren metric would be negative okay so in this sense this T is used all the time and so you check okay at this one point the tangent Vector lies inside the local cone you need to check whether at the next point I just draw yet another one here whether this tangent Vector still Li within the cone but the cone at that point right so it's very important that space time consists of a half cone in each tangent
+
+00:23:46
+space which half cones well the ones that the metric the lorenzian tensor field tells you you have yes one ofor it here or okay it's not an inner product in the sense that it's a positive definite inner product because this has the wrong signature if this had pos positive signature throughout it would induce an inner product on each tangent space now this induces a pseudo inner product on each tangent space it shares all the properties but it doesn't have the posi ity and in certain directions
+
+00:24:32
+it satisfies an inverse triangular equality rather than a triangular equality equality we'll come to that okay so if I say inner product I mean here lenan inner product or pseudo inner product okay so this is for massive particles and the postulate P2 refers to massless particles the world line World lines of massless part I Les and note that in neonian mechanics we couldn't talk about massless particles in neonian mechanics every particle has mass f equals ma right you have to have a nonv Vanishing Mass it's
+
+00:25:16
+in relativity that you can have massless particles so World lines of M massless particles satisfy a one uh that they velocity along the curve at every point so this is at every point along the curve of course at every point along the curve that the velocity at every point along the curve is equal to zero that means the tension Vector lies on the boundary of the cone but the second condition is again formally the same this is V gamma gamma of Lambda V gamma gamma of Lambda sorry with the T it must have
+
+00:26:06
+positive um well pseudo inner product at each point okay okay so uh the picture for this is uh I now go the other way around it's also maybe more logical so say your so picture overall say you have a you have a laoren in SpaceTime and I'm now trying to draw the objective space time whatever that means so at every point I have a little half cone why would it not look like this it could right why not okay now um this is the trajectory the world line Sorry the world line of a massive particle
+
+00:27:29
+perfect yeah um I want to ask the second condition in1 yes this tells us that we choose the cone where the vector lies within but how do we know that it is if that's the future cone or the past cone because the T says so no it's a very good question it's a very good question we need to decide what is future and past and we need to divide it relativ relativists came up with no better idea than to say choose it however because the t is a smooth Vector field once you start choosing it at some
+
+00:28:12
+point it's more or less determined how it works in the other points otherwise you just exchange the notion of future and past okay um the question of what the arrow of time is whether time runs like this or like that you can have um answers to this from statistical physics and you can have other ideas in general relativity this is no further resolved we say this is what it is we have such a Time orientation it's different from the oriented Atlas right it's a Time orientation it's a choice of a half
+
+00:28:51
+cone okay but the smoothness makes this less arbitrary that it than it may seem okay yes yes the sphere also cannot carry a loren metric so every smooth manifold can carry a reenan metric but not every smooth manifold can carry a lenan metric so they obstruction theorems that tell you those smooth manifolds can and those can't the same is true with time orientation okay and we'll come to further constraints so by requiring that these structures exist there is no guarantee that for any underlying choice
+
+00:29:44
+you can always put such a structure on top and it exists but then the underly Ling choice is also excluded As A Spacetime manifold so for instance we could think of a two-dimensional world and say oh it would be funny if the so the sphere is orientable if we took the S2 the oriented S2 as a smooth manifold and considered this is space time so we just need to find a metric and a Time orientation well the point is you find don't find the lorencia metric so the S2 as an underlying smooth manifold can never be made into a space
+
+00:30:20
+time okay so in this sense there are constraints that come by adding further structures can you really add them okay yes and so you you can enter the business of deriving uh theorems on on what can then still survive at the lower level and whatnot and of course all of that exists right okay so here we have a massless particle but I should also show you a um a massive one um um no we have a massive particle I now show you a massless particle um well a massless one would be this one here okay we need a few more
+
+00:31:10
+cones well it's clear now I mean this this is just a rep representation of all the possible cones they can also start looking like this right why not okay so that means space time is really this this collection of cones essentially in fact 9/10 of a metric are determined by the cones you can think about that right so um claim 9/10th of a metric are determent by their uh by the cone and only one tenth then still needs to be fixed in okay 9/10 so if I say the space time is essentially distribution of cones it's
+
+00:32:04
+almost right only 10% error good so we have this aha so well this uh these are just postulates but you see these definitions and this motivation has a lot to do with these postulates right we do this in in order to be able to talk about particles of one kind or of the other however all the difficulties one might have at first with relativity is that somehow in your head you still have this absolute time function somewhere and you still can't wrap your head around it that the structure of your tangent spaces that your tangent
+
+00:32:57
+spaces at every Point are now not divided in one half space and another half space but that they're divided in one cone and not that one cone okay that's all the problems with relativity there are no others if we follow the definitions we're now going to make no such problem will arise and of course in a sense if you think that this one half cone opens up more and more and more let's say it does that somehow don't we get a picture like this well yes right so a cone is an an object
+
+00:33:36
+from linear algebra it's a generalization of vector Subspace a cone is a space where the sum of two vectors that's in there is again in there like a vector Subspace and where positive mult multiples of a vector are again in there that is a stronger requirement than that any multiple of a vectors again in there any multiple in there gives you a vector Subspace only positive multiples of vectors already in there are again in there gives you a cone well this is a cone too anything in there another thing in there is in there
+
+00:34:14
+and positive multiples are in there negative multiples are not these are cones and these are cones these are even convex cones there not such a big difference it's just not it's you could say relativity is instead of having cones that are half spaces you have cones that are proper cones right okay and of course the whole idea is these particles if you think in velocities and I I I wouldn't usually one would say nothing runs faster than the speed of light but faster refers to speed right and we haven't talked about
+
+00:34:50
+that quite yet because we could measure we could measure the length of the velocity of the SpaceTime velocity we could measure the length of this V I get a specific number but that's not the Velocity in observer sees it's just the length in the the SpaceTime velocity if we talk about speed we mean what an observer sees in his laboratory will come to that okay but the intuition is these guys can never overtake these guys right okay anyway so that's the definitions um but obviously in order to
+
+00:35:25
+talk about Notions we are more familiar with Nam what an Observer sees we don't know what observers are right in order to do that we need to Define observers definition is it that's true thank you definition so we're now always dealing with a space time what's an observer an observer is a um world line a world line gamma with gamma g v gamma V gamma greater than zero I do not always write the gamma of Lambda Gamma of Lambda okay greater than zero and G of t v gamma greater than zero so you say ah
+
+00:36:45
+like a massive particle World line indeed observers in relativity are always observers that could be realized as massive objects because they have to carry with them a measurement apparatus or something okay okay observe as a world line gamma with these properties oh and usually one calls World lines like this one calls them Tim likee I don't like that time like there's no time in the game so far okay let's get rid of this notion time like space like light like let let's not talk about it
+
+00:37:16
+because the like already tells you it doesn't mean what it says Okay so let's just not say it okay later on you're allowed to do that it's it's like a swear words if you have children right you tell them don't say that godamn it okay so later on you you may reinstate that so an observer is a world line gamma with this together with so it's not only a world line together with uh a choice of bases e0 depending on the paramet on the same parameter Lambda on which the curve
+
+00:38:01
+depends E1 of Lambda E2 of Lambda and E3 of Lambda so we're talking about four dimensional space time you can easily make a d dimensional space time out of this of each T gamma of Lambda M where the part where the Observer World line passes now actually the precise formulation would be an observer is a smooth curve in the frame bundle LM over M okay um because I want okay I draw a picture so this is a curve gamma in space time yes yes no the neutronian space time was a four dimensional manifold
+
+00:39:32
+because on the four dimensional manifold and those direction or those level surfaces of the LA time where the absolute time is five that's a three-dimensional surface and that is the space at time five so the newon in SpaceTime Anya was four dimensional yes yes pardon me no the choice of bases is the Observer let let me come to it let me come to it so um there is also something missing here if writing something here so the idea is the following you have have a a word line that at every of its
+
+00:40:30
+points lies within the half cone prescribed by space time okay and now you make here an additional requirement if you require something of this basis but that still doesn't fix it if the E basis Vector at a position Lambda and the be basis Vector take taken in this inner product if the result is EA a and EA a is just 1 minus one - one minus one is this collection of numbers the rest are zeros a so one could say they're orthonormal but that would be more like a unit but orthonormal as a lorenzian
+
+00:41:21
+metric which means you they produce this result that's a requirement on the choice of bases and it means oh and I forgot something else okay and this e01 is the same as the tangent to the curve okay so what does that mean that means that for instance at this point P here p is gamma of some Lambda 1 say there is a tangent vector like this and that one we would call e0 of Lambda of course an element of the tangent space okay should write this a little bit deeper here uh gamma of Lambda 1 is the point P which is going
+
+00:42:16
+through and then so that's the for the first basis element I don't have a choice I choose the tangent vector and for the others I choose further one and here I only draw two more of Lambda one I only draw two more because my picture is at most three-dimensional okay so you need to think of this in perspective and the idea is that they pairwise give either zero no pair wise they give um zero but this with this itself gives a one of course and the others give minus ones that's how they're Chosen and you can
+
+00:42:57
+always do that okay and um at another Point down here you have this this one is fixed but then you have two more E1 E2 they are not fixed because intuitively speaking you could choose any rotation thereof right but you can no longer change the e z because that one is fixed now you see an observer is a little more than just a world line yes why did you um put an index on because I wanted to say that's in order to develop the picture further so this is uh gamma of Lambda 2 oh that's silly Lambda 0 Lambda 0 Lambda
+
+00:43:46
+0 Lambda 0 because soon I'm going to talk about these two I think yeah that's right I'm sorry thank you yes um it's WR like this an the vectorized one so so it's not quite so is is it always normalized to one by definition yes here we do that because um that will help us later on you can always do that because you can reparameterize a curve and then we'll have to do with the definition of time that comes in a second so this is intentional so I could have specialized here already to one which is greater
+
+00:44:31
+than zero and that would be in accordance with this thank you for the observation but that's exactly intended okay yes one question basically our basis extracts the signat of it must it couldn't do anything else you would never find a basis that is di where this is diagonal and doesn't have this signature it could be 5 - 7 - 3 and so on but then you could rescale the vectors again yes that's right that's right so that that's the condition a frame bundle a frame bundle yes I said precise and and and that's
+
+00:45:14
+something I didn't explain a frame bundle is where you have a manifold and at each point P you attach as a fiber not the tangent space but the space where in the fiber a point in the fiber is a choice of bases at the point p a choice of bases of the tangent space so the fiber at a point no longer contains all tangent vectors it contains all qu quadruplets of tangent vectors that constitute the bases okay and then if you have so if these are is are all possible bases here and then you have a curve in the in the
+
+00:45:59
+tangent bundle a smooth curve that actually helps you encode that from here to here so this doesn't all of a sudden change to this but this goes smoothly if you want to say this precisely you need to say it's a smooth curve in the frame bundle okay but you can ignore that the idea suffices here yes would it be sufficient to say that the Bas vectors as function of should beable basis vectors as a function of Lambda should be differentiable um well the question is what precisely that means because then
+
+00:46:38
+you would um need to have a a map from Lambda to where because for each Lambda you go to a different tangent space so maybe you could say you have four smooth Curves in the tangent bundle four smooth Curves in the tangent bundle yes and then then you could um additionally require that they are always orthonormal in this sense there would probably be a a leaner way yes yes thank you okay so you see the physical interpretation as an observer is more than just a world line because an observer will feel quite different
+
+00:47:17
+observe quite different whether he's just say freely falling or whether he's freely falling and rotating and how do you capture the rotating well you can only capture it via the attached frame okay but an an arbitrary Observer will just do something like this right you need to say which Observer you have in order to say well no it doesn't do this it it goes like this or something like that okay okay but that's the um abstract notion of an observer and um there come again two physical postulates
+
+00:48:00
+so that's P3 because we already had to P3 is a clock carried by a specific Observer and we'll call an observer always gamma comma e where the E stands for this whole selection right a clock carried by a specific Observer will show will measure will measure a time interval well we'll measure a Time towel is time towel integral from Lambda 1 to L Lambda 0 to Lambda 1 the ones I chose D Lambda square root of G gamma of Lambda V gamma gamma of Lambda V gamma gamma of Lambda between the two events so that's uh relativists
+
+00:49:23
+jargon an event is a point in SpaceTime between the two events gamma of Lambda 0o and that event is start the clock or rather push the start button of the clock because um pushing is something localized in space pushing a button and in time okay that's an event start the clock and Gamma of Lambda 1 Stop The Clock so if this Observer decides to activate his stopwatch that he carries with him and he switches it on here he lets it run and he switches it off there then the length of this world line
+
+00:50:16
+in space time as measured by the metric which this is nothing but the length functional right the length of the world line in SpaceTime has a meaning it has the meaning of the time that the clock measures now this seems a rather arbitrary postulate in fact uh one can this is one of the nicest things that you can look at with a light clock maybe I explain that later um so this is very solid and this defines what time this Observer sees and please note so far far in the discussion of relativistic
+
+00:51:00
+SpaceTime this is the first instance the first instance that the word time enters the discussion you agree I didn't talk about time which means time is a derived notion in this context I don't talk about time such like just like that I talk about time as the time that a clock measures okay now you could ask construct such a clock and prove it you can you can construct a light clock I I'll maybe come to that however time of an observer as a clock measures and the clock is a clock that's
+
+00:51:52
+carried by this Observer so this yellow path in space time this yellow part of the world line is the history of the clock there is nothing in this definition that suggests that another clock taking another path even from the same point starting point to the same end point but along another path as long as it's a path that is also an observer will show the same time is there any reason to assume no not a priority well in fact it will not be the case time will depend on the world line that the clock takes in space time according
+
+00:52:34
+to this definition okay that's all so if people say the the concept of time is changed in relativity that's that's right because there is no longer one absolute time you cannot look at a point in space time like in Newtonian space time do you remember in Newtonian space time so compare in neonian SpaceTime I could just pick a point p a single point without Observer without a second Point without starting a clock and stopping a clock I could pick a point and I would know the time associated with that point
+
+00:53:29
+I would simply know it well you can say yeah but you could rescale this absolute time yes that you could do but nevertheless once you have settled the absolute time an event comes at a certain time and other events come at the same time of the absolute time function and then you can ask what's an event at the same time and if you have two events like our picture up here this is just yet a derived notion because you say okay this point p and this point Q the difference in time independent of how you go from
+
+00:54:06
+here to here and independent of what path your clock takes it's always T of P minus t of Q okay that's the Newtonian concept of time here this is entirely different totally different there is no time Associated to an individual event there's not even a time difference Associated to two different events there's a time difference Associated to a certain path that a clock takes between two events and that clock is started here and stopped here and then it will show this time yes so far have we been talking
+
+00:54:48
+about the re or CH or how do we know that it's chart inment this is all the real world and you can see here because I don't use any components this is the metric this is the velocity this has nothing to do with components I haven't written down a single component so far and also the little cones here the objective because say this is here and now where I am this point okay and now I lit I light a little light bulb for just a millisecond it blinks and then it will take some time until the light has
+
+00:55:31
+reached uh some member of the audience over here and some member of the audence over there but will go out in a spherical way right this impulse this light flash and um well depending on your frame of reference and so on very roughly speaking this is what goes out but remember this is in Tangent space okay so the the light Ray will actually go out more like say like this and the other one maybe like that if you have a very vicious space time uh where the cones start if the cones develop more like
+
+00:56:11
+this not develop if if they are positioned like this right so the actual light goes along a null trajectory and this is just the tangent at that point so if I draw these guys actually wrong I should rather draw these guys but then it all again depends on what frame of reference you're in how these are tilted but anyway so I can make the experiment I send the photon in this direction in that direction and the photon does what the photon does right and that is the velocity of the photon here and the velocity of the photon
+
+00:56:48
+there is like the velocity of the bird right it's unimpressed by choice of chart the position of the cone is totally unimpressed by the position of by the choice of chart because it's an objective reality that at that point a photon sent in that direction will have that velocity is a picture oh I see did you ask this question in the in the email with the the real world yes okay so there was this question which is a Justified question I always talk about the manifold and all its objects as the real
+
+00:57:19
+world and then as the charts is kind of what we make of it now of course you could say well it's not the real world it's it's a manifold right this is also an idea but the point is if we think about the real world as physicists we think that's what we do right we have no further access to the real world but to make Concepts and then to make experiments that relate these Concepts so if I think oh there's a bird it has a velocity that's already thinking because you can't see the Velocity in the world
+
+00:57:54
+the velocity already is the concept right but this object has a velocity but our idea of velocity is not chart dependent it's only that in high school you're indoctrinated that all of a sudden you have to associate velocities with three numbers right that's what they teach you in school but the concept of velocity that a child has has nothing to do with these three numbers right so what you learn in school is already in a chart but the concept of velocity is there independent of a chart okay and that is
+
+00:58:27
+when I say that's in the real world that's our concept about the real world okay good okay so in this sense this is in the real world okay and this is all a picture in the real world and none of this formulation depends on on a chart okay now there's a certain amount of terminology that goes with all of that um you would call this t the proper time the proper time or the igen time of this Observer from here to here but you call it proper time in order to distinguish it from the Newtonian time right but in this Theory
+
+00:59:23
+it's just time time is what a clock measures okay so that's um the first thing and let's let's make an example an application for that application or SL example the example is Take A Spacetime R4 with the standard topology G and some smooth Atlas for it and take as G um the G that's given by g j in a chart x equals EIG okay and uh so we have an atlas that contains R4 times the identity on R4 as a chart and if that exists and you have this you can calculate the christofel symbols
+
+01:00:32
+therefore it follows gamma i j k in that chart are zero everywhere and the chart covers the whole manifold that means this space time an oriented Atlas if you wish the space time okay and you choose a Time orientation time orientation in the same chart I is chosen as 1 z0 0 I for instance okay uh you have this time orientation and of course from the G you can make a connection but because this is zero everywhere the reman curvature will vanish that means this space time is flat and we have chosen a chart in which
+
+01:01:23
+it looks particularly nice aha this situation is called special relativity this situation is called special relativity or one should say it's the domain of special relativity you have a flat space time but otherwise special relativity is not different from general relativity not at all okay and um now you may consider um two observers and I give all of this in in this chart because I need to write it down so one Observer is called gamma and uh his um world line in this chart has components that are Lambda 0 0 0 it runs from 0 to
+
+01:02:32
+one so if I am in the chart let's say it looks like this okay good and you see um you take the derivative you get one 0 that has certainly positive inner product with the T here because we have signature plus minus minus minus so this is an is an observer then we have a second Observer Delta 01 to M who takes a rather more adventurous rout um Delta X it's the I component Delta X the I component is Lambda no it comes in two sections Lambda Alpha time Lambda an alpha from zero to one um excluded
+
+01:03:30
+both 0 0 I if Lambda is less or equal to 12 now we run up to parameter value one and here I get Lambda I 1 minus Alpha Lambda 0 0 I component Lambda greater than 12 and that should be depending on the alpha that should look like this okay if the alpha is uh going close to uh to one then so look down here you have a cone that is like this and every point you have a cone in this chart I've chosen the cones everywhere stand upright okay that's uh essentially the choice that I have this EA here in this chart
+
+01:04:38
+in this chart in another chart the same metric may look different but that's why I choose this chart okay so this is the situation and if the alpha goes to one this one is going closer and closer and closer and closer to the boundary of the cone but it doesn't hit the boundary of the cone of course it can't okay if I let the alpha go to one or higher then I no longer have an observer Delta so I have to do something like this okay so you of course see where this is going is going to the twin paradoxon right there
+
+01:05:07
+are two twins they they they're both born one just Falls freely in space and the other one also falls freely in space in another Direction because the mother kicked him in that direction well we're in space in a thought experiment right and then at some point he's being kicked back and and then he meets the other twin again okay you could also think of rockets and flying away and all kinds of stories okay and um so the point is we have to calculate what is the time elapsing of the clock that this guy gets for his
+
+01:05:40
+birthday and what's the time elapsing on the clock that the twin that was first kicked away um shows on his clock okay um let's calculate okay so tow for the gamma guy okay to Gamma Gamma Gamma Delta how does this go is integral we go over the parameters from start to end 0 to one in this case we have to integrate over the square root of the G of the Velocity I immediately write it in this chart g j the velocity is gamma in the chart I component dot gamma in this chart J's component dot do you agree
+
+01:06:36
+that's what it is okay that's quickly evaluated 0 to One D Lambda D Lambda um g j is this EA okay and the gamma Dot is 1 0 0 0 so the only term that survives is the one here 1 * 1 * 1+ 0 0 0 so there's one equals 1 integral from 0 to one over one is one so yes here what did I do in my notes probably you're right because you had time to think about this no I had it like this okay so um so let's see okay so I I I want to I want to go there and I um I arrived here after time Lambda half I arrived
+
+01:07:49
+at I want to be at Alpha times Lambda okay and then I want to go back so I have arrived at Alpha half because the time has half then I want to go back minus Alpha Lambda confused are you sure one minus lamb and the alpha goes out is that right so let's see it's zero this is Alpha that's not good only counts for oh that's right okay so at L yeah but Lambda okay so that means at Lambda 12 you're right okay sorry at Lambda 12 this is 1 12 Alpha that's right and at Lambda equals 1 this is zero again I
+
+01:08:43
+think you're right thank you thank you yes is there any subtility because the Observer does not have a smooth curve or it's for the purpose of this it's it's no this is a because you're evaluating an integral you can evaluate it piecewise the curve and um so you can take out this point and you can make it smooth and it works the same it's just this is the easiest to to to integrate but the the principle is always the same okay that's right okay so here you have one so for this guy uh one year passes
+
+01:09:15
+one I'm sorry now the other Observer has integral 0 to 12 D Lambda of this expression so we have to evaluate this first in this first part this is 1 Alpha 00 0 this gives you a 1^ 2us alpha squared right uh then you do the second half 1 12 to one square root um 1 squar minus aha uh now we derive with respect to lamb then only this term survives that's um uh uh minus Alpha so it's-- Alpha squ correct one and with respect to Alpha only this is the minus Alpha yeah I think that's correct and this of course
+
+01:10:09
+twice the same term okay not surprising from from the picture but uh we're better safe than sorry here so this is uh from uh 0 to one uh Square < TK of 1 - Alpha squar D Lambda uh which is square < TK 1 - Alpha squar and you see if Alpha is not zero which we excluded because then it's the same guy the time that this guy travels is reduced it's only the square root of 1 - Alpha squ and the closer the alpha goes to one the more this guy would almost tempt to say approaches the speed of light I haven't shown that
+
+01:10:52
+yet but the more he goes to the boundary of the cone the more you can drive this time to zero so if you only move away fast enough and come away come back fast enough you don't age much according to the clock that's being carried okay now this is of course the twin paradoxon and the paradoxon is supposed to consist in the fact that what about relativity right but who talked about any relativity this is the definition of time shown by a clock but maybe at this point one gets very suspicious of the
+
+01:11:32
+whole framework because one says I mean how can that be and um indeed if we take it seriously so taking the clock postulate P1 C P3 seriously one better come up with a realistic clock design that supports the postulate can say well you can tell me a lot about what a clock measures what does a clock measure and um the idea but we're not going to do this in detail partly because I haven't introduced all the terminology yet but it's quite useful to see the following so assume I have a little I have two little
+
+01:12:39
+mirrors and I let a photon run from here to here it gets reflected goes back and so on it goes back and forth if I draw the history of that it looks like this in SpaceTime there's the cone at every point the mirror runs inside the cone but light runs on the boundary now here there's another cone the other mirror runs inside the cone but right light runs on the boundary okay let's say like this and of course it's a clock because it makes tick Tack okay it's a clock now very roughly speaking if you bring
+
+01:13:40
+these two mirrors closer together doesn't make Tic Tac it makes Tick Tac Tick T Tick T Tick T tick you can be arbitrarily precise it's a fantastic clock it's a light clock and so fantastic because it works relativistically light is a relativistic meta Theory we'll come to that and um so the working is relativistic now you take another clock and let it run like this so now Lots could be argued about what the real distance of these guys is and so on this is a very rough estimate so I'm not talking about here and I'm
+
+01:14:15
+not talking about here but if I make them very small that's not so bad and now let's count the ticks here 0 1 2 3 4 5 6 7 8 9 10 11 12 12 ticks now I do the same here let's say I start somewhere here 1 2 3 4 5 6 7 88 there you go it's shter it's a light clock okay yes yes yes so one has to talk about if this guy moves away what the distance of these mirrors is in the of in the moving system yes um I said we I haven't introduced all the terminology to do this make this precise but at this point
+
+01:15:20
+I think the picture is rather helpful than only letting this abstract result here okay yes in the example before did we make use of thees of the no no you mean the the chart you mean the chart here that we've chosen I'm just asking if we if we needed the chosen basis of the Observer or not well I mean if if I want to write down precisely how the line should run I prefer to go to a chart and I write down numbers okay but um the objects I calculate are independent of that me the frame the frame
+
+01:16:07
+bundle sorry no please ask again okay we def The Observer as the of a curve and and and this Frame yeah we didn't use that frame yet we didn't use the frame yet so the clock is only the length along the world line independent of how quickly the frame rotates or not rotates in quotation marks we'll get the notion of that okay yes each twin will see the other one move away right so yes do we know which why does one age more than the other well because of the clock postulate okay that was a mean answer so
+
+01:16:47
+the point is you're trying to construct a paradox right and the point is well first of all this guy has inertial motion and this one hasn't so this one will realize at some point he has to be accelerated again okay so that already so you give both of them in iPhone and at some point the the screen of the iPhone will change for this guy if he holds it like this right okay um however that is an expl that's not the explanation for the effect that's just the explanation why they are different
+
+01:17:18
+okay um sometimes it's claimed that all the effect is here in the acceleration period well this is really nonsense because for many reasons this is nonsense it's just the the total length here that counts and then imagine I had done the following imagine it asked the question there's a twin going from here to here and there's another twin doing this who has aged more and it's a totally IL defined question because they have to reunite to compare their clocks if not then it depends on the state or let's say I do
+
+01:18:05
+it even like this uh say like this who has the other thing is also IL defined if this guy here in this flat SpaceTime okay this is already pretty bad um like this so this one will see all these points here in the flat SpaceTime all these directions as equal to his time and this one will see all these as the points of equal time to him so this one will say now that I'm this old how old is he but this one will say now I'm this old how old is he okay so you need so the point is you can't do that you you need to to reunite
+
+01:18:50
+in order to compare so therefore a statement like the whole effect appear is here I wonder from whose point of view right you can't do that you have to synchronize clocks and to compare them again at the same point why because if you're not at the same point you don't even know when to compare them okay that's yes what could happen if they could somehow see each other during the okay okay I think we're okay all interesting questions okay the points I think we're we we're we're getting too
+
+01:19:29
+far from from what I wanted to to to tell you um no no no it's not an excuse I mean of course we could start discussing this and so on but every discussion now would heavily rely on this being a flat space time because there I can really what I did here I can say these are the points of equal time in the curved space time that's not even so clear what that is okay so there problems of what's the distance radar distance or not in curved space time this becomes all I don't want to confuse you with flat
+
+01:19:57
+space Concepts which we could now employ to make progress here okay that that's the point so I I think I leave it with these remarks at this point and um I have another important definition or another important postulate postulate let gamma e be an observer and Delta be a massive particle World line massive particle World line that is parameterized such that g of V Delta V Delta Delta is one everywhere why do I do this well I parameterized World lines according to the time that a clock would
+
+01:21:05
+show that travels with the particle why do I do this well because then I save a lot of normalizing factors in the following definitions and I can always reparameterize a world line so I choose to parameterize a world line by the time a clock carried by that particle would show why not so I do that then the Observer ah now let's make further assumption assume or suppose suppose The Observer and the particle meet somewhere in space time do we assume that is yes that's already in the definition that's because of the
+
+01:22:11
+normalization of the of the frame yes meat well somewhere in SpaceTime uh meat also neonian SpaceTime is A Spacetime concept right I was here you were here but we weren't here at the same time so meeting is A Spacetime concept meat that means that there is a parameter Lambda 1 for the Observer and a parameter Lambda 2 or let's call them to one and to 2 for the particle where they both meet at the same point so you have an observer that is goes about happy observing here okay and a a really fat very massive
+
+01:23:00
+particle happens to be where the Observer is at a certain instant now this particle has a velocity in space time V Delta agree this is the Delta and this is the gamma That's A Spacetime velocity sometimes called a four velocity because it's a velocity to the world line okay but that's not the velocity we're talking about in real life because we're talking about three velocities Now The Observer this Observer sees or measures measures the three velocity or spatial velocity this Observer measures the
+
+01:24:02
+three veloc of spatial velocity of this particle as well the velocity is maybe well a little V it's not the curly V the space time V it's a little V is G of V Delta Delta of Lambda well that's at the point where they coincide Delta tower2 comma ah no no no G sorry no G it's um Epsilon Alpha of the Velocity V Delta Delta of to 2 e Alpha where Alpha now only runs from one to three and independent of what that is this is an expansion in only these two wrong color in only these two basis vectors of our Observer do you
+
+01:25:35
+see that E1 E2 and the e0 is not part of this expansion so the resulting Vector will lie in this tangent space okay somewhere there but what are the components with respect to E1 E2 and E3 whether the components selected with an Epsilon and I need to tell you what the Epsilon is and that's subtle where epsilon0 Epsilon 1 Epsilon 2 Epsilon 3 is the unique dual basis of e0 E1 E2 E3 a ah so the Observer at each point has a basis of four vectors to this four bases there is a unique dual basis of this unique dual basis we're
+
+01:26:37
+then only going to use these three guys and then again these three guys in writing down this three velocity now sometimes one thinks well then Epsilon 1 2 3 is the unique dual basis to E1 E2 3 no because these are vectors in four-dimensional space four vectors in a four dimensional space are not a bases and there's no unique dual bases I need to find the full dual basis and then I pick only these three you say what a terribly IL defined concept right I mean for another Observer it would look different oh yes it
+
+01:27:15
+will and that's the whole point because this Observer will see this velocity I don't know whether I should attempt to draw this but this Observer will see this velocity in this in this space spend of this E1 E2 E3 and we'll probably see it somehow like this this is the V Delta where this is the curly V Delta at this point Delta of to 2 you see and that is the velocity we speak of in the lab and now if you know this velocity we speak of in the lab you can ask ask is it smaller or faster than the speed of
+
+01:27:57
+light and so on or what is the velocity of light yes we JY conoc well the point is from the way we came by defining the concepts top down this is a derived concept because what is now objective in relativity in space time this velocity the yellow velocity is objective because the world line is objective it's in a real world this is a tangent Vector in the real world right but this velocity the three velocity we had to construct with the use of an observer who sees this three velocity another
+
+01:28:47
+Observer with another frame will extract from the same objective for velocity and another three velocity okay that's it that's the whole secret to different observers seeing different things and it's even not very different from classical mechanics because also they are different observers see different velocities it's only here that because of the cone and different observers they can never see a massive particle velocity U well I would say faster or bigger than the speed of light but we haven't talked about yet
+
+01:29:21
+how the metric looks like here but of course we can do that right so you can say that the spatial metric that the Observer uses in this tangent space not in an extended sub manif for but in the tangent space is of course minus one minus one minus one because it's just the part of g e Alpha e beta right so then if you put a minus sign before it it looks a bit little bit more friendly okay so you can then take this vector and measure it with this this metric and then you get a length of this vector and this length will never
+
+01:29:58
+exceed one right so the spacial length of the spatial Vector won't exceed one and that is what it says it's slower than there's an upper limit to velocities you can see spatial velocities but in the space time picture it has to do with lying inside the cone and again here it is important now it's not the charts well The Observers are a kind of chart because it's a very localized charts only at one point it's it's a frame in the tension space right could maybe extend this to a chart in the manifold
+
+01:30:32
+but that's not even interesting it's only at this one point these different directions but again it's important this is objective and this concept is derived from an objective concept namely the tangent the velocity of the curve of the world Line This velocity is a derived concept with respect to an observer okay and um so in this velocity also if you now want to ask how far does this guy run in a millisecond you can't go very far because then space time will change and so on um you take the time of this
+
+01:31:05
+Observer and his measure and space of this Observer and so on and you calculate this okay and that is then just the notion of velocity like we know it in this observer's Frame but this is all Observer dependent the objective thing is the world line and its tangent and the rest is just extract of information right so one of the issues is getting rid of this notion that you somehow start objectively in three space and then you construct the four Notions out of it it's the wrong way around you
+
+01:31:39
+first have the Notions in space time they objective and then you construct The Observer dependent Notions as derived objects yes small only as the absolute value of this little arrow you no no no no the small V is um a vector this is an expansion in the spaces E1 E2 E3 it's not coor Vector it is this is a co- Vector the alpha Co Vector Alpha running from 1 to three acting on this four vector and then being dotted into here it is a vector so this is a vector it's even a vector in SpaceTime this V
+
+01:32:21
+is A Spacetime Vector it just happens to lie in the span of E1 E2 E3 yes that's exactly what I intended to do thank you thank you okay yes calling this word L um objective isn't it a little bit weird because um objective it's in the real reward and um but it would look if uh it could look differently if um other people in the world look at this no no but no it wouldn't no it wouldn't bird flies by the bird does what the bird does and that's that's what what the world line the history of
+
+01:33:18
+the bird is the history of the bird you may picture the history of the bird in different charts but that's not what's happening okay you may be confused by the fact that I draw a picture and you can say drawing the picture is already implicitly using a chart or something like this okay so it's a metaphor that's why I don't like these pictures so it's a metaphor right all these pictures are metaphors right imagine think of the history of this particle and that's a curve an objective curve in space time
+
+01:33:51
+that's the idea has an objective velocity and so on but then come different observers and measure it and after all this is a postulate how the Observer sees that okayed this is aate after yes I could have if you have IG time and you have the um curvature um sorry the the measure in here it seems like it's a funny postulate but in fact I would need what I would need is for an observer at a point I would need all points which from the point of view of this Observer are at the same time then I could consider
+
+01:34:43
+curves through here and I could start defining these velocities but the point is as I Define observer it just consists of these tangent vectors to this and that direction and that tells me nothing about what happens in the manifold a little bit away and in fact in curved SpaceTime this is really an issue also of of definition what you actually mean how far somebody is away you could Define a radar time and stuff like this no I mean imagine for instance in curved SpaceTime or any in any SpaceTime you
+
+01:35:13
+have an observer and you have another Observer say even they they they they go like that and now but it's a curved space time so now you say how far is this guy away from me now this is uh the Earth and this is a star now what you can do you can send light but light will maybe run like this depending on how the cones change okay and then the light will be reflected and will come back and then you can use this radar time as it's called it's a time from here to here you maybe divided by two or or something you
+
+01:35:50
+can use this as a measure of distance half this time okay but now imagine some vicious entity in the universe removed this point from the SpaceTime for instance by or or put a black hole there or something right so then nothing of the sort will happen and then the result will be this light Ray never comes back how far is the other guy away infinitely far away he see these ideas of distance and Stu this becomes very I mean becomes a matter of definition and you need to think very very carefully what you
+
+01:36:32
+actually mean there so therefore defining the spatial velocity in the sense like well let's first Define here space and then let's look at curves again and so on and then use the time it's not a bad idea and locally it will probably work and blah blah blah but this is much cleaner because where I am I know that I am there then the tension space is there I have the frame and so on okay that's the idea yes I mean this of course let's assume that you're at the real the same
+
+01:37:03
+point but I mean in real life there's always I mean the clock is you know it's there right I'm not at the same point could it could it be that the space is so curved that even if you have a clock there it doesn't actually you cannot perform this thing experimentally or well if curvature gets very high it gets more more difficult we'll come to that okay okay okay sorry I need to stop your questions because I have uh uh two more things to say um um another consequence is the following um an
+
+01:37:45
+observer gamma e will extract uh um quantities measurable in his laboratory from objective SpaceTime quantities always let like that so the prime example for this is take the F tensor the Faraday tensor the Faraday 02 tensor of electromagnetism so in a chart you have all seen this faab is this guy that has zeros here and an symmetric has E1 E2 E3 here minus E1 - E2 minus E3 here and it then has the B um 1 2 3 1 3 minus uh uh 2 um 2 3 1 B1 and then here minus B3 B2 minus B1 something like this okay you've seen
+
+01:39:29
+this right the tensor that combines the e in the B field well this is already in a frame so this is already the F EA EB of a particular Observer no wonder that different observers see different e and B fields because this is this okay and then of course you can come up with funny ideas like you only look at the e0 um e Alpha component and you call that e Alpha and you only look at the E Alpha e beta component and um take then an Epsilon Alpha Beta gamma and you call that b gamma that's essentially this extraction
+
+01:40:31
+then the other way around okay but this is highly Observer dependent highly and here in the epsylon you see some of the funny behavior of the B fields okay so the objective SpaceTime quantity is the farad 02 tensor which is unimpressed by charts or observers looking at it it is what it is it is what Max the Maxell equations say it is but then if you want to go to the lab and measure it you measure these quantities because your lab is an observer your lab may be rotating for instance then you measure different e e
+
+01:41:11
+and B fields okay so the Observer is the intertwiner between the objective quantity in the real world described by abstract tensors and the quantities you measure in the lab with respect to your Observer frame that's it it's perfectly simple this fully explains the transformation law of the E and the B if you change Observer that's it one more Blackboard please only a short question thison epon oh the Epsilon here is again the um the famous 1 2 3 is + one and totally anti- symmetric one has got to be careful this
+
+01:42:14
+is a 02 tensor this is a vector and this is a vector for each Alpha so each of these is just a function it appears but um it's a space-time function but something that's A Spacetime tensor in general may be a hyper surface density think about this you got to be careful as soon as you start relating things to three space they might change their density weight we talked about densities before this just for the interpretation okay so uh final is now number four I don't know role of the
+
+01:42:57
+Lawrence Transformations now it's three role of the Lawrence Transformations so the Lawrence Transformations Lawrence transformations emerge as follows let gamma e and Gamma twiddle e twiddle be observers with gamma uh of some Lambda or some to one equals the gamma twiddle of some to 2 meaning that two observers which at some point of the history meet at the same point it's very important now one of them has this Frame say e0 E1 E2 and the other one has this Frame e z tdd E1 tdd E2 tdle that's roughly how that will
+
+01:44:32
+look like okay let's have these two guys now we know well let's for Simplicity say uh there are times are chosen such that this is the same time because otherwise I need to have so many of these guys now it is clear that e0 to E1 all taken at Time Zero all taken at to equal 0 is a b and e0 tdle to E1 tdle also taken at to equal zero are both bases for the same for the same T gamma of 0o M these two are both bases for the tangent space at this point that's the definition more or less
+
+01:45:31
+that's totally clear thus if they're both bases I can express the twiddled bases in terms of the UNT twiddled bases is that right I can change bases by a transformation which I may call Lambda okay and this Lambda as a matrix is in gl4 it's a general linear map it's an invertible map otherwise I can't send a basis to a basis that's what I know now what do we know we know that g of e a tdd EB twiddle is eaab why because of the Observer definition but now I can plug in this is
+
+01:46:19
+G of okay now I can write it in components Gab e aha uh confusing ah yes yes yes I can write it as oh hang on a second no I don't even want to to write this in components this is now Lambda B Lambda m a e m Lambda NB n but because this is the infinity linear well anyway linear I have Lambda M A Lambda n b g e m e n but this again by this also being obser an observer is e MN so I have to condition EA a equals lamb lamba uh that is these lambas are element of what we usually call the lawence transformations
+
+01:47:26
+right so that means what is the role of the Lawrence transformation the role of the lence transformation so result Lawrence Transformations relate the frames the first thing the frames of any two Observers at the same point is perfectly meaningless to talk about the frame of this Observer and the frame of that Observer and to say this comes from this bence transformation they live in different tangent spaces perfectly meaningless lawence Transformations the frame relate the frames of two observers
+
+01:48:18
+they do not it doesn't make any sense in the first place they do not act on space time they act on one tangent space of space time and relate observers who meet there or they act on another tangent space of space time and they act on Observer frames who meet there this has nothing to do with acting on SpaceTime points so the um Lambda mu new X mu is the new SpaceTime Point exle mu stuff is I they say at nonsense right this just isn't done now you can do this on flat SpaceTime and say all transformations I want to look
+
+01:49:09
+at others then you greatly restrict to linear Transformations which means you never have to look at gamas if the original space time was flat you chose the right chart but it also restricts you to not being able to go to Polar coordinates and what has has that to do with relativity absolutely nothing right so Lawrence Transformations on SpaceTime are a terrible conceptual idea just don't do that they have no place there right and then one does that right in special relativity and then one says oh
+
+01:49:42
+in general relativity now allows that these are not only lawence Transformations but any transformation well it was already allowed in special relativity but if that was so they sometimes people say the Lawrence group is replaced by theomorphism group if you go to general relativity you now can go to any frame where as before you couldn't well you could is you could but this was nonsense and even if you say general relativity is where you leave the Lawrence Transformations you go to others where
+
+01:50:12
+the Lawrence Transformations keep their value where they had their value before so the lawence transformations in special relativity have the same meaning what this this is not their meaning this is nonsense in spe this is also true in special relativ if the space time is flat this still holds so both in special and in general relativity Lawrence Transformations relate Observer frames at the same point and on the whole SpaceTime be flat or curved it doesn't matter General defom morphisms can be chosen in order
+
+01:50:49
+to go to different charts there is no difference hence it's sometimes so dangerous to start with special relativity in concepts of minkovsky vector space as the space of events because it clouds your thinking okay this is just an abuse of flat space structure thank you very much
+

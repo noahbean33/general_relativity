@@ -1,0 +1,48 @@
+00:00:00
+So we're continuing with our discussion of covectors. In this video we're going to talk about covector components. So just a quick review: we said that covectors are functions that take vectors to produce numbers. These functions are linear and obey these properties here. These functions can be added and scaled in a meaningful way. And because of that they form a vector space which we called V*. And finally we can visualize covectors as  these oriented stacks of planes. So when I first introduced covectors, I said that they were a  bit like row vectors. So we know that a column
+
+00:00:32
+vector really represents a vectors components in  a given basis, right? So that makes you think that row vectors somehow represent a covectors  components. And that's exactly correct. So I'd just like to pause here and state this in case  it's not already obvious: Covectors--like vectors--are invariant. They are purely geometric  objects and they do not depend on a coordinate system. But covector components do depend on the coordinate system. So a covector will be represented by different row vectors with different components
+
+00:01:04
+depending on which coordinate system we're using. All right, so that aside, what do we even mean when we say that a covector has components? When we write the column vector [2, 1] in reference to a basis here, what we really mean is that this vector is given by the linear combination  "2 e_1 + 1 e_2". We're just telling you how much of each basis vector is needed to make the vector. So what are we talking about when we say a row vector [2, 1]? Like 2 of what and 1 of what? So remember covectors are functions from the vector space V to
+
+00:01:37
+numbers. Covectors don't live in the vector  space V, right? They take vectors in V as inputs. So we can't use basis vectors in V to construct covectors. So what do we do? Well what we're gonna do is... We're going to take a basis "e_1, e_2" for V and  we're going to introduce two special covectors epsilon^1 and epsilon^2, which are both functions  from vectors to numbers. And you'll notice I put the labels 1, 2 above the covector instead of  below. I did that on purpose and we'll get to
+
+00:02:09
+why I did that later. Anyway these covectors are  defined as follows: when epsilon^1 acts on e_1, we get 1. And when epsilon^1 acts on e_2 we get 0. And when epsilon^2 acts on e_1 we get 0. And when epsilon^2 acts on e_2 we get 1. So if that's confusing, all this  really says is that if the top number matches the bottom, number we get 1. And if the numbers are  different, then we get 0. So to sum all this up we can write epsilon^i of e_j is equal to the  Kronecker Delta ij. Remember that the Kronecker
+
+00:02:43
+Delta says if i=j we get 1, and if not we  get 0. So right here is how we define the epsilons. So what do these covector epsilons actually look like as stacks of lines? So to find that out let's apply them to a vector. So here's epsilon^1 acting  on some vector V. And of course we can write V as a linear combination of basis vectors e_1, e_2. And  remember since covectors are linear we can add and scale the inputs, or add and scale the  outputs and get the same answer. So we can bring the addition and the scaling numbers outside the  function like this. And epsilon^1 of e_1 goes to 1.
+
+00:03:23
+And epsilon^1 of e_2 goes to 0, by definition. And so we're just left with V_1. And we can do the same thing and apply epsilon^2 to V, and we end up with  the second component V_2. So what these epsilons are doing is, that they're projecting out vector  components, right? When we apply epsilon^i to V, we get the ith component of V in the e_1, e_2 basis. So epsilon^1 visually looks like this because it helps us get the first component of V where e_1  is the basis vector that points in this direction.
+
+00:03:59
+And epsilon^2 looks like this because it helps us  get the 2nd component of V where the e_2 basis vector points in this direction. So that's what  the epsilon covectors look like. Now let's apply some general covector "alpha" to V. So this could be any covector we choose. And again let's expand V in the basis e_1, e_2 and use the linearity of alpha to get this. Now remember the components of V can be obtained by applying the epsilons, right? The epsilons project out the components. So we can
+
+00:04:31
+rewrite alpha(v) like this.And what we're going to do now is. We're going to make these definitions here So we define alpha(e_1) as the number alpha_1. And we define alpha(e_2) as the number alpha_2. So that means we can rewrite this. And using the scaling and addition rules for covectors we can rewrite this sum as a single covector like this.  And finally we get this. So alpha is equal to alpha_1 epsilon^1 and alpha_2 epsilon^2. So what we've done is: we've written a general covector alpha
+
+00:05:04
+(which could be any covector of our choice) as a linear combination of the epsilon covectors. So what this means is that the epsilon covectors form a basis for the set of all covectors. And for that reason we call these epsilons the "dual basis" because they're a basis for the dual space V* So we've written this out algebraically, but  let's try to think of this visually so we have a better idea of what's going on. Say we have a covector alpha, a stack of lines, living in a space
+
+00:05:33
+with basis e_1, e_2. We can get the components of alpha by applying it to the basis vectors e_1, e_2. So we're just going to count the number of lines pierced here. And now using these alphas we can write covctor alpha as a linear combination of  epsilon^1 and epsilon^2 like this. So the process is: we start with our vector basis. And then using this definition here we get the dual covector basis. And then using those we can express any  Co vector as a linear combination of the dual basis. But remember these epsilon aren't the only  basis we could use to express alpha. We could use
+
+00:06:07
+any basis that we wanted. So, alternatively, we  could start with this vector basis. And then using this rule we can define another dual basis,  which are the epsilon tildes, which are these. And we could also express any covector as a linear  combination of the epsilon tildes. So there are multiple bases that we can use to express a covector. Up here we have the epsilons and down here we have the epsilon tildes. Okay so let's  say we have a covector which is represented in the old covector basis (the epsilon s) and has  components [2, 1]. What would those components
+
+00:06:43
+look like in the new covector basis )the epsilon tildes). Well all we need to do is apply alpha to the new basis vectors e_1~, e_2~. So let's start working this out. So what's the first component? that's alpha(e_1~). Well  looking here we see that e_1~ is just "2 e_1 + 1 e_2". And by linearity of alpha, we can do  this. And we know how alpha acts on e_1 and e_2 from up here. These are just the components of alpha in the old basis. And this works out to be 5. And we can do the same thing for the second component. e_2~ is "-1/2 e_1 + 1/4 e_2". And we
+
+00:07:24
+can use the linearity of alpha. And we replace  these with the components in the old basis. And we get negative 3/4. So this covector alpha has  components [2,1] in the old dual basis, but it has components [5, -3/4] in the new dual  basis. And you'll notice that the old and new covector components are related by this matrix which is the forward matrix. so with covector components, forward brings us from old to new and backward brings us from new to old. And this is actually the opposite of what we did for vector components  under a change of basis. So this is why we can't
+
+00:07:59
+just flip column vectors on their side to get row  vectors. It works in the orthonormal basis where we can write this yellow vector using two e_1s and one e_2, and coincidentally e_1 just happens to peirce two covector lines. Whereas e_2 happens to pierce one covector line so the vector components and covector components are both [2, 1]. But in the new  basis we only need e_1~ to make the vector V but e_1~ pierces 5 covector lines. And e_2~  doesn't contribute to the vector V at all, but pierces 3/4 of the way to a covector line  in the negative direction. So vector components
+
+00:08:37
+are measured by counting how many (basis vectors) are used in the construction of a vector. But covector components are measured by counting the number of covector lines that the basis vector pierces.
+

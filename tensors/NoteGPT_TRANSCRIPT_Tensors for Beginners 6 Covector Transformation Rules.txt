@@ -1,0 +1,36 @@
+00:00:00
+In the last video we saw that all co-vectors can be written as linear combinations of the dual basis vectors We saw how covector components can be obtained by counting how many co-vector lines that the basis vector pierces And we also saw that covector components transform in the opposite way that vector components do. So now we're just going to confirm what the covector transformation rules should be mathematically. So the first thing we need to get out of the way is figuring out how covectors themselves transform
+
+00:00:30
+So not covector components not the alphas we're talking about the Co vectors themselves which are the epsilons So with vectors in order to get from the old basis to the new basis We build the new basis vectors out of the old basis vectors right then and that was our forward transform Now we jwant to do the same thing with covectors So how can we build the new dual basis out of the old dual basis? What are the q coefficients that let us do this? So to figure this out we start by applying epsilon 1 tilde to e 1 and
+
+00:01:02
+Replacing epsilon 1 tilde with the epsilons as written here and using linearity rules we can get this so we know that this goes to 1 and this goes to 0 So epsilon tilde of e 1 is equal to Q 1 1 and if we apply epsilon 1 tilde to e 2 we get that it's equal to Q 1 2  Okay, so an alternative way of writing epsilon 1 tilde is like this and these parts here are just numbers Okay, so given this let's bring out our backward transformation so that we can write out old basis vectors in terms of new basis vectors
+
+00:01:39
+So we get this Now using the linearity of covectors and these go to 1 while these go to 0 And we get this the new dual basis vectors in terms of the old And if you turn through all that again you can do the same thing for epsilon 2 tilde So you'll notice that these coefficients and these coefficients over here are awfully similar, right? So this means that to go from the old dual basis to the new dual basis, we use the backward transformation Okay, so let's try and prove that for any dimension
+
+00:02:16
+Okay, so I have a ton of stuff here. I have our dual basis definitions I have our forward and backward transformations And I have a little reminder that the forward and backward transformations are inverses Because when we multiply them we get the Kronecker Delta Okay, so let's start by writing epsilon i tilde as a linear combination of the epsilon Now apply the co-vectors to the new basis vector ek tilde now the left hand side becomes a Kronecker Delta by our definition here And on the right hand side we can replace the new basis vectors with a linear combination of the old ones using the forward transformation
+
+00:02:56
+And by linearity of covectors we can take the summation and the scaling constants outside And this also becomes a chronic or Delta by this definition here Now on the right this term here would be equal to zero when J doesn't equal L So we can ignore all the terms where J doesn't equal L. We only care about the terms where J equals L So what that means is I can replace this L here with a J since those are the only terms we care about And so now we have that Q multiplied by F gives us the Kronecker Delta
+
+00:03:35
+So in other words Q and F are inverses But remember that we already know that the inverse of F is B so what that means is that Q is equal to B since F Can only have one inverse so Q is equal to the backward transform And so we move from the old dual basis to the new dual basis using the backward transform, and now you understand why we write covector indexes up top because they transform in the opposite way that basis vectors do So here I've summarized the basis vector and covector transformation rules and agaiin they are opposites
+
+00:04:11
+So now that we know how basis vectors transform Figuring out how their components transform is really easy We just write covector alpha as the sum of the old basis covectors We use the forward transformation to rewrite the old basis in terms of the new basis We rearranged the sums, and we see that this part in the middle has to be equal to the new co-vector components alpha tilde And so we find out that the forward transform brings us from the old co-vector components to the new Likewise the backward transformation brings us from the new covector components to the old
+
+00:04:46
+so covector components transform in the same way that the basis vectors do And let's do a sanity check to make sure that makes sense So here we have a co-vector sitting in space with basis e1 e2 And it looks like e1 one pierces two lines and e2 pierces two lines so the components in this basis are 2 2 Now what if we made these basis vectors twice as big? So we'd get a new basis here e 1 tilde e 2 tilde and what are the covector components now? Well e1 pierces one two three four lines and  e2 tilde appears as four lines as well so the components are four four
+
+00:05:26
+So this means that when we increase the size of the basis we also increase the size of the covector components So covector components transform in the same way that the basis vectors do. So hopefully that makes intuitive sense now So here I've summarized all the transformation rules that we've learned so far in these videos We started with the transformation rules for basis vectors And then we figured out that the transformation rules for vector components were the opposite compared to the basis vectors
+
+00:05:57
+So we said that they were contravariant Then earlier in this video we found the transformation rules for basis covectors were also opposite compared to basis vectors so basis covectors also transform by the contravariant rule And finally just now we found that covector components transform in the same way that basis vectors do So this means that covector components transform covariantly And that's why we write the indices on the bottom. Just like with basis vectors because they transform in the same way
+
+00:06:34
+So that finishes off covectors. In the next video we'll talk about our third example of a tensor, which is the linear map
+

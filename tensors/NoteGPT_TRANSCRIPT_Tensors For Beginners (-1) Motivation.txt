@@ -1,0 +1,39 @@
+00:00:00
+All right. Welcome to this video series on tensors. In this first introductory video, I'm going to try and give you a bit of motivation for why you might want study tensors. And then, in later videos, I'll get to explaining what tensors actually are. So before I start, I should mention that I expect people watching this video series to have a little bit of linear algebra under their belts already. So I'm hoping you already know how to multiply matrices, and you know what terms like "linear combination" and "dot product" are.
+
+00:00:32
+If you don't know any of this stuff, you're welcome to watch anyway but you might find it a bit harder to keep up. What I'm gonna try and avoid doing is doing any mention of calculus. Some people like to introduce tensors using calculus but you really don't need that. You only need linear algebra. I'm going to talk a little bit about calculus and tensors at the end of the video series for people who do have a calculus background. But I'm going to do my best to avoid any mention of them until then.
+
+00:00:59
+All right. So why should we want to study tensors? So the main reason you would want to study tensors is Geometry. If you understand tensors, then you can get a lot of insight into how geometry works Now I'm not talking about the geometry you would have learned in elementary school or high school... stuff like basic shapes or trigonometry. I'm talking about geometry that can be fairly complicated and not very intuitive. So one example of such geometry is the geometry of space-time in Einstein's general relativity.
+
+00:01:31
+So let's talk about that a little bit. So if you've ever read or watched any popular science articles or videos on general relativity, you've probably heard about how space-time is 'curved' and how light can travel in a curved path around massive bodies like stars and black holes. Another thing you might have heard about is how the universe is expanding, right? So at the beginning of time we had the Big Bang here, and ever since then the universe has been getting bigger and bigger. And so the universe is expanding.
+
+00:02:02
+Now when you first hear these ideas, you're probably thinking, you know, "What the heck do these even mean?" "What does it mean for space-time to be curved?" "What does it mean for the universe to be expanding?" So in order to understand these ideas mathematically, we need tensors. So I'm just going throw up some equations on the board right now. So these are Einstein's Fields equations. and I say equationS with an "S" on purpose, because even though it doesn't look like it,
+
+00:02:28
+There are actually 16 equations here. And these 16 equations tell us how space-time is curved and why the universe is expanding. Now you don't need to understand what any of these mean. But the important thing that I'm going to point out to you is that... every symbol that I'm underlining right now... is actually a tensor. So there are tensors everywhere in these equations. And the most important tensor in general relativity is this one here... the "g",  which is called the metric tensor.
+
+00:02:59
+It's a four-by-four rank-two tensor which you could also call a four-by-four matrix. And it helps us measure lengths and angles in the curved geometry of space-time. Now I'm going to talk about the metric tensor in... I think video 7 or 8? I'm going to use much simpler examples than the ones you'd see in general relativity, But hopefully you'll understand what the metric tensor is and you'll have taken the first few steps toward understanding why space-time is curved and why the universe is expanding.
+
+00:03:31
+Alright so another example of tensors being important is in quantum mechanics, and in particular, quantum computing. So quantum computing is a pretty active field of research these days. If we ever get quantum computers working, they'll be able to solve solve some problems that the classical computers we use today are not able to solve. Or at least, the classical computers we have today can't solve them very efficiently. Anyway, again, if you've ever seen popular science articles or video on quantum mechanics,
+
+00:04:00
+you've probably heard the term 'quantum superposition'. And so this is the idea that quantum systems can be in two states at once. And usually they give some weird example involving a cat being dead and alive at the same. I'm not sure how literally you want to take that, but... there it is. And so another idea in quantum mechanics is the idea of 'quantum entanglement'. And so this is the idea that two particles can become entangled and even if you separate them by hundreds of kilometers
+
+00:04:32
+they can still influence each other in strange ways because they're connected using this strange quantum entanglement property. So again what do these terms even mean? What does... what's "quantum superposition"? And what's "quantum entanglement"? What do these mean mathematically? So it turns out that "superposition", if you know a little bit of linear algebra... "superposition" is just a fancy way of saying "linear combination". So with linear combinations, what we do is... We have what you might think of as "simpler" vectors... and we combine them together using scaling constants and addition... to get a more complicated vector here.  And it turns out in quantum mechanics... Physical states... physical quantum states... are actually just vectors.
+
+00:05:15
+And so we can combine simpler states together using linear combinations to give us more complicated states. And so that's really all quantum superposition is. As for "entanglement"... when two quantum systems are "entangled" together... what we really mean is that these state vectors have been combined together using something called the "tensor product". And that's what this "circle-X" symbol is: it's the "tensor product". So what the tensor product does is... It takes the geometrical space where the FIRST system lives... And the geometrical space  where the SECOND system lives... and combines them together to create a more complicated geometrical space.
+
+00:05:54
+And that's where the entangled system lives. So I'll be talking about the tensor product in (I think) video 9 or 10? And hopefully that will be a first step toward understanding quantum entanglement mathematically. All right. So hopefully I've made you at least a little bit curious and hopefully you want to learn a little bit more about what tensors are. In the next video I'm going to start explaining what tensors actually are and after that we can get started learning some actual math.
+
+00:06:22
+So, I'll see you in the next video.
+

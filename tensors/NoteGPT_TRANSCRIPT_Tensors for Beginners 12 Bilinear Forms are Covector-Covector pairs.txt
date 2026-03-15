@@ -1,0 +1,42 @@
+00:00:00
+In this video, I'm going to introduce the idea  of covector-covector pairs and show that these covector-covector pairs are, in fact, bilinear  forms. And also, I'm going to be using some non-standard notation for the tensor product in this  video, most textbooks will write it like this with a circle-times operator in between, I'm going to  omit that symbol and just write the covectors next to each other like this. So recall in the last  video, I introduced a new perspective on linear
+
+00:00:26
+maps, I said that linear maps can be written as  linear combinations of vector-covector pairs like this. And this process of combining vectors and  covectors together is called the tensor product, which your textbooks will write like this.  So we have this new perspective. And this new perspective came along with a lot of benefits. The  first and most obvious benefit is that we didn't have to remember the linear map transformation  rules anymore, we actually get them for free. So if we write out a linear map in the old basis  here, and we want to move to the new basis, all we
+
+00:00:59
+have to do is we transform the basis vectors and  the basis covectors individually. So basis vectors are covariant. So to build old basis vectors out  of the new basis, we use the backward transform B, and basis covectors are contravariant. So we build  the old out of the new using the forward transform F. And we just pull these out in front. And there we go. These are the components of the linear map in the new basis. So as long as we know how to  transform basis vectors and basis covectors, we get the transformation rules for linear maps  almost for free. Another big benefit is that when
+
+00:01:36
+we have a linear map acting on a vector, we  can get the correct matrix-vector component multiplication formula for free, we just have to  replace the linear map and the vector with their linear combinations expanded in some basis. And  by using linearity rules, and the Kronecker delta index cancellation rule, we automatically get the  correct components for the output vector given by this multiplication formula here. And finally, the  last benefit we get I didn't actually mention in the previous video, but if we consider tensors, as  arrays, the tensor product will automatically give
+
+00:02:10
+us the correct array shape. So what do I mean by  that? Well, before I showed you that when we have a column vector on the left, multiplied by a row  vector on the right, we obviously get a matrix as the result. But there's another way of getting  the same result. And that's sometimes shown using this circle-times symbol in here. And what this  circle time symbol is telling us to do is it's telling us to take the array on the left, and  distribute it to each of the components inside
+
+00:02:38
+the array on the right. So distribute, that  just means we take this column vector here, and give one copy of it to each element inside the  second array here. And so we're left with this, which if you look at it, it's a row of columns,  which basically it's basically like a matrix. So this way of thinking tells us that linear maps are  rows of columns. Now, you might be thinking that this is kind of stupid... obviously, linear maps are matrices, you don't need anyone telling you that.
+
+00:03:07
+And you're kind of right, that this isn't a big  surprise. But this idea of distributing arrays into each other will turn out to be very useful  later on. So all of that is a summary of how our perspective change on linear maps gave us a bunch  of benefits. Now next, we're going to go through a similar perspective change for bilinear forms.  And this, of course, includes the metric tensor. And we're going to view bilinear forms as linear  combinations of covector-covector pairs like
+
+00:03:35
+this. So first of all, why are we choosing  covector-covector pairs for bilinear forms, why not choose something else like vector-vector  pairs? Well, bilinear forms take two vector inputs, right? And since covectors take one vector  input each, a pair of covectors would take two vector inputs. So that's sort of a hint that we're  on the right track with covector-covector pairs. So we'll just go through the same process again.  First off, we'll look at the transformation rules, if we assume we can write out any bilinear  form as a linear combination of covector-
+
+00:04:07
+covector pairs. To get the transformation rule  for these components, we just transform the basis covectors individually. So basis covectors  are contravariant. So to build old from the new, we use the forward transform F. And putting these  in front gives us this transformation rule which as we can see is the correct one, and we can  go through a similar process for the reverse transformation. Next, we can see that we can also  get the correct component multiplication formula when a bilinear form acts on two vector inputs.  So again, all we do is replace the bilinear form
+
+00:04:42
+and the vectors with their linear combination  expansions and some basis. And what we do now is we pass each of these vector inputs to their  corresponding covectors. So the first vector is passed to the first covector, and the second  vector is passed to the second covector, and by linearity of covectors, these come out in front.  And these become Kronecker deltas. And finally, by the index cancellation rules, we get this.  And this is the correct component multiplication formula that ends up giving us a single number as  the result. And finally, the last benefit is the
+
+00:05:18
+array shape. So with linear maps, we had this  circle times operation with a column vector on the left and a row vector on the right, but for  bilinear forms, since we're dealing with covector covector pairs, we're going to use two row vectors  instead. And again, we're going to distribute the array on the left to every element of the array  on the right, and we end up with this, which is basically a row of rows. Okay, so hold on, we got  a row of rows. And that might not seem right at
+
+00:05:48
+first. Recall in a previous video, I wrote out  the array multiplication like this, where this bilinear form or metric tensor was a matrix. So  why did we get a row of rows? Well, a row of rows actually makes a lot more sense. Remember, with  this formula up here, even though we have two vector inputs, we needed to write one as a column  and one as a row flipped on its side to make the multiplication work correctly. And that's kind of  weird, because vectors should never be written as rows, they should always be written as columns,  right? Well, when we write the bilinear form as
+
+00:06:24
+a row of rows, the matrix multiplication formula  makes a lot more sense. We can write out both vectors as columns. And you'll see that if we turn  through this, we get the right answer. So here's a row and a column, we just multiply them together  like we normally would, we do first times first plus second time second. And now we have a sum of  two rows here, so I'll just add them together. And again, we have a row and a column here. So it's  the same old process: first-times-first plus second-
+
+00:06:54
+times-second. And the final result is this, which we could write as this summation. So from an array multiplication standpoint, viewing the bilinear  form as a row of rows actually makes a lot of sense. So to summarize what we learned in this  video, we learned that we can write bilinear forms as linear combinations of covector-covector pairs.  And this immediately gives us the transformation rules, the component multiplication formula,  and the correct array shape, all for free.
+

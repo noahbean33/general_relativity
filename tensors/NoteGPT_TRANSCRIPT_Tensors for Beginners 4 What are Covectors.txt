@@ -1,0 +1,78 @@
+00:00:00
+In the last couple videos, we saw our first example of a tensor, which was the vector. And we saw that vector components transformed in the opposite way that basis vectors do. And because of that we said that vectors were "contravariant". In the next few videos we're going to talk about our second example of a tensor, which is the covector. So the first thing we're going to do is... we're going to answer the question: "what is a covector ?".  Well as a starting point, we can
+
+00:00:27
+think of covectors as basically like being row vectors. And you might think: "well row vectors aren't too hard; a row vector is just like a column vector that we take and flip on its side like this", right? Well, it's not quite that simple. You might not be aware of this, but column vectors and row vectors are fundamentally different types of objects. And the reason you might think that they're basically the same is that you've normally been dealing with them in an orthonormal basis, which is a basis where all the vectors are one unit long
+
+00:00:58
+and they're all perpendicular to each other. So when we're dealing with an orthonormal basis, the idea of flipping column vectors onto the side to get row vectors is actually true. But it's not true in any other coordinate system. And to realize why, we're going to have to think about row vectors as functions. So we can think of a row vector as a function on a column vector. So in this example, this row vector (2, 1) would be the function, and this column vector (3, -4) would be the function's input. To find the output value
+
+00:01:29
+of the function, we just do the standard matrix multiplication, or "dot product", of this row and column vector. So carrying that out we get 2 times 3 plus 1 times -4. A that's just 6 minus 4.  And then we get the output 2. Now if we have any general covector "alpha" acting on any general vector V, then we get the output value by taking the dot product of the two vectors like this. And we can write that more compactly using this summation. So ultimately we should think of row vectors as functions that take an input
+
+00:02:03
+from some vector space V and return a real number, or a "scalar". Okay so let's examine how these row vector functions work a little bit more. Let's say that we have a row vector which is acting on two vector inputs that are added together. So there are two ways that we could go about calculating the output. One way is to distribute the row vector to each of the inputs and then add the results. And that gives us this output here. And the other way is to add the inputs together and then get the row vector to operate on
+
+00:02:35
+the column vector input. And you can see that this gives us the same output 5, as we had in the previous example. So row vectors as functions have this property here where we can add the inputs before, or add the outputs after, and we'll get the same result. Another idea we can consider is what if the vector input is scaled by some number like this. And again there are two ways that we can compute the output. We can scale the input vector and then have the row vector act on the result to get this. Or we can put the scaling number
+
+00:03:10
+out in front and then scale the results of the row vector acting on the column vector. And again we get the same result. So row vectors as functions have this property that we can scale the input or scale the output and we get the same result. So to sum up, a covector is a function that takes a vector and produces a "scalar" (or a number) and it has, the property that we can add the inputs or add the outputs to get the same answer, and it has the property that we can scale the inputs or scale the outputs by the same amount and get the same answer.
+
+00:03:41
+More generally. these two properties when they work together look like this. And this behavior of being able to add or scale either the inputs or the outputs and getting the same answer is called "linearity". So covectors are linear functions. So now, how do we visualize these covectors? We know that we can visualize ordinary vectors as arrows like this. And we sort of could do the same thing with covectors, but that's that's sort of an awkward thing to do for visualizing a function. And it turns out there's a much better way to do it.
+
+00:04:13
+So let's start by thinking of this 2D row vector as being a function on two variables: "x" and "y". So the row vector (2, 1)  can really be thought of as a function 2x +y. So how can we visualize a function of two variables that produces oneoutput?  Well this is very similar to a problem that map makers have to deal with when they want to convey elevation on a two-dimensional sheet of paper. Right? When you have a topographic map, you basically need to show off the slopes of mountains and valleys, but only
+
+00:04:48
+using a 2D page. So what topographers do is, they take a map and they draw curves of constant elevation like this. So this curve here that's labeled "3000"... Everywhere on this curve is exactly 3000 feet high. And this curve over here labeled "2000" everywhere on this curve is 2000 feet in elevation. So just looking at this map here, we know that when the lines are stuck together really, really densely like over here... This is a place where the elevation changes really,
+
+00:05:20
+really steeply. Right? Whereas over here, where the lines are less dense... This is a comparatively shallow slope because the elevation changes less quickly. Another way of thinking about this is that if we have this red mountain here... If we take a horizontal slice at some height we'll end up with contours that look different. Right? So if we slice that this elevation, we'll get this contour. If we slice at this elevation, we get this contour. And this elevation is this contour. And these
+
+00:05:53
+would be like the curves of constant height on a topographic map. So let's take this idea and apply it to the row vector (2, 1),  which, again, when taken as a function of inputs "x" and "y", gives us the value 2x +1y. So to start let's ask: "Where does this function equal 0?" Well, if we change this around a little bit, we get the line y = -2x.  And that would be a line like this. And next we'll do where the function equals 1. So we get y = -2x + 1. And that would be a line with the same slope  but just shifted up a little bit.
+
+00:06:36
+And when the function equals 2, we'll get another line just shifted up by 2 units instead. And so when this function equals -1, we'll get the same line, just shifted down. And when the function equals -2, same thing just shifted down even lower. Okay so let's clean this up. So this is our covector (2, 1) visualized as stacks of lines. And note that since the stack is increasing toward the upper-right we can add these little arrows here to remind us of the direction of increase. Right? This stack
+
+00:07:06
+has a direction. It's increasing this way and decreasing the other way. And you'll notice that if I were to draw the vector (2, 1) as an arrow here... the arrow would be perpendicular to all the lines in the stack. All right so we can visualize covectors as stacks of lines and this ends up being really, really useful. And I'll show you why on the next slide. Ok, so here I have the same covector "alpha" over and over again, visualized as a bunch of directed stacks. And over this
+
+00:07:37
+covector I have the vector "v" in yellow, pointing in different directions. And what I'd like to do is, I'd like to figure out the numerical value of the covector "alpha" acting on the vector "v". So let's take a look at this first one here. So remember: each line in the stack is a line of constant value. So to get the value of "alpha" acting on "v", all I need to do is count the number of lines that "v" pierces . So here "v" pierces 1... 2 lines. So the value of "alpha of v" would be 2.
+
+00:08:13
+Okay, and this one it doesn't pierce any lines but it gets halfway to the first one, so we would say 0.5 or 1/2. Here it pierces 1... 2... 3 lines. But it's going against the orientation of "alpha", so that means that "alpha of v" is -3. And in this last example here, the vector is parallel to the stack so, we get a value of 0 since the vector doesn't pierce any lines at all. So this visualization is really nice, right? We don't need to know anything about coordinate systems or components in order to understand how a covector acts
+
+00:08:48
+on a vector. We just... we just look at the picture and count the number of lines the arrow pierces, and then that's the answer. Okay, so hopefully this is simple enough. Let's start thinking about ways we can modify covectors to get new covectors. So we have this covector "alpha" here again and it acts on vector "v" to give a value of 2. Now if I asked you to make this covector twice as big... what would you do? Right? Maybe... maybe you should pause the video for 10 seconds and think about it.
+
+00:09:22
+Okay, so if we're looking for a covector that's twice as big, what you might be thinking is: "well, if I want the covector to be bigger, then I just... I just spread out the lines and make the space between them nice and big", right? But actually, no. What we want to do is make the stack denser, because when we make the stack denser it increases the value of "alpha of v". Right? So when we pierce "alpha" with "V", we get 2. But when we pierce "2 alpha" with "v", we get 4... because there are
+
+00:09:52
+4 lines that are pierced. So applying "2 alpha" to "V"  is the same thing as applying "alpha" to "v" and then scaling the result by 2. Now what if we wanted to shrink "alpha" to half its size... well you probably already know the answer. In this case we spread the lines out so that they're half as dense. And now when we apply "1/2 alpha" to "v", we get a value of 1, because it only pierces one line. And again, that's the same thing as applying "alpha" to "v" and then scaling the result by 1/2.
+
+00:10:22
+Okay so that's scaling covectors. Now what about adding them together? So here I have two covectors "beta" and "gamma". "beta of v" is 3 and "gamma of v" is 2. Now let's say I want to add "beta" and "gamma" together... so what would I do? Well, what we do is, we create a new stack that has the same density as "beta" in the "beta"-direction and the same density as "gamma" in the "gamma"-direction.
+
+00:10:53
+Ok, so I'll show you what I mean by that. Here's the new covector "beta + gamma". And you'll notice in the "beta"-direction, "v" pierces 3 lines (1... 2... 3). And in the "gamma"-direction, "v" pierces two lines (1... 2), which is just what we had before. So in a sense "beta" has a horizontal density of 3 and a vertical density of 0. Whereas, "gamma" has a horizontal density of 0 and a vertical density of 2. And "beta + gamma", which is both of those combined together, it has a horizontal
+
+00:11:30
+density of 3 and a vertical density of 2. And you'll notice that the vector "v" actually pierce's 5 lines which, 3+2. So when we add covecter like this... Applying the "added" covector to "v" gives us the same result as when we apply the individual covectors and then add the results. So that's... that's adding covectors. Okay so what we've done here is that we've shown that covectors have sensible scaling and adding rules. And what did I say before
+
+00:12:04
+about things that we can add in scale? What does that mean? It means that we have a vector space, right? So if we have some ordinary vector space "V" with the scalars and the adding rules and the scaling rules... The set of all covecters which act on the vectors of "V" form a new vector space called the "dual space", which we denote by "V*" (V-star). And this has a different set of adding rules which I'm calling "red +", and a different set of scaling rules which I'm calling "red dot".
+
+00:12:36
+And the reason I'm writing these rules in different colors is because they are actually different rules, right? The black rules are for adding and scaling vectors, like we did with arrows. And the red rules are for adding and scaling covectors, like we did with the stacks of lines. Okay, so the elements of V* (V-star) are covectors, which are functions that go from V to the real numbers. The new scaling rule, which is the "red dot", says that we can scale a covector by some number "n" just by applying the covector and then scaling the result by that same number "n".
+
+00:13:08
+And the addition rule "red +" says that we can add covectors by applying each one to the vector and then adding the results. So I'm not going to keep writing these in red. I just wanted to be very clear that the adding and scaling rules for these two vector spaces are different. Okay, so to sum up... covectors are functions from vectors to the real numbers. These functions have the properties that we can add and scale the inputs or add and scale the outputs to get the same answer. And that's called "linearity".
+
+00:13:39
+So these are linear functions. The set of all covectors that act on a vector space "V" together form the vector space "V*"(V-star) and these covectors have their own adding and scaling rules. And finally we can visualize covectors as oriented stacks of lines. So when a  covector "alpha" acts on a vector "v", we just count how many lines the arrow pierces to get the answer. That more or less sums up what a covector is.
+

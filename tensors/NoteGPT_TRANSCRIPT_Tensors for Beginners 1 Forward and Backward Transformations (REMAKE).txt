@@ -1,0 +1,57 @@
+00:00:00
+welcome to this first real video in my series on tensors the previous two videos were mostly on giving motivation and background on tensors in this video we're going to get started doing some actual real math so the first thing we're going to learn is forward and backward transformations these are the rules that let us move back and forth between different coordinate systems I mentioned in the previous videos that tensors are invariant under a coordinate system change so understanding how to move back
+
+00:00:32
+and forth between coordinate systems is going to be really important for understanding tensors okay so let's start off with the forward transformation so I have two two-dimensional coordinate systems here the old bases E1 and E2 and the new basis E1 tilde and E2 tilde so remember from linear algebra that the word basis just means a set of vectors that give us the main coordinate directions for our space so we have the old and new coordinate systems or the old and new bases so the forward transformation will move
+
+00:01:09
+us from the old bases to the new basis so how does that work well all we need to do is build the new basis vectors out of the old basis vectors so let's start with E1 tilde here how do we build E1 tilde out of E1 and E2 well it looks like we need two E1 vectors and one E2 Vector so I'll just write that in here now what about E2 tilde so it looks like we need one half of E1 but it's in the opposite direction so that's actually minus one-half and then we need a quarter of E2 so I'll just write those
+
+00:01:47
+in all right so what we've done is we've written out the new basis vectors as linear combinations of the old basis vectors and if I wanted to I could write these four numbers in a two by two Matrix called f f for forward now you'll notice that the numbers in this Matrix are not arranged in the exact same way as the numbers in the equations the arrangement is flipped about the main diagonal the reason for this is that in this video series we are going to arrange basis vectors as rows that multiply
+
+00:02:22
+matrices from the left so if you remember matrix multiplication you'll notice that this row times this column gives first entry times first entry plus second entry times second entry and this results in our first equation for E1 tilde applying the same procedure for this row times the other column gives our second equation for E2 tilde so for this series keep in mind that when we write equations to change basis in Matrix form basis vectors are written in a row multiplied from the left and that means that the numbers in the
+
+00:03:02
+forward Matrix are flipped about the diagonal compared to the equations and so that's really it that's the entire forward transformation if we know the Matrix F then we know everything we need to construct the new bases from the old basis okay so what about backward Transformations as you'd expect it's basically just the same thing but in reverse so we build the old basis vectors using the new basis vectors so how do we build E1 using E1 tilde and E2 tilde it's a little more confusing
+
+00:03:37
+this time but it looks like we need a quarter of E1 tilde and exactly one of E2 tilde but facing the opposite direction so it's actually minus one so I'll just write those in and what about E2 it looks like we need a half of E1 tilde plus two E2 tildas and again we can store these numbers in a two by two Matrix called b b for backward and that's the backward transformation so if we know the Matrix B we know everything we need to construct the old bases from the new basis now you might be thinking here we have
+
+00:04:14
+the Matrix F and here we have the Matrix B are these really two different things they kind of do the same job but in opposite directions so are they really so different well let's see what happens when we multiply them so this might actually be a good exercise for you to review matrix multiplication to multiply two matrices we write them like this and to get this entry of the resulting Matrix we take the inner product of this row and this column so in this case it's two times a quarter plus negative a half times negative one
+
+00:04:49
+so that's just a half plus a half which equals one so I'm going to let you do the other three entries but what you'll find is you get this Matrix here with ones along the main diagonal and zeros everywhere else and this is of course the identity Matrix so what this really means is that F and B are inverses or another way of saying that is b equals F inverse so why am I using two different letters here why use F and B when I could just use f and f inverse well just visually I personally find it
+
+00:05:24
+easier to tell the difference between F and B then between F and F with a tiny little negative one up here so even though B is equal to F inverse I'm just going to keep writing B okay so that was an example in two Dimensions what if we want to generalize this to n dimensions well it's basically the same process we have n old basis vectors E1 E2 all the way up to en and we have n new basis vectors E1 tilde E2 tilde all the way up until e and tilde and we need to decide how to build these new basis vectors out
+
+00:06:00
+of the old basis vectors and we do that just by choosing the right coefficients so that all of these linear combinations work out properly and again we can write these coefficients in a matrix this time it would be an N by n Matrix instead of a two by two Matrix and that's our Matrix f now writing out all these equations is kind of annoying so let's see if we can find a better way to write this so if I wanted to build the e i tilde Vector out of the EEG vectors what I would want to do is write EI tilde as
+
+00:06:35
+some sort of combination of the E J basis vectors but I still need to decide on the coefficients so what would these be well if you look up here you'll see that F12 tells us how much of E1 makes up E2 tilde and over here fn1 tells us how much of En is inside E1 tilde so really the coefficient I want here is fji fji tells us how much of e j makes up e i tilde so really this summation summarizes all of the above equations nice and simply so this is the forward transformation in N dimensions now for the backward Transformations I
+
+00:07:21
+can do the same thing we just write out all the old basis vectors as linear combinations of the new basis vectors and we can write these coefficients in an N by n Matrix called B and we can summarize all these equations where e i is equal to the sum of e j tilde's with the coefficients being b j i so that's the backward transformation in N dimensions it's worth noting that with these summation formulas we're free to relabel the summation index letters without changing the meaning of the formula as
+
+00:07:57
+long as we relabel the index letters consistently for example I can replace the summation index J with the summation index q and the formula's meaning stays the same were also able to flip the order of the factors in the summation since these are just numerical coefficients and it doesn't matter if we put the numbers in front or in behind okay so we have the forward and backward Transformations now can we prove once again that they are inverses well I'll start with the backward transformation
+
+00:08:32
+just here and if you'll notice the forward transformation gives us an equation for e j tilde so I'm just going to substitute that in for e j tilde here and we get this and rearranging some of the summation signs we get this okay so let's just put this on a new slide here so looking at the formula what's going on here is that we're building the old basis vectors using a summation of the old basis vectors and what we need to do is we need to decide what this middle part of the
+
+00:09:04
+equation should be so why don't you pause the video and take a few seconds to think about what the middle part should be if we want these equations to make sense okay so what we really want at the end of the day is for E1 to equal E1 and we want E2 to equal E2 and so on and so forth we don't want any extra basis vectors in here being added because that wouldn't make any sense so what we really want is for this middle part to be one when I is equal to K and we want it to be zero when I is
+
+00:09:38
+not equal to K right that makes sense and really if you think about this as a matrix where I gives you the row and K gives you the column putting one where I equals K means having ones where the row is equal to the column so we get ones along the main diagonal here and then we just get zeros everywhere else so again ones along the diagonal and zeros everywhere else once again we showed that multiplying F by B gives us the identity Matrix so F and B are inverses of each other now this Behavior where we have one
+
+00:10:14
+where I equals K and 0 where I does not equal K this Behavior ends up being so common that we give it its own symbol called the chronicer Delta so whenever you see The Chronic or Delta just think of this relationship right here it's a bit like telling you what the entries of the identity Matrix are where we have one where the row is equal to the column and zero everywhere else okay so to sum up what we learned in this video we learned the formulas for the forward and backward transformations
+
+00:10:45
+in N dimensions and we also showed that the forward and backward Transformations are inverses of each other because when we multiply the F and B matrices we get the identity Matrix whose entries are given by the chronicer Delta symbol here in the next video we're going to look at Vector components which allow us to build generic vectors out of basis vectors where the components are normally written as columns the forward and backward matrices will transform the columns like this
+

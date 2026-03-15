@@ -1,0 +1,87 @@
+00:00:00
+In this video, we're going to give our final  example of a tensor in this video series, which is the metric tensor. The metric tensor is something  that helps us measure lengths and angles in space. So to start off, I'll ask the question: how do you  get the length of a vector? So let's say you have this vector v, living in this two dimensional  space here with the following components. How do I get its length? So we can think of the  vector "v" as the longest side of a right angle
+
+00:00:27
+triangle whose other two sides are parallel with  the basis vectors, e_1 and e_2. And if you remember your elementary school math, seeing  a right angle triangle should make you think of Pythagoras's theorem, right? So c^2 = a^2 + b^2, where c is the longest side of a right angle triangle. So in this case,  "a" is the side length along the "1" direction, and "b" is the side length along the "2" direction.  And given the column vector [1,2], this ends up
+
+00:00:54
+being one squared plus two squared, which is five,  but that's the square of the length of v. So to get the actual length, we have to take the square  root, and that gives us the square root of five, which is approximately 2.236. So that's computing  the length in the old basis, let's try computing it in the new basis. So we can try going through  the same process here using the components in the new basis, which are [5/4, 3]. But  applying those to Pythagoras's theorem, we get that
+
+00:01:24
+the squared length is 169/16. And taking the  square root of that we get exactly 3.25. So what's up here? Why didn't this work? Why didn't we get  the square root of five like we were expecting? And the reason we messed up, of course, is that  we use the side lengths of this triangle here, where one side is given by v, and the other  two sides are parallel e_1~ tilde e_2~ And that ISN'T a right angle  triangle. So really, Pythagoras's theorem is a bit of a lie for non-orthonormal coordinate  systems. Okay, it only works when the basis
+
+00:01:59
+vectors have length one, and are at right  angles to each other. So it's not really a lie. But Pythagoras's theorem only works for  getting vector length in the very special case, where we have an orthonormal coordinate system. And this fact isn't really that surprising. In fact, if we play around with different coordinate  systems, where a vector v is always parallel to one of the basis vectors, it becomes pretty  obvious that this formula Pythagoras's theorem doesn't work. So in this "a" coordinate system where  the basis vector "a_1" is the same length as V,
+
+00:02:32
+Pythagoras tells us the squared length of v is  1. And in this "b" coordinate system, where "b_1" is shorter than v, Pythagoras gives us a squared  length of 4. And in this "c" coordinate system, "c_1" is longer than v. And Pythagoras gives  us a squared length of 4/9. So we know that in the case of general non-orthonormal  coordinate systems, Pythagoras's theorem is no good to us. So what do we do? So it turns out that  the real formula for vector length isn't given
+
+00:03:04
+by Pythagoras, it's given by the dot product. So the squared length of the vector v is equal to v-dot-v. And expanding v out in the old basis, we  get this. And we can distribute this just like we would a normal algebra expression involving  multiplication. So we just group the terms for first, outer, inner, and last. And so we get  this. And simplifying this a little, and using our knowledge, that e_1-dot-e_2 is the same  thing as e_2-dot-e_1, because the dot product doesn't care about the order of the inputs, we get  this formula for the length here. And of course,
+
+00:03:42
+this also applies for the new coordinate system,  we can just replace the basis vectors with the e tilde basis vectors. And we replaced the v  components with the v tilde components. Okay, so let's give these formulas a try. So  writing it out in the old basis, again, here, and since the old basis is an orthonormal basis,  we can use this rule here where e_i-dot-e_j gives us the Kronecker delta. And that  means when the indices are the same, we get 1, so e_1-dot-e_1, and e_2-dot-e_2, both give  us 1. And when the indices are different,
+
+00:04:18
+we get zero. So e_1-dot-e_2 goes to zero. And  what we're left with is Pythagoras's theorem, right? c^2 = a^2 + b^2. So the real formula for vector length is up here. But since this is an orthonormal coordinate  system, all of these dot products work out to really simple answers. And we get a much simpler  formula, which is Pythagoras's theorem. But of course, that wouldn't work down here in the new  basis, because the basis dot products are going to work out to be different numbers. So to compute  these dot products, we can just replace the set of
+
+00:04:51
+new basis vectors with linear combinations  of the old basis vectors using the forward transform. So we can write e_1~ dot e_1~ as this here, and churning through the math, we get this. And we can set these two dot  products to one, and this dot product is zero because the old basis is orthonormal. And so we  get e_1~ dot e_1~ is equal to 5. And we can do the same thing with e_2~ dot e_2~, and we get 5/16. And finally, we can do the same thing for e_1~ dot e_2~, and we get negative 3/4. So we've computed all three products that we need  right here with the new basis. And that means
+
+00:05:34
+we can plug them into the formula for the  squared vector length here. And we end up with this formula here. So this is the formula for  computing the vector length in the new basis. And we can sort of think of this as Pythagoras theorem  for the new basis where we have an additional term and different scaling constants. So let's plug  in the components of v in the new basis to our formula for the squared length of v. And if we  churn through all this, we see that we get 5. And so of course, the length of v is the square  root of 5, which is the answer that we're expecting.
+
+00:06:09
+So this formula where we compute  v-dot-v, actually gives us the right answer for the squared vector length in all coordinate  systems. And if we go back to our examples, here, we can see why this new formula works in general,  the reason is that when a vector's components get bigger, the basis vectors are going to get  smaller. So when we're going from "a" to "b", here, the components are growing from 1 to 2, but  b_1-dot-b_1 will shrink compared to a_1-dot-a_1. So the growing of the components and the  shrinking of the dot product of the basis vectors
+
+00:06:42
+is going to balance out and the length will be  the same. And the same thing applies over here, when the components shrink, this dot product of  the basis vectors will grow to balance things out, and the length will stay the same. So we have these formulas here for the squared vector length. And you'll notice that we  can write this formula for the old components as a series of matrix multiplications, like this. And  if you work this out, you still get v1squared plus v2 squared. And the same goes for the  new coordinate system, we can write this equation
+
+00:07:13
+as this set of matrix multiplications here. And so really, the key to getting a vector length in any given coordinate system is this matrix  here. And this is what we call the "metric tensor". And we denote the metric tensor by the letter "g", oddly enough. So this is the metric tensor in the old basis. And this is the metric tensor in the  new basis. It's the same metric tensor. It's just represented by different matrices. Right? just  like with vectors, metric tensors are invariant.
+
+00:07:44
+But they look different and have different  components when we use different coordinate systems. So at the end of the day, to get vector  lengths using these formulas, we really just need to know the basis vector dot products. And we can  store these products in a matrix, which represents the metric tensor for that coordinate system. So  to get the squared vector length, we can just use these simple formulas here. And remember, there  are implied summations over i and j here. And again, the metric tensor components are given  by the dot products of the basis vectors.
+
+00:08:18
+So earlier, I said the metric tensor helps us  measure lengths and angles in space. And I've shown how it can measure lengths. So now I'll  show how it can measure angles. So to start, we'll have our old basis which is orthonormal,  as usual, and for this new basis, here, we're just going to rotate the second basis  vector a little bit so that it forms some angle theta with the first basis vector. So what I'm  saying here is that e_1~ is equal to e_1, and e_2~ is equal to cos(θ) e_1 + sin(θ) e_2, because recall: sine
+
+00:08:55
+and cosine are just given by this triangle  here where sine is opposite/hypotenuse, and cosine is adjacent/hypotenuse. And the  hypotenuse in this case has length 1, because it was a normal vector that we just rotated. So let's compute the basis dot products in this new basis, we find that first-dot-first is equal  to 1, we find that first-dot-second is equal to cos(θ). And we find that second-dot- second is equal to 1. And I figured this out using the well known trig identity here, cosine  squared plus sine squared is equal to 1. Okay,
+
+00:09:34
+so we have our dot products. And that means  that we can get the metric tensor for this matrix in the new basis, which we have here. And  remember, this is the same metric tensor. It's just that it has different components in different  coordinate systems. Okay, so let's say we have two vectors v and w. And we want to find the angle  theta between them. Well, what we can do is we can define some new basis where the basis vectors are pointing in the same directions as v and w except that the length of these basis vectors  are 1, so they're normal vectors. And now we
+
+00:10:06
+can compute the dot product v-dot-w. And really  v is just some multiple of e_1, since they're aligned, and w is just some multiple of e_2 since they're aligned. So we can write v-dot-w like this. And now rearranging things. And  recall that we determined when two basis vectors of unit length are at an angle theta, their dot  product is just cos(θ). And finally, we just need to realize that "a" is really the length of "v" and "b" is really the length of "w", because we need
+
+00:10:39
+a copies of e_1~ to get v, and we need  the copies of e_2~ to get w. And so we get this. So what we've determined is that using  only dot products, since these vector lengths are also given by dot products, we can compute the  angle between any two vectors that we like. So this dot product v-dot-w, we can just churn  through the math, and we can see that we can write it in terms of the metric tensor. So all these dot products between v and w can be computed using the metric tensor. And  that means that this formula here for the angle
+
+00:11:17
+between any two vectors can be computed  entirely in terms of the metric tensor, along with the vector components. Alright, so hopefully, we understand what the metric tensor is used for. Now, I'm  going to talk about how the components of the metric tensor transform when we change coordinate  systems. So this is really easy to figure out, we just get the metric tensor components in the  new coordinate system using these dot products involving e-tildes. Now using the forward  transform, we can write these in terms of the old
+
+00:11:50
+basis, and we get this dot product. And those  are just the components of the metric tensor in the old coordinate system. So we get this  transformation rule where we go from old to new using two forward transformations. And likewise,  for the inverse process to get from new to old, we use two backward transformations. And using  these transformation rules, we can go through really quick here and confirm that the squared  length of a vector remains constant over all coordinate systems. So we start with this formula  for the squared length in the new basis. Then,
+
+00:12:27
+using our transformation rules to move  from the new to the old coordinate system, we can transform the vector components, as well  as the metric tensor coordinates back to the old basis using the rule we just learned. And we  find that we get to four transformations and two backward transformations. And these both cancel  out to give us two Kronecker deltas. And using the index canceling rule for Kronecker delta, we  find that we just get this formula here, which is exactly what we were expecting for the old  coordinate system. So in fact, this formula using
+
+00:13:03
+the metric tensor works in all coordinate systems,  and the vector length will stay constant. So summing up everything we've learned  in this video series, we've learned about the contravariant transformation rule. And this  applies to basis covectors and vector components. And they're called (1,0)-tensors, we've learned  about the covariant transformation rule, which is used for basis vectors, and covector components.  And we call those (0,1)-tensors. We've learned about linear maps, which are (1,1)-tensors, and those  transform using one contravariant rule and one
+
+00:13:39
+covariant rule. And finally, we learned about the  metric tensor, which is a (0,2)-tensor, because it transforms using two covariant rules. So way back  at the beginning of this video series, I gave you this definition of tensors. I said that tensors  are objects that are invariant under a change of coordinates, and have components that change in  some special predictable way under a change of coordinates. So you're finally ready for me to  tell you what this special predictable rule is. The transformation rule that tensors will obey is  this. So this probably looks really complicated.
+
+00:14:15
+But all it's saying is that if we have some object  with components, and some of those components are upstairs, which are the contravariant components,  and then some components are downstairs, which are the covariant components, the way we  transform them is just by applying a series of forward and backward transforms. So in the  forward direction going from old to new, all these upstairs indices will transform using  the backward transformation, like these I, J, Ks, and the downstairs indices will transform using the  forward transformations like here with the R, S, Ts,
+
+00:14:52
+and the reverse transformation from new to old.  It's the same thing but opposite. We replaced the forward transforms with backward transforms and And we replaced the backward transforms with forward transforms. So anything that follows  these rules when changing coordinates, whether it's with one transform or whether it's with 20,  anything that follows these rules is a tensor. And I've already sort of hinted at  this, but just to make it clear, when a tensor has M upstairs contravariant  indices, and N downstairs covariant indices,
+
+00:15:24
+we call that tensor an (M,N)-tensor. So these two  numbers are called the tensors type. And they tell us how many contravariant and covariant rules  we need to follow when transforming a tensor. And the last thing I'm going to say, you  may recall this other definition I gave for tensors. Or I said that tensors are just  collections of vectors and covectors combined using the tensor product. And I told you that  this was the best definition for tensors that we can come up with. So we know what vectors  are, and we know it covectors are. Now what
+
+00:15:59
+we're going to do is we're going to go through  an explanation of the tensor product. And once we understand what the tensor product is, we'll  understand this best definition of tensors here.
+

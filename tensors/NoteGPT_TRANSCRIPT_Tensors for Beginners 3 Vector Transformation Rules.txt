@@ -1,0 +1,33 @@
+00:00:00
+So in the previous video, I left off with this  mystery of why vector components transform in the opposite way compared to our old and new bases. And I said that this makes a lot of sense. So let's talk about why that is. So here I have an old  basis "e_1, e_2" and I have a vector "V" living in this space. And the components of V look like they're  about [1, 1] in the old basis. Now, what would happen if I increase the size of the basis vectors by  a factor of 2? So I make them twice as big? Right?
+
+00:00:38
+So what if I said e_1~  equals to e_1 and e_2~  tilde equals to e_2? Well the new coordinate system would look like this, right? Where the basis vectors  are twice as big. So what are the components of V in the new basis? Well it looks like they're  about [1/2, 1/2]. So while the basis vectors grew by a factor of 2, the vector components shrunk by  a factor of 2. Right? They did they did the opposite thing. And this makes a lot of sense because even  though V doesn't change... right? V is invariant... V looks smaller when we measure it using the  new basis vectors because the basis vectors
+
+00:01:21
+(the measuring sticks that we're using) got twice  as big. All right, so here's another example. Again we have the old basis e_1 and e_2 and the vector V.  And just notice that V is made up of about equal parts e_1 and e_2. So the angle V makes with e_1 is about the same as the angle that V makes with e_2. And this means that the components in  each direction are about the same. Now what would happen if we rotated the basis clockwise? Okay,  so the new basis would look something like this,
+
+00:01:51
+right? Now what about the components of V? Well if  you look at the angles, the angle V makes with e_1~ is actually bigger than the angle V  makes with e_2~. So again V is invariant (it hasn't moved) but now it's leaning closer to  e_2~ compared to e_1~, and that makes it feel like it's rotating counter clock because  the angle it makes with the second basis vector got smaller. Okay so again, the components did the  opposite thing. The basis rotated clockwise and the components rotated counterclockwise. So going back to this diagram... when vector
+
+00:02:31
+components behave the opposite way that basis vectors do, that actually  makes perfect sense when the basis gets bigger that actually makes perfect sense: when the basis gets bigger, the components will shrink. When the basis rotates one way, the components will rotate the other way. Whatever the basis does, the components do the  opposite. So now we have some intuition as to why this sort of opposite behavior happens in 2D.  Let's see if we can prove it in any dimension. So let's just recall that we have two ways of writing V: we can write it as a linear combination of
+
+00:02:56
+the old basis vectors, with the coefficients being  the old components... Or we can write it as a linear combination of the new basis vectors, with the  coefficients being the new components. And we can also write these as summations just to save some space. All right so both of these summations are equal to B. Now let's bring out our forward and  backward transformations here. So if we take the old basis and old components, what we can do is... we can use the backward transformation to replace
+
+00:03:26
+the old basis vectors with the new basis vectors. And so we get that... and rearranging the summations, we get this. So now we have V written as a summation of the new basis vectors. So what's this part in the middle? Well, if you look up here when we write V as a summation of new basis vectors the coefficients have to be the new components V~. So this here is equal to V~. So we've proven here that, to move from the old components to the  new components, we actually use the backwards transformation. Which is what we expected.  And the same is true in the other direction. We can
+
+00:04:05
+start with the new components and basis vectors...  then replace the new basis vectors using the forward transformation. And that gives us a linear  combination of old basis vectors. And again this part in the middle *has* to be equal to the old coefficients. So we've shown here that when we go from the new components to the old components, we transform using the forward transformation. So these formulas here sum up everything we've learned so far. We know how the basis vectors transform
+
+00:04:34
+and we know how vector components transform, which is in the opposite way. Now because vector components behave contrary  to the basis vectors... We say that vector components are CONTRA-variant, and we'll see later that vectors are contravariant  tensors. So I'll talk more about what that means later. One last thing I'm going to mention: so here  you can see we've written the vector V as linear combinations of the old and new basis. But these  vector components since they are CONTRA-variant..
+
+00:05:06
+We're going to make a small change in the way we write them. What we're gonna do is instead of writing these little "i" indices below the V, we're  gonna switch that up and we're gonna write the indices above the V instead. And this reminds  us that the components are contravariant. OK? Since the basis indices are at the bottom and, the  vector component indices are on top, it's sort of a reminder that they behave in opposite ways. Now  you might be a bit worried that you'll confuse
+
+00:05:31
+these upper indices with exponents, right? Because  exponents sort of look the same. But exponents pop up so rarely when we're dealing with tensors  that you can basically always assume that these are vector indices and never exponents. Alright  so that finishes up our discussion of vectors. In the next few videos we're going to talk about  COvectors which are another example of a tensor
+
