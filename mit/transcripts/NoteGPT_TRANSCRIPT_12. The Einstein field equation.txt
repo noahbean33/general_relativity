@@ -1,0 +1,252 @@
+00:00:00
+[SQUEAKING] [RUSTLING] [CLICKING]  SCOTT HUGHES: All right. Good morning, 8.962. This is a very weird experience. I am standing in here talking to an empty classroom. I have some experience talking to myself, because like many of us, I am probably a little weirder than the average. But that does not change the fact that this is awkward and a little strange, and we already miss having you around here. So I hope we all get through MIT's current weirdness in a healthy and quick fashion so we can get back
+
+00:00:45
+to doing this work we love with the people we love to have here. All right, so all that being said, it's time for us to get back to the business of 8.962, which is learning about general relativity. And today, the lecture that I am recording is one in which we will take all the tools that have been developed and we will turn this into a theory of gravity.  Let me go over a quick recap of some of the things that we talked about in our previous lecture, and I want to emphasize this because this quantity
+
+00:01:22
+that we derived about two lectures ago, the Riemann curvature tensor, is going to play an extremely important role in things that we do moving forward. So I'll just quickly remind you that in our previous lecture, we counted up the symmetries that this tensor has. And so the four most-- the four that are important for understanding its properties, its four main symmetries are first of all, if you exchange indices 3 and 4, it comes in with a minus sign, so it's anti-symmetric under exchange of indices 3 and 4.
+
+00:01:55
+If you lower that first and next so that they are all in the downstairs position and you exchange indices 1 and 2, you likewise pick up a minus sign. Again, keeping everything in the downstairs position, if you just wholesale swap indices 1 and 2 for indices 3 and 4 like so, that's symmetric, and so you get the whole thing back with a plus sign.  And finally, one that's a little bit non-obvious but can be seen if you're sort of pigheaded enough to sort of stare at this thing and kind of pound on the algebra a little bit,
+
+00:02:33
+if you take the Riemann curvature tensor-- and this can be at the end of-- the first index can be either upstairs or downstairs, but if you cyclically permute indices 2, 3, and 4 and add them up, they sum to 0, OK? So that tells you that it's a constraint on this thing when I look at the behavior, this thing with respect to indices 2, 3, and 4. We introduced a variant of the Riemann curvature tensor called the Ricci curvature. So the way I do this is if I take the trace on the Riemann curvature tensor on indices 1 and 3, which
+
+00:03:07
+is equivalent to taking it with the indices on the downstairs position and hitting it with the metric like so, I get this quantity, which I forgot to write down, is symmetric.  One of the major important physical applications of the Riemann curvature tensor is that it allows us to describe the way in which two neighboring geodesics-- if I have two geodesics that are separated by a four vector c, and I look at how that separation evolves as they move forward along their geodesic paths, this differential
+
+00:03:42
+equation describes how it behaves. And the key thing is that what we see is that the rate of separation is proportional to the Riemann curvature. It ends up playing the role-- when we think about-- what this tells us is this ends up, remember, geodesics describe free fall. And so what this is telling me is a way in which two nearby but somewhat separated-- separated by a distance c-- nearby but slightly separated geodesics-- both are in free fall, but their free fall trajectories are diverging from one other and perhaps
+
+00:04:13
+being focused towards one another depending upon how R is actually behaving, this is the behavior of tides. Free fall is gravity, and this is saying that the free fall trajectory's change of separation is governed by the Riemann tensor, and that's telling me about the action of gravitational tides. The last thing that we did in Tuesday's-- excuse me-- in Thursday's lecture was I went through and I developed this proof of what is known as the Bianchi identity, which is an identity on the--
+
+00:04:45
+it's an identity on the covariant derivative of the Riemann tensor. And so notice what's going on here. I'm leaving indices 3 and 4 on the Riemann tensor-- oh shoot. I'm actually changing my notation halfway through, let me fix that. My apologies.  OK. Apologies for that. Are you leave indices 3 and 4 unchanged, and what you do is you cyclically permute the index against-- in the direction which you're taking a derivative with indices 1 and 2. So my first term, it goes alpha, beta, gamma; then beta, gamma,
+
+00:05:24
+alpha; gamma, alpha, beta. OK, notice the way they are cyclically permuting like that. Sum them up and you get 0. So let's take it from here. We're going to start with this Bianchi identity. What I want to do now is contract the Bianchi identity in the following way.  So let's take this form that I've written out here-- and let me just make sure I've left it now in a form that comports with my notes. I did, good. So what I'm going to do is multiply the entire thing.  Using the metric, I'm going to contract it
+
+00:06:08
+on indices beta and mu.  So remember, the metric commutes with the covariant derivative. So unless the derivative itself is with respect to either the beta or the mu index, that g just sort of waltzes right in top of there. So when I do this, it's going to beta-- g beta mu nu upstairs is going to walk right through this, it's going to raise the beta index, and what I wind up with here is this first term becomes the covariant derivative of the Ricci tensor, OK? I have contracted on indices beta and mu.
+
+00:06:47
+When it hits this one, is just going to raise the index on that covariant derivative. So I've got a term here now that looks something like the divergence of the Riemann tensor, divergence with respect to index 3.  When I hit this term, it walks through the covariant derivative again, and you see what I'm doing is a trace on indexes 2 and 3. Now I can take advantage of the anti-symmetry here-- let's reverse this. And so it's like doing a-- throwing in a minus sign and then doing
+
+00:07:24
+a trace on indices 1 and 2-- excuse me, doing a trace on-- rewind, back up for just a second. I'm going to take advantage that anti-symmetry, I'll exchange indices 1 and 2, and then I am doing a trace on indices 1 and 3, which is going to give me the Ricci tensor. But because I have used that-- or that anti-symmetry, I will do so with a minus sign. So what I get here is this. I'm going to probably bobble more than once in this lecture, because again, doing this in an empty room is a little weird.
+
+00:08:00
+All right. So I really want to get a relationship that simplifies the Riemann tensor, OK? A Riemann tensor's got four indices on it. I'm not scared, but I don't like it, OK? So we're going to do one more contraction operation to try to simplify this.  Let's now contract once more using the metric on indices g and nu, OK? So when I do it with the first one, it walks right through--  right through that covariant derivative, and I get the trace of the Riemann tensor, the Ricci--
+
+00:08:55
+excuse me-- I get the trace of the Ricci tensor, the Ricci scalar. When I do it on the second term, OK? I am now tracing on indices 1 and 4. I will invoke anti-symmetry to change that into a trace on indices 1 in 3, and I get the Ricci tenser with a minus sign.  And then the next one, I just trace on this and I wind up with something that looks like this. OK. Now these two terms are both divergences on the-- they are both divergences on the second index. The second index is a dummy index, so I can put these two together.
+
+00:09:49
+So this is equivalent to--  or dividing out a factor of minus 2, the way this is more often written.  You can also factor out that derivative. Let's write it like this.  OK? So what I'm doing here is I divided by a minus 2 so that I can put this guy in front and I get a minus 1/2 in front of my Ricci term. And because I want to factor out my covariant derivative, I need to throw in a factor of the metric there so that the indices line up right. So what we do at this point is we do what-- whenever you reach
+
+00:10:42
+a certain point in your calculation where you've got something good, you do what every mathematician or physicist would do, you give this guy a name. So switching my indices a tiny bit, we define g mu nu to be the Ricci tensor minus 1/2 metric Ricci scalar, and this is an entity known as the Einstein tensor.  This is a course on Einstein's gravity, so the name alone should tell you, this guy is going to matter. One quick side note. So suppose I take the trace of the Einstein tensor. When we took the trace of the Ricci tensor,
+
+00:11:39
+I didn't write it down, but if I take a trace of this guy, I just get the Ricci scalar R, which I used over here. So when I do this here--  oops.  Suppose I just want to call this the Einstein scalar g. Well, applying that to its definition, this is going to be equal to the Ricci scalar minus 1/2 trace of the metric times R. And it's a general rule in any theory of spacetime that the trace of the metric is equal to the number of dimensions in your spacetime, OK? You can easily work it out in special relativity,
+
+00:12:30
+you're basically just raising one index, and as we'll see, it holds completely generally. In fact, it follows directly from the fact that the upstairs metric is the matrix inverse of the downstairs metric. So this is equal to 4, so this whole thing is just the negative of the Ricci scalar. What this means is that the Einstein tensor is the trace-reversed Ricci tensor, OK? I just want to plant that for now. This is a fact that we're going to take advantage of a little bit later, but for now, it's
+
+00:13:20
+just a mathematical fact that I want to point out, I want to set aside. We'll come back to it when it matters.  OK. We now have everything that we need to take all of the framework that we have been developing all term and turn it into a theory of gravity. I just had a nightmare. Am I being recorded?-- yes, OK. Sorry, just suddenly thought I might have forgotten to turn my microphone on! So let's turn this into a theory of gravity.  Ingredient 1 is something that we have discussed quite a bit
+
+00:14:21
+before. I want to restate it and I want to sort of remind us. Several times over the past couple of lectures I have implicitly used this rule already, but I want to make it a little bit more explicit now. We're going to use the principle of equivalence.  In particular, we're going to use what is known as the minimal coupling principle.  So here's the way-- what this basically means. We're going to try to take laws of physics that are well-understood from laboratory experiments, from special relativity, everything that we have known
+
+00:15:09
+and loved and tested for-- since we started studying physics, and we're going to try to see how that can be carried over to working in the curved spacetime that will describe gravity with as little additional sort of coupling to spacetime entities as is possible. So here's what we're going to do. Take a law of physics that is valid in inertial coordinates and flat spacetime, or equivalently, the local Lorentz frame, which corresponds to the local region of a freely-falling frame or a freely-falling observer,
+
+00:16:35
+take that law of physics that is good in that form and rewrite it in a coordinate-invariant tensorial form.  This is one the reasons why throughout this term, we have been brutally didactic about insisting on getting all of our laws of physics expressed using tensors, quantities which have exactly the transformation laws that we demand in order for them to be true tensors that live in the curve manifold that we use to describe spacetime. The last time I actually did something like this was when I derived--
+
+00:17:32
+I've erased it now, but when I derived the equation of geodesic deviation, OK? I first did it using very, very simple language, and then I sort of looked at it and said, well this is fine according to that local Lorentz frame, according to that freely-falling observer. But this is not tensorial, it's actually as written only good in that frame. And so what we did was we took another couple minutes and said, let's see how I can change this acceleration operator that describes my equation of geodesic deviation,
+
+00:18:00
+put in the extra structure necessary so that the acceleration operator is tensorial, and when we did that, we saw that the result was actually exactly what the Riemann tensor looks like in the local Lorentz frame. We said, if it holds a local Lorentz frame, I'm going to assert it holds in all other frames. And that indeed is the final step in this procedure. We assert that the resulting law holds in curved spacetime.  OK? So this is the procedure by which general relativity takes the laws of physics, good and flat spacetime,
+
+00:18:51
+and rejiggers them so that they work in curved spacetime. Ultimately, this is physics, and so ultimately the test for these things are experiments. And I will simply say at this point that this procedure has passed all experimental tests that we have thrown at it so far, and so we're happy with it. So let me just describe one example of where we did this-- actually, I'm going to do two examples. So if I consider the force-free motion of an object in the freely-falling frame-- so recall, in the freely-falling frame,
+
+00:19:33
+everything is being acted upon by gravity in an equal way.  If I am in the local Lorentz frame, I can simply say that my object feels-- my freely-falling object, freely-flying observer-- feels no acceleration. That is a perfectly rigorous expression of the idea that this observer or object is undergoing force-free motion in this frame. This is not tensorial, though. And so we look at this and say, well, if I want to make this tensorial, what I'm going to do is note that the tensor operator that describes-- now
+
+00:20:34
+let me keep my indices consistent here. My tensor operator that describes this equation is given by taking the covariant derivative of the four velocity and contracting it with the four velocity itself. These say the exact same thing in the local Lorentz frame. This one is tensorial, though, that one is not. And so we then say, OK, well this is the version that is tensorial, I'm going to assert that it holds in general. Another example in flat spacetime, local conservation of energy and momentum was expressed by the idea
+
+00:21:30
+that my stress energy tensor had no divergence in the local Lorentz frame. Well, if I want to make this tensorial, all I do is I promote that partial derivative I used to define the divergence to a covariant derivative.  This is how we are going to define conservation-- we're going to define local conservation of energy and momentum in a general spacetime theory.  So that's step 1. We need-- or sorry, ingredient 1. Ingredient 2 is-- well, let's just step back for a second. We have done a lot of work to describe the behavior
+
+00:22:40
+of curved spacetimes, OK? Spacetimes that are not just the spacetimes of special relativity, spacetimes when my basis objects are functional, where the Riemann curvature tensor is non-zero. We've done a lot to do that, but I haven't said anything about where that curved spacetime actually comes from. So the next thing which I need is a field equation which connects my spacetime to sources of matter and energy.  That's a tall order. The way we're going to do this, we're actually going to do it two different ways.
+
+00:23:39
+So in this current lecture, I'm going to do it using a method that parallels how Einstein originally did it when he derived-- what resulted out of this is what we call the field equation of general relativity or the Einstein field equation, and in this first presentation of this material, I'm going to do it the way Einstein did it. So what we are going to do is we will require that whatever emerges from this procedure, it must recover Newtonian gravity in an appropriate limit.  This is a philosophical point about physics.
+
+00:24:34
+When you come up with a new theory, you may conceptually overturn what came before. You may have an entirely new way of thinking about it. You may go from saying that there is a potential that is sourced by mass that fills all of space and that objects react to to saying something like, we now decide that the manifold of events has a curvature that is determined by the distribution of matter and energy in spacetime. It's very different philosophical and ultimately mathematical ways of formulating this,
+
+00:25:05
+but they have to give consistent predictions, because at the end of the day, Newtonian gravity works pretty damn well, OK? We can't just throw that away. So what we're going to do is demand that in an appropriate limit, both the field equation for Newtonian gravity-- so this is the Laplace operator now, which I'm going to write in a semi-coordinate-invariant form, as the chronic or delta contracted-- basically it's the trace on a matrix of partial derivatives acting on a potential.
+
+00:25:45
+This equals 4 pi rho, and I call this semi-coordinate invariant because part of what goes into this is this Newtonian limit only works if everything is sufficiently slowly varying in time, that things having to do with time derivatives can be neglected, OK? It's never really been-- prior to some of the more modern experiments that we've had to do, time-varying sources of gravity are very hard to work with. And so Newton was never really tested in that way. Nonetheless, whatever emerges from Einstein
+
+00:26:24
+had best agree with this. And we are also going to require that the equation of motion in this framework agree with Newtonian gravity. We actually went through this-- this was a little bit of a preview of this lecture, we did this in our-- we concluded our discussion of geodesics. Let me just recap the result that came out of this.  So our equation of motion was that--  you can write it as the acceleration of an observer is related to the gradient of the potential.  All right. So let's follow in the footsteps of Einstein and do this.
+
+00:27:36
+So what we're going to do-- let's do the equation of motion first. I've already gone through this briefly, but I want to go over it again and I want to update the notation slightly. So let's do the equation of motion by beginning with the geodesic equation.  We will start with the acceleration coupled to the four velocity by the Christoffel symbols.  All tests of Newtonian gravity, especially those that Einstein had available at the time that he was formulating this, were slow motion ones.
+
+00:28:31
+We were considering objects moving at best in our solar system. And so things there on a human scale certainly move quickly, but they're slow compared to the speed of light. And so let's impose the slow motion limit, which tells us that the 0th component of the four velocity is much larger than the spatial components of the four velocity, OK? Remember working in units where the speed of light is equal to 1. And so if this is being measured in human units, kilometers per second, and things like that,
+
+00:29:15
+this is on the order of the speed of light. So when we throw this in, we see that we expand this out, that the contributions from the dt d tau terms here are going to be vastly larger than any others. And so we can simplify our equation to a form that looks like this.  OK? In the spirit of being uber complete, let's write out that Christoffel symbol.  So dig back into your previous lectures' notes, remind yourself what the formula for the Christoffel symbol is.  OK. Notice, two of the terms here are time derivatives.
+
+00:31:00
+The Newtonian limit-- all the tests that were available when Einstein was formulating this, the limit that we care about here, the gravitational field, the gravitational potentials that he was studying, what the Newtonian limit emerges from, they are static. So we're going to do is neglect time derivatives to recover this limit.  And when we do this, what we find is that the component-- the Christoffel component that we care about looks like one derivative of the 0 0 piece of the spacetime metric.
+
+00:31:51
+It's not too hard to convince yourself that this, in fact, reduces--  oops, pardon me. I skipped a step. Pardon me just one moment. Just one moment, my apologies. I'm going to write the spacetime metric-- I'm going to work in a coordinate system such that spacetime looks like the flat space time of special relativity plus a little bit else, OK? This is consistent with the idea that every system we have studied in Newtonian gravity is one where the predictions of special relativity actually work really, really well, OK?
+
+00:32:41
+Gravity is new, it's special, it's why we have a whole other course describing it. But clearly it can't be too far different from special relativity or we wouldn't have been able to formulate special relativity in the first place. So my apologies, I sort of jumped ahead here for a second. We're going to treat the g mu nu that goes into this as the metric of flat spacetime plus something else where I'm going to imagine that all the different components of this-- so a typical component of this h mu nu
+
+00:33:10
+has an absolute value that is much smaller than 1.  It's not too hard to prove that when you invert this, what you wind up with is a form that looks like so where this h mu nu with the indices in the upstairs position is given by raising h's indices using the metric of flat spacetime. We're going to talk about this in a little bit more detail in a future lecture, it doesn't really matter too much right now. I just want to point out that the inverse g, which we need to use here, also has this form that
+
+00:33:54
+looks like flat spacetime metric and this h coupling into it. Now the reason I'm going through all this is that in order to work out this Christoffel symbol, I need to take a derivative. The derivative of eta is 0, OK? So the only thing that gets differentiated is h.  So when you work out this Christoffel symbol, what you get is this. If you're being-- keeping score, there are corrections of order h squared, and pardon me, I should have actually noted, there are corrections of order h squared
+
+00:35:02
+that go into this inverse. Let me move this over so I can fit that in a little bit better.  But in keeping with the idea that-- in keeping with the idea that for the Newtonian limit, the h squared could-- h is small, we're going to treat the h squared corrections as negligible and we will drop them.  OK. So let's look at what motion in this limit turns into, then. We now have enough pieces to compute all the bits of the equation of motion.  So in keeping with the idea that I am going to neglect all time
+
+00:35:52
+derivatives, this tells me that the gamma 0, 00 term is equal to 0.  And from this, we find that there is a simple equation describing time.  In our equation describing space, OK? So what I've done there is just taken this geodesic equation, plugged in that result for the Christoffel symbol, and expanded this guy out.  So what results, I can divide both sides now by two powers of dt d tau.  All right.  If you take a look at what we've got here, this prediction of the-- no even a prediction, this
+
+00:37:37
+result from the geodesic equation is identical to our Newtonian equation of motion provided we make the following identification.  h00 must be minus 2 phi where phi was Newtonian gravitational potential. Or equivalently, g00 is the negative of 1 plus 2 phi. All right. So that's step 1. We have made for ourselves a correspondence between what the metric should be and the equation of motion.  We still have to do the field equation, so let's talk about that.  So very helpfully I've already got the Newtonian field
+
+00:39:14
+equation right above me here. Let me rewrite it because I'm going to want to tweak my notation a tiny bit. I don't want to think about what this is telling me.  So eta ij is the same thing as delta ij, I just want to put it in this form so that it looks like a piece of a spacetime tensor. This is manifestly not a tensorial equation.  I have a bunch of derivatives on my potential being set equal to-- OK, there's a couple constants, but this, OK? When we learned about quantities like this
+
+00:40:01
+in undergraduate physics, usually we're told that this is a-- excuse me, this is a scalar. But we now know, rho is not a scalar, it is the mass density, which up to a factor of c squared, is the same thing as the energy density. And when we examined how this behaves as we change between inertial reference frames, we found this transforms like a particular component of a tensor.  And as I sort of emphasize, not that long ago we have been in something of a didactic fury insisting that everything be formulated in terms of tensors.
+
+00:41:00
+Pulling out a particular component of a tensor is bad math and bad physics.  So we want to promote this to something tensorial.  So s on the right-hand side, we've got one component of the stress energy tensor. We would like whatever is going to be on the right-hand side of this equation to be the stress energy tensor, OK? We can sort of imagine that what's going on in Newton's gravity is that there is one particular-- maybe there's one component of this equation that in all the analyses that were done
+
+00:42:06
+that led to our formation of Newtonian gravity, there may be one component that was dominant, which is how it was that Newton and everyone since then was able to sort of pick out a particular component of this equation as being important. Over here on the left-hand side, we saw earlier that the equation of motion we're going to look for corresponds to the Newtonian limit if the metric plays the same role-- up to factors of 2 and offsets by 1 and things like that-- the metric must play the same role as the Newtonian
+
+00:42:41
+gravitational potential.  So if I look at-- if I look at the Newtonian field equation, I see two derivatives acting on the potential. So I want my metric to stand in for the potential, we expect there to be two derivatives of metric entering this relationship.  So now two derivatives of the metric is going to give me something that smells like a curvature.  So we want to put a curvature tensor on the left-hand side of this equation. We have several to choose from, OK? It clearly can't be the Riemann tensor.
+
+00:44:38
+There's too many indices, it just doesn't fit. It could be the Ricci curvature, OK? The Ricci curvature has two indices. That has two indices, that's a candidate. But it's worth stopping and reminding ourselves, wait a minute, this guy has some properties that I already know about.  t mu nu tells me about the properties of energy and momentum in my spacetime, and as such, conservation-- local conservation of energy and momentum requires that it be divergence-free. So whatever this curvature tensor is here
+
+00:45:22
+on the left-hand side, we need it to be a divergence-free 2-index mathematical object.  At the beginning of today's lecture, I showed how by contracting on the Bianchi identity, you can, in fact, deduce that there exists exactly such a mathematical object. So let us suppose that our equation that relates the properties of the spacetime to the sources of energy and momentum of my spacetime is essentially that that Einstein tensor, g mu nu, be equal to the stress energy tensor. Now in fact, they don't have the same dimensions as each other,
+
+00:46:16
+so let's throw in a kappa, some kind of a constant to make sure that we get the right units, the right dimensions, and that we recover the Newtonian limit.  The way we're going to deduce how well this works is see whether an equation of this form gives me something that looks like the Newtonian limit when I go to what I'm going to call the weak gravity limit, and I'm going to then use, assuming it does work--  not to give away the plot, it does-- we'll use that to figure out what this constant kappa must
+
+00:47:06
+be.  So if we do, in fact, have a field equation of the form g mu nu is some constant t mu nu, it's not too hard to figure out that an equivalent form of this is to say that the Ricci tensor is k times t mu nu minus 1/2 g mu nu t where this t is just the trace of the stress energy tensor. Remember, I spent a few moments after we derived the Einstein tensor pointing out that it's essentially the same thing as Ricci but with the trace reversed. This is just a trace-reversed equivalent to that equation.
+
+00:48:17
+This step that I'm introducing here, basically it just makes the algebra for the next calculation I'm going to do a little bit easier, OK? So I just want to emphasize that this and that are exactly the same content. All right. So to make some headway, we need to choose a form for a stress energy tensor. Our goal is to recover the Newtonian limit, and so what we want to do is make the stress energy tensor of a body that corresponds to the sort of sources of gravity that are used in studies of Newtonian gravity.
+
+00:48:55
+So let's do something very simple for us. Let's pick a static-- in other words, no time variation, a static perfect fluid as our source of gravity.  So I'm going to choose for my t mu nu--  dial yourself back to lectures where we talk about this, OK? So this is the perfect fluid stress energy tensor. We're working in the Newtonian limit, and we are working in units where the speed of light is equal to 1. If you put speed of light back into these things, you explicitly include it, this is actually a rho
+
+00:49:53
+c squared that appears here. And so what this tells me is that if I'm studying sort of Newtonian limit problems, rho is much, much, much greater than P in the limit that we care about.  Furthermore, I am treating this fluid as being static.  So that means that my four velocity only has one component, OK? The fluid is not flowing. You might be tempted to say, oh, OK, I can just put a 1 in for this. Not so fast, OK? Let's be a little bit more careful about that.  One of the key governing properties of a four velocity
+
+00:51:10
+is that it is properly normalized.  So this equals g mu nu u mu u nu is minus 1. We know that the only components of this that matter, so to speak, are the mu and nu equal 0. So this becomes g00 mu 0 squared equals minus 1. But g00 is-- well, let's write it this way-- Negative 1 plus h00.  Go through this algebra, and what it tells you is u0 equals 1 plus 1/2 h00.  Again, I'm doing my algebra at leading order in h here.  We raise and lower indices. So in my calculation, I'm going to want to know
+
+00:52:24
+the downstairs version of this. And if I, again, treat this thing-- treat this thing consistently, OK. What I'll find is I just pick up a minus sign there. OK.  OK.  Let's now put all the pieces together.  The only component of my stress energy tensor that's going to now really matter is rho u0 u0, which, putting all these ingredients back together, is rho 1 plus h00.  The trace of this guy, putting all these pieces together, is just equal to negative rho. Since I only have one component that's
+
+00:53:49
+going to end up mattering, let's just focus on one component of my proposed field equation.  OK? So this is the guy that I want to solve.  I'll let you digest that and set up the calculation.  We've got T00 minus 1/2 T00 T. This is going to be, plugging in these bits that I worked out on the other board, here's my T00.  Just make sure I did that right earlier-- I did.  OK. So this is my right-hand side of my field equation. It will actually be sufficient for our purposes to neglect this term, OK?
+
+00:55:35
+We'll see why in just a moment.  So plugging that in, I need to work out the 00 component of my Ricci.  So I go back to its foundational definition. This is what I get when I take the trace on indices 1 and 3 of the Riemann tensor.  I can simplify that to just doing the trace over the spatial indices, because the term I'm leaving out is the one that is of the form 00 here, which by the anti-symmetry, on exchange of those indices, must vanish.  Plugging in my definition, what I find is it is going to look like this here.
+
+00:57:00
+So I'm just going to neglect the order of gamma squared term because I'm working in a limit where I assume that all these h's are small. This is going to vanish because of my assumption of everything being static in this limit. So this, I then go and plug in my definitions.  OK. Again, I'm going to lose these two derivatives by the assumption of things being static.  And pardon me just a second-- yeah, so I'm going to lose these two because of the assumption of things being static.
+
+00:57:57
+The only derivative-- the only term that's going to matter, the derivative here is h. And so when I hit it with the inverse metric, this becomes simply the derivative of the h00 piece, OK?  I can go from g straight to eta because the correction to this is of order h squared, which as I've repeatedly emphasized, we're going to neglect.  All right, we're almost there. Let me put this board up, I want to keep this.  OK, where was I? So I've got it down to here, let me just simplify this one step more.
+
+00:59:19
+Eta is-- if mu is not spatial, then this is just 0. So I can neatly change my mu derivative into a j. I can just focus on the spatial piece of it. So this tells me R00 is minus 1/2 Kronecker delta delta i delta j acting on h00. This operator is nothing more than-- it's a Laplace operator. So this is minus 1/2, our old-fashioned, happily, well-known from undergrad studies Laplace operator on h00. So putting all this together, my field equation, which I wrote in this form, reduces down to del squared h00 equals minus kappa rho.
+
+01:00:21
+The Newtonian limit that we did for the equation of motion, the fact that we showed that geodesics correspond to this, that already led me to deduce that h00 was equal to minus 2 phi. My Newtonian field equation requires me to have the Laplace operator acting on the potential phi, giving me 4 pi g rho. Put all these pieces together, and what we see is this proposed field equation works perfectly provided we choose for that constant.  Kappa equals 8 pi j. And so we finally get g mu nu equals 8 pi g t mu nu.
+
+01:02:11
+This is known as the Einstein field equation.  So before I do a few more things with it, let us pause and just sort of take stock of what went into this calculation. We have a ton of mathematical tools that we have developed that allow us to just to describe the behavior of curved manifolds and the motion of bodies in a moving curved manifolds. We didn't yet have a tool telling us how the spacetime metric can be specified, OK? We didn't have the equivalent of the Newtonian fuel equation
+
+01:02:59
+that told me how gravity arises from a source. So what we did was we looked at the geodesic equation, we went into a limit where things deviated just a little bit from flat spacetime, and we required objects be moving non-relativistically so that their spatial four velocity components were all small. That told us that we were able to reproduce the Newtonian equation of motion if h00, the little deviation of spacetime from flat spacetime in the 00 piece, was equal to negative 2 times the Newtonian potential.
+
+01:03:35
+We then said, well, the Newtonian field equation is sort of sick from a relativistic perspective because it is working with a particular component of a tensor rather than with a tensor. So let's just ask ourselves, how can we promote this to a properly constructed tensorial equation? So we insisted the right-hand side be t mu nu. And then we looked for something that looks like two derivatives of the potential, or, more properly, two derivatives of the metric which is going to give me a curvature tensor,
+
+01:04:09
+and say, OK, I want a two-index curvature tensor on the left-hand side. Since stress energy tensor is divergence-free, I am forced to choose a character tensor that is divergence-free, and that's what leads me to this object, and there's the Einstein curvature. And then insisting that that procedure reproduce the Newtonian limit when things sort of deviate very slightly from flat spacetime, that insisted the constant proportionality between the two sides be 8 pi j. This, in a nutshell, is how Einstein derived this equation
+
+01:04:44
+originally when it was published in 1915. When I first went through this exercise and really appreciated this, I was struck by what a clever guy he was. And it is worth noting that the mathematics for doing this was very foreign to Einstein at that time. There's a reason there's a 10-year gap between his papers on special relativity and his presentation of the field equations of general relativity. Special relativity was 1905, field equation was 1915. He was spending most of those intervening 10 years learning
+
+01:05:25
+all the math that we have been studying for the past six or seven weeks, OK? So we kind of have the luxury of knowing what path to take. And so we were able to sort of pick out the most important bits so that we could sort of-- we knew where we wanted to go. He had to learn all this stuff from scratch, and he worked with quite a few mathematicians to learn all these pieces.  Having said that, though, it did strike me this is a somewhat ad hoc kind of a derivation. When you look at this, you might sort of think, well,
+
+01:05:59
+could we not-- might there not be other things I could put on either the left-hand side or the right-hand side that would still respect the Newtonian limit? And indeed, we can add any divergence-free tensor onto-- depending how you count it-- either the left-hand side or the right-hand side-- let's say the left-hand side--  and we would still have a good field equation.  Einstein himself was the first one to note this. Here's an example of such a divergence-free tensor. The metric itself, OK?
+
+01:06:53
+The metric is compatible with the covariant derivative. Any covariant derivative of the metric is 0. And so I can just put the metric over here, that's perfectly fine. Now the dimensions are a little bit off, so we have to insert a constant of proportionality to make everything come out right. This lambda is known as the cosmological constant.  Now what's kind of interesting is that one can write down the Einstein field equations in this way, but you could just as easily take that lambda g mu nu and move it
+
+01:07:53
+onto the right-hand side and think of this additional term as a particularly special source of stress energy.  Let's do that. So let's define t mu nu lambda equal negative lambda over 8 pi g times g mu nu. If we do that, we then just have g mu nu equals 8 pi gt mu nu with a particular contribution to our t mu nu being this cosmological constant term. When we do this, what you see is that t mu nu is nothing more than a perfect fluid with rho equals 8 pi g in the freely-falling frame, pressure
+
+01:09:06
+of negative lambda over 8 pi j.  Such a stress energy tensor actually arises in quantum field theories. This represents a form of zero-point energy in the vacuum.  You basically need to look for something that is a stress energy tensor that is isotopic and invariant to Lorentz transformations and the local Lorentz frame, and that uniquely picks out a stress energy tensor that is proportional to the metric in the freely-falling frame. So this is an argument that was originally noted by Yakov Zeldovich.
+
+01:09:51
+Whoops.  And much of this stuff was considered to be kind of a curiosity for years until cosmological observations-- we haven't done cosmology yet. We will do this in a couple of weeks-- a couple of lectures, I should say. And it turns out that the large-scale structure of our universe seems to support the existence potentially of there being a cosmological constant. So the behavior of all these things is a lot more relevant, it's been a lot more relevant over the past, say, 15 or 20 years than it was when I originally
+
+01:10:48
+learned the subject in 1993. So I want to just conclude this lecture with a couple of remarks about things that are commonly set equal to 1 when we are doing calculations of this point. So one often sets G equal to 1 as well as c equal to 1. Carroll's textbook does not-- several other modern textbooks do not-- I personally like for pedagogical purposes leaving the G in there, because it is very useful for calling out-- helping to understand the way in which different terms sort of couple in.
+
+01:11:38
+It can-- if nothing else, it serves as a very useful order counting parameter, something that we'll see in some of the future calculations that we do. But there's a reason why one often works with G equal to 1 in many relativity analyses. Fundamentally, this is because gravity is a very weak force. G is the most poorly known of all of the fundamental constants of nature. I think it's only known-- I forget the number right now, but it's known to about five or six digits. Contrast this with things like the intrinsic magnetic moment
+
+01:12:07
+of the electron, which is known to something like 13 digits. What this sort of means is that because G is so poorly known--  well, let me just write that out in words first. So G is itself poorly known.  And so when we measure the properties of various large objects using gravity, we typically find that something like G times an object's mass is measured much better than M alone. Basically, the observable that one is probing is G times M. To get M out of that, you take G times M and you divide by the value of G that you
+
+01:13:16
+have determined independently. If you only know this guy to five or six digits, you're only going to know this guy to five or six digits. Whereas, for instance, for our sun, GM is known to about nine digits, maybe even 10 digits now.  When you set both G and c to 1, what you find is that mass, time, and length all come out having the same dimension.  And what that means is that certain factors of G and c can be combined to become convergent factors.  So in particular, the combination over c squared,
+
+01:14:32
+it converts a normal mass-- let's say an SI mass--  into a length.  A very useful one is G times the mass of the sun over c squared is 1.47 kilometers. GM over c cubed, OK? You're going to divide by another factor of velocity. This takes mass to time. So a similar one, G mass sun over c cubed, this is 4.92 times 10 to minus 6 seconds.  One more before I conclude this lecture. (I can't erase this equation, it's too beautiful!) If I do g over c to the fourth, this converts energy to length.
+
+01:16:00
+I'm not going to give the numeric value of this, but I'm going to make a comment about this. So bear in mind that your typical component of T mu nu has the dimensional form energy per unit volume--  i.e., energy over length cubed.  So if I take G over c to the fourth times T mu nu, that is going to give me a length over a length cubed--  in other words, 1 over length squared, which is exactly what you get for curvature.  So when one writes the Einstein field equations, if you leave your G's and your c's in there,
+
+01:17:09
+the correct coupling factor between your Einstein tensor and your stress energy tensor is actually 8 pi G over c to the fourth. And I just want to leave you with the observation that G is a pretty small constant, c to the fourth is a rather large constant, and so we are getting a tiny amount of curvature from a tremendous amount of stress energy. Spacetime is hard to bend.
+

@@ -1,0 +1,1084 @@
+\documentclass[12pt, a4paper]{report}
+
+% ── Packages ──────────────────────────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm, mathtools, bm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{microtype}
+\usepackage{xcolor}
+
+\geometry{margin=1in}
+
+% ── Hyperref setup ────────────────────────────────────────────────────────
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=green!50!black,
+    urlcolor=blue!60!black
+}
+
+% ── Theorem environments ──────────────────────────────────────────────────
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{notation}{Notation}[chapter]
+\newtheorem{warning}{Warning}[chapter]
+
+% ── Custom commands ───────────────────────────────────────────────────────
+\newcommand{\tildee}[1]{\tilde{e}_{#1}}
+\newcommand{\tildeeps}[1]{\tilde{\epsilon}^{#1}}
+\newcommand{\Rn}{\mathbb{R}^n}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\kd}{\delta}                    % Kronecker delta
+\newcommand{\tp}{\otimes}                   % tensor product
+
+% ── Header / Footer ──────────────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{Tensors for Beginners}
+\fancyfoot[C]{\thepage}
+
+% ── Title ─────────────────────────────────────────────────────────────────
+\title{%
+    \vspace{-1cm}
+    {\Huge\bfseries Tensors for Beginners}\\[0.8em]
+    {\Large Lecture Notes}\\[0.4em]
+    {\normalsize Based on the \emph{Tensors for Beginners} video series by eigenchris}
+}
+\author{}
+\date{\today}
+
+% ══════════════════════════════════════════════════════════════════════════
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+% ======================================================================
+%  CHAPTER -1 : MOTIVATION
+% ======================================================================
+\setcounter{chapter}{-2}          % so that \chapter increments to -1
+\stepcounter{chapter}
+\chapter*{Lecture $-1$: Motivation}
+\addcontentsline{toc}{chapter}{Lecture $-1$: Motivation}
+\markboth{Lecture $-1$: Motivation}{}
+
+\section*{Why Study Tensors?}
+
+The principal motivation for studying tensors is \textbf{geometry}---not the elementary
+geometry of basic shapes and trigonometry, but the rich, often counter-intuitive
+geometry that arises in modern physics and mathematics.
+
+\subsection*{General Relativity}
+
+In Einstein's general theory of relativity, space-time is \emph{curved}, and light
+can travel along curved paths near massive bodies such as stars and black holes.
+The universe itself is expanding: beginning from the Big Bang, space has been
+growing ever since.
+
+To make these ideas mathematically precise we need tensors.  Einstein's field
+equations,
+\begin{equation}
+    R_{\mu\nu} - \tfrac{1}{2}\,R\,g_{\mu\nu} + \Lambda\,g_{\mu\nu}
+    = \frac{8\pi G}{c^{4}}\,T_{\mu\nu},
+\end{equation}
+actually encode \textbf{16 coupled equations}, and every symbol that appears
+($R_{\mu\nu}$, $g_{\mu\nu}$, $T_{\mu\nu}$, etc.)\ is a tensor.  The most
+important tensor in general relativity is the \textbf{metric tensor}~$g_{\mu\nu}$,
+a $4\times 4$ rank-two tensor that lets us measure lengths and angles in the curved
+geometry of space-time.
+
+\subsection*{Quantum Mechanics and Quantum Computing}
+
+In quantum mechanics, physical states are \emph{vectors}.
+\begin{itemize}[nosep]
+    \item \textbf{Quantum superposition} is simply a \emph{linear combination} of
+          state vectors.
+    \item \textbf{Quantum entanglement} arises when two quantum systems are combined
+          via the \textbf{tensor product}~$\otimes$.  The tensor product takes the
+          state spaces of two individual systems and merges them into a single,
+          larger space in which the entangled system lives.
+\end{itemize}
+
+\subsection*{Prerequisites}
+
+These notes assume basic familiarity with linear algebra: matrix multiplication,
+linear combinations, and the dot product.  Calculus is \emph{not} required; tensors
+can be developed entirely within the framework of linear algebra.
+
+% ======================================================================
+%  CHAPTER 0 : TENSOR DEFINITION
+% ======================================================================
+\chapter{Tensor Definition}\label{ch:tensor-def}
+
+\section{The Array Definition (First Attempt)}
+
+\begin{quote}
+    \emph{A tensor is a multi-dimensional array of numbers.}
+\end{quote}
+
+Under this view, tensors are grids of numbers of increasing dimension:
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{lcc}
+    \toprule
+    \textbf{Name} & \textbf{Rank} & \textbf{Example} \\
+    \midrule
+    Scalar   & 0 & $\pi,\; 42,\; \tfrac{3}{4}$ \\
+    Vector   & 1 & $\begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix}$ \\
+    Matrix   & 2 & $\begin{pmatrix} a & b \\ c & d \end{pmatrix}$ \\
+    Rank-3 tensor & 3 & (a three-dimensional ``cube'' of numbers) \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{warning}
+This definition is \textbf{incomplete}.  Tensors can be \emph{represented} as
+multi-dimensional arrays, but they carry genuine \textbf{geometric meaning} that a
+bare array of numbers does not capture.
+\end{warning}
+
+\section{The Coordinate Definition (Second Attempt)}
+
+\begin{quote}
+    \emph{A tensor is an object that is \textbf{invariant} under a change of
+    coordinates, but whose \textbf{components} change in a special, predictable way
+    under a change of coordinates.}
+\end{quote}
+
+\paragraph{Invariance.}
+Consider a pencil pointing toward a door.  Its length and orientation are
+\emph{intrinsic} properties that do not depend on any coordinate system.
+
+\paragraph{Components depend on coordinates.}
+If we introduce a coordinate system, we can decompose the pencil into components
+along each basis direction.  Changing the coordinate system changes the components
+but \emph{not} the pencil itself.
+
+The ``special, predictable way'' in which components change is governed by
+\textbf{forward} and \textbf{backward} transformations, which we develop in the next
+chapter.
+
+\section{The Abstract Definition (Best Definition)}\label{sec:abstract-def}
+
+\begin{definition}[Tensor --- abstract definition]
+A \textbf{tensor} is a collection of \textbf{vectors} and \textbf{covectors}
+combined together using the \textbf{tensor product}.
+\end{definition}
+
+This definition is short and elegant but requires us to understand three ingredients:
+\emph{vectors}, \emph{covectors}, and the \emph{tensor product}.  The remainder of
+these notes builds up each ingredient in turn.
+
+% ======================================================================
+%  CHAPTER 1 : FORWARD AND BACKWARD TRANSFORMATIONS
+% ======================================================================
+\chapter{Forward and Backward Transformations}\label{ch:fwd-bwd}
+
+\section{Setup: Old and New Bases}
+
+Let $V$ be an $n$-dimensional vector space with two bases:
+\begin{itemize}[nosep]
+    \item \textbf{Old basis:} $\{e_1, e_2, \dots, e_n\}$.
+    \item \textbf{New basis:} $\{\tildee{1}, \tildee{2}, \dots, \tildee{n}\}$.
+\end{itemize}
+
+\section{The Forward Transformation}
+
+The \textbf{forward transformation} builds the new basis vectors from the old:
+\begin{equation}\label{eq:fwd}
+    \boxed{\tildee{i} = \sum_{j=1}^{n} F^{j}{}_{i}\, e_j}
+\end{equation}
+The coefficients $F^{j}{}_{i}$ are stored in an $n\times n$ matrix~$F$, called the
+\textbf{forward matrix}.
+
+\begin{remark}
+Throughout these notes, basis vectors are written as a \emph{row} that multiplies the
+transformation matrix from the left:
+$\bigl(\tildee{1}\;\; \tildee{2}\bigr)
+= \bigl(e_1\;\; e_2\bigr)\,F.$
+Consequently the entries of $F$ are \emph{transposed} relative to the scalar
+coefficients in the corresponding linear-combination equations.
+\end{remark}
+
+\section{The Backward Transformation}
+
+The \textbf{backward transformation} reverses the process, building old basis vectors
+from the new:
+\begin{equation}\label{eq:bwd}
+    \boxed{e_i = \sum_{j=1}^{n} B^{j}{}_{i}\, \tildee{j}}
+\end{equation}
+where $B$ is the \textbf{backward matrix}.
+
+\section{$F$ and $B$ Are Inverses}
+
+\begin{proposition}
+$F$ and $B$ are inverse matrices:
+\[
+    FB = BF = I, \qquad\text{i.e.}\quad B = F^{-1}.
+\]
+Equivalently, in component form,
+\begin{equation}\label{eq:fb-inv}
+    \sum_{j} F^{j}{}_{i}\, B^{k}{}_{j} = \delta^{k}_{i},
+\end{equation}
+where $\delta^{k}_{i}$ is the \textbf{Kronecker delta}:
+\[
+    \delta^{k}_{i} = \begin{cases} 1 & \text{if } i = k,\\ 0 & \text{if } i \neq k. \end{cases}
+\]
+\end{proposition}
+
+\begin{proof}
+Substitute the forward transformation~\eqref{eq:fwd} into the backward
+transformation~\eqref{eq:bwd} (or vice-versa).  Requiring that $e_i = e_i$ forces
+the product of the two matrices to equal the identity.
+\end{proof}
+
+\begin{remark}
+We use separate letters $F$ and $B$ (rather than $F$ and $F^{-1}$) purely for visual
+clarity.
+\end{remark}
+
+% ======================================================================
+%  CHAPTER 2 : VECTORS
+% ======================================================================
+\chapter{Vectors}\label{ch:vectors}
+
+\section{What Is a Vector?}
+
+Three progressively better definitions:
+
+\paragraph{Definition 1 --- Array.}
+A vector is a one-dimensional array (list) of numbers.
+This is convenient for computation but conflates a vector with its
+\emph{components}, which depend on a coordinate system.
+
+\paragraph{Definition 2 --- Arrow.}
+A vector is an arrow in space.  Arrows can be added (tip-to-tail) and scaled
+(stretched or reversed).  This is geometrically intuitive but limited to
+\emph{Euclidean} vectors; other vector types exist.
+
+\paragraph{Definition 3 --- Vector space (best).}
+\begin{definition}[Vector space]
+A \textbf{vector space} is a collection $(V, S, +, \cdot\,)$ where
+\begin{enumerate}[nosep]
+    \item $V$ is a set of \textbf{vectors},
+    \item $S$ is a set of \textbf{scalars} (typically $\R$),
+    \item $+$ is an \textbf{addition} rule combining two vectors,
+    \item $\cdot$ is a \textbf{scalar multiplication} rule.
+\end{enumerate}
+A \textbf{vector} is any element of~$V$.
+\end{definition}
+
+\section{Vector Components and Change of Basis}
+
+Given a basis $\{e_i\}$, any vector $v\in V$ can be written
+\[
+    v = \sum_{i} v^{i}\, e_i,
+\]
+where $v^{i}$ are the \textbf{components} of $v$ in that basis.
+
+\begin{example}[Two-dimensional]
+In the old basis $\{e_1, e_2\}$ a vector may have components
+$v^{i}_{(e)} = \bigl(1,\;1.5\bigr)$, while in the new basis
+$\{\tildee{1},\tildee{2}\}$ the same vector has components
+$\tilde{v}^{i} = \bigl(1,\;2\bigr)$.
+\end{example}
+
+\subsection*{Transformation of vector components}
+
+Crucially, vector components transform \textbf{opposite} to basis vectors:
+
+\begin{equation}\label{eq:vec-comp-fwd}
+    \boxed{\tilde{v}^{i} = \sum_{j} B^{i}{}_{j}\, v^{j}}
+    \qquad\text{(old $\to$ new: use $B$)}
+\end{equation}
+\begin{equation}\label{eq:vec-comp-bwd}
+    \boxed{v^{i} = \sum_{j} F^{i}{}_{j}\, \tilde{v}^{j}}
+    \qquad\text{(new $\to$ old: use $F$)}
+\end{equation}
+
+\section{Contravariance of Vector Components}\label{sec:contravariance}
+
+\begin{itemize}[nosep]
+    \item \textbf{Basis vectors} go from old to new via $F$ (forward).
+    \item \textbf{Vector components} go from old to new via $B$ (backward).
+\end{itemize}
+They transform in \emph{opposite} ways.  This is intuitively clear: if we double
+the basis vectors, the components halve (the measuring sticks are now bigger, so
+fewer are needed).  If we rotate the basis one way, the components effectively
+rotate the other way.
+
+Because vector components behave \textbf{contrary} to the basis, they are called
+\textbf{contravariant}.
+
+\begin{notation}
+We write vector component indices \emph{upstairs}: $v^{i}$.  This is a reminder
+that they are contravariant (opposite to basis indices, which sit downstairs).
+Upper indices should \emph{not} be confused with exponents; exponents appear very
+rarely in tensor analysis.
+\end{notation}
+
+% ======================================================================
+%  CHAPTER 3 : COVECTORS
+% ======================================================================
+\chapter{Covectors}\label{ch:covectors}
+
+\section{What Is a Covector?}
+
+\begin{definition}[Covector]
+A \textbf{covector} (also called a \emph{linear form} or \emph{one-form}) is a
+\textbf{linear function}
+\[
+    \alpha : V \longrightarrow \R
+\]
+that maps a vector to a scalar and satisfies the \textbf{linearity} properties:
+\begin{align}
+    \alpha(n\,v) &= n\,\alpha(v), \label{eq:cov-scale}\\
+    \alpha(v + w) &= \alpha(v) + \alpha(w). \label{eq:cov-add}
+\end{align}
+\end{definition}
+
+As a first approximation, covectors correspond to \textbf{row vectors} in a given
+basis.  However, row vectors and column vectors are fundamentally different objects;
+they only coincide in an orthonormal basis.
+
+\section{Visualizing Covectors as Stacks of Lines}
+
+A covector in 2D can be thought of as a function $\alpha_1 x + \alpha_2 y$.  Its
+level sets (lines of constant value) form an oriented family of equally spaced,
+parallel lines.
+
+\begin{itemize}[nosep]
+    \item The \textbf{value} $\alpha(v)$ equals the number of lines that the arrow
+          $v$ \emph{pierces}.
+    \item Piercing in the direction of increasing value gives a \emph{positive}
+          result; against the orientation gives a \emph{negative} result.
+    \item An arrow parallel to the lines pierces none, giving $\alpha(v) = 0$.
+\end{itemize}
+
+\subsection*{Scaling and adding covectors}
+
+\begin{itemize}[nosep]
+    \item \textbf{Scaling} a covector by $n$ makes the stack $n$ times \emph{denser}
+          (not wider).
+    \item \textbf{Adding} two covectors $\beta + \gamma$ produces a new stack whose
+          density in each direction combines the densities of $\beta$ and $\gamma$.
+\end{itemize}
+
+\section{The Dual Space $V^*$}
+
+Since covectors can be added and scaled in a meaningful way, they form a vector
+space of their own.
+
+\begin{definition}[Dual space]
+The set of all covectors acting on a vector space $V$ is called the
+\textbf{dual space}, denoted $V^{*}$.  It has its own addition and scalar
+multiplication rules (inherited from the linearity of the covectors).
+\end{definition}
+
+\section{Covector Components and the Dual Basis}\label{sec:dual-basis}
+
+Given a basis $\{e_1, \dots, e_n\}$ for $V$, we define the \textbf{dual basis}
+$\{\epsilon^1, \dots, \epsilon^n\}$ for $V^*$ by
+\begin{equation}\label{eq:dual-basis-def}
+    \boxed{\epsilon^{i}(e_j) = \delta^{i}_{j}.}
+\end{equation}
+The dual basis covectors \textbf{project out} vector components:
+\[
+    \epsilon^{i}(v) = v^{i}.
+\]
+Any covector $\alpha$ can be expanded as
+\[
+    \alpha = \sum_{i} \alpha_i\, \epsilon^{i},
+\]
+where the components are $\alpha_i = \alpha(e_i)$---the value of $\alpha$ on the
+$i$-th basis vector.
+
+\section{Covector Component Transformation Rules}
+
+Covector components transform using the \textbf{forward} matrix when going from old
+to new (the \emph{same} direction as basis vectors):
+\begin{equation}\label{eq:cov-comp-fwd}
+    \boxed{\tilde{\alpha}_i = \sum_{j} F^{j}{}_{i}\, \alpha_j}
+    \qquad\text{(old $\to$ new: use $F$)}
+\end{equation}
+\begin{equation}\label{eq:cov-comp-bwd}
+    \boxed{\alpha_i = \sum_{j} B^{j}{}_{i}\, \tilde{\alpha}_j}
+    \qquad\text{(new $\to$ old: use $B$)}
+\end{equation}
+
+\begin{remark}[Intuition]
+When the basis vectors grow by a factor of 2, each basis vector now pierces
+\emph{more} covector lines, so the covector components \emph{also} grow.
+Covector components and basis vectors transform in the \emph{same} direction.
+\end{remark}
+
+Because covector components transform in the same way as basis vectors, they are
+called \textbf{covariant}, and their indices are written \emph{downstairs}:
+$\alpha_{i}$.
+
+\section{Summary of Transformation Rules So Far}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{lcc}
+    \toprule
+    \textbf{Object} & \textbf{Old $\to$ New} & \textbf{Type} \\
+    \midrule
+    Basis vectors $e_i$            & $F$ (forward)  & covariant \\
+    Vector components $v^{i}$      & $B$ (backward) & contravariant \\
+    Basis covectors $\epsilon^{i}$ & $B$ (backward) & contravariant \\
+    Covector components $\alpha_i$ & $F$ (forward)  & covariant \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+% ======================================================================
+%  CHAPTER 4 : LINEAR MAPS
+% ======================================================================
+\chapter{Linear Maps}\label{ch:linear-maps}
+
+\section{Three Definitions of a Linear Map}
+
+\paragraph{Coordinate definition.}
+A linear map is represented by a \textbf{matrix}---a 2D array of numbers.  The
+$i$-th column of the matrix tells us where a copy of the $i$-th basis vector is
+sent.
+
+\paragraph{Geometric definition.}
+A linear map is a spatial transformation that
+\begin{enumerate}[nosep]
+    \item keeps grid lines \textbf{parallel},
+    \item keeps grid lines \textbf{evenly spaced},
+    \item keeps the \textbf{origin fixed}.
+\end{enumerate}
+Examples include stretches, rotations, and shears.  Translations are
+\emph{not} linear maps because they move the origin.
+
+\paragraph{Abstract definition (best).}
+\begin{definition}[Linear map]
+A \textbf{linear map} is a function $L : V \to W$ satisfying
+\begin{align}
+    L(v + w) &= L(v) + L(w), \label{eq:lm-add}\\
+    L(a\,v)  &= a\,L(v). \label{eq:lm-scale}
+\end{align}
+\end{definition}
+Covectors are a special case: they are linear maps $V \to \R$.  The only
+difference is that covectors output a \emph{scalar}, while general linear maps
+output a \emph{vector}.
+
+\section{Deriving Matrix Multiplication from Linearity}
+
+Let $L : V \to V$ be a linear map.  Expanding an input vector $v$ in the basis:
+\[
+    L(v) = L\!\Bigl(\sum_j v^{j}\,e_j\Bigr)
+         = \sum_j v^{j}\,L(e_j).
+\]
+Define the coefficients $L^{i}{}_{j}$ by
+\[
+    L(e_j) = \sum_i L^{i}{}_{j}\, e_i.
+\]
+Then the output vector $w = L(v)$ has components
+\begin{equation}\label{eq:mat-mult}
+    \boxed{w^{i} = \sum_j L^{i}{}_{j}\, v^{j},}
+\end{equation}
+which is exactly the standard formula for matrix--vector multiplication.
+
+\section{Transformation Rules for Linear Map Components}\label{sec:lm-transform}
+
+To move the matrix components from the old basis to the new:
+\begin{equation}\label{eq:lm-fwd}
+    \boxed{\tilde{L}^{i}{}_{j}
+    = \sum_{k,\ell} B^{i}{}_{k}\, L^{k}{}_{\ell}\, F^{\ell}{}_{j}}
+    \qquad\Longleftrightarrow\qquad
+    \tilde{L} = B\,L\,F.
+\end{equation}
+The reverse is
+\begin{equation}\label{eq:lm-bwd}
+    L^{i}{}_{j}
+    = \sum_{k,\ell} F^{i}{}_{k}\, \tilde{L}^{k}{}_{\ell}\, B^{\ell}{}_{j}
+    \qquad\Longleftrightarrow\qquad
+    L = F\,\tilde{L}\,B.
+\end{equation}
+
+\begin{remark}[Interpretation]
+The path through the transformation diagram is:
+\[
+    \text{new components}
+    \xrightarrow{F} \text{old components}
+    \xrightarrow{L} \text{old output components}
+    \xrightarrow{B} \text{new output components}.
+\]
+\end{remark}
+
+\section{Einstein Summation Convention}\label{sec:einstein}
+
+Whenever an index appears \textbf{once upstairs and once downstairs} in the same
+term, summation over that index is implied.  We drop the $\sum$ sign entirely.
+
+\begin{example}
+The matrix transformation rule becomes simply
+\[
+    \tilde{L}^{i}{}_{j} = B^{i}{}_{k}\, L^{k}{}_{\ell}\, F^{\ell}{}_{j}.
+\]
+\end{example}
+
+\begin{remark}[Kronecker delta as index canceller]
+Since $M^{i}{}_{k}\,\delta^{k}_{j} = M^{i}{}_{j}$, the Kronecker delta effectively
+``cancels'' the summed index and replaces it with the free one.
+\end{remark}
+
+\section{Tensor Type of a Linear Map}
+
+Linear maps transform with \emph{one} backward (contravariant) and \emph{one}
+forward (covariant) rule.  They are therefore \textbf{$(1,1)$-tensors}.
+
+% ======================================================================
+%  CHAPTER 5 : THE METRIC TENSOR
+% ======================================================================
+\chapter{The Metric Tensor}\label{ch:metric}
+
+\section{Measuring Lengths: Beyond Pythagoras}
+
+In an orthonormal basis, $|v|^{2} = (v^{1})^{2} + (v^{2})^{2} + \cdots$
+(Pythagoras).  In a \emph{general} (non-orthonormal) basis this formula
+\textbf{fails}: the coordinate triangle need not be right-angled.
+
+The correct formula uses the \textbf{dot product}:
+\begin{equation}\label{eq:len-dot}
+    |v|^{2} = v \cdot v.
+\end{equation}
+Expanding in a basis:
+\begin{equation}\label{eq:len-expand}
+    |v|^{2}
+    = \Bigl(\sum_i v^{i}\,e_i\Bigr)\cdot\Bigl(\sum_j v^{j}\,e_j\Bigr)
+    = \sum_{i,j} v^{i}\,v^{j}\,(e_i \cdot e_j).
+\end{equation}
+The dot products of basis vectors are the key quantities.
+
+\section{Definition of the Metric Tensor}
+
+\begin{definition}[Metric tensor]
+The \textbf{metric tensor} $g$ has components
+\begin{equation}\label{eq:metric-def}
+    \boxed{g_{ij} = e_i \cdot e_j.}
+\end{equation}
+\end{definition}
+
+Since the dot product is symmetric ($e_i \cdot e_j = e_j \cdot e_i$), the metric
+tensor is a \textbf{symmetric matrix}: $g_{ij} = g_{ji}$.
+
+The squared length of a vector is then:
+\begin{equation}\label{eq:metric-length}
+    \boxed{|v|^{2} = \sum_{i,j} g_{ij}\, v^{i}\, v^{j} = g_{ij}\, v^{i}\, v^{j}.}
+\end{equation}
+
+\begin{example}
+In an orthonormal basis, $g_{ij} = \delta_{ij}$ (the identity matrix), and the
+formula reduces to Pythagoras: $|v|^{2} = (v^{1})^{2} + \cdots + (v^{n})^{2}$.
+\end{example}
+
+\section{Measuring Angles}
+
+The dot product of two vectors is
+\[
+    v \cdot w = g_{ij}\, v^{i}\, w^{j},
+\]
+and the angle $\theta$ between $v$ and $w$ satisfies
+\begin{equation}\label{eq:angle}
+    \boxed{\cos\theta = \frac{v \cdot w}{|v|\;|w|}
+    = \frac{g_{ij}\, v^{i}\, w^{j}}
+           {\sqrt{g_{ij}\, v^{i}\, v^{j}}\;\sqrt{g_{kl}\, w^{k}\, w^{l}}}.}
+\end{equation}
+
+\section{Transformation Rules for the Metric Tensor}
+
+The metric tensor components transform with \textbf{two forward} matrices:
+\begin{equation}\label{eq:metric-fwd}
+    \boxed{\tilde{g}_{ij} = F^{k}{}_{i}\, F^{\ell}{}_{j}\, g_{k\ell}}
+    \qquad\text{(old $\to$ new)}
+\end{equation}
+\begin{equation}\label{eq:metric-bwd}
+    g_{ij} = B^{k}{}_{i}\, B^{\ell}{}_{j}\, \tilde{g}_{k\ell}
+    \qquad\text{(new $\to$ old)}
+\end{equation}
+Because it uses \emph{two covariant} rules, the metric tensor is a
+\textbf{$(0,2)$-tensor}.
+
+\section{Invariance of Length}
+
+Using the transformation rules for $g_{ij}$ and $v^{i}$:
+\[
+    \tilde{g}_{ij}\,\tilde{v}^{i}\,\tilde{v}^{j}
+    = \bigl(F^{k}{}_{i}\,F^{\ell}{}_{j}\,g_{k\ell}\bigr)
+      \bigl(B^{i}{}_{m}\,v^{m}\bigr)
+      \bigl(B^{j}{}_{n}\,v^{n}\bigr)
+    = g_{mn}\,v^{m}\,v^{n},
+\]
+since $F^{k}{}_{i}\,B^{i}{}_{m} = \delta^{k}_{m}$.  The squared length is the
+same in every coordinate system, confirming that length is \textbf{invariant}.
+
+% ======================================================================
+%  CHAPTER 6 : BILINEAR FORMS
+% ======================================================================
+\chapter{Bilinear Forms}\label{ch:bilinear}
+
+\section{Definition}
+
+\begin{definition}[Bilinear form]
+A \textbf{bilinear form} is a function $B : V \times V \to \R$ that is
+\textbf{linear in each input separately}:
+\begin{align}
+    B(a\,v, w) &= a\,B(v, w) = B(v, a\,w), \label{eq:bf-scale}\\
+    B(v_1 + v_2,\, w) &= B(v_1, w) + B(v_2, w), \label{eq:bf-add1}\\
+    B(v,\, w_1 + w_2) &= B(v, w_1) + B(v, w_2). \label{eq:bf-add2}
+\end{align}
+\end{definition}
+
+In a given basis, the output is computed by
+\begin{equation}
+    B(v,w) = B_{ij}\, v^{i}\, w^{j}.
+\end{equation}
+
+\begin{warning}
+Do \textbf{not} scale \emph{both} inputs simultaneously:
+$B(a\,v,\,a\,w) = a^{2}\,B(v,w) \neq a\,B(v,w)$
+(unless $a = 0$ or $1$).  Likewise, do not add both inputs at once without
+distributing carefully---four terms will result.
+\end{warning}
+
+\section{Bilinear Forms vs.\ the Metric Tensor}
+
+The metric tensor is a \emph{special} bilinear form with two extra properties:
+\begin{enumerate}[nosep]
+    \item \textbf{Symmetry:} $g(v,w) = g(w,v)$, i.e.\ $g_{ij} = g_{ji}$.
+    \item \textbf{Positive-definiteness:} $g(v,v) \geq 0$ for all $v$, with
+          equality only when $v = 0$.
+\end{enumerate}
+Not every bilinear form satisfies these conditions.  Bilinear forms that do are
+valid metric tensors; those that do not are still $(0,2)$-tensors, but they are
+\emph{not} metrics.
+
+\section{Terminology}
+
+\begin{itemize}[nosep]
+    \item A \textbf{form} is a function that takes vectors as input and outputs a
+          number.
+    \item A covector is a \textbf{linear form} (or \textbf{one-form}): one input,
+          linear.
+    \item A bilinear form is a \textbf{two-form}: two inputs, linear in each
+          separately.
+\end{itemize}
+
+% ======================================================================
+%  CHAPTER 7 : THE GENERAL TRANSFORMATION LAW
+% ======================================================================
+\chapter{The General Tensor Transformation Law}\label{ch:general-law}
+
+Collecting the results from previous chapters, any object whose components carry $m$
+upper (contravariant) indices and $n$ lower (covariant) indices transforms as:
+
+\begin{equation}\label{eq:general-transform}
+    \boxed{
+    \tilde{T}^{i_1 \cdots i_m}{}_{j_1 \cdots j_n}
+    = B^{i_1}{}_{k_1} \cdots B^{i_m}{}_{k_m}\;
+      F^{\ell_1}{}_{j_1} \cdots F^{\ell_n}{}_{j_n}\;
+      T^{k_1 \cdots k_m}{}_{\ell_1 \cdots \ell_n}
+    }
+\end{equation}
+
+\begin{itemize}[nosep]
+    \item Each \textbf{upper index} transforms with a $B$ (backward, contravariant).
+    \item Each \textbf{lower index} transforms with an $F$ (forward, covariant).
+\end{itemize}
+
+\begin{definition}[Tensor type]
+A tensor with $m$ contravariant (upper) indices and $n$ covariant (lower) indices is
+called an $\bm{(m,n)}$\textbf{-tensor}.
+\end{definition}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{lcl}
+    \toprule
+    \textbf{Tensor} & \textbf{Type} & \textbf{Transforms with} \\
+    \midrule
+    Scalar           & $(0,0)$ & (invariant) \\
+    Vector component $v^{i}$ & $(1,0)$ & one $B$ \\
+    Covector component $\alpha_i$ & $(0,1)$ & one $F$ \\
+    Linear map $L^{i}{}_{j}$ & $(1,1)$ & one $B$, one $F$ \\
+    Metric tensor $g_{ij}$   & $(0,2)$ & two $F$'s \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Anything that follows the rule~\eqref{eq:general-transform} under a change
+of coordinates is a tensor.}
+
+% ======================================================================
+%  CHAPTER 8 : THE TENSOR PRODUCT — BUILDING TENSORS
+% ======================================================================
+\chapter{The Tensor Product}\label{ch:tensor-product}
+
+\section{Vector--Covector Pairs as Linear Maps}\label{sec:vec-cov-pairs}
+
+Multiplying a column vector (left) by a row vector (right) produces a matrix:
+\[
+    \begin{pmatrix} a \\ b \end{pmatrix}
+    \begin{pmatrix} c & d \end{pmatrix}
+    = \begin{pmatrix} ac & ad \\ bc & bd \end{pmatrix}.
+\]
+In tensor notation, writing a vector $e_i$ next to a covector $\epsilon^{j}$ gives
+a basis linear map $e_i \otimes \epsilon^{j}$.  Any linear map $L$ can be written
+\begin{equation}\label{eq:L-tensor-expand}
+    L = L^{i}{}_{j}\; e_i \otimes \epsilon^{j}.
+\end{equation}
+
+\subsection*{Pure vs.\ impure matrices}
+
+\begin{itemize}[nosep]
+    \item A \textbf{pure} matrix can be factored into a single column--row product.
+          All its columns are scalar multiples of each other, so the linear map
+          sends every input to the same direction.
+    \item An \textbf{impure} matrix cannot be so factored.  It is a
+          \emph{linear combination} of pure matrices and can produce outputs
+          pointing in different directions.
+\end{itemize}
+
+The four products $e_i \otimes \epsilon^{j}$ ($i,j = 1,2$) form a
+\textbf{basis for all $2\times 2$ linear maps}.
+
+\subsection*{Action on a vector}
+
+Let $L = L^{i}{}_{j}\; e_i \otimes \epsilon^{j}$ act on $v = v^{k}\,e_k$:
+\[
+    L(v) = L^{i}{}_{j}\,v^{k}\; e_i\;\underbrace{\epsilon^{j}(e_k)}_{\delta^{j}_{k}}
+         = L^{i}{}_{j}\,v^{j}\; e_i,
+\]
+recovering the standard matrix--vector multiplication formula.
+
+\section{Covector--Covector Pairs as Bilinear Forms}\label{sec:cov-cov-pairs}
+
+Similarly, a bilinear form can be expanded as
+\begin{equation}
+    B = B_{ij}\; \epsilon^{i} \otimes \epsilon^{j}.
+\end{equation}
+Acting on two vectors $v = v^{k}\,e_k$ and $w = w^{\ell}\,e_\ell$:
+\[
+    B(v,w) = B_{ij}\,v^{k}\,w^{\ell}\;
+    \underbrace{\epsilon^{i}(e_k)}_{\delta^{i}_k}
+    \underbrace{\epsilon^{j}(e_\ell)}_{\delta^{j}_\ell}
+    = B_{ij}\,v^{i}\,w^{j}.
+\]
+
+The array shape is a \textbf{row of rows}---both vector inputs can be written as
+columns, and the multiplication works out naturally.
+
+\section{Tensor Product vs.\ Kronecker Product}\label{sec:tp-vs-kp}
+
+The \textbf{tensor product} $\otimes$ and the \textbf{Kronecker product} use the
+same symbol but operate in different domains:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{lll}
+    \toprule
+    & \textbf{Tensor product} & \textbf{Kronecker product} \\
+    \midrule
+    Operands & abstract tensors & arrays of numbers \\
+    Result   & a new tensor     & a new array \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\noindent They are closely related: the \emph{components} obtained from the tensor
+product are exactly the \emph{entries} of the array obtained from the Kronecker
+product.  The tensor product works in the land of algebraic symbols; the Kronecker
+product works in the land of arrays.
+
+\section{Benefits of the Tensor Product Viewpoint}
+
+Given the expansion $L = L^{i}{}_{j}\;e_i \otimes \epsilon^{j}$:
+
+\begin{enumerate}[nosep]
+    \item \textbf{Transformation rules for free.}  Transform each basis vector and
+          basis covector individually using the rules already known.
+    \item \textbf{Multiplication formulas for free.}  Pass vector inputs to
+          covectors and apply linearity + Kronecker delta.
+    \item \textbf{Correct array shapes for free.}  The Kronecker product of the
+          component arrays gives the correct multi-dimensional array.
+\end{enumerate}
+
+% ======================================================================
+%  CHAPTER 9 : GENERAL TENSORS AND TENSOR PRODUCT SPACES
+% ======================================================================
+\chapter{General Tensors and Tensor Product Spaces}\label{ch:general-tensors}
+
+\section{Arbitrary Vector--Covector Combinations}
+
+The tensor product viewpoint extends to \emph{any} combination of vectors and
+covectors.
+
+\begin{example}\leavevmode
+\begin{itemize}[nosep]
+    \item A $(2,0)$-tensor: $D = D^{ab}\; e_a \otimes e_b$ \quad (vector--vector
+          pair).
+    \item A $(1,2)$-tensor: $Q = Q^{i}{}_{jk}\; e_i \otimes \epsilon^{j}
+          \otimes \epsilon^{k}$ \quad (vector--covector--covector triple).
+\end{itemize}
+\end{example}
+
+Transformation rules follow immediately by transforming each basis element
+individually.
+
+\subsection*{Multiple contraction possibilities}
+
+For higher-type tensors, there is generally \emph{no unique} way to ``multiply''
+two tensors---the Einstein component notation must specify \emph{which} indices are
+summed.  For instance, $Q^{i}{}_{jk}\,D^{jk}$, $Q^{i}{}_{jk}\,D^{kj}$,
+and $Q^{i}{}_{jk}\,D^{ja}$ are all different operations.
+
+\section{Tensor Product Spaces}
+
+The tensor product of vector spaces $V$ and $W$ produces a new vector space
+$V \otimes W$ whose elements obey the \textbf{scaling rule}
+\[
+    n\,(a \otimes b) = (n\,a) \otimes b = a \otimes (n\,b),
+\]
+and the \textbf{addition rules}
+\begin{align}
+    (a_1 + a_2) \otimes b &= a_1 \otimes b + a_2 \otimes b, \\
+    a \otimes (b_1 + b_2) &= a \otimes b_1 + a \otimes b_2.
+\end{align}
+
+\begin{example}[Tensor product spaces]\leavevmode
+\begin{itemize}[nosep]
+    \item $(1,1)$-tensors live in $V \otimes V^*$.
+    \item $(0,2)$-tensors live in $V^* \otimes V^*$.
+    \item $(2,0)$-tensors live in $V \otimes V$.
+    \item $(1,2)$-tensors live in $V \otimes V^* \otimes V^*$.
+\end{itemize}
+\end{example}
+
+We can build arbitrarily large tensor product spaces:
+\[
+    \underbrace{V \otimes \cdots \otimes V}_{m} \otimes
+    \underbrace{V^* \otimes \cdots \otimes V^*}_{n}
+\]
+contains all $(m,n)$-tensors.  Component indices from $V$ go \emph{upstairs};
+indices from $V^*$ go \emph{downstairs}.
+
+\section{Tensors as Multilinear Maps}
+
+\begin{definition}[Multilinear map]
+A \textbf{multilinear map} is a function of several variables that is
+\textbf{linear in each variable separately} (while all others are held fixed):
+\begin{align}
+    T(\dots, n\,v_k, \dots) &= n\,T(\dots, v_k, \dots), \\
+    T(\dots, v_k + w_k, \dots) &= T(\dots, v_k, \dots) + T(\dots, w_k, \dots).
+\end{align}
+\end{definition}
+
+All tensors, when used as functions, are multilinear maps.  This is a direct
+consequence of the linearity of each covector and vector factor in the tensor
+product.
+
+% ======================================================================
+%  CHAPTER 10 : RAISING AND LOWERING INDICES
+% ======================================================================
+\chapter{Raising and Lowering Indices}\label{ch:raise-lower}
+
+\section{Creating Vector--Covector Partners}
+
+We seek a natural correspondence between vectors in $V$ and covectors in $V^*$.
+
+\paragraph{Na\"ive attempt.}
+Pair basis vector $e_i$ with basis covector $\epsilon^{i}$.  This looks clean in
+one basis but breaks down under a change of basis: basis vectors transform
+covariantly while basis covectors transform contravariantly, so the pairing becomes
+inconsistent.
+
+\paragraph{Correct approach.}
+Given a vector $v \in V$, define the covector
+\begin{equation}\label{eq:v-flat}
+    v^{\flat} \;:\; w \longmapsto v \cdot w.
+\end{equation}
+This is indeed a covector (an element of $V^*$) because:
+\begin{enumerate}[nosep]
+    \item It maps vectors to scalars.
+    \item It is linear: $v \cdot (n\,w) = n\,(v \cdot w)$ and
+          $v \cdot (w_1 + w_2) = v \cdot w_1 + v \cdot w_2$.
+\end{enumerate}
+
+This correspondence does \textbf{not} depend on any basis and behaves well under
+changes of coordinates: scaling $v$ by 2 also scales $v^{\flat}$ by 2.
+
+\section{Lowering Indices with the Metric Tensor}
+
+The components of $v^{\flat}$ are obtained via the metric tensor:
+\begin{equation}\label{eq:lower}
+    \boxed{v_i = g_{ij}\, v^{j}.}
+\end{equation}
+Here $v^{j}$ are the (contravariant) vector components and $v_i$ are the
+(covariant) covector components of the partner covector $v^{\flat}$.
+
+\begin{warning}
+$v_i$ and $v^{i}$ are \textbf{not the same thing}.  Converting between them
+\textbf{requires} the metric tensor.  They are only equal in the special case of an
+orthonormal basis where $g_{ij} = \delta_{ij}$.
+\end{warning}
+
+\section{The Inverse Metric Tensor}
+
+\begin{definition}[Inverse metric tensor]
+The \textbf{inverse metric tensor} $g^{ij}$ is defined by
+\begin{equation}\label{eq:inv-metric}
+    \boxed{g^{ik}\, g_{kj} = \delta^{i}_{j}.}
+\end{equation}
+It is a $(2,0)$-tensor living in $V \otimes V$.
+\end{definition}
+
+\section{Raising Indices}
+
+Multiplying both sides of the lowering equation~\eqref{eq:lower} by $g^{ik}$:
+\begin{equation}\label{eq:raise}
+    \boxed{v^{i} = g^{ij}\, v_j.}
+\end{equation}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{lcc}
+    \toprule
+    \textbf{Operation} & \textbf{Formula} & \textbf{Uses} \\
+    \midrule
+    Lower an index & $v_i = g_{ij}\,v^{j}$ & metric tensor $g_{ij}$ \\
+    Raise an index & $v^{i} = g^{ij}\,v_j$  & inverse metric $g^{ij}$ \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\section{Raising and Lowering on General Tensors}
+
+These operations extend to tensors of any type.  For example, given a $(1,2)$-tensor
+$Q^{i}{}_{jk} \in V \otimes V^* \otimes V^*$, we can raise the $j$-index:
+\[
+    Q'^{i\ell}{}_{k} = g^{\ell j}\, Q^{i}{}_{jk},
+\]
+producing a $(2,1)$-tensor in $V \otimes V \otimes V^*$.
+
+Similarly, for a $(2,0)$-tensor $D^{ab}$, we can lower the $a$-index:
+\[
+    D'_{a}{}^{b} = g_{ac}\, D^{cb},
+\]
+producing a $(1,1)$-tensor.
+
+\section{The Flat and Sharp Operators}
+
+Musical notation provides a concise shorthand:
+
+\begin{itemize}[nosep]
+    \item $v^{\flat}$ (\textbf{flat}): converts a vector $v$ to its partner
+          covector.  The flat symbol \emph{lowers} the index, just as a flat in
+          music lowers a note's pitch.  Geometrically, it ``flattens'' a pointy
+          arrow into a flat stack of lines.
+    \item $\alpha^{\sharp}$ (\textbf{sharp}): converts a covector $\alpha$ to its
+          partner vector.  The sharp symbol \emph{raises} the index, just as a
+          sharp in music raises a note's pitch.  Geometrically, it ``sharpens'' a
+          flat stack into a pointy arrow.
+\end{itemize}
+
+In formulas:
+\begin{align}
+    (v^{\flat})_i &= g_{ij}\, v^{j}, \\
+    (\alpha^{\sharp})^{i} &= g^{ij}\, \alpha_j.
+\end{align}
+
+% ======================================================================
+%  APPENDIX: SUMMARY
+% ======================================================================
+\appendix
+\chapter{Quick Reference}\label{app:summary}
+
+\section{Basis Transformations}
+
+\begin{align}
+    \tildee{i} &= F^{j}{}_{i}\, e_j
+        &\quad& \text{(forward: old basis $\to$ new basis)} \\
+    e_i &= B^{j}{}_{i}\, \tildee{j}
+        &\quad& \text{(backward: new basis $\to$ old basis)}
+\end{align}
+
+\section{Component Transformations (Old $\to$ New)}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{lccc}
+    \toprule
+    \textbf{Object} & \textbf{Type} & \textbf{Rule} & \textbf{Name} \\
+    \midrule
+    Vector components $v^{i}$    & $(1,0)$ & $\tilde{v}^{i} = B^{i}{}_{j}\,v^{j}$
+        & contravariant \\
+    Covector components $\alpha_i$ & $(0,1)$ & $\tilde{\alpha}_i = F^{j}{}_{i}\,\alpha_j$
+        & covariant \\
+    Linear map $L^{i}{}_{j}$     & $(1,1)$ & $\tilde{L}^{i}{}_{j} = B^{i}{}_{k}\,L^{k}{}_{\ell}\,F^{\ell}{}_{j}$
+        & mixed \\
+    Metric tensor $g_{ij}$       & $(0,2)$ & $\tilde{g}_{ij} = F^{k}{}_{i}\,F^{\ell}{}_{j}\,g_{k\ell}$
+        & covariant \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\section{Key Identities}
+
+\begin{align}
+    F^{j}{}_{i}\, B^{k}{}_{j} &= \delta^{k}_{i}
+        &\quad& \text{($F$ and $B$ are inverses)} \\
+    \epsilon^{i}(e_j) &= \delta^{i}_{j}
+        &\quad& \text{(dual basis definition)} \\
+    g_{ij}\, v^{j} &= v_i
+        &\quad& \text{(index lowering)} \\
+    g^{ij}\, v_j &= v^{i}
+        &\quad& \text{(index raising)} \\
+    g^{ik}\, g_{kj} &= \delta^{i}_{j}
+        &\quad& \text{(inverse metric definition)}
+\end{align}
+
+\section{Tensor Product}
+
+\begin{itemize}[nosep]
+    \item \textbf{Scaling:}
+          $n\,(a \otimes b) = (n\,a) \otimes b = a \otimes (n\,b)$.
+    \item \textbf{Addition (left):}
+          $(a_1 + a_2) \otimes b = a_1 \otimes b + a_2 \otimes b$.
+    \item \textbf{Addition (right):}
+          $a \otimes (b_1 + b_2) = a \otimes b_1 + a \otimes b_2$.
+\end{itemize}
+
+\section{Flat and Sharp Operators}
+
+\begin{align}
+    v^{\flat} &: w \mapsto v \cdot w
+        &\quad& \text{(vector $\to$ covector, lowers index)} \\
+    \alpha^{\sharp} &: \text{covector} \to \text{vector}
+        &\quad& \text{(covector $\to$ vector, raises index)}
+\end{align}
+
+\end{document}

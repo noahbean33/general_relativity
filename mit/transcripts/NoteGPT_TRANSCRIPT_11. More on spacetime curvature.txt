@@ -1,0 +1,261 @@
+00:00:00
+[SQUEAKING] [RUSTLING] [CLICKING]  SCOTT HUGHES: So this is unfortunately a rather sad lecture, [LAUGHS] since this will be the last one that I'm giving to a live audience here, although any of you who are grad students, if you want to come and keep me company while I'm recording my next couple of lectures-- I'm actually not joking. It's really weird talking to an empty room, and so it might be kind of nice to at least have a face to react to. So I will be recording these, and making them available.
+
+00:00:39
+And per the announcements that I sent out today, there are some additional assignments that I've begun posting. I've begun putting things like that up. But for the time being, ignore due dates. In fact, I would like to say, especially if you are getting ready to leave town, just ignore the assignments. There will be updates posted fairly soon. You know, [CHUCKLES] sometimes-- there's a saying that Martin Schmidt, our provost, said one time in respect to a particular initiative as it was unwinding, and I feel like it applies here:
+
+00:01:12
+we're basically sewing together the parachute after we've jumped out of the airplane. [CHUCKLES] And so that's kind of where we are right now, and hopefully it'll be assembled before we hit the ground. But we're all kind of figuring out the way this goes. So there will be updates with respect to assignments and things like that, and you know, we're just trying to figure out-- I'll just be blunt-- how the hell we're going to actually pull this off. [LAUGHS] It's not curved enough.
+
+00:01:39
+All right, so let me get back to where we were. I want to begin-- so what we worked with yesterday was we derived this mathematical object called the Riemann curvature tensor. And the way we discussed it was by thinking about some vector that I parallel transported around a closed loop. I chose a parallelogram because it allowed me to sort of nicely formulate the mathematics. So if I imagine a parallelogram who's got sides that are sort of close enough, that parallel is a well-defined term,
+
+00:02:07
+and the sides are in two different directions, one's of length delta x in the lambda direction, one is a delta x in the sigma direction, when I take this vector all the way around the loop, I find the vector has changed. It's pointing in a different direction, and this describes the way in which it has sort of moved as I go around that loop. That object is-- even though it's created-- it's assembled from the Christoffel symbols, which are not tensor, but it's done in such a way
+
+00:02:35
+that their nontensorialness cancels out, and this four-index object R is a tensor. As you can see, it involves terms like derivatives of the Christoffels and Christoffel times Christoffel. So that's where nonlinearity is going to enter. I want to sort of fairly quickly-- because I do want to get into some other stuff that we do with this-- talk a bit about the symmetry of this thing. So I discussed last time how you look at this, and naively, you think you've got-- in four dimensions, four dimensions, four [INAUDIBLE]
+
+00:03:04
+states. It looks like you have 256 components.  But in fact, there are quite a few symmetries associated with this which reduces it significantly. I kind of gave you the answer last time, but let me talk about where that comes from. I'm going to describe a way to see these symmetries, which there's a couple ways you can do it, and I'm going to pick the one that's essentially the simplest. It's perhaps not as-- there's a few ways to do it that a purist might prefer, but in the interest of time, I think
+
+00:03:33
+this is sort of the best one. So the first thing is that just by inspecting this answer, you should see that this object is antisymmetric if you exchange the final two indices. OK, just look at that formula, switch the indices sigma and lambda, and you get a minus sign. Physically, that actually hopefully makes sense, because what that is basically telling you-- remember the way we did this, this operation of parallel transporting around a parallelogram. We sort of went along, say, the lambda direction, then
+
+00:04:06
+the sigma, then the lambda, than the sigma. If I exchange those indices, it's kind of like I actually go in the opposite direction, OK? I go in the other direction first. I go on the sigma first, then the lambda. And so this corresponds to doing this operation, which I'll remind you is called a holonomy. It corresponds to reversing direction.  OK? So that's a fairly easy one to say. The others are a little bit tougher, and like I said, what I'm going to do is follow kind of a shortcut to do this.
+
+00:04:50
+One can do it using sort of the full glory of the Riemann tensor here, but life gets a little bit easier for us if we do the following.  So what you want to do first is lower the first index.  So what I'm going to do is look at R, alpha in the downstairs, mu lambda sigma. This is what I get when I contract, like so. And then what I'm going to do is I'm going to do all of my analysis that follows in a local Lorentz frame.  When I go into the local Lorentz frame, the metric at a particular point is
+
+00:05:45
+the metric of flat spacetime. It's the A to mu nu.  My Christoffel symbols all vanish, but you have to be a little bit careful, because the derivatives of the Christoffel do not vanish, right? So one of the key points is that when you go into those local Lorentz frame, there is a little bit of curvature associated with it. So the derivatives do not--  OK, so the reason I'm doing this-- like I said, you actually could do the little counting exercise I'm about to go through with this whole thing.
+
+00:06:33
+It's just messy, OK? And so this is sort of a quick way to see the way it all comes out. Because this is a tensor relationship, you are guaranteed that something you conclude in a convenient reference frame will hold in all of them, OK? So it's a nice way to do this. Those of you who are sort of, you know, particularly purist, knock yourselves out trying to figure out how to do this sort of in general. This is adequate for our purposes here. So when I go and I do this, here's what my all downstairs Riemann tensor turns into.
+
+00:07:06
+I'm going to lose the Christoffel squared terms because Christoffel vanishes, and the only thing that is left are the terms that involve the derivative of the Christoffel, OK? Let's do something a little bit further. So let's now plug in the definition of the Christoffel, and we'll use the metric before we actually go into the frame, so that we can sort of get the form that we would get with this.  I should have made myself be a little bit more careful here. So I'm going to put LLF on this, to make it clear that I'm doing
+
+00:08:13
+this in a local Lorentz frame.  So I do this in a local Lorentz frame, and what this turns into-- so there's a lot of algebra that I'm not writing out.  This is an alpha, g sigma mu minus d sigma d mu g alpha lambda plus d sigma d alpha g lambda mu, OK? So notice, it is only the second derivative of the metric that is appearing here, OK? If I go into the local Lorentz frame, that's the one degree of freedom we were not able to transform away. Anything involving the metric in the first derivative
+
+00:09:12
+dies in this particular frame. But this is good enough for us to begin to count up symmetries, and to see what things are going to look like. And so I don't have any great guidance for how to do this. This is one of those things where, literally, you just sort of stare at it for a little while, and you see what happens when you play around with exchanging various pairs of indices. So stare at this for a while.  OK, so you can see right away-- just for counting purposes, let me write down the one that I argued was kind of obvious even
+
+00:09:47
+in the full form. It's the one you get when you exchange the last pairs of indices. We'll call that symmetry one.  Oh, bugger, thank you. [CHUCKLES] Yeah. [CHUCKLES] That's a good way to-- that's a very complicated way of writing zero, otherwise. [LAUGHING] All right, if you exchange the first ones, you also-- if you look at this formula, you can see when you exchange alpha and mu, you get a minus sign.  So one that might be-- this one takes a little bit of creativity to sort of see it,
+
+00:10:36
+where it comes out.  Suppose what I do is I exchange the first two indices for the second two indices. Well, it turns out, if you do that, you just get the expression back.  OK? So if I just swap alpha mu, make them my last two, make lambda sigma my first two, [CLICKS TONGUE] I get Riemann right back. So that's another symmetry.  And then finally, someday, when I've got a little bit more bandwidth in my class to do this, I'd really like to sort of justify where you can derive this one a little bit more rigorously.
+
+00:11:23
+But for now, it's sufficient just to sort of say, look at that formula, and you'll see that it's true. If you take-- and then you cyclically permute the second, third, and fourth indices, you get zero, OK? There is a variant of this particular symmetry, which is that if you take this and you antisymmetrize on these things, you get zero, OK? And I've got some words in the notes that, in the interest of time, I'm not going to go through them, but they are posted, demonstrating why those two are actually
+
+00:12:18
+equivalent to one another. What it boils down to is, expand out this antisymmetrization-- and I'm going to do that again for a three-index object a little bit later in this lecture-- and then occasionally invoke one of these other ones, and you'll see that these two, four and four prime, are saying the same thing. So go through all of these different symmetries, and you'll find n to the 4 independent components goes over to n squared times n squared minus 1 over 12, OK? Not terribly hard to do that.
+
+00:12:54
+It's a little exercise in combinatorics. And when you do that for n equals 20, as I mentioned, you end up with-- excuse me, not n equals 20. When you do this with n equals 4, you end up with 20.  And just for completeness, let me actually write out that if you actually-- if you go into the local Lorentz frame, your spacetime metric is in fact minus 1, 1, 1, 1 on the diagonal. But you, of course, have these quadratic corrections, and one can in fact write them out explicitly.  So that is what the time piece ends up looking like.
+
+00:13:53
+There is an off-diagonal piece, which only enters at quadratic order.  It looks like this, and move this down a little bit lower.  That's what your space-based piece will look like. So this explicitly constructs the coordinate system used in a freely falling frame, including these second order corrections. So this particular form is known as Riemann normal coordinates.  So if you are-- this is discussed in a little bit more detail in one of the optional readings in the textbook by Eric Poisson, A Relativist's Toolkit.
+
+00:15:05
+Very nice discussion.  All right, so now that we have the curvature tensor in hand, we really have essentially every tool that matters for 8.962, OK? There's a little bit more analysis we need to do with this guy, but we now have all the pieces. OK, there's no major new mathematical object or no object described in geometry that I need to build in order for us to make a relativistic theory of gravity.  I do want to talk about the curvature tensor a little bit more, because there are a couple of properties about it
+
+00:16:01
+that are very important for us. And I think we'll have just enough time today to sort of get to them. That will allow us to set up, and in the first lecture that I will record in an empty room, actually derive a relativistic gravity equation. So let me talk about a few variants of this curvature tensor.  So first, suppose you take the trace on some pair of indices. So what I mean by the trace is, essentially, imagine all the indices are in the downstairs position, and I contract it with the metric,
+
+00:16:43
+so that I'm summing over them. Well, first of all, you'll note that when you do this, if you were to take the trace on indices 1 and 2, they are antisymmetric. The metric is symmetric, so contracting metric with indices 1 and 2 is going to give me 0. If I can track symmetric with indices 3 and 4, I get 0, OK? So the only trace that makes sense is do it on either indices 1 and 3 or on indices 2 and 4. Let's do it on indices 1 and 3.  So what I'm going to do is evaluate R, alpha mu alpha nu--
+
+00:17:29
+which if you like, you can write this as R alpha beta of R. Here, I'll turn it like this. Beta mu alpha nu-- we're going to define this as R with two indices, OK? Just little r and mu, nu. This actually shows up enough that it's given a name. This is called the Ricci curvature tensor.  If you were to like, I said, if you do your trace on indices 1 and 2, you get 0. If you do it on 3 and 4, you get 0. If you do it on 2 and 4, it's exactly the same as doing it on 1 and 3, because of all these other symmetries.
+
+00:18:30
+So in fact, this ends up, when you count up all your different symmetries, this is the only trace that is meaningful, OK? There are a few other pairs where you get a minus sign, but still the same thing. So this is the only trace that ends up being meaningful. This is actually, in fact, it's not too hard to show that this is symmetric. So even though, you know, Riemann had all these crazy antisymmetries and symmetries, this one is simpler, OK?  One way to do this is just to take the exact expression
+
+00:19:10
+that we wrote down for the Riemann tensor in terms of derivatives of Christoffel and Christoffel squared, and just write it out in this traced over form. So when you do this, you get this. This guy is symmetric on the bottom two indices.  Now, this isn't obviously symmetric, but recall, a lecture or two ago, I worked through a couple of identities that involved the determinant of the metric. It turns out, if you go back and you look up these identities, you can rewrite this term as d nu of d mu of the log of j--
+
+00:20:00
+excuse me, log of square root of j. Symmetric when you exchange mu and nu.  And then you get two terms that look like this. OK, this one, pretty obviously symmetric on exchange of mu and nu. When you do this one, you might think to yourself, hmm, that one doesn't quite look symmetric. But remember, alpha and beta are both dummy indices. And so in fact, when you exchange mu and nu, this last term just turns back into itself. So that's kind of interesting, because R mu nu-- the reason I went through that little exercise--
+
+00:20:42
+this is a symmetric tensor, and we're going to work in four dimensions of spacetime here. So symmetric 4 by 4 has 10 independent components.  Riemann had 20. Somehow, this Ricci has-- in some sense, you can of it as having 10 of-- the 20 components associated with Riemann are encoded in this guy. Where are the other 10? I'm going to talk about that in just a moment or two.  Before I do that, I will just note that we are going to want to also know about the trace of the Ricci tensor. So if you compute this, this is often just abbreviated R
+
+00:21:56
+with no indices whatsoever. This is called the Ricci scalar or the curvature scalar.  So there's another variant of curvature which we're not going to use very much, but I wanted to just talk about very, very briefly. The derivation of this is highly non-obvious, so let me just write it out, and I'm going to talk about it briefly. So suppose I define a four-index tensor, C alpha mu lambda sigma, to be the Riemann tensor-- minus-- so working in n dimensions-- 2 over n minus 2, g alpha--
+
+00:22:56
+I'm going to antisymmetrize here. So antisymmetrizing on lambda and sigma--  OK, so in the famous words of Rabi, who ordered that? So the way that this has been constructed, if you go through and you carefully look at the way this thing behaves under exchange of any pairs of indices, it has exactly the same symmetries as Riemann.  But if you take the trace of this, turns out to be zero.  In fact, when you go through, when you count up how many independent components it has, because it has no trace, it has 10 independent components.
+
+00:24:29
+So this tensor has a name. It was first formulated by the mathematician Hermann Weyl. And so although it's a German name and it's not spelled that way, it is appropriately the "vile" tensor. It is a pretty vile thing to look at, but it plays an important role.  So in keeping with the idea that it's got 10 independent components, Ricci has 10 independent components, Riemann has 20. Heuristically, you can sort of think and put big quotes around all these objects.  This doesn't mean approximately.
+
+00:25:34
+Let's just put it this way. This is, got all the same information as Ricci plus Weyl, OK? One can, in fact-- by bringing in appropriate powers in the metric and things like that, one can actually write down a real equation relating these. It's a bit of a mess. It's not that interesting. The key thing I want you to be aware of is that all of the curvature content of Riemann is sort of split into Ricci and Weyl. Looking ahead a little bit-- and because I'm going to be doing this in an empty room, I just want to make this point now--
+
+00:26:08
+we are soon going to see that Ricci is very closely related to sources of gravity.  So we're going to-- when we formulate a theory of gravity, working with things, we're going to find that there's a tensor that is just a slight modification of the Ricci tensor, that is equal to the stress energy tensor that we use as our source. Stress energy tensor is a symmetric 4 by 4 object. Those 10 degrees of freedom in the stress energy tensor essentially determine the 10 curvature degrees of freedom encoded in Ricci.
+
+00:26:50
+But what that tells you is that if you're in a region of vacuum, where there is no stress energy, there's no Ricci, OK? But there is curvature. We measure tides. We see gravitational effects. Weyl ends up being the quantity that describes behavior of gravity in vacuum regions. Ricci ends up very closely related to how it describes it in regions with matter. One reason I mentioned this-- so there's only-- [CHUCKLES] only one LIGO student here now. Hi, Sylvia. [CHUCKLES] But in fact, when one is describing
+
+00:27:23
+gravitational radiation, the behavior of the Weyl tensor ends up being very important for characterizing the degrees of freedom associated with radiation and general relativity. So that's a little bit ahead. There's a few other things you can do with it which are related to what are called conformal transformations. I have a few notes on them, but they're not that important for our class. It's discussed a little bit in Carroll, so I'll leave that as a reading if you are interested,
+
+00:27:46
+but we don't need to go through it here.  So there are two other things that are much more important for us to discuss with respect to Riemann first, and I'm going to focus the time that we have on them. So one of the really important aspects of curvature that I've emphasized a few times now is the idea that initially parallel geodesics become no longer parallel when they're moving on a manifold that is curved. We're going to use the Riemann curvature tensor to quantify what the breakdown of parallelism
+
+00:28:23
+actually means.  There's a couple of different discussions of this that you'll see in various places. Carroll's discussion is very brief. It's rigorous. It's very brief. I'm doing something that's a little bit-- to my mind, it's a little bit more physically motivated OK so I'm going to do it in a slightly different way from the way it's done in Carroll. It's a little close to the way it's done in Schutz's textbook. So what we want to do is imagine we have initially
+
+00:29:06
+parallel geodesics, and what we want to do is characterize how they become nonparallel.  Well, we'll put it this way, how they deviate as one moves along their world lines-- around these world lines.  OK, so here's what I want to do. That's the idea of the calculation that I want to do. So what I want to start out with is-- let's consider two nearby geodesics.  And what I'm going to mean by nearby is that they are close enough that they're essentially in the same local Lorentz frame, OK?
+
+00:30:09
+So they're going to have the same metric. I'm going to be able to choose coordinates such that the Christoffel symbol is zero for both of them. I will not be able to get rid of the second derivative, though, OK? So that will be where a bit of a difference begins to enter. Two nearby geodesics-- and I'm going to use just lambda as the affine parameter along them.  So here's my first one.  I'm going to make a few definitions on the next board. I'm going to call this gamma sub v. And here's my next one.
+
+00:30:54
+I'm going to call it gamma sub u.  Define two points here.  OK, I'm going to make a couple of definitions on the next board.  OK, so definitions-- I'm going to call u the tangent vector to the curve gamma sub u.  OK? So this is equal to dx d lambda on that curve. v is the tangent vector to gamma sub v. The point A is at lambda 0 on curve gamma sub u.  A prime is at lambda sub 0 on gamma v. So they're both parameterized by a parameter lambda, and I'm going to set the-- they're basically both synchronizing their clocks
+
+00:32:29
+at the same time. Like, at those points, they're going to find their starting points as A and A prime. What I'm going to do now is I'm going to define what's called a geodesic displacement factor that points from lambda on the u curve to lambda on the v curve. And I'm going to use my favorite Greek letter, xi.  So this points from lambda on gamma u to lambda that is basically to the same value.  Let me make this a little bit more precise. Points from the event at lambda on gamma u
+
+00:33:19
+to the event at lambda on gamma v-- OK? Apologies for being somewhat didactic there, but we need to define things carefully. So on this-- so here's my initial--  so that's what xi looks like at parameter lambda 0. And what we want to do is examine how xi evolves as one moves along these geodesics. That's going to be our goal. So let's make things a little bit more quantitative here.  Xi is going to be equal to x gamma v at lambda minus x on gamma u at lambda. Finally, I'm going to assume that the curves begin parallel
+
+00:34:30
+to each other.  That's a statement that u of lambda 0 equals v of lambda 0. And it also tells me that I can use--  that this must equal 0 at the initial point. Not going to equal 0 everywhere. In fact, it won't.  But I want to use this as a boundary condition in the calculation I'm about to do.  OK.  So what we're going to do is essentially say, you know, as we move along these two curves, these are geodesics. We're going to use the geodesic equation to slide along these two curves.
+
+00:35:50
+We know what the equation is that governs u as it moves along gamma u. We know what the equation is that governs v it moves along gamma v. We're just going to take the difference between them, and we're going to kind of use that to develop an acceleration equation that governs that displacement xi. Here's the bit where I differ a little bit from Carroll. So Carroll, like I said, Carroll has a very brief discussion, which is-- it's absolutely right. But I want to give a little bit of physical insight,
+
+00:36:19
+and I think you can do that by choosing to work in the local Lorentz frame.  So we're going to work in the local Lorentz frame, and I'm going to center this local Lorentz frame on the event A. The reason why I'm doing that is this then allows me to say, g mu nu at the event is A mu nu.  Pardon me a second. My Christoffel symbols at event A are all going to be zero.  g mu nu at A prime is also going to be A mu nu. We have to be a little bit careful. Our Christoffel symbols do not vanish at point A prime
+
+00:37:50
+because there's a little bit of curvature. They are in fact related to the fact that I'm sort of slightly far away, and I'm picking up that second order correction, OK? This is sort of where all the important bits of the analysis are going to come from. This is the fact that they're close to each other. I can set up a local Lorentz frame, but it's got that little bit of sort of schmutz at second order that's coming in, and kind of pushing me away from a simple local Lorentz
+
+00:38:28
+frame there-- the simple mathematical form right there. OK, let's put that up.  OK.  So let's look at the equations that govern motion along these two curves.  So the geodesic equation along curve gamma u-- and we'll just look at it at A. It's a second order-- I'm going to write it in terms of the coordinates. It looks like this. We're evaluating this at A. At A, my Christoffel symbols are all zero, so this is just zero.  Let's look at it along the other curve, at A prime.
+
+00:39:47
+OK?  So in just a second, I am going to--  wait a second. I'm going to substitute in that derivative of Christoffel that's going to go in there. Before I do that-- so notice, this also depends on the velocity as I move along at that point, right? Typical geodesic-- So I'm going to substitute in the fact that both the x mu and the x nu velocity here, this is defined as v mu. But remember, these guys are defined as being initially parallel.  OK? So what this tells me is--  OK, that's an alpha.
+
+00:41:26
+So this is interesting. What I'm seeing is I end up with an equation where the derivative of the Christoffel symbol is coupling to sort of my motion along that world line and the displacement. Now, let me just remind you, what I really wanted to do was get an equation that governs how this guy changes, OK? But this guy is just defined as the difference between the position along curve v minus the position along curve u. So if I take the difference of these two things--  pardon me, forgot to label which curve this one is on.
+
+00:42:32
+So I'm doing this at A prime, doing this one at A. This is an equation governing the acceleration of this displacement.  OK? So this is interesting, OK? So what you're sort of seeing is that the geodesic displacement looks something like two derivatives of the metric coupling in the forward velocity and the displacement itself. Now, as written, this equation is fine if all you are doing is living life in the local Lorentz frame, OK? We want to do a little better than that, though. So I'm going to do a little bit more massaging of this,
+
+00:43:31
+but I kind of want to emphasize that this already brings out the key physical point, OK? I can't yet-- you know, you're sort of looking at this, and you're thinking to yourself, that looks like a piece of Riemann, but it ain't Riemann, right? It's a derivative of a Christoffel symbol, and that's not a tensor. So this isn't quite the kind of thing we want yet. We need to do a little bit more work.  And so what I would sort of say is, everything I did up to here, this is like the key important physics.
+
+00:43:58
+Now I'm going to do a little bit of stuff to sort of put the suit and tie that a tensor is supposed to wear. I'm going to dress it up a little bit, so that it's wearing the clothes that all quantities in this class are supposed to wear.  So we want to make this tensorial.  And so for guidance of that, these time derivatives or derivatives with respect to the parameter, it's not really nicely formulated, OK? The thing which we should note is, d by d lambda, that's what I get when
+
+00:44:46
+I contract the forward velocity with a partial derivative. What we should do is replace this with something like what I'm going to call capital D by d lambda, which is what I'm going to get when I do derivatives using-- when I use forward velocity contracted on a covariant derivative, OK? So--  Suppose I just-- I'm agnostic about what xi actually is. I just know it's a vector field, and I want to compute this thing. Well, we learned how to do that a couple lectures ago.  I'm going to work this guy out.
+
+00:45:36
+And-- [EXCLAIMS] I couple in a term that looks like this. You might be tempted at this point to go, oh, I'm in a local Lorentz frame. I can get rid of that Christoffel. Don't do that quite yet, because we're going to want to take one more derivative. Christoffel does vanish, but its derivative does not. Wait till you've done all of your derivatives before you insert that relationship.  Just getting another piece of chalk.  So my covariant derivative along the trajectory with my parameter is the usual total derivative plus--
+
+00:46:51
+that, OK? Now, I'm going to want to take one more derivative.  OK? So there's a lot of junk in here. I'm going to get one term.  It just looks like this. But now I'm going to get a whole bunch of other terms that involve-- so this is what I get when I expand this guy out, and I just have--  well, I should hang on a second. So first, I'm going to get one that involves essentially the first term, u on the partial, hitting both of these terms. OK, so when I do that--  pardon me just one moment.
+
+00:48:08
+OK, never mind.  Let me just write it down, and I'll describe where it comes from.  OK, so this first term, this is basically the connection term coupling to this, OK? Associated with this covariant derivative. Now I'm going to have a whole bunch of terms that involve this guy operating on these terms over here. And my apologies that the board is not clearing as well as I would like today.  And you know what? I'm going to just write it out like this, and move to a different board in a second.
+
+00:49:02
+OK?  All right, so I'm going to put this over on the other side here. What I have there-- so the first term, like I said, I'm basically just operating that thing on the two different terms. So it's a little easy when I first hit it on the d xi d lambda, and it's going to be messy when I expand out all the derivatives that operate on here, which is why I'm writing it with some care, because we're about to make a lot of mess on the board.  OK.  OK, so first, I'm going to do what happens when this guy hits
+
+00:50:26
+the Christoffel symbol.  Then I'm going to get a term that involves this combination of guys acting on the four velocity.  And then I get these guys acting on my displacement. OK, [BLOWS AIR] now I'm ready to simplify. OK, so let me just emphasize, everything I have here, all I did was expand out those derivatives and write them in a form where I want to basically call out different terms and see how they behave. Two things to bear in mind, I am going to do this in the local Lorenz frame
+
+00:51:39
+and in the vicinity of the point A. That's going to allow me to get rid of a lot of terms.  I'll use the-- here's an open box of chalk.  OK, so earlier, I didn't want to get rid of my Christoffel symbols because I was going to take another derivative. I'm done with that. So anything that's just a Christoffel on its own, I go into local Lorentz form-- Christoffel, you die! Die! Can't really do much with this. Let's set this aside. Let's look at this guy. What do we know about the forward vector u?
+
+00:52:34
+It's a geodesic. It obeys the geodesic equation. The geodesic equation is, this thing in parentheses equals 0. You die! Finally, I have this condition here at the beginning. That is essentially the velocity at point A minus the velocity at point B. Our initial condition is that these things start out parallel to each other. These die because these are initially parallel.  So initially parallel geodesic-- local Lorentz frame-- So the only derivative I'm going to need to expand out is this guy, and because I'm working in a local Lorentz
+
+00:53:22
+frame, that's actually not that bad.  So what I finally get after all the smoke clears is that my covariant acceleration of this displacement vector is related to my noncovariant acceleration, with a term that basically ends up just being-- oops-- a derivative of the Christoffel symbol. It couples in two powers of the four velocity and the displacement. But we actually already have-- we worked out earlier what this guy was, OK? So my noncovariant acceleration was a different derivative of the Christoffel symbol.
+
+00:54:30
+So if I go and I plug this in--  My apologies for pausing here. There are a lot of indices on this page.  Look at this, I've got a derivative of Christoffel minus a derivative of a Christoffel. That is exactly what the Riemann curvature tensor looks like in the local Lorentz frame. Now, if you actually go back and you look up your definitions, you'll see it's not quite right. There's a couple of indices that are sort of a little bit off, but they turn out to all be dummy indices.
+
+00:55:26
+So what you should do at this point is just relabel a couple of your dummy indices.  So if on the second term, you take beta to mu, mu to gamma, and nu to beta, what you finally wind up with is--  We'll write it first in the local Lorentz frame.  This is nothing but the Riemann tensor in the local Lorentz frame. And from the principle that a tensor equation that holds in one frame must hold in all, we can deduce from this that this is the way the displacement behaves. So I start out with two geodesics
+
+00:57:21
+that are perfectly parallel to one another. If they are in a spacetime that is curved, the Riemann curvature tensor tells how those initially parallel trajectories evolve as I move along those geodesics. So I want to make two remarks. One is just sort of a way of thinking about the calculation I just did. It may not-- you might be slightly dissatisfied with the fact that I decided to do the whole calculation in a whole special frame. If that's-- you would prefer to see something a little bit more
+
+00:57:53
+rigorous, feel free to explore some of the other textbooks that we have for this class. They do treat this a little bit more rigorously than this. One reason why I wanted to do this is I wanted to really emphasize this idea that where this effect comes from is that if I think about the freely falling frame describing two nearby geodesics, it is that derivative, it's that secondary derivative of the metric, that really plays a fundamental role in driving these two things apart. What we get out of it is a completely frame-independent
+
+00:58:22
+equation, and this ends up really being the key equation describing the behavior of tides in general relativity. We're going to-- when you go into a freely falling frame, we've basically at that point said there's no longer such a thing as gravitational acceleration. And if there's no gravitational acceleration that's coming, well, what the hell does gravity do? General relativity, tides become the key thing that really defines what the action of gravity is. One of the ones I am personally very interested in applying
+
+00:58:53
+this to is that this equation gives you a very rigorous and frame-independent way to describe how a gravitational wave detector responds to the impact of a gravitational wave. If you imagine you have two test masses that are moving through spacetime, they just follow geodesics, OK? They feel gravity. They are free falling. They don't do anything. If you look at them, if you're falling with them, you don't see any effect whatsoever. But if they're sufficiently far away from one another
+
+00:59:22
+that their displacement kind of takes the curvature to that freely falling frame, then this equation governs how the separation between the two of them actually evolves with time. And so for instance, if you're a student who works in LIGO, where some of the many important analyses describing how gravitational wave detectors respond to an [INAUDIBLE] radiation field, they are based on this equation. If you're interested in understanding how an extended object is tidally distorted due to the fact that it's sort of big enough
+
+00:59:52
+that it doesn't all sort of live at a single point, but its shape spills across the local Lorentz frame, this equation governs-- it allows you to set up some of the stresses that act upon that body and change it from a simple point mass. So I'm waxing slightly rhapsodic here, because this is one of the more important physical equations that come out of the class at this point. All right, in our last 12 or 13 minutes, I would like to do one other little identity which is extremely important, but rather messy.
+
+01:00:41
+In fact, I think I'm going to just-- if I have the time-- yeah, you know what? I think I will have time. I'm going to set up the first page of the next lecture. So let's move away from-- oh, by the way, I forgot to give the name of this. This is the equation of geodesic deviation.  OK, so recall when we first talked about the Riemann tensor.  There's a very mathematical action that the Riemann tensor does. You can think of it as what happens when you have a commutator of covariant derivatives acting
+
+01:01:43
+on a vector.  So if I evaluate the commentator, sigma lambda-- excuse me-- covariant of lambda covariant with sigma acting on v alpha, OK, it ends up looking like this. And I argue that this definition is kind of the differential version of that little holonomy operation by which I derived Riemann in the first place. A more generalized form of this is, suppose I act on some object with two indices, one in the upstairs, one in the downstairs.  Oops.  OK? So these are just some reminders of a couple definitions.
+
+01:03:07
+I want to use this. I'm going to apply these things to two relationships that I'm going to write down, and I'm going to do something kind of crazy, then I'm going to do something a little bit crazier, and something kind of cool is going to emerge from this. And this is something that deserves a clean board.  So I'm going to write down relationship A. That's what I get when I do the commutator of the alpha beta derivatives on the gamma derivative of some one form, OK? Now, if I apply those little definitions I worked out,
+
+01:04:12
+this is Riemann mu gamma alpha beta--  OK? So this is relationship A. Relationship B, I'm going to take the covariant derivative along alpha, of the beta gamma commutator on p delta, OK? So notice the difference here. One, I'm doing the commutator acting on this particular derivative. Next one, I'm doing the derivative of commutator acting on this.  And so I'm going to skip a line or two that are in my notes, but this ends up turning into minus p mu--  beta alpha delta minus R mu and delta gamma.
+
+01:05:36
+OK? So the way I went to get this line, so the two lines that I skipped over, one is I just straightforwardly applied the commutator derivative, and then took a derivative. And then I took advantage of the fact that I can commute the metric with covariant derivatives, and sort of raising the next, move things-- move an index up on one side and down on the other, and take advantage of some symmetries of the Riemann tensor to slough my indices around. OK, so this board's kind of a disaster, so I'm going to go to a cleaner board
+
+01:06:15
+here for what I want to do next. I'm just going to clean this so you're not distracted by its content.  So two equations, what the hell do they have to do with each other? Here is where I'm going to do something which you might-- let's do the other board. I'm going through something that you might legitimately think is crazy. What I want to do is take equation A--  actually, I'm going to look at both of these equations. And I am going to antisymmetrize on the indices alpha, beta,
+
+01:07:05
+and gamma.  OK? So just bear with me a second.  So the way I'm going to do this-- here's what I'm doing now.  Here's my commutator.  So if I look at equation A--  OK? So I need to expand this guy out.  Let me just write out a step of this analysis.  The way you do this is you add up every even permutation of those indices.  That's a beta.  And then you subtract off every odd permutation of these indices.  Oh, and don't forget-- exactly on that one form, OK?  So now we can--
+
+01:09:32
+if you expand these guys out, and gather terms exactly correctly, it's not hard to show that this turns out to be what you get if you just slide those commutators over by one.  OK. You know, if you're really feeling motivated, just try it, OK? What this is is, the right hand side-- sorry, this is the left hand side-- we'll put this way. So when I apply this to the left hand side of equation A, what emerges is the antisymmetrized left hand side of equation B. So when I antisymmetrize on the indices alpha, beta, gamma,
+
+01:11:44
+these two relationships become-- they say the same thing.  So that means the right hand side must be the same as well. So let's apply this and see what happens if I require the antisymmetrized right hand side of A to equal the antisymmetrized right hand side of B. OK, so first, if I remind myself how I order these equations-- OK, yeah. So let's do-- here's A, and here is B. OK, so a few things to notice. This term, we actually showed when we looked at the different symmetries of the Riemann
+
+01:13:42
+tensor. This is-- I didn't actually show this, but it's in the notes and I stated it. This is one of those symmetries. If I take this thing, and I just add up what I get when I permute the three final indices, I get zero. And that's equivalent to antisymmetrizing on these things. So this is zero by Riemann symmetry.  This term here and this term here are exactly the same, OK? Because the only indices that are in a slightly different order are alpha, beta, and gamma. This one goes alpha, beta, gamma.
+
+01:14:23
+Where I wrote it here, it just became beta, gamma, alpha. That's a cyclic permutation I've antisymmetrized. They are exactly the same. So these are on the same side-- or on opposite sides of the equation. So they cancel each other out. And so what arises from all this is p mu--  pardon me, I missed the derivative.  I've set no properties on p, so the only way this can always hold is if in fact, this is equal to zero.  This is a result known as the Bianchi identity.  Let me just write another form of it,
+
+01:15:40
+and then I'm fairly pressed for time, so I think I'm just going to write down the result of the next thing, and I will put the details of this into the first prerecorded lecture.  If you expand out that antisymmetry and take advantage of the Riemann symmetry-- the various Riemann symmetry relationships, this is an equivalent form.  So these two things both are an important geometric relationship the curvature tensor must go by. Now, in some notes that I am going to-- well, they're actually already scanned and on the web.
+
+01:16:49
+What I do is take the Bianchi identity and contract on some of the indices to convert my Riemann tensor-- my Riemann curvature, into a Ricci tensor-- Ricci curvature.  So in particular, if I use this second form of it, it's just covariant derivatives, right? And the metric commutes with covariant derivatives, so I can just sort of walk it through. What you find when you do this is that you can write this relationship in the following form, and the derivation of this will be scanned and posted,
+
+01:17:43
+and I will step through it in the first recorded lecture.  The divergence of a particular combination of the Ricci curvature and the Ricci scalar is equal to zero. This is a sufficiently interesting tensor that it is now given a name.  We write this G, and we call this the Einstein curvature tensor.  I sort of mentioned that one of our governing principles here is, we're going to change the source of gravitation from just matter density to the stress energy tensor. That is a two-index divergence-free tensor.
+
+01:18:39
+We want our gravitational-- the left hand side of the equation to look like two derivatives in the metric, which is a curvature. So we need a divergence-free two-index curvature. Ta-da! It's got Einstein's name on it, so you know it's got to be good. All right, so that is where, unfortunately, the COVID virus is requiring us to stop for the semester, at least as far as in-person goes. So look for notes to be posted, videos to be posted, and I, of course, will be in contact, behind a sick wall or something.
+
+01:19:13
+But anyway, [CHUCKLES] certainly, I am not going out of contact. And so those of you who are scattering to parts unknown-- known to you, that is, unknown to me-- good luck with your travels and getting yourselves settled. I really feel-- everyone feels terrible that you're going through this crap right now, but hopefully, this will flatten the curve, as they say, and it will be the right thing to do. But stay in touch, OK? This campus is going to be weird and sad without the students here, and so we want to hear from you.
+
+01:19:49
+
+

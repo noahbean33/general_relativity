@@ -1,0 +1,261 @@
+00:00:00
+[SQUEAKING] [RUSTLING] [CLICKING] SCOTT HUGHES: All right, so we are ready to move to the next lecture. I'm going to record today. So if we just quickly recap the highlights of what we did in our previous lecture, the goal of this lecture was to take all the tools that we have built and develop a theory of gravity. So the two ingredients to this-- first we're going to assert that we take a valid law of physics, something that is well-understood in a local Lorentz frames, which we take corresponding
+
+00:00:39
+to a freely falling frame when gravity is invoked, and we will carry it over into a general form by rewriting that law in a tensorial form. The example I went through was that if I assert that an object is unaccelerated, then I can normally write that by saying that the proper derivative of the velocity is zero-- or if you like the second derivative, positional on the world line is zero-- that carries over to saying that the parallel transport of the of the four velocity, along the four velocity,
+
+00:01:10
+is equal to zero. If I require conservation, local conservation of energy and momentum to be asserted in my local Lorentz frame, my freely falling frame in the form that it has zero divergence with a partial derivative, that [? carries ?] over in general to zero derivative with a covariant derivative. Our second ingredient is to try to understand how it is that I can build my theory of spacetime-- excuse me. How I can build my spacetime given a distribution of energy, matter, and momentum. We are guided by the Newtonian field equation, which tells me
+
+00:01:47
+the Laplace operator on Newtonian gravitational potential is 4 pi G rho. By studying the equation of motion for Newtonian gravity and comparing it to the geodesic equation in the slow motion limit for a spacetime that deviates just slightly from the flat space on a special relativity, we noted that this phi is closely related to G00. It's precisely equal to up to a factor of 2. It's a bit of an offset from the negative 1 that you get in the special relativity limit. We noted that this is not a healthy equation
+
+00:02:21
+from the standpoint of being a ten-- of formulating things in terms of tensors, because rho is a particular component of the stress energy tensor. Doesn't make any sense to have a properly covariant eq-- if we want a properly covariant equation, it makes no sense to pick out one component of a tensor. So we upgraded rho to T mu nu. And we looked for, noting that two derivatives of the potential is something like two derivatives of the metric, which must be two derivatives of a curvature, we said, OK, it's got to be a curvature tensor
+
+00:02:53
+on the left-hand side, and it's got to be a two index one, and it's got to be one that has no divergence so that this equation respects the local conservation of energy and momentum. And that led us by requiring that, in the appropriate limit of slow motion-- well, in this case, really it's just sort of a weak deviation from special relativity. By requiring this correspondence to hold, that force, the proportionality between my curvature tensor and my stress energy tensor will be 8 pi G. If you want to work in units where the speed of light
+
+00:03:28
+is not set equal to unity, it's 8 pi G over C to the 4th. So that's fine. This is, in fact, exactly how Einstein originally derived this. And it's a very physical, very-- it's a very physicist kind of an argument. There is a another route to the field equations, though, which I would like to talk about in this next lecture.  And what's interesting is that, historically, this route was actually developed at almost the exact same time that Einstein developed this way of coming up with the field
+
+00:04:12
+equations that are going to describe relativistic gravity. This particular route helps us to-- I'd say it clarifies some of the choices that are made that lead to this particular framework for the field equations. And as we'll see as we get to the end of this lecture, it helps to illustrate how it might be-- if general relativity is incomplete in some way, how we might systematically add a little bit of additional framework, a little bit of an additional structure. It gives us, what is the most natural way
+
+00:04:45
+to introduce additional degrees of freedom, additional ways of modifying things? So the framework I'm going to talk about today is something that allows us to much more naturally move beyond what this might be, just in case-- Einstein, at some point, we're going to likely find that general relativity is not quite adequate. It doesn't describe everything to the degree that we are able to measure everything. This will give us the tools to go beyond that. So the particular route I'm going to [? derive ?]
+
+00:05:16
+is found by varying a particular Lagrangian. We're going to essentially define an action principle for the gravitational interaction. So I will call this lecture the field equation via the Einstein-Hilbert action.  That is the same Hilbert of Hilbert Spaces, David Hilbert, mathematician who was active at about the same time that Einstein was at his peak research productivity. As I said, this way of thinking about things and this formulation that allows us to re-derive this, it was developed almost in parallel
+
+00:06:06
+to Einstein's formulation of general relativity, so much so that they practically overlapped. But it must be said that Hilbert gives priority to Einstein on this. Hilbert gave Einstein the priority because he felt that Einstein really clarified the physics. And it was his insights that led to this way of thinking about gravity, even though in some ways he came up with a way of understanding where the field equations come from that is somewhat more elegant. So let me first sketch schematically
+
+00:06:34
+how we're going to do this.  Schematically, what we do is we define an action as the integral of a Lagrange density over all of spacetime.  So we're going to write our action as S, and we're going to write it as an integral over our spacetime coordinates of some Lagrange density. So this is not a lot in field theories. This Lagrange density is something that depends on the fields you are studying.  The action must itself be a Lorentz scalar. If I'm working in a freely falling frame,
+
+00:07:48
+it cannot be something that depends upon the particular frame that one is using. And so one often writes this.  You explicitly call out the square root of minus G. That is necessary in order to make your little coordinate interval here be a proper volume integral. And just to make a little bit of a notational difference, let's call L hat the version of the Lagrange density that has that weighted in there, like so. So this will, in fact, be-- so this entire integral, both of these entire integrals,
+
+00:08:26
+are Lorentz scalars. This is a proper element of volume, and so this is a proper Lorentz covariant well-defined Lagrange density. So whenever you have an action principle, you proceed via an extremization procedure. So suppose your Lagrangian-- I'm going to write this very schematically. Suppose it depends on some set of fields. When you extremize this, that amounts to our requirement that the action be stationary with respect to a variation of the fields.  So if I vary my fields, I'm going to vary my action.
+
+00:09:44
+And let's just schematically write this using the first form of things here. I will then say, however, my Lagrangian varies, as I vary whatever fields it depends on, this must be zero. That is my stationarity requirement. For this to occur, for this to be valid for arbitrary field variations, I will then deduce from this that the variation of the Lagrange density itself with those fields must be equal to zero. When I do this, this will then lead to Euler Lagrange equations for my fields.  Now, many students in the class may have already
+
+00:10:51
+seen things like this. But for those who have not, let me work through a fairly simple example. So let's imagine that I have a Lagrangian that just depends on a scalar field phi and derivatives of that scalar field.  So L is going to depend on some phi and derivatives of that phi. In my notes actually, imagine there might be multiple scalar fields. Let's just keep it simple here. We'll just have one scalar field and its derivatives. When we do our variation, it's going to be important that we treat variations of the derivative
+
+00:11:34
+differently from variations of the field. At the moment, I'm going to focus on flat spacetime. We'll see what happens when the spacetime's a little bit more interesting in just a few moments.  And what I'm going to do is imagine that phi varies like so, and its derivative varies like so, OK? So let's apply this. I want to look at a variation of this thing with respect to my fields. So when I do my variation of the action S, I get one term that will arise in the variation in the field
+
+00:12:34
+phi, and I will get another term that arises due to the variation in the derivative. That term is potentially a little bit problematic for us. I'm going to gloss over a couple of details. But essentially what you want to do is, at this point, apply integration by parts. When you apply integration by parts, you can move this derivative onto this term here.  And in so doing, your delta S becomes something like this. Caution-- I'm being a little bit glib here. That is only true if-- when you do this properly, there is kind of a boundary term
+
+00:14:01
+that I'm assuming can be discarded.  I don't want to get lost in the weeds associated with that right here. Our goal is just to sort of sketch the main physical ideas. But I will say that this is something that should be treated with a little bit of care. And I highlight this because there's going to be a similar step that I'm going to sort of go over with a little less care than I would like as we move forward, and I'll comment on that at that time. Having done this and assuming that the discarding
+
+00:14:29
+of the boundary term is safe for me here--  actually, let me just make one further comment. This is being done at over all of spacetime. And so when I do that, I'm essentially assuming that the boundary is the boundary of infinity, which doesn't really exist, OK? So that's one reason why you can generally get rid of it in this case. And it turns out to be fairly safe. I'm highlighting this point because it should be stated a little bit more carefully than I have it in my notes. And when we apply this to gravity,
+
+00:14:59
+there's a little bit of a subtlety there that I will comment on at that time. For now, I'm just going to say, great. So that sort of works good. That works out very good, very well. And in order for this to be equal to zero, the term inside my square braces must vanish, and so I wind up with Euler Lagrange equations, which my field, my field phi, must satisfy given the Lagrangian L, OK? Now let's just take it one step further. So I haven't said yet where the Lagrangian comes from, OK?
+
+00:15:51
+As I sort of indicated, when I sketch this over here, it's going to depend on the nature of the field you study. So it's very common when you're studying, say, a scalar field and flat spacetime that you imagine that your Lagrangian has what we call a kinetic term, which is proportional to something that's quadratic--  whoops-- in the derivatives of your field. If it is massive, you may have another term which sort of looks almost like a potential energy in which you get something that looks like the field squared coupling
+
+00:16:34
+to a parameter with the dimensions of mass.  Take these derivatives, so taking the derivative of this Lagrangian with respect to the field, that's quite simple.  You just get m squared phi. Take the derivative with respect to the field's derivative, what pops out of this is-- pardon me.  [INAUDIBLE] looks like this. Now, take one more derivative this guy, pardon me. Just one second. Yeah.  My apologies. I was just looking over my notes.  You just get the wave operator, the flat spacetime wave
+
+00:18:20
+operator, acting on the field phi. And the Euler Lagrange equations give us the following wave equation governing this field in flat spacetime. This is a result known as the massive Klein Gordon equation.  So that's great. How do we apply this to our theory of gravity?  So there's two things that we need to decide.  One is, what fields am I going to build my Lagrangian out of? And so I'm going to come back to this point, because there actually is a choice to be made here, which is--
+
+00:19:33
+it's a little non-obvious. And I'm going to have a brief aside where I discuss for a moment a slightly different way of doing it than what I'm going to cover here. But we're going to vary the metric. We're going to treat the metric as our fundamental field. And so when I write down the Lagrangian for gravity, I'm going to imagine that it's a function of the metric, and that would be the thing that I vary.  The other issue is, what should I use for my Lagrangian?  So the principle which I'm going to use to make the choice here
+
+00:20:24
+applies to the gravity. So my question is-- pardon me. My writing and my brain are getting out of sync here-- how do we choose our Lagrangian? How do we choose L? So it must be a scalar, or a scalar density if I want to take in bearing in mind that factor of square root G, must yield a scalar action. And here's why I'm going to make a real decision with consequences. It must be built from curvature tensors.  The reason I choose to make it something that is constructed from curvature tensors is that I want this Lagrange density
+
+00:21:21
+to be something that I cannot get rid of by changing my reference frame. If it's the metric, I can make the metric flat at any point simply by going into a freely falling frame. It has something to do with the Christoffel symbols, or rather with my connection. I can make that vanish by going into a freely falling frame. I cannot get rid of the curvature. So this point two here, this second point, this follows because this cannot be something that is eliminated by changing my frame of reference.
+
+00:21:54
+I claim, based on that, that the simplest action of all, the one that you should at least start with, the one that is least ornate and that encompasses these two principles, is I'm going to choose the L hat. in other words, the one I'm going to separate out, the factor of square root minus G. I want this to be the Ricci scalar. It's the simplest possible thing that I can make out of curvature tensors that is a curvature and is going to give me a scalar.  One could make other choices, OK?
+
+00:23:09
+And in essence, that is the reason I am doing this lecture, is I want to highlight the fact that this particularly simple choice, we're going to see it reproduces the Einstein field equation. And so, in that sense, general relativity, we're going to see, is really the simplest geometric theory of gravitation. One could make more complicated ones, OK? But this is the simplest one. And in the last couple minutes of this lecture, we'll sort of explore how we can make it a little bit more
+
+00:23:38
+ornate. So let's begin with this. So I'm going to write S equals the integral of all these things. And let's be blunt. Because I'm allowed to cheat because I'm the professor, I'm going to throw in a proof factor of 1 over 16 pi G, OK? Now, I am going to regard my curvature tensor. Like I said, I'm going to regard this as something that is built from the metric.  So this form in which I've written here, I'm just saying schematically that Ricci itself is built from the metric.
+
+00:24:27
+The Ricci scalar is the trace of the Ricci curvature. When I vary this thing, what I would like is to see what happens-- whoops, forgot my integral.  And I'm going to vary it in the following way, OK?  let's just clean up my indices a little bit here.  I like to keep things consistent. I'm going to confuse myself. Let's leave them like that. This is fine, OK? So here's what I want to evaluate. I'm going to do a variation of these things. I'm going to assert the variation in the--
+
+00:25:39
+well, I'm not going to assert. What I'm going to do is do this variation. That will give me the variation in the action. For this to be stationary, I'm going to require that this equals zero. So what this tells me is I need to work this variation of what is in square braces out. I need to work this out right here.  All right, so this needs be done with some care, so let's do it.  First, the thing which I'm going to be looking at variations of, basically, I'm looking at a variation of--
+
+00:26:50
+I want to know how this changes when I vary the metric. This is going to break into three pieces. I'm going to want the variation of the square root of minus determinant of the metric. And then this will come along for the ride. I'm going to want to look at-- well, I'm going to get one piece that's just the variation of the metric itself. Don't need to do too much more with that. That actually already has the factor that I want to factor out there. And then I'm going to have a term that
+
+00:27:37
+looks like what I get when I vary my Ricci curvature, OK? So these are the three pieces that I need to worry about, really just two. This one's kind of trivial. This one's a little more complicated. All right, so when I vary my square root of minus G term, we discuss this a little bit in a previous lecture where I introduce some, what I call, party tricks involving the determinant of the metric. You go back and take a look at this, you'll see that this can be turned into the following calculation, OK?
+
+00:28:22
+When you vary your Ricci tensor, by something of a miracle, you will discover that this can be written as a term that looks like the derivative, should be the difference rather, of two covariance derivatives of variations in your Christoffel symbols, OK? Now, I like to work out what those variations in the Christoffel symbols are. These are a little bit lengthy. Just bear with me while I write these out.  OK, as promised, it's a little bit lengthy.  Using those two terms, OK, using that term,
+
+00:30:09
+setting the indices as appropriate and taking those covariant derivatives, what you will then find when you evaluate the important combination to give me that term that involves my Ricci variation looks as follows.  So I'm going to take those things, put them together to make my delta Ricci tensor, and then trace over it.  And you get a lot of cancellations when you do that, such that the final result--  Notice no free indices on this, OK? So I've got derivatives hooking onto the Gs here.
+
+00:31:15
+The mu nu is hooking up to that mu nu there.  And before I manipulate this further, I'm just going to note that this is in the form of-- you can write this as the divergence of some vector field. So I'm going to say that this is the divergence of VA, OK? Excuse me. V alpha. V alpha is implicitly defined. It's basically this beta covariant derivative of all this junk here, OK? You might think, well, wait a minute. I'm taking derivatives of the metric here. Why doesn't my covariant derivative metric just give me
+
+00:32:03
+zero? We need to be little bit careful about that because we are varying the metric, OK? And when we're varying the metric, once we have finished our variational principle, we will settle down to a metric where that is the case. But in the middle of the calculation, you just happy a little bit more careful than that. All right, so now let's put all these ingredients together. And what you wind up with, combining all of these pieces--  Oops, pardon me. Pardon me. Pardon me. Actually, let me move to another board.
+
+00:33:06
+I've run out of room.  This is the length the expression. My apologies.  OK, so this becomes-- make sure I have enough room to get the whole thing on the line.  OK, so fair amount of analysis goes into-- you put all those pieces together. You combine them all. And our goal is to reassemble what I've got up there on the top of this middle board here. So what this tells me is varying the action-- whoops-- leads me to an equation of this form.  OK, let's stop and look at this for a second.
+
+00:35:00
+So variation of the action gives me something it looks like the Einstein tensor contracted on my variation of my metric, plus this divergence of this goofy vector field. If that divergence of the goofy vector field were not there, we would be home free. Imagine we could ignore it. I would want to set delta S equal to zero, and that would give me G alpha beta equals 0. Now, I haven't said anything about a source, so that, in fact, gives me exactly what I would need to develop my Einstein field equations,
+
+00:35:35
+at least in the case where there's no stress energy tensor. In a few moments, we're going to put a stress energy tensor back into this. But that's sort of the first step, that-- that first line, if I did not have that divergence of V, that would give me exactly what I needed there.  So how do I get rid of that irritating divergence of a vector field?  Well, in Carroll, it's pointed out that, because this is a perfect divergence and it is a proper volume integral, one can invoke the divergence theorem.
+
+00:36:29
+If you invoke the divergence theorem, and then imagine this integral is being done over all of spacetime, and you basically say, well, I imagine there's no boundary the same because this covers all of time and all of space, you would then presumably lose contributions at the boundary.  And then only the G alpha beta equals zero term would remain.  That's not a bad physical argument. It's somewhat glib, however, OK? Carroll himself actually noticed this. So in Carroll's textbook, he himself
+
+00:37:33
+says that this is not the rigorous way you get rid of this, OK? So for those of you who are more mathematically purist, if you're feeling dissatisfied-- but it's good on you. That is the way you should feel about it. I as a physicist am reasonably comfortable with this, but I would like to do this a little bit more rigorously. There are, in fact, two rigorous approaches to fixing this up.  One of them is, in fact, quite beautiful. And it was my goal to overhaul this lecture and present method
+
+00:38:14
+one that I'm about to write down in this lecture that I'm doing right here, right now. And among the various tragedies associated with the COVID-19 evacuation of our campus and everything moving into this online format, a very, very minor tragedy on the scale of everything that's going on, is that I just do not have the time to assemble the note to present what I was hoping to present to you. I hope by the end of the course to have enough bandwidth that I can maybe type some up and add them
+
+00:38:45
+as supplemental notes to the course. But for now, they are not available.  So let me just describe what I was going to present to you.  Method one is you do what is called the Palatini variation.  When you do a Palatini variation--  whoops-- you write the metric-- excuse me. You write the action like so, but you consider your Ricci curvature to be a function not of the metric but a function of the connection.  Then when you do your variational principle, you don't just vary with respect to the metric.
+
+00:40:05
+You vary it with both the metric and your connection coefficients.  When you do this, if you do the calculation correctly, you, in fact, get both the Einstein equation, the Einstein-- so again, we've not introduced a source. I'm going to talk about source in just a moment. So the Einstein equation with no source emerges, and you find that your connection must be metric compatible.  In other words, the connection is such that you are required to have covariant derivative of the metric equal to zero.
+
+00:41:13
+It's actually a beautiful little calculation because we sort of argue that this was going to be the case-- when we were talking about how to define a covariant derivative, we noted that there are many ways to define a transport operation. This ended up being one that allowed us to define parallel transport. That became something that the physics drove us to selecting as a very natural choice for our connection. This variation doesn't necessarily know anything about that, but it shows that when you do your variational principle, treating
+
+00:41:42
+metric and connection as separate degrees of freedom, that parallel transport-driven choice of the connection which gives us the Christoffel symbols emerges as the outcome of that. Now, this is not a terribly difficult calculation to do, but there's a lot of details you have to get right. And I've got about a fourth of it written up at this point and just haven't had a chance to get all the details completely straightened out. I really hope to have the bandwidth to finish it by the end of the term, in which case
+
+00:42:14
+I will add it as supplemental notes to the course. The other thing you can do-- so there's absolutely nothing wrong with the approach that we started doing in which we vary the metric. And we just assume from the outset that my connection arises from the metric so that, the way we do it, the connection and the metric are not separate degrees of freedom, but the connection arises from the metric. And that is fine. But if we do that, then when you get down to this point, you just have to be a little bit more careful.
+
+00:42:48
+You essentially take this argument that Carroll makes and you have to just do it with a lot more care. So what you need to do is define the boundary associated with the divergence integral very carefully--  whoops. Associated with divergence integral.  In doing so, you have to very carefully treat the curvature on that boundary.  So we are working in four dimensions.  So it's a three dimensional boundary of our 4D spacetime.  You can sort of think of the boundary as being a particular sort of slice
+
+00:44:16
+through four dimensional space time. You pick a particular three dimensional slice, redefine that as the boundary region of this integral. And that requires us to introduce some additional concepts. In particular, once you pick out a particular slice of space time, some of the curvature associated with the metric on that slice isn't intrinsic to the spacetime itself, but it's imposed on the space time by the manner in which you have made that slice. Sort of in the same way that if I have a cylinder,
+
+00:44:48
+the surface of a cylinder is intrinsically flat. If I put two geodesics on it and I parallel transport them around, they remain perfectly parallel forever and forever and forever. But it sure as hell looks curved. But that is because I have taken this flat surface and I have folded it up. I have embedded it in a higher dimensional space in such a way that there's extrinsic curvature that's been imposed on it. When you are carefully looking at the boundary of a four dimensional spacetime, you also need to very carefully treat
+
+00:45:17
+the extrinsic curvature associated with how you put that boundary on top of things. When you do this correctly, you find you need to be a little bit more careful with how you define the Lagrangian.  And when you, in fact, do that, it actually turns out you don't get that divergence term at all. You get sort of a counter term that cancels this guy away. So for students who are interested in seeing this explored and discussed in a lot more rigor than I am prepared to do, this is discussed in appendix E of Robert Wald's textbook, General
+
+00:46:22
+Relativity.  I will simply comment that Wald's textbook is one of the most mathematical textbooks on this topic. He does everything with great rigor and a lot of care. And the appendices is where he puts his particularly high-level, grotty details. So this really is something that is beyond the level of where we do a one semester course like 8.962. So it's unfortunate it sort of pops up here, which is why a textbook like Carroll does this in a somewhat glib way. I am personally a fan of doing this Palatini variation.
+
+00:47:02
+And so, as I've emphasized, I'm going to try to clean that up and make that available. So what all of this ends up telling us--  so let's take the optimistic point of view here that we have either accepted the somewhat glib argument that we can discard that term, or we sat down and we slog through appendix E of Wald, or we wrote up the Palatini variation. Doing this variation in that case then leads us to G alpha beta equals zero. This is the Einstein equation when there is no source, when the stress energy tensor is zero.
+
+00:48:11
+This is often called the vacuum Einstein equation.  More generally, we should treat the action that we are varying as the Einstein-Hilbert action plus an action associated with matter. So a more general form would be to write S as the integral d4x square root minus G R over 16 pi G plus the Lagrangian for-- I'm just going to say m for matter. Could be matter and fields.  If you do that, then when you look at your variation and enforce that the variation of the action equals zero, this leads you to an equation of the form--
+
+00:49:26
+that's given by this. And so up to a numerical factor, which I'll write out in just a second, you can basically see that this variation of my matter Lagrangian becomes the stress energy tensor.  In particular, if you just look at this and say, oh, I am going to define T alpha beta as minus 2 divided by square root of minus G, like this, then the Einstein-Hilbert variation gives me exactly the same Einstein equation as we had before. I have a set of exercises in the notes, which I'm not going to go through because they're
+
+00:51:04
+slightly tedious. And I think I'm going to actually end a little bit early here. But I want to just describe one of the ways in which this can be used. So suppose I pick as my matter Lagrangian minus one fourth f mu nu, f mu nu, where f mu nu is the Faraday tensor that describes electric and magnetic fields.  So what I want to do is show that, by applying this variational principle that I've defined over there to this-- but this gives me exactly the stress energy tensor that one expects for electromagnetic fields.
+
+00:52:15
+OK, so defining my electromagnetic action, pull out the overall factor of minus one fourth, I integrate over my spacetime coordinates.  And then notice the way this is set up. So I have f mu nu upstairs, f mu nu downstairs. Let's write my f mu nu upstairs as f alpha beta downstairs but with enough prefactors of the metric to raise those indices. So I do a variation on this.  And the way I'm going to do it is I will vary the metric.  When I do this, I will not vary the fields, OK? If one does variations of those things, you can do that,
+
+00:53:44
+and you can use that to do things like define your field equations. But what I want to do is just see how, by varying how the metric couples do these things, the stress energy tensor emerges. So in my notes, I go through this calculation with some care. And what emerges at the end is something that looks like this.  And in fact, it's not too hard to show. Dig into something, a textbook like Jackson, what is in square braces there is, in fact, the standard stress energy tensor associated with the electromagnetic field.
+
+00:54:59
+So this technique, this definition I've put in here, it does work in all the cases that we know about. And so this variational principal root to the field equations--  so punchline is selecting L equals R yields the Einstein field equations upon variation of the metric.  So I'll take a sip of water here. And then the question I want you to sort of think of at this point is, so what?  I mean, it's nice that there is a second way to do this. But did we need it? Is it really important that we have
+
+00:56:07
+the second way of doing this? Well, here I want to come back to a comment I made as I began this lecture, which was that our guiding principle for formulating this Lagrangian was that it has to be built out of curvature tensors, and it has to be a scalar.  I would argue that the Ricci scalar is the simplest such construction that does that.  But it is not the only scalar made from curvature tensors that will do this.  Imagine you wanted to modify gravity, or you wanted to come up with a framework that
+
+00:57:33
+was consistent with general relativity. And remember, L equals R gives me general relativity, gives me Einstein's field equations. It gives me Einstein's theory of gravity. Suppose I want to modify it in a way such that things look just like Einstein's gravity for most of the universe, but perhaps small differences kick in when the curvature is small in some sense that will need to be characterized.  Well, one way you could imagine doing this is by adding a correction. Suppose we try L hat equals R minus alpha over R. That sort
+
+00:59:05
+of suggests that this is going to lead to corrections to the framework of gravity when the curvature scale is less than or of order square root of alpha.  It's actually a work of a couple pages of algebra. I can take this modified Lagrangian. I can go through exactly this variational principles that we spent today doing.  And when I do so, I find a new field equation coupling spacetime to my sources.  So vary the metric, enforce stationarity of the action, what you get is a field equation that
+
+01:00:34
+looks like this.  Notice, set that coupling alpha to zero and it says G alpha beta equals 8 pi newtons GT alpha beta. But introduce this little scale here, suddenly you've got all this other stuff emerging.  This is an idea that was proposed and explored in a paper, if you want to read a bit more about this, by Sean Carroll et al, published in Physical Review D. It's now almost coming up on its second decade.  So the reason why Sean and his collaborators developed this, I mentioned in my previous lecture
+
+01:02:11
+that there's observations that have driven us to consider whether there is, in fact, a cosmological constant contributing to the large scale structure of our universe. And like good scientists, you're always looking for alternate hypotheses that could be tested or falsified. And so what Carroll et al pointed out was the universe's accelerated expansion, so the behavior that is driving us to consider the possibility the cosmological constant, it's coming on very, very large scales
+
+01:02:48
+where the curvature is quite small. Laboratory and solar system and many other astrophysical tests of the foundations of general relativity aren't as strong there. So why not try something a little bit out of the box? And they said, let's think about a theory of gravity in which there are potentially important modifications when the curvature is small. This is what resulted. And they showed, actually, that by appropriately choosing the parameter alpha, actually, this is a point that's worth making.
+
+01:03:18
+Notice this is introducing a scale, OK? The theory doesn't tell us what alpha is. From the standpoint of the analysis that motivated it, it was a phenomenological knob that they sort of tweaked to see whether they could explain observations. And indeed, they did find that they could get pretty good explanation of the accelerating expansion of the universe with this modified theory of gravity. But all good theories are testable. They're falsifiable. They give rise to hypotheses that you can compare against data.
+
+01:03:51
+It turns out, if you tune alpha to make the expansion of the universe work, you get the orbits of the planets in our solar system wrong. So this ended up not being a viable theory, but it was a pretty cool thing to explore, OK? And I think it serves as a really wonderful example of how, in a theory of gravity, one formulates a hypothesis and then tests it. And then giving Sean and his colleagues all their due, cheerfully accepting the falsification when it turned out it didn't work.  You know, it's a very, very nice piece of work.
+
+01:04:29
+And I think it just is a really good idea of the power of this action-based method for considering modifications to your theory of gravity, OK? And it really highlights the fact that just choosing your Lagrange density as the Ricci scalar, that's the simplest possible thing it can make. And that is a sense in which general relativity is the simplest of all possible relativistic theories of gravity. Let me just give you another example of-- actually, two more examples.  I'm not going to go through them in great detail,
+
+01:05:03
+but just sketching the way people sometimes imagine modifying gravity. So suppose I choose as my gravitational action my normal Einstein-Hilbert term plus a term that goes as the Ricci curvature squared. This is something that you might expect to become important when the curvature is large.  OK, so when R is greater than R of order, 1 over beta, the second term, will become more important than the first term. Again, we've introduced a scale. There is some theoretical prejudice among the community that thinks about these kinds of models
+
+01:06:27
+that perhaps this scale has something to do with where quantum gravity effects begin to kick in and classical general relativity must be modified. And so you can imagine, you might think that this beta is on the order of, when you work in units where G and C are equal to 1, H bar to the minus 1.  Actions like this often emerge when you are studying-- they often show up when you are studying theories in which general relativity is itself an effective theory that comes about from averaging over small scale degrees of freedom.
+
+01:07:04
+One more example.  What if there were, in addition to the tensor, the metric tensor which describes the geometry of space time-- what if the manner in which the metric tensor coupled to its source varied depending on some additional field that filled all of spacetime?  So you can imagine that your gravitational action took the usual form, but it was modified by some kind of a scalar field that might itself depend upon spacetime curvature, OK? And you can imagine then supplementing this with an action for the scalar field,
+
+01:09:00
+which, up to an overall constant at least, I will write--  theories of this sort are called scalar tensor series. And what they essentially amount to is you imagine that there is some field in addition to the metric of spacetime which is affecting gravity. You can almost think of them as essentially saying that the effective gravitational constant varies depending upon the strength of the gravitational interaction. So perhaps down near a black hole the Newton constant is bigger or smaller or something than way
+
+01:09:53
+out in empty space.  Theories of this kind arise-- I should say terms of this kind and the action-- quite naturally in a lot of work in theoretical attempts to quantize gravity, things like that. And so people like to pay attention to these things and to see what kind of generic predictions they can make. These are known as scalar tensor theories.  And if you're interested in seeing more about them, Sean Carroll's textbook has a full section describing them. A little bit out of date now.
+
+01:10:42
+One thing that's kind of interesting as we sort of think about how the subject has evolved over the years that I've been teaching it is that when you have both a tensor component, in other words, a spacetime metric coupling to your stress energy tensor and you have a scalar field, you change the dynamics of the theory. And that ends up doing things like changing the character of gravitational radiation that is emitted from a system. And so, very recently, the most stringent limits on these possible modifications to general relativity
+
+01:11:21
+have come about from things like LIGO observations which have looked at coalescences of black holes and neutron stars. And all of their measurements are consistent with there being no scalar modification to these things. And so it helps to set limits on many of these theoretical frameworks that introduce and look at modifications to GR which are motivated by certain considerations. This concludes the first half of 8.962. So if I'm just going to do a quick recap of where we are and where we are going, where I want you to sort of sit
+
+01:12:04
+with things right now is that you have this arsenal which basically tells you that, given the metric of spacetime, you can compute the motion of bodies--  this is done using by geodesics-- you can characterize the curvature of that spacetime which tells you about tidal fields, and you now, as of these last two lectures, know how to get this by solving the Einstein field equation.  What we will do in the remaining lectures that I'll be recording and distributing through this course's website is solving this equation
+
+01:13:09
+and exploring the properties of these solutions. And so let me just sort of say this equation, if you go back to think about what goes into this-- at the beginning of my next lecture which I'll be recording tomorrow, we'll go through this in some care. But if you just think of this as a partial differential equation for the metric, it is a god-awful mess, OK? There's no nice way to put it. I mean, it's just a horrible mess of coupled, non-linear, partial differential equations. We are going to look at three ways of solving this.
+
+01:13:44
+Method one, we will think about a kind of weak field expansion.  I'm going to imagine that the spacetime corresponding to the sources we are studying looks like flat spacetime plus a small correction. That will allow me to take this horrible coupled, non-linear mess and linearize, OK? We will lay out the principles for doing that methodically in the beginning of the next lecture. Method two, we'll see what happens when we assert a symmetry.  One of the reasons why those equations are such a mess
+
+01:14:56
+is that, in general, there's just a tremendous number of terms that are coupling to one another, all sorts of things tying together, and it's just very, very complicated. But if we imagine that everything is, say, spherical symmetric, then that dramatically reduces the number of degrees of freedom that the spacetime could have even as a matter of principle. And so we will actually start by beginning to explore the most symmetric space times of all. And I will lay out exactly what that means.
+
+01:15:27
+And that actually turns out, at least to within our ability to observationally probe this-- that appears to describe our universe on the largest scales. And so when we do the largest, the most symmetric things possible, that gives us spacetimes that worked very well for describing cosmology. Making things a little bit less symmetric but still highly, highly symmetric, that allows us to describe very strong field objects, things which I'm going to call-- I'm going to just call them stars.
+
+01:15:57
+What I really mean by that are these are objects that are just self gravitating circle fluid balls, OK? And we will see how they can sort of hold themselves up against their own gravity, what their spacetime looks like. There's all sorts of interesting properties that emerge from them. And eventually we actually find that you reach a set of configurations where there is no-- no fluid can be allowed by the-- let me try that sentence again. You can find configurations such that no fluid allowable
+
+01:16:28
+by the laws of physics can give you a stable object. They produce black holes. That will basically take us, essentially, to the end of the course, OK? These two things have a tremendous amount of content in them. And this is where a huge amount of the literature on general relativity has focused its attention over the past several decades. In my last lecture or so, I'm going to briefly describe general solutions.  What do you do if there is no symmetry, there is no weak expansion, no weak parameter
+
+01:17:13
+you can expand in? You just have to deal with the non-linear, bloody mess that these equations are and then try to solve it. And what this will do is allow me to explore and tell you a little bit about the field of numerical relativity, which is what you do when you just want to solve these things with no approximations, no assumptions that simplify it whatsoever. Just take Einstein's field equations, put it into a computer, write a code, hit Go, and see what happens. So under the normal schedule of things,
+
+01:17:52
+where we would end today would've been right before spring break. And these lectures would start up right after spring break. Under the system that we are operating now, I do suggest you sort of save this for a little while. Make sure that you understand what is going on with these field equations. And we will be ready to explore the solutions, and not just compute these solutions but also explore things like motion in them and their properties. And we'll begin that process immediately afterwards.
+
+01:18:24
+All right, and I will conclude this lecture here.
+

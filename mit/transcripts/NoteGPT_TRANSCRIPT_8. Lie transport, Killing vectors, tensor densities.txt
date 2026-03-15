@@ -1,0 +1,237 @@
+00:00:00
+[SQUEAKING] [RUSTLING] [CLICKING]  SCOTT HUGHES: Last Thursday, we began the work of moving from special relativity to general relativity, and we spent a lot of time unpacking two formulations of the principle of equivalence. So one, which goes under the name "weak equivalence principle"-- a simpler way of saying that is that, at least over a sufficiently small region, if there is nothing but gravity acting, I cannot distinguish between freefall under the influence of gravity or a uniform acceleration.
+
+00:00:40
+The two things are equivalent to one another. Basically, this is a reflection of the fact that the gravitational charge and the inertial mass are the same thing. That is the main thing that really underlies the weak equivalence principle. When I gave my tenure talk a number of years ago here, I pointed out that there was this wonderful program called the Apollo program that was put together to test this. And the way it was done was that they put astronauts on the moon, and you actually show that, if you drop a hammer and a feather on the moon,
+
+00:01:09
+they fall at the same rate. Of course, the Apollo program probably did a few other things as well. But I'm a general relativity theorist, so for me, that was the outcome of the Apollo program, was test of the equivalence principle. We also have a different variation of this we called the Einstein equivalence principle, which leads us to a calculation that we went through last time, which states that we can find a representation over a sufficiently small region of spacetime such that the laws of physics
+
+00:01:39
+are reduced to those of special relativity. And we did a calculation to examine this, where we showed, given an arbitrary spacetime metric, I can find a coordinate system such that this can be written in the form metric of flat spacetime plus terms that are of order so we have coordinate distance squared. Let's put it this way-- so this, in the vicinity of a point pl-- I'll make that clear in just a moment. It ends up looking like of order of coordinate displacement squared with corrections that scale as 1
+
+00:02:23
+over second derivative of the metric. That sets the scale for what these end up looking like, or maybe it's actually times that. Sorry. It's times that.  Why did I divide? I don't know. Oh, I know why, because I wanted to point out that that is what the scale of 1 over this thing-- for God's sake, Scott! Stop putting your square roots in there! So it looks like that. And so this is what I was saying. You have a curvature scale that is on the order of square root of 1 over the second derivative
+
+00:03:00
+of the metric. Apologies for botching that as I was writing it up there quickly. OK, so we did a calculation that shows that. And indeed, what we did is we went through and we showed that a general coordinate transformation has more than enough degrees of freedom to make the metric flat to get the flat spacetime metric at a particular point. And in fact, there are six degrees of freedom left over, corresponding to six rotations and six boosts that are allowable at that particular point or event.
+
+00:03:26
+Bear in mind we're working in spacetime. We have exactly enough degrees of freedom to cancel out the first order term, but we cannot cancel out the second order term. And in fact, we find there are 20 degrees of freedom left over. And in a future lecture, we will derive a geometric object that characterizes the curvature that has indeed 20 degrees of freedom in it or 20 independent components that come out of it. So this is the foundation of where we're moving forward. And so what this basically tells us
+
+00:03:57
+is that, in a spacetime like this, we have what we call curvature. Trajectories that start out parallel to one another are not going to remain parallel as they move forward. And where we concluded last time, we were dealing with the problem that, if I want to take derivatives-- and we're going to start with vector field. If I want to differentiate a vector field on a curved manifold, it doesn't work. If I do the naive thing of just taking a partial derivative, it does not work. So I'll remind you where we left off.
+
+00:04:28
+So we found partial derivatives of vectors. Let me put that in there. Partial derivatives of vectors, and it won't take much work to show it's true for one forms or any tensor, so let's say, partial derivatives of tensors do not yield tensors.  We're familiar with this to some extent because we already encountered this when we began thinking about the behavior of, even in flat spacetime, flat spacetime and curvilinear coordinates. So that's the fact that the basis objects themselves
+
+00:05:17
+have some functional dependence associated with them. We're interpreting it a little bit differently now. And so what we're doing is we're going to say that what's going on here is that, on my curved manifold-- and I want you to visualize something that's like a bumpy surface or, if you like, maybe a sphere. Think about if you are a two-dimensional being confined to the surface of a sphere. There's only two directions at any given point. You can go up, or you can go on the left-right axis
+
+00:05:42
+or the north-south axis, right? And you would define unit vectors pointing along there. But as you move around that sphere, those of us who have a three-dimensional life, and can step back and see this, we see that these basis objects point in different directions at different locations on the sphere. The two-dimensional beings aren't aware of that. They just know that they're on a surface that's curved. And so they would say that the tangent space is different for all these objects.
+
+00:06:09
+They've imagined that every one of these basis objects lives in a plane that is tangent to the sphere at any given point, and that plane is different at every point along the sphere. So we interpret this by saying that all of our basis objects live in this tangent space, and the tangent space is different at every point on the surface.  So let me just write out one equation here. So when we looked at the transformation of a partial derivative of a vector, if we looked at just the components--
+
+00:06:44
+so this calculation is in the notes, so I would just write down the result. What we found was that, if I'm taking, say, the beta derivative of component A alpha, what I found when I want to go into a coordinate transformation is that there's an extra term that ruins the tensoriality of this.  So this goes over to something that looks like--  So the first term is what we'd expect if this were a tensor relationship. That's exactly the matrix of the Jacobian between two different coordinate representations
+
+00:08:19
+that we expect to describe how components change if they indeed obey a tensorial relationship. This extra thing here I wrote on the second line-- that is spoiling it for us. So I began to give you the physical notion of what we were going to do to fix this. So let me just reset that up again. So let's imagine I have a particular curve that goes along my manifold. I have a point P here on the curve, and I have a point Q over here. And let's say that P is at event x alpha. Q is at x alpha plus dx alpha.
+
+00:09:00
+Here's my vector A at the event Q. And here's my vector A at the event P. So what we discussed last time is that, to get this thing, I'm just doing the normal partial derivative. I'm basically imagining that these are close to one another, that I can just subtract A at Q from A at P, divide by dx and take the limit. That's the definition of a derivative. And what this is telling us is, mathematically, yeah, it's a derivative, but it's not a derivative that yields a tensor quantity.
+
+00:09:45
+And so we are beginning to discuss the fact that, to compare things that have different tangent spaces, that live in different points in my curve manifold, I need a notion of transport to take one from the other in order to compare them. So there are two notions of transport that we're going to talk about here. The first one is called parallel transport. So transport notion one--  we call this parallel transport. I'm going to actually focus a little bit on the math first and then come back to what is parallel about this afterwards.
+
+00:10:31
+So what I essentially need to do is say, what I want to do is find some kind of a way of imagining that I take the vector at P and transport it over to the point Q, and I will compare the transported object rather than the object originally at point P. Abstractly, what I'm essentially going to do is I'm going to do what we always do in this. I'm going to imagine that there is some kind of an operation that is linear in the separation between the two of them that allows me to define this transport.
+
+00:11:35
+So let's do the following.  So I'm going to assume that we can define an object, which I will call Pi, capital Pi, alpha, beta, mu, which is going to do the following. So what I'm going to do is say that A alpha transported-- and to make it even clearer, how it's being transported. Let's say it's being transported from P to Q. This is given by alpha at P, and what I'm going to do is say that, whatever this object is, it is linear in both the coordinate separation of those two events and the vector field.
+
+00:12:37
+So far, I've said nothing about physics, by the way. I'm just laying out some mathematical definitions. I'm going to bring it all together in a few moments. I'm then going to say, OK, I know that I had trouble with my standard partial derivative. Let's define a derivative operator in the following way.  Define a derivative by comparing the transported vector to the field at Q. So what I'm going to do for the moment is just denote this notion of a new kind of derivative with a capital D. Right now,
+
+00:13:44
+it's just another symbol that we would pronounce with a "duh" sound so that it sounds like derivative. So don't read too much into that for a moment.  So I'm going to define this as A at Q minus A transported from P to Q and then divide by the separation. Take the limit-- usual thing. And when you do this, you're going to get something that looks like the partial derivative plus an additional term on here.  It looks like this. So I've said nothing about what properties
+
+00:14:39
+I'm going to demand of this thing. And in fact, there are many ways that one could define a transport of an object like this. In general, when you do this, this thing I'm calling Pi here is known as the connection.  It is the object that connects point P to point Q. So let's make a couple demands on its properties. So now I'll start to put a bit of physics in this.  So demand one is I'm going to require that, when I change my coordinate representation, when I evaluate this in my new coordinate system, that I get something
+
+00:15:56
+that looks like this.  If I do this, I'm going to find that, when I change coordinates and apply it to the entire derivative I've defined over here, that little extra bit of schmutz that's on the second line there is exactly what you need to cancel out this annoying bugger so that you have a nice tensor relationship left. So I'm going to demand that a key part of whatever this guy turns out to be is something that cancels out the irritating garbage that came along with the partial derivative.
+
+00:17:08
+Combine that with what I'm about to say in just a moment-- that pins things down significantly. I'm going to make one more demand, and this demand is going to then be connected to the physical picture that I'm going to introduce in about five minutes. My final demand is I'm going to require that whatever this derivative is-- when I apply it to the metric, I get 0. If I do that, then it turns out that the connection is exactly the Christoffel symbol that we worked out earlier. If I put in this demand, the connection is the Christoffel,
+
+00:18:51
+and this derivative is nothing more than the covariant derivative. Der-iv-a-tive.  This is just the covariant derivative we worked out earlier.  So much for mathematics. The key thing which I want to emphasize at this point in the conversation-- I hope we can see the logic behind the first demand. That's just something which I'm going to introduce in order to clean this guy up. This is my choice. Not just my choice-- it's the choice of a lot of people who have helped to develop this subject.
+
+00:19:29
+But it's a good one, because, when I do this, there is a particularly good physical interpretation to what this notion of transport means. And bear with me for a second while I gather my notes together.  So let's do the top one first.  OK, so let's make that curve again.  And actually, let's just go ahead and redraw my vector field. I do want to have a different copy of this.  Let me introduce one other object. So I'm going to give this curve a name. I'm going to call this curve gamma.
+
+00:21:05
+And this is a notion that I'm going to make much more precise in a future lecture, but imagine that there is some kind of a tape measure that reads out along the curve gamma that is uniformly ticked in a way that we will make precise in a future lecture.  I will call the parameter that is uniform that denotes these uniform tick marks--  I will call that lambda. If you want to read a little bit about this, this is what's known as an affine parameter. We will make this a little bit more precise very soon.
+
+00:21:55
+With this in mind, you should be able to convince yourself that this field U defines the tangent vector to this curve.  So let's say that my original point here, that this is at lambda equals 2-- and let's say this is at lambda equals 7. And what I want to do is transport the vector from 2 to 7. Well, a way that I can do this is by saying, OK, I now know that the derivative that goes over here-- this is just the covariant derivative. So I forgot to write this down but from now on, this derivative I wrote down--
+
+00:22:52
+I'm going to go back to the gradient symbol we used for the covariant derivative.  What I can do is take the covariant derivative of my vector field, contract it with this tangent vector. And what this does--  I'm going to define this as capital D alpha D lambda. This is a covariant derivative with respect to the parameter lambda as I move along this constrained trajectory. What this does is this tells me how A changes as it is transported along the curve.  I'm now going to argue-- what parallel transport comes down to
+
+00:24:23
+is when you require that, as you slide this thing along here, the covariant total derivative of this thing as you move along the curve, that it's equal to 0. OK, now let me motivate where that's coming from. Why is that?  So let's put all of our definitions back in. Let's apply the definition of covariant derivative that we discussed in a previous lecture and we've all come to know and love.  Now, this is the bit where we begin to introduce a little bit of physics. Let's imagine that points P and Q
+
+00:25:35
+are sufficiently close to each other that they fit within a single, freely falling frame. They can go into the same local Lorentz frame.  So remember, when I go into my local Lorentz frame, the metric becomes the metric of flat spacetime. G goes over to eta. There is a second order correction to that. So the second derivatives-- I cannot find a [INAUDIBLE] that gets rid of them. So there'll be a little bit of that there, which tells me how large this Lorentz frame can be. But I can get rid of all the first derivatives.
+
+00:26:31
+And if you get rid of all the first derivatives, you zero out the Christoffel symbols in that frame. So in that frame, there are no Christoffel symbols.  So what this means is that, in this frame, this just becomes the idea that a simple total derivative of this object-- you don't need to include all the garbage that comes along with the covariant derivative-- this is equal to 0. And that's equivalent to saying that, as I take this vector and transport it along, I hold all of its components
+
+00:27:42
+constant as I slide it from one step to the other.  So I start out with my A at point P here. And then I slide it over a little bit, holding all the components constant just like this-- slide over again, slide it over again. Da, da, da, da da. Da, da, da, da, da.  Till finally, I get it over to there. What this is doing is that--  any two vectors in the middle of this transport process-- I am holding them as parallel as it is possible to hold them, given that, to be blunt, you can't even really define a notion
+
+00:28:51
+of two objects being parallel on a curved surface if there's a macroscopic separation between them. But if you think about just a little region that's sufficiently small, that it's flat up to quadratic corrections, then a notion of these things being parallel to each other makes sense. And this idea, that I'm going to demand that, upon transport, the derivative of the metric equals 0, thereby yielding my connection being the Christoffel and this derivative being the covariant derivative--
+
+00:29:22
+it tells us that this notion of transport is one in which objects are just kept as parallel as possible as they slide along here. And that is why this is called "parallel transport." It's as parallel as it's possible to be, given the curvature.  So as I switch gears, I just want to emphasize I went through the mathematics of that with a fair amount of care because it is important to keep this stuff as rigorous as possible here. This notion of parallel transport gets used a lot when we start talking about things moving
+
+00:30:20
+around in a curved spacetime. In particular, if you think about an object that is freely falling, and it is experiencing no forces other than gravity, which we are going to no longer regard as a force before too long-- if you just go back to Newtonian intuition, what does it do? Well, you give it an initial velocity or initial momentum, and it maintains it. It just continues going in a straight line. In spacetime, going in a straight line basically means, at every step, I move and I take the tangent to my world line, my four-velocity,
+
+00:30:56
+and I move it parallel to itself. So this notion of parallel transport is going to be the key thing that we use to actually define the kinetics of bodies in curved spacetime. There's a tremendous amount of work being done by all sorts of things these days that's based on studies of orbits in curved spacetime, and they all come back to this notion of parallel transport. All right. Bear with me a second. I just want to take a sip of water. And then I'm going to talk about the other notion of transport,
+
+00:31:28
+which we are going to discuss-- I always say, briefly, and then I spend three pages on it, so we're going to discuss. All right. So parallel transport is extremely important, and there's a huge amount of physics that is tied up in this, but one thing which I really want to emphasize is that it is not unique. And there is one other one which we are going to really use to define one particularly important notion, instead of quantities, for our class.  So suppose I've got my curve gamma,
+
+00:32:14
+and I'm going to, again, take advantage of the fact that I can define a set of tick marks along it and make that vector U be the tangent to this curve. And I'm going to, again, have my favorite points, x alpha at point P plus dx alpha at point Q. There's another notion of transport that is-- basically what you do is you cheat, and you imagine that moving from point x alpha to x alpha plus dx alpha is a kind of coordinate transformation. So let's do the following. Let's say that x alpha plus dx alpha--
+
+00:33:10
+we're going to take advantage of the fact that, since we have this tangent notion built into the symbols we've defined, we'll just say that it's going to be the tangent times the interval of lambda. And what I'm going to do is define this as a new coordinate system, x prime. So that's the alpha component of coordinate system x prime. It's a little bit weird because your x prime has a differential built into it. Just bear with me.  So what we're going to do is regard the shift,
+
+00:33:52
+or the transport, if you prefer, from P to Q as a coordinate transformation.  It's the best eraser, so I'll just keep using it.  So what I mean by that is I'm going to regard x alpha, and I'm going to use a slightly different symbol. I will define what the L is. So this is transported, but I'm going to put an L in here for reasons that I will define in just a moment.  This, from P to Q, is what I get if I regard the change from point P to point Q as a simple coordinate transformation and do my usual rule for changing
+
+00:35:09
+coordinate representation. So expand what the definition of x prime is there, and what you'll see is that you get a term that's just basically dx alpha dx beta.  Then you're going to get something that looks like the partial derivative of that tangent vector.  And remember, this is being acted on. I should've said this is this thing evaluated at P. Great. So we fill this out.  OK.  So that's what I get when I use this notion to transport the field from P to Q. Let's think about it in another way.
+
+00:36:24
+Now, these fields are all just functions. So I can also express the field at Q in terms of the field at P using a Taylor expansion.  I'm assuming that these are close enough that everything is accurate to first order in small quantities, so nothing controversial about this. I'm assuming dx is small enough that I can do this.  But now I'm going to get rid of my dx beta using the tangent field U. Now, before I move on, I just want to emphasize-- these two boards here, over the way the left--
+
+00:38:36
+we're talking about two rather different quantities. The one I just moved to the top-- that actually is the field-- if you were some kind of a gadget that managed your field A-- that would tell you what the value is that you measure at point Q. This would tell you-- what do we get if you picked P up and, via this transport mechanism, moved it over to Q? They are two potentially different things. So this motivates another kind of derivative.  So suppose I look at A-- value it at a Q-- minus A transported-- whoops, that's supposed to be
+
+00:39:50
+transported from P to Q--  defined by D lambda. I will expand this out in just a moment. Now I will, at last, give this a name. This is written with a script L. This is known as the Lie derivative of the vector A along U. Anyone heard of the Lie derivative before? Yeah. So at least in the context where we're going to be using it, this is a good way to understand what's going on with it. We'll see how it is used, at least in 8.962 in just a few moments. Filling in the details-- so plug in these definitions,
+
+00:40:45
+subtract, take limits, blah, blah, blah. What you find is that this turns out to be U contracted on the partial derivative of A minus A contracted on the partial derivative of U. Exercise for the reader-- it is actually really easy to show that you can promote these partial derivatives to covariant derivatives.  And what this means is that, when you evaluate the Lie derivative-- so notice, nowhere in here did I introduce anything with a covariant derivative. There was no connection, nothing going on there.
+
+00:41:49
+If you just go ahead and work it out, basically, when you expand this guy out, you'll find you have connection coefficients or Christoffel symbols that are equal and opposite and so they cancel each other. So you can just go from partials to covariants. Give me just a second, Trey. And this is telling us that the Lie derivative is perfectly tensorial. So the Lie derivative of the vector field is also a tensor quantity. You were asking a question, Trey. AUDIENCE: In the second term, did you miss the D lambda?
+
+00:42:20
+SCOTT HUGHES: I did. Yes, I did. Thank you. There should be a D lambda right here. Thank you. Yes. Yeah. If you don't have that, then you get what is technically called "crap." So thank you for pointing that out. For reasons that I hope you have probably seen before, you always compute the Lie derivative of some kind of an object along a vector field.  So when you're computing the Lie derivative of a vector field along a vector, sometimes this is written using a commutator. I just throw that out there because you may encounter
+
+00:43:12
+this in some of your readings.  It looks like this. So let me just do a few more things that are essentially fleshing out the definition of this. So I'm not going to go through and apply this definition very carefully to higher order objects. What I will just say is that, if I repeat this exercise and, instead of having a vector field that I'm transporting from point to point, suppose I do it for a scalar field--  well, what you actually get-- pardon me for a second-- is this on the partial, but the partial derivative of a scalar
+
+00:44:11
+is the covariant derivative because there's no Christoffel that couples in.  If you do this for a one-form, where it's a 1 indexed object in the downstairs position, you get something that looks like this. And again, when you expand out your covariant derivatives, you find that your Christoffel symbols cancel each other out. And so, if you like, you can just go ahead and replace these with partials. And likewise, let me just write one more out for completeness.  Apply this to a tensor.
+
+00:45:27
+So it's a very similar kind of structure to what you saw when we did the covariant derivative in which every index essentially gets corrected by a factor that looks like the covariant derivative of the field that you are differentiating along. The signs are a little bit different. So it's a similar tune, but it's in a different key.  OK, so that's great. And if you get your jollies just understanding different mathematical transport operations, maybe this is already fun enough. But we're in a physics class, and so the question
+
+00:46:15
+that should be to your mind is, is there a point to all this analysis? So in fact, the most important application of the Lie derivative for our purposes--  in probably the last lecture or two, I will describe some stuff related to modern research that uses it quite heavily. But to begin with in our class, the most important application will be when we consider cases where, when I compute the Lie derivative of some tensor along a vector U and I get 0.  I'm just going to leave it schematic like that.
+
+00:47:27
+So L U of the tensor is equal to 0. If this is the case, we say that the tensor is Lie transported.  This is, incidentally, just a brief aside. It shows up a lot in fluid dynamics. In that case, U often defines the flow lines associated with the velocity field of some kind of a fluid that is flowing through your physical situation. And you would be interested in the behavior of all sorts of quantities that are embedded in that fluid. And as we're going to see, when you find that those quantities are Lie transported in this way,
+
+00:48:19
+there is a powerful physical outcome associated with that, which we are going to derive in just a moment. So suppose I, in fact, have a tensor that is Lie transported.  So suppose I have some tensor that is Lie transported. If that's the case, what I can do is define a particular coordinate system centered on the curve for which U is the tangent.  So what I'm going to do is I'm going to define this curve such that x0 is equal to lambda, that parameter that defines my length along the curve in a way that, I will admit I've
+
+00:49:59
+not made very precise yet but will soon.  And then I'm going to require that my other three coordinates are all constant on that curve.  So if I do that, then my tangent vector is simply delta x0. In other words, it's only got one non-trivial component, and its value of that component is 1.  And this is the constant. So the derivatives of the tangent field are all equal to 0. And when you trace this through all of our various definitions, what you find is that it boils down to just looking at how the tensor field varies
+
+00:51:32
+with respect to that parameter along the curve itself. If it's Lie transported, then this is equal to 0.  And so this means that, whatever x0 represents, it's going to be a constant along that curve with respect to this tensor field.  Oh, excuse me. Screwed that up.  The tensor does not vary with this parameter along the curve.  This was a lot, so let's just step back and think about what this is saying. One of the most important things that we do in physics when we're trying to analyze systems is
+
+00:52:39
+we try to identify quantities that are constants of the motion. This is really tricky in a curved spacetime because much of our intuition gets garbled by all of the facts that different points have different tangent spaces. You worry about whether something being true, and is it just a function of the coordinate system that I wrote this out in? What the hell is going on here? The Lie derivative is giving us a covariant, frame-independent way of identifying things that are constants in our spacetime.
+
+00:53:18
+So we're going to wrap up this discussion. Let's suppose that the tensor that I'm looking at here is called the metric.  Suppose there exists a vector C such that the metric is Lie transported along this thing.  What does this tell us? So first, it means there exists some coordinate such that the metric does not vary. The metric is constant with respect to that coordinate. Essentially, if you go through what I sketched a moment ago, this is telling us that the existence of this kind of a vector, which I'm going to give a name to
+
+00:55:02
+in just a moment-- the existence of this thing demands that my metric is constant with respect to some coordinate.  I am not going to prove the following statement. I will just state it, because, in some ways, the converse of that statement is even more powerful.  If there is a coordinate, such that dgd, whatever that coordinate is, is equal to 0, then a vector field of this type exists.  So the second thing I want to do is expand the Lie derivative.  So if I require that my metric be transported along the vector
+
+00:56:33
+C, well, insert my definition of the Lie derivative.  Now, what is the main defining characteristic of the covariant derivative? How did I get my connection in the first place? In other words, what is this going to be?  OK, students who took undergraduate classes with me, I'll remind you of one of the key bits of wisdom I always tell people. If the professor asks you a question, 90% of the time, if you just shout out, "0," you are likely to be right. [LAUGHING] Usually, there's some kind of a symmetry
+
+00:57:31
+that we want you to understand, which allows you to go, oh, it's equal to 0. By the way, whenever I point that out to a class, I then work really hard to make a non-zero answer for the next time I ask it. So the covariant derivative of g is 0, so this term dies. Because the covariant derivative of g is 0, I can always commute the metric with covariant derivatives. So I can take this, move it inside the derivative. I can take this, move it inside the derivative.  So what this means is this Lie derivative equation,
+
+00:58:24
+after all the smoke clears, can be written like this. Or, if I recall, there's this notation for symmetry of indices, which I introduced in a previous lecture. The symmetric covariant derivative of this C is equal to 0. This equation is known as Killing's equation, and C is a Killing vector. Now, this was a fair amount of formalism. I was really laying out a lot of the details to get this right. So to give you some context as to why this matters, there's a bit more that needs to come out of this,
+
+00:59:23
+but we're going to get to it very soon. Suppose I have a body that is freely falling through some spacetime. And you know what? I'm going to leave this here. So this is a slightly advanced tangent, so I'll start a new board.  So if I have some body that is freely falling, what we are going to show in, probably, Thursday's lecture is that the equation of motion that governs it is-- you can argue this on physical grounds, and that's all I will do for now-- it's a trajectory that parallel transports its own tangent
+
+01:00:19
+factor. For intuition, go into the freely falling frame where it's just the trajectory from special relativity. It's a straight line in that frame, and parallel transporting its own tangent vector basically means it just moves on whatever course it is going. So this is a trajectory for which I demand that the four-velocity governing it parallel transports along itself. Now, suppose you are moving in a spacetime that has a Killing vector.  So this will be Thursday's lecture.  Suppose the spacetime has a Killing vector.
+
+01:01:25
+Well, so there will be some goofy C that you know exists, and you know C obeys this equation. By combining these things, you can show that there is some quantity, C, which is given by taking the inner product of the four-velocity of this freely falling thing and the Killing vector. And you can prove that this is a constant of the motion.  So let's think about where this goes with some of the physics that you presumably all know and love already. Suppose you look at a spacetime. So you climb a really high mountain.
+
+01:02:18
+You discover that there's a spacetime metric carved into the stone into the top of it. You think, OK, this probably matters. You look at it and you notice it depends on, say, time, radius, and two angles.  Suppose you have a metric that is time-independent.  Hey, if it's time-independent, then I know that the derivative of that thing with respect to time is 0. There must exist a Killing factor that is related to the fact that there is no time dependence in this metric.  So you go and you calculate it.
+
+01:03:26
+So this thing, that C is a constant of the motion--  I believe that's P set 4.  It's not hard. You combine that equation that we're going to derive, called the geodesic equation, with Killing's equation. Math happens. You got it. So suppose you've got a metric that's time-dependent and you know you've got this thing. So you know what? Let's work it out and look at it. It becomes clear, after studying this for a little bit, that the C for this Killing vector is energy.
+
+01:04:10
+In the same way that, if you have a time-independent Lagrangian, your system has a conserved energy, if you have a time-independent metric, there is a Killing vector, which-- the language we like to use is-- we say the motion of that spacetime emits a conserved energy. Suppose you find that the metric is independent of some angle. We'll call it phi. Three guesses what's going to happen. In this case-- just one guess, actually. Conserved-- AUDIENCE: Angular momentum. SCOTT HUGHES: Angular momentum pops out in that case.
+
+01:04:41
+So this ends up being the way in which we, essentially, make very rigorous and geometric the idea that conservation laws are put into general relativity, OK? So I realize there's a lot of abstraction here. So I want to go on a bit of an aside just to tie down where we are going with this and why this actually matters. OK. Let's see. So we got about 10 minutes left. So what we're going to do at the very end of today-- and we'll pick this up beginning of next time. So for the people who walked in a few minutes late,
+
+01:05:18
+the stuff that I'm actually about to start talking about we need to get through before you can do one of the problems on the P set. So I'm probably going to take that problem and move it on to P set 4, but I'm going to start talking about it right now. So we've really focused a lot, so far, on tensors.  We're going to now start talking about a related quantity called tensor densities.  There's really only two that matter for our purposes, but I want to go through them carefully.
+
+01:06:00
+So I will set up with one, and then we'll conclude the other one at the beginning of Thursday's lecture. So let me define this first. I'm going to give a definition that I like but that's actually kind of stupid. So these are quantities that transform almost like tensors--  a little bit lame, but, as you'll see in a moment, it's kind of accurate. What you'll find is that the transformation law is off by a factor that is the determinant of the coordinate transformation matrix.
+
+01:06:55
+Take it to some power.  So there's is an infinite number of tensor densities that one could define. Two are important for this class.  So the two that are most important for us are the Levi-Civita symbol and the determinant of the metric.  So we use Levi-Civita already to talk about volumes. And it was a tensor when we were working in rectilinear coordinates, where the underlying coordinate system was essentially Cartesian plus time. It's not in general, OK? And we'll go through why that is.
+
+01:08:17
+That'll probably be the last thing we can fit in today. So let me remind you--  Levi-Civita-- I'm going to write it with a tilde on it to emphasize that it is not tensorial.  So this is equal to plus 1 if the indices are 0, 1, 2, 3 and even permutations of that equals minus 1 for odd permutations of that.  And it's 0 for any index repeated.  Now, this symbol has a really nice property when you apply it to any matrix. In fact, this is a theorem.  So I'm working in four-dimensional space.
+
+01:09:37
+So let's say I've got a 4-by-4 matrix, which I will call m. Write a new [INAUDIBLE] notation, m alpha mu. If I evaluate Levi-Civita, contract it on these guys, I get Levi-Civita back, multiply it by the determinant of the matrix m.  Now, suppose what I choose for my matrix m is my coordinate transformation matrix.  So I'm just going to write down this result, and I'll leave it since we're running a little short on time. You can just double check that I've moved things from one side of the equation to the other,
+
+01:11:26
+and you can just double-check I did that correctly.  What that tells me is that Levi-Civita and a new set of prime coordinates is equal to this guy in the old, unprimed coordinates with all my usual factors of transformation matrices and then an extra bit that is the determinant of the coordinate transformation matrix. If it were just the top line, this is exactly what you would need for Levi-Civita to be a tensor in the way that we have defined tensors. It's not.  So the extra factor pushes away from a tensor relationship.
+
+01:12:48
+And so what we would say is, because this is off by a factor of what's sometimes called the Jacobian, we call this a tensor density of weight 1.  So in order to do this properly-- I don't want to rush-- at the beginning of the next lecture, we're going to look at how the determinant of the metric behaves. And what we'll see is that, although the metric is a tensor, its determinant is a tensor density of weight negative 2. And so what that tells us is that I can actually put together a combination of the Levi-Civita
+
+01:13:43
+and the determinant of the metric in such a way that their product is tensorial. And that turns out to be real useful because I can use this to define, in a curved spacetime, covariant volume elements, OK? With this as written, my volume elements-- if I just use this like I did when we're taught about special relativity, my volume elements won't be elements of a tensor, and a lot of the framework that we've developed goes to hell. So an extra factor of the determining of the metric will allow us to correct this.
+
+01:14:13
+And this seems kind of abstract. So let me just, as a really brief aside, before we conclude today's class-- suppose I'm just in Euclidean three-space and I'm working in spherical coordinates.  So here's my line element. My metric is the diagonal of 1r squared r squared sine squared theta. The determinant of the metric, which I will write g--  it's r to the fourth sine squared theta. What we're going to learn when we do this is that the metric is a tensor density of weight 2.
+
+01:15:14
+And so to correct it to get something of weight 1, we take a square root.  If you're working in circle coordinates, does that look familiar? This is, in fact, exactly what allows us to convert differentials of our coordinates. Remember, we're working in a coordinate basis. And so we think of our little element of just the coordinates. It's just dr, d theta, d phi. This ends up being the quantity that allows us to convert the little triple of our coordinates into something that has the proper dimensions
+
+01:15:49
+and form to actually be a real volume element. And so dr, de theta, d phi-- that ain't enough volume. But r squared sine theta, dr, d theta, d phi-- that's a volume element, OK? So basically, that's all that we're doing right now, is we're making that precise and careful. And that's where I will pick things up. We'll finish that up on Thursday.
+

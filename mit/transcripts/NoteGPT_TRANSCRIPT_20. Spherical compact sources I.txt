@@ -1,0 +1,201 @@
+00:00:00
+[SQUEAKING] [RUSTLING] [CLICKING]  SCOTT HUGHES: So we're switching gears. We're done with the large scale structure of the universe. Now we're done with cosmology. And I'm going to move into the topic that will dominate the last several lectures of 8.962. Let's look at how to construct the spacetime of a compact body. In particular, we're going to start by focusing on a compact spherical body.  What I mean by compact-- so spherical, I hope, is clear-- but what I mean by compact is that the body occupies
+
+00:00:51
+a finite spatial region.  And it has a surface with an exterior that is vacuum.  So what I'm going to do is design some kind of a spacetime. I'm imagining that there is a source that fills some compact region. I'm going to make it strictly symmetric. And the exterior of the source will be t mu nu equals 0.  So if you think about this, this is telling you that if it's spherically symmetric, your metric can only depend on radius. And so the most general form, at least for a static spherically symmetric spacetime--
+
+00:01:49
+we'll talk a little bit about a few things related to non-static situations a little bit later.  So the most general static form of a spherically symmetric compact body tells me that I can write my metric as some function of r, which for reasons of convenience I will write that is e to the 2 phi, t squared. Some other function of r, dr squared.  And then some function of r times my angular sector.  You might wonder why there's no cross-term. In particular, why can't I have a cross-term
+
+00:02:45
+between my dt and my dr? I have a few lines on this in my notes. I won't go through them in detail here, but I'll just describe. Basically, what you find is that if there is a cross-term between, say, the t and the r pieces, you can get rid of it by a coordinate transformation. This way of doing things so that it is diagonal amounts to choosing a good time coordinate. We can simplify the angular sector by choosing a good radial coordinate.  The word "good" is a little bit loaded here.
+
+00:03:27
+I'm going to actually in a moment describe a slightly different choice of radial coordinate, which is also good, but for different purposes. The one I'm going to use is one where this function that gives length to the angular sector is just r squared. What this means is that the coordinate r, it labels nested spheres that have surface area 4 pi r squared. So if you imagine that in this spacetime you make a series of spheres, and each one of them has an area 4 pi r squared, that is the r that goes into this.
+
+00:04:22
+Bear in mind-- [CLEARING THROAT] excuse me-- bear in mind, that does not mean-- let's say I've got one sphere of radius 4 pi r1 squared, and then outside of it a sphere of radius 4 pi r2 squared. That does not mean that the distance, the proper distance, between those two spheres is r2 minus r1.  So this is unlikely to measure-- to label radial distance cleanly. In fact, it would only be the case that this cleanly labels radial distance if the function lambda were equal to 0. And as we'll see, that's generally not the case.
+
+00:05:10
+So whenever we do things in a curved spacetime, things are always going to get a little bit messier. And what's nice about this is at least we do have a clean geometric meaning to the coordinate r. In fact, before I move on, this is called an areal radius, a radius simply related to surface area.  So in the end, the spacetime that I will be working with in this lecture takes this form.  And so this is a choice that is known as Schwarzschild coordinates.  We will come back to the name Schwarzschild before too long.
+
+00:06:28
+As I said, so this is a particularly good choice of radial coordinate. It'll be very convenient for what we do. It's not the only one. Other coordinate choices are possible. And another one that is quite useful for us--  we're not going to use it too much in this lecture-- is what are called isotropic coordinates.  So this is a coordinate system in which you choose a radial coordinate which I will call r bar, such that your line element looks like this. What this does is this emphasizes
+
+00:07:22
+the fact that we are working in a coordinate system-- or excuse me-- we're working in a spacetime in which all of your spatial slices are fundamentally isotropic. So get far enough away from this thing, and the three-- it's just emphasizing the fact that the three spatial directions are-- there is something special about it. There's presumably a body at r bar equals 0, in its vicinity, but other than that, there's nothing particularly special about-- if I go into a little freely falling frame,
+
+00:07:52
+all three directions look the same. This helps emphasize this. We lose the areal interpretation of r here. I'll remind you that our weak field solution that we derived a few weeks ago, a few lectures ago rather, it looked like this.  And voila, look at that. It's exactly the same form. So this is, in fact-- when we derive this, this is, in fact, actually in isotropic coordinates.  What we found was that the mu that appears here is equal to minus phi with phi itself being very small. And the phi that came from this is
+
+00:08:58
+Newton's gravitational-- the Newtonion gravitational potential.  Let's switch back. We're going to use Schwarzschild coordinates. This is kind of an aside. We will use Schwarzschild shield coordinates for the bulk of our lecture. Actually, the last thing I'll say about this is that there is a problem. There's a problem on a problem set-- I might have made it optional. I don't quite recall-- in which for one of the spacetimes that you're going to be working with in about two more lectures,
+
+00:09:35
+you convert between Schwarzschild coordinates and isotropic coordinates. I think it's an optional lec-- it's an optional problem at this point. But it's worth looking at. So let's build a bot. Let's build the spacetime of a compact spherical body.  What we need are curvature tensors and matter terms.  The curvature tensors, since I've given you-- whoops. Not there. No. The one at the top. I'm sorry. Since I've given you ds squared, you know all the metric elements.
+
+00:10:24
+It's then just a matter of a little bit of having the algebraic stamina to run through and do the calculations. It's straightforward to construct all of the curvature tensor components. The GR tool Mathematica notebook that will soon be released on the 8.962 website, if it has not been released already, that will allow you to do this. I'm going to just sort of quote the results, what the results turn out to be. So for this spacetime, it's given in Carroll's textbook, a slightly different notation, but you can easily
+
+00:10:57
+translate from the functions Carroll uses to the ones that I've written here. So we need to get those curvature tensor components. And we need matter. And so we will do what we generally always do in this class. We will treat our body as being made of a perfect fluid. So let's write out our curvature tensors that arise from this. I'm going to go straight to the Ricci tensor.  If you want to work out all the complements to the Riemann tensor, knock yourself out. As I said, they are listed in Carroll's book.
+
+00:11:39
+It's not terribly difficult to go and work all these guys out, though. Certainly not using Mathematica.  So here's what you get for the rr complement of the Ricci. Notice we are seeing nonlinear terms in here. These are the kind of terms that in all of our calculations, when we were looking at bodies in a weak field spacetime, we set those to 0.  So the form for the ttp. So notice it's quite similar to the form for rrp's. If you saw me hesitate while I was writing, I actually suddenly just got concerned I was writing
+
+00:13:09
+the wrong line down, and was just verifying that I was writing the right thing. And two more non-trivial complements, or really one more non-trivial component, and then there's a fourth component that is simply related.  So here is our Ricci tensor.  We're going to solve it for a perfect fluid stress energy tensor. We will also solve it for-- sorry-- we will use this to make an Einstein tensor, equate it to a perfect fluid stress energy tensor, and use that to build the spacetime on the interior of this object.
+
+00:14:10
+The exterior of the object is going to be treated as vacuum. That will have 0 stress energy tensor. And so it'll be a little bit easier when we construct the exterior solution just to set Ricci equal to 0 and solve it. Before I get into that, let's look at the source we're going to use to describe this compact spherical body.  Like I said, we're going to treat this guy as a perfect fluid stress energy. So by now, you will have seen me written-- you'll have seen that I've written
+
+00:14:39
+this form down multiple times.  So these, the pressure and the density, are both functions only of radius, since this is spherically symmetric. And u denotes the four-velocity of fluid elements in this fluid-- in this body. I'm going to start calling this body a star.  It doesn't necessarily have to be a star, but it's just a convenient shorthand. So I want this star's fluid to be static.  So the four-velocity will have a timeline component, but there is no spatial motion. I want the star's fluid to be at spatial rest.
+
+00:15:42
+I am going to require that this be properly normalized. u dot u equals minus 1. So if I do that in this spacetime, I'm led to the requirement that u upstairs t is e to the phi of r.  Pardon me. e to the minus 5r. And u downstairs t is minus e to the 5r.  Finally, we're going to assume-- so as I said, we're going to treat this as a compact body. So we're going to require that it have a surface. So we will assume rho of r equals 0, p of r equals 0 for r greater than or equal to r star.
+
+00:16:41
+r star denotes the surface of this body.  Let's attack. So it's a little bit easiest to do the exterior first.  So we're going to consider the region outside of r star.  t mu nu equals 0 there. And so my Einstein equations become Ricci equals 0. So I can just take every one of these things, set them equal to 0, and try to assemble solutions for phi and for lambda. Now a particularly convenient-- every one of these things has to equal 0 so I can make various linear combinations of them
+
+00:17:41
+to make things that are particularly convenient to work with. And if you sort of stare at the tt and the rr equations, one thing you see is that if you multiply the tt by this combination of metric functions, add the r r, what that does is it allows you to cancel out those nonlinear terms.  And this combination tells you that--  whoops-- this combination tells you that it's an overall factor of 2/r, the radial derivative of phi equals the radial derivative of lambda. And so this tells me that at least in the exterior phi
+
+00:18:38
+equals minus lambda, perhaps up to some constant of integration. If we go when we plug this into our metric, what that k does is it just gives me a rescaling, depending upon whether I want to attach it to the function phi or attach it to the function lambda. What we see is that K just essentially rescales. But let's do the following. Let's sort of say that I'm going to plug this in and say that I'm going to plug it in for phi. So if I plug this into the metric, I can capture the impact of the constant of integration k here
+
+00:19:31
+by just rescaling my time coordinate.  So we are free just to say, OK, there's no physics in this thing. So let's just set k equals 0.  So that's already great. We have found that at least in the exterior phi is equal to minus lambda. We've reduced this metric from having two free functions to one. So we're feeling spunky now. Let's take a look at a couple more of these equations, and see what we can learn from them.  So we still have some of these ugly things involving nonlinear stuff in the rr and the tt,
+
+00:20:27
+but it's all linear in the theta theta equation. So let's look at r theta theta equals 0. So I have e to the minus 2 lambda r dr of lambda minus r dr of phi minus 1 plus 1. All this equals 0. So now you can either substitute for lambda or substitute for phi. I'm going to follow my notes here and substitute in lambda equals minus phi.  Stare at this for a second, and you'll realize that you can rewrite this term on the left-hand side as dr of r e to the 2 phi equals 1. And this can be easily integrated up.
+
+00:21:44
+And the solution is phi of r equals 1/2 log 1 plus a/r, where a is some constant of integration.  We're going to figure out a way to fix that constant of integration. And you can probably guess how I'm going to do that. But let's just hold that thought for now. So let's just take this solution and write down what our exterior spacetime looks like.  So plugging this guy in, I get--  OK. So here's my line element. And we're going to do the usual thing. This is-- well, remember that this situation describes
+
+00:22:57
+gravity. And gravity has a Newtonian limit, which these general relativistic solutions must capture. So let's make sure that this captures my weak field limit. So let's consider r gihugically greater than a. a must be some parameter with the dimensions of length.  It might turn out to be negative. So let's take the absolute value of this thing. And let's consider a purely radial freefall.  So I'm going to imagine--  when I work this guy out, I'm going to look at geodesics in this limit.
+
+00:23:53
+I'm going to look at purely radial freefall. I'm going to consider the non-relativistic large r limit.  So here I am imagining in my non-relativistic limit that dt d tau is much greater than the dr d tau. So when you work out all those components of the Ricci tensor, you will have computed all of the Christoffel symbols.  And you go back to your handy dandy little table of these things that you will have computed.  So here's what you get for that.  Your phi is given by 1/2 log of 1 plus a/r.
+
+00:25:09
+So-- taking the exponential and the proper derivatives, what this tells you is that this is negative a over 2r squared 1 plus a/r. And again, I'll emphasize, we are considering this sort of very large r limit. So this is approximately negative a over 2r squared. Dividing both sides by the factor of dt d tau squared, I finally get my equation of motion for non-relativistic weak field radial freefall to be that this thing's radial acceleration is a over 2r squared. Now, we want this to capture the Newtonian limit.
+
+00:26:23
+Newtonian freefall is given by dt dr equals the gravitational acceleration minus gm over r squared. They're exactly the same, provided I select a equals minus 2gm.  So what emerges out of this analysis is this truly lovely solution.  This is known as the Schwarzschild metric.  This is a good point to tell a brief story.  Carl Schwarzschild derived this solution shortly after the publication of Einstein's field equation. So Einstein's field equations appeared in late November-- excuse me-- late in the year 1915.
+
+00:27:58
+I believe in November of 1915, but we should double-check that. Schwarzschild published this exact solution, a few months later, I believe in early 1916. Students of history will note that if you were in Germany in 1915 and 1916, you were likely to be involved in some rather all encompassing, non-academic activities at that time. And in fact, Carl Schwarzschild did this calculation while he was serving as an artillery officer in the German Army on the Western-- excuse me-- on the Eastern Front.
+
+00:28:36
+He, in fact, was quite ill at the time he did this. I believe it was a lung infection that he had accumulated while serving in the trenches. And so while recuperating from this disease, he received Einstein's manuscripts because he was a professor in his civilian life, and just wanted to keep up with the literature. He was inspired by this relativistic theory of gravity, and decided that it would be worth a little bit of his time while he was resting in the hospital to see if he could do something with these exciting new
+
+00:29:10
+equations that his colleague, Herr Doktor Professor Einstein, had worked out. And he came up with this, the first exact solution to the Einstein field equations. And indeed, a solution that continues to be of astrophysical and observational importance today. He succumbed to the disease that he was suffering and died several weeks after coming up with this solution and publishing it. This was a solution which stunned Einstein, who did not think that such a simple solution would ever be found, such a simple exact solution would ever
+
+00:29:46
+be found to these horrendous equations that he had developed. I always find this story to be somewhat-- well, I'm not quite sure what to make of it. In these days of the coronavirus, where we are all isolating, we are-- many of us now are probably beginning to hear stories of people we know who may have the disease.  Sometimes it's hard for me to crawl out of bed in the morning. Somehow I do so. And I sometimes think to myself, what would Karl Schwarzschild do? He didn't let the fact that he was dying of a lung infection
+
+00:30:24
+from-- he did not let the fact he was dying of a lung infection prevent him from leaving an indelible stamp on the history of science. I do not aspire to such greatness. I do not think I am capable of such greatness. But it at least helps me to get out of bed in the morning.  So like I said, this is a solution that is of observational importance today. And one of the reasons it has such significance is due to a result known as Birkhoff's theorem.  Birkhoff's theorem teaches us that the exterior vacuum
+
+00:31:30
+of any spherically symmetric body is described by the Schwarzschild metric.  This is true even if the source is time varying. So in doing this derivation, I focused on a situation in which my spacetime was static. There is no time dependence whatsoever. It turns out that if it is not static, if it is a time-varying spacetime, as long as the time variations preserve spherical symmetry, the exterior is still described by Schwarzschild.  It's even stronger than if-- only if. As long as the time variations preserve spherical symmetry.
+
+00:33:07
+So for instance, it could be radial pulsations.  If it is not a variation that preserves spherical symmetry, you're very likely to have a time-varying quadrupole moment, and then you produce gravitational waves. But if you have time variations that preserve spherical symmetry, spherical symmetry does not allow us to have a time-varying quadrupole moment. So no gravitational waves are produced. And what this tells you is that as long as you're in this vacuum region on the outside of it, your thing could be down there going [VOCALIZING],,
+
+00:33:56
+as long as it does so in such a way that leaves it spherically symmetric, then that is the spacetime that describes it. You are completely ignorant of what the radial extent of the matter is. It only matters that you have a mass of m, and you are distance r away from its center, at least in these coordinates. In that sense, it's kind of like Birkhoff's theorem plays a role similar to Gauss's law in elementary electricity and magnetism. If you have a spherically symmetric distribution
+
+00:34:28
+of charges, you are completely agnostic as to what that-- what the radial distribution of that spherical symmetry is. And in fact-- although, this isn't usually discussed-- if that were to be sort of a time variable kind of thing, as long as it was just sort of homologous in moving these guys in and out like that, you would still just get the E-field associated with a point charge at the origin. This spacetime is kind of the gravitational equivalent of a point charge at the origin, a point I'm going to come back
+
+00:34:59
+to in a future lecture. Let me just give you a brief proof of Birkhoff's theorem. So imagine I want to consider a spacetime in which I allow my metric functions to vary with time.  So go ahead and work all of these guys. Use that as your metric. Work out all of your curvature tensors. We are focusing on the exterior vacuum region of the star. So what we're going to do is set those curvature tensors equal to 0. What you find when you do this-- so when you work out your curvature tensors, in addition
+
+00:35:57
+to those four that we had on the center boards earlier, the four components of Ricci, you find a new component enters.  What you find is that there is a component r sub tr, which looks like-- oops, pardon me-- which looks like 2/r times the time derivative of your lambda. This you are going to set equal to 0 in the exterior. So this tells you that the time derivative of lambda is 0.  This means that your assumed lambda of t and r is just a lambda of r. So there is no time dependence in that lambda.
+
+00:36:58
+So you just killed that.  You can then look at your other curvature components. And in particular, one of the things that you'll see is several of those curvature components. You'll see that they pick up a couple of additional terms involving d by dt as the various of the lambdas and the phis. You can now get rid of those. Where I think it's particularly clean to look at this is if you look at r theta theta.  That turns out to be completely unchanged.  So your analysis of the r theta theta term,
+
+00:37:45
+it could proceed exactly as before. But the other thing you can do is you can say, hey, guess what. I'm now going to imagine that my phi is time dependent. My lambda is not time dependent. We just proved that. But my phi could be. Let's look at the time derivative of this Ricci term. So if our r theta theta is 0, the time derivative of r theta theta must be 0.  So when I compute this, this leads to the requirement that the double derivative, one derivative in r, one derivative in phi-- excuse me-- one derivative in r, one derivative
+
+00:38:23
+in t of the potential phi must be equal to 0.  And so this in turn tells us for this condition to be true, it must be the case--  pardon me. Just one second. How does this follow? Oh, no. Yeah, yeah. So this tells me it must be the case that phi can be separated into a function of r in a function of t. If I take the t derivative and then the r derivative, I get 0. If I take the r derivative and then the t derivative, I get 0. So my line element, my most general line element now appears to be something that looks like this.
+
+00:39:55
+But once I have this, I can actually just redefine the time coordinate. I mean, if I look at this thing I've got here, I can just absorb a function of t into my time coordinate, just absorb it in a time coordinate like so.  And what happens is that I then recover the Schwarzschild form I originally had.  So that's really nice. What this tells us is that any spherically symmetric vacuum spacetime is going to have a time-like Killing vector.  And if it has a time-like Killing vector, that means that I can define a notion of conserved energy
+
+00:41:42
+for objects that are moving in that spacetime.  It's going to prove very useful when we start discussing orbits. So this punch line is this totally describes the exterior of my compact spherical body. What about the interior?  What we're going to need to do is-- the interior has non-zero stress energy. So we're going to need to look at components of the Einstein equation and equate them to the source, my perfect fluid stress energy tensor, and see what develops.  So what I'm going to do is write my Einstein equation
+
+00:43:01
+in the form of an upstairs downstairs index. And I'm going to do it that way, because t upstairs mu downstairs nu, it is represented in the coordinate system I'm working in here. But assuming it's a diagonal of minus rho ppp.  And I had all the Riemann-- excuse me-- all the Ricci components on the blackboard a few moments ago. From them, I can construct my Einstein tensor. So there's a couple components that turn out to be quite nice. One of them is the tt component. This turns out to be minus 1 over r squared d by dr r 1
+
+00:43:58
+minus e to the minus 2 lambda.  What's nice about this is notice it only depends on lambda.  This is going to be equated to 8 pi g times t stress energy tensor tt, which is going to give me a minus rho there. So before I go and I do this, let me make a definition.  I'm going to call e to the minus 2 lambda, I'm going to call that 1 minus 2gm of r over m. What I'm effectively doing is I am mapping my metric function lambda to a function m of r, which is a sort of mass function. Hopefully, you can kind of see that by doing this,
+
+00:44:54
+remember, that this component of the metric, it's going to enter as e to the 2 lambda. And so when I match this, this is going to give me something that very nicely matches to my exterior spacetime.  So plugging that in there, and valuing the derivatives, and equating this guy to the stress energy tensor is going to give me a very nice condition that the function m of r must obey.  So plugging all this stuff in, I end up with minus 2g over r squared dm dr equals minus 8 pi g rho of r.  Turning things around, I can turn this
+
+00:46:36
+into an integral solution, which tells me that my mass function m of r is what I get when I integrate from 0 to r 4 pi rho of r prime.  Two comments on this. You sort of look at this and go, ah, that makes perfect sense. This is what you would obviously get if you integrate up a density over a spherical volume. This is, hopefully, beautifully intuitive. And you kind of look at it and go, how could it be anything else? Well, it could be anything else. So two comments to make. First of all, I have set this up.
+
+00:47:19
+I have imposed a boundary condition.  I have imposed a boundary condition here that the mass enclosed at radius 0 is 0. You might look at that, and, well, duh. If I have a ball of radius 0, there can't be any mass in it. Of course, you're going to do that. Well, it's going to turn out that black holes are actually solutions that violate this boundary condition. Wah-wah. So there's that. The other thing to bear in mind is that 4 pi-- the reason why this probably makes intuitive sense
+
+00:47:58
+is that in spherical symmetry in Euclidean space, 4 pi r squared dr is the proper volume element for a Euclidean three-volume. We are not in Euclidean space. And so this is indeed the definition of m of r, but it is not what we would get if we did a proper volume integration of rho over the volume that goes out to radius r.  If I were to define a quantity that is the proper volume integrated rho, let's call this m sub b. Let's make it lowercase.  I'll define why I'm calling that b in just a moment.
+
+00:49:24
+I could define this as what I get when I do a proper volume integration of this thing in my curved spacetime.  You get an additional factor. And what you find is that this in general-- so remember, this is going to go into your spacetime as a function. It's going to look like something like 1 over that factor there. This in general is greater than m of r. So there is a homework exercise where you guys are going to explore this a little bit. m sub b is what I get when I count up, essentially
+
+00:50:29
+including a factor of the rest mass of every little-- let's call it baryon that goes into this star. This counts up the total number of baryons present in my star in something that's called the baryonic mass. This m that appears here defines the amount of mass that generates gravity. They are not the same. The gravitational mass is generally somewhat less than the baryonic mass.  You might sort of think, well, where did it go?  The missing mass can be regarded as gravitational binding energy.
+
+00:51:18
+It's really not that it's missing. It's just that gravitational energy holds this thing together. And whenever you bind something, you do that by putting it in a lower energy state. Gravity is essentially this sort of mb with this-- the way to think of my mb here is bear in mind that we're including factors-- let's just put factors of c squared back in here. This is adding up the rest energy of every particle in this star. But when I put them all together, gravity binds it together.
+
+00:52:03
+And that actually takes away some of that. It puts it into a bound state. And so the difference between the baryonic mass, or energy, and the gravitational mass, and energy, tells you something about how strongly bound this object is.  So that's one important equation.  It looks like I might finish this lecture up a little bit on the early side, which is fine, because I could use a break. Another one that is important for us will be the rr component of the stress energy tensor. So this guy, when you work it out,
+
+00:52:50
+it looks like e to the minus 2 lambda 2 over r d phi dr plus 1 over r squared.  That's 1 over r squared. So let's insert our definition. This prefactor is minus-- excuse me-- 1 minus 2gm of r over r 2 phi-- oh, shoot. Pardon me. Try that again-- 2 over r d phi dr plus 1 over p square 1 over r squared. And we equate this to the appropriate component of the stress energy tensor, which is just going to be the pressure. This can be rearranged and give us an equation for a differential equation governing
+
+00:54:01
+the metric potential, the trigonometric function phi.  So what results of that exercise something that looks like this over this. So I would like to do something with this in just a moment. But it's worth commenting on this. So when one looks at the gravitational potential in a spherical fluid body in Newtonian gravity, you get gm of r over r squared. So there's two interesting things going on here. First, your m of r, which appears in the numerator of this thing is corrected by a term that involves the pressure.
+
+00:55:23
+What you are seeing here is the fact that pressure in some sense reflects work that is being done in this body. It's being squeezed. Gravity is sort of squeezing it down, or your hands are pushing it down. When you give this body some pressure, you're doing work on it. Work adds to the energy budget of that body. Energy gravitates. In the denominator, you're getting this r minus 2-- instead of just having an r squared, you get a correction that involves this 2gm term in here. And this is just correcting for the fact
+
+00:55:56
+that you are not working in a Euclidean geometry. So now I want to do a little bit more with this. And so let me borrow a result from an old homework exercise. I believe this was on P set 3. Although I don't quite recall.  So on this thing you guys took a look at the equation of local stress energy conservation for a perfect fluid and hydrostatic equilibrium.  And what you found was that this turns into a condition relating the pressure, density, and what you can kind of think of as the four-acceleration
+
+00:57:06
+of the fluid elements. So we see sort of gradients of the pressure entering here, the density entering into here, and some things related to the behavior of the fluid elements.  The spacetime that we are working with is one where we have constrained the behavior of that fluid.  So we are going to require that our fluid--  let's write it this way.  So our fluid only has a-- it's only the time-like component of its four-velocity is 0. And so when I shoot that all through the various things
+
+00:58:22
+involved in there-- oh, and, of course, phi only depends on r.  So what this equation then boils down to is rho plus p times this Christoffel symbol equals minus dp dr. When you expand this out, this turns into d phi dr. So what this tells me is that d phi dr is simply related to the pressure gradient.  When you put all of this together, what you get is the following equation. This is sometimes called the equation of relativistic hydrostatic equilibrium. My pressure gradient must satisfy this equation.
+
+00:59:51
+Let me write down two more, because I think I'm going to actually begin with this board in my next lecture. So I'm going to just repeat this equation governing phi.  And m is defined as this integral.  So here are three coupled differential equations, which I can now use to build a model for the interior of this body. We integrate this thing out. Basically, the way it works is you need to choose an initial-- some parameter that characterizes the initial conditions. You typically choose a density at the center.
+
+01:00:55
+You choose rho at r equals 0. You need an equation of state that relates the pressure and the density. And then you just integrate these guys up. There's a matching that must be done at the surface of the star. Then once you've done that, that'll end up giving you sort of a notice that by integrating up this equation, you determined the function phi up to some constant of integration. When you match at the surface of the star, that lets you fix that constant of integration. Boom! You've made yourself a spacetime.
+
+01:01:29
+This is known as the Tolman-Oppenheimer-Volkoff equation, universally abbreviated TOV. These are the way in which we make spherically symmetric fluid bodies in general relativity, spherically symmetric static fluid bodies in general relativity. In the next lecture-- so we're going to end this one a tiny bit early. This is actually a very natural place to stop. I am going to start with this. And what we're going to do is talk a little bit about how one solves these. And we're going to look at a couple--
+
+01:02:21
+we're going to look at one particular special solution, which is not very physical, but it's illustrative. And I'm going to talk a little bit about how to solve this for more realistic setups. That is in preparation for what is one of my favorite homework exercises. It's one where I give you an equation of state. And you guys just take these equations. And using a numerical integrator-- I hope everyone has access to something like Mathematica, or WolframAlpha, or something like this
+
+01:02:51
+in your dispersed lives. All MIT students should be able to access the student license for Mathematica. So as long as you have the hardware for that, you should be OK.  And this is-- actually, it's pretty cool. You can make relativistic stellar models. I've actually had in the past students use this as the basis for some research projects, because when you do things like this, this is how professionals make models of stars. So we will stop there. And those of you who are watching at home,
+
+01:03:26
+you can go on to the next video, where we'll be doing this. As for me, I'm going to take a bit of a break, and start recording again in about a half an hour.
+

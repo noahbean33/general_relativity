@@ -1,0 +1,288 @@
+00:00:00
+[SQUEAKING] [RUSTLING] [CLICKING] SCOTT HUGHES: OK. Let's move on to the next lecture. Might have gotten a little bit of me getting prepped here. I really have to give a lot of credit to the people in the Office of Digital Learning for making this entire thing possible. So I'm really grateful particularly to Elaine Mello, who is at home running the show remotely right now. This is-- a lot of people at MIT are doing a tremendous amount to keep this place functioning, and everyone really deserves a huge pat on the back.
+
+00:00:47
+All right. So in the lecture that I just completed a few moments ago, we described-- I described how to characterize the gauge-invariant radiative degrees of freedom, which we call gravitational radiation. With gravitational radiation, we found at the end-- there's a formula that I will write down again a little bit later in this lecture, but we essentially found that it looks like certain projections of a term that involves two time derivatives of the quadrupole moment of a source.  This has in recent years led to a--
+
+00:01:26
+well, we've now been able to directly measure this form of radiation. I'm wearing my LIGO hat in honor of the facility that first directly measured these things. And we have inaugurated an entirely new field of observational astronomy based on being able to measure those things.  It's pretty exciting. I hope, though, that a few people noticed how restricted the analysis that I did is. I defined gravitational waves only in the context of linearized theory on a flat background. We haven't talked much about other solutions
+
+00:02:09
+to the Einstein field equations yet, but you know it's coming. And I hope you can appreciate that, in fact, our universe is not described by a flat background. Many of the sources that we study, it is only weakly curved away from a flat background. So for instance, our solar system is accurately described as something that is weakly curved away from a flat background. And in that context, much of what I described carries over very cleanly. And so you essentially have-- in that case, you need to--
+
+00:02:42
+if you want to analyze things like gravitational waves propagating in our solar system or through a galaxy which has a spacetime metric, it's also accurately described as flat spacetime plus a weak deviation away from it. You can take advantage of the fact that your gravitational wave tends to be something that's rapidly varying and your solar system and your galaxy is something that has very slow time variation, or it's even static. So you can take advantage of the fact that there's these different time
+
+00:03:11
+derivatives to separate terms. That actually leads me naturally to, what do we do if I want to describe the very realistic scenario of gravitational waves propagating not on a flat background, but on some kind of a curved background? Perhaps they propagate near a black hole where spacetime is very different from the spacetime of special relativity. Perhaps we need to describe them propagating across a large sector of our universe. We haven't talked about cosmology yet, but it's the subject of the next lecture I intend to record.
+
+00:03:42
+And the spacetime that describes our universe on large scales does not look like the metric of special relativity. So how do I describe gravitational radiation, GWs, Gravitational Waves, on a non-flat background?  Schematically, you can imagine that in this case, you're working with a spacetime that can be broken into a background. I'll put a little hat on it to say that this denotes my background spacetime.  And then some kind of a wave field propagating on it.  This background is no longer going
+
+00:04:42
+to be that of special relativity. This could be something that varies with both space and time.  This will be something that in general is small in the sense that in most of the cases, certainly all the cases we're going to study in this class, any term that involves an h times an h will be second order in a very small number, and so we can discard it. But it's still going to be challenging to figure out how I can even define what a wave means in this case.  So to wrap your heads around that,
+
+00:05:32
+think about what a local measurement might do, OK? So suppose I am in some region of spacetime. So first of all, we had a parable that we looked at in our previous lecture where we looked at geodesics in a spacetime that was flat plus a gravitational wave. And of course, geodesics are geodesics, and so we just found that they are unaccelerated relative to freefall frames. That sort of is-- you know, more or less defines what a geodesic is, so it was not too surprising. But we can then look at, for example, two relatively
+
+00:06:03
+nearby geodesics, and we can look at how their geodesic separation changes. We can look at the behavior of light as it bounces back and forth. Something that's important to bear in mind is that when I make a measurement like that, I measure this or some quantity that is derived from this, the curvature tensor or an integrated light propagation time.  We may know that the spacetime metric has two vary conceptually different contributions to it. It's got a background, and it's got a wave.
+
+00:06:46
+How do we-- conceptually, we might see how to separate them, but how do we define some kind of a toolkit that allows us to separate? How do we define the separation between background and wave?  Put it another way. Suppose what you are sensitive to is spacetime curvature. Suppose you are sensitive to things that depend on the Riemann tensor. How do you know from your measurement that you are measuring the Riemann tensor associated to the gravitational wave and not a Riemann tensor associated with a curvature--
+
+00:07:34
+excuse me-- associated with your background? That is an extremely important issue. If all I can measure is this, but I want to get this, what is the trick that I use to distinguish between these two?  I call this a trick in my notes, but I don't like that term, actually. This is not a trick. This is a fundamentally important point when you are trying to measure some kind of a perturbation to a-- not just to spacetime, but to any kind of a field that you are studying, any kind of quantity you're studying which is itself spatially and temporally
+
+00:08:15
+varying. What you need to do is take advantage of a separation of length and timescales.  When I'm talking about general relativity and I'm talking about gravitational waves, I am going to use the fact that a gravitational wave is oscillatory.  And as such, it varies on a much smaller length and timescales-- it varies on much smaller length and timescales than the background does.  OK? It's useful to introduce an analogy here. Think about a water wave propagating on the ocean.  In almost all cases when you look
+
+00:09:51
+at a water wave propagating on the ocean, it's obvious what is the wave and what is the curvature in the ocean. It's actually associated with the fact that the Earth is round. So it is clear from the separation of both length scales and timescales-- not clean-- clear how to separate wave from the curvature of the Earth bending due to geological structures and things like that.  A component of the curvature of the ocean that has a curvature scale of, say, 6,000 kilometers-- well, that's just the fact that the Earth
+
+00:10:52
+is a sphere with a radius of 6,000 kilometers. OK? So you can kind of see that. But if you see something that is varying with a period of about a second that's got a wavelength of a meter or two, that has nothing to do with the curvature of the Earth. That's a wave. We want to introduce a similar concept here and apply it to our general relativistic calculation. So let's introduce two sets of length and timescales-- let's call them scales-- we will use in our analysis.  So capital L and capital T, these
+
+00:11:44
+are my long length in timescales.  These describe the variation of my background.  Lambda and tau are my short scales, and they describe the wavelength in the period of gravitational waves. So to put this in the context of the kind of measurements that LIGO makes, the LIGO interferometers make measurements of behavior of light moving in the spacetime near the Earth. Now, there is a component of that that varies on a scale that has to do with the curvature of spacetime near the surface of the Earth
+
+00:12:52
+due to the Earth's mass distribution. That occurs on-- so first of all, that is practically static. It does vary somewhat because of the motion of the moon around the Earth and because of the behavior of the fluid in the Earth's core. There are small variations there which, interestingly enough, can be measured. But those tend to occur on timescales on the order of hours at the shortest. For the moon's orbit, the moon goes around in a time period of about a month. The Earth's rotating.
+
+00:13:32
+It's turning on its axis. And so at a particular point, you're sort of casing the gravitational field of the moon as the Earth rotates under it, and so your time thing here is on the order of hours to about a day. The length scale associated with this-- you can calculate things like the Riemann curvature or tensor components near the surface of the Earth. That has the units of 1 over length squared. So take the square root and inverse it, and you're going to find that this varies on a length
+
+00:14:03
+scale that is thousands or-- I should probably work this out before I try quoting numbers, but it's many, many, many, many, many kilometers, tens of thousands or millions of kilometers. Tens of thousands, probably. My gravitational wave, by contrast, it's got wavelengths that are on the order of-- they are also on the order of thousands of kilometers, but there is a time variation on them that, for the LIGO detectors, is on the order of seconds at most, really tenths of a second at the current sensitivity of the detectors,
+
+00:14:35
+up to milliseconds. Way faster variation. So by looking for pieces of what I can measure that vary on these length scales and these time scales, I can separate it from effects that are varying on these long time scales and long length scales. So as I move forward in this lecture, let me emphasize that some of the things I'm going to introduce here are-- first of all, they're a little bit more advanced. You are certainly not responsible for knowing the gory details of how some of these tools I'm
+
+00:15:09
+going to introduce are used. All right. So the point is, once I've introduced these long scales and these short scales, what we can then do is we can always remove the wave, remove the oscillation by introducing an averaging procedure.  So if you imagine that you average over a timescale that is several times the wave-- excuse me-- several times the period of the wave and over a length scale that is several times the wavelength of the wave. These are taken to be shorter than the long scales,
+
+00:16:02
+but longer than the short scales. And so when you do that--  let me put it this way. If I average-- so these angle brackets are what I'm going to define as my averaging procedure. I will make this a little bit more quantitative in a moment.  On length scale l and timescale t, the background basically doesn't change.  So when I average it, I just get the background back. On the other hand, my wave oscillates a couple of times. So if I average something that oscillates over a couple of cycles, I get 0.
+
+00:17:04
+So given what I can actually measure, which is the spacetime or things related to the spacetime, this averaging procedure lets me pick out the background.  The radiation is then what I get when I subtract that average bit from the field.  So these are all things that, as a theorist thinking about how someone is going to go in and actually measure properties of the gravitational wave, these are tools I can use to separate one spatially and temporally varying quantity from another. Now, here I'm going to describe something that's
+
+00:18:18
+a little bit more advanced than we need to get into, but it's important to discuss. How do you actually average a tensor like this? That's a little bit tricky.  So the averaging was first made rigorous. And there have been various other mathematical formulations of this that are presented over the years, but I like this particular one because it's conceptually quite simple. It was first made rigorous by Dieter Brill and James Hartle-- Hartle is the author of a nice elementary textbook
+
+00:18:55
+on general relativity-- in 1964. And the reference is given in the notes. And what you basically do is to define the average of a quantity like the spacetime metric, you integrate it over some proper volume in spacetime, proper 4 volume with a particular weighting function. So this is something that is defined such that if you integrate it over that same region, you get 1. And it's taken to be something that is-- you can sort of think of as a Gaussian in all four spacetime directions that is peaked around--
+
+00:19:46
+it's peaked at a particular location, and it has a width of l in all directions, l and t.  We spent a lot of time talking about what makes a tensor a tensor. And one of the things that we discussed was the fact that when I am working in curved space time and my basis objects are functions, I can't really add a tensor here to a tensor there because they live in different tangent spaces. That's a poorly defined operation. An integral is nothing more than a sum on steroids. So how is it that I'm allowed to do this?
+
+00:20:35
+Well, the idea here is this is not exact. OK? When one does this, you will find-- what comes out-- your average tensor modulo corrections or errors that are of order short length scale over long time length scale. This is the best you're going to be able to do. You're always going to be a little bit off when you define an averaging procedure like this because by definition, an average can't capture everything. That's why you're averaging. You're trying to actually throw away some piece of it.
+
+00:21:24
+So this allows us to define our tensor calculus in this averaged way in a very useful framework provided with-- we just need to accept the fact that there's always going to be-- it really only makes sense in this regime where we can cleanly separate our length scales and our time scales. I emphasize this because sometimes one does an analysis, and one finds things are really weird going on. It's often useful to sort of step back and say, wait a minute. I'm trying to describe gravitational waves
+
+00:21:54
+in a particular regime. Are these actually gravitational waves? And you sort of look at this, and you realize you've put yourself into a regime where your perturbation is varying on the same timescales and length scales as your background. And in fact, your amplitude is no longer really small. You sort of go, oh, crap. What I've done here is I've actually pushed this beyond the regime in which the radiative approximation is valid. So bear this in mind. You're always working-- you're always
+
+00:22:23
+going to be working in this approximative form. Suppose we have now done this. We have separated length scales. So we now have cleanly and conceptually separated into background and perturbation.  Now what I would like to do is just run through my exercise of computing all the quantities that I need to do to describe radiation-- really, all of my quantities that I need to do to develop and then solve the Einstein field equations. And I'm going to do so linearizing in h about this curved background rather than
+
+00:23:16
+about the flat background. So let's develop all of our spacetime curvature tools, all the various quantities, linearizing in h around g hat.  So I'm still doing linearized theory, but I am not linearizing around a flat background anymore. So to give you an idea, I'm going to do one term associated with this and a little bit of-- one term associated with this and a little bit of detail so you can just see what the complications end up looking like. So first thing you might want to do is compute your connection.
+
+00:24:10
+Go back to your definition. That should be in your notes from a couple of lectures ago.  So you insert this. Here is the definition of the connection. Let's now insert this split. So the inverse metric is going to have a form that looks very reminiscent to how we did the inverse metric in linearizing around a flat background, the exact same logic. I am raising indices using the background, so h alpha beta in the upstairs position is what I get when I raise using g hat. And you get a minus sign.
+
+00:25:15
+Again, this is sort of like the tensor equivalent of binomial expansion of 1 over 1 plus epsilon.  Pardon me just one moment.  So I'm going to get two terms. So here's the first thing where I'm raising it to the inverse metric. This is going to split into two terms. Let me just write them all out for completeness here.  So let's pause for just a second here. So when I multiply all of this out, I'm going to get one term that involves background inverse metric hitting all the derivatives of my background
+
+00:26:20
+metric.  I'm going to call it-- I'm going to call that Christoffel with a hat. OK? That is nothing more than the Christoffel symbol that you would have gotten if you were just working with the background metric.  You're going to get another term that involves h alpha beta acting on the Christoffel symbol with all the indices in the downstairs position and constructed from the background. Then you're going to get another term that involves your background inverse hitting various derivatives of your wave or of your probation
+
+00:27:29
+around the background.  At this point-- oh, and there'll be a term of order h squared which I'm going to discard.  At this point, you just have to kind of stare at this for a little bit. And when you do so, you find out something of a miracle occurs. You can write this as background plus a perturbation to the connection. I shift to the connection. And this shift-- when you stare at and you organize all the terms that appear here, this turns out-- whoops-- this turns out to look like something
+
+00:28:37
+that is very reminiscent of the formula for the Christoffel symbols, but only acting on the h's and using covariant derivatives rather than partial derivatives.  I don't have a good way to prove this other than to say, you know what? Expand out all of these covariant derivatives and then compare these terms. And this ends up being what you get when the smoke clears. I go through this one in some detail because simplifications of this sort happen at every level as we move on. What we're basically going to do is sort of brute force expand
+
+00:29:20
+things. We'll find a term that looks like just a pure background piece, and then there'll be a whole bunch of little bits of crap that are linear in the field h. And you can gather them together and often write them in a form that's prettier, kind of like this, where it's just sort of a shift to the connection involving covariant derivatives. There's no great algorithm for actually working all these guys out. Basically, you just have a bit of labor to do to put them together.
+
+00:29:50
+So let me write out a couple of other examples of what follows from this.  Let's see. There's a point I want to get to in just a moment. I'll go through that in a bit more detail.  OK. So when I take my Christoffel and I work out my Riemann tensor, I find a piece that looks just like Riemann computed solely from the background.  And then I get a correction to it. And to linear order in h, this looks like when you work out--  OK. Hang on just a second. So at this point, we can now go ahead
+
+00:31:44
+and start making things like the Ricci tensor and the Einstein tensor.  I got slightly ahead of myself here because there's an important point to make at this point. So now, as we move forward, if we're assuming Einstein's general relativity, our curvature tensors end up coupling to the Einstein field equations, a couple things like the Ricci tensor and the Einstein tensor to the stress energy tensor.  Accordingly, I am going to make the following simplification.  Let's set the stress energy tensor equal to 0.
+
+00:32:56
+So the analysis which I'm going to do in the remaining time in this lecture, it only describes vacuum regions of spacetime. One doesn't need to do this, and I strongly, strongly emphasize this. Doing so makes this lecture about one third as long as it would be if I did not assume this was equal to 0. So this is solely being introduced to simplify things. And what this means is that I am essentially describing gravitational waves as I-- I'm describing gravitational waves far from their source.
+
+00:33:31
+Unfortunately, it does mean it complicates a little bit how they work in some cosmological spacetimes. But it is still sufficient for me to introduce some of the key concepts that I want to do.  By assuming that t mu nu is equal to 0, what I'm going to do is I'm essentially, then, assuming that the background is equal to 0. The background spacetime arises from an Einstein tensor that is equal to 0. And it's not hard to show that this corresponds to Ricci being equal to 0, and of course, then, the Ricci
+
+00:34:08
+scalar being equal to 0.  So as I move forward here, my background Riemann tensor is nonzero, but my background Ricci tensor will be equal to 0. And I strongly emphasize that this is just a simplification that I am introducing in order to make today's analysis a little bit more tractable.  So my background Ricci tensor is equal to 0. Let's compute the perturbation in my Ricci tensor.  This is what I get when I trace over indices 1 and 3. I will skip over much of the algebra that is in this.
+
+00:35:24
+But what one finds going through this sea of various definitions is that what results is a delta r mu nu.  I will define this symbol in just a moment.  OK. So a couple of definitions. This box operator that I'm introducing here, this is a covariance wave operator.  And the trace is what I get when I contract my perturbation h with the background metric. OK? So I just want to quickly emphasize that there is nothing very profound about what has gone into this. This was all done by essentially just throwing together
+
+00:37:11
+all the various definitions and linearizing in all the quantities that I care about.  So what I would like to do now is take--  I'm going to take my Ricci tensor and my Ricci scalar. I will assemble them to make my Einstein tensor.  And by requiring that that be equal to 0, I will get an equation that describes radiation as it's propagating in this curved background. But before I do this, I want to just pause for a second here and note that I'm going to get a mess when I do this. You can already sort of see I've got some interesting structures
+
+00:38:19
+here. So here's a trace. Here's a trace. Here is a term that looks like a divergence. Here is a term that looks like a divergence. When we were doing linearize theory on a flat background spacetime, we got rid of those degrees of freedom. We sort of deduced that these were just kind of annoying for doing our analysis. And by changing gauge, we were able to rewrite the equations in a way that allowed us to get rid of them.  Before I assemble this, I want to explore what changing gauge means now that I'm
+
+00:38:54
+working on a curved background. So brief aside: let's generalize our notion of a gauge transformation.  So what I'm going to do is just as when I was linearizing around a flat background spacetime, I began by introducing an infinitesimal coordinate displacement.  And when I did this, I then had a matrix--  a matrix that affected this coordinate transformation, which looks like so.  Just as when I-- whoops, typo. Just as when I was doing this around a flat background, I'm going to assume that these elements tend to be small.
+
+00:40:07
+So let's apply this generalized gauge transformation to my metric.  Something worth highlighting at this point-- my metric depends on space and time. It's not flat. So I have to build in the fact that it's a function of these coordinates. So this-- pardon me just one second.  So now I need to find the inverse metric-- excuse me-- the inverse coordinate transformation that will essentially give me the same thing, flipping my indices around a little bit and introducing a minus sign. And when I expand this out--
+
+00:41:35
+again, bearing in mind I have to be careful about the coordinate that this is being evaluated at, OK?-- So I'm going to get one term here that involves my Kronecker deltas hitting this guy. Again, be careful with that argument.  OK? So I'm going to get another term that involves-- I'm going to get two terms that involve my derivative of my infinitesimal displacement hitting the background. I'm going to get terms that involve the Kronecker hitting my metric perturbation. I'm going to discard terms that are quadratically small.
+
+00:42:58
+Now, here is where we need to be a little bit careful.  Notice I have shifted this guy here. I'm going to expand this with a Taylor expansion.  Move this a little higher so that it's not blocking my view.  OK. That looks pretty gross.  We can clean it up, though.  If I use the fact that-- for example, looking at one of these terms, this can be written as the covariant derivative of my infinitesimal displacement minus a connection coefficient.  You can gather together a whole bunch of terms.
+
+00:44:59
+And what you find--  something that looks remarkably similar to the form that we got. By the way, I may have forgotten to define that back here. My sincere apologies to those of you following along at home! My covariant derivatives with a hat mean this is a covariant derivative being taken with respect to the background spacetime. So just do your normal recipe for evaluating a covariant derivative, but compute all of your Christoffels using the background spacetime g hat. Carrying back over to here, what I
+
+00:46:05
+find is that doing this infinitesimal coordinate transformation, it looks just like, why did you do all these steps properly? And this little bit of doing the Taylor expansion in the metric-- I speak from experience-- it's easy to overlook that bit. This looks just like what we did when we applied an infinitesimal coordinate transformation to a perturbation around flat spacetime. And it tells us that there is a kind of gauge that can be applied to my gravitational waves around a curved background provided I promote
+
+00:46:42
+my derivatives of the infinitesimal coordinate generator from partials to covariance. So this defines-- if I introduce a generalized coordinate transformation, this generalizes the notion of a gauge transformation when I'm examining things like radiation on a curved background. This is my generalized gauge transformation.  It will also prove useful for us to have a notion of a trace reversed perturbation.  So I'm going to introduce an h bar mu nu. This will be my original h mu nu, the perturbation
+
+00:48:02
+around my curved background.  And I subtract off 1/2 of the trace like so. If you take the trace of this in the way that I defined earlier, this will give you minus little h back.  So again, at this point, I'm going to skip over a couple of lines in my lecture notes because they're straightforward but a little bit tedious. What we're going to do is take my Ricci tensor, my Ricci scalar, my background spacetime. I'm going to assemble my Einstein tensor associated with this metric perturbation, but I'm
+
+00:48:55
+going to write it in terms of the trace reverse [INAUDIBLE]..  So let's write out delta g mu nu in terms of this guy.  So assembling all the pieces, doing the algebra.  OK.  So pardon while I just write all that junk out.  So this, again, I hope, reminds us of a step when we were doing perturbations around flat spacetime.  We have all these terms that are sort of annoying divergences of that trace reverse metric perturbation. And so a line or two of algebra will justify this. I can change gauge.
+
+00:51:04
+I can find a gauge in which my perturbation has no divergence if I choose these generators such that they satisfy a wave equation in which the source is the divergence of my old metric perturbation. Let's suppose we've done this. By the way, we will call this generalized Lorenz gauge.  When you do this, what you find is that your metric perturbation-- oh, shoot-- is governed by the following Einstein tensor. And if you imagine that this guy is propagating in vacuum, what this tells you is that the wave satisfies
+
+00:52:29
+something that's similar to the flat spacetime wave equation. Now, the operator is a little bit different because you have assembled it out of covariant derivatives and with a correction, which shows that your wave is actually now coupling to the curvature of spacetime.  So I have a few more notes about this. It's not really important that we go through them in great detail here. Those of you who are interested, they will certainly be made available through the website. The key thing which I want to emphasize is essentially some
+
+00:53:06
+of the key bits of-- an important piece of the technique, which is that what we are doing is using-- we are linearizing around this flat background. We have generalized our gauge transformation to allow us to simplify the mathematical structure of this equation. And then what results is an interesting correction to the usual wave equation that one sees.  So I will also emphasize this is a somewhat more advanced topic. So one of the reasons why I'm eliding over some of these details is they are somewhat tedious.
+
+00:53:47
+You don't need to know them in detail. It's good to be familiar with them and to be able to follow along here. I am going to post a couple of papers to the 8.962 website that lay out some of the foundations of this stuff. The key thing which I want to use this for is an important aspect of gravitational waves is that they carry energy. Electromagnetic waves carry energy. It shouldn't be a surprise if I have some kind of a source-- we're in a room right now. There's light shining down on me.
+
+00:54:22
+The energy that is going on me, it heats me slightly. It is being drained from some power source somewhere else. We're all familiar with the story of electromagnetic radiation. For gravitational waves, ascertaining what the energy content of the wave actually is is a little bit more subtle. And indeed, understanding that there is an unambiguous energy carried by these waves is something that occupied a lot of the foundations of gravitational wave theory for a couple of decades. In part, this is driven by the fact
+
+00:55:06
+that these things are so hard to measure that it was difficult to-- this is one of those things where if you could just go out and measure it, even if your theory was a little bit uncertain, you would say, well, goddammit it, it left an imprint on my detector here. It must have carried energy. And so you would know where you were going. But because there were no measurements of these things for years and years and years, no one quite knew which direction to step in. Part of what makes this complicated
+
+00:55:41
+is the fact that when we are in general relativity, no matter what your spacetime is, you can always go into a local Lorenz frame.  When you do that, spacetime is flat at a point.  Furthermore, all the derivatives associated with it-- the first derivatives associated with it are 0. So it's sort of-- how the hell can I have a field h, a gravitational wave h that carries energy if I am free to change coordinates and make it equal to 0? Well, there's a couple of comments I'll make about that.
+
+00:56:48
+So in sort of the same way-- well, let's back up for a moment. We made an analogy earlier to the electromagnetic potential when I was describing gauge transformations. So the metric is a quantity that is subject to gauge transformations, but the Riemann curvature tensor-- when I linearize around a flat background, I found that the Riemann curvature tensor was invariant to those transformations. It's a little bit more complicated when I linearize around a curved background, but it still remains the case that I can never
+
+00:57:23
+make my curvature go away. It's reminiscent of the fact that I can choose a gauge that lets my electrostatic-- my electromagnetic potentials do any number of crazy-ass things. I must be getting tired because I'm swearing a little bit more. So I can let my electromagnetic potential do any sorts of crazy things, but my fields are the quantities that ultimately carry energy. They carry energy and momentum. So in the same way, the fact that I can get rid of the metric by going into a local Lorenz
+
+00:57:53
+frame, that shouldn't bother us too much. That's kind of like going into a frame where-- or it's going into a gauge where I just make my potentials go away or make my potentials become static or something like that. This is basically telling me that the energy must be something that is bound up in the curvature.  Furthermore, the fact that I can always make things look flat at a particular point-- I must use non-locality to actually pull out and understand the energy content.  This sort of means that in a very fundamental sense,
+
+00:58:51
+I am never going to be able to define, in a completely gauge-invariant way, the notion of energy in a gravitational wave at an event in spacetime. I may actually come up with gauges in which there is some notion of an energy like quantity that's defined at a particular point. It will not be gauge-invariant, though.  I am going to need to-- if I want to really rigorously define what the energy content gravitation wave is, it's going to have to be based on something where I'm averaging over a region that is large compared
+
+00:59:27
+to a wavelength, but small compared to the scales associated with my background.  So let me sketch for you how we can understand this. And this will conclude with the derivation of a second quantity that is often called the quadrupole formula.  Again turning to my electromagnetic analogy, the energy content of-- well, [INAUDIBLE] the content of the energy momentum carried by an electromagnetic wave is described by a pointing vector. And the pointing vector looks like the e field times the b field.
+
+01:00:16
+It is quadratic in the field. In a similar way, we are going to expect the gravitational wave energy content to be something that is going to be quadratic in a field. So to do this properly, we're going to need to think about how to go in the second order in our theory, so second order in perturbations around the background.  So what I'm going to do is imagine that my spacetime looks like some background plus some epsilon times h alpha beta. This h alpha beta is what we just spent the past hour or so computing.
+
+01:01:20
+And imagine that there is some additional term j alpha beta. This epsilon that I've introduced here is just an order counting parameter.  Its value is actually 1. OK? But what it does is it allows us to keep track of the order in perturbation theory to which I go. So if the gravitational waves are typically on the order of, say, 10 to the minus 22, here's my background curvature. These terms are all in the order of 1 or so. These are all in the order of 10 to the minus 22 or so. These are all in the order of 10 to the minus 44 or so.
+
+01:02:05
+What I want to do is run this through-- and let's just focus on vacuum spacetime for now. Let's run this through the vacuum Einstein equation.  So let's expand g alpha beta. Actually, let's not have too much crosstalk between indices. I'll call this g mu nu.  And I'm going to require this to be equal to vacuum, so I'll set that equal to 0. What I want to do is expand this guy.  That's a tremendous amount of work, but I'm going to sketch for you what the highlights of this look like.
+
+01:03:08
+So when I expand my Einstein tensor, I'm going to get one term.  That is basically just saying that my background spacetime is a vacuum solution.  I'm going to get a term that looks like-- I'll call it g1 alpha beta. And this is going to depend on my first-order perturbation in the background.  g1 is basically the delta g that I worked out in the first hour or so of this lecture. I will get another term that looks like the same g1, but in which my second-order term is coming along.
+
+01:04:26
+But I'm going to get an additional term that results from non-linear coupling of h to h.  I'll call that g2.  So I emphasize again, this is just my ordinary Einstein equation. This is basically telling me my background satisfies the-- my background is a vacuum solution. This is the linear wave operator on a curved background that we just worked out in the first hour or so of this lecture. This is that same linear operator, but now applied to the second-order perturbation. And this is something new.
+
+01:05:28
+It is very messy. It involves lots of terms that involve h hitting covariant derivatives of h, covariant derivatives of h hitting each other. I will post a paper by Richard Isaacson that steps through this in some detail. What we're going to now do is we require the Einstein equation to hold order by order. In other words, at every order in epsilon, this equation must work. So at order epsilon to the 0 or at order 1--  this is what I just said-- the background is a vacuum solution.  Groovy.
+
+01:06:36
+At order epsilon, this is my wave equation on my curved background.  At order epsilon squared, now something new happens.  Now, that is interesting. What we are seeing is that the terms which involve quadratic things with the linear perturbation, things that are quadratic in h are acting as the source to the wave equation that governs j.  Let's try to make some headway on this. Let's go back to our separation of length in timescales. So let's define delta j mu nu to be j mu nu minus what I get when I average
+
+01:09:00
+j mu nu on an intermediate length scale. So lambda-- I'll remind you that lambda and tau are sort of coming along for the ride here. This is my gw short scale.  l is my background long scale.  And so what I'm going to do is say, I'm going to take my j mu nu-- I don't really know too much about it quite yet. And I do know that by definition, my h only varies on the short scale. OK? So I'm going to take-- I'm going to do this averaging procedure here. Pardon me. That's an error.
+
+01:09:49
+And so my l is my intermediate averaging scale.  So I'm going to average things on the intermediate scale l here. And so this will be something that only varies on the short scale lambda. This, I will take out everything that varies in the short scale. This only varies on the long scale.  So this is interesting. OK? By now doing this, let's regroup my metric.  So this guy--  I'm going to first--  sorry, folks. Getting a little tired.  Here are all the terms that vary on the long scale.
+
+01:11:13
+And here are all the terms that vary on my short scale.  With this idea than I am now-- so it's kind of interesting. What we see is that there is a piece of the second-order perturbation that has kind of become a correction to the background. So when I take my perturbation theory to the next order, there's no reason-- so at linear order, we define the linear order perturbation as being only the bit that varies on the short scale. But there is no reason why it has to remain the case that it only varies on the short scale
+
+01:12:17
+when I go to the next order. And any bit that does, in fact, vary on the long scale, bearing in mind that the way we do our measurements-- we separate things and lengthen time scales-- it's going to look to us like a correction to the background. So with that in mind, let's revisit the second-order term in the Einstein equation.  So here is my second-order Einstein equation.  You should just assume that these also depend on the background. I'm not going to write that out explicitly.
+
+01:13:10
+What I would like to do now is-- let's apply this averaging to this equation. So the average of this guy equals the average of this guy. Does this get us anywhere? Well, it definitely gets us somewhere with this, because this is a linear operator. OK? So when I go and--  I should be a little bit careful there. A useful trick which I forgot to state-- my apologies-- and this trick is worked out in the paper by Isaacson that I'm going to post-- is that whenever you take the average of second derivatives
+
+01:14:10
+of various kinds of fields, it is equal to second derivatives of the average of that field plus corrections that scale as the square of the short length scale divided by the long length scale. So what that tells me is that at least up to these corrections, which the separation of length scales by default is assuming is a small number, I can take my averaging operator inside here.  I can't do that trick on the right-hand side. I've not written out what this equation actually looks like here.
+
+01:15:19
+It's a nonlinear operator, so it's going to be a lot messier. But this is something that's linear in j. And so as long as I bear in mind that I incur a small error by taking various-- by taking my averaging operation inside the differential operator, this is telling me that the wave equation-- sorry. My Einstein equation applied to this operator here is set by the quantity that I have there on the right-hand side.  Now, remember, my background is itself a vacuum solution.  Since my background is a vacuum solution,
+
+01:16:34
+I can rewrite this whole thing as the Einstein tensor on my background metric plus my average quadratic correction.  This is going to be equal to the average of that second-order piece. This is just the Einstein field equation with a strange source.  If you look at this-- let's make the following definition.  I'm going to define a stress energy tensor for gravitational waves as minus 1 over 8 pi g times the average of this operator.  What this is now telling me is that as my gravitational wave
+
+01:17:52
+propagates through spacetime, it carries, it generates a stress energy that changes the background in an amount that is quadratic in the wave's amplitude.  Now, to get the details of what that operator actually is, I have a formula or two in my notes that will be scanned and made available. I want to cut to the punchline of this. The derivation of this is given in a paper by Richard Isaacson that I will be posting to the course website.  So expand out this operator.  Place in this the transverse traceless field.
+
+01:18:59
+And what you find--  fill it with a transverse traceless field. That sort of simplifies a few things, and you get this remarkably simple result. The angle brackets, I'll remind you, they tell you that this quantity is only defined under the aegis of a particular averaging operation.  That aside, what we now have is a quantity that tells us about how gravitational waves carry energy and momentum away from their sources. This is known as the Isaacson stress energy tensor.  Let me comment, especially for students
+
+01:20:34
+who work on things related to gravitational waves-- you will encounter many different notions of how to compute the energy, things like energy and angular momentum and things like that that are carried from a radiating source of gravitational waves. There is wonderful discussion of this point in a textbook by Poisson and Will. It's just entitled Gravity, I believe. The Isaacson stress tensor has the virtue that it is-- it makes it very clear that the waves are-- so it's a tensor. It makes it very clear that it arises out
+
+01:21:10
+of quadratic derivatives of the wave field. And I really enjoy going through this derivation because you can see the way in which a term that is-- at least at the schematic level, you can see the way in which the second-order contribution to the Einstein tensor leads to a source that modifies your background spacetime. That's exactly what a stress energy tensor is supposed to do. For certain practical applications, it turns out to be a little bit hard to work with. And so you'll see this discussed in some detail in some
+
+01:21:45
+of the more advanced textbooks. I'm happy to discuss this with students who are interested. For our purposes, this is not of concern. Let me just conclude this lecture by evaluating this for the solution that we worked out. So let us imagine that we go into a nearly flat region where those covariant derivatives become simple.  And let's just compute one piece of the stress energy tensor. So let's look at the energy flux in a nearly flat region.  So what I'm going to compute is the 0,
+
+01:22:44
+0 piece of this which defines how power flows through spacetime.  So doing this in this region basically is going to look like the time derivative of my wave field contracted onto itself. Let's get the total amount of energy that is flowing through a large sphere by evaluating t0 0 integrated over a large sphere of radius r. And for my hij, I will plug in that quadrupole amplitude that I derived in the previous lecture.  Over dots denote d by dt.  So if you're interested in doing this integral yourself,
+
+01:24:11
+it's actually not that hard, and that's a pretty-- it's a salubrious exercise. Let's put it that way.  So I'll remind you that this projection tensor is built from--  built from the vectors that describe the direction of propagation. And a few useful tools to know about-- so should you choose to work this guy out, it's worth knowing that if I integrate ni nj over the sphere, this can be written in terms of just sines and cosines. These are basically direction sines-- or direction cosines.
+
+01:25:11
+I get a simple result that depends only on the value of the indices i and j.  If I integrate this over this sphere, I get 0. And any odd power of the ends multiplied together when integrated over the sphere will give me 0. And one more is necessary if you want to do this integral.  If you integrate four of these buggers multiplied together, you get this object totally symmetrized on the indices i, j, k, and l.  So throw it all together. Take the derivatives. Note that the only thing that depends on time
+
+01:26:20
+is that quadrupole moment. And what you wind up with is this remarkably simple result. Whoops.  This is a result that also is known as the quadrupole formula.  It's worth comparing this to the dipole formula you get in electrodynamics. So the dipole formula that describes the leading electromagnetic-- the leading power in electromagnetic radiation that comes off of a source looks like what you get when you multiply two derivatives of the dipole moment with each other. The leading radiation in gravity is quadripolar.
+
+01:27:27
+And so rather than being second derivatives, you have to take one more derivative out of this thing. There are three time derivatives of a quadrupole moment leading to this formula. So this result was actually originally derived by Albert Einstein. It's one of the first calculations that he did. He actually did it twice. He first derived something kind of like this in, I believe, 1916. And it was totally wrong. He just basically made a huge mistake. But then he did it more or less correctly in 1918.
+
+01:27:58
+So he got this right. And it was a small-- a small error. He was off by a factor of 2, which is a simple algebra mistake. It's actually really enjoyable to count up the number of minor errors that Einstein made in some of these works. It just makes you feel a little bit better about yourself. So anyway, Einstein got this essentially right, and then it was hugely controversial for quite a few decades after that. Essentially, going back to these conceptual issues with which I began this lecture, people just grappled with the idea of,
+
+01:28:29
+what does it mean for gravitational radiation to carry energy in the first place given that I can always go into a freely falling frame? It took a little while for those concepts to really solidify. Once they did, though, we were off to the races. And it's worth noting that if I take this formula and I apply it to a binary system-- I imagine I have two stars that are orbiting each other. I can compute the quadrupole moment and the time derivative of the quadrupole moment. I can compute the rate at which power is leaving these systems.
+
+01:28:59
+Now, a somewhat more complicated variant of this calculation-- well, let me back up. So you go ahead, and you do that. You compute this for two stars that are orbiting each other. You will do this on a future problem set. What you find is that gravitational radiation carries energy and angular momentum away from the system, and it causes them to fall towards one another, which causes their orbital frequency to evolve in a very predictable fashion. That law that arises to very good approximation
+
+01:29:26
+directly from this formula-- there are corrections that people have worked out over the years, but what you get just doing this quadrupole formula applied to two stars orbiting each other describes this chirp signal that I have on my hat to very good accuracy. And this is pretty much exactly what the LIDO detectors measure these days. They measure the evolution of systems that are evolving under the aegis of this formula. All right. So that is all we are going to say about gravitational radiation in 8.962 this term.
+
+01:30:00
+As we figure out the way things are going to proceed moving forward, I will make myself available to answer some questions about this. I do want to emphasize as I conclude this lecture that many of these topics are fairly advanced. I don't expect you to be familiar with them. But I hope you understood the punchline of this. And I expect you to be able to apply some of these formulas that arise at the end. And I will conclude this lecture here.
+

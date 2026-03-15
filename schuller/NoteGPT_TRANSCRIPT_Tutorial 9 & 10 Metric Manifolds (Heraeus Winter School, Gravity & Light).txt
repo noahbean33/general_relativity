@@ -1,0 +1,222 @@
+00:00:00
+foreign this program is being presented to you by the herreas international winter school on gravity and Light [Music] welcome back to the we areas International winter school and gravity and light today with our ninth problem sheet on Metric manifolds as always we start with the short true or false section let's begin The Leverage Vita connection is torsion free that's true since we all since we just look at torsion-free connections the living shivita connection is called metric compatible since it's satisfied
+
+00:00:51
+this equation this is not true since for um the compatibility condition means instead of the chi here a zero the zero vector connection is the unique affine connection that can be constructed from the data of a metric manifold this statement is true and we will see this in exercise 3 of this problem sheet gives rise to connection coefficient functions with gamma R A symmetries symmetric symmetry bracket BC equals to zero in any chart this is not true since this part of the connection coefficients
+
+00:01:35
+are not of tensorial character so maybe they vanish in one chart but surely not in any they live in shivita connection arises by requiring that the auto parallels are the curves of stationary length that's quite true and we also will see that or we already saw that in the lectures so in this question only answer one three and five are correct number B which statements about metrics on a d dimensional smooth manifold are correct the first question is a metric with signature DD is called a Romanian metric
+
+00:02:20
+this is not true since a Romanian metric has the signature d0 or 0d a Laurentian metric has signature 1 comma D minus one that's quite true or it could also be D minus 1 1. on a Laurentian manifold vectors X of TPM are called genome vectors if G of X comma x equals to zero that's exactly the definition of general vectors therefore the statement is right a metric provides an inner product on each tangent space TPM that is not correct since foreign product we need the positive Define it the positive definiteness
+
+00:03:11
+and this is not given for any kind of signature it's true for Romanian metric but it's not true for any other an inverse metric fed with a co-vector yields a real number that's not true since an inverse metric eats two covectors and if you just fat one in you have one slab left with where you can fit in fed in a co-vector so it's a one zero tensor field which statements about geodesics and the length of a curve are correct a Romanian metric gives rise to a well-defined notion of length of a curve
+
+00:03:52
+that's true the length of a curve is obviously not invariant under a re-parametrization of this curve this statement is not true since he has written or not under some circumstances circumstances the curve length is invariant under re-parameterization we will see this later on so this statement is incorrect geodesic is a curve of minimal length that's not true a geodesic is a curve of stationary length the condition for curve to be of stationary length is that it be a solution of the Euler LaGrange equations
+
+00:04:36
+for the lagration L of x equals to square root of G of X comma X that's quite true we already see this in the lectures a geodesic on the metric manifold satisfies the autoparel equation therefore some words have to be said geodesics describes the shortest curve the shortest curves between two points and the autoparel describe the straightest curves between two points so these two Notions are in general assumed disjoint but we can see that if we choose the liver chivita connection these two Notions are the same
+
+00:05:24
+we continue with exercise 2. recognizing and dealing with different signatures first there's a statement written other than one one tensors zero two tensors do not have eigenvalues but signature and signature is the topic of this exercise let G be a symmetric CO2 tensor over some Vector space question you are given the following four sets of two null vectors in the vector space the surface of a double cone centered in the region a point in the region straight line through the origin in the plane through the region of the vector
+
+00:06:04
+space we are now asked to determine the possible signatures of the respective G in each of the four cases so since we are in a vector space I firstly will introduce a coordinate system I call the axis X1 X2 and X3 now now we have to think about what is the equation for the cone surface the equation for the cone surface is X1 squared plus X2 squared plus X3 squared equal to 0. minus I'm sorry minus X3 squared equal to 0. this can be fulfilled by G of x comma X in this in the following signature sense
+
+00:07:08
+we first take plus plus minus which yields exactly that but it also could be that we take minus minus plus which yields the same equation but but with different signs here minus here minus here a plus but since this is zero we can just multiply with -1 and get the same result so this is the signature for case a K speed in case b we just see that the general vectors are the point in the origin what does that mean that does mean that we only want T of x x equals to 0 for the null vector but therefore it should not be possible
+
+00:07:58
+that we can add some Co some squares of vectors up some squares of components of vectors up to zero yeah this is possible this is not possible if we just have plus plus then we never will end with a zero or minus minus minus without taking the null vector so this is the signature for the scan for this tape can't number c we see here that the straight line through the origin should be the set of all Channel vectors that would mean that we need the signature plus plus null or minus minus 9. since we just
+
+00:08:50
+want to plug in for this three everything we want and it doesn't count but the first the other two entries should not be able to add up to zero this is exactly given this is by this signature in case steam we see the plane the argument is similar but a little bit different to the KC in this case we just have that is let me think about the right correct is zero 0 Plus or 0 0 minus I repeat the argument once again we want we should be able to plug in for X1 and X2 everything we like to and it doesn't matter but for x3 yeah it
+
+00:09:43
+never could up it never could add add up to zero because it's just one component so in the end these are all the possible signatures in the next question we are asked for each signature you found indicate the set of vectors of positive length in the drawings therefore we have two look at each signature first we look at the minus minus plus signature of the cone I indicated by that and all positive lengths are on the outside of the cone as you can easily calculate for this signature type we see that all positive vectors lie in
+
+00:10:36
+the cone this is interesting for general relativity later on for plus plus or minus minus minus only the plus plus have some positive length but then it's all around the point without the point for minus minus minus we just have negative length in the plane the same argument holds for the plus plus not for the plane I'm sorry for the straight line everything outside for the plus plus zero signature and for the minus minus signature we don't have any positive length the same argument holds again for the plane where
+
+00:11:22
+we have everything outside for the signature null null Plus or positive length and for the signature of nylon minus there is no positive length okay therefore exercise 2 is complete we continue with exercise three living shivita connection for Vanishing tensor torsion the living shivita connection is already uniquely determined by the requirement of g equals to zero let's start suppose we have a torsion free and Metric compatible connection that means Vanishing Rank 3 tensor fields T is the torsion which we set on zero
+
+00:12:06
+and an apple of T is equal to zero where G is a zero two tensor Fields so it eats two vectors but although the covariant derivative have has here an open slot where you have to Fad in a vector in this sense this object is a zero three tensor field first we are asked to recall what T equals zero implies for the collection coefficient functions with respect to a chart I first write down the definition of the component functions t a b c is equal to one half not one half gamma ABC minus gamma a CP equals zero
+
+00:12:54
+if this is the case we see that all um anti-symmetric components are already zero we also can write down gamma ABC equals to gamma a PC plus gamma a b c but since this is the definition of the torsion it only yields that got that we will need later on question two expand in terms in terms of the connection coefficient functions here we are asked to do the covarent derivative often 0 to tensorflow G with respect to the basis vectors of the vector space we just have to plug in the definition which is Del after Del x a
+
+00:13:56
+of GBC minus gamma a the last slot here we need note index p G and C minus gamma M take again the same summon c a t b n this is just the definition for later on I will now introduce a short notion we Define t p c comma a F the star and I will use it from now on since we have that the covalent derivative of G is equal to zero we already know that this equation yields zero expand the second plug in the definition again still after Del x b and already introduced the short notion so we'll use it it's g c a comma
+
+00:15:05
+B minus gamma n p c g and a minus gamma n a b g c m now expand the last term it's all the same t a b comma C equals to gamma index summation index n a c g and B minus gamma n c b g a m equals to zero that's it question three by adding n or subtracting one two and three in a clever way we obtain gamma ABC equals to one half of T inverse am from Del of Del x p g m c plus Del after Del x c g m b minus Del after Del XM gbz and conclude that the conditions an upload of g equals to zero and T of
+
+00:16:28
+T equals to zero uniquely uniquely determine the connection coefficient function in terms of the metric let's start we add equation one to equation two and subtract from their equation three and we know all this is zero then all these three equations are zero first just plug in the definitions it's g b c comma a minus gamma n b a g m c minus gamma n c a t B m plus g c a comma B minus gamma n c b g n a minus gamma n a b g c n minus the last equation g a b comma C plus gamma n a c g n B minus plus
+
+00:17:49
+comma n b c g a n equals to zero no First Look whether there are some gamma symbols vanish okay we have to look carefully we look for gamma n b a NBA I reckon here it's AP but from the first sure from the first um from the first question we already know that gamma m b a is equals to gamma N A B therefore we just can switch these two slots and we also know that the metric is symmetric so we can change n to C the places the right one and we can also change this tool and we see that they too add up to -2
+
+00:18:54
+so this we will just keep in mind we look for the next coefficients we see gamma NCH gbn where we found this again ah here gamma n a c g and B we can also exchange here the NB and the to b n and the AC to c a ah we see this is two times the same term but with different sign so they cancel each other next term we look at gamma n c b g and a and we also found it here gamma MPC can be switched t a n r nice same argument as before so we see this is given twice and only this three other components are still
+
+00:19:43
+there so this is equal to -2 gamma n a b g c n plus g b c comma a plus g c a comma B minus g a b comma C so yeah in order to get to this equation we have to bring this on the other side and multiply with the inverse metric so make plus 2 gamma n a b g c n and multiply all both sides with G inverse C m now here we find so here we find gamma n a b ch sorry g c n I forgot the two G inverse cm equals to G inverse cm times g b c comma a plus g c a comma B minus g a b comma C okay we can use here the Delta criteria
+
+00:21:23
+that GCM times G inverse cm is Delta NM therefore we can just rename this index n to m and we also will divide with respect to two therefore we see gamma m a b is equal to one half T inverse of c m g b c comma a plus t c a comma B minus g a b comma C in this equation we just have now to find yeah we we just have to rename all indices in the right manner since only the c Index is contracted we only can rename this as a dummy index on the one hand side but if we want to rename one of the other index we have to do it
+
+00:22:28
+on both sides of the equation so first of all we call m a M goes to a but therefore we first have to call a another way we call A to B but therefore we have to call B to C but therefore we have to call the dummy index C to m this is what has to be done let's do that that is equal to gamma okay I said M goes to a I say a goes to B I say B goes to C is equal to one half G inverse of C goes to m goes to a yeah that's right G of B goes to C C goes to m he goes to B Plus C goes g of M A goes to b b goes to C minus G of a
+
+00:23:31
+goes to B goes to C C goes to m so and if we look it up this R exactly the expression which are written above therefore this problem is finished and we see that from the condition that we have a torsion free a fine connection and we also have the compatibility criteria that um the covarian derivative of G with respect to any Vector field 0 yields directly to the connection coefficients of the Liberty connection we continue with exercise 4 on Metric manifolds massaging the links functional modifications of the lengths functional
+
+00:24:22
+that simplify calculations but do not change results question one let gamma be a smooth curve from 0 1 to M on a smooth manifold Moa now consider a second curve gamma tilde going from 0 to 1 going from 0 1 to M defined by gamatilla of Lambda defined with respect to gamma of Sigma of Lambda where Sigma is a map from 0 1 to 0 1. which is increasing in by objective and smooth we should now show that the length of both curves is the same therefore we start we start with the left hand side and calculate to the
+
+00:25:10
+right hand side plugin the definition first l of gamma tilde is equal to the integral from the limits zero to one D Lambda square root of g a b evaluated and a point gamma tilde of Lambda times gamma tilde Dot with respect to the ace component of Lambda times gamma tilde dot b square root Clause bracket close Lambda missing so now plug in the definition of gamma tilde and plug in the definition I will remind you on that that gamma tilde dot the eighth component is just defined as X after gamma tilde
+
+00:26:29
+the eighth component Prime evaluated at Lambda this is just the definition of the component functions of a vector so integral from 1 to 0 and from zero to one d Lambda and here is the Lambda again is equal to the square root of g a b of gamma of Sigma of Lambda bracket bracket bracket times X of gamma tildew about L know that gamma tilde is just gamma after sigma so gamma after sigma the eighth component derivative evaluated at Lambda times the same guy again piece component derivative evaluated at
+
+00:27:28
+Lambda square root finished so in the next step we first we'll use here the chain rule once again the integral from 0 to 1 the Lambda square root of g a b of gamma of Sigma of Lambda bracket bracket bracket times General Auto derivative X often command eighth component Prime evaluated at Sigma Lambda times Sigma dot Lambda in a derivative times X after gamma B component derived the derivative taken evaluated at Sigma of Lambda times inner derivative Sigma dot Lambda square root close now we see that this is two times in
+
+00:28:35
+here so we'll shift it out of the square root and the square curves with the square root and we see that the gamma depends on the G depends on gamma after sigma and over this 10 terms as well so one more step is needed here we see that we have to change our parameter to a substitution so called we say we when you introduce a gamma head which is the defined by Sigma of Lambda but to transform the sky correctly we need to calculate D of Lambda head with respect to Lambda which is equal which is equal to
+
+00:29:22
+Sigma dot Lambda ha as I mentioned we plug this guy we bring this guy in front of here and if we write this equation somehow like that we see that we already have changed this guy and now we also plug in for all Sigma of Lambda just Lambda head this guy this guy and this guy I will write it down and let in the first place the limits open and explain what I do there in a second that's the square root of g a b of Lambda hat sorry truly not right because we have to evaluate at the point of the manifold
+
+00:30:11
+it's gamma of Lambda head times X after gamma eighth component Prime Lambda hat times X of gamma P component derived taking the derivative along the head ah okay I already say that I do not talk about the limits yet but since we know that the Lambda function is increasing by objective we know that the limits stay the same so now last step we already know that this just a longer notation of gamma eighth component derived of Lambda head this the same for better Alpha here exactly the same is written as here just
+
+00:31:11
+with Lambda heads instead of lambdas and with Gammas instead of gamma tildes therefore what is written here is l of gamma therefore we have shown that the length is invariant under increasing protective re-parametrization two show that the Euler lacrosse equations for lagration T have precisely the same Solutions as the Euler laboratory equations for the lagrangian L which is defined as the square root of T if of the later one only selects those solutions that satisfy the condition T equals to 1 on their parameterization
+
+00:32:04
+okay we will just calculate this I think you all know how the Euler LaGrange equations look like let's find this DL after d q dot eighth component after you've taken this you take the derivative with respect to the parameterization minus with respect to the parameter I'm sorry minus D of L after d q a equals to zero okay now just plug in the definition of square root of 3 for l this is equal to D of square root of t d q dot m Dot minus d square root of t q a equals to zero we now have to do two things we can
+
+00:33:14
+first do apply here the chain rule in both parts that means we just do the derivative of Del of square root of t and you all know how this works out it's just one over two of the square root of t of D of t d q dot a dot minus the same guy appears here one over two square root of t d t with respect to d q a huh and since we know that t should be one all along the parametrization we can put we can pull it out here because we just take the derivative with respect to the parameter aha so what is 50 here again
+
+00:34:21
+it's one over two of the square root of t d t d q dot a DOT minus 1 over 2 square root of t d t d q a equals to zero yeah just cancel this two guys and what is written there is again the Euler Lagos equations 14. you can ask why the hell should we do that it's very simple because we see that in the length function we have square root here and we now show that the Euler garage equations do not change whether we have a square root or not that simplifies simplifies calculations we continue with exercise five a
+
+00:35:17
+practical way to quickly determine Christopher symbols in a concrete case rederiving the Euler Lagos equations is quicker than using the general formula we found for the Christopher symbols in exercise 3 of this exercise sheet question derive the geodesic equation for the two-dimensional round speed sphere of radius R whose metric and some chart is given by this expression let us shortly remember what the geodesic equation is it was gamma dot dot eighth component Plus big gamma a b c gamma dot P comma dot C equals to zero
+
+00:36:10
+I already write here the Gammas and these are the Gammas of the chivita connections since we decided that the geodesic should also be the auto parallels okay we keep reading and the metric is given by this expression and we should derive all this via unconvenient Euler Lagos equation in order and we lighten the notation with these two guys what was all this about we just should write down the Euler regards equations we we had it with respect to some length function and L it has this form should use the same LS before
+
+00:37:04
+and I should keep keep my notation straight so I should use again the Gammas gamma dot a and Gamma a I have to explain some things we can now instead of using the length function over the square root was squared in there although the length function without the square root what we derived in the exercise before so l in our case is just g a B gamma dot a gamma dot b now I say one once again what gamma a is and Gamma is just defined gamma if Lambda is just defined as x a after gamma of Lambda so in our case it's just Theta of Lambda
+
+00:37:54
+and Phi of Lambda for one for H1 and a is two good now write down the explicit form of the L in our case l equals to g a b and this guys so we see that it just appear if the two indices are the same because it's diagonal it's r squared time Theta Dot squared Plus r squared times C sine squared of theta times Phi dot Square this is the guy we have to calculate the only LaGrange equations four now we do that we first do the first area with the derivative with respect to the first entry in the first entry was Theta
+
+00:38:59
+C Theta Dot minus t l after d Theta deriving the sky we see in the first the first part gives two times r squared times Theta Dot the second term gives nothing in here and here we see we have to derive this guy it's 2 times r squared times sine of theta times cosine of theta times Phi dot squared I forgot here the dot here it is so I have to take the derivative here again so it's this is all equal to zero so let's see it's 2 times r squared times Theta double dot minus 2 r squared sine
+
+00:39:57
+Theta cosine Zeta Phi dot Square now I can divide through 2 and r squared and have the first eulogrash equation and I will write it down Theta dot dot minus 2 times r squared I should remember what I divide through sine of theta cosine of theta Phi dot Square equal to 0. now I'll do the same thing for this second equation it's D L after d Phi Dot dot minus t l d Phi cut let's calculate that the sky again we see that only the second term contributes here are two times two times r squared sine squared of
+
+00:41:10
+theta times Phi dot Square Phi dot with the derivative did the derivative Dot minus second term doesn't appear anywhere so we do here the derivative with respect to the parameter and we see now Theta M Phi depends on this so we have to derive both we need the product rule it's 2 times r squared bracket here for the order derivative 2 times sine of Theta times cosine of theta times times Theta Dot times Phi dot plus the other term sine squared of theta times Phi dot dot I also can divide this
+
+00:42:12
+to with respect to 2 r squared and bring it in this in the same form as this equation therefore we have Phi double dot plus yes 2 times the 2 is still there sine through sine squared is 1 over sine cosine through sine is coating the cotangent quotations of theta times Theta dot times Phi Dot equals to zero since I already said yeah and I always divide through not buy okay just joking um since I already said that I want that the geodesics should also be the straightest curse we now can read off the gamma symbols of
+
+00:43:16
+the Liberty meter connection right from these two equations I will write down the Auto parallel equation what I always use in the same sense as the straightest curve it's just a notion and write it down again to read up more easily comma dot P gamma dot C equals to zero therefore I can see from the first equation that gamma one the a over here BC we can look what BCS are it a two two since only Phi dot appears in this multiplied we have this is minus sine of theta cosine of theta that is the first Christopher symbol in
+
+00:44:14
+this chart now we just look at the second equation and we see that from there we can read off gamma 2 then here's a 2. of r 1 2 very good is equal to 2 times code tangent of theta and I know we did a small mistake since we know that come on from the torsion free we know that gamma ABC is gamma ACP we have to distribute the tool over the two gamma symbols gamma 2 1 2 and Gamma 2 2 1. therefore I already answered the next question yeah we finished to calculate the Christopher symbols for the round sphere
+
+00:45:11
+continue with exercise 3 on Metric manifolds six properties of the Riemann Christopher letter various algebraic symmetries that a plane Riemann curvature does not feature question show that the chart induced basis Fields act on the coefficient functions as the following in order to show that we start with the following expression G inverse of a b times g b c yeah and we will calculate that we will see that this is the same as Del a c now we can do the derivative with respect to this guys on both sides
+
+00:46:03
+so to d x Del after Del x t and here also Del after Del x t since we know that the Delta function is constant we know the left hand side is zero it's not the Delta function since we know that this guy is a constant with respect to the vector field okay on the right hand side we need the product rule therefore we do Del after Del x d inverse of a b times g b c Plus T inverse of a b tell after Del x t of GBC now we're almost there we just bring this guy on the other side or this guy better
+
+00:47:08
+and multiply with the inverse of gbz the inverse of tbz since we all already use B we call it t c e for example yes and from now on if I have the G with index up it's always G inverse it's just a short notation and it yeah I will surely forget it anyway so let's do that calculate this then we have um Del after Del x t a b times g b c g c e equals to minus g a b g c d no not tcd tce and Del after Del x d g b c so we see here again a Delta so this is Delta be so we just can rename B to E
+
+00:48:24
+with my Matrix pen it's very easy to do that yes and if we compare the indices we see that these two guys are the same the second question is use normal coordinates to find an expression for the Riemann Christopher tensor which is given by ribzd is defined by g-a-k-r-kbzd at a given point p in terms of the metric g a b and its first and second derivatives at that very point yeah what does normal coordinates mean it's a very good notion because in normal coordinates there exists a point for which the gamma symbols vanish
+
+00:49:16
+and this we will use heavily in this exercise so before I start calculating I will Define one more notion just for shorthand side it's if you do the second derivative of g a b x c d x d then I will denote that by g a b comma c d this I will use heavily okay let's start r a b c d is equal to t a k r k b c d plug in the definition the Riemann curvature that was given by one half that was given by I'm confused I'm sorry Del after Del XC of gamma A P D minus Del after Del x t tell after Del x t
+
+00:50:41
+of gamma a b c plus gamma gamma minus gamma gamma with the indices distributed in the right way but as I already explained we are in normal coordinates so the Gammas are zero therefore I can cross them out what they also can obtain here is that these two expressions are symmetrical are the same just with c and d exchanged this I will denote by minus C t now in the next step I just plug in the Riemann Christopher symbol at the Christopher symbols which we're defined by one half the G A K stays in front from here D
+
+00:51:40
+after d x c big bracket off now the definition it was something like gkm of Del after Del X P G and D would shortly write down by g m d comma B Plus g b m comma d minus g b d comma m bracket close and the same term with c and sorry minus C and T exchanged okay what I can what I need to do now is to apply the chain rule I have the product rule at these two guys that's one half G A K of I didn't denote the derivative short-handed g k m c times g m d b plus g b m d minus g b d m first part of the product rule
+
+00:53:09
+Plus g k m times g m d comma b c plus g b m comma d c minus g b d comma m c and all the same stuff with c and d exchanged in the next step I will use this expression which we calculate in the first question so plug in this definition g a k times minus I bring it out a little bit a bit more space minus to you I have to see it is okay I need a new unices l because it's a summoned um times G m you I need a new symbol and call it n of d after DX what is written above G comma C and in the G the two indices are summed
+
+00:54:51
+over l n I think I have done it right so I can go further on let me see a short second yes that's right I write all the other terms as well plus g b m d minus g b d m plus g k m g m d comma b c plus g b m comma d c minus g b t comma m c close bracket minus c d exchanged now I can use again the Delta here G A K gkl is Delta a l which means that it can just call the L in here a this symbol still stands in front it's minus one half t k l g a n c of all this bracket terms blah blah blah minus CD I just do not like to write it
+
+00:56:22
+again so now see whether we can see there somewhere the Christopher symbols again and yeah it's possible actually as one can of obtain let me think about yes exactly this one the definition of the Christopher symbols that is this guy TKO takes the role of tkm Chicago and all these guys in here is it right yes it is are together I forgot the bracket here see are together the Christopher symbol again so since I know this is already zero the whole term vanished only this term over list and in here the same happens
+
+00:57:16
+with CD Exchange though the first term of disposed terms in CD Exchange vanish as well and just this three guys overlifters okay I'll write it down again it's minus one half t a k times Chi in this is wrong G A K times J K times tkm g m d p c plus G b m DC minus t b d m c that's right and now I take the minus CD part means one half G A K times minus minus Capital plus g a k t a k m t m c b d plus t b m c d I need a bracket here otherwise the signs are wrong here a comma minus g b c comma m d now a really
+
+00:58:57
+right all also the CD combinations what I see here and I forgot the Tak here I forgot the tkm term over here again I'm sorry ah I usually need to hear a bracket and delete this guy so that's right and here has to be a minus sign as well okay now I look closely and I see that this term when is with this term and only this this this this term overlap and I have here also again a Delta Delta am so I call all M's a it's minus a half t a d b c minus g b d a c minus g a c b d Plus g b c
+
+01:00:11
+a d and this this is the result we like to arrive and I forgot the bracket over here and I think I've done a small mistake in the fourth line and it was this one I pulled out the minus sign here is a plus sign plus okay I have a milestone in front of all it's still okay here I made the mistake I pulled out a minus sign over here sorry I'm really sorry for confusing you for the sign mistake here has to be written a minus since I plugged in the definition of this guy what I have calculated above
+
+01:01:17
+your minus coming in here but pull it out but then I get another minus over here okay just go through see here's a plus then all minus are wrong so how can I do it in the best way fix it I think I kill this minus and this minus and yep now the chop is done correctly yeah sorry for confusing you but as you see this is just in calculation with indices you need to get used to but it's not difficult it's just a matter of concentration therefore this question is answered and we go on to the next we continue with
+
+01:02:08
+the last exercise and we are now able to show a normal coordinates that air ABCD is equals to minus r bacd so we Now show some Riemann Christopher intensity tensor properties we start definition or what we calculate was that our ABCD is one half of g a d p c minus g b d a c minus t a c b d Plus g b c a t what we are looking for is that if we exchange all a B's down here to ba we want to find this index combination just with a minus sign I write it below so we want to b d comma a c here we want to have a
+
+01:03:29
+T comma b c and here we need a b c comma a d and then the last term we need a c b t yeah let's look it up ah acpd here with a minus sign perfect pcad ah here minus minus plus perfect a d b c we found over here pdac we found over here so this is minus r b a c d very simple actually go to the next question we now show that our ABCD is equal to rcdap we write out again what you calculate two questions before it's one half g a d b c minus g b d a c minus g a c b d Plus g b c a t when we are looking for now is if we
+
+01:04:45
+exchange a B to C D okay write it down every a is getting in C every D is cutting a b every B is cutting a c every C is getting at a no I've done a mistake and here because B is going to D I'm sorry same again B goes to d d goes sorry I just want to write down the index combination d b c a and here's c a d b and here it is d a c b aha to be found this in excrimination again here it's in this in this round we have to do one more step this is we know that the G is symmetric that means a d is the same as
+
+01:05:47
+d a and what we also know is since we derive two times in the same coordinate system the Schwartz rule holds so I write it down I just rewrite g d a comma c b ah it's this guy we are looking for with the right sign minus here again just the Schwartz through Chi t p comma C A times here again just the Schwartz Rule and the symmetry of the metric c a d b plus and the last term I forgot about this guy here which goes with this guy in the same assign plus right down here chin c b comma d a this is exactly the index combination
+
+01:06:52
+we're looking for sorry for crossing this line This is equal to r c d a b now we're coming to the last property we should show today we like to show that r a b c d is equal to zero okay what do we have to do now we have first to plug in the definition of the anti-symmetrized bracket the anterior symmeterized bracket is defined as the following it's 1 over 3 factorial where three is the number of indices in this bracket of all different combinations where if we change one index with another we always
+
+01:07:49
+pick up a minus sum R A B C D minus r a b d c Plus r a c d b minus r a c b d Plus r a t b c minus r a d c p just checking whether I've done a mistake or not ABCD is right one exchanged in C is a minus the exchanged C with B pick one more minus plus again here exchange c a b and t minus perfect plus I exchanged D with D Pick A minus again A Plus again perfect good for the need noun is both rules from here and here together that means I know that this is anti-symmetric if I exchange in the first two
+
+01:09:19
+indices and I know if I exchange pairs of indices in this fashion it's symmetric in this sense I also can exchange the last pair of indices get a minus exchange this pairs of any season this way exchange here cusd pick up a minus do it again in this direction and pick up a minus at all so let's see whether there are things like that and it is r a b c d goes with in this fashion I think it's this one it this one I'm sorry last guess I guess everything but now I'm quite sure this one it's very easy
+
+01:10:12
+because I just exchanged DNC and pick up a minus again I'm sorry I'm running out of concentration it's r a b c d this both guys racdb yeah now I have the I for it it's again r a c d b and this guy is to the same trick adpc a DCP perfect as you see playing with indices is nice it is funny and you get tired so if you want to get to sleep do that okay just kidding okay we now plug in the different the result from the second question what was that r a b c d was a half but I get it in each term
+
+01:11:04
+so it's one over six of she a d b c minus g b d a c minus cheat a c b d plus g b c a d that was the first one the second one R acdb okay I know f g minus G minus G Plus G now distribute the indices in the right fashion a stays a that means a comma a a aim and C takes the role C takes the role of B so C C and C um takes the role of C so d the d d and B takes the role of d so B B b as you see normally it's enough to do it for three and uses but if you do it for all four you really can check
+
+01:12:49
+whether you have done a mistake or not and it's really really really important to check after every step that the index is Right otherwise you get nice results which are wrong okay adcp we have to CR okay I'll write down the index game again minus G comma minus G comma plus G comma a stays a we already had that a a d goes to B and this guy d d team d C goes to C on that's easy [Music] and B goes to D B goes to d d I've done on this take B goes to the anode I do not have the number so you're just right
+
+01:14:01
+D again b d goes to b b d goes to b b and here again because to B so close the bracket and check how this terms cancel I firstly see that I have done a mistake over here because I see the terms do not cancel each other and if you follow me and see that I'm not the best calculator you see that as an r r adbc have a major r a d PC I want your second ago and I do the same mistakes it's yeah you have to be concentrated okay then I have to distribute the indices again okay it's G okay a stays aim we had this already a a
+
+01:15:13
+a a B goes to D d B goes C goes to B B [Music] and d goes to C C see see and C well done so check a second time Tac DB ah and t a c b d ah we know that that's because of the Schwartz rule it's also GDB so this two terms cancel next term no my handwriting was very bad DC a b where is it it's dcab it's over here CT exchange but okay since the metric is symmetric and we can do all the steps again and we see it's zero all together what did we learn we learn that we if we exchange the
+
+01:16:45
+first and the second slot in the rbcd we pick up a minus sign if they exchange the third and the fourth slot we also got the minus sign if we exchange pairs that means a b with TD what we have done here we still have a plus sign and the last thing what we learned is that R A of the anti-symmetric part of b z d is zero therefore the tutorial is finished and we see us the next one foreign
+

@@ -1,0 +1,321 @@
+00:00:00
+[SQUEAKING] [RUSTLING] [CLICKING]  SCOTT HUGHES: So in the lectures I'm going to record today, we're going to conclude cosmology. And then we're going to begin talking about a another system in which we saw the Einstein field equations using asymmetry. So this is one where we will again consider systems that are spherically symmetric but we're going to consider them to be compact. In other words, things that are sort of, rather than filling the whole universe, the spacetime that arises from a source that's
+
+00:00:35
+localized in some particular region in space. So let me just do a quick recap of what we did in the previous lecture that I recorded. So by arguing solely from the basis of how to make a spacetime that is as symmetric as possible in space but has a time asymmetry, so the past and the future look different, we came up with the Robertson-Walker metric, which I will call the RW metric, which has the form I've written there on the top one line. There were actually several forms for this. I've actually written down two variants of it on the board
+
+00:01:13
+here. Key thing which I want to highlight is that there is, in the way I've written it on the first line, there's a hidden scale in there, r zero, which you can think of as, essentially, setting an overall length scale to everything that could be measured. There is a parameter, either k or kappa. k is either minus 1, 0, or 1. Kappa is just k with a factor of that length scale squared thrown in there. We define the overall scale factor to be-- it's a number. And we define it so that its value is 1 right now.
+
+00:01:53
+And then everything is scaled to the way distances look at the present time. A second form of that-- excuse me-- which is essentially the change of variables is you change your radial coordinates to this parameter chi. And depending on the value of k, what you find then is that the relationship between the radius r and the coordinate chi, if k equals 1, you have what we call a closed universe. And the radius is equal to the sign of the parameter chi. If you have an open universe, k equals minus 1,
+
+00:02:37
+then the radius is the sinh of that parameter chi. And for a flat universe, k equals 0, they are simply 1 is just the other modulo, a choice of units with the R of 0 there. All this is just geometry. OK. So when you write this down, you are agnostic about the form of a and you have no information about the value of k. So to get more insight into what's going on, you need to couple this to your source. And so we take these things. And using the Einstein field equations, you equate these to a perfect fluid stress energy tensor.
+
+00:03:19
+What pops out of that are a pair of equations that arise in the Einstein field equations. I call these F1 and F2. These are the two Friedmann equations. F1 tells me about the velocity associated with that expansion premise. There's an a dot divided by a squared. We call that the Hubble parameter, h of a squared. And it's related to the density of the source of your universe as well as this kappa term. OK. And as we saw last time, we can get some information about kappa from this equation.
+
+00:03:52
+The second Friedmann equation relates the acceleration of this expansion term, a double dot-- dot, by the way, d by dy. A double dot divided by a is simply related to a quantity that is the density plus 3 times the pressure of this perfect fluid that makes up our universe. We also find by requiring that local energy conservation be held, in other words that your stress energy tensor be divergence free, we have a constraint that relates the amount of energy-- the rate of change of energy in a fiducial volume--
+
+00:04:24
+to the negative pressure times the rate of change of that fiducial volume. And this, as I discussed in the last lecture, is essentially nothing more than the first law of thermodynamics. It's written up in fancy language appropriate to a cosmological spacetime. As we move forward, we find it useful to make a couple of definitions. So if you divide the Hubble parameter squared by Newton's gravitational constant, that's got the dimensions of density. And so we're going to define a critical density to be 3h
+
+00:04:56
+squared over 8 pi g. And we're going to define density parameters, omega, as the actual physical density is normalized to that critical density. And when you do this, you find that the critical-- the first Friedmann equation can be written as omega-- oh, that's a typo-- omega plus omega curvature equals 1 where omega curvature-- pardon the typo here. Omega curvature is not actually related to identity but it sort of plays one in this equation. It is just a parameter that has the proper dimensions
+
+00:05:38
+to do what is necessary to fit this equation. And it only depends on what the curvature parameter is. So remember that this kappa is essentially minus 1, 0, or 1 module of factor of my overall scale. So this is either a positive number, 0, or a negative number. All right. So let's carry things forward from here. Mute my computer so I'm not distracted by things coming in.  We now have everything we need using this framework to build a universe. Let's write down the recipe to build a universe,
+
+00:06:21
+or I should say to build a model of the universe.  So first thing you do is pick your spatial curvature.  So pick the parameter k to be minus 1, 0, or 1.  Pick a mixture of species that contribute to the energy density budget of your model universe. So what you would say is that the total density of things in your universe is a sum over whatever mixture of stuff is in your universe.  You will find it helpful to specify an equation of state for each species. Cosmologists typically choose equation of state
+
+00:07:44
+that has the following form.  OK. So you require your species-- if you follow this model that most cosmologists use, each species will have a pressure that is linear in the density.  If you do choose that form, then when you enforce local conservation of energy, what you will then find is that for every one of your species, there is a simple relationship. There's a simple differential equation that governs how that species evolves as the scale factor changes. This can be immediately integrated up
+
+00:09:03
+to find that the amount of, at some particular moment, the density of species i depends on how it looks. So 0 again denotes now. It is simply proportional to some power of the scale factor where the power that enters here can be simply calculated given that equation of state parameter. Once you have these things together, you're ready to roll. You've got your Friedmann equations. You've got all the constraints and information you need to dig into these equations. Sit down, make your models, have a party.
+
+00:09:49
+Now what we really want to do-- OK. We are physicists. And our goal in doing these models is to come up with some kind of a description of the universe and compare it with our data so that we can see what is the nature of the universe that we actually live in. OK. So what is of interest to us is how does varying all these different terms change-- well, we're going to talk about various observables. But really, if you think about this model, how does it change the evolution of the scale factor?
+
+00:10:35
+Everything is bound up in that. That is the key thing. OK. So if I can make a mathematical model that describes a universe with all these various different kinds of ingredients, yeah, I can sit down and make-- if I make a really complicated thing, I probably can't do this analytically so that's fine. I will make a differential equation integrator that solves all these coupled differential equations. And I will then make predictions for how AFT evolves depending upon what the different mixtures of species are,
+
+00:11:12
+what the curvature term is equal to, all those together, and make my model. But my goal as a physicist is then to compare this to data. And so what I need to do is to come up with some kind of a way this will then be useful. We then need some kind of an observational surrogate for a of t. What I would like to be able to do is say, great, model A predicts the following evolution of the scale factor. Model B predicts this evolution of the scale factor. Can I look at the universe and deduce whether we are closer to model A or closer to Model B?
+
+00:12:04
+And in order to do that, I need to know how do I measure a of t. And as we're going to see, this really boils down to two things. I need to be able to deduce if I look at some event in the universe, if I look at something, I want to know what scale factor to associate with that. I need to measure a. And I need to know what t to label that a with. So this kind of sounds like I'm reading from the journal of duh. But if I want to do this, what it basically boils down to is I need to know how to associate an a with things that I measure
+
+00:12:41
+and how to associate the t with the things that I measure. That's what we're going to talk about today. What are the actual observational surrogates, the ways in which we can go out, point telescopes and other instruments at things in the sky, and deduce what a of t is for the kind of events, the kind of things that we are going to measure?  Let's talk about how I can measure the scale factor first. OK. So let's ignore the fact there's a t on here. How can I measure a? We saw a hint of this in the previous lecture
+
+00:13:16
+that I recorded. So recall-- pardon me. I've got a bit of extra junk here in my notes. Recall that in my previous lecture, we looked at the way different kinds of densities behaved. But I've got the results right here. For matter which had an equation state parameter of 0, what we found was that the density associated with that matter, it just fell as the scale factor to the inverse third power. That's essentially saying that the number of particles of stuff is constant. And so as the universe expands, it just
+
+00:14:05
+goes with the volume of the universe. If it was radiation, we found it went as a scale factor to the inverse fourth power. And that's consistent with diluting the density as the volume gets larger provided we also decrease the energy per particle of radiation per photon, per graviton, per whateveron. If I require that the energy per quantum of radiation is redshifted with this thing, that explains the density flaw that we found for radiation. And so that sort of suggests that what we're going to find
+
+00:14:45
+is that the scale factor is directly tied to a redshift measure. OK. I just realized what this page of notes was. My apologies. I'm getting myself organized here.  Let's make that a little bit more rigorous now. OK. So that argument on the basis of how the density of radiation behaves. It's not a bad one as a first pass. It is quite indicative. But let's come at it from another point of view. And this allows me to introduce in a brief aside a topic that is quite useful here. So we talked about Killing vectors a couple of weeks ago.
+
+00:15:31
+Let's now talk about a generalization of this known as Killing tensors. So recall that a Killing vector was defined as a particular vector in my space time manifold such that if I Lie transport the metric along that Killing vector, I get 0. This then leads to the statement that if I put together the symmetrized covariant gradient of the Killing vector, I get 0. Another way to write this is to use this notation. Whoops.  OK. So these are equations that tell us about the way that Killing vectors behave.
+
+00:16:23
+A Killing tensor is just a generalization of this idea to an object that has more than one index line, to a higher rank tensorial object. So we consider this to be a rank one Killing tensor. A rank n Killing tensor satisfies--  so let's say k is my Killing tensor.  Imagine I have n indices here if I take the covariant gradient of that Killing tensor and I symmetrize over all n indices. That gives me 0. This defines a Killing tensor.  Starting with this definition, it's not at all hard to show that if I define a parameter, k,
+
+00:17:59
+which is what I get when I contract the Killing tensor, every one of its indices with the four-velocity of a geodesic.  If my u satisfies the geodesic equation-- or this could be-- let's write this as a momentum.  Which you say is the tangent to a world line. Could be either a velocity or a momentum.  So if I define the scalar k by contracting my Killing tensor with n copies of tangent to the world line, and that thing satisfies the geodesic equation, then the following is true. You guys did this on a homework exercise
+
+00:19:08
+for when we thought about a spacetime-- you did something similar to this, I should say, for a spacetime containing an electromagnetic field. We talked about how this works for the case of a Killing vector. Hopefully you can kind of see the way you would do this calculation at this point. Now the reason I'm doing this aside is that if you have a Friedmann-Robertson-Walker spacetime, search spacetimes actually have a very useful Killing tensor.  So let's define k with two indices, mu nu.
+
+00:19:53
+And this is just given by the scale factor.  Multiplying the metric u mu, u mu, u nu. Where this u comes from the four-velocity of a co-moving fluid element.  So this is the four-velocity that we use to construct the stress energy tensor that is the source of our Friedmann equations.  So here's how we're going to use this. Let's look at what we get for this Killing vector. Excuse me, this Killing tensor when I consider it's a long a null geodesic. We're going to want to think about null geodesics a lot,
+
+00:21:01
+because the way that we are going to probe our universe is with radiation. We're going to look at it with things like telescopes.  These days people are starting to probe it with things like gravitational wave detectors. All things that involve radiation that moves on null geodesics.  So let's examine the associated conserved quantity that is associated with a null geodesic.  So let's say v-- let's make it a p, actually. So it's going to be a null geodesic, so we're going to imagine it's radiation that is following.
+
+00:22:02
+It has a four-momentum, pu.  And let's define k, case of ng, from my null geodesic. That is going to be k mu nu, p mu, p nu. Let's plug-in the definition of my Killing tensor. So this is a square root of t, g mu nu, p nu, p nu. This is zero. It's a null geodesic.  Then I get u mu p nu, u nu p mu. Now remind you of something.  Go back to a nice little Easter egg, an exercise you guys did a long time ago. If I look at the dot product of a four-momentum and a four-velocity, what I get is the energy associated
+
+00:23:25
+with that four-momentum as measured by the observer whose four-velocity is u. So what we get here is two copies of the energy of that null geodesic measured by the observer who is co-moving.  So what this null geodesic-- what this quantity associated with this null geodesic is two powers of the scale factor times the energy that would be measured by someone who is co-moving with the fluid that fills my universe.  Energy of p mu, as measured by u mu.  And remember, this is a constant.  So as this radiation travels across the universe--
+
+00:24:49
+as this radiation travels across the universe, the product of the scale factor and the energy associated with that radiation as measured by co-moving observers is a constant.  So this is telling us that the energy, as measured by a co-moving observer, let's say it is emitted at some time with a scale factor is a. When it propagates to us, we define our scale factor as 1, the energy will have fallen down by a factor of 1 over a. So this makes it a little bit more rigorous, this intuitive argument that we saw from considering
+
+00:26:26
+how the density of radiation fell off. What we see is the energy is indeed redshifting with the scale factor. So if I use the fact that the energy that I observe--  if I'm measuring light, light has a frequency of omega--  what I see is the omega that I observe at my scale factor, which I define to be 1, normalized to that when it was emitted, it looks like the scale factor when it was admitted. Divided by a now, a observed. I call this 1.  I can flip this over, another way of saying this is that, if I write it
+
+00:27:29
+in terms of wavelengths of the radiation, the wavelength of the radiation and when it was emitted versus the wavelength that we observe it tells me about the scale factor when the radiation was emitted.  Astronomers like to work with redshift.  They like to work with wavelength when they study things like the spectra of distant astronomical objects.  And they use it to define a notion of redshift. So we define the redshift z to be the wavelength that we observe, minus the wavelength at the radiation
+
+00:28:32
+that when it is emitted divided by the wavelength when it was emitted. Put all of these definitions together, and what this tells me is that the scale factor at which the radiation was emitted is simply related to the redshift that we observe. So this at last gives us a direct and not terribly difficult to use observational proxy that directly encodes the scale factor of our universe. Suppose we measure the spectrum of radiation from some source, and we see the distinct fingerprint associated with emission from a particular set
+
+00:29:31
+of atomic transitions.  What we generally find is some well-known fingerprints of well-characterized transitions, but in general they are stretched by some factor that we call the redshift z. Actually, you usually stretch by-- when you go through this, you'll find that what you measure is actually stretched by 1 plus z.  You measure that, you have measured the scale factor at which this radiation was measured-- was emitted.  So this is beautiful. This is a way in which the universe hands us the tool by which we can directly characterize some
+
+00:31:02
+of the geometry of the universe at which light has been emitted. This is actually one of the reasons why a lot of people who do observational cosmology also happen to be expert atomic spectroscopists. Because you want to know to very high precision what is the characteristics of the hydrogen Balmer lines. Some of the most important sources for doing these tend to be galaxies in which there's a lot of matter falling onto black holes, some of the topics we'll be talking about in an upcoming video.
+
+00:31:33
+As that material falls in, it gets hot, it generates a lot of radiation, and you'll see things like transition lines associated with carbon and iron. But often all reddened by a factor of several. You sort of go, oh, look at that, carbon falling onto a black hole at redshift 4.8. That is happening at a time when the scale factor of the universe was 1 over 4.8-- or 1 over 5.8, forgot my factor of 1 plus there.  So you measure the redshift, and you have measured the scale factor.  But you don't know when that light was emitted.
+
+00:32:18
+We need to connect the scale factor that we can measure so directly and so beautifully to the time at which it was emitted. We now have a way of determining a, but we need a as a function of t.  And in truth, we do this kind of via a surrogate. Because we are using radiation as our tool for probing the scale factor, we really don't measure t directly. When we look at light and it's coming to us, it doesn't say I was emitted on March 27th of the year negative 6.8 billion BC, or something like that.
+
+00:33:34
+We do know, though, that it traveled towards us at the speed of light on a null geodesic. And because it's a null geodesic, there's a very simple-- simple's a little bit of an overstatement, but there is at least a calculable connection. Because it's moving at the speed of light, we can simply-- I should stop using that word-- we can connect time to space. And so rather than directly determining the time at which the radiation was emitted, we want to calculate the distance of the source from us
+
+00:34:07
+that emitted it.  So rather than directly building up a of t, we're going to build up an a of d, where d is the distance of the source. And if you're used to working in Euclidean geometry, you sort of go, ah, OK, great. I know that light travels at the speed of light, so all I need to do is divide the distance by c, and I've got the time, and I build a of t. Conceptually, that is roughly right, and that gives at least a cartoon of the idea that's going on here. But we have to be a little bit careful.
+
+00:35:12
+Because it turns out when you are making measurements in a curved space time, the notion of distance that you use depends on how you make the distance measurement. So this leads us now to our discussion of distance measures in cosmological spacetime.  So just to give a little bit of intuition as to what's the kind of calculation we're going to need to do, let me describe one distance measure that is observation, which is about useless, but not a bad thing to at least begin to get a handle on, the way different parameters
+
+00:36:16
+of the spacetime come in and influence what the distance measure is. So let's just think about the proper distance from us to a source.  So let's imagine that-- well, let's just begin by first, let's write down my line element. And here's the form that I'm going to use.  OK, so here's my line element. This is my differential connection between two events spaced between one another by dt, d chi, d theta, d phi, all hidden in that angular element, the omega.  Let's imagine that we want to consider
+
+00:37:20
+two sources that are separated purely in the radial direction.  So my angular displacement between the two events is going to be 0.  So the only thing I need to care about is d chi, and let's imagine that I determine the distance between these two at some instant--  So then you just get ds squared equals a squared or zero squared d chi squared, and you can integrate this up and you get our first distance measure, d sub p equals scale factor. Your overall distance scale are zero and chi.  So Carroll's textbook calls this the instantaneous physical
+
+00:38:30
+distance.  Let's think about what this means if you do this. This is basically the distance you would get if you took a yardstick, you put one end at yourself, you're going to call yourself chi equals 0, you put the other end of the yardstick at the object in your universe at some distance chi in these coordinates, and that's the distance. d sub p is the distance that you measure.  It is done, you're sort of imagining that both of the events at the end of this yardstick. You're sort of ascertaining their position at exactly
+
+00:39:19
+the same instant, hence the term instantaneous, and you get something out of it that encodes some important aspects of how we think about distances in cosmology. So notice everything scales with the overall length scale that we associated with our spatial slices with our spatial sector of this metric, the r0. Notice that whatever is going on your scale factor, your a, your distance is going to track that. As a consequence of this, two objects that are sitting in what we call the Hubble flow, in other words, two objects that
+
+00:39:57
+are co-moving with the fluid that makes up the source of our universe. They have an apparent motion with respect to each other.  If I take the time derivative of this, the apparent is just a dot, or 0 chi, which is equal to the Hubble parameter times dp. Recall that the Hubble parameter is a dot over a, and if I'm doing this right now, that's the value of the Hubble parameter now. So this is the Hubble Expansion Law, the very famous Hubble Expansion Law. So we can see it hidden in this--
+
+00:41:06
+not even really hidden, it's quite apparent in this notion of an instantaneous physical distance. Let me just finally emphasize, though, that the instantanaeity that is part of this object's name, instantaneous measurements, are not done.  As I said-- I mean, this is it sounds like I'm being slightly facetious, but it's not. The meaning of this distance measure is, like I said, it's a yardstick where I have an event at me, the other end of my yardstick is at my cosmological event.
+
+00:41:44
+Those are typically separated by millions, billions of light years. Even if you could-- OK, the facetious bit was imagining it as a yardstick. But the non-facetious point I want to make is we do not make instantaneous measurements with that. When I measure an event that is billions of light years away, I am of course measuring it using light and I'm seeing light that was emitted billions of years ago. So we need to think a little bit more carefully about how to define distance in terms of quantities that really correspond
+
+00:42:22
+to measurements we can make.  And to get a little intuition, here are three ways where, if you were living in Euclidean space and you were looking at light from distant objects, here are three ways that you could define distance.  So if spacetime were that of special relativity-- well, let's just say if space were purely Euclidean. Let's just leave it like that.  Here are three notions that we could use. One, imagine there was some source of radiation in the universe that you understood so well that you
+
+00:43:58
+knew its intrinsic luminosity. What you could do is compare the intrinsic luminosity of a source to its apparent brightness.  So let's let f be the flux we measure from the source.  This will be related to l, the luminosity, which--  suspend disbelief for a moment, we want to imagine that we know it for some reason. And if we imagine this is an isotropic emitter, this will be related by a factor of 4 pi, and the distance between us and that source. Let's call this d sub l. This is a luminosity distance.
+
+00:45:12
+It is a distance that we measure by inferring the behavior of luminosity of a distant object.  Now it turns out, and this is a subject for a different class, but nature actually gives us some objects whose luminosity is known or at least can be calibrated. In the case of much of what is done in cosmology today, we can take advantage of the behavior of certain stars whose luminosity is strongly correlated to the way that-- these are stars whose luminosity is variable, and we can use the fact that their variability is correlated
+
+00:45:58
+to their luminosity to infer what their absolute luminosity actually is. There are other supernova events whose luminosity likewise appears to follow a universal law. It's related to the fact that the properties of those explosions are actually set by the microphysics of the stars that set them. More recently, we've been able to exploit the fact that gravitational wave sources have an intrinsic luminosity in gravitational waves, the dedt associated with the gravitational waves that they emit,
+
+00:46:32
+which depends on the source gravitational physics in a very simple and predictable way that doesn't depend on very many parameters. I actually did a little bit of work on that over the course of my career, and it's a very exciting development that we can now use these as a way of setting the intrinsic luminosity of certain sources. At any rate, if you can take advantage of these objects that have a known luminosity and you can then measure the flux of radiation in your detector from these things, you have learned the distance.
+
+00:47:03
+At least you have learned this particular measure of the distance.  That's measure one.  Measure two is imagine you have some object in the sky that has a particular intrinsic size associated with it. You can sort of think of the objects whose luminosity you know about as standard candles. Imagine if nature builds standard yardsticks, there's some object whose size you always know.  Well, let's compare that physical size to the angular size that you measure.  The angle that the object sub tends in the sky
+
+00:48:22
+is going to be that intrinsic size, delta l divided by the distance. We'll call this distance d sub a, for the angular diameter distance.  Believe it or not, nature, in fact, provides standard yardsticks type so that we can actually do this.  Finally, at least as a matter of principle, imagine you had some object that's moving across the sky with a speed that you know. You could compare that transverse speed to an apparent angular speed.  So the theta dot, the angular speed that you measure, that would be the velocity
+
+00:50:02
+perpendicular to your line of sight divided by distance. We'll call this d sub m, the proper motion distance.  So if our universe were Euclidean, not only would it be easy for us to use these three measures of distance, all three of them would give the same result. Because this is all just geometry.  Turns out when you study these notions of distance, in an FRW spacetime, there's some variation that enters. Let me just emphasize here that there is an excellent summary on this stuff. I can't remember if I linked this to the course website
+
+00:51:09
+or not. I should and I shall.  An excellent summary of all this, really emphasizing observationally significant aspects of these things come from the article that is on the archive called Distance Measures in Cosmology by David Hogg, a colleague at New York University.  You can find this on the Astro PH archive, 9905116. It's hard for me to believe this is almost 21 years old now. This is a gem of a paper. Hogg never submitted it to any journal, just posted it on the archive so that the community
+
+00:52:11
+could take advantage of it.  So the textbook by Carroll goes through the calculation of d sub l. On a problem set you will do d sub m. We're going to go through d sub a, just so you can see some of the way that this works. Let me emphasize one thing, all of these measures use the first Friedmann equation.  So writing your Friedmann equation like so. i is a sum of all the different species of things that can contribute including curvature. So recall that even though curvature isn't really
+
+00:53:10
+a density, you can combine enough factors to make it act as though it were a density.  You assume a power law.  So this n sub i is related to the equation of state parameter for each one of these species. And let's now take advantage of the fact that we know the scale factor directly ties to redshift. I can rewrite this as how the density evolves as a function of redshift. So when you put all of this together, this allows us to write h of a as h of z.  This is given by the Hubble parameter now
+
+00:54:05
+times some function e of z.  And that is simply-- you divide everything out to normalize to the critical density, and that is a sum over all these densities with the redshift waiting like so.  Let's really do an example, like I said. So if you read Carroll, you will see the calculation of the luminosity distance. If you do the cosmology problem set that will be-- I believe its p set 8, you will explore the proper motion distance.  So let's do the angular diameter distance. Seeing someone work through this, I think,
+
+00:55:08
+is probably useful for helping to solidify the way in which these distance measures work and how it is that one can tie together important observables. So let's consider some source that we observe that, according to us, subtends an angle, delta phi.  Every spacial sector is spherically symmetric, and so we can orient our coordinate system so that this thing, it would be sort of a standard ruler-- what we're going to do is orient our coordinate system so that object lies in the theta equals pi over 2 plane.
+
+00:56:03
+The proper size of that source-- so the thing is just sitting in the sky there-- the proper size of the source, you can get this in the line element.  The delta l of the source will be the scale factor at the time at which it is emitted, r0.  So this is using one of the forms of the FRW line elements I wrote down at the beginning of this lecture. And so the angular diameter distance, that's a quantity that I've defined over here, it's just the ratio of this length to that angle.  Let's rewrite this using the redshift.
+
+00:57:33
+Redshift is something that I actually directly observe, so there we go.  This is not wrong, but it's flawed. So this is true. This is absolutely true. Here's the problem, I don't know the overall scale of my universe and this coordinate chi doesn't really have an observable meaning to it. It's how I label events, but I look at some quasar in the sky and I'm like, what's your chi? So what we need to do is reformulate the numerator of this expression in such a way as to get rid of that chi
+
+00:58:27
+and then see what happens, see if we have a way to get rid of that r0. Let's worry about chi first.  We're going to eliminate it by taking advantage of the fact that the radiation I am measuring comes to me on a null path.  Not just any null path. I'm going imagine it's a radial one. We are allowed to be somewhat self-centered in defining FRW cosmology, we put ourselves at the origin. So any light that reaches us moves on a purely radial trajectory from its source to us.  So looking at how the time and the radial coordinate chi
+
+00:59:32
+are related for a radial null path we go into our FRW metric.  I get this. So I can integrate this up to figure out what chi is.  So this is right. Let's massage it a little bit to put it in a form that's a little bit more useful to us. Let's change our variable-- change our variable of integration from time to a.  So this will be an integral from the scale factor at which the radiation is emitted to the scale factor which we observe it, i.e. now. And when you do that change of variables
+
+01:00:43
+your integral changes like so. Let's rewrite this once more to insert my Hubble parameter.  Now let's change variables once more. We're going to use the fact that our direct measurable is redshift. And so if we use a equals 1 over 1 plus z, I can further write this as an integral over redshift like so. And that h0 can come out of my integral.  So this is in a form that is now finally formulated in terms of an observable redshift and my model dependent parameters. The various omegas that, when I construct my universe model,
+
+01:02:26
+I am free to set. Or if I am a phenomenologist, that are going to be knobs that I turn to try to design a model universe that matches the data that I am measuring. r0, though, is still kind of annoying. We don't know what this guy is, so what we do is eliminate r0 in favor of a curvature density parameter.  So using the fact that omega curvature--  go back to how this was originally defined-- it was negative kappa over h0 squared. That's negative k over r0 squared h0 squared.  That tells me that r0 is the Hubble constant now,
+
+01:03:40
+divided by the square root of the absolute value of the curvature, at least if k equals plus or minus 1. What happens when it's not plus or minus 1, if it's equal to 0? Well, hold that thought.  So let's put all these pieces together.  So assembling all the ingredients I have here, what we find is the angular diameter distance. There's a factor of 1 over 1 plus z, 1 over the Hubble constant. Remember, Hubble has units of 1 over length-- excuse me, 1 over time, and with the factor
+
+01:04:56
+of the speed of light that is a 1 over length, so one over the Hubble parameter now is essentially a kind of fiducial overall distance scale. And then our solution breaks up into three branches, depending upon whether k equals minus 1, 0, or 1.  So you get one term where it involves minus square root the absolute value of the curvature parameter times sine.  That same absolute value of the curvature parameters square root.  So here's your k equals plus 1 branch. For your k equals 0 branch, basically what
+
+01:06:03
+you'll find when you plug-in your s of k is that r0 cancels out.  So that ends up being a parameter you do not need to worry about, and I suggest you just work through the algebra and you'll find that for k equals 0, it simply looks like this.  And then finally, if you are in an open universe--  that is supposed to be curvature--  what we get is this.  So this is a distance measure that tells me how angular diameter distance depends on observable parameters. Hubble is something that we can measure.
+
+01:07:32
+Redshift is something we can measure. And it depends on model parameters, the different densities that go into e of z, and-- which I have on the board right here--  the different densities that go into e of z. My apologies, I left out that h0 there-- and your choice of the curvature. When you analyze these three distances here is what you find.  You find that the luminosity distance is related to the proper motion distance by a factor of 1 plus z, and that's related to the angular diameter distance
+
+01:08:36
+by a factor of 1 plus z squared. So when you read Carroll, you will find that 1 plus z factor there-- excuse me, 1 plus z to the minus 1 power turns into a 1 plus z-- is the camera not looking at me? Hello? There we go. So that 1 over 1 plus z turns into a 1 plus z. When you do it on the p set, you do the proper motion distance, so it will just be no 1 plus z factor in front of everything. So the name of the game when one is doing cosmology as a physicist is to find quantities that you can measure that allow you to determine
+
+01:09:15
+luminosity distances, angular diameter distances, proper motion distances. Now it turns out that the proper motion distance is not a very practical one for basically any cosmologically interesting source. They are simply so far away that even for a source moving essentially at the speed of light, the amount of angular motion that can be seen over essentially a human lifetime is negligible. So this turns into something that-- hi. MIT POLICE: [INAUDIBLE] SCOTT HUGHES: That's OK. Yeah, I'm doing some pre-recording of lectures.
+
+01:09:50
+[LAUGHS] I was warned you guys might come by. I have my ID with me and things like that, so. MIT POLICE: That's fine. Take care. MIT POLICE: You look official. SCOTT HUGHES: [LAUGHS] I appreciate it. So those of you watching the video at home, as you can see, the MIT police is keeping us safe.  Scared the crap out of me for a second there, but it's all good. All right, so let's go back to this for a second. So the proper motion distance is something that is not particularly practical,
+
+01:10:17
+because as I said, even if you have an object that is moving close to the speed of light this is not something that even over the course of a human lifetime you are likely to see significant angular motion. So this is generally not used. But luminosity distances and angular diameter distances, that is, in fact, extremely important, and a lot of cosmology is based on looking for well understood objects where we can calibrate the physical size and infer the angular diameter distance, or we know the intrinsic brightness
+
+01:10:54
+and we can determine the luminosity distance. So let me just give a quick snapshot of where the measurements come from in modern cosmology that are driving our cosmological model.  One of the most important is the cosmic microwave background.  So, vastly oversimplifying, when we look at the cosmic microwave background after removing things like the flow of our solar system with respect to the rest frame of-- excuse me, the co-moving reference frame of the cause of the fluid that makes up our universe, the size of hot and cold spots
+
+01:11:51
+is a standard ruler.  By looking at the distribution of sizes that we see from these things, we can determine the angular diameter distance to the cosmic microwave background with very high precision. This ends up being one of the most important constraints on determining what the curvature parameter actually is. And it is largely thanks to the cosmic microwave background that current prejudice, I would say, the current best wisdom-- choose your descriptor as you wish-- is that k equals 0 and our universe
+
+01:12:39
+is in fact spatially flat.  Second one is what are called type 1a supernova.  These are essentially the thermonuclear detonations of white dwarfs.  Not even really thermonuclear, it's just--  my apologies, I'm confusing a different event that involves white dwarfs. The type 1a's are not the thermonuclear explosions of these things. This is actually the core collapse of a white dwarf star. So this is what happens when a white dwarf it creates or in some way accumulates enough mass such that electron degeneracy pressure is
+
+01:13:37
+no longer sufficient to hold it against gravitational collapse, and the whole thing basically collapses into a neutron star. That happens at a defined mass, the Chandrasekhar mass, named after one of my scientific heroes, Subramanian Chandrasekhar. And because it has a defined mass associated with it, every event basically has the same amount of matter participating. This is a standard candle.  So there's a couple others that I'm not going to talk about in too much detail here. While I'm erasing the board I will just mention them.
+
+01:14:28
+So by looking at things like the clustering of galaxies we can measure the distribution of mass in the universe that allows us to determine the omega m parameter. That's one of the bits of information that tells us that much of the universe is made of matter that apparently does not participate in standard model processes as we know them today-- the so-called dark matter problem. We can look at chemical abundances, which tells us about the behavior of nuclear processes in the very early universe.
+
+01:15:03
+And the last one which I will mention here is we can look at nearby standard candles.  And nearby standard candles allow us to probe the local Hubble law and determine h0.  "Probble," that's not a word.  If you combine "probe" and "Hubble" you get "probble."  And when I say nearby, that usually means events that are merely a few tens of millions of light years away.  It's worth noting that all of these various techniques, all of these different things, you can kind of even see it
+
+01:15:56
+when you think about the mathematical form of everything that went into our distance measures, they're all highly entangled with each other. And so to do this kind of thing properly, you need to take just a crap load of data, combine all of your data sets, and do a joint analysis of everything, looking at the way varying the parameters and all the different models affects the outcome of your observables.  You also have to carefully take into account the fact that when you measure something, you measure it with errors.
+
+01:16:30
+And so many of these things are not known. Turns out you can usually measure redshift quite precisely, but these distances always come with some error bar associated with them. And so that means that the distance you associate with a particular redshift, which is equivalent to associating a time with a redshift, there's some error bar on that. And that can lead to significant skew in what you determine from things.  There's a lot more we could say, but time is finite and we need to change topic, so I'm
+
+01:17:00
+going to conclude this lecture by talking about two mysteries in the cosmological model that have been the focus of a lot of research attention over the past several decades. Two mysteries. One, why is it that our universe appears to be flat, spatially flat?  So to frame why this is a bit of a mystery, you did just sort of go, eh, come on. You've got three choices for the parameter, you got 0.  Let's begin by thinking about the first Friedmann equation.  I can write this like so, or I can
+
+01:18:23
+use this form, where I say omega plus omega curvature-- I'm going to call that omega c for now-- that equals 1.  The expectation had long been that our universe would basically be dominated by various species of matter and radiation for much of its history, especially in the early universe.  If it was radiation dominated, you'd expect the density to go as a to the minus 4.  If it's matter dominated, you expect it to go as a to the minus 3.  Now, your curvature density goes as a to the minus 2.
+
+01:19:48
+And so what this means is that if you look at the ratio of omega curvature to omega, this will be proportional to a, for matter, a squared for radiation. If your universe-- in some sense, looking at these parameter k of the minus 1, 0, 1, that's a little bit misleading. It's probably a little bit more useful to think about things in terms of the kappa parameter. And when you look at that, your flat universe is a set of measure 0 in the set of all possible curvature parameters that you could have.
+
+01:21:15
+And physicists tend to get suspicious when something that could take on any range of possible random values between minus infinity and infinity picks out zero. That tends to tell us that there may be some principle at play that actually derives things to being 0.  Looking at it this way, imagine you have a universe that at early times is very close to being flat, but not quite.  Any slight deviation from flatness grows as the universe expands.  That's mystery one. Mystery two, why is the cosmic microwave background
+
+01:22:30
+so homogeneous?  So when we look at the cosmic microwave background, we see that it has the same properties. The light has the same brightness, it has the same temperature associated with it, to within in a part in 100,000. Now the standard model of our universe tells us that at very early times the universe was essentially a dense hot plasma.  This thing cooled as the universe expanded, much the same way that if you have a bag of gas, you squeeze it very rapidly, it will get hot, you stretch it very rapidly, it will cool.
+
+01:23:38
+There's a few more details of this in my notes, but when we look at this one the things that we see is that in a universe that is only driven by matter or by radiation--  so the matter dominated and radiation dominated picture--  it shows us that points on opposite sides of the sky were actually out of causal contact with each other in the earliest moments of the universe.  In other words, I look at the sky, and the patch of sky over here was out of causal contact with the patch of sky over here in the earliest
+
+01:25:11
+days of the universe. And yet they had the same temperature, which suggests that they were in thermal equilibrium. How can two disparate, unconnected patch of the sky have the same temperature if they cannot exchange information?  You could imagine it being a coincidence if one little bit of the sky has the same temperature as a bit of another piece, but in fact, when you do this calculation, you find huge patch of the sky could not communicate with any other. And so how then is it that the entire sky that we can observe
+
+01:25:50
+has the same temperature at the earliest times within a part in 100,000. You guys will explore this on-- I believe it's problem set eight. The solution to both of these problems that has been proposed is cosmic inflation.  So what you do is imagine that at some earlier moment in the universe, our universe was filled with some strange field, and I'll describe the properties of that field in just a moment, such that it acted like it had a cosmological constant.  In such an epic, the scale factor of the universe
+
+01:27:19
+goes as exponentially with the square root of the size of the cosmological constant.  What you find when you look at this is that this-- it still, of course, goes as a to the minus 2-- but a to the minus-- well, sorry. Let me back up for a second. So my scale factor in this case you'll find goes are a to the minus 2, and that's because the density associated with the cosmological constant remains constant.  So even if you start in the early universe with some random value for the curvature,
+
+01:28:06
+if you are in this epic of exponential inflation, just for-- you know, you have to worry about timescales a little bit, but if you do it long enough you can drive this very, very close to 0. So much so that when you then move forward, let's say you come out of this period of cosmic inflation and you enter a universe that is radiation dominated or matter dominated, it will then begin to grow, but if you drive it sufficiently close to 0 it doesn't matter. You're never going to catch up with what inflation did to you.
+
+01:28:39
+On the P set you will also show that if you have a period of inflation like this, then that also cures the problem of piece of the sky being out of causal contact. So when you do that, what you find is that essentially everything is in causal contact early on. It may sort of come out of causal contact after inflation has ended, more on that in just a moment, and then things sort of change as the universe continues to evolve.  OK so it looks like recording is back on. My apologies, everyone. So as I was in the middle of talk,
+
+01:29:23
+I talked a little bit too long in this particular lecture so we're going to spill over into a little bit of an addendum, just a five-ish minute piece that goes a bit beyond this. Doing this by myself is a little bit weird, I'm tired, and I will confess, I got a little bit rattled when the police came in to check in on me. Let's back up for a second. So I was talking about two mysteries of the modern cosmological model. One of them is this question of why the universe is so apparently flat.
+
+01:29:55
+The spatial sector of the universe appears to be flat. And we had this expectation that the universe is either radiation dominated or matter dominated, which would give us the density associated with radiation. If it was radiation dominated, then the density of stuff in our universe would fall off as the scale factor to the fourth power. If it's matter dominant, it's scale factor to the third power. When you define a density associated with the curvature, it falls off as scale factor to the second power.
+
+01:30:25
+And so if we look at the ratio of the curvature density to any other kind of density, it grows as the universe expands. So any slight deviation from flatness we would expect to grow. And that's just confusing. Why is it when we make the various measurements that we have been making for the past several decades, all the evidence is pointing to a universe that has a flatness of 0? If you sort of imagine that the parameter kappa can be any number between minus infinity to infinity, why is nature picking out 0?
+
+01:31:01
+Another mystery is why is the cosmic microwave background so homogeneous? We believe that the universe was a very hot dense plasma at very early times. It cooled as the universe expanded, and when we measured the radiation from that cooling expanding ball of plasma, what we find is that it has the same temperature at every point in the sky to within a part in 100,000. But when one looks at the behavior of how light moves around in the early universe, if the universe is matter dominated or radiation dominated,
+
+01:31:40
+what you find is that a piece of the sky over here cannot communicate with a piece of sky over here. Or over here, or over here. You actually find that the size of the sky that, if I look at a piece of sky over here, how much of the universe could it talk to, it's surprisingly small. So how is it that the entire universe has the same temperature? How is that they are apparently in thermal equilibrium, even if they cannot exchange information? So I spent some while talking to myself after the cameras went out.
+
+01:32:14
+So I'll just sketch what I wrote down. A proposed solution to this, to both of these mysteries, is what is known as cosmic inflation, something that our own Alan Guth shares a lot of the credit for helping to develop. So recall, if we have a cosmological constant, then the scale factor grows exponentially and the density of stuff associated with that cosmological constant is constant. As the universe expands, the energy density associated with that cosmological constant does not change. If our universe is dominated by such a constant,
+
+01:32:49
+then the ratio of density is associated with curvature, the density associated with cosmological constant, actually falls off inversely with the curvature scale squared, and the curvature scale is growing exponentially, it means that omega c is being driven to zero relative to the density in cosmological constant, as e to a factor like this. It's being exponentially driven close to 0. You'd do do a little bit of work to figure out what the timescales associated with this are, but this suggests that if you can put the universe in a state
+
+01:33:21
+where it looks like a cosmological constant, you can drive the density associated with curvature as close to 0 as you want.  Recall that a cosmological constant is actually equivalent to there being a vacuum energy. If we think about the universe being filled with some kind of a scalar field at early times, it can play the role of such a vacuum energy. Without going into the details, one finds that in an expanding universe there is an equation of motion for that scalar field. How the field itself behaves is driven by a differential
+
+01:34:02
+equation, looks like this. Here's your Hubble parameters, so this has to do with a scale factor in here. v is a potential for this scalar field, which I'm not going to say too much about. Take this guy, couple it to your Friedmann equations, and the one that's most important is the first Friedmann equation. What you see is that v of phi is playing the role of a cosmological constant. It's playing the role of a density. So if we can put the universe into a state where it is in fact being dominated by this scalar field,
+
+01:34:31
+by the potential associated with the scalar field, it will inflate. A lot of the research in early universe physics that has gone on over the past couple decades has gone into understanding what are the consequences of such a such a potential. Can we make such a potential? Do the laws of physics permit something like this to exist? If the universe is in this state early on, what changed? How is it that this thing evolves? Is there is an equation of motion here so that scalar field is presumably
+
+01:34:58
+evolving in some kind of a way? Is there a potential, does nature permit us to have a field of the sort with a potential that sort of goes away after some time? Once it goes away, what happens to that field? Is there any smoking gun associated with this? If we look at the universe and this is a plausible explanation for why the universe appears to be spatially flat and why the cosmic microwave background is so homogeneous. Is there anything else that we can look at that would basically say yes, the universe did in fact
+
+01:35:30
+have this kind of an expansion? Without getting into the weeds too much, it turns out that if the universe expanded like this, we would expect there to be a primordial background of gravitational waves, very low frequency gravitational waves. Sort of a moaning background filling the universe. And so there's a lot of experiments looking for the imprints of such gravitational waves on our universe. If it is measured, it would allow us to directly probe what this inflationary potential actually
+
+01:35:57
+is. I'm going to conclude our discussion of cosmology here. So some of the quantitative details, the way in which inflation can cure the flatness problem and cure the homogeneity problem you will explore on problem set seven. Going into the weeds of how one makes it a scalar field, designs a potential and does things like this beyond the scope of 8.962-- there are courses like this, and I would not be surprised if some of the people in this class spent a lot more time studying this in their futures
+
+01:36:33
+than I have in my life. All right, so that is where we will conclude our discussion of cosmology.
+

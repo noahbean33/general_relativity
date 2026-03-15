@@ -1,0 +1,159 @@
+00:00:00
+foreign this program is being presented to you by the herreas international winter school on gravity and Light [Music] welcome back to the we herres International winter school on gravity and Light in this tutorial we will deal with the notion of connections so we start with exercise one it's a multiple choice question or these are multiple choice question designed to spark discussion and as a self-test we shall tick the correct statements but not the incorrect ones so let's start with the first question
+
+00:00:48
+a covarent derivative operator nebula X is C Infinity linear and X the statement is correct as it was shown in the lecture a covarent derivative operator napla X cannot be applied to zero zero tensor field this answer is wrong as 0 0 tensor fields are just functions and of course you can apply equivalent derivative tray function this is simply the action of X on F so the statement is wrong the next one says that a covarent derivative operator acts simply as the partial derivative if the manifold is
+
+00:01:39
+flat so here one has to say what flat means so a flat manifold is when we have introduced curvature a manifold where curvature vanishes everywhere this is equivalent to that that there exist charts from Atlas that cover the whole manifold in which the connection coefficients vanish however that doesn't mean that in every chart the connection coefficients vanish there can be charts even on a flat manifold where you have non-vanishing connection coefficient functions and thus a covalent derivative operator
+
+00:02:26
+doesn't act as a partial derivative if the manifold is flat and the statement is wrong the fourth answer says a Covent derivative operator nabla X applied to a smooth function is the gradient of this function well at first sight this seems correct however we have nabla X acting on F is the gradient of the function applied to this Vector X and the gradient itself is only DF an element from the cotangent space so this answer is wrong as the covariant derivative operator applied to a smooth function is the gradient of this
+
+00:03:24
+function applied to the vector field X and the last statement says that a covarent derivative operator is uniquely fixed by choosing dim m to the power 3 many connection coefficient functions of an atlas so this statement now is right as we can choose the connection coefficient functions that carry three indices ABC that all run from 1 to dim m and if we choose all of them we have the action of this covariant derivative operator fixed uniquely in the second part of this exercise we again look at statements about
+
+00:04:23
+Connections so a statement a connection Maps a vector field and a PQ tensor field to the real numbers this is wrong as a connection Maps a vector field and a PQ tensor field again to a PQ tensor field but not to the real numbers a connection satisfies the leiveness rule yes this is correct this was one of the axioms presented in the lecture connection coefficients Vanishing in a chart vanish in the overlap with another chart the statement is not correct so one looks at the transformation behavior of
+
+00:05:12
+the connected coefficient functions and at first this reads just like the transformation Behavior of a tensor field however there's an additional term Tau 2 x k though y b Del y c Del y a so x k and this second term destroys the transformation Behavior of a tensor field so the even if the connection coefficients for example vanish in this chart X will still get non-vanishing connection coefficient functions in the overlap with the other chart y as we have this additional term that is usually non-zero
+
+00:06:18
+when changing charts so this answer is wrong the fourth answer says that the connection coefficient functions may be defined by nabla the covarian derivative and the chart-induced basis fields yes this is correct as we had that nabla of Del Del x b applied on the chart induced basis field Del XC is the connection coefficient function gamma a b c times Del x a and this defines the connection coefficient functions purely by the action of the nubla and the chart induced basis fields and the last statement is that a
+
+00:07:14
+torsion-free connection has coefficient function satisfying that Lambda K and the anti-symmetrized the the anti-symmetric part of gamma k a b is zero in all charts so this is correct as the torsion T that also carries indices a and above and PC from the bottom and that is exactly gamma a b c minus gamma ACB so the lower indices exchanged and that is exactly that we have the anti-symmetricization bracket at oh this is two times the anti-symmetrization bracket though this is two times the gamma with
+
+00:08:12
+the anti-symmetrization bracket and if we have Vanishing torsion also this anti-symmetrist part of the connectory coefficient function vanishes and the statement is correct so let's move on to exercise two here we will look at some practical rules for how the covalent derivative nabla Acts so we'll see various examples of a Covent derivative acting on all kind of tensor fields so the first one is rather easy the covalent derivative acts on a function and this is just the action of the vector field on the function f which
+
+00:09:09
+can be written as in component x i d dxi on F now in the next example we have the action of a covarent derivative on a vector field Y and we take the eighth component of the result again the first term is just the action of the vector field X on Y and we can take the eighth component right away and but then we have to use the connection coefficient functions gamma to take an index a up here and have BC down here with a component YB from the vector field y and x c from the vector field X we can write out the first
+
+00:10:17
+term in again in components as x i Del y a on Del X y i Del x i and the second term just days gamma a b c y b x c after applying the covalent derivative to a vector we apply it to a co-vector and take again the eighth component so the first term is again X acting on the component Omega a of the covector but then we get a minus sign we have an index M up here an index a and another index B and down here we have Omega m and x b as to both components going into this expression and again we can write the first term
+
+00:11:30
+in components so component x i times Del Omega a after Del x i and the second term again stays the same so we have understood how we can act with a Covent derivative on a vector as well as an echo Vector so we can now look at a little bit more complicated example namely the action on a 1 2 tensor field so here we have that nabla M acts on a tensor namely a 1 2 tensor let's first write this rewrite this a little bit so M just means that we take the coven derivative with respect to Del Tau x m
+
+00:12:32
+on t resulting in a 1 to tensor field so that is we have Del Del x m acting on the tensor field TABC and then we give we get one term with the Gammas with plus that takes care of this upper index here so we get the index a here and in this is PC down here so the index C now is eliminated in favor of this m and we get G the 10th field T that carries the LT was a bad choice here let's take n so we have t n here and here we now have b c so we have taken care of the upper index here and now we get two terms
+
+00:13:43
+with a minus sign that take care of the lower indices here so we have minus gamma n here down here we get a b and again the m and we have that tensor field t a here we get an index M and the C and we get the same for the other index position so n again now we have the index C here and again m and the tensor field t a B and so this is the action of a covarent derivative on a 1 2 tensor field in the next example we have that again a Covent derivative acts on a covector however now we have these anti-symmetrization brackets here
+
+00:14:58
+so that makes it a little bit more complicated however not much so we first expand these anti-symmetrization brackets we get a factor of one half then we have nubla m a n minus n acting on a m of course we have to set the appropriate brackets here and then we can use the results from above and write this out as one half so we have Del a n by Del x m minus gamma and index R up here we have the index n here m and the AR so that was the first term then from here goes into this one and now we get the
+
+00:16:21
+other term so we have a minus Del a m by Del x n now we will get a get again A minus sign however as we have a minus sign here we get a plus sign we have a gamma r now we have m and n and a are so we close the brackets and now we see that we have here this term is equal or it's nearly equal to this term we have just a different sign before it and here down here the index is the other way around the index combination is the other way around so we can write this again using our anti-symmetrization brackets
+
+00:17:24
+so we first write down these terms Del a by Del X and then we can write those two terms here with an anti-symmetization bracket as gamma R anti-symmetrized in m and n on AR and now we know from from the question up here that we have a torsion-free covariant derivative that means as we discussed in exercise one this anti-symmetric part of the connection coefficient function vanishes and thus we are left over with the expression one half Del a n Del XM minus Del am by Tau x n and now we can recognize
+
+00:18:33
+this expression was a physical quantity namely one-half times the electromagnetic tensor fmn so this was only the second last example and now we come to the last example again we have an anti-symmetization bracket but now containing three indices so again the first step is to expand these anti-symmetrization brackets that is now a little more work so we get a vector 1 over 3 faculty three factorial as we have now three indices then we have nabla M acting on Omega n r and we get a minus sign with Omega M
+
+00:19:46
+acting on our n as we have now exchanged indices R and n and as the whole expression is anti-symmetric that means if we exchange any two indices we pick up a minus sign so that's why we have a minus sign here then we also get the term that we have nabla n acting on Omega m r and plus Omega n abla n sorry and you're acting on Omega RM and the last two terms are minus are acting on Omega n m and plus are acting on Omega m n so we write this out we get one over X and we get a Del m don't get it though M you get a Tau
+
+00:20:55
+after Tau so we get a Del Omega and r on the by Del x m minus gamma a n m Omega a R minus gamma a r m on Omega and a the second term this here can be expanded to minus Del Omega r n on Del X by Del x m we get now a plus so we have a minus sign here again we have a r m Omega a n and we get another plus sign Omega A and M Omega r a and the other terms go similarly we have minus Del Omega m r by Del x n again I plus a now we get m n here we have omega AR plus Omega a r n on Omega m a and now on plus Del Omega r m by Del x n
+
+00:23:00
+minus gamma a RM Omega am minus gamma a m n Omega r a and the last two terms they read Tau Omega and M by Del x r they get a plus sign a and r on Omega am and plus Omega a m r on Omega n a plus Del Omega m n by Del x r minus gamma a m r Omega a n minus gamma a n r Omega m a so these are a lot of terms however we now again use that this code vendor which is torsion free meaning we can kill terms that are that have X that have different sign and the lower two indices exchanged here so we can eliminate all anti-symmetrized
+
+00:24:39
+parts of the garments so we'll see now that this term and this term they are anti-symmetric to each other but the indices are exchanged and they get a different minus sign as well as the Omega AR appears in both terms so they get out they go out against each other you can also see that this term um that contains Omega and a and this term are anti-symmetric to each other so these two go out as well this term containing Omega a n appears down here again they go out against each other Omega r a
+
+00:25:42
+is killed with this one just below we have omega m a and Omega M A and the last term here so they go out and the last two terms are those two they go out as well so what we are left with is only terms that contain such derivatives Del Omega r n by Del x m minus the Omega m r on Del x n plus Del Omega RM by Del x m sorry r x n and minus Del Omega n m by Del x r plus Del Omega m n by Del x r and now we can reintroduce the anti-symmetrization bracket and what we get is that we have Bell by Del X M where the M already is in the
+
+00:27:00
+anti-symmetization bracket and we have the m r at the Omega also in the anti-symmetrization bracket and we see that even if we let a covarian derivative act on a zero and tensor field so this generalizes to even higher orders not only one or two in as shown here but if we let a covarent derivative act on any zero and tensor field and we take the entrance are they fully anti-symmetrized part of the result all the connection coefficients will vanish and we're only left with terms containing these derivatives
+
+00:27:47
+that take this form of course this only holds if we have a torsion free covariant derivative so that was exercise two let's move on to exercise three where we will deal with connection coefficients so the first question asks us to recall how the connection coefficient functions in a chart you intersected v y are related to those any chart with also the domain u intersector v but now the chart move X so the solution is just the transformation behavior of the connection coefficient functions and
+
+00:28:37
+it is given by the connect gamma in the chart y has components a b c I have components that carry in this is ABC and that is if Del y a by Del x m Del y no doubt x n by Del y b x r by Del y c and the gamma in the X chart within this is m n and r but we get this additional term plus Del to x k by Del y b Del y c and Del y a by Tau y x k so this is the transformation behavior of the connection coefficient functions they don't transform like a tensor it's only the first part here but they pick up
+
+00:29:44
+another term here containing such a second derivative of the chart transition function so the second question asks us which class of chart transition Maps make the connection coefficients appear to transform like a tensor so we take a quick look back at the transformation behavior of the connection coefficient functions which we wrote down here so the first term is this part of the transformation that looks like as if the Gammas were a tensor however the second part ruins it so in order to make them look like
+
+00:30:29
+transforming like a tensor we need to have this second term Vanishing and that is only possible if we say that the second derivative of the chart transition map vanishes and that we can and then we can achieve if we say that the chart transition map is a so-called affine map so we have the chart transition map that takes D many real numbers from RD and we have a linear map aij and a so and we have real numbers a i j they can multiply to AJ and we can add a some numbers B J nope b i now that we get the index right
+
+00:31:35
+so aij are so all the a i J's are real numbers the better eyes are real numbers and this is a so-called Alpha and map and you easily see that if you derive this chart transition map twice with respect to any entries you will always get zero and with this we kill the second term up here in the in the transformation behavior of the connection coefficient functions and thus make them look or make them look like transforming like a tensor but of course this is a very very special choice of transition maps and
+
+00:32:32
+for arbitrary chart transition Maps this term will not vanish and thus the connection coefficients don't transform like a tensor foreign so let's move on and look at an example so we look at the flat plane we consider two charts that both cover the upper half plane that means we have we just take all points a b from R2 that have the second entry larger than zero one of these chart maps represents the familiar Cartesian coordinates and the familiar polar coordinates are the other chart remember
+
+00:33:19
+so we know that the chart transition map from Cartesian to Polar coordinates is given by this expression while the inverse transition map from Polar to Cartesian coordinates is given by X after y inverse of R and Phi as R cosine Phi and R sine Phi since we are on the upper half plane we get r as an element from R plus so positive real number and Phi is from the open interval from 0 to Pi we now start with the assumption that we have Vanishing connection coefficients on the Cartesian chart and we want to
+
+00:34:08
+calculate the connection coefficients in the polar coordinate chart so recall that we have gamma a in the Y chart BC is so we make it easier we look again at the transformation Behavior up here so now in our exam or in our question now we have that these all these connection coefficient functions in the Cartesian chart they vanish so this first term is gone and we're only left with the second term so we'll write this down again it is Del 2 x k Del y b Del y c and we have Del y a by Del x k
+
+00:35:17
+very good so now we have to look at how do these guys here so the style y a by Del x k looks like and how does this term here look like so therefore we will first look at um the easier chart transition map that is X after y inverse so this is clearly easier than the other one as it contains less terms and they're less complicated in general and we look so we look at expressions like Del X M by Del y n we can rewrite this as Del n on x m after y inverse and so we in the end this connection coefficient functions
+
+00:36:49
+they shall be given in terms of R and Phi so the coordinates on the polar coordinate chart and thus we already say that we want this expression here to be evaluated at y inverse of R and Phi so this object sorry this is not of course not evalued at y inverse of R5 so we see here that this is evaluated at y of no it's also not advantage and why no it's just divided at R and Phi of course um but then it's it was correct that this was evaluated by inverse of R and five so and so this is
+
+00:38:02
+a linear map take carrying an index up and down so we can represent this in Matrix form so we take so this is we just want to calculate the first com so the one one entry here we take X1 of the Y inverse with derive with respect to the first entry and we evaluated R and Phi and from the form up here we clearly see that we are left with cosine Phi in this entry so we say that m labels the index M labels the rows of this Matrix so we get X1 so this entry here derived with respect to the second entry
+
+00:39:11
+Delta 2 X on X1 after y inverse and we write this at R and Phi and then we get minus r sine of Phi here then we take now the second part derive it with respect to the first entry and we get a sine Phi for this entry to one in our Matrix and the last entry is given by r cosine Phi okay so we have now calculated dial XM after Del y n and now we have to look at the other way around so this was transition Map X after y inverse we have to also do it for y after X inverse as we also have terms appearing that R of
+
+00:40:16
+the form Del y m after Del x n so this term is clearly evaluated at X inverse of a and b so we need to rewrite this as Del n on y m after X inverse and now these numbers a b are just the charge representative of x acting on some p in the flat plane in the manifold so now we can insert the identity we find that it's X inverse X after y inverse after y of P and now we know that y of p is just the charge represent so it's just largest numbers in the chart so we can write this as Del n y m after X inverse
+
+00:41:25
+on X after y inverse from some R and Phi so we have now here the the other transition Maps as a transition map y after X inverse but now we evaluate this at in terms of the variables R and Phi from our polar coordinate chart and that means that we don't have to calculate all the derivatives acting up here but we can rather take this object here this linear map and take its inverse and then we'll we will end up at Del y m after Del x n okay so we look at this object l y m by Del x n evaluated at some X inverse of a b so
+
+00:42:26
+let's support in the manifold but we can look at this point equivalently through the chart y so y inverse of R and Phi comes here now we can just take the inverse of this Matrix up here I call it j m n for the moment so the compounds are labeled by J and n we can calculate the determinant that's that J is r it's quite obvious as we have cosine Phi times R cosine 5 is R cosine squared here we get a plus so minus tons of minus plus r sine squared and that's just r so we first have to take
+
+00:43:13
+1 over the terminant and then we flip the diagonal entry so we get our cosine Phi here and cosine Phi down here the off diagonal entries they stay at the position however they get the different sign so we have here R sine right and here we have minus sine Phi again we label it with indexes and this is m and n we can now check that we may now check that this is indeed the inverse and we will see well yes it is we get the identity back so and now we can start and calculate one connection coefficient
+
+00:44:13
+so we'll take gamma one two two for example that is evaluated at y inverse of R and Phi so this is Del 2 x k by Del y p Del y c at y inverse of R and Phi and we have here Del y a Del x k this is a k here add y inverse of R and Phi so we can now plug in the indices correctly so we get a double y1 here and down here we get Del Y2 Del Y2 however we still have the sum over K here where we can quickly expanded in the corresponding terms so we get one term that has X1 as well as we get one term with X2
+
+00:45:42
+so and now we can plug in so first look at Delta X1 I have to double y to Del Y2 so the basic basis therefore is the value of Del X1 by Del Y2 so we have to go up here Del X1 but Del Y 2 is this entry here and now we we have to derive it another time with us back to the second entry and if we evaluate at R and Phi we will see that this assembly minus r cosines cosine Phi and Del y1 by Del x one well this is easy we just read it off here it is cosine Phi and here in this term again Del 2 x 2 by Del y to
+
+00:46:50
+Del Y2 so we look at Del X2 Del Y2 that is this one here R cosine Phi we derive it will spec to the second entry and we get minus r sine Phi and Y Del y1 by Del X2 well that's easy we get just look at this entry here that's sine Phi and what we end up with is that the result is minus r so we have the connection coefficient function Gamma 1 2 2 is minus r so of course there are more connection coefficient functions however we know we won't calculate them here you can do this for yourself
+
+00:47:43
+so now we come to the last exercise that's exercise four and we look at y on functions the covarenter of the chiffonable reduces to the usual B so let's recall how X acts on a function H which is a smooth function so that's X of H or equivalently that's the gradient of H applied to X so question now is to complete the sketch of proof that is shown below for the scaling part of the C Infinity linearity bye one time indicating over each such as multiplication on which space it is defined and giving sufficient such
+
+00:48:45
+justification for each of these equal signs so let's start so first so the starting point is nabla of with respect to some G times x acting on H so this s multiplication here is defined on gamma of TM so to say the collection of all Vector Fields over m now we can apply the definition of a vector field acting on iPhone covalent derivative with vector vector field acting on a function so let's just definition and we get that it is G times x acting on H so still this multiplication here is on gamma GM
+
+00:49:40
+as we still multiply a function to a vector field and now this equal sign here is the most critical one in this proof therefore we have to evaluate the left side as well as the right side Point wise so we have that is g times x applied to age and everything evaluated at a point p in the manifold and due to the multiplication here on gamma TM we find that this is G of P so that this is evaluated Point wise G of P x h on P so now this equal sign here lives on r since we have real number here real
+
+00:50:51
+number here and now we can again pull the P out and we get that this is 3 times xh from the whole expression evaluated at some point p and this multiplicative sign now lives on the smooth functions C Infinity of M so it was already indicated that this multiplication now let's on the smooth functions and now we have x h here and we can plug in the definition of the covarian derivative acting on a function from up here it was like this equal sign is Justified trust by definition and still this
+
+00:51:51
+multiplication happens on the smooth functions and now we shall provide analogous proofs for the other axioms so we look at linearity in the vector Fields here so again we first plug in so of course this plus is also defined on gamma of TM as we add two Vector fields we plug in the definition of the covalent derivative acting on a function so still this plus is on gamma TM now we can so and at this point again we have or at this point we again have to look at pointwise evaluation of this expression and again we find that due to
+
+00:53:09
+the structure on TM on gamma TM but this has to be evaluated Point wise so we have xh plus YH and the whole expression evaluated at T at Epsilon Point p and due to that we have x h plus y h we're now in this plot this addition lives on the smooth functions and we plug in the definition of the covarian derivative again and we find that this is napola X on h plus an upload y on H next part is or next point is to look at linearity in the argument here so again we first so this plot this addition is
+
+00:54:21
+defined on the small functions this equal sign is just here by definition so we have X acting on h plus G still this plus this addition is defined on the smooth functions and now the same argument with pointwise evaluation holes and we can and we will find that this is x h plus x g and that is just because of the definition h plus X on G so we have linearity in the argument here and the last part here so it says that nebula X on the product F times G so we again put in the definition we find that this
+
+00:55:33
+is X of f times G and now we can save ourselves some work if we see that we can expand this into components and now from the last tutorial on Friday we know that this here is that for this expression a product rule holds so we have Del f Del x i times G Plus F Del G by Del x i so we know that from the last tutorial as we've already shown this and we find that the so this is x i and DX ion f times G Plus X so plus F times x i Del G by Del x i and that is just X on F times G Plus F times x on G
+
+00:56:45
+where this plus here is evaluated this lives on the small functions as well as this one does and this multiplication this multiplication lives on the real numbers as well as this one does so with this we finish this tutorial sheet about Connections [Music]
+

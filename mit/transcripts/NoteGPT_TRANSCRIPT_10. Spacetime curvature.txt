@@ -1,0 +1,291 @@
+00:00:00
+[SQUEAKING] [RUSTLING] [CLICKING]  SCOTT HUGHES: We're in for a uncomfortable couple of weeks, but we will do our damnedest to make sure that-- I'm not going to say life won't be disrupted. Life is going to be bloody well disrupted. No question of that. But number one goal is making sure everyone remains healthy, both physically and mentally. When we're forced to isolate a little bit, we lose the social contact that makes life worth living, and so we're going to be working really hard.
+
+00:00:37
+Look to your social group as well, and to your peers and and mentors and others to try to find a way to remain-- if you can't meet in person quite as much, there's the phone, there's Skype, there's FaceTime. Better than nothing, and that's sort of what we're looking at these days. And we're, of course, within the department, very committed to figuring out a way to make sure that the education that we're sort of here to do, we can deliver it to you in some form or another.
+
+00:01:04
+There may be a few bumps in the road while we work this out, but we're getting there. Hopefully, this will-- if there is a disruption coming, it will be short-lived. If not, let's just let's focus on what the important things are. And today, the important things are the geodesic equation. At least that's what we're going to start things, and then we're going to take it into the next major concept that describes manifolds with curvature, I think we were going to take advantage of.
+
+00:01:33
+So just a quick recap, where I ended things last time was we described geodesic trajectories. These are trajectories which parallel transport the tangent-- as they move along their world line, they parallel transport the tangent vector to that world line. And I forgot to put the physics up here. The key reason why this is interesting is that this corresponds to a free fall trajectory.  Free fall basically means you are moving under the influence of nothing but gravity. And if you want to understand gravity
+
+00:02:15
+in a relativistic theory, well, that's all you care about. So these are very important trajectories. And you know, it's not an exaggeration to say that solving this equation, OK-- so in this thing, I've kind of left agnostic what the spacetime is that you use to compute those covariant derivatives and to write your Christoffel symbols gamma, but it could be any spacetime that solves the relativistic field equations, which we haven't derived yet but we shall soon. This is what describes sort of small bodies moving
+
+00:02:46
+through that kind of a spacetime. That is the starting point to a tremendous amount of analyses in general relativity. I made a crack last time that I think 65% of my published research work is essentially based on solving this equation. I actually went and checked. It's probably more like 75%, OK. That wasn't actually an exaggeration. It shows up a lot. All right, so this, as we went through, and it's basically just saying that I'm going to take the covariant derivative of the tangent vector u and contract it with u.
+
+00:03:15
+OK, and there's a couple of other ways of writing this which I've written out here in just sort of notation. But if you expand it out, it looks like this. So what you're saying is that the vector u, the four-vector components u, are parameterized by some quantity which if it's a time-like trajectory, you can think of it as essentially the proper time as you move along that trajectory. This is just describing how this thing behaves as a function of that parameter, OK. So we're going to do some more with that.
+
+00:03:42
+To begin with, there's a couple of cool results that we can derive. So there's a nice side note. We can rewrite this in terms of momentum.  So if you imagine, let's focus on the version where I'm doing it per units proper time. And I'm going to take advantage of the fact that for a body moving on a time-like trajectory, so a body with a rest mass m, I just take this equation, and basically, you multiply by m twice, and it very clearly turns into something that is pretty much
+
+00:04:46
+exactly the same, but I just replace my u's with p's. Two comments I want to make about this. So first, and you know what, let me actually expand this out. I mean, it's quite obvious. Why don't we write it in terms of the components in the Christoffel symbols.  OK, so I'm going to write it like this. Let's do the following, OK. Recall that if I have-- so this trajectory, assuming, when you write like this, your parameter lambda is called an affine parameter. And that is a parameter such that the right hand
+
+00:05:27
+side of [INAUDIBLE] equation is 0 on a free fall trajectory, OK. If it's something that's proportional to you, it is a valid parameter, but it's one that's sort of been defined in a bad way. One thing we showed last time is that I can shift lambda by any constant, OK, with the right units. That essentially amounts to just changing the origin of my clock. And I can multiply it by any scalar, which essentially amounts to changing the units in which I am measuring time. And it's still a good affine parameter.
+
+00:05:57
+So here's an example of an affine parameter that I could use.  Suppose that I defined this such that an interval of affine parameter delta lambda is an interval of delta tau divided by m.  If I do this, well, then, p alpha is just d-- so remember this is now going to be-- let's write it like this. So this is my original definition of this thing. This then becomes dx alpha d lambda. So this is a way of choosing an affine parameter such that I'm essentially writing my tangent along the world line
+
+00:06:52
+as the momentum rather than something like the four velocity, OK? But there's something cool about this, so let's now go and just write what my geodesy equation turns into. It's basically exactly the same. It's just that I'm going to absorb the m on the first term.  Basically, it's exactly the same geodesy equation as I had before, but with u's promoted to p's. What's kind of cool about this is you can take a limit in which m goes to zero as long as your interval of proper time
+
+00:07:36
+goes to zero at a rate such that delta t over m is constant.  So what this allows us to do is just conceptually reformulate the geodesy equation, so that it's perfectly well behaved. Not just for time like trajectories, but for null or light like trajectories.  OK, so that's very important for us. A lot of the most important tests of general relativity actually come down to looking at the behavior of light as it moves in some kind of a curved space time. And the geodesy equation, if you sort of
+
+00:08:43
+interpret the way we thought about it before, you're kind of like, well, let's go back, and suppose I'm running it sort of in this one. And I'm thinking of my lambda as proper time. An interval with proper time is not defined along a light like trajectory, OK? So that just kind of makes it clear that that's fine. What we're going to do when we're talking about a light like trajectory is we're just going to find the parameter along the world line, such that the tangent vector is the momentum
+
+00:09:09
+along that world line. Mass doesn't even make sense. So the p that goes into this-- so when I do this, this is going to be a p, such that p alpha p alpha equals minus m squared. We still have that rule that it's always going to be minus m squared, which is zero in this case.  So this gives us a tool that we can use to study the motion of light as it reacts to gravity, for example.  OK, we'll switch gears, so I want to do one other trick based on this momentum form of things. So I can rewrite the geodesy equation as follows,
+
+00:09:59
+and it's going to start out where it just looks like I'm essentially doing what we call index gymnastics. I'm just sort of moving a few indices around.  So let's write this as p alpha, and what I'm going to do is contract it on this.  I'm putting the index and my momentum in the downstairs position now. First of all, you should stop and ask yourself, am I allowed to do that? If I do that, do I not generate some additional term that should then be moved to the right hand side?
+
+00:10:46
+Well, think about what I'm doing. If I am lowering an index, that essentially means that I am-- let's do the following. Let's change this to a gamma for a second.  What I have done here is I have essentially taken the equation I wrote over there, and I had hit it with g beta gamma, OK? I can always multiply by those things. The covariant derivative of the metric is zero. Because the covariant derivative of the metric is zero, it commutes with that derivative, so I can just walk it inside the derivative operator.
+
+00:11:28
+So I wanted to go through that just a little bit carefully, because that's actually a trick that once you've seen it once, I want you to know it well. Because I'm just going to do it many, many times as we move forward. There's going to be a bunch of times, where I'm taking the partial-- it's going to be the covariant derivative is something. I know it's going be raising indices willy nilly on whatever it's operating on. But I'm taking it down to the fact that I'm effectively moving a metric inside and outside here.
+
+00:12:04
+All right, so let's take that for the geodesy equation and expand it out. So I end up with mdp beta d tau, so I'm here using the fact that the p alpha that's on the outside, I'm writing that as mu alpha. And I'm using that to convert the derivative I get, expanding that into a d by d tau. And then I get a term that basically corrects the downstairs index.  Because it's a downstairs index, it enters with a minus sign.  Let's move this to the other side, and what I'm going to do
+
+00:12:57
+is make all the indices be in the downstairs position. Let's see. Hang on a second. Did I do this right? Sorry. Yeah, I'm going make all the indices in the downstairs position on this capital gamma, so I'm going to write this as follows.  OK, so I chose to write it this way as you'll see in just a moment. Because this is now symmetric on exchange of alpha and gamma. Let's expand that Christoffel symbol, so I'm going to have one term beta derivative alpha gamma.  We'll put this up above.
+
+00:14:06
+OK, so take a look at that last line of that expression.  So as written here, I've got a term that is symmetric on exchange of alpha and gamma. But inside my parentheses, bearing in mind that my metric is itself a symmetric object, I've got two terms, this one and this one, where if I exchange alpha and gamma, I get a minus sign.  So I got a symmetric contracted with anti-symmetric. Therefore, I can simplify this whole thing to something that only involves-- the only derivative I need to compute
+
+00:15:24
+is one partial derivative of the metric.  Now that's nice, but if you think about it, it might even be nicer than you realize.  Suppose you're working in some coordinate system, such that for a particular derivative, for a particular, let's say, it's the derivative with respect to your time coordinate. Suppose the metric vanishes.  Suppose that equals zero for some coordinate. Then you've just learned that a particular component of the four momentum, component of the downstairs four momentum
+
+00:16:38
+mind you, that is a constant of the motion along the worldwide.  I sort of said in words a few things about this a couple lectures ago when we were talking about Killing vectors. I'm going to actually tie this to that discussion in just a moment. This is often operationally the simplest way to deduce that you, in fact, have a constant motion, so there is some space times, very complicated ones that play huge roles in many of the kind of analysis we do. But you sort of look at them, and you kind of go, oh, thank god.
+
+00:17:30
+It's time independent. All right, that means I know p downstairs t is constant. It's independent of the actual angle. P downstairs phi is a constant, and that ends up giving us some quantities that we can exploit. And later when we start talking about certain solutions of the field equations and looking at the behavior of these things, we're going to see how we can exploit them to understand the motion of bodies in very strong gravity. Before I do this, let me connect what you're saying here
+
+00:18:03
+to-- what I'm saying right here to stuff that we did a lecture or two ago with the Killing vector.  So we know that, if a metric-- so this is something that we wrote down a little bit before. We also know that, if the metric is independent of some particular coordinate, there exists a Killing field, or Killing vector, which I will call c beta. What I want to do now is say, OK, how does-- let's look at how.  I'm going to define a particular scalar, so what do I get when I take-- oh, bugger.
+
+00:19:02
+That made no sense. There we go. What would I get if I take that Killing vector? I contract it with my for momentum. How does this guy behave as I evolve along a trajectory?  So the way we're going to solve this is we'll just look at the time of evolution as we move along the trajectory as we-- and the way we'll do that, I'll show you how to construct that time evolution in just a moment. We're going to assume p solves the geodesy equation, c solves Killing's equation. Let's see what happens.
+
+00:19:46
+So what we're going to do is look at d by d tau, so that the proper covariant derivative along the trajectory of this guy.  Well, this, if I take advantage of Leibniz's rule, so first of all, I can just write this as--  you know what? Let's throw an m into here just to make things nice and symmetric. The reason I did that is so that I can write that derivative in the following form, so this is what I want to evaluate. So one thing I do is expand out that derivative using Leibniz's rule, so this is--
+
+00:21:01
+let's first plot my Killing vector.  That term is like this. Then I got a term, and it looks like this.  Well, the first term, it's going to die. Because like I said, I'm going to assume p solves the geodesy equation, so p is a geodesy. I kill that. What about the second term? Well, for the second term, what I'm going to do is note that whenever you have some general two index object, so suppose I have some two index tensor, m alpha beta. I can always write this in the following way, right?
+
+00:21:54
+Where remember, the parentheses denote the symmetric part, and the braces denote the anti-symmetric part.  So this is just a theorem, right? You add it together. The 1/2s combine, and you get this thing back for the first term. And they combine the minus with the other one, OK? Very simple identity. So if I do that, applying it up here, this is symmetric under exchange of indices. This is anti-symmetric. It dies. The only thing that is left is this term.  But if this is a Killing vector by Killing's equation,
+
+00:23:24
+this equals zero by Killing's equation.  So the importance of this, you've just shown that what you get when you contract for momentum with the Killing vector gives you a constant motion. You've also shown that the component of the four momentum, the downstairs component of the four momentum associated with whatever coordinate the metric happens to be independent of, is also a constant of the motion. The key thing to note is both are actually very powerful and important statements. One depends on the coordinate system and the representation
+
+00:24:17
+you've chosen. The other does not, OK? So this is really true and useful, if you happen to have chosen the coordinate system such that this derivative is equal to zero. This is true, though, independent of your representation, so these are just two different ways of calling out constants of motion. And we actually find both of them to be very useful, so we're going to take advantage of them. There's a variation on this calculation that is on the next p set, and you will come back to this,
+
+00:24:56
+again, when we start talking about motion in certain space times in the second half of this course.  So let me just do a couple really quick examples. I've already kind of mentioned these, but let me give names to what these are.  So if your space time has a time coordinate, such that the time derivative of any metric element is zero, then you know that a time like Killing vector, which I will call ct, and I'm leaving the vector sign on it. This thing exists, and you also know that p downstairs t
+
+00:25:47
+is constant. Now the name that is given to this is negative energy. Why negative? Well, the main reason why it's negative is that we will often-- so let me just caution that this is not always an identity that we're going to use. We're going to use it in a huge number of problems that we care about. Many of the space times that we are going to work with are those that when you get really far away from whatever source is generating your gravity, it looks just like special relativity.
+
+00:26:25
+We call such space times asymptotically flat. In other words, as you get asymptotically far away, it reduces to the space time that we studied in the first couple weeks of the class when we were doing geometric spatial relativity. And in that case, we knew the timelike component was energy. And in a flat space time, you lower that time like component's index. You get minus energy. It just so happens when you go through the math carefully that negative of the energy ends up defined in this way.
+
+00:27:01
+It's going to be the quantity that is actually conserved everywhere. What's kind of cool is that we use this associated with asymptotic flatness to give you some intuition. But this is actually true, even if you're right outside of the vicinity of a rapidly rotating black hole. It is still the case that p downstairs t for the right choice of t is a constant.  In my notes, I also show you that there is an example of an actual Killing vector that corresponds to angle momentum. Again, we'll come back to that a little bit later,
+
+00:27:35
+so let me do one example geodesy before I sort of change topic a little bit.  I'm going to write down a space time that we either in person or on video are going to derive basically right after Spring break.  So suppose I hand you the following space time.  This function phi, I'm not going to say too much about it quite yet. What I will say is that it is small in the sense that when you're doing various calculations with it, feel free to discard terms of order five squared or higher.
+
+00:28:50
+And it only depends on the coordinates x, y, and z. No time dependence.  I want to examine slow motion in the space time.  So what I'm going to do is I'm going to imagine that my four momentum has the usual form. And I can think of it as having an energy, and sort of time like component, and momentum in the space like. The magnitude of the energy is always going to be much greater than the magnitude of the momentum, and in fact, will be approximately equal to the mass, where that is the mass of whatever body is
+
+00:29:47
+actually undergoing this motion in this space that I've given you.  OK, so the reason why I'm doing this is what we're going to do is you want to say, what does free fall look like in this space?  Well, I look at geodesics, so there is my geodesy equation. This slow motion condition that I've applied over here, that tells me that when I expand all these terms out here, this is going to be dominated by the time time term, OK? So it'll be dominated because of the fact that when you just look at the numerical magnitude of the size
+
+00:30:53
+of the components of the momentum, those are going to be the ones that dominate this calculation. Everything else, if you put your factors of c back in, they're going to be down by factors that look like v over c.  So my geodesic equation turns into--  so all I did was say, it's dominated by this. I'm going to move it to the other side of the equation.  So without giving away the plot, the beta equals zero component is going to turn out to be very uninteresting. Can you see why? Beta equals zero is energy.
+
+00:32:08
+When I evaluate that Christoffel, I'm going to end up taking a bunch of-- you know, I'm going to have all these zero, zero, zero, time, time, time components. It's time independent, though, so all my time derivatives are going to be zero. It's going to vanish, but we expect that. Because it's a time independent metric, all the crap I went through a couple months ago guarantees that the time like components, energy's conserved, right? So that's kind of what we expect,
+
+00:32:30
+so let's just focus on-- and if we had infinite time, which we clearly don't, it would be fun to talk about. Let's just move on and look at the spatial component of this. So as I look at the spatial component of this guy, let's focus on beta equals i.  What you find when you actually evaluate this guy is this turns into--  OK, so go ahead and look up your Christoffel formulas. Again, these are one of those things that, eventually, you get this memorized by the end of the term, but don't feel bad if you keep forgetting it.
+
+00:33:24
+No time derivative. No time derivative. The only thing that's left at the end of the day is essentially a gradient of the time time piece of the metric.  So taking advantage of the fact gi alpha staying in the upstairs position, you can write this as--  it looks like this. Now, if you like-- remember, phi is a small value. You can do binomial expansion on that. Knock yourself out. It's not going to be important in just a second.  Excuse me, minus one half one minus two, five to the minus one power.
+
+00:34:12
+So let me talk a little bit about what I did here in this last line. My delta i alpha is coupling to a partial derivative, so that partial derivative, the zero component of that is the time derivative. Everything's time independent, so that's done. Let's just skip it, so what I did was I changed my alpha to a j. Because I only want spatial derivatives, so I'm allowed to do that. Because I'm just acknowledging the fact that all the time derivatives are uninteresting. When I do differentiate g00, I am
+
+00:34:53
+differentiating negative quantity one plus two phi. The one doesn't contribute. All that is left is I took the minus on the inside, and there's my two phi.  So putting all of these ingredients together, I at last get my Christoffel is delta ij. I'm saying it looks like spatial gradient of phi. And for keeping score, there are higher order terms, which we're going to collect under the assumption that this phi is small. Plug it back into my equation of motion.  I end up with this.
+
+00:36:03
+Now let's cancel out the m's that appeared in here.  If we were not doing relativity, we would write this as-- ignore the fact that this is per unit proper time. This is dpdt is minus gradients of something that sure as hell looks like a potential.  What we are going to do in the lecture rate after Spring break, so going into Spring break, depending on which-- as I said at the beginning, it's a little unclear how these lectures are going to be delivered. But bear with me. We're going to essentially put together-- we're
+
+00:37:01
+going to take all the last ingredients and develop the field equations that describe relativistic gravity. The first thing we're going to do is solve this in a particular limit that describes a body that is weakly gravitating. This will emerge from this with phi being equal to Newtonian gravitational potential. What this is showing is that the geodesic equation, this equation that describes a trajectory that is as straight as possible in space time when it is given that particular space time, it does
+
+00:37:32
+give you the Newtonian equation of motion, OK? Yeah? AUDIENCE: Is there still supposed to be a factor of m on the right-hand side? SCOTT HUGHES: No, so it's possible I dropped an m somewhere in there. Go through that just a little bit carefully here, but you know, it's meant to be--  actually, you know what? I take it back. Sorry, so I think I may have messed up. I remember what it was, I remember what it was. There's an m squared here. Thank you, Alex. There was an m squared here. There was an m and an m squared here.
+
+00:38:07
+That's what I screwed up, and I think I have that wrong in my handwritten notes, which is probably why I messed that up. Yeah, so this equation was correct. And this should have been here like so. We'll clear this out and get this. Yeah, so module of that little bobble. I just want to show you this is essentially the Newtonian limit. Just give you a little look at where we go ahead, there are two ways that we are going to derive the field equations of general relativity. The first one essentially boils down
+
+00:38:34
+to looking for certain tensors that have the right symmetries and allow us to have sort of a quantity that looks like derivatives on the field equaling the stress energy tensor as the source. That only works up to an overall constant, and this is actually the way that Einstein originally developed the field equations, was worked out all this stuff, and then by insisting that the solution that emerge from this reproduced the Newtonian equation and the Newtonian motion, he was able to fix what that constant actually is.
+
+00:39:07
+There's a more sophisticated way of doing it, which I'm going to also go through. But it's worth noting that is the way Einstein originally did it. I had the privilege a couple of years ago-- I was at a conference in Jerusalem, where the Einstein Papers archive is located. And the guy who is the main curator of this was allowing those of us at the conference to look through them. And I actually found-- they had not yet quite categorized that, but it was the papers very much related to working
+
+00:39:36
+with these peculiar equations. I don't think he was trying to fix the coefficient, but this spacetime can also be used to compute the perihelion precession of mercury. And so it actually showed Einstein working through that. And the thing which is really cool was he screwed up a lot. The page that I was looking at was full of errors. It would say things like-- big things crossed out and then "Nein nein nein!" written on the side. And so it made me feel better about myself. All right.
+
+00:40:05
+So everything that we have done so far-- we've been dancing around this notion of what is called "curvature."  So I have used this word several times, but I haven't made this precise yet. Curvature is going to be the precise idea of how two initially parallel trajectories cease to be parallel.  So there's a couple of ways that we can quantify this. The one which I am going to use is one that's amendable to, with relative ease, developing a particularly important tensor, which
+
+00:41:11
+characterizes curvature. And so what we're going to do is look at the behavior of a vector that is parallel transported in a non-infinitesimal region of a curved manifold.  So for the purpose of this sketch, I'm going to make this closed figure be a triangle. When I actually do the calculation in just a moment, I'm going to use a little parallelogram. So around a closed figure, I want a curved manifold.  So suppose my curvature's actually 0, and I do this for a triangle that is on the blackboard.
+
+00:42:21
+So let's say I start out with a vector that points from A to B. And what I'm going to do is just parallel transport it. And in the case, goes, doo, doo, doo, doo, doo, doo, doo, doo, doo, doo, doo, doo. This is an experiment you can do at home. When it comes back, it's pointing exactly the way it was initially.  Let me also just note that this triangle-- the sum of its internal angles is 180 degrees.  Hopefully you all know that.  Now, the next one-- if I'd had a little bit more time,
+
+00:43:25
+I would have grabbed one of my daughter's balls to demonstrate this. But hopefully, if you guys have something like a soccer ball or a basketball, this is a little experiment you can do by yourself. Now imagine a triangle that is embedded on the surface of a sphere.  So let's say this is the North Pole of my sphere.  Here's the equator.  So what I'm going to imagine is-- let's say I start up here. Let's make the North Pole be point A. I move on a trajectory that is as straight as I
+
+00:44:15
+am allowed to be. And remember, if I'm a one-dimensional being living on the surface of this thing, that's a straight line. It only looks straight looks curved to us because we see a third dimension that this whole thing is embedded in. And this thing's going to come in, and it actually hits the equator at a right angle, OK? No ifs, ands, or buts about it. It's a bloody right angle. And then I'm going to-- let's call this point B-- walk back along the equator here till I
+
+00:44:42
+reach a point which I will call C. And then I'm going to go straight north until I come back up to the North Pole.  This is a triangle in which all three angles are 90 degrees.  So here is a great little experiment that's very easy for you to do at home. Does anyone happen to have a ball with them? OK, never mind.  Let me look at my notes for just a second.  So let's say I start out here at point A, and I have my vector pointing in the south direction. So this guy goes down here. And what you'll see is it goes down to the equator,
+
+00:45:45
+and it keeps pointing south. Then I bring it along over here, bring it back up to the north. The vector has been rotated by 90 degrees as it goes around that pass. It's a really, fun, exciting demo. If you've got a ball at home, you can do this over and over again. It's endless fun. I'm being slightly silly here, but there's an important point to be made. When you do this operation, parallel transport rotates the vector.  It turns out that, if you are working on a two-dimensional
+
+00:46:28
+manifold-- particularly, I think it's a two-dimensional manifold that is-- it may have to be of what's called constant curvature-- in other words, either a surface, a plane, or a hyperbola.  It actually rotates by an angle of whatever is internal angle of the triangle minus 180 degrees. So in this case, it would rotate it by 90 degrees. If you took this thing and you actually opened it up all the way, you could basically, just by taking this leg and making it as long as you want, you can make it to 0.
+
+00:47:09
+You can make it huge. And when you do so, you'll just rotate that vector all the more as it goes around.  This operation, by the way, is called a holonomy. I throw that out there because, last time I looked, there was a decent Wikipedia page on this that has some cool animated graphics on it.  Also, MathWorld.Wolfram.com had some good stuff.  So this has good descriptions that you can find it all on Google. All right. What I want to do is take some of these somewhat vague notions-- so hopefully, I made it intuitively clear
+
+00:48:05
+that there's something very interesting that happens when I parallel transport a vector around these figures, depending upon the underlying geometry of the manifold that they're embedded in. Let's try to make it more precise now. And I'm going to start all the way over here because I'm going to want big, clean boards to illustrate this.  OK. So suppose I'm in some coordinate system, and this line I've written here represents a line of constant. So lambda is one particular member
+
+00:48:49
+of your set of spacetime coordinates, so it might be time or radius or maybe you work in some crazy querying system. But lambda is meant to represent some particular member of your coordinate system. And then there's another track over here, which is displaced from it by delta x lambda, OK? So everywhere along here, one of your coordinates is equal to the value, x lambda. Everywhere along here wanted, that same coordinate's equal to x lambda plus dx lambda.  Along this trajectory, there's a different coordinate
+
+00:49:26
+that is kept constant. Lambda and sigma are not the same. So there is some coordinate whose value I will label as sigma that is constant along there. And along this one, it is also constant.  Let me label the four vertices, A, B, C, and D. And let me number these four edges-- one, two, three, and four. What I am going to imagine doing is parallel transporting some vector, v alpha, around this loop.  So what I'm going to do is generate the equations that describe how it changes as a transport.
+
+00:50:33
+I'm going to start at A, so v is pointing along here. Transport it to B to C to D and then back to A. So let me very carefully do the first leg. Once you get the pattern, the others can be done a little bit more quickly.  So the coordinate-- let's see. Hang on just one moment. Yeah, so I am going from A to B first.  So as I move from A to B, x lambda remains constant, and the coordinate x sigma is increasing. So I am moving in a direction that points along the unit vector associated with the sigma coordinate.
+
+00:51:30
+So I'm going to say that there's a basis vector. I shouldn't have said unit vector. I don't know its magnitude. I'm pointing along the direction in which coordinate sigma is increasing. And so parallel transporting this vector amounts to requiring that my covariant derivative along the sigma basis vector is 0.  This can be written out. Turn this into index form.  It looks like this.  OK, no surprises. So now what I'm going to do is, essentially, I'm going to write down an integral that would describe
+
+00:52:49
+how v alpha changes as I move from A to B. When I do this, I will then get the value of the vector at point B. So the way I'm going to write this is v alpha at B is equal to v alpha, the initial value of this thing, minus what I get when I integrate along leg one-- gamma alpha sigma mu phi mu dx sigma. Everyone happy with that? So everything I've done over here, so far, I think, is probably just fine. When you've got a differential equation, integrate it. Boom. You integrate it. You got your new thing.
+
+00:53:58
+We're going to actually solve these integrals in a few moments, but we'll just leave it like this for now. So that's the first step. I got a couple more to do, but hopefully you can now see the pattern.  If I go from B to C, I am now moving in the direction of lambda, and I'm holding the value of that coordinate constant at x sigma plus dx sigma.  So the vector at C is going to be equal to this thing at B minus what I get when I integrate along path two, gamma alpha gamma mu.  We got two more to go.
+
+00:54:56
+So this one I am, again, integrating along the sigma direction.  But notice, I switched the sign. I switched the sign because now my coordinate's going in the direction where it's decreasing rather than increasing.  Get some fresh chalk.  So we've taken it from A to B, B to C, C to D. Let's take it all the way around.  So take it all the way around my second value at point A. This is going to be v alpha at D. And again, this guy is coming in the other direction. So I'll enter this one with a plus sign.
+
+00:56:42
+And I get this. OK, so the way I'm going to quantify curvature is buried in all this stuff. Let's dig it out. So the first thing which you're going to do is I'm going to say, if I take v alpha final, basically what I want to do is write this guy out, substitute in for v alpha d, which requires me to substitute in for v alpha C, [INAUDIBLE]. So I'm going to get a big, old mess here. But in the end, the first term will be v alpha initial. So let's subtract that off. That is the change.
+
+00:57:26
+When you actually work this out, it's going to involve four integrals.  I have chosen to write this in a way that highlights a property I'm going to take advantage of in just a moment.  OK, so the reason I wrote it in this way-- so I have the integral along four minus that along two plus integral along three minus that along one-- is that each one that I've written here-- they represent parts that are sort of parallel to each other on the figure, just offset from each other by a little bit, parallel
+
+00:58:40
+but offset paths.  Yeah, let's put this one high.  Hang on just one moment. I have a thing in my notes that said I needed to fix something. Did I actually fix it? Yeah, I did. OK.  So schematically, let's look at that first line. The integral along four of-- I have a something, dx lambda, minus the integral along path two--  of a something, dx lambda.  So it's the same basic function inside each of these, but this one is being evaluated at x sigma. This one is being evaluated at x sigma plus dx sigma.
+
+01:00:14
+I can combine them. So this becomes the integral-- let's say it's along two.  Pardon me for a second. Make that a little bit bigger.  So what I'm doing is I'm saying that I have a function evaluated at x sigma minus a function evaluated at x sigma plus dx sigma. Let's do a little binomial expansion. It's equivalent to an integral along a single path of essentially what I get, the first order Taylor term of that.  Do the same thing for the other guy.  Integral along three, I have a something,
+
+01:01:25
+dx sigma minus integral along 1, same something, dx sigma. This guy is being evaled at x lambda x delta x lambda. This guy is being evaluated at x lambda. And so this whole thing is approximately equal to integral along one.  So it looks like this, OK? So if you want to do this a little bit more carefully, knock yourself out.  Part of that-- I probably should've said this explicitly, but hopefully the notation made it clear-- I'm treating these little deltas as small quantities, OK? So it makes sense that I can introduce a little first order
+
+01:02:23
+expansion here.  Let's leave the picture up, but I'm going to clear this board. With this way of doing things, let's rewrite my integrals.  So what this gives me is delta vx alpha equals-- should really be an approximately equal because we're truncating this expansion. So the integral from x sigma--  x sigma equals dx sigma. Alpha x lambda [INAUDIBLE] x lambda of gamma alpha sigma mu phi mu dx sigma minus--  So this is just taking what I wrote there. Schematically, this is what you get when you actually
+
+01:03:47
+expand all those guys out. All right.  So I've got a couple derivatives here. And I'm doing an infinite test of a couple of infinitesimal integrals. When I'm doing infinitesimal integrals, they're very simple to evaluate. So let's just go ahead, evaluate them, and also expand out those derivatives.  Doing so, this cleans up a fair bit. First one, I'm going to be able to finally get rid of those damn integral signs.  So I'm going to wind up with something that is essentially
+
+01:04:49
+quadratic in these things. It's going to look as the product of my little infinitesimal displacements. And I'm going to wind up with a term that involves a partial derivative of my connection here.  So we've got one term looks like this. We've got another term that looks like this.  So don't worry about the index gymnastics a little bit. If you go through it carefully, you'll see it. Pause here for a second. This expression sucks. The reason why it sucks-- it's not just because there's lots of terms.
+
+01:05:40
+There's a bajillion indices on it. But it's because I've got one term that is linear in the vector and one that's linear in the derivative of vector. However, don't forget-- we get the derivatives of the vector by parallel transport. So we parallel transported this guy, which tells us that these derivatives are simply related to the vectors themselves. If I move that to the other side, that's equivalent to covariant derivative of v equals 0. So if I want to get rid of my derivative
+
+01:06:20
+with respect to x lambda, here's I you'd write that. Likewise, if I want to get rid of-- and I do-- my derivative with respect to x sigma, just replace lambda with sigma.  So now let's sub these in.  Now, in 1980, the person who became my PhD supervisor wrote this giant review article on gravitational radiation. And either the last or second to last section of the paper-- I'm reminded of it right now. It begins with the sentences, "The end is near. Redemption is at hand. The end is near.
+
+01:07:26
+We shall soon be redeemed." All right. Let's plug these in.  So we plug these guys in here. What do we get? Delta v alpha equals these things.  We're supposed to put this in a parenthesis.  And now, what's going to happen when I get rid of all those derivatives is I'm going to have a bunch of terms that look like Christoffel squared.  As Scooby Doo would say, ruh-roh, but that is just what we have to have. Incidentally, what you see when you do something like this is I now have terms entering into this whole thing that
+
+01:08:42
+involved derivatives of the metric times derivative of the metric. Many of you may have heard sort of the slogan that general relativity is a nonlinear theory of gravity. There's where your nonlinearity is actually going to turn out to be entering, is the fact you add these squared terms in here that involve metric times itself entering in such a non-trivial and important way. What I'm going to do, finally, on this is-- so this is slightly annoying because I have one term in v mu, one term in v nu.
+
+01:09:09
+But look. Both mu and nu are dummy indices. They're dummy indices, so what I'm going to do is-- on the last term or the last two terms, I'm just going to exchange mu for nu. And what I finally get is that the change in the vector v transported along a loop whose sides are delta x lambda and delta sigma-- it's a quantity that is linear in those two displacements. It's linear in the vector and involves this four index tensor whose value depends on derivatives of the connection
+
+01:10:16
+and two nonlinear terms in the connection.  This quantity is a mathematical entity known as the Riemann curvature tensor.  Even though it involves connection coefficients, Christoffel symbols, and we argued before-- and you guys did a homework exercise where you show this-- that the connection, the Christoffel, is not tensorial, this combination of them, basically that the terms come together in such a way that, when you change your representation, the nontensorial bits cancel each other out from the terms that are being subtracted against one another.
+
+01:11:28
+So this is, indeed, a true tensor.  There's an equivalent definition, if you are reading Carroll--  so essentially, what I just walked through here is an integral equivalent of the following commutator being applied to the vector v. Some textbooks simply state the Riemann tensor is related to the commutator of partial derivatives acting upon a four-vector like so. With a little bit of effort, you can show that what this is is, essentially, a way of-- what I worked out over there is a geometric way
+
+01:12:17
+of understanding what that commutator means. Incidentally, one thing, which I think is worth calling out--  when you apply this to a one-form or a downstairs component, you get this with a minus sign. If you are reading the textbook by Schutz, Schutz has this sign wrong in its first edition.  Hopefully all copies of the first edition are rare enough now that, if you are looking at Schutz-- Schutz it's actually a wonderful textbook for an early introduction to this field, but if you happen to get a hold of the first edition,
+
+01:13:07
+just be aware that there is-- I think it's on page 171 of the textbook, you'll see this written. So I've actually written a couple papers with Bernard Schutz, and so I'm allowed to tease him. Not only did he get it wrong. He actually came up with an intuitive argument that is wrong.  Sometimes you just need to sit down and bloody well calculate something because you can almost always come up with an argument to convince you of something that's not true. And I'm afraid that's what he did in this particular case.
+
+01:13:33
+So I have a couple notes in there about what is sometimes called curvature coupling, which essentially tells us-- I pointed out in the last lecture that when we're dealing with geodesics, strictly speaking they describe, completely point-like, almost just a monopole and no structure and no shape whatsoever moving through spacetime. If you have a larger body or a body that has any kind of multipolar structure associated with it, those multipoles-- you can think of that additional structure is essentially
+
+01:14:02
+filling up part of the local Lorentz frame around the center of mass of that point, and they couple the spacetime and push it away from the geodesic. This Riemann tensor actually describes the way in which that body couples to the background spacetime, that it might be falling in. So this ends up playing a really important role. For instance, when you study the precession of equinoxes, we learn how to do this Newtonian theory using the action of tides from the Earth and the moon on a planet like the Earth.
+
+01:14:31
+This ends up being the quantity that mathematically encapsulates tides and general relativity. So it enters into there. So I'm going to sketch through this very, very quickly, simply because we don't have a lot of time, and there's good discussion of this in various other places. But let me just point out that-- you look at this thing. It's a four-index tensor, and each index can take four values.  That makes it look like it has 256 components.  Now, I'm not going to step through this in detail
+
+01:15:14
+right now. This will either be in the next lecture that I do this, or you'll watch me on a video once this gets recorded, depending upon how things unroll in the next 24 hours. Riemann has a lot of symmetries. I will go through those symmetries carefully, either in lecture or on a video.  So symmetries-- Riemann-- and you know what? Let me write it out in n dimensions from n to the 4, which is what you'd expect for a four index object in n dimensions, down to n squared times m squared minus 1 over 12th.
+
+01:16:12
+So where I want to conclude today is let's just take a look at what that turns into for a couple of different numbers and dimensions.  So if you do n equals 1, you get 0. So the Riemann tensor has no components on a one-dimensional manifold. There's a simple reason for that. Remember the way we defined it, OK? We did this by parallel transporting around a particular figure. If you're in one dimension, this is all you can do. There's no holonomy operation in one dimension. You can't do that.
+
+01:16:52
+So no curvature. If you want to be a real pedant and someone says, well, look at a curved line, you'll go, ah, but lines can't be curved.  n equals 2. So you get 2 squared, 2 squared minus 1 over 12-- you get 1. So if you're working in two dimensions, there is a single number that characterizes the curvature at every point, and this is often thought of as just a radius of curvature. Simplest example is if you have a sphere. Sphere is completely characterized by its radius. But if you imagine that it's like a sphere that you squash,
+
+01:17:39
+well, you can imagine at every point that there is a particular sphere that is tangent to that point, and the radius of curvature of the tangent sphere is the one that defines the curvature at that point. I'm going to skip three because it's not all that interesting. The one that is more important is, if you do n equals 4, you'll wind up with 16 times 15 over 12, which is 20. This is exactly the number of derivatives that we could not cancel out when we did the exercise a couple of lectures ago of assessing
+
+01:18:18
+how well we can make spacetime have a flat representation in the vicinity of some point.  It's the number of leftover constraints at second order in a freely falling frame.  All right so I'm going to stop there for today. That's a nice place for us to stop.  Keep watching your emails. We're in an interesting situation. Life at MIT is evolving. But when we pick it up in one form or another, what I'm going to do first is talk a little bit more about the symmetry of this object
+
+01:19:15
+because there's a couple of explicit symmetries that lead to that reduction from n to the 4th to n squared n squared minus 1 over 12, and it's useful for us to go through them and see what they look like. And then I also want to talk about a couple of variants on this curvature tensor, OK? So just to give you a little bit of a preview-- the curvature tensor-- it's a four index object. We have argued already that we're going to end up doing things that look like looking at derivatives of the metric
+
+01:19:48
+being equal to our source. Our source is a two-index object, the stress energy tensor. We've got gotta get rid of two indices. And so what we're going to do is we're going to essentially contract this guy with a couple of powers of the metric in order to trace over certain combinations of indices and make two index variants of the curvature tensor. And we're also going to look at derivatives of this, because it turns out that there is a particular combination of derivatives at the Riemann tensor
+
+01:20:16
+that has an important geometrical meaning. What we're going to find is that, when we combine these two notions, there is a particular divergence of a particular variant of the curvature tensor that is 0. In other words, we can make a curvature tensor that is divergence-free. Our stress energy tensor is divergence-free. I wonder if one is related to the other. That, in a nutshell, is how Einstein came up with general relativity, by asking that question and then just seeing what happened. So that's what we're going to go through next.
+
+01:20:48
+
+

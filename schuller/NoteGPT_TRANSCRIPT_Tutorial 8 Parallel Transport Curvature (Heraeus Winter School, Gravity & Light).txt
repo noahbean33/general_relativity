@@ -1,0 +1,111 @@
+00:00:00
+foreign this program is being presented to you by the herreas international winter school on gravity and Light [Music] so welcome back to the W.E Harris International winter school on gravity and Light so tutorial 8 will be about parallel transport and curvature as usually we start with exercise one and some multiple choice questions where the scientist spark discussion and as a self-test so is it correct that a parallel Vector field is certainly a parallely transported Vector field no this is not
+
+00:00:47
+correct a parallel Vector field is a weaker notion of a than a parallel transported Vector field however the inverse that are parallely transported Vector field is certainly a parallel Vector field this would be correct but in the way it is presented here it is not correct on a flat manifold the other parallel equation for a curved gamma in any chart u x is gamma double dot I of Lambda is zero so again recall in a flat manifold we have no curvature also we have a collection of charts in which the
+
+00:01:34
+connection coefficient functions all vanish however this doesn't have to be the case in every chart of the atlas we already saw an example for the flat manifold namely the flat plane and an example for a chart the polar coordinate chart where the Gammas didn't vanish so and then the auto parallel equation doesn't read only gamma double dot I is zero so this is wrong Newton's Second Law formulated as f i of gamma of Lambda is M gamma double dot of I of Lambda cannot be correct yes this
+
+00:02:20
+is now correct so the statement is correct as the left hand side is a 10 is a vector the right hand side however isn't so the scamma double dot doesn't transform like a tensor it is not a tensor it is not a vector only if we would add plus gamma i m n gamma dot m gamma Dot N so the full auto parallel equation so the for entry from the outer parallel equation then the right hand side would also transform like a vector and then we would have Newton's Second Law so but in this form as is presented here Newton's Second Law
+
+00:03:15
+cannot be correct on a flat manifold parallel transport around a closed curve results in the same vector well definitely it does so if everything's flat we have no curvature at all if we take a vector power and do parallel transport around a closed curve we always have to end up at the same Vector again there's no chance to get any other vector and the introduction of torsion does not change the outer parallel equation well that's also correct so look at the auto parallel equation in the chart
+
+00:04:05
+we have that this is gamma double dot I plus gamma a i m n gamma dot m gamma Dot N of course everything with respect to the X chart is zero this expression now is symmetric under the exchange of M and N here so here we only see the symmetric part of gamma MN and the introduction of torsion were just me would mean that we get an anti-symmetric part into the Gammas however the auto parallel equation only sees the symmetric part and doesn't take care about the anti-symmetric one so the introduction of torsion changes
+
+00:05:05
+nothing so the statement is correct and the Riemann so in a second second exercise on here deals with Riemann curvature women curvature is not a three one tensor field it's a one three tensor field so the statement is wrong it is anti-symmetric in its last two slots well let's therefore write down what r how R is defined or as we denote in the lecture it is ream of it eats and a co-vector Omega and three Vector fields that X and Y and is defined as the covector Omega acting on covalent derivative
+
+00:06:07
+derivative with respect to Y on that minus current derivative with respect to y and one two with respect to X acting on that and we get minus current derivative of the commutator x with Y acting on that so now we can look what happens if we exchange X and Y so we exchange the entries in the last two slots but we find that this is Omega y Omega and nablo Y number X on set minus nubla X number of Y on that minus and here we change the order in the commutator also if we change the entries in the commutator
+
+00:07:12
+we get out a minus sign and then we see that we can pull out an overall minus sign and we end up again and an expression we identify as minus ream of Omega x y sorry no this is this here set X y so if we exchange the entries in the last two slots we pick up a minus sign so and this is the Criterion for anti-symmetry so the statement is correct the Riemann curvature quantifies the failure of second covarian derivatives to satisfy schwartzville well yes it does this was already shown in the lecture
+
+00:08:18
+the Riemann curvature has D to the power 3 times D minus 1 over 1 half independent components so we therefore have click add the component so in the presentation in the chart so we know that the Riemann curvature is a 1 3 tensor field so it takes has indices a up and BCD down and now we already showed in the second question that it is anti-symmetric in these two indices in these two slots and in dimension so maybe this D here is a little misleading as this is also what we call Dimension here so let's just name it m and we know that
+
+00:09:19
+two so that if we have such an anti-symmetric pair we have D times D minus 1 over 2 independent components just for this pair here and we have two other indices left A and B that can run arbitrarily from 1 to D so we have deep possibilities in this slot D positive times D possibilities here and D times T minus 1 over 2 com independent components here which is just D to the power three D minus one divided by two independent components of the riemanned curvature so this is correct and the Riemann curvature if it is if it
+
+00:10:30
+is non-vanishing obstructs the existence of coordinates with respect to which the Gammas vanish yes this is true as we will see in a second the Riemann curvature is fully determined by the connection coefficient functions and thus if the curvature doesn't vanish this means that the Gammas cannot vanish everywhere so this is correct so we now have exercise one done and we move on to exercise two so where connection coefficients appear so let's recall the auto parallel equation for a curve gamma
+
+00:11:22
+in the chart free formulation as well as in the formulation with respect to a chart so the chart free formulation is just that the covand derivative with respect to some V gamma acting on itself V gamma is zero and in the chart u x we see that this is gamma double dot with respect to the X chart and we take the ith component Plus the connection coefficient function with respect to the Chart X of in this is i m n and Gamma dot m and Gamma Dot N is zero so this is the auto parallel equation for a curved gamma
+
+00:12:36
+both of both should be memorized next question is to determine the coefficients of the Riemann tanza with respect to a chart ux in terms of the connection coefficient function so we again write down ream the definition of Riemann curvature which is rim of Omega x y z that is Omega of nabla X Y on that minus y blah blah X on Z minus nubla of the commutator X Y acting on that and now we use the chart induced basis fields to find the compile so the coefficient of the Riemann tensor so we say and we put omega as Del x i
+
+00:13:52
+use so here we have to of course this entry set goes here the entry X and Y are here by convention so that everything is correct so we use that set is Vector field Del x j X is Del Tau X k and Y is Del Del x m so find that ream of Tau x i Delta x j Delta x k and Delta x m is so we just plug in we have Del X I acting on nabla with respect to Tau Tau x m k not blood Tau with respect to Delta X m acting on Tau Tau x j minus or with respect to Del Tau x m x k acting on Delta x j minus Tau Tau X okay
+
+00:15:30
+commutator with Delta x m acting on Delta X Jane so I already got shown in a lecture that for such a child in new spaces it's commutated zero and this term kicks out so now we're left with these two terms in here and now we identify this covering derivative with respect to a such a base field acting on another one yeah well this was just the definition of the connection coefficient functions so this is gamma r J M Tau Tau x r so what we get is this is Del x i on the outer cover and derivative stays for
+
+00:16:35
+the moment and the inner one gets replaced by gamma r j m Tau Tau XR minus and in this term the same happens however we only have to exchange the index m and K I don't know it this way since the exactly same things happen as in the left term only exchange with indices so and now we have here connection coefficient functions and the spaces field and we can act on it with this co-rand derivative with a product rule so we find that this is Tau x i so if we first act on this connection coefficient function well
+
+00:17:38
+this is the action is then easy we just take the vector field Del x k applied to gamma r j m and this is already everything since this was a function a covalent derivative again function is just the vector field applied to the function and now we find that we see that a coval derivative with respect to such a basis field on a basal field well this is again a and of course here we have the style Del XR which has not been touched yet and here we write the gamma RJM in front and we have the covenative
+
+00:18:36
+to respect to del.xk on Del dot XR well that gives us just another gamma with R and K as in this is here and Delta x s we get the same terms again with the indices M and K exchanged here and now we're able to pull in the style XI acting on these basis Fields here so we get that that's a style x k acting on gamma r j m and we get a Delta i r and in the second term we get this is comma r j m gamma s r k and we get on Delta i s minus the same terms exchanged with M and K and the result now is
+
+00:19:39
+we have that this is Del Tau x k on gamma i j m from here we are from this other part we get this is minus Delta x m on gamma i j k and this term here produces a gamma r j m gamma I r k minus from this part here gamma r j k gamma i r m and this is these are the components of Riemann curvature green i j k m and this is an important formula which you need to remember so we move on to the last questions of this exercise first it says that if we Define the Richie tensor Rick and is defined as the Riemann tensor
+
+00:21:06
+put with a contraction over the first and third index and we fill in the two slots with two Vector Fields X and Y and as this definition Define as 0 2 tensor well yes it does the Criterion for something to to be a tensor is that it is multi-linear so see Infinity multilinear in each slot however we don't need to check that explicitly in this case as we know that the Richie tensor is defined by the Riemann to curvature tensor so when we know the Riemann curve which attends us of course C Infinity
+
+00:22:08
+multilinear in each of its slots we contract two of these Lots but of course in the remaining two slots the it still is C Infinity multilinear so the Richie tensor is a tensor because the Riemann tensor was one and we defined the rigid tensor by the rieman tensor and the last question is now does a one-dimensional manifold with a connection have curvature why so curvature is so if we want to make any statements about curvature we need to look at three month tensor so on a one-dimensional manifold
+
+00:22:58
+the only connection coefficient functions that can exist are Gamma 1 1 1. there are no others and we are one dimensional however if we now go back to the component the component of the Riemann tensor here we see that if we plug in Gamma 1 1 everywhere that this just kills out so each term cancels and we end up at Rheem of 1 1 1 1 1 is 0. so the Riemann curvature vanishes everywhere and so the one-dimensional manifold cannot have curvature even if we Define a connection on it so this exercise provided you with some very useful
+
+00:24:00
+formula that you should remember so now we come to exercise three the round sphere where we want to explicitly calculate components of riema curvature for the round sphere so we consider the round sphere and they charge where the only non-vanishing connection coefficients are given by gamma 122 and Gamma 2 1 2 which is equal to gamma 2 2 1 so we live on a torsion-free connection now we want to calculate component functions for Riemann curvature so we start with component dream one two one two which lives on X inverse of Theta Phi is
+
+00:24:49
+on the manifold then we use the formula from obtaining exercise two for the component of the Riemann curvature so this is Tau by Del X1 living on X inverse on Theta Phi and this acts on gamma 1 2 2 also gets evaluated on C chart n x inverse of theta and Phi we get minus Delta X1 all again on a manifold node Del Del X2 of course and we get that this is Gamma 1 2 1 also of X inverse of theta and Phi then we get Plus again a gamma the r has to stay for the moment and we have 2 2 here evaluated at Apex inverse of theta and
+
+00:26:12
+Phi and we get gamma the r of stays here we've got a one and a one also on X inverse of theta and Phi and we hit a minus the r has to stay for the moment we get two one at X inverse of Theta Phi and the gamma of 1 r 2. X inverse of theta and Phi so now we see Gamma 1 to 1 is Vanishing so this term goes out also comma 1 R1 vanishes no matter what we insert for R so this term is gone and from here the only contribution we will find is for R equals 2. as we then have gamma 2 2 1 and Gamma 1 2 2 which are both non-vanishing
+
+00:27:25
+so we then have to evaluate what this style Del X1 acting on this component function is well this is basically the derivative so what we get is we get we have to derive this expression here with respect to the first entry so this is minus cosine squared theta plus sine squared theta and from here we get a minus gamma 221 is the co-tangent Theta and Gamma 1 to 2 is minus that gets a plus here sine Theta cosine Theta so we know that the co tangent of theta is defined as cosine Theta by sine Theta
+
+00:28:33
+and we can insert this we see that the sine Theta cancels and we get minus cosine squared theta plus sine squared theta plus cosine squared theta which is sine squared theta so the component 1 2 1 2 of the Riemann curvature is sine squared theta and the question asks us now to also calculate ream of 1 1 1 2 of course also evaluated at X inverse of theta and Phi so we have to play the same game again so we again have that this is Delta X1 acting on gamma 1 1 2 at X inverse minus Del Tau X two acting on gamma
+
+00:29:58
+one one one at X inverse plus gamma R has to stay for the moment we have one two here and we have the Gamma 1 r 1 here and also at X inverse of theta and Phi and we get a minus the r has to stay we get 1 1 here at X inverse and Gamma 1 R2 at X inverse of theta and Phi so we see Gamma 1 1 2 well that's definitely vanishes so this one is gone Gamma 1 1 1 also vanishes this term is gone here we again got a term in Gamma 1 R1 where we see this also vanished independently of any R so this term is
+
+00:31:15
+gone since this is zero and here we see we have a gamma with two ones here in the lower entries lower indices well that is awesome Vanishing independently of R so this term is also gone and we find that this component of the Riemann curvature vanishes so now we have seen an example for the explicit calculation of the component of Riemann curvature so of course there are more component functions of the women curvature so for example already here this is of course minus ream of one two two one as we now have now
+
+00:32:15
+can change to exchange the last two indices however we know that the Riemann curvature is anti-symmetric in these last two slots so we pick up the minus sign here other components could be ream of two one one two or ream of two two one two and of course also if you exchange both the last two indices but that one is minus ream 2 1 2 1 and this one is minus rim two two two one so these are all the other remaining component functions and thus we solve the exercise so we now move on to the last exercise
+
+00:33:24
+exercise four about how not to Define parallel transport so hence he defines two vectors X at a point p and Y at a point Q as parallel if all their components with respect to some chart ux are equal and now we wonder whether this notion of parallelity is well defined since it is defined with respect to a chart so we have to check and indeed we will prove that this is then this notion of parallelity is still defined so we look at the vector X the one that lived at P but in another chart why so we know that X is a vector so it
+
+00:34:20
+transforms like picked up the dial y i by Del x j at the point p and we get that this is x j in the X chart now we can apply hence definition of parallelity and we find that this is delt why I Del x j nothing changes here at the point P but now we know that all components of X are the same as for y in the in this chart X so we can just pull and Y here but then we have to go back to the other chart why and we get Del X J by Del y M at the point Q since y looped since the vector y lives in tqm and we get that this is y
+
+00:35:33
+m then the Y chart again so now we see we have two two terms of two terms from the Transformations however the first one is evaluated at Point P the second one at the point Q so those two can't be contracted to a delta in in general so this is not the dowja and that's why and so usually the components of this Vector acts in another chart are totally different from those and then from those of the other Vector y so this definition of parallelity is heavily chart dependent and thus it is ill-defined
+
+00:36:31
+we now look at an example for this so we take the real world R2 and we have a set of eight vectors here so in the real world of course we see okay they're parallel so we know what R2 is and we and we know that this these factors are all parallel also in the sense we defined it in the lecture and now we go to the Chart ux which is just our Cartesian chart so to say and there we see okay these vectors are still parallel and even parallel in the sense hence you define it so all the components are still the same
+
+00:37:27
+however if we now look at R2 from our polar coordinate chart which looks totally different so we see that the these parallel vectors they get mapped to vectors that ancient would never ever declare parallel so the component of so the component of this Vector here are definitely different from components of this vector so even in if in one chart the parallel vectors from the real world as we say as we say for parallel vectors they also seem parallel enhancing's definition however in the other chart here
+
+00:38:16
+they are not parallel for Hansen however for us they are still parallel since we know that this is only the chart representation of these vectors but we have to decide for parallelity on the real world so on the manifold itself and there we know and there we can see these vectors these eight vectors are parallel so this is the end of this exercise and since this was the last exercise also the end of the tutorial and we hope to see you next time [Music]
+

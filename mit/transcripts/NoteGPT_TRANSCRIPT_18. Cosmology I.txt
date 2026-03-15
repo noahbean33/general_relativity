@@ -1,0 +1,267 @@
+00:00:00
+[SQUEAKING] [RUSTLING] [CLICKING]  SCOTT HUGHES: All right. So at this point we're going to switch gears. Everything that we have done over the past several lectures has been in service of the approach to solving the Einstein field equations in which we assume a small perturbation around an exact background. Most of it was spent looking at perturbations around flat space time. A little bit in the last lecture we touched on some of the mathematics and some of the analysis when you curve-- you expand around some non-specified curved
+
+00:00:42
+background. I didn't tell you where that curve background comes from. Today we'll be-- this lecture will be the first one in which we begin thinking about different forms of different kinds of solutions that arise from different principles. We're going to begin this by studying cosmology.  It's the large-scale structure of the universe.  So from the standpoint of-- from the standpoint of the calculational toolkit that we will be using, this is going to be the first example of a spacetime
+
+00:01:33
+that we construct using a symmetry argument.  We are not going to make any assumptions that anything is weak or small or any kind of approximation can be-- any kind of an approximation can be applied. What we're going to do is ask ourselves, suppose spacetime-- at least spacetime on some particular very large scales-- is restricted by various symmetries.  So we will apply various restrictions to the equations and to the spacetime by the assumption that certain symmetric symmetries must hold.
+
+00:02:33
+Let me reword this. By demanding that certain symmetries hold.  Doing so will significantly reduce the complicated non-linear dynamics of the field equations of general relativity. This will allow us to reduce those complicated generic equations into something that is tractable.  So let me describe-- whoops-- let's me give a little bit of background to this discussion. Let me get some better chalk, too.  So as background, I'm going to give a little bit of a synopsis of some stuff that is described very nicely in the textbook by Carroll.
+
+00:03:43
+So for background, part of what we're going to consider as we move into this is a notion of what are called maximally symmetric spaces.  So I urge you to read Section 3.9 of Carroll for extensive discussion of this. But the key concept of this is that a maximally symmetric space is a space that has the largest number-- so let's say MSS, maximally symmetric space, has the largest number of allowed Killing vectors.  If your space has n dimensions, it has n times n plus 1 over 2 such Killing vectors.
+
+00:04:54
+And recall, if you do a lead derivative of the metric along the Killing vector, you get 0, OK? So it's that these n times m plus 1 Killing vectors all define ways in which, as you sort of flow along these vectors, spacetime is left unchanged. Intuitively, what these do is define a spacetime that is maximally homogeneous-- I shouldn't say spacetime yet, we haven't specified the nature of this manifold. So this defines a space that is maximally homogeneous.  And homogeneous means that just--
+
+00:05:44
+it has uniform properties in all locations.  And it is maximally isotopic.  Which is a way of saying essentially that it looks the same in all directions.  In the kind of spacetimes that we are familiar with, something-- a spacetime that is highly isotropic is one that is invariant with respect to rotations and boosts, and one that is homogeneous is something that is invariant with respect to translations. So let me give two examples.  In Euclidean space, that is a maximally symmetric three-dimensional space, n times n plus 1 over 2 equals 6.
+
+00:07:17
+And those 6 Killing vectors in Euclidean space correspond to 3 rotations and 3 translations.  Minkowski flat spacetime: n equals 4. n times n plus 1 over 2 is equal to 10. I have 3 rotations, 3 translations, and 4 boosts, OK?  The requirement that your space satisfy these properties, it leads to a condition that the Riemann tensor must be Lorentz-invariant within the local Lorentz frame.  So for these two examples that I talked about, the Riemann tensor actually vanishes, and 0 is certainly Lorentz-invariant,
+
+00:08:42
+so there's no problem there. But as I start thinking about more general classes of spacetimes, which I'm going to consider to be examples of massively symmetric spaces, they might not have vanishing Riemann tensors. But the Riemann tensors, in order to be massively symmetric, if I go into a freely-falling frame, that has to look-- everything has to look Lorentz-invariant. This leads to a condition that my Riemann tensor must take-- it is constrained to take one particular simple form. It must be R over n times n minus 1 times metric like so.
+
+00:09:38
+This is-- so Carroll goes through this in some detail. Essentially what's going on here is this is the only way in which I am guaranteed to create a tensor that is Lorentz-invariant in a local Lorentz frame. So I go to my local Lorentz frame and I must have a form it looks like this, and this is a way of putting all my various quantities on my metric tensors together in such a way that I recover the symmetries of the Riemann tensor, and is my number of dimensions.  Because it will prove useful, let
+
+00:10:21
+me generate the Ricci tensor and the Ricci scalar from this.  So R mu nu is going to be R over n times m minus 1. I'm taking the trace on indices alpha and beta. If I trace on this guy, I get n. The trace in the metric always just gives me back the number of dimensions. And when I trace on alpha and beta here, I basically just contract these two indices, and so I get the metric back over n times g mu nu. Take a further trace and you can see that that R that went into this thing is indeed nothing more than the Ricci curvature.
+
+00:11:15
+Excuse me, the scalar Ricci curvature.  OK? You can construct the Einstein tensor out of this, and what you see is that the Einstein tensor must be proportional to the metric. And in fact, there are-- the only solutions for the Einstein tensor that-- the only solution is the Einstein field equations in which the Einstein tensor is proportional to the metric are either flat spacetime or a cosmological constant. So empty space, empty flat spacetime and cosmological constant are the only maximally
+
+00:12:02
+symmetric four-dimensional spacetimes.  That does not necessarily describe our universe. So our universe, how am I going to tie all this together? We begin with the observation that our universe is, in fact, homogeneous and isotopic on large spatial scales.  I emphasize spatial because the spacetime of our universe is not homogeneous, OK? In fact, the past of our universe is very different from the present.  Because light travels at a finite time, when we observe two large distances, we are looking back into the distant past.
+
+00:13:31
+And we see that the universe is a lot denser in the past than it is today. It remains the case, though, that it is still homogeneous and isotropic spatially, at least on large scales. So we are going to take advantage of these notions of maximally symmetric spaces to define a spacetime that is maximally symmetric spatially, but is not so symmetric with respect to time, OK? So we'll get to that in just a few moments. There is a wiggle word in here. I said that our universe, by observation, is homogeneous and isotropic on large spatial scales.
+
+00:14:08
+What does large mean?  Well the very largest scales that we can observe of all-- so that when we go back and we probe sort of the largest coherent structure that can be observed in our universe, we have to go all the way back to a time which is approximately 13-point-something or another-- I forget the exact number, but let's say about 13.7 billion years ago, and we see the cosmic microwave background.  So the cosmic microwave background describes what our universe looked like 13.7 billion years
+
+00:15:04
+ago or so, and what you see is that this guy is homogeneous and isotropic to about a part in 100,000, OK? With a lot of interesting physics in that deviation from-- that sort of part in 100,000 deviation, but that's a topic for a different class. We then sort of imagine you move forward in time, you look on-- so that tells you about the largest scales in the earliest times. Look at the universe on smaller scales. I mean, clearly you look in this room, OK? I'm standing here, there's a table over there,
+
+00:15:46
+this is not homogeneous and not isotropic, things look quite different. What we start to see is things deviate from homogeneity and isotropy on scales that are on the order of several tens of megaparsecs in size, OK? Parsec, for those of you who are not astrophysicists, is a unit of measure. It's approximately 3.2 light years. So once you get down to boxes that are on the orders of 50 million light years or so on a side, you start to see deviations from homogeneity and isotropy. And this is caused by gravitational clumping.
+
+00:16:49
+These are things like galaxy clusters.  So when I talk about cosmology and I want to describe the universe as large-scale structure, I am going to be working on defining a description of spacetime that averages out over small things like clusters of galaxies, OK? So this is sort of a fun lecture in that sense, in that anything larger than an agglomeration of a couple dozen or a couple hundred galaxies, I'm going to treat that like a point.  So here's what I am going to choose for my spacetime metric.
+
+00:17:41
+This is where you start to see the power of assuming a given symmetry.  So the line element, I'm going to write it as minus dt squared plus some function R squared of t gamma ij dx i dx j. The function R of t I've written down here. It's one variant of-- there's a couple functions that are going to get this name. We call this the scale factor.  Caution, it's the same capital R we used for the Ricci scalar, it's not the Ricci scalar. Just a little bit of unfortunate notation,
+
+00:18:40
+but it should be clear from context which is which when they come up. I have chosen gtt equals minus 1 and gti equals 0. Remember from our discussion of linearized theory around a flat background, that the spacetime-- the 10 independent functions of my spacetime metric, of those 10, four of them were things that I could specify by choosing a gauge. Well here, I have specified four functions pretty much by fiat. Think of this as defining the gauge that I am working in, OK? In a very similar way, I have chosen a coordinate system
+
+00:19:25
+by specifying gtt to be minus 1 and gti to be 0. This means that I am working in what are called co-moving coordinates.  So if I am an observer who is at rest in the spacetime so that I would define my four velocity like so, I will be essentially co moving with the spacetime. Whatever the spacetime is doing, I'm just going to sort of homologously track it.  It's worth noting-- so those of you who think about astronomy, astrophysics, and observational cosmology, the earth is not co-moving, OK?
+
+00:20:42
+We build our telescopes on the surface of the Earth which rotates. The Earth itself orbits around the Sun. The Sun is in a solar system. Or excuse me-- the Sun at the center of our solar system is itself orbiting our galaxy. And our galaxy is actually falling into a large cluster of galaxies called the Virgo Cluster. This basically means that when we are making cosmologically interesting measurements, we have to correct for the fact that we make measurements using a four velocity that is not a co-moving four velocity.
+
+00:21:18
+This actually shows up in the fact that when one makes measurements, one of the most impressive places that shows up is that when you measure the cosmic microwave background, it has what we call a dipole isotropy. And that dipole is just essentially a Doppler shift that is due to the fact that when we make our measurements, we are moving with respect to the co-moving reference frame. All right. So that's the metric that we're going to use here. Setting gtt and gti like so means I have chosen these co-moving coordinate systems.
+
+00:21:51
+I'm going to take gamma ij, I'm going to take this to be maximally symmetric, OK? So this is my statement that at any moment of time, space is maximally symmetric. So a few words on the units, a few things that I'm going to set up here. So my coordinate, I'm going to take my xi to be dimensionless, and all notions of length-- all length scales and the problem are going to be absorbed into this factor R of t.  We're going to see that the overall scale of the universe is going to depend on the dynamics of that function
+
+00:23:02
+R of t. So let's imagine that on a given-- at some given moment of time, you want to understand the curvature associated with that constant time slice.  So the Riemann tensor that we build from our spatial metric, I'm going to write this as 3 R-- and I'm doing purely spatial things, so I'm going to use Latin letters for my indices. It's going to equal to some number k--  not to be confused with the index k. It's unfortunate, but there's only so many letters to work with.
+
+00:23:57
+That looks like so. And if I take a trace to make my Ricci curvature, I get this, and your Ricci scalar will turn out to be equal to 6k. We won't actually need that, but just so you can establish what that k actually means. It's simply related to the Ricci curvature. Oops, that should have a 3 on it. Ricci curvature of that particular instant in time.  Now I'm going to require my coordinate system to reflect the fact that space is isotopic. So if it's isotropic, it must look the same
+
+00:24:56
+in all directions, and in a three-dimensional space, anything that is the same in all directions must be spherically symmetric.  And so what this means is that when I compute gamma ij dx i dx j, it must be equal to some function of radius. The bar on that radius just reminds you this is meant to be a dimensionless notion of radius. Remember, all length scales are going to be absorbed into the function capital R. It's R squared d omega.  And my angular sector is just related to circle coordinate angles the usual way.
+
+00:26:15
+So it's convenient for us to put this f of R-- I can rewrite this as an exponential function, OK? Just think of this as the definition of the function beta. The reason why this is handy is that suppose I now take gamma ij, I compute the three-dimensional Christoffel symbols, I compute my three-dimensional Riemann, ignoring for a moment that my Riemann is meant to be maximally symmetric, OK? I'm just going to say, I know the recipe for how to make Riemann from a metric. I will do that. I will then make Ricci from that Riemann.
+
+00:27:04
+When you do this, what you find is that-- let's just look at the Rr component of this thing.  This turns out to be 2 over R times a regular derivative of beta, OK? It's just a little bit of tensor manipulation to do that using some of the tools, the mathematical tools I'm going to post in the 8.962 website, you can verify this yourself.  If I compute Ricci from the maximally symmetric assumption, what I find is that this is equal to 2k times gamma, which is itself exponent of 2 beta.
+
+00:28:15
+Let's equate these and solve for beta.  So one side I've got 2 over r bar dr bar of eta. On the near side I have 2k and gamma r bar r bar is itself e to the 2 beta. Cancel, cancel. A little bit of algebra. First let's write it this way. Let's move this to the other side... e to the minus 2 beta is equal to this. Let us make the assumption-- so we have a choice of a boundary condition. Let's put beta equals 0 at r bar equals 0. This is basically saying that on my-- so r bar is sort of the origin.
+
+00:29:42
+We're just sort of saying that things look like a flat spacetime in the vicinity of the origin of the coordinates we're using here, that's a fine assumption to make. Doing so, we can easily integrate this guy up, and here's what we get. So with this, we now have a full line element.  So there's a few unknown quantities in here. What is k? What is R? So far I have only talked about the geometry of this spacetime. We haven't yet connected this-- any of the dynamics of the spacetime to a source.
+
+00:30:53
+It is when we hook this up to a source that we're going to learn something about these two. So hold that thought for now. This essentially has just said that here is what my maximally spatially symmetric spacetime looks like, allowing for there to be a difference between the past and the present. Before I move on, so I can't tell you what k is yet, but I can make the following observation which allows me to restrict what values of k I need to worry about.  Suppose I take k and I replace it with k prime equal alpha k.
+
+00:31:59
+But in doing so, I define R tilde to be square root of alpha--  yeah. Square root of alpha times R bar. And I also require that my overall scale factor look like the original scale factor divided by square root of alpha. Rewriting my spacetime, my line element in terms of k prime and the tilde R into-- the two tilde R's, I get this. Basically, that transformation leaves the line element completely irrelevant to me. That was completely the wrong word. That re-prioritization of k and R and the two different R's
+
+00:33:36
+here, that leaves the line element completely invariant. It is unchanged when I do this.  So what this tells me is-- by the way, alpha has to be a positive number so that the square roots make sense there. It tells me that the normalization associated with k can be absorbed into my scale factor.  And so what it suggests we ought to do is just-- you don't need to worry about whether k is equal to 15 or pi or negative the 38th root of e or anything silly like that.  The only three values of k that matter for us
+
+00:34:35
+are whether it is negative 1, 0, or 1. This stands for all negative values of k, 0 as a set onto itself, and all positive values of k, OK? So we will use this to say, great, the thing which I'm going to care about, once I start looking at the physics associated with this, is whether-- let's go back over to this version of it-- I'm going to care about whether k is negative 1, 0, 1, and I want to understand how my scale factor behaves.  So before I start hooking this up to my source and doing a little bit of physics, many of you
+
+00:35:26
+are going to do something involving cosmology at some point in your lives, and so it's useful to introduce a few other bits of notation that are commonly used here, as well as to describe some important terminology that comes up at this point.  So here's some common notation and terminology. Let us define a radial coordinate chi via the following definition-- d chi will be equal to d R bar over square root of 1 minus kR bar squared. Now remember, we just decided that k can only take on one of three interesting values.
+
+00:36:42
+I can immediately integrate this up, and I will find that my R bar is equal to sine of chi of k equals plus 1 is equal to chi of k equal 0.  And it's the sinh of chi of k equals minus 1.  So let's take a look at what this means with these sort of three possible choices. The three possible values that k can take. What is our line element looks like?  So let's look at k equals plus 1 first.  I get minus dt squared R square root of t d chi squared plus-- I'm going to use the fact that R bar,
+
+00:37:58
+this describes a spacetime in which every spacial slice is what is called a 3-sphere, OK? You're all nicely familiar with the 2-sphere. So a 2-sphere is the three-dimensional surface in which you pick a point and every point that is, let's say, a unit radius away from that point that, defines a 2-sphere in three-dimensional space. So this defines the space-- the spatial characteristics of pick a point in four-dimensional space and ask for all of the points that are a unit distance away from it in three dimensions, that is a 3-sphere.
+
+00:38:38
+Notice that my 3-sphere has a maximum-- there's a maximum distance associated with it, OK? So there's no bounds on chi, OK? Chi can go from 0 to infinity. But this one's periodic, isn't it? So as chi reaches pi over 2, the separation between any two points on that single slice, they've reached their maximum value, and as chi continues to increase, the distance gets smaller again, OK? And eventually, when chi gets up to pi, you come back to where you started. We call this a closed universe.
+
+00:39:29
+This is something where if it were possible to step out of time and just run around on a spacial slice, you would find that it is a finite size. The best you could do is run around on that three-dimensional sphere in four-dimensional space.  Let's do k equals 0 next.  If I do k equals 0, there's my line element. Each spacial slice is simply Euclidean space.  So this is often described as flat space.  A significant word of caution. When you talk to a cosmologist, they will often talk about how the best--
+
+00:41:07
+we're going to talk about sort of the observational situation in the next lecture that I record a little bit. Our evidence actually suggests that this is what our universe looks like right now. We're in a k equal 0 universe in which space-- each spatial slice is flat. That does not mean spacetime is flat, OK? So when they say that it's flat, that is referring to the geometry only of the spatial slices in this co-moving coordinate system.  k equals minus 1, you get a form that looks like this.
+
+00:42:00
+This describes the geometry of a hyperbole.  We call this an open spatial slice. So notice for both choices 2 and 3, if you could sort of step out of time and explore the full geometry of that spatial slice, it goes on forever, OK? Again, there's really no boundary on that chi as near as we can tell, and so that spatial slide can just kind of go, whee! And take off forever. This one sort of goes to large distances a little slower than this one does. This hyperbolic function means that this is really bloody large, OK?
+
+00:42:48
+So both of these tend to imply a universe that is sort of spatially unbounded. The closed universe, because each slice is a 3-sphere, it's a different story.  So another bit of notation which you should be aware of--  and I unfortunately am going to want to sort of flip back and forth between the notation I've been using so far and this one I'm about to introduce.  It can be a little bit annoying when you're first learning it, but just keep track of context, it's not that hard.
+
+00:43:35
+So what we're going to do is let's choose a particular value of the scale factor, and we will normalize things to that.  So what I'm going to do is define some particular value of k such that the scale factor there I will call it R sub 0. And as we'll see, a particularly useful choice for this is to choose the value right now, OK? What we're doing, then, is we're kind of norm-- what we're going to see in a moment is this means we're normalizing all the scales associated with our universe
+
+00:44:28
+to where they are right now. OK. Having done this, I'm going to define a of t to be R of t divided by this special value. For dimensional reasons, I'm going to need to put this into my radial coordinate. So notice, what's going on here is that my R will now have dimensions associated with it, and so essentially everything is just being scaled by that R0. And this is the bit where it gets a tiny bit unfortunate, you sort of lose the beauty of k only having three values. So I'm going to replace that with a kappa.
+
+00:45:12
+This is unfortunately a little bit hard to read, so whenever I make it sort of with my messy cursive, it will be k; whenever it looks a little bit more like a printed thing, it will be kappa.  And so kappa is k divided by R0 squared. And when you do that, your line element becomes this.  OK? So that's a form that we're going to use a little bit. What's a little bit annoying about it is just that my-- the kappa that appears in there doesn't just come as a set of one of these parts of three,
+
+00:46:12
+but basically if kappa is a negative number, then you know k must be minus 1; kappa equals 0 corresponds to k equals 0; if kappa is a positive number, then k equals plus 1. This form where we're using this sort of dimensionless scale factor a is particularly useful. If you look at this, this is telling you that with the choice that R0 defines a scale factor now, this means a now equals 1. And so this gives us a nice dimensionless factor by which we can compare all of our spatial scales at different moments in the universe to the size
+
+00:46:57
+that they are now.  OK. Everything I have said so far has really been just discussing the geometry that I'm going to use to describe the large-scale structure of spacetime. I haven't said anything about what happens when I solve the Einstein field equations and connect this geometry to physics.  So what we need to do is choose a source. And so what we're going to do is we will do what is sort of the default choice in many analyses in general relativity. We will choose our source to be a perfect fluid.
+
+00:47:38
+What's nice about this is that it automatically satisfies the requirements of isotropy and homogeneity. At least it does so if the fluid is at rest in co-moving coordinates.  So let's fill this in: t mu nu with everything in the downstairs position looks like rho plus P mu nu mu nu plus Pg mu nu.  And this becomes in my co-moving coordinate system.  So then it looks like this, OK? A handy fact to have, this is going to be quite useful for a calculation or two that we do a little bit later--
+
+00:49:11
+actually, not just a minute later, almost right away.  This looks like a diagonal of all this stuff, OK?  All right. So what we want to do is use this stress energy tensor as the right-hand side. So we've worked out our Ricci tensor. With a little bit of work, we can make the Einstein tensor, couple it to this guy, we can set up our differential equations, and we can solve for the free functions that specify the spacetime. Before doing this, always a good sanity check, remind yourself, your fluid has to satisfy local energy conservation.
+
+00:50:17
+Actually, let's just do the 0. So this is energy and momentum conservation, we set that equal to 0, this is local energy conservation.  Expanding out these derivatives, what you find is that this turns into--  so it looks like this. And plugging in-- so using the spacetime--  by the way, I made a small mistake earlier. I should have told you that this spacetime, this is now called the Robertson-Walker spacetime.  So this was actually first written down in the 1920s, and Robertson and Walker developed this basically
+
+00:51:55
+just as I have done it here, just arguing on the basis of looking for something that is as symmetric as possible with respect to space if not time, and they came out with that line element. My apologies, I didn't mention that beforehand. This is my third lecture in a row, I'm getting a little bit tired. So if I take that Robertson-Walker metric, plug it into here to evaluate all these, this gives me a remarkably simple form.  So rho is the pressure of my perfect fluid-- excuse me, the density of my perfect fluid, P
+
+00:52:47
+is the pressure of my perfect fluid, a is my scale factor.  If you like, you can put the factor of R0 back in there, and an equivalent way of writing this, which I think is very useful for giving some physical insight as to what this means--  so put that R back in.  OK, so let's look at what this is saying. R cubed is modulo numerical factor, that is the volume of a spacial slice. And so this is saying, the rate of change of energy in a volume--  so a volume describing my spatial slice is equal to negative pressure times the rate of change
+
+00:54:20
+of that volume.  I hope this looks familiar. This, in somewhat more convoluted notation, is negative dp-- du equals negative P dv. It's just the first law of thermodynamics.  All right. So this relationship, whether written in this form or in that form, is something that we will exploit moving forward.  Let's now solve the Einstein field equations.  So we'll begin with g mu nu equals 8 pi g t mu nu. The equations that are traditionally used to describe cosmology are a little bit more naturally
+
+00:55:42
+written. If I change this into the form that uses the Ricci tensor-- so let me rewrite this as R mu nu equals 8 pi g t mu nu.  OK? So this is equivalent where t is just the usual trace of the stress energy tensor. And what you find, there are two-- if you just look at the 0, 0 components of this equation, it tells you the acceleration of the scale factor a divided by a is-- it is simply related to the density and 3 times the pressure. If you evaluate Rii-- in other words, any-- this is-- there's no sum implied here,
+
+00:56:47
+just take any spatial component of this guy, and add on R0,0 because it's a valid equation, it helps you to clear out some stuff, you get the following relationship between the rate of change to the scale factor, the density, and remember, kappa is your rescaled k. So I'm going to call this equation F1, I'm going to call this one F2. These are known as the Friedmann equations.  When one uses them to solve to describe your line element, you get Friedmann-Robertson-Walker metrics.  So just a little bit of nomenclature.
+
+00:58:19
+Robertson-Walker tells you about the geometry, you then equate these guys to a source, and that gives you Friedmann-Robertson-Walker line elements.  One other bit of information-- so let's introduce a little bit of terminology here.  So a dot over a, this tells me how the overall length scale associated with my spatial slices is evolving as a function of time.  This is denoted H and it's known as the Hubble parameter.  H0 is the value of H that we measure in our universe corresponding to its expansion right now, OK?
+
+00:59:35
+And the notes that I have scanned and placed online claim a best value for this of 73 plus or minus 3 kilometers per second per megaparsec. These notes were originally hand written about 11 or 12 years ago, that number is already out of date, OK? If you went to Adam Reese's colloquium shortly before MIT went into its COVID shutdown, you will have seen that there's actually little bit of controversy about this right now. So our best measurements of this thing, indeed, they are clustering around 72 or 73 in these units,
+
+01:00:09
+but they're inconsistent with some other measures by which we can infer to be the-- what the Hubble parameter should be. And it's a very--  very interesting problems. Unclear sort of-- it sort of smells like something might be a little bit off in our cosmological models, but we're not quite there yet. Let's consider-- let's proceed with sort of the standard picture, and just bear in mind that this is an evolving field. The one thing I will note is that H has the dimensions of inverse time, OK?
+
+01:00:44
+The way one actually measures it. So the dimensions in which most astronomers quote its value, it looks like a velocity over a length, which is, of course, also an inverse time. And that is because objects that are at rest with respect to the-- that are at rest in these co-moving coordinates, as this fluid is meant to be, if the universe is expanding, we see them moving away from us. OK, I'm going to make a few definitions.  Let us define rho crit to be 3H squared over 8 pi j. So the way I got that was take F1--
+
+01:01:39
+imagine kappa is equal to 0, just ignore kappa for a second. Left-hand side as H squared, solve for rho, OK?  Notice, rho quit-- rho crit is a parameter that you can measure. You can measure the Hubble parameter, I'll describe to you how that is done in my next lecture, but it's a number that can be measured. And then 3 and 8 pi are just exact numbers, g is a fundamental constant. So that's something that can be measured.  Let's define omega to be any density divided by rho crit.
+
+01:02:41
+Putting all these together, I can rewrite the first Friedmann equation.  This guy can be written as omega minus 1 equals kappa over H squared a squared. Now notice, H and a, they are real numbers. H squared and a squared are positive definite. We at last can now see how the large-scale distribution of matter in our universe allows us to constrain one of the parameters that sets our Robertson-Walker line element. If omega is less than 1-- in other words, if rho is less than rho crit, then it must be the case that kappa is negative,
+
+01:03:47
+k equals minus 1, and we have an open universe.  If a omega equals 1 such that rho is exactly equal to rho crit, kappa must equal 0, k must equal 0, and we have a Euclidean spatially flat universe.  If omega is greater than 1, kappa is greater than 1, k equals 1, and we have a closed universe.  Clean up my handwriting a little bit here.  OK, this is really interesting. This is telling us if we can determine whether the density of stuff in our universe exceeds, is equal to, or is less than that critical value,
+
+01:05:11
+we know something pretty profound about the spatial geometry of our universe. Either it's finite, sort of simply infinite, or ridiculously infinite.  Let me do a few more things before I conclude this lecture.  First, this isn't that important for our purposes, but it's something that some of you students will see. A little bit of notational trickery.  It's not uncommon in the literature to see people define what's called a curvature density.  And what this is, is you just combine
+
+01:06:11
+factors of kappa, g, and the scale factor in such a way that this has the dimensions of density. You can then find an omega associated with curvature to be rho with curvature over the critical density. And when you do this, F1, the first Friedmann equation, becomes simply omega plus omega curvature equals 1, OK? Just bear in mind, that is not really a density, it's just a concept-- it's a useful auxiliary concept. This is often for certain kinds of calculations, a nice constraint to bear in mind, OK?
+
+01:06:59
+People are very interested in understanding the geometry of our universe, and this is a way of formulating it that sort of puts the term involving the k parameter or the kappa parameter on the same footing as other densities that contribute to the energy budget of our universe.  OK. So the equations that we are working with here involve these--  it involves the pressure and density here. I haven't said too much about them so far. If I want to make further progress, I've got to know a little bit about the matter that
+
+01:07:50
+fills my universe.  So to make more progress, I need to choose what is called an equation of state that relates the pressure and the density to each other.  What I really need is to know that my pressure is some function of the density, OK? This can be written down for just about all kinds of matter that we care about. In cosmology, one usually take and assumes that the pressure is a linear function-- it's just linearly related to the energy density. Let me emphasize that as a very restrictive form.
+
+01:09:01
+When we finish cosmology, one of the next things we're going to talk about are spherically symmetric compact objects-- stars-- and we want to describe them as a fluid, and we'll need an equation of state to make progress there, we do not use a form like that for stars.  As we'll see, though, for the kind of matter that dominates the behavior of our universe on the largest scales, this is actually a very reasonable form.  So if I were to write down my thoughts on that, I would say restrictive but useful
+
+01:09:39
+on the large scales appropriate to cosmology.  Pardon me just one moment. Let's imagine that-- yeah, sorry. Let's imagine that I have a universe that's dominated by a single species of some kind of stuff, OK? So in reality, what you will generally have is a universe in which there are several different things present. So you might have a W corresponding to one form of matter, another W for a different form of matter, and you'll sort of have a superposition of them all present at one given moment.
+
+01:10:32
+So to start, start by imagining a universe dominated by a particular what I will call a species rho i, and the pressure will be related to this by a particular W for whatever that rho happens to be.  So before I even hook this up to the Friedmann equations, let's require that this form of matter respects stress energy conservation. OK, so the equation I just wrote, let me rewrite that in a slightly different form. I can divide both sides by R0 cubed.  OK, that looks like so. Now it's not too hard to show using this assumed form here--
+
+01:11:59
+so if I plug in that my p is Wi rho i, in a line or two of algebra, you can turn this into--  and using-- well, I didn't even really do anything that sophisticated, I can just integrate up both sides. And what you see is that rho normalized to some initial time, some initial value.  It is very simply related to the behavior of the scale factor.  OK? But if you like, you can set a0 equal to 1, if you make that your stuff now, and this gives you a simple relationship that allows you to see how matter behaves as the large-scale structure
+
+01:13:06
+of the universe changes. Let's look at a couple examples of how this behaves.  So I'm going to call my first category matter.  OK, that's pretty broad. When a cosmologist speaks of matter, generally what they are thinking of, this is stuff for which W equals 0. So this is something that is pressureless. And we talked about pressureless stuff very early in this class. This is what we call dust.  So what we're talking about here is a universe that is filled with dust, which seems kind of stupid
+
+01:14:21
+at first approximation, OK? Our universe sure as hell doesn't look like dust. But bear in mind, what we really mean about this is, go back to this pressureless. We're just referring to something that is sufficiently non-interactive, that when particles basically do not interact with each other. Our typical dust particle is going to actually be something on the scale of a galaxy. On cosmological scales, matter-matter interactions are, in fact, quite weak. So this is a very, very good description.
+
+01:15:01
+Sort of imagine the universe is kind of a gas of galaxies and galaxy clusters, it's a pressureless gas of galaxy and galaxy clusters. When you put all this together-- so let's take a look at this form here. The density of matter looks like I'm going to set a0 equal to 1, it looks like the density now times a to the minus 3. OK? What I've done is I've just taken that evolution law there and I have plugged in Wi equals 0.  What this is basically saying is that the conservation of stress
+
+01:15:56
+energy demands that the-- excuse me-- that the density of this matter changes in such a way that the number of dust particles is constant, but their density varies as a to the minus 3. a sets all of my length scales. If I make the universe twice as big, the density will be 1/8 as large.  Your second species of matter that your cosmologist often likes to worry-- or second species of stuff that your cosmologist likes to worry about is radiation. Here, just go back to Stat Mech. If you have a gas of photons, it exerts photon pressure,
+
+01:16:50
+and that is of the form--  the radiation pressure is 1/3 of the energy density. Factors of speed of light are being omitted here. So this corresponds to a law in which-- here, let me put it this way. I should've make this an m. So this is my i equals m for matter. So my W for radiation is 1/3. And what you find in this case is that rho of radiation scales with the scale factor to the fourth power. What's going on here? Well let's imagine that the scale factor increases by a factor of 2, OK?
+
+01:17:36
+Imagine that the number of photons is not changing. So what this is basically saying is, OK, I get my factor of 8 corresponding to the volume increasing by a factor of 8, but I have an additional factor of 2, where's that coming from? Well remember, that's an energy density. So this is saying that not only is the density being diluted by the volume growing, but each packet of energy is also getting smaller as the universe increases in size.  Each quantum of radiation is redshifting.  It's redshifting with a scale factor a.
+
+01:18:32
+We are going to revisit that in the next lecture. That's an important point and we're going to re-derive that result somewhat more rigorously as we began exploring how it is that we can observational it probe the properties of our universe.  Just for fun, there's another form of-- there's another kind of perfect fluid that cosmologists worry about, and that's the cosmological constant.  So a cosmological constant has pressure equal to minus the density. This corresponds to an equation of state
+
+01:19:29
+parameter W equal to minus 1.  If I go to my form here, I plug in W equals minus 1, rho goes as a to the 0th power, a constant.  Well, it is a cosmological constant, after all, so that shouldn't be too surprising. This is a very interesting one because it is basically telling us that the amount of energy in spacial slices-- the energy density does not change. The amount of energy appears to be Increasing. Now bear in mind, it's hard to define the total energy, we cannot really in a covariant way add up energy at various
+
+01:20:18
+different kinds of points. Local energy is still being conserved, but there's no question that this guy is a little weird.  So one of the next things that we want to do is take this stuff, run it through Einstein's equations. Einstein's equations, of course, give us the Friedmann equations. And solve to see what the expansion the universe looks like. We saw already that if the density of the universe relative the critical density is either higher, the same, or lower, that tells us about the value of this k parameter,
+
+01:20:55
+or rather, the kappa parameter. We haven't yet seen how to solve for the scale factor a.  However, we have the two Friedmann equations, and if nothing else, write them down, write out your stuff, you got yourself a system of equations, Odin gave us mathematica-- attack. To give you some intuition as to what you end up seeing when you look at these kind of solutions, let me look at the simplest kind of universes that we can solve this way. So let's examine what I will call a monospecies universe--
+
+01:21:34
+in other words, a universe that only contains one of these forms of matter that I have described here, one of these sources of stress energy that I described here.  And for simplicity, I'm going to take it to be spatially flat.  Neither of these two conditions are true in general, but they are-- they're fine for us to wrap our heads around what the characteristics of the solutions look like. So in this limit, Friedmann 1 becomes a dot over a squared equals 8 pi g rho over 3. I can borrow this form that I've got here to write this as 8
+
+01:22:34
+pi over 3 rho at some particular moment times scale factor to the minus n. So what I'm doing here is I'm assuming a0 now. My a right now is 1, and I'm defining n to be 3 times 1 plus W. This is easy enough to solve for.  OK. Take the square root.  What you find is-- I'm going to just sort of-- there's a constant you guys can work out on your own if you like. a dot must be proportional to a 1 minus n over 2, or a is proportional to t to the 2 over n.  n equals 0 is a special case that we'll
+
+01:23:59
+talk about in just a moment. If we are dealing with what we call a matter-dominated universe, well, in this sort of monospecies, spatially flat form, this would have W equal 0, n equals 3, and a scale factor that grows as t to the 2/3 power. A matter-dominated universe is one that expands, but it expands with this kind of a loss. So it slows down with time. A radiation-dominated universe, W equals 1/3, n equals 4, that is a universe that expands as the square root of t.  What about my cosmological constant?
+
+01:25:11
+Ah. OK, well that's a problem--  n equals 0, and my solution doesn't work for that one.  So what you do is just-- let's just go back to our F or W equations. Or rather, our Friedmann equations. Let's write F1 down again. I have a dot over a equals 8 pi-- whoops-- 8 pi g rho over 3, and this is now a constant.  Rho equals rho 0 because it's a constant. I can rewrite this in terms of the cosmological constant lambda. And so another way to write this is-- sorry about that-- a dot a-- a dot over a squared
+
+01:26:23
+equals this, which equals lambda over 3.  So this leads to an exponential solution.  Now our real universe is not as simple as these three illustrative cases that I have put in here just to illustrate what the extremes look like, OK? We are not a monospecies universe, we have a mixture of matter, we have a mixture of radiation, we appear to have something that smells a lot like a cosmological constant, although the jury is still out if one is being perfectly fair. Work is ongoing. What you need to do in general is sort of model things.
+
+01:27:21
+You try to make models of the universe that correspond to different mixtures of things that can go into it, and then you go through and ask yourself, do the observables that emerge in this universe match what we see? Generally you will see sort of trends that are similar to this that emerge, right? There might be a particular epoch where matter is more important, there might be an epoch where radiation is more important, there might be an epoch where cosmological constant is more important. And so you might see sort of you know transitions
+
+01:27:53
+between these things where it's mostly a square root t expansion, and then something happens and the radiation becomes less important, there's an intermediate regime where both are playing a role, and then matter becomes important and it kicks over to a t to the 2/3 kind of expansion when it becomes matter-dominated. You don't want to assume the universe is flat, you need to do your analysis, including a non-zero flatness parameter in there, which makes things a little bit complicated.
+
+01:28:18
+So in the next lecture, I am going to talk a little bit about how one extracts observables from these spacetimes. How is it that we are able to actually go into an FRW universe and measure things-- what can we measure, how can we use those measurements to learn about the energy budget of our universe and formulate cosmology as an observational and physical science? And with that, I will end this lecture.
+

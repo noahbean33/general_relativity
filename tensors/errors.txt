@@ -1,0 +1,20 @@
+Definite Errors
+Section 1.4, Proof: The sentence reads "Requiring that ei = eiforces the product of the two matrices to equal the identity." Two problems here: the missing space before "forces" suggests a formatting collapse, and the equation "ei = ei" is a duplicate — the left-hand side should be the composed expression from substituting (1.1) into (1.2), not another bare ei. The sentence should read something like: "Requiring that the result of the substitution equals ei forces the product of the two matrices to equal the identity."
+Section 9.1, "Multiple contraction possibilities": The third example is written as Q_ijk D^ja. But Q has been defined throughout as Q^i_jk — a (1,2)-tensor with one upper index. Writing Q_ijk with all indices lowered implicitly invokes the metric to lower the i-index, without any acknowledgment. This is either a typo (perhaps Q^i_jk D^j_a was intended) or needs a note that the index has been lowered. It also produces a rank-3 object with free indices i, k, a, making it an oddly asymmetric example compared to the first two.
+
+Minor Issues
+Title page: The date reads March 15, 2026, which is one day ahead of today.
+Section 6.2: Positive-definiteness is listed as a requirement for a valid metric tensor. This is correct for Riemannian geometry, but since GR was invoked in the Motivation section with a Lorentzian metric (which is indefinite), a one-line caveat — "In GR, the metric has Lorentzian signature and is not positive-definite" — would prevent confusion for readers who circle back.
+Section 4.3, Remark 4.1: The transformation path is described as "new components →F old components →L old output →B new output," which correctly justifies L̃ = BLF. However, the arrow labels are slightly counterintuitive: you apply F to new inputs to express them in old coordinates, not to transform components in the usual sense. Worth a clarifying phrase like "apply F to express new-basis inputs in the old basis."
+
+Confirmed from PDF proofreading
+The $e_i = e_i$ bug in the Ch. 1 proof is present in the source verbatim — needs to be replaced with the actual composed expression. The Q^{i}{}_{jk}\,D^{ja} inconsistency in §9.1 is also confirmed.
+
+New LaTeX-specific issues
+Four custom commands defined but never used. The preamble defines \Rn, \kd, \tp, and \tildeeps, none of which appear in the document body. The author uses \mathbb{R}^n, \delta, \otimes, and explicit \tilde{\epsilon} directly throughout. Either the commands should replace those occurrences for consistency, or the definitions should be removed.
+Redundant counter manipulation. The motivation chapter uses:
+latex\setcounter{chapter}{-2}
+\stepcounter{chapter}
+These two lines are equivalent to a single \setcounter{chapter}{-1}. The intent is correct — making the next \chapter{} increment to 0 — but it's needlessly roundabout and the comment explains the wrong thing (\stepcounter isn't doing anything \setcounter{chapter}{-1} wouldn't).
+\chapter* doesn't participate in cleveref cross-referencing. The Motivation chapter uses \chapter* with a manual \addcontentsline entry. This means any \cref to it would silently fail. There are no such cross-references currently, but this is a latent fragility worth noting if the document grows.
+physics package loaded but only superficially used. The physics package is imported but nothing from it (like \dd, \abs, \norm, \ket) is used — the document is purely index manipulation, not calculus. This is harmless but the package is known to silently redefine several amsmath commands (e.g. \div, \grad), which can cause surprises if those are ever needed.

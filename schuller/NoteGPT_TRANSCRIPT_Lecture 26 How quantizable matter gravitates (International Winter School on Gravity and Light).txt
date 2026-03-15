@@ -1,0 +1,513 @@
+00:00:00
+this program is being presented to you by the heras international winter school on gravity and light so welcome to the actually last Central lecture of the winter school um today we'll wrap up uh these Central lectures and I will actually uh explain something I didn't explain to you namely why the Einstein action has the form it has so we uh took great care to explain how the entire structure of the theory uh is founded from set theory over topology and so on but uh actually the Einstein action and hence the Einstein
+
+00:00:48
+equations uh were just presented and in fact that's uh one simple textbook view that one can take and that's often taken that the gravitational Dynamics are postulated alongside the matter dynamics that are postulated as well and you postulate them such that the result describes nature and that's absolutely fine that's absolutely correct however if you postulate several things you got to make sure that you don't postulate two things that are contradictory and if indeed one can be
+
+00:01:25
+derived from the other or one is greatly constrained by the other postulate then we should know in order to First understand the theory better second in order to be sure that there are no contradictions and third because such understanding usually points beyond what we already know in a concrete context it yields a deeper understanding so what I would like uh to report about today is uh the work by a whole number of people and um the it can be summarized at uh answering the question how quantiable matter
+
+00:02:03
+gravitates now I don't know how many of you had a course on quantum theory in the universities okay so you all know that there's this issue of you have a matter Theory uh and you want to quantize it in order to get the corresponding quantum theory and it's a very complicated question how to quantize and whether that is a well-defined procedure in the first place and so on so if here we speak about quantiable matter it's not Quantum matter it's quantiable matter we speak of the classical description of
+
+00:02:35
+matter no doubt about that but it should be a classic classical description of matter that can be quantized now uh at least it needs to satisfy some necessary conditions for quantization because otherwise we would ultimately not consider it as a good meta model today because we we require that all mattera be quantiable now it will turn out that if you start with a quantiable matter model like for instance Maxwell Theory electromagnetic waves or well the whole theory that the theory already carries
+
+00:03:11
+in itself the information of how it gravitates in other words it carries in it the information that gravity should look like Einstein gravity um I will explain this and I will explain in a general context uh that will also include other matter that could produce other gravity theories so that's the idea of uh these final lectures today and um so let me introduce you here and today it will be less of a lecture style like usually that you have lots of indices to follow today it's about the ideas behind all of that of
+
+00:03:48
+course there will be some technical detail but you're well prepared so I would like to explain why gravity can be derived from given meta Dynamics and need not be postulated and of course uh that makes a big difference that it can be derived from given metad Dynamics it has a massive impact on our thinking about gravity simply because if ever we have to consider different matter in the universe because it's discovered who will maybe and the talk will show you under which circumstances have to consider different gravity
+
+00:04:23
+Theory but the best thing is it will be constructive so if there's new matter we know exactly what to do how to get the new Gravity so let me start with the standard model of fundamental physics that includes gravity and matter and in fact in this school you were already quite well educated in that so if you want to start doing physics and you talk about space and time on which you want to put matter and we're not questioning uh this division uh then you start with some sets then you may get the idea that
+
+00:04:55
+you need some topology on there if you want to do classical physics that you want a smooth Atlas and so on and then you know at some point if you have enough structure namely a smooth manifold then you can start thinking about tensors and tensor fields and tensor fields are at this stage of development the only matter you can put on a manifold on a smooth manifold Spinners who have know you know what knows what the spinner is spin one half and so Spinners cannot be put on the manifold at this stage but soon they
+
+00:05:29
+will be so so um you can put tensor Fields so Vector Fields coor fields and so on so now this is the conceptual Foundation that you need to start with before you can start talking about the standard model of fundamental physics as we have it today but now I would like to jump back to 1850 or 1860 when uh Maxwell formulated his Maxwell equations I don't think you can read this very well so here it says uh we look at observations so for instance there was the observation that current induced magnetic fields that's on pair
+
+00:06:03
+or something and Pard me and and move and moving magnets induce currents those were ampars of Faraday's law and Maxwell combined them into the Maxwell equations and he added a little term and so on but from a modern point of view what he did he built on the building as it is presented here and he wrote down his mexo theory of electromagnetism of course Maxwell didn't think of tensors really and smooth atlases and topologies and sets not at all okay but from a modern perspective that is what
+
+00:06:39
+he did so that is where we are here 1850 1860 around that well then the story you know how it continued in 1905 probably earlier uh Einstein stared at the Maxwell equations and he realized that if these equations are true and they to be true because they described all kinds of phenomena that were known at the time he saw after all that took a few years in the help of others minkovski and others to realize actually on this the space has a structure all by itself it it carries a geometric structure which
+
+00:07:20
+today we call a lorenzian metric well they thought of it first of a flat lenan metric because that was the first thing you think about but after all the decisive observation was that something some theory that came from observations dictated that you think of SpaceTime this way so this is the famous 1905 Insight by Einstein he didn't call it lorenci metric if you wrote down rather cumbersome equations but if you really analyze it from there it was actually just a logical conclusion now later and that's now uh
+
+00:07:57
+100 years ago or 99 years and uh 11 months or something um Einstein realized that this lorenzian metric better also be given some Dynamics because after all the metric coefficients feature in the mexel equations that you all saw the mexel action as coefficients but where do these coefficients come from you can brutally set them to zero but you can also give them some Dynamics and what comes out is the Dynamics of the background on which the theory lives on which the waves for instance propagate
+
+00:08:32
+but if the background changes then the waves propagate differently and the propagation and the Dynamics of this background was chosen such it captures the gravitational effects so how for instance waves gravitate today we know the Einstein equations they relate the energy the Einstein curvature of space time to the energy momentum tensor of the matter and thereby they encode how the gra matter gravitates with itself with others stuff and so on so this is we started 1850 1905 1915 we arrived here that's the
+
+00:09:09
+picture now there is one further ingredient to the story and the further ingredient is spinorial matter actually that shouldn't have vanished yet but okay um so if you have a lorenzian metric only then can you start talking about spin Spinners or fion on SpaceTime and in fact the famous one/ half is not a quantum mechanical thing it's a thing a concept that comes out of the representation theory of the isometry group of a flat lorenci metric the So-Cal pank aray group it's a geometric
+
+00:09:43
+thing the spin and in fact once you have a lenan metric you can under certain circumstances there are some uh obstructions but uh uh you can impose Spinners on a manifold so really The Spinners come after lorenzian metric without lenan metric you don't have spinners okay so that there's a logical uh thing here going on and now we have tensorial mattera and spinorial mattera and you can choose what in nature you want or you need to describe uh by which and it turns out that the spinorial
+
+00:10:18
+matter is always firion so they have they satisfy fironic statistics you know that probably from uh statistical mechanics and the tensorial matter encodes bone now if you take the two together we started here in 1850 with Maxwell's theory that was the kickart everything that comes after lorenzian metric actually is based on what Einstein read in the Maxell equations but then you see you can have other matter and so on so you take the Maxwell equations extremely seriously and the courageous step by
+
+00:10:52
+Einstein was that the maxal equations are to be taken so seriously that what follows from them is the Foundation of all of physics he was very lucky that that is true it could have been that the Maxwell equations only capture a little bit and there's much more out there but in fact he did that and then today we formulate all matter in terms of the standard model of particle physics in terms of tensorial and spinorial matter where the spinorial matter firmly rests on the concept of lorenzian metric so
+
+00:11:26
+all of this fits nicely together and uh constitutes what today we call the standard model of fundamental physics the standard model of gravity the standard model of particle physics and that is what any textbook wants to convey to you and it's of course correct it's an extremely successful Theory it's been extremely successful for a very long time that's the standard model and a little bit The Logical path we follow it in this course apart from the spinorial matter which we didn't
+
+00:11:55
+do now if we confront that with experiment you already know know we calculated that in the cosmology uh course and you also heard it in Valeria Pino's lectures uh we have a fact that the standard model matter that we so proudly described by the standard model only constitutes about 5% of the matter and energy in the universe so those are observations that now for uh about 20 years are more and more corroborated so if you apply the model I showed to you before and you evaluate the raw data with that you come to this
+
+00:12:34
+conclusion we know that so that means that here the standard model Dynamics which here in this nice textbook picture thrown up here at the same level with Ein and gravity Dynamics and both have to be postulated and modeled to work together and everything is fine well in fact you have here 95% dark stuff I call it disrespectfully dark stuff because we don't really know where that comes from okay um and it's well the dark that's why it's called Stuff the dark thing is of course because it only interacts
+
+00:13:07
+gravitationally it couples to this background metric one assumes okay and um but it doesn't couple to any of the other standard model matter in here so most of what is out there is not of standard model type and by my argument what is standard model type is actually Maxwell type right you start with Maxwell you come to there and you bootstrap the whole standard model of particle physics because you say all the matter has been created in the image of Maxwell Theory right and now we have this situation and one logical
+
+00:13:41
+possibility is that all that dark stuff uh somebody will come we'll write it down in standard model style the standard model will be extended in a very conservative way um that would be actually preferable of course uh and after all the whole picture stays as it is just we do not know we simply do not know and um so if we take that seriously that we don't know and that's the right thing to do then we have to delete everything I deleted now in the current textbook picture because if the matter
+
+00:14:17
+Works fundamentally different from Maxwell and hence other standard model matter then all the conclusions we drew from it are to be questioned of course you can always question more you can question whether you should have a smooth manifold you could question whether you should have a topology at all you should question okay the game here is we only question what we are prompted to question but what we are prompted to question we take seriously so we have to delete that so it's virtually all I taught you
+
+00:14:48
+now the point is what we should do we should redo the whole thing we should start with any matter any new matter any matter not only maxw matter but then what do you mean by any what do I mean by any matter you can't make write down theorems for any matter there is not enough structure so we need to make assumptions about the matter we expect to be out there even if it's dark matter or dark energy okay or any yet to be discovered matter and um well so if we now make assumptions we can of course
+
+00:15:27
+follow our taste we can say well let's make an assumption I like strings okay let's do strings or I like this or I have I always had this idea that physics should be done with purely complex numbers right you can have ideas like this but again I would um rather go for some very conservative approach I would say let's only require of matter what we all agree on must be required and um that is probably on the one hand predictivity so if we are still talking about classical meta theories
+
+00:16:02
+they should be predictive if you come up with a new meta Theory say tomorrow you're down a theory for dark matter and it's not predictive in the sense of that initial conditions are translated into later values of the field it would be rejected outright by the physics Community justifiedly because physics is about predicting the future so certainly we want matter a matter model that's predictive but the other really important important input what we learned in 20th century physics is that
+
+00:16:32
+all matter is quantum well at least so we believe so if we make a classical mattera model to fit it into here it should at least be quantiable you it should not uh obstruct quantization if we make these two assumptions and I will tell you how to make them technically one can show and I will illustrate this in this lecture that that already gives rise uniquely to new tensorial geometry so not a tensorial geometry described by a metric by lorenzian Metric but possibly by all other kinds of tensors but just
+
+00:17:11
+not any tensor like a ranan metric would not do but a lenan does and many others I'll explain that now of course we're here kind of in 1905 if we repeat the history here now what if we want to give this new tensorial geometry which provides the coefficients of the Met equations if you and we must provide Dynamics for that um oh well they can have nonoral matter and then you can provide Dynamics and indeed you get new gravitational Dynamics and if I have these arrows here they don't mean well
+
+00:17:45
+you should and one could uh they mean we know how to do that and I'll explain it okay uh by the same token of course if you start here with Maxwell what you need to do you can now follow this in a modern way and you arrive at Einstein gravity again so at the same time as it provides the path to new gravitational Theory starting from new matter which you need to observe and formulate in equations it provides you with a cleancut explanation why if you start with mexo theory on the one side that you need to end up with Einstein
+
+00:18:21
+gravity on the other side okay so it's also an explanation of what we already have so this is uh the picture I want to convey so the central result of today I'll announce it in the beginning is you start and you give me some predictive and quantiable matter equations in form of an action so you're an observer you watch out there you see what not the bullet cluster and you come up with a very bright idea of how to formulate what's going on there as a matter model okay as a local mattera model and you
+
+00:18:56
+come and say these are the equations for dark matter we checked it here here here what we see there locally that is how it works and then you say however there's a problem this is my meta field but unfortunately I need coefficients it couples to that do not look like the coefficients of a lorenzian metric well maybe they do then everything is fine but say you need coefficients that are different from a lenan metric and one possibility for instance would be the following if you observed tomorrow it's unlikely that you observe
+
+00:19:32
+it directly but to illustrate the point if tomorrow You observe that there is a light Ray out there in vacuum and all of a sudden it splits into two If You observe that then general relativity with its lorenzian metric is dead the same moment we know such splitting of light rays from the laboratory if you have a Bor refringent Crystal and you send a light Ray it will split into its polarization components have you seen that I'm sorry it will split into its polarization components in fact while
+
+00:20:28
+the v is described by such a metric such a linear medium is described by a fourth rank tensor okay you one can show that you trust me so that means If You observe the same thing in the sky then you need to write down a modified Maxwell Theory with such a structure okay so it's not like Pure Fantasy one can very clearly write down phenomena that immediately mean the death of general relativity so assume nevertheless you see this and you write down the new equations then I claim from these equations from this
+
+00:21:04
+action you can construct a linear homogeneous system of partial differential equations a linear system uh it has the slight disadvantage that it has infinitely many equations but that doesn't shock us I tell you we know how to do that it's a straightforward algorithm no brain power required you convert that into such a system it's not the equations of motion for this it's is a complicated way you uh get this system and once you have it you solve it well that's a little bit more
+
+00:21:35
+tricky but once you solve that system and I'll talk about this system all I tell you about today is how to get this system of pdes and how you extract it from the mattera equations once you have it you solve it and the solution is the lran of gravity that is required in order to be the background for this Theory such that the theory is both predictive and quantiable and that you need that's the idea and um The Familiar example is you put in the standard model action so all the the electrons and Maxwell and uh
+
+00:22:15
+Electro weak force and everything or just mix is also good you get a linear homogeneous pte system as I said a particular one with particular coefficients you solve it and hooray the Einstein action I introduced to you with undetermined gravitational constant undetermined um cosmological constant which appear as integration constants when you solve this is the solution this would then be the reason once I explain to you how this works this is just the the announcement of this result this is then the explanation
+
+00:22:51
+for the Einstein theory in if our matter is the standard model matter okay so you don't need to postulate that separately it's actually derivable all right and of course the general principle is that you will look out there not put in the standard model but you put in what you really see well that's a complicated business you need to write down equations for that and so on you put that in and you get the relevant gravity Theory now you say what if we see the standard model and other
+
+00:23:21
+stuff well that's then in total it's a new meta Theory and you get the relevant gravity Theory possibly a modification of General relativity so let me explain to you in two steps of how this works the first step you need to understand the new matter and you need to understand the SpaceTime structure that follows from it if I say new mattera it could be the old mattera then will just have as a result the old SpaceTime structure and the key to all of this is something called the principal polom of
+
+00:23:52
+the meta field equations whenever you have field equations like Maxwell's equations they are partial differential equations and they can come from an action now if you vary the action with respect to the mattera field which I just denote by a fi here you will invariably arrive at a partial differential equation for the matter field so they many derivatives acting on the mattera field and it will have coefficients well the coefficients could depend on a mattera field as well because it needn't be linear mattera
+
+00:24:23
+field equations but it will always look something like this now one question people always ask is don't I have to use covariant derivatives here because if this is already a tensor field you need to use covariant derivatives or even if this is a scalar field from the second derivative onwards you need covariant derivatives well these are partial derivatives but they have coefficients and there is a sum of many and if you think about this the lower coefficients they can provide for instance what we
+
+00:24:53
+call the gamma symbols but maybe in a more complicated geometry uh not coming from a metric maybe you have to generalize the idea of a connection too we know examples for that and I don't want to assume any of that you can't uh start by saying oh maybe if we knew the geometry then we could do something but we don't the point is to find out about the geometry it's not to already know it so you start from some meta action That You observe you write this down and you have these coefficients and um anything
+
+00:25:26
+is fine because it comes from a meta action this is fully covariant the coefficients carry all the non-triviality now the great thing that mathematicians found out is if you want to understand the causality of these equations so how can signals run where do I need to put my initial conditions which is very important for physicists you don't need to study the whole equation you only look at the highest order coefficient so if this goes up to the N derivative you look at the coefficient Q A1 to a capital N the high
+
+00:25:59
+order coefficient it's the only one that's relevant yes do you not allow for zero order uh I do and this is a mistake that that keeps in my slides to check the attention of the audience uh so indeed this should start from zero thank you very much yeah okay no it's really true I mean that's every talk I I forget to to correct that it starts from zero that can be a constant term so you look at the high yes runs a no a is an index a 1 to a n is the first the zero a a z to a n is the
+
+00:26:34
+zeroth index to the nth index no it's not true no no a runs from one to n because if n is zero then there are no derivatives but there is still the field itself it's not so important so the point is it should read like um Q f plus Q A1 Del A1 5 plus Q A1 A2 D A1 D A2 F and so on oh over the dimensions of the manifold I'm sorry okay so I this understood so on the smooth manifold of Dimension D so this runs over the dimension over what else on the partial derivative Dimension dimension of the
+
+00:27:19
+manifold okay so you look you only if you want to understand the causal structure you only look at the highest order coefficient what do you do with that well the highest order coefficient you can plug in a co- vector k which has an index A1 but you can plug it in several times such as to fill all these indices so you make a full contraction the same coor again and again what do you get well you get a polom right now um if this field here f is a tensor field it carries some indices then the Q carries double the
+
+00:27:59
+number of indices because they need to connect to this and from the variation gets these indices and you need to get rid of these indices and the mathematicians instruct us to take the determinant over these indices to achieve what to construct overall a polom at each point of the underlying manifold and the polinomial is in the K so it's a polom in each coent space right because K is a cotangent vector you submit it at a point at uh in um in the cotangent space of X and this right hand side depends
+
+00:28:37
+polom on this Co Vector that's what you do and that's we're instructed to do this by mathematicians because this is called the principal polom of these field equations and that plays an eminent role in order to understand them I simplify a little bit if these equations have um a gauge symmetry it work Works a little differently but that's not our concern it can be done and the point of this polom is if you know this polom you understood almost everything about the causal structure of
+
+00:29:11
+this Theory and I write down for you the polinomial in Einstein theory if you from Maxwell theory if you come from the Maxwell equations the polinomial is p of X comma K is the inverse metric gab k a KB this is the principal polinomial of Maxwell Theory and expressions like this we see very often it's the principal polom but here this is fully General okay for any mattera Theory now if you want to understand the causal structure what you do so we in cotangent space so we go to one point of the manifold and we can do this at every
+
+00:29:52
+point but now I fix one point we go to one point and then what I draw here is the cotangent space at that point is the vector space the cotangent space and this shape here these are the Zer of the D of the principle polom so in Maxwell Theory it's all those K where this thing is zero and how does that look in maxw theory it looks like that yes can this be related to the generalized momentum it is that one it the K if you do the geometric Optical limit of the field equations then this is the wave Co
+
+00:30:33
+Vector so it would be the momentum if you wish of the light Ray in the geometric Optical limit okay so this is of course a key structure introduce the whole space time structure to you via these cones it's a key structure well for another theory that's not mixed with Theory a bit more complicated it could actually look like this okay so then you would have to write down a gravity Theory A Spacetime Theory with such a cone or it could look even worse it could have any type of shape right uh well which arises as the
+
+00:31:09
+zero shape of such a polinomial that comes from your meta field equations okay so this is the first thing where you see okay there's something terribly different to the standard case but it could well be that that happens for instance uh a while ago um it was claimed that neutrinos run faster than the speed of light have you heard that in the Press so if that had been true then there would be a cone from mexu Theory because light would still be there and there would have been another cone something like this from the
+
+00:31:41
+neutrinos well you see it's not excluded that somebody could have written down equations describing that it would be this equations where the zero set of the principal polom that you calculate has this structure and people gave interviews and New York Times and so on they said well if this is true then we are absolutely at zero we don't know how to do any physics anymore it's not quite so bad right okay so so please follow the talk so you can have that and so this the kernel this the zero set of this
+
+00:32:15
+polinomial now we can play a game and the game is I don't want to know the structure and the cotangent space I want to know a Rel relevant structure induced by it in the tangent space and what you can do you can look at the gradients of this uh surface and um well if this is a Cod a surface in COD tangent space then the gradient is a vector well the gradient in in Tangent space would be a co- Vector that's what I always emphasized but here we we already have one star we have the star star the
+
+00:32:48
+gradient to this surface is a vector so we can take this vector and uh map it by by the actually the derivative map of this guy to tangent space so that's the origin of the tangent space at the same point of the manifold right and uh we have this gradient and we can draw it in Tangent space well I can take a gradient at any other point I can take this gradient and I draw it in Tangent space and if I do this for all the gradients then I get a new figure a new shape in Tangent space in this case you would get
+
+00:33:21
+this shape okay so that means a shape like this the zero set of principal polinomial that comes from the field equations immediately induces a shape in the tangent space via this construction this is how you do it graphically uh you have to take the fiber derivative if you want to do it mathematically yes in this cone that we uh know about we have interpreted this space the the outside the cone that you cannot go there yes we'll come there okay we'll come there we'll come there if this is
+
+00:33:59
+in cotangent space at a point in maxw theory then the corresponding picture in Tangent space boringly looks very similar okay so in this case it looks like this and there are other cases where it it looks more interesting okay so anyway we came from meta Theory this was imposed on us we can however generate these structures in the tangent and cotangent space and they will have to take the role that these guys took in mewo theory again why are these structures important they're important because they contain the
+
+00:34:32
+information about the causal structure of the theory I I'll comment on that further and um actually if you find such this shape in the tangent space you can ask is there a polom in the tangent space from which in turn this shape derives as the zero set this was the zero set of a polinomial here that we derive from meta field equations then we make this construction but is there an underlying Pol omal that produces the shape and the answer is yes and this is called the Dual polom and it's totally
+
+00:35:04
+determined by this polom you have a polom on a cotangent space fine you have a dual polinomial on the tangent space well not always not always but we will see that our predictivity condition ensures that if you have a polinomial here underlying then they have a polinomial there underlying and you can understand these two shapes by these two pols and in in lenan SpaceTime if here in the cotangent space the polinomial was essentially given by the inverse metric then the polinomial here is essentially given by the
+
+00:35:38
+metric but that this is the inverse of this one well that's just kind of an accident of linear algebra uh it should be more suitably called if you call this G inverse you may call this G inverse but the metric is the Dual of the inverse metric okay so that's the abstract logic Beyond the special case okay so you have this it's all very straightforward um and you have a map that points back okay so you can go back and forth but careful not with any Vector only with a vector that lies or
+
+00:36:14
+co- Vector that lies on the surface you'll map it to a vector lying on the surface okay so now I showed you these cones somebody wrote down some Theory with don't know is the theory predictive and that's the first thing you must check if somebody hands you a theory and by predictive I do not mean does it make the right predictions we observe well that we have to check but the question is does the theory predict from data today actually data tomorrow does it even have the power to predict and if it has the power to
+
+00:36:51
+predict then you can start questioning whether it predicts the right thing right it needs to go in that order and so that's the first thing and the second thing is that matter is quantum matter I said those are the two bottom line assumptions we make and now what bearing does that have on the shape of these guys how is the shape restricted well the key result first in words and then I show you what it means is that if you have meta field Dynamics from which we started and you require them to be
+
+00:37:19
+predictive you must have that the polom p in each coent space is a so-called hyperbolic polom what that is I'll tell you in a second it's an algebraic property that you can quickly check okay just I'll explain that in a second now it turns out and so this is long known this is a standard pde Theory uh linear pde theory that you actually productivity has as a necessary condition the hyperbolic hyperbolicity of the uh principal polinomial that's why it's so interesting right because
+
+00:37:53
+you always want to decide that now a new result is that if the m field Dynamics are quantiable a necessary condition for that is that this dual polom be also a hyperbolic polom it's a different polom living in the Dual space but if this polinomial has the property of being hyperbolic I'll explain in a second what it is then it does by no means follow that the duel is hyperbolic but if you have that too those are necessary conditions for our basic assumptions that we make about matter okay and similarly you can argue
+
+00:38:35
+for Point partical Dynamics so we call this by hyperbolicity and this uh these are two independent and rather non-negotiable reasons we should we like to give for this um hyperbolicity that the theory is predictive and quantiable otherwise you would throw away the theory in the first instance okay okay so this by hyperbolicity is important so I should tell you what this hyperbolicity condition on the pols is it's very simple I'll explain it geometrically and then we can think about what it means
+
+00:39:11
+further geometrically it means the following let's start with our familiar example we have a light cone right this comes from a second degree polinomial metric with Rens in signature a polom with this zero set is called hyperbolic if there exists a Direction so this is the start in uh cotangent space the origin there exists a direction in cotangent space this one or this one or this one there must be only one there exists one such that I can consider any line in the entire space that goes in the same direction so
+
+00:39:48
+there could be a line uh that is over here or over here and it's an infinite line okay so the exists a direction such that every line in this direction intersects the surface exactly twice why twice well exactly as often as the degree of the polom is because this is a second degree polom null surface there must exist a direction if it's hyperbolic then there must exist direction that any line in that direction intersects the cone as often as its degree says and that's already the general definition of hyperbolism
+
+00:40:28
+take this funny thing here um there exists a direction in this case this one for instance any line in this space Also the one right over here right right over here needs to still intersect the shape this is a fourth degree polinomial 1 2 3 four times let's go back here this direction here is not a direction that identifies this as a hyperbolic um polinomial because the line here doesn't touch the cone at all now the cone is here here like this like this and this line runs over here it does just simply doesn't
+
+00:41:02
+touch it yes Pard me you count yes so the point is what happens if you come to the origin here it seems to intersect only once but um you count them not geometrically but algebraically so the algebraic multiplicity two zeros here two Roots okay that's the the counting scheme so it's very simple to decide that and um in fact the set of all the directions that have this property that any line in their Direction intersects as often as the polinomial says has an interesting an interesting structure for
+
+00:41:40
+us it's called The hyperbolicity Cone and uh it's those guys here and also the guys that point down here so in normal language would say the Tim like vectors or something like this okay but we don't call them like this maybe you realized I I with stod calling them a lot like this um The hyperbolicity Cone so it's not the total set but it's the zero doesn't belong to it it's the um it's a connected component of such vectors so either this one or that one you can pick
+
+00:42:10
+well they're both hyperbolicity cones later on we'll make a pick in the picture over there the hyperbolicity cone is actually only the set inside here so although this is a very complicated structure and it can be arbitrarily complicated you always have a hyper if the polom is hyperbolic there's a hyperbolicity there's one and there is also another in this case here and this is by theorem by gording famous theorem is always an open and a convex cone so whatever crazy polinomial you
+
+00:42:40
+have for as physicists whatever matter Theory you have you come from it's an open and a convex cone that's very important this is an open and a convex cone it's extremely important as is open and convex you tell me later on or somewhere in the tutorial somebody why if it's not convex why you have a stability with of photons okay anyway so that's very important that's always guaranteed for these guys and they're hyperbolic remember p is hyperbolic if the theory is predictive so the stability of
+
+00:43:13
+photons has a lot to do with the predictivity of the theory anyway so now what I already showed you is if you have these cones they they correspond to say the the wave vectors and the light like vectors right in coent and tangent space you can map the null co- vectors the P null co- vectors to the P null vectors like by this fiber map I had before right but now we want to do something different so I have this I can map the brown stuff to the yellow stuff but no other Vector in the cotangent space can be mapped over here
+
+00:43:50
+or otherwise from here no other Vector can be mapped back to here by the way it's of course raising and lower um raising and lowering of IND right do you see this if you go here this is the raising and the lowering of indices only here in general it's nonlinear but it exists but I can only raise in lower indices on the brown and the yellow stuff that's not good enough I also need to know how to raise an index on these co- vectors how to go over there and that's not possible by the same
+
+00:44:23
+map and instead what you need is a so-called LeAndre map that's also a fiber derivative but of the Ln of the polom and its image might lie rather ugly in an ugly way over here but that's just a fact of life in the Maxwell case here it's actually very simple there also the outer vectors the null vectors are mapped with one type of map over here and the vectors inside the cone are mapped by an entirely different type of map namely by a LeAndre map to over here it's only by accident because this
+
+00:45:03
+structure is so simple that the maps numerically I almost would like to say numerically coincide so they're usually thought of as being one and the same map that Maps the null vectors and that Maps the time like vectors we always use the metric for that and even worse one has a meaning of taking a vector out here and you can still because it's linear alge albra you can extend this linear map rate that raises the index to also mapping space likee co- vectors to space like vectors and all seems to be the same
+
+00:45:40
+thing well here it simply isn't as soon as the structure is a little bit more complicated as your meta Theory might dictate it's not as simple and you discover the structurally different things so this is now for the inside of a hyperbolicity cone you go over there and you arrive there there and in fact you can show or we showed that if both the polom and its duel are both hyperbolic as a physicist you should think ah if the meta theory is predictive and quantiable okay check I want that if this is the case then also
+
+00:46:14
+the inverse of this map exists and is unique meaning if you get these structures for some matter type only if the mattera is predictive and quantiable which is however exactly what we want do you have a theory of raising and lowering indices also on elements in the Browns in the brown areas here okay only Remains the question what about the vectors that lie neither on the boundary here on the null surface nor in here maybe here outside or here in between and the answer is we don't know it's probably not possible and we don't
+
+00:46:52
+care it's not important my claim is also in standard Theory you never need to raise the index of a spacelike vector has no physical meaning you can do it because your linear map extends to it so if you can do it do it if you must but there is no point in the theory where you need to do that but you need very often to raise and lower the index on a null vector or on a Tim like vector a CO Vector here right okay so the Leon this one is called the gaus map for historical reasons and this one is
+
+00:47:27
+called the LeAndre map and again in the standard Theory they coincide so nobody talks about the difference but it's a huge difference because the gaus map is actually something um uh from projective algebraic geometry algebraic geometry is the study of the zero surfaces of pooms and the LeAndre map is an object from convex analysis so because we always have open and convex cones we have con um Leandra Maps yes a hisorical question yes this I guess it has been discovered by Toe no no no no no so in convex analysis
+
+00:48:07
+no no it's not we found the inverse for LeAndre map this is well established Theory but the point is in this context right it's um one needs to work a little to see that it can be applied okay so in this context coming in SpaceTime for hyperbolic polinomial so you can have a LeAndre map for any convex function on a convex cone or rather stricter conditions if the cone has a boundary so normally in classical mechanics where we do the lre transformation to go to the hamiltonian formalism or in um
+
+00:48:39
+statistical physics where they do the Le transformation to go to other potentials right you always act on a whole Vector space and a whole Vector space is a special case of a cone a cone is like I think I explained this before it's like a vector Subspace so you can the sum of two vectors in a cone is again a vector in the cone and the positive multiples of a vector are in the cone well that's of course true for the entire Vector space and then some subtleties of the L transformation are not seen so therefore
+
+00:49:10
+we think oh you can always do the L transformation actually if the domain is a cone with a boundary that's a little more restricted okay anyway so the message I want to convey is very simple you come from some meta model that you propose if it's predictive and quantiable the polinomial must be by hyperbolic as the Pol must be hyperbolic and the Dual polom must be hyperbolic too if it isn't you can immediately throw out the theory yes so light well yeah I mean you could for instance I mean this is a special cone
+
+00:49:44
+if you had a cone like this one uh then the hyperbolicity cone so a double cone like this the hyperbolicity cone would be like here uh you could uh think that light runs here and that the neutrinos then run here there is no problem well that there I say there's no problem you have these structures right uh you might here in the first case think which is the relevant cone well for what it's worth it's this uh uh hyperbolicity cone but this stuff is also there I show you how to deal with
+
+00:50:12
+this okay that's the purpose of the whole talk but absolutely if you had mexo Theory and neutrinos and The Cone structure was that simple it could be even more complicated to explain the case we know how to deal with it it's not a big mystery it's not the theory is totally dead well general relativity is but the general idea isn't that's what I'm trying to explain okay so um we have this LeAndre map too now you have the complicated cone structure what's the physical significance I just need to
+
+00:50:40
+tell you this you trust me that this is true we checked this we have many theorems uh proven on that it's roughly as follows so you have the cotangent space you have this polinomial and the null coov vectors are the momenta of massless particles well it doesn't surprise you very much because that is exactly what it is here but it is that not because we generalize from here but because this is the general idea of massless momenta from geometric uh from the geometric limit of Optics so it's
+
+00:51:10
+rather like because in the general case the massless momenta lie here that's also the explanation why they lay lie there did I explain to you why the massless momenta are the core vectors on the on the null cone I didn't okay this is the explanation that's the reason and the moment the co- vectors in the hyperbolicity cone are the momenta of massive particles again that fully coincides here with the so-called Tim like co- vectors being the co- vectors of massive particles then you map them
+
+00:51:42
+over here then you get the tangent vectors of null particles of massless particles and you get the tangent vectors of massive particles okay and the space likee co- vectors of what should they be the momenta and their image under raising the index the space like vectors of what should they be the tangent vectors well certainly not of matter you don't need it okay that's the reason why you don't need it anyway you have this and then you go to the Dual space to the tangent space and there you have again the
+
+00:52:19
+masses particle velocities as I just said and the image of this cone which does not coincide with the hyperbolicity cone here which in general is bigger than that that's the massive particle velocities the fact that this one is bigger than this inner cone here has funny consequences for instance in general theories that are not precisely this one you can have massive observers that run alongside some component of light for instance in this B refringent electrodynamics this would not be different matter but would be one and
+
+00:52:58
+the other polarization component of light running like this or this this is why it does that so in matter this is reality okay in vacuum we don't know but in matter it already looks like this huh so this is not fantasy this you if you're a material physicist you say okay yeah yeah I I know this stuff I mean not in this form they don't but um morally morally okay but here so you can run with massive matter along one component of light and you can even run faster than some component of light you
+
+00:53:34
+just cannot run faster than the fastest light that you can't do okay and that gives you effects like chankov radiation in here uh but if this also happens in vacuum also there now you say okay why would it happen in vacuum uh it happens in matter well who would have thought that in vacuum you could have lensing right so it's just the assumption is only like maybe the vacuum is as rich in structure as matter is I mean it could be possible right anyway so this is the the picture here and that's the physical
+
+00:54:07
+significance of these now what is the meaning of this hyperbolicity cone here well it's the velocities of possible observers you know that in standard general relativity The Observer always runs along a timik uh curve a timik curve Cur is of course the hyperbolicity cone of the duel so you say a yeah all the matter and all the observers all on Tim like curves well here it turns out not any matter can act as an observer why not well first of all they can't otherwise the whole picture becomes uh IL defined so it's a
+
+00:54:45
+constraint that comes from a well definition of the theory and if you then calculate what happens to the matter that runs faster than a than an observer you see that it will very quickly radiate away so you could say poetically you can break the speed limit the lower speed limit but you pay a price for it you radiate away okay so in nature we wouldn't see much of these particles because they would immediately radiate away they would immediately lose energy to the electromagnetic field say and fall back
+
+00:55:18
+into here which would have been if this had been true with the super luminal neutrinos would have been a beautiful explanation why never anybody saw them before because they're very unstable and so we were surprised why they would be so stable and therefore we didn't believe the result other people didn't believe the result for other reasons and in fact the result was wrong because they didn't plug the socket ride or something but uh um but this is the case so I'm just talking about things that
+
+00:55:44
+could come up from meta theories right just talking about this I'm not saying this is how nature is or this is my proposal for nature I say if you write down new meta theories they can be perfectly predictive perfectly quantiable and have this feature well maybe we'll have to live with that feature right so usually it's assumed if the theory isn't like this it's not predictive that is just wrong right open any mathematics book okay yes so the inverse of the has a bigger Dom than the
+
+00:56:18
+hyperic or can have a bigger uh then the hyperb yes that's right so when when you started out with the principle polom you wrot indices on the coefficients up so that's a chest that we plug in a CO Vector but there's no like necessity to plug in a coor you could also wrot yes yes you have to keep in mind whether it's the velocity of a massless or a massive particle there's a very easy thing I can ask an exam question which I of course won't ask because it's just a special case of this theory is is
+
+00:56:52
+this a tangent Vector of a light of a massive or a massive particle you say well of course it's of a massive particle well in that theory you don't really know well you do because I mean okay for for this one you do if I ask is this the um the the tension Vector of a massless particle here say yes in that theory you don't really know because there could be other masses particles and this could be either the velocity of a massive particle meaning having this momentum and the very same tangent Vector could
+
+00:57:24
+be the tangent Vector could be the tangent Vector of a massless particle these two are mapped to this one and they say okay so it's two to one no because this one is mapped with a Leandra map to here and this one is mapped with the gaus map and under the inverse of the gaus map this one will go back here and under the inverse of the LeAndre map this one will go here there is no problem but it confuses one at First Sight because when it's used to be able to tell right but why would you be able
+
+00:57:57
+to tell from just a picture you need to keep it in mind well the theory has it in mind anyway okay so there these confusions that come up precisely because of that and therefore I emphasize the different character of these maps and again nothing if this is a model this is all mathematics it's just must be like that okay so at this point we arrive at a refined physical definition of space time you remember I provided in the course at the beginning this definition of space timey manifold BL BL BL
+
+00:58:27
+okay now we have a refined definition of which of course the definition I gave you is a special case but it leaves out important aspects SpaceTime is a triple well for us it was whatever it was uh 16 member uh Tuple um I have of course here a smooth manifold so the O and the A and so on you all keep in mind so it's a smooth manifold but that is the smooth manifold then I have some cancer G which I call the geometry it could have four indices like here it could have 26 indices 10 Up and 16 down could have all
+
+00:59:07
+crazy symmetries it could be several of those right I mean this is just to convey the idea and all of that we had before we have the smooth manifold we had a geometric structure was a loren metric a special case but I did not say that A Spacetime consists of a smooth manifold and geometric structure and a meta action I didn't talk about meta actions until very late you remember in fact what I should have written is space time is a smooth manifold with the lorenzian metric in order to introduce the standard Theory
+
+00:59:39
+and the Maxwell action why because I do not have the slightest clue how to interpret this structure if I do not use matter to probe it I can say I can claim in this room here here we have a remanion metric I mean in SpaceTime in our portion there's a remanion metric plus plus plus plus plus and then we can have long philosophical discussions whether that's a good idea or not but what you really have to do you have to check you have to use matter to probe the structure of space time for instance you have to look at Mercury
+
+01:00:18
+that's matter it goes around the sun and it makes this little precession and so on so you say ah okay so if I really want to understand this and with the light deflections on there must be a lenum metric then I have mexu Theory it must be a loren metric because mexu theory on the reman metric is not predictive the hyperbolicity in the metric case means lenan signature that's the next thing that's explained so if you ask why do we take a Loreno metric actually somebody asked me that the
+
+01:00:46
+other day there a very clear answer if you do mexo theory on a non L on a metric background but it's not Laurence metric then from initial data you cannot predict the future data you simply cannot okay here's your explanation for the Laurence signature but in general it's not nothing about signature it's about the B hyperbolicity of the polinomial so I say if you want to talk about space time in a meaningful way say it's this manifold say it's this geometric structure but then tell me
+
+01:01:16
+which mattera you use and only that gives meaning to the geometric structure so it's a smooth manifold G which we call the geometry because we like like to and a test meta action mattera that probes this and this triple must be such that the associated po principal polinomial and its dual that you get from The Meta action are both hyperbolic so this is in a sense the lenan condition in the metric case in if you take a metric a Mex with Theory that's the lenan condition and of course you can write and you need a Time
+
+01:01:50
+orientation da da you can all put on top this is the essential thing it makes no sense to ask is spacetime maybe does it maybe have this structure you need to ask does it have this structure combined with that and that meta Theory being coupled to this structure then we start talking and then you're closer to experiment the question whether metric the SpaceTime geometry is a metric geometry is a philosophical question how would I ever test this use mattera so you need to provide the mattera in order to make a coherent hole
+
+01:02:26
+so matter and SpaceTime are not so separated as one things not even in the basic interpretation and if you now think historically this is exactly what happened Einstein stared at the mexel equations and he saw oh there's this relativistic stuff in there and the whole interpretation of observers and measurements and all of that was fixed iand didn't dream this up it was fixed by the Maxwell equations and this formalizes this but we don't need a new Einstein to do this we just look at the
+
+01:02:54
+mathematical structure of the theory we say okay we do it like Einstein but with the mathematics we have here okay so that's the that's the good thing and so what I want to emphasize is that the physicality of the assumed SpaceTime geometry depends on the matter I have here three exclamation marks always difficult to remember so I think the first exclamation mark is that I say isn't that remarkable isn't that remarkable that we need to provide matter in order to understand what we're
+
+01:03:25
+even talking about even if I put the geometry on the table second it's remarkable because it explains so many of the questions some people did ask and other questions people could have asked why do you use a metric well because it underlies Mew Theory why do you use a lorenci metric well because otherwise Mex theory is not predictive why do you raise and lower the indices like this well because you always need to because that's the Duality between the spaces why do you raise lower null and Tim like
+
+01:03:52
+vector indic Co Vector indices Vector indices in the the same way I say well that's an accident okay that is not generic but you see the history of modifying gravity of doing it differently is a long and winding one and many proposals have been put forward by Einstein himself for instance to have a nonsymmetric metric tens he says why would this metric be symmetric in its two Ines maybe if we have a non-symmetric one we have more degrees of freedom maybe we can have a better theory that explains more as more
+
+01:04:21
+refined and so on and then they started constructing inverse of this object right and that is where the whole trouble starts because why do you do an inverse well because that's the structural the formal analogy to what you do in gr well formal analogies mean very little you need to understand why you did it in gr like this and then you can follow the Y and do it the same but don't just copy something formal in fact what you need you don't know how to go from here to here unless you have matter
+
+01:04:55
+if you have matter it's the matter that tells you how to go from here to here it's the principal polom that tells you how to go from here to here but the principal polinomial you get from this structure G only by looking at matter whose principal polinomial that is and so then one understands why on Earth if you have a matter action say for a point particle why you actually need to write why the point particle has actually this lrange in why does it have this lrin well because if you from this lrin you see how you
+
+01:05:32
+have to raise in lower indices you know that the momentum index is something like this you pull the index on the velocity and you get the momentum but the velocity is a kinematical quantity and the momentum always re depends on your lrin you know that from classical mechanics you cannot calculate a momentum without knowing the Dynamics well but if this is the association of momenta to velocities how on Earth would you make them if you don't know what matter you're talking about you see a
+
+01:06:05
+lot of the stuff we're doing by raising lowering indices and vectors go to co- vectors we do this as if this was written in stone on a lorenzian manifold this is only like this because we always substitute Maxwell Theory as the one theory that tells us how things go okay okay so this is the physicality of the assumed space time so um and that's only a slide you see this is a slight redefinition it actually is not a redefinition it just makes precise what before we just introduced tacitly
+
+01:06:42
+usually with the statement this is what Einstein told us okay so so so far again I emphasize this is maximally conservative it's only studying what underlies the standard Theory logic Al but once you understand this you can apply it to any mattera Theory and that's the beauty of it especially the beauty in fact of having so much matter around us that we don't understand matter and energy who knows who knows we are prepared here okay so this is this thing you understand the SpaceTime if
+
+01:07:13
+you understand matter on it and before that you understand very little now everything is fine for a given SpaceTime geometry I Now understand how this works works but how on Earth is this new structure that you identify by looking at matter that requires it how on Earth are you going to give this new structure Dynamics also that has been undertaken quite a lot Einstein shinger Edington Mofford and hundreds of people have tried to formulate new gravitational Dynamics for new geometric structures
+
+01:07:54
+it's not it's not an idea that wouldn't present itself the question is how do you do it and I think in the past people followed too much the formal analogies and always ran against some wall or the other well so let's try to do a little better than that so let's go to gravitational Dynamics well so this goes very close to what niik juli was telling you about the standard Theory um but I will try to explain independent ly of what he said because I do not assume that all of you
+
+01:08:29
+fully studied that because it's excluded from the exam but you should that was a fantastic lecture and actually what he said is a very important Point uh of understanding gravity but I'll start a new let's look at space time so again as always I have to reduce one dimension because otherwise I canot draw a picture of SpaceTime but let's assume here this three-dimensional space is a picture of SpaceTime and I start with the view maybe a little Western Centric of an eternal God okay so how
+
+01:09:01
+would an eternal God view SpaceTime well he just looks at it tada there it is and he knows the history of the entire universe so if there's a particle running here no so this is uh 2,000 years ago this is today this goes on just God this this just boom looks at he knows everything at once okay this is uh a view and this is a little bit the the mega manic view of theoretical physicist would say space four dimensional manifold the world line is there and okay but in a sense in SpaceTime nothing
+
+01:09:35
+happens because it just boom is okay um obviously if we had if we could afford this view we wouldn't need physics because I can predict by looking tomorrow this going to happen right so okay now however if you're God then and uh uh it's lonely up there and um so what you could do you could play a game and God says okay just for fun uh let's in my SpaceTime which I overview let's put some arbitrary surfaces okay and he might put there surfaces that are such that the co- Vector is always uh the
+
+01:10:17
+Dual Vector to a uh to a tangent to a world line in other words he could say Let's Take A Spacetime hypersurface I don't know why God would be interested in space like sorry in space likee hypersurfaces but let's assume he does that's the game he plays and um he has this big geometry sitting in space it could be a metric Loren metric for instance and he decides to look at the metric it induces on these surfaces it's a little bit like me saying oh let's put a little sphere here and let's study how
+
+01:10:50
+the sphere works right there's a little bit why would I do that well I I'm I'm bored so I study spheres okay so he's bored and he studies the spatial hypersurfaces just for fun and he knows okay he knows the induced geometry on this one on this one because they all come from the big SpaceTime geometry we're also interested in and then he continues the game he says ahuh wouldn't it be funny to study how the geometry on here changes if I slightly deform this hypers Surface by a lapse n and by a
+
+01:11:23
+ship shift n Alpha you remember that from jul so you you shift it up a little bit everywhere and then you move it a little bit and then you have an infinitesimally close other one now God plays this game in two ways he said well I produce the other surface and then I just look what is there because he can look but he can say but it's a funny game I take the data here and I just say how I deform the surface and I calculate by derivatives how it looks like and then I compare and I calculate it right okay of
+
+01:11:56
+course all this is totally silly when God plays this game it's really just because it's so boring up there okay so that's the God view and obviously I will come back to this point right so it's a it's a pedagogical game so that's good now we have us or some of us the homo sapiens and our access to SpaceTime is different our access is we have a very short lifetime or our experiments have a very short lifetime is Switched and off on and then we off again so this is a little bit this kind of piece and
+
+01:12:31
+because of the short Lifetime and also because of the finite length of my arms I have only limited access to space around me so however big you are and long lived you experiences something like this and also the experience of any experimental apparatus we have what's the longest running experiment in history G well if you don't know I don't know I don't know but anyway it looks a little bit it looks a little bit like that okay so we have a problem if we want to compete with God in knowing what's going
+
+01:13:06
+on up here we're at a serious disadvantage very serious we just don't know now this is homo sapiens now uh Homo sapiens sapen ismus right says okay this uh Little Piece of Cake this too complicated for me I'm make a little abstraction I linearize what happens away from right now I linearize that so instead of collecting data in the piece of cake he collects data on the plate on which the cake is served and he linearly approximates what's happening in the cake by providing to this initial data also
+
+01:13:47
+initial velocities roughly speaking and that can also apply to the geometry right and juli showed this right he had the geometric fields had the momentum Fields it's a bit funny how geometry has a momentum but if geometry is just a field why wouldn't it have a momentum right so but this is just the linearization of we know a little more but if you want to measure the momentum or say the velocity of a bird you look once and you look again and you need a finite lifetime to do that if you just
+
+01:14:16
+live in one instant you can never see velocities you just see the picture and then you're dead Okay but but if you live a little longer you can look look again and then you can approximate a velocity well that's roughly this okay so giving initial conditions consisting of a position and the velocity is the first step to competing with God because the velocity tells you what happens the very next moment but that you still get by observation you must get by observation okay now we have the initial
+
+01:14:47
+conditions here position and momentum or velocity or in Geometry initial geometry and the first order change of the geometry but then your life is over okay more or less now how do you compete with god well you still are not very close to competing with him of saying what happens here he just looks and you're dead what do you do what brings you closer to God a hamiltonian a hamiltonian brings you closer to the hamiltonian eats the initial conditions and evolves them isn't that what hamiltonian
+
+01:15:28
+mechanics okay this is that now geometry and velocity let's say it's geometry and momentum it's the same thing it de evolves the initial conditions so we need hamiltonians or lran and whatever is equivalent or equations of motion because we're not God because we're human humans need equations of motions in order to say from the now what is the tomorrow is that right that's exactly it ha we're we're close so how do we now the question is what is the hamiltonian what is the hamiltonian that brings me
+
+01:16:03
+from here to there well that's exactly the question we're asking in this lecture what is the hamiltonian of the new Gravity Theory or of the old gravity theory for that matter what is it well it's the hamiltonian that makes you compete with God so now we come back to our little God game here juli actually explained this well he mentioned it he said this constrainted algebra do you remember the hes and the D the constraint algebra he said you can get from purely kinematical deformation
+
+01:16:33
+algebras you don't need to know the Dynamics first you just know the geometry and you know how to deform one hypersurface in the other and you know how to study how the data changes if you know that you can write down the constrainted algebra okay now let's look at this so the play a game God is playing is actually he's embedding juli called this little E subt I call it X subt you're embedding the same space spatial manifold the same three manifold again and again and again into space time in a certain way in
+
+01:17:11
+which way it doesn't matter must be space like surfaces right you do embed that and then you choose coordinates on your space time and you choose coordinates on your abstract three manifold okay and actually that is that is the path you actually give it so and now the geometry on here is just the pullback of the metric from up here along this embedding map that's the pullback okay so that's the game God is playing a little bit more diagrammatically but we did all of that right we do pullbacks and stuff like
+
+01:17:44
+that now God's game that I explained before can be expressed in terms of deformation operators what do you do well let's start with this one this is the tangential deformation operator did you call it H and D how did you call it uhuh okay anyway the deformation operators um here you use you say this is the n Alpha that's the shift and the laps appears up here that tells you at every point of the manifold embedded manifold how much you go to the side and this n here tells you how much you go up
+
+01:18:18
+but let's start with how much you go to the side in the direction of the tangent vectors all fine and this is just a function derivative that acts on the geometry roughly speaking this tells you how these data change if you go a little bit to the right you can only calculate it when you're God because you need the functional derivative but derivatives mean you need to know it here in order to compare okay but anyway that's the game God plays a little bit more interesting is this one you have here the deformation
+
+01:18:49
+in this direction and the tangent vectors down here to a hypers surface they're always given you have a highy surface embedding and you can always calculate the tangent vectors but here what you need is a normal Vector but a normal Vector you cannot you don't get for free if you have a hypersurface what you can calculate is a conormal you can calculate a normal a co- Vector which if you feed in all the tangent vectors annihilates it in other words you can calculate the gradient to the hyper surface surface but the
+
+01:19:26
+gradient is a co- Vector okay we know that aha so if this is embedded and the gradient is a co- Vector we have a problem because in order to go away from the hypersurface in a certain direction we need to convert the co- Vector which is more like something like this into a vector which is exactly this kind of map you need to take a hyperbolic co- Vector why a hyperbolic one because there is the theorem that a hype an initial data surface must always have a co- Vector I indicated like this that lies in the
+
+01:20:02
+cotangent space inside the hyperbolicity cone so in order to convert the normal the gradient to an initial data surface that's the game we're playing here in order to convert that gradient into a direction you need to know how to go from here to here agree but how do you know to go from there to there you only know if you have matter if you understand your matter only then do you really know that thank God we postulated matter in our definition of space timee it's the matter we postulated and it will depend
+
+01:20:39
+on that matter through its principle polom of how the hypersurface gradient is converted into a direction that go can go into here so that you know what you mean by a normal deformation so in this whole picture there is one single point where physics comes in this is all clear this is all logically clear but where's the physics coming in the physics comes in right here the construction of this normal Vector is actually the LeAndre image of the gradient of the normal Co Vector of the gradient to the surface but this
+
+01:21:19
+LeAndre map was in general terms not in Einstein theory but quite generally the LeAndre map was the fiber derivative of the Ln of the polom and the inverse LeAndre map going back was that of the Dual polom okay so the LeAndre map takes you there but this p is the principal polinomial of the matter you have on your space time so that means if God is playing this game in this Divine view of SpaceTime then we can compete with him if we know that the direction that's chosen here is this one you say why would yes this is
+
+01:22:04
+the conversion from momentum to velocities that is right that is right the conversion of momentum to velocities for Tim like as for massive momenta that's right that's right and this is the one and only step we identify here and there will be no further where physics goes into the derivation of gravity exactly there and it comes from matter gravity comes from matter in precisely this point okay good so aha so we have that now God plays this game with these linear functional derivative operators
+
+01:22:40
+okay that's an easy game we unfortunately have to play a more complicated game we have to represent this here not on the space of all geometries on the space time we have to represent it as a pon bracket action on initial data you know that if you do a hamiltonian well you can think of this to first order as a hamiltonian acting on positions you know what you get get the Q dots and so on now it turns out the hamiltonian of gravity is the sum of these two that's what you actually can check in julina's lecture for the
+
+01:23:14
+special case of Einstein gravity coming from the Dynamics we have to represent these operators here by Pon bracket operators where one slot is filled with two representations of these two objects in order to evolve well that's the game we have to play hamiltonian Dynamics but how on Earth are these two guys to be chosen how does the world work well if you look at this you say ah we could calculate the algebra of these guys and require that these guys satisfy the same algebra because that's the information
+
+01:23:52
+that's in there so let's do that you take these guys these deformation operators and you calculate from them the deformation algebra now here this is the degree of the polinomial this is the polinomial you ask why does it only have two indices if a higher degree polinomial should have many more indices well these are these two and the remaining ones are filled with the K Vector anyway this is the general notion in Einstein gravity you have degree p is 2 and this is the inverse of the spatial metric on your
+
+01:24:23
+hypersurface but this works this comes out is a calculation this works in our fully general theory and it must work like that for mathematical reasons so you have an algebra it's the algebra of God's Little Game operators in order to compete with him these objects must satisfy the same algebra because otherwise we're playing a different game so we want to impose this algebra on these objects and then we can actually determine these two objects the ones that represent that and that is
+
+01:24:54
+something we did and it's a very complicated problem because in this algebra the hes appear squared I mean you see HH is a quadratic problem in the age it's very difficult it's not even a Lee Algebra I think jul also emphasized that um because uh here there are no structure constants they're structure functions so it's not a Lee algebra that makes it very very difficult and hard uh despite the uh space on which this is formulated being infinite dimensional geometry space whatever the points is a
+
+01:25:25
+hard problem but once you solve the problem I'll show you in a second how to do that you get these two objects and the gravitational action one can show looks like this meaning you start with matter you calculate the principal polom you put it into here that's the only thing you really need from the matter at the end of the day you put it into here you calculate the algebra this is always the same algebra you don't even need to repeat the step you start from here and you find this repr
+
+01:25:55
+presentation once you have that you have the gravity lrin you found the hamiltonian of the geometry right now how do you solve this very complicated representation problem well as I said it's a quadratic representation problem you can convert it into a linear distribution function differential equation still terribly difficult a linear distributional differential equation still too difficult you can finally convert this into a linear even homogeneous linear system of partial differential equations
+
+01:26:26
+the price you pay is it's Inc countably infinitely many okay and that's the system you have to solve and here it is okay now the point is this looks terrible but it's not bad so this is the lent of gravity and you expand it in these case and you want to calculate these coefficients Capital C if you have them you have the lrin now for these coefficients Capital C with varying number of indices you have six equations that's not fin infinitely many you have six and then you have five sequences so
+
+01:27:04
+that's five times infinity okay so you have in total infinitely many equations and the C's in there are the ones you want to determine because they're the coefficients of your lran expansion and the other coefficients the U and the S and the T and the V and whatever names we gave them you simply calculate from the principal polinomial a recipe one A4 page recipe blah blah blah blah blah it's very boring so Marx can tell you about how boring it is so you you calculate that for the mattera type you
+
+01:27:39
+have okay and then you solve the resulting equ so the equations always have this forms only these coefficients change so the equation coefficients and then you calculate the C's that are the coefficients up here and then you have your gravity Theory now um I mean it actually is fun to solve that stuff particular say you start with mexo Theory you calculate this polinomial you go in you calculate the the UV mq T and S coefficients you plug them in you still have infinitely many equations need to be very organized
+
+01:28:11
+and then you start solving them and then you solve them and if you start with mexo Theory Tada in the end what comes out is that the L up there expanded in the C's is the square root of minus g r plus Lambda overall Factor one over well let's say one over G undetermined because it's a system of differential equations you have integration constants undetermined you have integration constants but that is it okay if you start with Max Theory so Einstein gravity is the gravity theory that produces
+
+01:28:50
+solutions that are such that Max Theory can live on it and is predictive and quantiable that's the game now so the point is the problem of finding a gravity theory is not working in a patent office it's actually solving these equations okay so if you have new matter that you for like Maxwell think always people talk of Max theory is fundamental Theory like the other standard what do you mean by fundamental Theory all physics is phenomenology there comes onair and there come Faraday and they work with
+
+01:29:29
+their little magnets I mean you actually in fact so if think what this really means you work with you know these experiments from high school you have a current running through a wire and you put your little magnetic needles around it and they arrange themselves in in this shape and the other thing is you have a Dynamo on your on your bike and it produces light okay because it turns a magnet and la la aare and Faraday two very simple things you put them together if you're Max will you say okay there's
+
+01:29:58
+a current ter term missing the displacement current in order to get the continuity equation right okay minor stuff peanuts okay so you put this together but it's actually these two experiments that you do in high school that everybody knows actually about that imply this which implies the big bang I mean this is an amazing stretch of connection right that's quite remarkable okay but now assume maybe today the people who look at dark matter or dark energy more likely a candidate he look at this and one day some new
+
+01:30:39
+Faraday and aair will come and say well I have these nice little equations that explain this stuff and then a new mix will comes and says okay seriously people let's put this together in a meaningful way whatever whatever the windings of History will be and I'm fantasizing very clearly it could all be very very simple but it could be like they write down new equations well what to do then well very simple you calculate the principle polinomial plug them into these equations here and you solve these
+
+01:31:05
+equations however easy or hard that will be or other alternative NASA is looking for this they're looking for Bio refringence in vacuum and they don't find it okay and so they're bounds on that and so on but I ask how would you find it you don't even have a theory that describes this properly well well we do you take Maxwell theory if it's still linear if it's still superposition you take Maxwell Theory but with this lren so L Maxwell or LR density is the square root of minus G you have the FB F
+
+01:31:40
+CD so normally you would use two metrics to to tie these together to the F squar action but now you just use g a b c d this kind of object which gets then induced symmetries like Square here and there's an exchange symmetry whatever and this is what explains linear super um bi refringence in materials it would also explain byring or would encode by refringence in the vacuum okay so here you have a theory you can calculate the principal polinomial blah blah blah you you you understand the drill so what one needs
+
+01:32:12
+to do and that's actually one of the projects that Marx and other of my students are working on is to derive the gravity theory that consistently underlies the assumption that there could be something like this in space time and then you have a prediction where the effect will be strong if you just point your telescope somewhere and say oh I don't see B refringence that's not particularly convincing you can't also Point your telescope somewhere and then say oh there is slide bending you need
+
+01:32:38
+to look precisely where it is or yesterday you calculated the radiation of the binary pulsor you need to know what you're looking for in order to discover that object right otherwise not a noble price if everybody can see it right and so the point is you can calculate the gravity Theory under lying so even if you don't wait for dark energy to be somehow put into equations in 100 years in order to carry this through you can ask questions many people are asking but instead of just parameterizing some deviation in the
+
+01:33:07
+standard Theory with an extra term you have a well-rounded full theory of the matter and the underlying gravity and it is not Einstein gravity so the question is which matter gives you different gravity than Einstein Gravity the answer is whenever the matter has a principal polom that's different from this one okay and that is whenever the principle The Cone of the principal polom looks more complicated than the double light cone it's as simple as that so every mattera however complicated it
+
+01:33:39
+is that has this principal polinomial that standard mattera so for instance one second for instance you know you have the D algebra right who seen the D algebra so they in curved some something like this so there's something like that right why why because the roak told us so well because exactly because if this is the D equation without mass say you can calculate the principal polinomial of this what you guess it will be it's PK k equals g inverse k a KB it's the principle polinomial of Maxwell theory
+
+01:34:23
+that is the reason why you need these guys to be like that the matter standard matter there okay anyway I I could tell a lot about this but you get the picture yes also to number con no it's it's very hard to say so the question you ask is if you go in with a certain type of matter you can classify it according to the degree of the principal polom to the rank of the tensor that underlies it and whatnot the answer to your question how many degrees of freedom are there in the gravitational Theory requires that for
+
+01:35:09
+that matter you solve these equations or you find an abstract way the way of existence and uniqueness and whatever you to study these equations without solving them so for instance the question is there an alternate not alter is there a gravity theory that can underly this type of mattera whose equations I put down is there a gravity Theory that's the question mathematically the question of existence of a solution of the system well is there one or are there many well that's mathematically the question of
+
+01:35:44
+uniqueness of solutions and what on Earth is the theory concretely so I can calculate that's the question of practically solving the equations but all of these are phys are mathematical questions so we converted this Grand physical question of what a modified gravity Theory could be to input from experiment and observation matter input phenomenological input and then we just carry through what logically is demanded and we convert it into a purely mathematical problem and it is as hard to find such a new Gravity Theory as it
+
+01:36:24
+is to solve these equations but again so now you could ask could one do perturbation Theory and so on these are all stuff this all stuff we're following okay yes direct for particles I have not seen a particle which is mus so I'm not sure if this can work there some problems very easily fixed it's still the same principle polinomial and uh are there some stop stop why why is it the same principle polinomial because you only need to look at the highest order term as I instructed you what about transfers
+
+01:37:05
+inations um we don't have them because as I said if you start with a smooth manifold as your bottom line every study needs a bottom line you start with that as a bottom line then at first you can only consider tensors once you identified the principal polinomial with some test matter right then you can redo thex question and you can say I want now also other representations but now it will not be a binary algebra uh that you need but you will need a degree prary algebra so it's from mu to Sigma
+
+01:37:53
+and these guys run both so these are degree P many because this is the principal polinomial this is the new der algebra and it's no longer a problem of binary algebra where you have two entries it's a problem with degree P many entries and one can show that so that's what one of my PhD students studied amongst other things on on these space times how you can establish non- tensorial matter that is how it goes and in a special case where the polom is the metric it looks like this this is why
+
+01:38:25
+the indices are up because actually the polinomial the principal polinomial in the D algebra okay okay so you solve these guys so the problem of finding modified gravities key theories but modified always sounds like we we want to modify we don't want to modify but if matter demands it we will and that's the way to do it it's a mathematical question we reduce it to a purely mathematical question there are no fre parameters in the theory it's not of the type you add some terms and then
+
+01:38:56
+oh they're so highly suppressed but I still believe in it or something you get these equations and they are what they are you solve them and you will get parameters because they're differential equations you will get undetermined stuff and see how useful that is right and then the only thing you need to
+

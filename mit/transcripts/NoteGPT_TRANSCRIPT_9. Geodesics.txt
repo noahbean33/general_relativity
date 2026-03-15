@@ -1,0 +1,291 @@
+00:00:00
+[SQUEAKING] [RUSTLING] [CLICKING]  SCOTT HUGHES: So let me just do a quick recap of what we did last time. So today, we're going to move into things that are a little bit more physics. Last time we were really doing some things that allows us to establish some of the critical mathematical concepts we need to study the tensors that are going to be used for physics on a curved manifold. So one of the things that we saw is that if I wanted to formulate differential equations on a curved manifold, if I just defined my derivative the most
+
+00:00:41
+naive way you might think of, you end up with objects that are not tensorial. And so mathematically you might say, well, that's fine. It's just not a tensor anymore. But we really want tensors for our physics because we want to be working with quantities that have frame-independent geometric meaning to them. So that notion of a derivative-- if I just do it the naive way-- isn't the best. And so I argued that what we need to do is to find some kind of a transport operation in which there is a linear mapping between things
+
+00:01:12
+like my vector field or my tensor field and the displacement, which allows me to cancel out the bits of the partial derivative transformation laws that are non tensorial. There's a lot of freedom to do that. One of the ways I suggest we do that is by demanding that when I do this, that derivative-- when applied to the metric-- give me 0. And if we do that, we see right away that the transport law that emerges gives me the covariant derivative as one of my examples. Now this shouldn't be a surprise.
+
+00:01:39
+We introduced the covariant derivative by thinking about flat spacetime operations, but with all my basis objects being functionals. And this in some way is sort of a continuation of that notion. The other thing which I talked about is telling you we're not going to use a tremendous amount here except to motivate one very important result. And that is if I define transport by basically imagining that I slide my vectors in order to make the comparison-- along some specified vector field-- I get what's known as the Lie derivative.
+
+00:02:09
+And so this is an example of the Lie derivative of a vector. And you get this form that looks like a commutator between the vector field you're sliding along and the vector field you are differentiating. Similar forms-- which are not really the form of a commutator-- but similar forms can be written down for general tensors. The key thing that you should be aware of is that it's got a similar form to the covariant derivative, in that you have one term-- let's focus on the top line for the second--
+
+00:02:40
+you have one term that looks just like the ordinary vector contracted onto a partial derivative of your field. And then you have terms which correct every free index of your field-- one free index if it's a vector, one free index if it's a one form, and corrections for an end index tensor-- with the sign doing something opposite to the sign that appears in the covariant derivative. What's interesting about this is that so defined, the Lie derivative is only written in terms of partial derivatives.
+
+00:03:12
+But if you just imagine-- you promote those partial derivatives to covariant derivatives-- you find the exact same result holds because all of your Christoffel symbols-- or connections as we like to think of them when we're using parallel transport-- all the connective objects cancel each other out. And this is nice because this tells me that even though this object, strictly speaking, only involves partial derivatives, what emerges out of it is in fact tensorial. And it's an object that I can use for a lot of things
+
+00:03:40
+I want to do in physics. In particular where we're going to use it the most-- and I said you're going to do this on the PSET, but I was wrong-- you're going to do something related to one of the PSETs-- but I'm going to actually-- if all goes well-- derive an important result involving these symmetries in today's lecture. We can use this to understand things that are related to conserved quantities in your space time. And where this comes from is that there is a definition of an object we call the Killing vector, which
+
+00:04:03
+is an object where if your metric is Lie transported along some field C, we call C a Killing vector. And from the fact that the covariant derivative the metric is 0, you can turn the equation governing the Lie derivative along C into what I wrote down just there. And I should write its name.  There's the result known as Killing's Equation.  If a vector has a Killing vector-- if a metric has a Killing vector-- then you know that your metric is independent of some kind of a parameter that
+
+00:04:53
+characterizes that spacetime. The converse also holds. If your metric is independent of something-- like say the time coordinate-- you know that there is a Killing vector corresponding to that independent thing. And so you'll often see this described as a differing amorphism of the spacetime-- if you want to dig into some of the more advanced textbooks on the subject. We'll come back to that in a few more details hopefully shortly before the end of today's lecture. So where I concluded last time, was we
+
+00:05:18
+started talking about these quantities known as tensor densities, which are given the less-than-helpful definition-- quantities that are like tensors, but not quite. The example I gave of this-- where we were starting-- was the Levi-Civita symbol. So let me just write down again what resulted from that. So if I have Levi-Civita-- and the tilde here is going to reflect the fact that this is not really a tensor--  this guy in some prime coordinates is related to this guy in the unprime coordinates
+
+00:06:01
+via the following--  let's get the primes in the right place--  the following mess of quantities.  So I'm not going to go through this again. This is basically a theorem from linear algebra that relates the determinant of a matrix-- not metric, but matrix-- to what you get when you contract a bunch of matrices onto the Levi-Civita symbol. And so the key thing to note is that if this were not here, this would look just like a tensor transformation. But that is there. So it's not. And so we call this a tensor density of weight 1.
+
+00:06:48
+So the other one-- which I hinted at the end of the last lecture, but did not have time to get into-- is suppose we look at the metric. Now, the metric-- no ifs, ands, or buts about it-- it's a tensor.  And it's actually the first tensor we've started talking about back in our toddler years of studying flat spacetime, which by the way, was about three weeks ago. Obviously that's a tensor. It's a simple tensor relationship. Let's take the determinant of both sides of this.
+
+00:07:34
+You might look at this and go, why do you want to do that? Well when I do this, I'm going to call the determinant of the metric in the primed representation. Let's call that G prime. I get 2 powers--  2 powers of this Jacobian matrix is determinant.  And I get the determinant in my original representation. Now I want to write this in a way that's similar to the way I wrote it over here. Notice I have all my primed objects over here on the left-hand side. And my factor of this determinant relates--
+
+00:08:27
+it's got primed indices in the upstairs position, unprimed in the downstairs. But the determinant of 1 over a metric is just 1 over the determinant of-- the determinant of the inverse of a matrix is just 1 over the determinant of that matrix. And so I can really simply just say this looks like so. So the determinant of the metric is a tensor density of weight minus 2.  What this basically tells us is I now have two of these things. I've been arguing basically this entire course that we want to use tensors because of the fact
+
+00:09:33
+that they give me a covariant way of encoding geometric concepts. I've got these two things that are not quite tensors. I can put them together and get a tensor out of this. So what this tells me now is I can convert any tensor density into a proper tensor.  So suppose I have a tensor density of weight W. I can convert this into a proper tensor by multiplying by a power of that G. So multiply it by G to the W over 2. One slight subtlety here, when we work in spacetime-- let's just stop for a second and think about special relativity.
+
+00:10:36
+In special relativity in an inertial reference frame, my metric is minus 1 1 1 1 on the diagonal. So its determinant is negative 1. And when I take negative 1 to some power that involves a square root, I get sad. We all know how to work with complex numbers. You might think that's all OK. It's not in this case. But the way I can fix that is that equation's still true if I multiply both sides by minus 1. I want this to be a positive number when I take the square root. So I'm allowed just to take the absolute value.
+
+00:11:13
+So we take the absolute value to clear out the fact that in spacetime, we tend to have an indeterminate metric, where the sign depends on the interval.  So remember the only reason we're doing this-- this is just a-- I don't want to say it's a trick. But it's not that far off from a trick. I'm just combining two tensor densities in order to get a tensor out of it. And minus a tensor density is still a tensor density. So I'm OK to do that. And I'm just doing this so that my square root
+
+00:11:53
+doesn't go haywire on me. So a particular example-- in fact the one that in my career has come up the most--  is making a proper volume element converting my Levi-Civita symbol into a tensor that gives me a volume element.  So my Levi-Civita symbol has a tensor density of weight 1. If I want to make that into a proper tensor, I multiply by the square root of the determinant of the metric. So now I will no longer have that tilde on there, which was meant to be a signpost that this as a quantity is a little bit goofy.
+
+00:12:40
+You wind up with something like this. When you go-- and by the way, sometimes when you're working with this, you need to have this thing with indices in the upstairs position. You have to be a little bit careful. But I'll just give you one example. If you raise all four of the indices, what you find when everything goes through, this one is not that hard to see because you're basically playing with a similar relationship to the one that I wrote down over here-- just a short homework exercise to demonstrate this.
+
+00:13:13
+And then you end up with the tensor density of the opposite sign. Weight minus 1, you wind up with a 1 over square root there.  So like I said one of the reasons why this is an important example is that we use it to form covariant volume operators.  So in four-dimensional space-- so imagine here's my basis direction for spatial direction 1, spatial direction 2, spatial direction 3-- you guys can figure out how to write spatial direction 0 on your own time-- I would define a covariant 4 volume--
+
+00:14:21
+4 volume element from this.  It'll look like this. And if this is an orthogonal basis, this simply turns into something like--  these are meant to be superscripts because these are coordinates. So it just turns into something like this if I'm working in an orthogonal basis.  And again for intuition, I suggest go down to 3-dimensional spherical coordinates. And I wrote this last time. But let me just quickly write it up. I mean everything I did here, I tend to-- since this is a course on spacetime--
+
+00:15:26
+by default I write down all my formulas for three space dimensions, one time dimension. But it's perfectly good in 3 spatial dimensions, 2 spatial dimensions, 17 spatial dimensions-- whatever crazy spacetime your physics want you to put yourself in-- or space your physics wants to put you in.  So I'll just remind you--  that when you do this, you've got yourself a metric across the diagonal of 1 r squared r squared sine squared theta. And just to be consistent-- I usually use Latin letters for only spatial things.
+
+00:16:25
+So let's do that.  This would be how I would then write my volume element. Did I miss something? AUDIENCE: Yeah. [INAUDIBLE] SCOTT HUGHES: Absolutely. Yeah. Thank you. I'm writing quickly. Yeah? AUDIENCE: Is there [INAUDIBLE]? SCOTT HUGHES: This is dx-- oh, bugger. Yep. I'm trying to get to something new. And I'm afraid I'm rushing a little bit. So thank you for catching this. And so with this, take the determiner of this thing. And sure enough you get r squared sine theta d r d theta
+
+00:17:09
+d phi. So this is the main thing that we are going to use this result for-- this thing with tensor densities. I want to go on a brief aside, which is relevant to the problem that I delayed on this week's problem 7.  So there are three parts of problem 7 that I moved from PSET 3 to PSET 4 because they rely on a result that I want to talk about now.  So the main thing that we use the determinant of the metric for in a formal way is this-- that it's a tensor density of weight minus 2. And so it's a really useful quantity
+
+00:17:56
+for converting tensor densities into proper tensors. And really the most common application of this tends to be to volume elements. But it turns out that it's actually really useful for what a former professor of mine used to like to call party tricks. There's some really-- it offers a really nice shortcut to computing certain Christoffel symbols. So in honor of Saul Teukolsky let's call this a party trick.  So we're using the determinant of the metric to compute certain Christoffels.
+
+00:18:38
+So this is going to rely on the following. So suppose I calculate the Christoffel symbol, but I'm going to sum on the raised index. And bearing in mind it's symmetric in the lower one, I'm going to do a contraction of the raised index with one of the lower indices.  So let's just throw in a couple of definitions. This is equivalent to the following. And so throwing in the definition of the Christoffel with all the indices in the downstairs position--  this formula, by the way, is something
+
+00:19:45
+that I've been writing down now for about 27 years. And I have to look it up every time. Usually by the end of a semester of teaching 8.962, I have it memorized. But it decays by then. So if you're wondering how to go from here to here-- this is the kind of thing-- just look it up. So let's pause for a second. Remember that the metric is-- it's itself symmetric. So in keeping with that, I'm going to flip the indices on this last term, which-- hang on a second. That was stupid.
+
+00:20:21
+Wait.  Pardon me.  This is the term I want to switch indices on. My apologies. So the reason I did that is I want to have both of these guys ending with the alpha because notice this and this-- they're the same. But I have interchanged the beta and the mu. So these two terms-- the first term and the third term-- are anti symmetric upon exchange of beta and mu. They are contracted with the metric, which is symmetric upon exchange of beta and mu. Question? AUDIENCE: Does the metric have to be symmetric?
+
+00:21:05
+SCOTT HUGHES: The metric has to be symmetric. [LAUGHS] I don't want to get into that right now, but yes [LAUGHS]. So these guys are anti symmetric. This guy is symmetric. And remember the rule. Whenever you contract some kind of a symmetric object with an anti symmetric m you get 0. So that means this term and this term die.  And what we are left with is gamma mu mu alpha is 1/2 g u beta, and the alpha derivative of g u beta. There is the way it is contracting the indices in the 2 metric with the other one.
+
+00:22:09
+Well here's a theorem that I'm going to prove in a second-- or at least motivate-- that it's going to rely on a result that I will pull out of thin air, but can be found in most linear algebra textbooks. It's not too hard to show that this can be further written as 1 over square root of the determinant times the partial derivative of the square root of the determinant, which is sometimes-- depending on your applications-- this can be written very nicely as the derivative of the logarithm of the absolute value of the--
+
+00:22:54
+the square root of the absolute value of the determinant.  So before I go on and actually demonstrate this, you can see why this is actually a pretty-- so this actually comes up. I'm going to show a few applications as to why this particular combination of Christoffel symbols shows up more often than you might guess. It's really important for certain important calculations. And this is telling me that I can get it by just taking one partial derivative of a scalar function. And if you know your metric, that's easy.
+
+00:23:28
+So this becomes really easy thing to calculate. So let's prove it.  So the proof of this relies on a few results from linear algebra.  So let's not think about tensors for a second. And let's just think about matrices. So imagine I've got some matrix m.  I'm going to be agnostic about the dimensions of this thing.  And suppose I look at the following variation of this matrix.  So suppose I imagine doing a little variation. So suppose every element of m is a function. And I look at a little variation of the log of the determinant
+
+00:24:43
+of that matrix. Well this can be written as log is basically a definition of this.  Now, if I exploit properties of logarithms, this can be written as the log of the determinant-- m plus delta m-- divided by the determinant of m.  Now I'm going to use the fact that 1 over the determinant of m is the determinant of the inverse of m.  So taking advantage of that, I can further write this guy as something like this. Now I'm going to invoke an identity, which I believe you can find proven in many linear algebra textbooks.
+
+00:26:26
+It just occurred to me as I'm thinking about this, I don't know if I've ever seen it explicitly proven myself. But it's something that's very easy to demonstrate with just a quick calculation. You can just do-- I'm a physicist. So for me I'll use Mathematica. I'll look at six or seven examples and go, it seems right. And so I've definitely done that. But I believe this is something that you can find proven explicitly-- like I said-- in most books. So remember these are all matrices.
+
+00:26:50
+So this isn't the number 1. We want to think of this as the identity matrix.  Oh and I'm also going to regard this variation as a small quantity. So if I regard epsilon as a small matrix-- this can be made formal by defining something like condition number associated with the matrix or something like that. But generally what I want to mean by that is if I take this epsilon and I add it to 1, all of this-- so my identity is 1 on the diagonal-- 0s everywhere else-- all the things that are put into the sum of 1 plus epsilon
+
+00:27:33
+are much, much smaller than that 1 that's on the diagonal. That will be sufficient. So if epsilon is a small matrix, then the determinant of 1 plus epsilon is approximately equal to 1 plus the trace of epsilon.  What that approximately refers to is-- of course you can take that further. And you'll get additional corrections that involve epsilon times epsilon, epsilon times epsilon, times epsilon. I believe when you do that, the coefficient is no longer universal. But it depends upon the dimensions of the matrix.
+
+00:28:21
+But leading order it's independent of dimensions of the matrix. And that's something that you can you can play with a little bit yourself. Like I said, this is sufficient for what we want to do here.  So I'm going to think of my small matrix as the matrix of inverse m times a variation of m. This is our epsilon.  So we're going to apply it to the line that I have up here. And this tells me that my delta on the log of the derivative of m is the log of 1 plus the trace of m to the minus 1
+
+00:29:18
+on the matrix m. Log of 1 plus a small number is that small number.  Now the application. So this is-- like I said, this the theorem that you can find in books that I don't know about but truly exist. This is something I've seen documented in a lot of places. Let's treat our m as the metric of spacetime.  So my m will be g alpha beta. My m inverse will be g in the upstairs position.  And I will write this something like so. And I'm going to apply this by looking at variations in my metric.
+
+00:30:14
+So delta log-- I'm going to throw my absolute values in here. That's perfectly allowed to go ahead and put that into there. Applying this to what I've got, this is going to be the trace of g mu beta times the variation of g beta gamma. And I forgot to say, how do I take the trace of a matrix?  So the trace that we're going to use-- we want it to be something that has geometric meaning and has a tensorial meaning to it. So we're going to call the trace of this thing g alpha beta epsilon alpha beta.
+
+00:31:50
+If you think about what this is doing, you're essentially going to take your-- let's say I apply this to the metric itself. I put one index in the upstairs position, one the downstairs position, and then I am summing along the diagonal when I do this. You will sometimes see this written as something like that.  So in this case, when I'm taking the trace of this guy here, that is going to force me to-- let's see. So this gives me a quantity where I'm summing over my betas. And then I'm just going to sum over the diagonal indices.
+
+00:32:39
+I'm forcing my two remaining indices to be the same. So putting this together, this tells me--  so now what I'm going to do is say, I basically have part of a partial derivative here. All I need to do is now divide by a variation in my coordinate and take the limit.  So it comes out of this as the partial derivative--  looks like this. Now let's trace it back to our Christoffel symbol.  My Christoffel symbol-- the thing which I'm trying to compute-- is one half of this right-hand side.
+
+00:34:08
+So it's one half of the left-hand side. And I can take that one half, march it through my derivative, and use the fact that 1/2 the log of x is the log of the square root of x.  Check. So like I said, this is what an old mentor of mine used to like to call a party trick. It is a really useful party trick for certain calculations. So I want to make sure you saw where that comes from. This is something you will now use on the problem that I just moved from PSET 3 to PSET 4. It's useful for you to know where this comes from.
+
+00:35:02
+You're certainly not going to need to go through this yourself. But this is a good type of calculation to be comfortable with. Those of you who are more rigorous in your math than me, you might want to run off and verify a couple of these identities that I used. But this is very nice for physics level rigor-- at least astrophysicists level rigor. So let me talk about one of the places where this shows up and is quite useful.  So a place where I've seen this show up the most is when you're looking at the spacetime divergence
+
+00:35:44
+of a vector field.  So when you're calculating the covariant derivative of alpha contracting on the indices-- let's just throw in--  expand out the full definition of things--  all you've gotta do is correct one index. And voila, this is exactly the things that change-- where is it-- change my alpha to a mu-- that's exactly what I've got before. And so-- hang on just one moment. I know what I'm doing. These are all dummy indices. So in order to keep things from getting crossed,
+
+00:36:40
+I'm going to relabel these over here.  So I can take advantage of this identity and write this.  So stare at this for a second. And you'll see that the whole thing can be rewritten in a very simple form.  Ta-da. You haven't done as much work with covariant in your lives as I have. So let me just emphasize that ordinarily when you see an expression like you've got up there on the top line, you look at that, and you kind of go [GROANS] because you look at that, and the first thing that comes to your mind
+
+00:38:04
+is you've got to work out every one of those Christoffel symbols and sum it up to get those things. And in a general spacetime, there will be 40 of them. And before Odin gave us Mathematica, that was a fair amount of labor. Even with Mathematica it's not necessarily trivial because it's really easy to screw things up. With this you calculate the determinant of the metric, you take its square root, you multiply your guy, and you take a partial derivative, and you divide. That is something that most of us
+
+00:38:34
+learned how to do quite a long time ago. It cleans the hell out of this up. So the fact that this gives us something that only involves partial derivatives is awesome.  This also-- it turns out-- so when you have things like this, it gives us a nice way to express Gauss's theorem in a curved manifold.  So Gauss's theorem-- if I just look at the integrals that-- or rather the integral for Gauss's theorem-- let's put it that way. Let's say a Gauss's-type integral.  So go back to when you're talking
+
+00:39:26
+about conservation laws.  If I imagine I'm integrating the divergence of some vector field over a four-dimensional volume, look at that, I get a nice cancellation. So this turns into an integral of that nice, clean derivative over my four coordinates. And then you can take advantage of the actual content of Gauss's Theorem to turn that into an integral over the three-dimensional surface that bounds that four volume.  It's a good point-- so you're emboldened by this. You say, yay, look at that.
+
+00:40:17
+We can do all this awesome stuff with this identity. It gives me a great way to express some of these conservation laws. You might think to yourself-- and I realized as I was looking over these notes-- I'm about to I think give away a part of one of the problems on the PSET-- but c'est la vie. It's an important point. Can we do something similar for tensors? So this is great that you have this form for vectors.  The divergence of a vector is a mathematical notion that comes up in various contexts.
+
+00:40:47
+So this is important. But we've already talked about the fact that things like energy and momentum are described by a stress energy tensor. So can we do this for tensors?  Well the answer turns out to be no, except in a handful of cases.  And I have a comment about those handful of cases. So suppose I take this-- and I'm taking the divergence on say the first index of this guy--  so there's the bit involves my partial derivative-- I'm going to have a bit that involves correcting the first index.
+
+00:41:39
+So the first correction is it's of a form that does in fact involve this guy we just worked out this identity for. And in principle we could take advantage of that to massage this and use this identity. But the second one there's nothing to do with that. This you just have to go and work out all of your 40 different Christoffel symbols and sit down and slog through it. This spoils your ability to do anything with it, with one exception. What if a is an anti-symmetric tensor? If a is an anti-symmetric tensor,
+
+00:42:27
+you've got symmetry, anti symmetry, and it dies. So that is one example of where you can actually apply it. And I had you guys play with that a little bit on the PSET. It's worth noting though that the main reason why one often finds this to be a useful thing to do is that when you take the divergence of something like a vector, you get a scalar out. You get a quantity that is-- really its transformation properties between different inertial frames or freely-falling frames is simple.  So even when you can do this and take advantage of this thing,
+
+00:43:09
+working with the divergence of a tensor-- exploiting a trick like this turns out to generally not be all that useful. And I'll use the example of the stress energy tensor. So conservation of stress energy in special relativity-- it was the partial derivative-- the divergence of the stress energy tensor expressed with the partial derivative was equal to 0. We're going to take this over to covariant derivative of the stress energy tensor being equal to 0. That's what the equivalence principle tells us
+
+00:43:38
+that we can do.  Now when I take the divergence of something like the stress energy tensor, I get a 4 vector.  Every 4 vector always has implicitly a set of basis objects attached to it. When I've got basis objects attached to it, those are defined with respect to the tangent space at a particular point in the manifold where you are currently working. And so if I want to try to do something like an integral like this-- where I add up the four vector I get by taking the divergence of stress energy and integrate it over
+
+00:44:12
+a volume-- I'm going to get nonsense because what's going on is I'm combining vector fields that are defined in different tangent spaces that can't be properly compared to one another. In order to do that kind of comparison, you have to introduce a transport law. And when you start doing transports over macroscopic regions, you run into trouble. They turn out to be path dependent. And this is where we run into ambiguities that have to do with the curvature content of your manifold.
+
+00:44:42
+We'll discuss where that comes into our calculations a little bit later. But what it basically boils down to is if I use a stress energy tensor as an example, this equation tells me about local conservation of energy and momentum. In general relativity I cannot take the local conservation of energy and momentum and promote it to a global conservation of energy and momentum. It's ambiguous. We'll deal with that and the conceptual difficulties that that presents a little bit later in the course.
+
+00:45:18
+But it's a good see the plant at this point. So let's switch gears. We have a new set of mathematical tools.  I want to take a detour away from thinking about some more abstract mathematical notions and start thinking about how we actually do some physics. So what I want to do is talk today about how do we formulate the kinematics of a body moving in curved spacetime?  So I've already hinted at this in some of my previous lectures. And what I want to do now is just basically fill in some of the gaps.
+
+00:46:15
+The way that we do this really just builds on Einstein's insight about what the weak equivalence principle means. So go into a freely falling frame.  Go in that freely-falling frame. Put things into locally Lorentz coordinates. In other words perform that little calculation that make spacetime look like the spacetime of special relativity of the curvature corrections.  And to start with, let's consider what we always do in physics, is we'll look at the simplest body first. We're going to look at what we call a test body.
+
+00:47:06
+So this is the body that has no charge, no spatial extent, it's of zero dimensional point, no spin-- nothing interesting, except a mass.  So if you want to think about this-- I use a way that I find to think about this is all these various aspects to it, you're adding additional-- either charges to it or additional multipolar structure to this body. I'm thinking of this-- this is sort of like a pure monopole. It's nothing but mass concentrated in a single zero size point. Obviously it's an idealization.
+
+00:48:05
+But you've got to start somewhere.  So since it's got no charge, no spatial extent, it's got nothing but mass, nothing's going to couple to it. It's not going to basically do anything but freefall.  In this frame the body moves on a purely inertial trajectory.  And what does a purely inertial trajectory look like? Well you take whatever your initial conditions are.  And you move in a straight line with respect to time as measured on your own clock. Simplest, stupidest possible motion that you can.
+
+00:49:24
+So we would obviously call that a straight line with respect to the parameterization that's being used in this representation. So what does that mean in a more general sense of the representation? So if we think about this a little bit more geometrically, when a body is moving in a straight line, that basically means that whatever the tangent vector to its world line is, it's essentially moving such that the tangent vector at time T1 is parallel to the tangent vector at T1 plus delta T1,
+
+00:50:09
+provided that's actually small enough that they're sort of within the same local Lorentz frame.  So a more geometric way of thinking about this motion is that it's parallel transporting its tangent vector.  Let's make this a little bit more rigorous. So let's imagine this body's moving on a particular trajectory through spacetime.  So it's a trajectory parameterized. I will define its parameterization a little bit more carefully very soon.  So for now, just think of lambda as some kind of a quantity.
+
+00:51:42
+It's a scale that just accumulates uniformly as it moves along the world line. So I'm going to say the small body has a path through spacetime, given by u x of lambda. Its tangent is given by this. And if it is parallel transporting its own tangent vector, that is-- I'll remind you that the condition for parallel transport was that you take the covariant derivative your field. And as you are moving along, you contract it along the tangent vector of the trajectory you're moving on.
+
+00:52:41
+And you get 0. So in my notes, there's a couple of equivalent ways of writing this. So you will sometimes see this written as the gradient along u of u.  And you'll sometimes see this written as capital u u lambda equals 0. So these are just-- I just throw that out because these are different forms that are common in the notation that you will see. So let's expand this guy out.  It's something like this. So what we're going to do-- so remember this is dx d lambda. This is d by dx.
+
+00:53:46
+That's a total derivative with respect to the parameter lambda.  So this becomes--  I'm going to write it in two forms. This is often written expanding out the u into a second order form.  This is obvious but sufficiently important. It's worth calling it out. And this has earned itself a box.  This result is known as the geodesic equation.  The trajectories which solve these equations are known as geodesics.  One of the reasons why I highlight this is it's--  I'm trying to keep a straight face with the comment I
+
+00:55:33
+want to make. A tremendous amount of research in general relativity is based around doing solutions of this equation for various spacetimes that go in to make the Christoffel symbols. My career-- [LAUGHS] it's probably not false to say that about 65% of my papers have this equation at its centerpiece at some point with the thing that goes into making my gammas-- things related to black hole spacetimes. This is really important because this gives me the motion of a freely-falling frame. What does a freely-falling frame describe?
+
+00:56:16
+Somebody who's moving under gravity. So when you're doing things like describing orbits, for example, this is your tool. A tremendous number of applications where if what you care about is the motion of a body due to relativistic gravity, this gives you a leading solution. Now bear in mind when I did this, this is the motion of a test body. This is an object with no charge, no spatial extent, no spin-- that describes no object. So it should be borne in mind that this is the leading solution to things.
+
+00:56:52
+Suppose the body is charged. And there is an electromagnetic field that this body is interacting with. Then what you do is you are no longer going to be parallel transporting this tangent factor. It will be pushed away-- we like to say-- from the parallel transport. And you'll replace the 0 on the right hand side here with a properly-constructed force that describes the interactions of those charges with the fields. Suppose the body has some size. Well then what ends up happening is that the body actually
+
+00:57:23
+doesn't just couple to a single-- remember what's going on here is that in the freely falling frame, I'm imagining that spacetime is flat at some point. And in a decent enough vicinity of that point, the first order corrections are 0. But there might be second order corrections. Well imagine a body is so big that it fills that freely-falling frame. And it actually tastes those second order corrections. Then what's going to happen is you're going to get additional terms on this equation, which
+
+00:57:50
+have to do with the coupling of the spatial extent of that body to the curvature of the spacetime. That is where-- so for people who study astrophysical systems involving binaries, when you have spinning bodies, that ends up actually-- you cannot describe a body that's spinning without it having some spatial extent. And you find terms here that involve coupling of those spins to the curvature of the spacetime. So this is the leading piece of the motion of a body moving in the current spacetime.
+
+00:58:21
+And it's enough to do a tremendous amount. Basically because gravity is just so bloody strong that all of these various things-- it's the weakest fundamental force. But it adds up because it's only got one sine. And when you're dealing with some of these things, it really ends up being the coupling to the monopole-- the most important thing. So all these other terms that come in and correct this are small enough that we can add them in. And that, to be blunt, is modern research.
+
+00:58:49
+So let me make a couple of comments about this.  A more general form--  this will help to clarify what the meaning of that lambda actually is.  Suppose that as my vector is transported along itself-- so one way is recall how we derive parallel transport. We imagine going into a freely-falling frame and a Lorentz representation. And we said, in that frame, I'm going to imagine moving this thing along, holding all the components constants-- that defined parallel transport. Imagine that I don't keep the components constant,
+
+00:59:44
+but I hold them all in a constant ratio with respect to each other, but I allow the overall magnitude to expand or contract.  So suppose we allow the vector's normalization to change as it slides along.  Well the way I would mathematically formulate this is I'm going to use a notation that looks like this. So recall this capital D-- it's a shorthand for this combination of the tangent and the covariant derivative. I'm going to call the parameterization I use when I set up like this lambda star,
+
+01:00:46
+for reasons that I hope will be clear in just about two minutes. So what I'm basically saying is that as I move along, I don't keep the components constant. But I keep them proportional to where they were on the previous step. But I allow their magnitude to change by some function, which I'll call a kappa.  So you might look at that and think, you know, that's a more general kind of transport law. It seems to describe physically a very similar situation here. It's kind of annoying that this normalization is changing.
+
+01:01:20
+Is there anything going on with this? Well what you guys are going to do as a homework exercise, you're going to prove that if this is the situation you're in, you've chosen a dumb parameterization. And you can actually convert this to the normal geodesic parameterization by just relabeling your lambda.  So we can always reparameterize this, such that the right-hand side is 0. And right-hand side being 0 corresponds to the transport vector remaining constant as it moves along. So I'll just quickly sketch--
+
+01:02:11
+so imagine there exists some different parameterization, which I will call lambda.  So imagine something that gives me my normal parallel transport exists. And I have a different one that involves the star parameter. You can actually show that these two things describe exactly the same motion, but with lambda and the dumb parameterization, lambda star, related to each other by a particular integral.  So what this shows us is we can always-- as long as I'm talking about motion where I'm in this
+
+01:03:10
+regime-- where there's no forces acting-- it's not an extended body-- it's just a test body-- I can always put it into a regime where it'll [INAUDIBLE] geodesic and the right-hand side is equal to 0. If I'm finding that's not the case, I need to adjust my parameterization. When you are, in fact, in a prioritization such as the right-hand side is 0, you are using what is called an affine parameterization. That's a name that's worth knowing about.  So your intuition is that the affine parameterization--
+
+01:04:02
+I described this in words last time. And this just helps to make it a little bit more mathematically precise what those words mean.  Affine parameters correspond to the tick marks on the world line, being uniformly spaced in the local Lorentz frame.  If you are working with time-like trajectories-- which if you're a physicist, you will be much of the time-- a really good choice of the affine parameter is the proper time of a body moving through the spacetime. That is something that is uniformly spaced,
+
+01:05:01
+assuming that's-- you don't have to assume anything. Just by definition it's the thing that uniformly measures the time as experienced by that observer.  So this is-- you guys are going to do on PSET 4-- this is the exercise you need to do to convert a nonaffine parameterized geodesic to an affine parameterized one. That kind of parameterization is not too hard to show that if we adjust the parameterization in a linear fashion--  so in other words, let's say I go from lambda to some lambda
+
+01:06:25
+prime, which is equal to a lambda plus b, where and b are both constants--  we get a new affine parameterization.  But that's the only class of reparamterizations that allows me to do that.  And hopefully that makes sense. If you imagine that you're using proper time as your reparameterization, this is basically saying that you just chose a different origin for when you started your clock. And this means you changed the units in which you are measuring time. That's all.  So I'm going to skip a bunch of the details.
+
+01:07:12
+But I'm going to scan and put up the notes corresponding to one other route to getting to the geodesic equation, which I think it's definitely worth knowing about.  It connects very nicely to other work in classical mechanics. So it's a bit of a shame we're going to need to skip over it. But we're a little bit behind pace. And this is straightforward enough that I feel OK posting the notes that you can read it. So there is a second path to geodesics.  So recall the way that we argued how to get the geodesic
+
+01:07:59
+equation, which we said we're going to go into-- it's actually in the board right above where I'm writing right now-- go into the freely-falling frame. I have a body that isn't coupling to anything but gravity. Therefore in the freely-falling frame, it just maintains its momentum. It's going to go in a straight line. Straight means parallel transporting tangent vector-- math, math, math-- and that's how we get all that. So what this boiled down to is I was trying to make rigorous in a geometric sense what straight
+
+01:08:26
+meant. There's another notion of straight that one can imagine applying when you're working in a curved space.  So your intuition for-- if you're talking about how do I make a straight line between two points on a globe-- your intuition is you say, oh, well the straightest line that I can make is the path that is shortest.  We're going to formulate-- and I'll leave the details and the calculation to the notes-- we're going to formulate how one can apply a similar thing to the notion of geodesics.
+
+01:09:29
+So imagine I've got an event p here and event q up here. And I ask myself, what is the accumulated proper time experienced by all possible paths that take me from event p to event q? I'm going to need to restrict myself. I want it to be something that an observer can physically ride-- so all the time-like trajectories that connect event p to event q. So I've got one a path that goes like this, got a path that goes like this, path that goes like this, path goes like this, path goes like-- some of them
+
+01:10:07
+might have just become somewhat space like, so I should rule them out. But you get the idea. Imagine I take all the possible time-like paths that connect p and q.  Some of those paths will involve strong accelerations. So they will not be the freefall path. Among them there will be one that corresponds exactly to freefall.  So if I were talking about-- imagine I was trying to-- and this is something that Muslim astronomers worked out long, long ago-- they wanted to know the shortest path from some point on earth towards Mecca.
+
+01:10:54
+And so you need to find what the shortest distance was for something like that. And when you're doing this on the surface of a sphere, that's complicated. And that's where the qibla arose from, was working out the mathematics to know how to do this. This is a similar kind of concept. I'm trying to define-- in this case, it's going to turn out it's not the shortest path, but it's the path on which an observer ages the most because as soon as you accelerate someone-- it's not hard.
+
+01:11:20
+Go back to some of those problem sets you guys did where you look at accelerated observers. Acceleration tends to decrease the amount of aging you have as you move through some interval of spacetime. So the path that has no acceleration on it, this is going to be the one on which an observer is maximally aged.  Why maximum instead of a minimum? Well it comes down to the bloody minus sign that enters into the timepiece of an interval that we have in relativity. And that's all I'll say about that,
+
+01:11:57
+is just boils down to that. So what we want to do is say, well along all of these trajectories, the amount of proper time that's accumulated-- so let's just say that every one of these is parameterized by some lambda that describes the motion along these things.  This is the amount of proper time that someone accumulates as they move from point p-- which is at-- let's say this is defined as lambda equals 0-- and it's indeterminate what that top lambda is actually going to be. It's whatever it takes when you get up to lambda of q.
+
+01:12:48
+So what the notes I'm going to post do, is they define an action principle that can be applied to understand what the trajectory is that allows you to do this.  So I'll just hit the highlights. So in notes to be posted, I show that this delta t-- this delta tau rather--  this can be used to define an action.  It looks like this.  And then if you vary the action--  or rather you do a variation of your trajectory-- where you require that the action remain stationary under that variation-- in other words I require delta i equals 0 as x
+
+01:14:43
+goes over to such--  so-- what you wind up with--  is delta i equals--  Notice what I've got in here. This is just a Christoffel symbol.  So when I do this variation, what I find-- and by the way going from essentially that board to that board, it's about 2/3 a page of algebra. Going down to this one, there's a bunch of straightforward but fairly tedious stuff. It's one reasons why I'm skipping over the details. We've got enough G mu nus on the board.  So the key point is I am going to require that my action be
+
+01:17:08
+stationary, independent of the nature of the variation that I make. For that to be true, the quantity in braces here must be equal to 0. Let me just write that down over here. This is a good place to conclude today's lecture.  So we require this to be 0 for any variation.  Yet the bracketed term being equal to 0, pull that out, and clear out that factor of the metric with an inverse, you've got your geodesic equation back. So we just quickly wrap this up. So it's worth looking over these notes.
+
+01:18:15
+It's not worth going through them in gory detail on the board, which is why I'm skipping a few pages of these things. But what this demonstrates is that geodesics--  our original definition is that they carry the notion of a straight line in a straightforward way from where they are obvious in a locally Lorentz frame to a more covariant formulation of that--  so a generalized straight line to a curved spacetime. And they give the trajectory of extremal aging in other words a trajectory along which between two points in spacetime,
+
+01:19:13
+an observer moving from one to the other will accumulate the most proper time.  So I'm going to stop here. There's a bit more, which I would like to do, but I just don't have the time. But I'll tell you the key things that I want to say next. Everything that I've done here so far is I've really fixated on time-like trajectories. I've imagined there's a body with some finite rest mass where I can make a sensible notion of proper time. We are also going to want to talk
+
+01:19:49
+about the behavior of light. Light moves on null trajectories. I cannot sensibly define proper time on long such a trajectory. They are massless. There's all sorts of properties associated with them that just make this analysis. The way I've done it so far, I'll need to tweak things a little bit in order for it to work. We will do that tweaking. It's actually quite straightforward and allows us to also bring in a bit more intuition about what affine parameters mean when we do that.
+
+01:20:16
+So that'll be the one thing we do. The other-- it's unfortunate I wasn't able to get to it today-- but it's a straightforward saying, which I think I may include in the notes that I post-- is including what happens, if your spacetime-- so if the metric you use to generate these Christoffels has a Killing factor associated with it, you can combine Killing's equation with the geodesic equation to prove the existence of conserved quantities associated with that motion. And that's where we start to begin
+
+01:20:43
+to see that if I have a spacetime that is independent of time, there's a notion of conserved energy associated with it. So we will do that on Tuesday.
+

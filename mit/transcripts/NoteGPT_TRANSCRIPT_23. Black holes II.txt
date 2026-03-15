@@ -1,0 +1,228 @@
+00:00:00
+[SQUEAKING] [RUSTLING] [CLICKING]  SCOTT HUGHES: So in this final lecture, I want to think a bit sort of with an eye towards thinking about how one might actually make measurements that prove the nature of the black hole spacetime that was discussed the previous lecture. I'm going to discuss motion in a black hole spacetime.  We touched on this a little bit in the previous lecture, where we discussed the motion of radial light rays, OK? We, in fact, used radial light rays as a critical tool
+
+00:00:57
+for describing the properties of the spacetime. We use that to help us understand the location of events horizons. But I want to think a little bit more generally. What might it look like if I have material orbiting in the vicinity of one of these black holes? What if it's not light? What if it's made out of matter? And so what this is going to boil down to is understanding the behavior of geodesics in a black hole spacetime. And the naive approach to doing this is not wrong, but naive.
+
+00:01:28
+What you do is you would just take the spacetime-- take your Schwarzschild or take your Kerr spacetime-- and turn a very large crank, grind out all of the connection coefficients, evaluate the geodesic equation, integrate it up. Solve for the geodesics. Boom, you got yourself your motion, OK? And that is absolutely correct. You can do that using your Kerr space time or your Schwarzschild spacetime. In fact, if you do that for-- you can get the connection coefficients describing this. Those are relatively easy to work out.
+
+00:02:20
+I think they are listed in Carroll, in equation 5.53, according to my notes. That may just be for Schwarzschild. But at any rate, they're all listed there, and have a blast. This approach is not wrong, but-- my notes say, but it is not useful. That's not really true. I'll just say that there is a more useful approach to this. A more fruitful approach is to exploit the fact that these are highly symmetric spacetimes.  Exploit the symmetries and the Killing vectors, and see how they can be used
+
+00:03:22
+to reduce the number of degrees of freedom that you need to describe.  In this lecture, I'm going to go through this in quite a bit of detail for Schwarzschild. The concepts that I'm going to apply work for Kerr and for Kerr-Newman as well, OK? Schwarzschild is just a little easier to work with. It's something that I can fit into a single lecture. In particular, one of the nice things about Schwarzschild-- so let's go ahead and write down that spacetime.  So one of the nice things about Schwarzschild
+
+00:04:23
+is it is spherically symmetric.  This means I can always rotate coordinates such that-- well, when me think about it-- let's just back up for a second. Imagine that I have some kind of a body orbiting a Schwarzschild black hole. Spherical symmetry tells me that there must be some notion of a conserved angular momentum such that that orbit always lies within a given plane. Put it another way. Because it is fairly symmetric, there cannot exist a torque.  The black hole cannot exert a torque that changes
+
+00:05:13
+the orientation of the orbital plane.  In particular, because it is fairly symmetric, there is no unique notion of an equator to this object. And so you might as well define any orbits to live in the theta equals pi over 2 plane. You can always rotate your coordinates to put any orbit in the theta equals pi over 2 plane. It's actually a pretty simple exercise. I won't do this, but if you start with an orbit that is in the theta equals pi over 2 plane, and it is moving such that its initial velocity would keep it
+
+00:06:22
+in a theta equals pi over 2 plane, it's a very simple exercise using the geodesic equation to show that it will always be in the theta equals pi over 2 plane. So spherical symmetry says, you know what, let's just forget about the theta degree of freedom. I can always define my coordinates in such a way that it lives in the theta equals pi over 2 plane. Boom, I have reduced my motion from, in general, being three spatial dimensions to two spatial dimensions. That's another one of the reasons why,
+
+00:06:54
+for pedagogical purposes, it's nice to start with Schwarzschild. For Kerr, this is not the case, OK? Kerr is a little bit more complicated. You have to treat the theta motion separately. It's not strictly symmetric, and so you can't do that.  I have actually spent a tremendous amount of my career studying the orbits of objects around Kerr black holes. And I do have to say that the additional complications that arise from this lack of sphericity, they're really beautiful, OK? There's an amazing amount of fun stuff you can do with it.
+
+00:07:27
+You know, there's a reason why I just keep coming back to this research problem, and part of it is it's just bloody fun. But if you're teaching this stuff for the first time, it's not where you want to begin. All right, so Schwarzschild allows us to reduce it from a three-dimensional problem to a two-dimensional problem. And Schwarzschild also has two Killing vectors. The time derivative of every metric component is equal to 0. That means p downstairs t is constant.  So there is a timelike Killing vector.
+
+00:08:12
+So p downstairs t is constant every level along the orbit. It means there exists a timelike Killing vector. And so what we do is we associate this with the energy of the orbit. We call this up to a minus sign. And we choose that minus sign because if we imagine orbits have very, very large radius, the spacetime is nearly flat, and we want to sort of clear out the minus sign associated with lowering our index here. We're going to call that constant negative of the energy of the orbit.  The spacetime is also independent of the angle phi.
+
+00:08:59
+And so p sub phi is a constant. This means that the spacetime has an axial Killing vector, something associated with motions around a symmetry axis.  So I'm going to call this L-- well, actually, I will tend to call it L sub z. You can kind of think of this as, after I have put everything in the theta equals pi over 2 plane, this is like an angular momentum on the-- angular momentum parallel to the axis normal to that plane, and I call that the z-axis. It's worth noting that all three of these things
+
+00:09:40
+are also true for Reissner-Nordstrom black holes. This one is not true for Kerr, but these two are, OK? So although the details change, many of the concepts will carry over when you look at different, more complicated classes of black holes. Let's now think about the forward momentum of a body moving in a Schwarzschild spacetime.  So let's say it's got a rest mass m, then it will have three components. Remember, I have put this thing in a plane where there is no theta motion.  It will have three theta motions describing its motion
+
+00:10:36
+with respect to the time coordinate, the radial coordinate, and the actual coordinate phi, OK? So before I do anything with this, let's take advantage of the fact that we have these quantities that are constants. So using the fact that p downstairs mu is what I get when I hit this guy-- that be a mu, pardon me. This is what I get when I hit this guy with the metric. I can write out a p sub t and p sub phi. So let's do that on another board. Well, let's do a p sub t first. So p sub t is going to be gtt, p sub--
+
+00:11:21
+whoops.  OK, this is minus. There's an m from that-- minus sign from my metric.  And this whole thing I define as the negative energy, e.  OK, so that combination-- we'll do something at the rest mass in just a moment. But you should basically look at this and saying that dt d tau, which tells me about how the body moves with respect to the Schwarzschild time coordinate-- that complement of the four velocity times 1 minus 2gm over r is a constant. Let's look at p downstairs phi.  So this is m r squared sine squared theta.
+
+00:12:36
+Ah, we've chosen our orbital plane, 1 times d phi d tau. This is equal to [INAUDIBLE] momentum L sub z. In my notes, I might flip around a little bit between L sub z and L. So let's massage these a little bit more. So I can take these two expressions and I can use them to write dt d tau and d phi d tau in terms of these conserved quantities. So dt d tau is equal to-- I'm going to call it e hat divided by 1 minus 2gm over r. d phi d tau is going to be Lz hat over our squared. And so these quantities with a hat
+
+00:13:44
+are just the conserved values normalized to the rest mass, OK? They all are proportional to the rest mass, but it's actually if you want to know what the-- this is essentially telling me about how clocks on the orbit tick relative to clocks that are infinitely far away. And that can't depend on the mass of the orbiting object. This is telling me about how this small body is moving according to the clock of the orbiting observer. And again, that can't depend on the mass of the object.
+
+00:14:17
+OK, so that's kind of cool. So I've now managed to relate three-- excuse me, two of the three components of the forward momentum to functions of r and quantities that are known to be constant. That's good. We have one more overall constraint.  We know that if I take p dot p, I get negative of the rest mass squared.  So this, when I write it out--  OK, notice every single term is proportional to m squared. So I can divide that out. I can insert dt d tau. I can replace for this e divided by this guy.
+
+00:15:48
+I can replace d phi d tau by my Lz hat divided by r squared.  Doing so, manipulating a little bit, I get--  we get something like this. And let me rearrange this a tiny bit.  All right, I have managed to reduce this to a one-dimensional problem, OK? So going from that line over to there, basically all I did was insert the relationship between dt d tau and E, d phi d tau and L, cleared out some overall factors of things like 1 minus 2GM/r, manipulate, manipulate, manipulate, and what you finally get is this lovely equation here
+
+00:17:42
+that tells you how the radial velocity, the radial velocity with respect to proper time, how it depends as a function of r given the energy and the angular momentum. I have written it in this form because the problem is very strikingly reminiscent to the Newtonian problem of understanding the motion of a particle in a 1/r potential, which we often describe as having an effective potential that has a gravitational term-- Newton's gravity, or if you're doing things like quantum mechanics, the Coulomb potential,
+
+00:18:26
+and a Coulomb barrier associated with the angular momentum of an orbit. So one way to approach what we've got now, one thing that we could do, is essentially just pick your energy and your Lz-- pick your energy and your angular momentum-- pick an initial position--  let's imagine you synchronize the clocks at t equals 0-- and then just integrate.  You've got your dr d tau given here. Don't forget, you also have d phi d tau and dt d tau related to the energy and your angular momentum, like so.
+
+00:19:30
+Boom. It's a closed system. You can always do just sort of a little numerical integration of this.  In a certain sense, this completely specifies the problem. But there's so much more we can do. In particular, what we see is that all of the interesting behavior associated with this orbit is bound up in this function V effective.  So something that's really useful for us to do is to take a look at what this V effective looks like. So suppose you are given a particular value for E hat and Lz hat, and you plot V effective versus r.
+
+00:20:26
+Well, what you typically find is that it's got a behavior that looks kind of like this, where this value right here is V effective equal to 1. Notice as r goes to infinity, you get 1 times 1. So this asymptotes to 1.  Notice E hat squared has the same dimensions as V effective. In fact, in the unit choices I've used here, they are both dimensionless. So what we can do is plot-- let's imagine that we have--  you know what? I'm going to want to sketch this on a different board. Let me go over here.
+
+00:21:29
+So I'm going to want to look at a couple of different values of V effective--  excuse me, a couple of different values of E hat.  OK. Here's an example. This guy is asymptoting at 1. So since E hat, as I said, has the same units as V effective, let's plot them together.  So example one-- imagine if E hat lies right here.  OK. So let's call this E hat 1.  So this is some value that is greater than 1. What is the point of doing this? Well, notice-- I'm going to flip back and forth between these two middle boards here.
+
+00:23:13
+Let's look at the equation that governs the radial motion of this body.  dr d tau has to be a real number.  This has to be a real number. So we have to have E hat squared greater than or equal to V effective in order for dr d tau to have a meaningful solution.  So let's look at my example here, E hat 1.  E hat 1 is greater than my effective potential everywhere at all radii until I get down to here.  Let's call that r1. So in this case, dr d tau, if I think about this thing-- so note that defines dr d tau squared.
+
+00:24:56
+Let's suppose we take the negative square root. dr d tau is positive and inward-- or, well, it's negative-- negative and real, negative and real, negative and real, negative and real, negative and real-- boom. It's 0.  Can it go into here? No. It cannot go into there, because there E hat squared is less--  sorry. That should have been squared. Inside here, E hat squared is less than the effective potential. dr d tau is imaginary. That doesn't make any sense. The only option is for this guy to change sign and trundle
+
+00:25:36
+right back out. So E hat greater than 1 corresponds to a body that comes in from large radius, turns around at particular radius where E hat is the square root of the effective potential, and then goes back out to infinity or back out to-- let's not say infinity-- goes back out to large radius.  OK? In Newtonian gravity, we would call this a hyperbolic orbit. This corresponds to-- so remember, when I did this I have not-- I'm not actually-- I'm only computing the radial motion. I'm not looking at the phi motion.
+
+00:26:40
+So this actually, when you look at both the radial motion and the phi motion, what you see is that this is a body that comes in and then sort of whips around that small radius and goes right back out.  Let's look at another example.  Let's call this E2--  some value that is less than 1.  OK. Well, for E hat 2, it's a potential.  The potential is underneath E hat 2 squared only between these two radii, which I will call r sub p and r sub a.  What we expect in this case is motion of this body essentially
+
+00:27:50
+going back and forth and turning around at periastron and apoastron. This is a relativistic generalization of an elliptical orbit. In general relativity, they turn out generally not to be ellipses. So we call this an eccentric orbit.  In the weak field limit, if you imagine r being very, very large, it's not hard to show that the motion is nearly an ellipse, but it's an ellipse whose long axis is slowly precessing. This actually leads to the famous perihelion precession of Mercury that Einstein first calculated.
+
+00:28:57
+And this is an exercise that I am asking you to do on one of the final P-sets of this course. Using what I have set up here, it's really not that difficult to do. Let me go to another board.  And note that one could imagine an energy such that dr d tau is exactly 0.  So if you choose your energy so that you sit right here at the minimum of the potential-- I will label this as point s--  the energy that corresponds to exactly that point is what would be a-- that is, there is a single point at which dr d tau equals 0.
+
+00:30:02
+Anywhere away from that, dr d tau would be imaginary, so that's not going to work. But right at that point, dr d tau equals 0, and you get a circular orbit.  Notice there's a second point at which that can happen. Let's call this point u.  Perhaps you can guess why I called these points s and u. If you imagine that you add a tiny amount of energy right here, well, what it will do is it will execute small oscillations around the point s. It will sort of move it up to something that's similar to what I drew up there as E2,
+
+00:30:45
+but with a very small eccentricity. So if I slightly disturb a circular orbit down here at s, I essentially just oscillate in the vicinity of that circular orbit. S stands for stable.  If I have an orbit up here at u and I very slightly perturb it, well, it'll either go in and eventually reach r equals 0, or it'll go out, and then it's completely unbound, and it will just keep trundling all the way out essentially forever. This guy is unstable.  Stable orbits are particularly interesting and important.
+
+00:31:32
+So let's look at these orbits with a little bit more care.  So the very definition of a circular orbit is that dr d tau equals 0. Its radius does not change.  If dr d tau equals 0, then it must have E hat equal the square root of the effective.  Both of these orbits happen to live at either a minimum or a maximum of this potential curve.  So I'm going to require that the partial derivative of that potential with respect r be equal to 0.  So let's take a look at this condition.  My effective potential is given up here.
+
+00:33:04
+Do a little bit of algebra with this, set this guy equal to 0. What you'll find after your algebraic smoke clears is that you get this condition on the angular momentum.  Notice as r gets really large-- oh, shoot.  Try it again. Notice as r gets really large that this asymptotes to plus or minus the square root of GM r. That is indeed exactly what you get for the angular momentum of a circular Newtonian orbit. OK. So it's a nice sanity check.  It appears to be somewhat pathological as r approaches 3GM, though.
+
+00:34:19
+Hold that thought.  OK. So now let's take that value of L, plug it back into the potential, and set E equal to the square root of that. A little bit of algebra ensues. And what you find is that this equals 1 minus 2GM/r over, again, that factor under a square root of 1 minus 3GM/r. Again, we sort of see something a little bit pathological happening as r goes to 3GM. Let me make two comments about this. So first of all, notice that this energy is smaller than 1.  I can intuitively-- you can sort of imagine-- remember,
+
+00:35:55
+E hat is the energy per unit rest mass.  You can think of this as something like total energy over M-- so the energy associated with the orbiting body. It's got a rest energy, a kinetic energy, and a potential energy divided by m. For an orbit to be bound, the potential energy, which is negative, must have larger magnitude than the kinetic energy. So for a bound orbit, E kinetic plus E potential will be a negative quantity. So the numerator is going to be something that, when normalized to m, is less than 1.
+
+00:36:44
+So this is exactly what we expect to describe a bound orbit. Notice, also-- so if you take this formula and look at it in the large r limit, it goes to 1 minus GM over 2r. This is in fact exactly what you get when you look at the energy per unit mass throwing in-- sort of by hand-- a rest mass. The minus GM/2r exactly corresponds to kinetic plus potential for a Newtonian circular orbit. So lots of stuff is hanging together nicely.  So we've just learned that we can characterize the energy and angular momentum of circular orbits around my black hole.
+
+00:37:35
+Let's look at a couple other things associated with this. So these plots where I look at the radial motion, this effective potential, as I mentioned a few moments ago, there's additional sort of degrees of freedom in the motion that are being suppressed here. So this thing is also moving in that plane. It's whirling around with respect to phi. We've lost that information in the way we've drawn this here. Let's define omega to be the angular velocity of this orbit as seen by a distant observer.
+
+00:38:09
+OK. Why am I doing it as seen by a distant observer? Well, when things orbit, there tend to be periodicities that imprint themselves on observables. It could be the period associated with the gravitational wave that arises out of this. It could be the period associated with peaks and a light curve if this is a star orbiting around a black hole. It could be oscillations in the X-ray flux if this is some kind of a lump in an accretion disk of material orbiting a black hole. So if this is the angular velocity seen by distant
+
+00:39:00
+observers-- remember, the time that distant observers use to-- the time in which the distant observers' clocks run is the Schwarzschild time t. So this will be d phi dt, which I can write as d phi d tau-- this is the angular velocity according to the orbit itself-- normalized to dt d tau. Now, these are both quantities that are simply related to constants of motion. What I've got in the numerator here is L hat over r squared. And what I've got in the denominator here is E hat over 1 minus--
+
+00:39:48
+I dropped my t. It would happen at some point-- 1 minus 2GM/r.  So let's go ahead and take our solution here.  My E hat is 1 minus 2GM/r divided by square root of blah, blah, blah. The 1 minus 2GM/r cancels. My L hat is square root GM r divided by, again, that square root 1 minus 3GM/r. Notice, the square root 1 minus 3GM/r factors all cancel. So this becomes plus or minus 1 over r squared square root GM r.  Looks like this. Plus and minus basically just correspond to whether this motion sort of is going
+
+00:40:52
+in the same sense as your phi coordinate or in the opposite sense. There's really no physics in that. It just comes along for the ride that both behave the same. If you guys get interested in this, and you do a similar calculation around a Kerr black hole, you'll find that your prograde solution gives you a different frequency than your retrograde solution because of the fact that the dragging of inertial frames due to the spin of the black hole kind of breaks that symmetry. Something which is interesting and--
+
+00:41:21
+well, I'll make a comment about this in just a second, which is kind of interesting. And here's what I'll say-- sometimes people think this is more profound than it should be-- is this is, in fact, exactly the same frequency law that you get using Newtonian gravity. This is actually exactly the same as Kepler's law.  That seems really, really cool. And it is. It's actually really useful. It makes it very easy to remember this. But don't read too much into it. More than anything, it is a statement
+
+00:42:03
+about a particular quality of this radial coordinate. So remember, in Newtonian gravity r tells me the distance between-- if I have an orbit at r1 and an orbit at r2, then I know that the distance between them is r2 minus r1. In the Schwarzschild spacetime, the distance between these two orbits is not r2 minus r1. However, r2 labels a sphere of surface area 4 pi r2 squared. And r1 labels a sphere of surface area 4 pi r1 squared. It's easy to also show that the circumference of the orbit at r2 is 2 pi r2, the circumference
+
+00:42:45
+of the orbit at r1 is 2 pi r1. That, more than anything, is why we end up reproducing Kepler's law here, is that this areal coordinate is nicely amenable to this interpretation.  So is this orbit-- so I described over here an orbit that is unstable and an orbit that is stable. I have described how to compute-- if I wanted to find a circular orbit at a given radius, those formulas that I derived over there on the right-most blackboards, they tell me what the energy and the angular momentum need to be as a function of r.
+
+00:43:38
+Is that orbit stable? Well, if it is, I can check that by computing the second derivative of my effective potential.  So my orbits are stable if the second derivative with respect to r is greater than 0, unstable if this turns out to be negative. Let's look at the crossover point from one to the other. What if there is a radius where, in fact, the stable and the unstable orbits coincide? In fact, what one finds, if you look at the effective potential-- you imagine just sort of playing with L sub z.
+
+00:44:40
+So let's say we take that L sub z, and we just explore it for lots of different radii of the orbits. You find that as the orbits radius gets smaller and smaller, your stable orbit tends to go up, and this minimum sort of becomes flatter, and your unstable orbit just kind of comes down. They sort of approach one another. There is a point just when they coincide--  this should have an "effective" on it. My apologies.  Right when they coincide, this defines what we call the marginally stable orbit.
+
+00:45:19
+I may have put this one on a problem set. But it might be one of the ones I decided to drop. So I'm just going to go ahead and do the analysis. When you compute this, bearing in mind that your angular momentum is a constant--  so take this, substitute in now your solution for L sub z, which I've written down over there--  what you find is that the marginally stable orbit--  let's call it r sub ms-- it is located at a radius of 6GM.  This is a profoundly new behavior that doesn't even come close to existing
+
+00:46:50
+in Newtonian spacetime-- spacetime-- doesn't come close to existing in Newtonian gravity, excuse me. [SIGHS] I'm getting tired.  The message I want you to understand is that, what this tells us is that no stable circular orbits exist inside r equals 6GM.  So this is very, very different behavior. If I have-- let's just say I have a very compact body but Newtonian gravity rules. I can make circular orbits around it, basically go all the way down until they essentially touch the surface of that body.
+
+00:47:50
+And you might think based on this that you would want to make orbits that basically go all the way down, that sort of kiss the edge of r equals 2GM. Well, this is telling you you can't do that. When you start trying to make orbits that go inside-- at least, circular orbits-- that go inside 6GM, they're not stable. If someone sneezes on them, they either are sort of blown out to infinity, or they fall into the event horizon. And in fact, one of the consequences of this is that, in astrophysical systems,
+
+00:48:24
+we generically expect there to be kind of-- if you imagine material falling into a black hole, imagine that there's like a star or something that's just dumping gas into orbit around a black hole, well, it will tend to form a disk that orbits around this thing. And the elements of the disk are always rubbing against each other and radiating. That makes them get hot. They lose energy because of this radiation. And so they will very slowly sort of fall in. But they make this kind of-- it's thought that in most cases they'll
+
+00:48:53
+make this kind of thick disk that fills much of the spacetime surrounding the black hole. But there will be a hole in the center. Not just because the thing is a black hole. I don't mean that kind of a hole. There'll actually be something surrounding the black hole's event horizon, because there are no stable circular orbits. Once the material comes in and hits this particular radius, 6GM in the Schwarzschild case, it very rapidly falls in, reduces the density of that material tremendously.
+
+00:49:20
+And you get this much thinner region of the disk where essentially things fall in practically instantly. It should be noted that this 6GM is, of course, only for Schwarzschild. If you talk about Kerr, you actually have two different radii corresponding to material that goes around parallel to the black hole's spin and material that goes anti-parallel to the black hole's spin. And it complicates things somewhat. There's two different radii there. The one that goes parallel tends to get a little bit closer.
+
+00:49:49
+The one that's anti-parallel tends to go out a little bit farther. But the general prediction that there's an innermost orbit beyond which stable orbits do not exist, that's robust and holds across the domain of black holes. So let me conclude by talking about one final category of orbits--  photon orbits.  So let's recall that when we were talking about null geodesics, we parametrized them in such a way that d-- sort of the tangent to the world line has an affine parameter attached to it, such that we can write p
+
+00:50:56
+equals dx d lambda. These guys are null.  So p dot p equals 0.  For the case of orbiting bodies, that was equal to minus mass squared. Mass is 0 here. So we're going to follow a very similar procedure. The spacetime is still time independent, so there is still a notion of a conserved energy. It is still actually symmetric, so there is still a notion of axial angular momentum. But because p dot p is 0 now, rather than minus m squared, when we go through the exercise of-- that sort of parallels
+
+00:51:40
+what we did for our massive particle, we're going to derive a different potential. So let's go ahead and evaluate this guy again.  And I get 0 equals minus 1 minus 2GM/r dt d lambda squared plus 1 minus 2GM/r dr d lambda squared. I'm still going to require the thing to be in the theta equals pi/2 plane so that we know theta term. And I have set theta to pi/2. So my sine squared theta is just one.  So I get this.  I'll remind you that I can relate-- so the relationship between the time-light component
+
+00:52:40
+of momentum and energy, the axial component of momentum, and the angular momentum, it's exactly the same as before. There's no rest mass appearing. And so now I find-- so my energy, I don't put a hat on it. It's not energy bringing it mass, because there is no mass.  That looks like so. And my L looks like so.  Using them, I can now derive an equation governing the radial motion of my light ray.  And sparing you the line or two of algebra, it looks like this.  Pardon me just one moment.
+
+00:54:14
+OK.  OK. So kind of similar to what we had before, if you look at it you'll see the term involving the angular momentum is a little bit different. As you stare at this for a moment, something should be disturbing you.  Notice that the equation of motion appears to depend on the energy. OK. That should really bug you. Why should gamma rays and infrared radiation follow different trajectories? As long as I am truly in a geometric optics limit, I shouldn't. Now, it is true that if you consider very long wavelength
+
+00:55:08
+radiation, you might need to worry about things. You might need to solve the wave equation in the spacetime. But as long as the wave nature of this radiation is-- if the wavelength is small enough that it's negligible compared to 2GM-- I shouldn't care what the energy is. Energy should not be influencing this. So what's going on is I need to reparametrize this a little bit. What I'm going to do to wash away my dependence on-- wash away my apparent dependence on the energy here, is I'm going to redefine my affine parameter.
+
+00:55:44
+So let's take lambda-- so L divided by lambda. And I am going to define b to be L divided by E. This is the quantity that I will call the impact parameter.  And I'll describe why I am calling it that in just a few minutes. So I'm going to take this entire equation, divide both sides by L squared.  And I get something that looks like this.  What I'm going to do is say that the impact parameter, b, is what I can control. It's the parameter that-- all I can control that defines the photon that I am studying here.
+
+00:57:16
+And everything after this, this is my photon potential.  Notice that the photon potential has no free parameters in it.  If I plot this guy as a function of r, it kind it just looks like this. Two aspects of it are worth calling out.  This peak occurs at r equals 3GM.  Remember the way in which our energy-- oh, still have it on the board here-- things like the energy per unit mass and the angular momentum per unit mass all blew up when r equal 3GM. 3GM is showing up now when I look at the motion of radiation, look at massless--
+
+00:58:49
+radiation corresponding to a massless particle, so to speak. If I look at the energy per unit mass, and the mass goes to 0, I get infinity. So the fact that I was actually seeing sort of things blowing up as r goes to 3GM was kind of like the equations hinting to me in advance that there was a hidden solution corresponding to radiation that could be regarded as a particular limit that they were sort of struggling to communicate to me. The other thing which I want to note is that the potential, the height of the potential right
+
+00:59:24
+here, it has a peak value of 1 over 27 G squared M squared. Hold that thought for just a moment. Actually, let me write it in a slightly different way. This equals 1 over 3 root 3 GM squared.  So now, to wrap this up I need to tell you what is really meant by this impact parameter.  So go back to freshman mechanics. And impact parameter there is-- like, let's say I have a problem where I am looking at an object that is on an infall trajectory.  There is a momentum p that is describing this.
+
+01:01:12
+And it's moving in such a way-- it's not moving on a real trajectory, right? It's actually moving in a sense that is a little bit off of true to the radial direction. This guy actually has an angular momentum that is given by-- let's say that this is equal to px x hat. Let's say this is b y hat. This guy's got an angular momentum of b cross p. That's the impact parameter associated with this thing. It sort of tells me about the offset of this momentum from being directly radial towards the center
+
+01:02:06
+of this object.  Well, I'm going to use a similar notion to give me a geometric sense of what this impact parameter here means. Suppose here is my black hole. It's a little circle of radius 2GM. And I'm sitting way the heck out here, safely far away from this thing.  And what I'm going to do is shoot light-- not quite radial. What I'm going to do is I'm going to have sort of an array of laser beams that kind of come up here--  an array of laser beams. And I'm going to shoot them towards this black hole.
+
+01:03:04
+And what I'm going to do is I'm going to offset the laser beams by a distance b.  And I'm going to fire it straight towards this thing.  Go through sort of a careful definition of what angular momentum means, and you'll see that that definition of impact parameter gives you a very nice sense of the energy associated with the trajectory of this beam and a notion of angular momentum associated with this. So let's flip back and forth between a couple of different boards here. There are three cases that are interesting.
+
+01:03:42
+Suppose b is small. In particular, suppose I have b less than 3 root 3 GM. So I start over here. Let's take the limit. What if b equals 0? Well, if b equals 0, this guy just goes, zoom, straight into the black hole. As long as it is anything less than 3 root 3 GM, what will happen is, when I shoot this thing in, it goes in, and it bends, perhaps, but it ends up going into the black hole. Let's look at this in the context of the equation of motion, the potential, and the impact parameter.
+
+01:04:50
+If b is less than 1 over 3 root 3 GM, then 1 over b squared will be higher than this peak. And this thing is just going to be, whoo [fast motion sound effect], it's going to go right over the top of the peak. And it shoots into small radius.  OK. Remember, L and E are constants of the motion. So that b is a parameter that defines this light for the this entire trajectory. 1 over b squared is less than V phot everywhere-- excuse me, greater than V phot everywhere. A rather crucial typo. And as such, it shoots the light ray,
+
+01:05:38
+and it goes right over the peak into the black hole, eventually winds up at r equals 0.  If b is greater than 3 root 3 GM, then 1 over b squared is less than V phot at the peak.  This corresponds, in this drawing, to a beam of light that follows a trajectory that kind of comes in here at this point. dr d tau, if we were to continue to go into smaller radii, it would become imaginary. That's not allowed. So it switches direction and trundles right back out to infinity.  On this diagram, that corresponds to a light ray
+
+01:06:51
+that's perhaps out here. This guy comes in, and he gets bent by the gravity a little bit, and then just, shoo [light ray sound effect], shoots back off to infinity. The critical point, b equals 3 GM, is right where the impact parameter hits the peak.  And so what happens in this plot is this guy comes in, hits the peak, and just sits there forever.  You get a little bit more of a physical sense as to what's going on by thinking about it here.  This guy comes in, [INAUDIBLE] this, and then just whirls around, and lies on what
+
+01:08:07
+we call the photon orbit. What's the radius of that photon orbit? r equals 3 GM.  Now, astrophysically, a more interesting situation is, imagine you had some source of light that dumps a lot of photons in the vicinity of a black hole. Some of those photons are going to tend to-- some of them are going to go into the black hole, some are going to scatter a little bit and shoot off to infinity. But if you imagine that there will be some population of them that get stuck right on the r equals 3GM orbit--
+
+01:08:53
+now, that is an unstable orbit. And in fact, if you look at it, what you find is that your typical photon is likely to whirl around a bunch of times, and then, you know, if it's not precisely at 3GM but it's 3.00000000000000001GM, it will whirl around maybe 10 or 15 times, and then it'll go off to infinity. So what we actually expect is if we have an object that is illuminated like this, then we will actually see these things come out here, and we will see-- so bear in mind, this is circularly-- this is symmetric.
+
+01:09:33
+So take this and rotate around the symmetry axis. We expect to see a ring whose radius is twice the critical impact parameter. So it would have a diameter of 6 root 3 GM. It would be essentially a ring or a circle of radius 3 root 3 GM. This is, in fact, what the Event Horizon Telescope measured. So last year when I was lecturing this class, this was announced almost-- I mean, they timed it well. They basically timed it to about two or three lectures before I discussed this aspect of black holes.
+
+01:10:19
+So that was-- thank you, Event Horizon Telescope. That was very nice of them. And of course, we don't expect-- so Schwarzschild black holes are probably a mathematical curiosity. Objects in the real universe all rotate. We expect Kerr to be the generic solution. And so there's a fair amount of work that goes into how you correct this to do-- so doing this for Schwarzschild is, because of spherical symmetry, it's beautiful and it's simple. Kerr is a little bit more complicated. But, you know, it's a problem that can be solved.
+
+01:10:49
+And a lot of very smart people spend a lot of time doing this to sort of map out what the shadow of the black hole looks like, what this ring would look like in the case of light coming off of a spinning black hole. So that's it. This is all that I'm going to present for 8.962 in the spring of 2020 semester. So to everyone, as you are scattered around the world attempting to sort of stay connected to physics and your friends and your classwork, I wish you good health. And I hope to see you again at a time when the world is
+
+01:11:29
+a little less crazy. In the meantime, enjoy our little beautiful black holes.
+

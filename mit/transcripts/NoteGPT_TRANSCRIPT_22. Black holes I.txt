@@ -1,0 +1,246 @@
+00:00:00
+[SQUEAKING] [RUSTLING] [CLICKING]  SCOTT HUGHES: I'm going to record two lectures today. These are the final two lectures I will be recording for 8.962. I actually have notes on an additional two lectures. I have notes for an additional two lectures. But those additional two lectures are somewhat advanced material. It's sort of fun to go over them in the last week of the course, for certain students. It can be a great introduction to some of the most important topics in modern research.
+
+00:00:41
+But I am not going to come into campus and present those lectures, OK, given everything that's going on right now. To be blunt, they are kind of bonus material. And this isn't the time. This is not the semester for us to go through our bonuses. I will make those notes available. I will be happy to discuss them in a saner moment with any student who is interested in them. But this semester, let's just focus on the core material. So that brings us to the topic of what we are studying today.
+
+00:01:12
+Pardon me while I correct my handwriting. So if I can do a recap of what we discussed last time, we took a look at a spacetime that has this Schwarzschild solution written in the Schwarzschild coordinates everywhere. In our previous lecture, we looked at a spacetime that described a fluid body, a spherically symmetric fluid body. And it had a surface. This was the solution that we used for its exterior. This ends up describing a solution that has zero stress energy tensor. So it describes a vacuum situation.
+
+00:01:50
+OK? So if I imagine a spacetime that looks like this everywhere, well, what I end up finding is that this is a vacuum solution. It has T-mu-nu equals 0 everywhere. However, it also has a mass m. So this is the vacuum solution with mass, which is, well, that's weird. We examined some of its curvature properties, and we found that at r equals 0, there is a tidal singularity, OK, in invariant quantity that we constructed from the tidal tensors, blows up at r equals 0. R equals 2GM looks a little bit funny.
+
+00:02:29
+And it turns out tides are well behaved there. OK, there's nothing pathological in the spacetime there. But there is a coordinate singularity. Our coordinate t is behaving oddly. And where we left things last time is I did a little diagnosis of this by imagining a body that falls into spacetime from some starting radius R0. And I looked at the motion of this thing as a function of time. What we find is that if we look at the motion of this thing as a function of the proper time of that in-falling body,
+
+00:03:00
+it crosses 2GM in finite proper time. And shortly afterwards, again, in finite proper time, it reaches the r equals 0 tidal singularity. If I look at that same motion as a function of the coordinate time t, it never even reaches, never even reaches r equals 2GM. We found a solution, what you can see in notes that I've put online and that are presented in the previous lecture. But we found a solution in which it just asymptotically approaches r equals 2GM, only reaching that radius in the t goes to infinity limit.
+
+00:03:39
+These are two starkly different pictures of the kinematics of this in-falling body. So the question is, what is going on here? And as food for thought, I reminded us that these coordinates, if we sort of look at the way that spacetime behaves for a very, very, very large M-- Excuse me, very, very, very large R, not M, but for a very large R, R much, much greater than 2GM, this turns into the line element of flat spacetime. Flat spacetime is what we use in special relativity. And our time coordinate there, it
+
+00:04:08
+is designed using this Einstein synchronization procedure, which means that the properties of light as it propagates through spacetime are built into the coordinate system. So that suggests what we might want to start doing in order to try to get some insight as to what is going on with this weird spacetime is to think about light as it propagates into spacetime. Let's think about what happens to radiation as it propagates.  So let's imagine as the body falls that it emits a radio pulse with a frequency as measured
+
+00:05:17
+according to the in falling. Let's say there's an observer who is falling in who's got a little radio transmitter that's beaming this message out. And according to that observer, this thing is emitted, the pulse has a frequency omega--  very far away, we can describe the momentum of this radio pulse like so. Imagine the thing is propagating out radially and very, very far away where the spacetime is approximately flat. It's simply the four-momentum that describes a null geodesic moving in the radial direction, OK?
+
+00:06:11
+Minus sign here because with the index in the upstairs position and this asymptotically flat region, that would be the energy. So a couple of facts to bear in mind.  The energy measured by an observer with four-velocity U is given by, let's call it E sub U, the energy measured by observer U. This is minus P-dot-U. We developed this in special relativity. But remember the way that we use the equivalence principle. We're gonna use the Einstein equivalence principle. And any law that holds in a freely falling frame, if I
+
+00:07:10
+can write it in a tensorial way that works in that freely falling frame, it works in any frame. So this tensorial statement holds true, even though we are now working in the spacetime that is distinctly different from special relativity. We also know that in a time independent spacetime, the downstairs T component of four momentum is constant.  So what this basically means is if I think about this radio pulse with its light propagating out through the spacetime, the value P0 associated with this thing's
+
+00:08:08
+four momentum, it's the same everywhere along its trajectory.  So let's consider a static observer sitting in the Schwarzschild spacetime.  OK, I'm going to require G-alpha-beta U-alpha U-beta to be equal to minus 1. And I will require that this have some timelike piece, that this observer is static. So their spatial components of their four-velocity are equal to 0. It looks like, by the way-- just pause one moment here. It looks like the projector is on because of--  I should probably just leave it as is.
+
+00:09:19
+All right, I'm not going to worry about that. Just leave that as it is. Sorry, let's go back to what I'm talking about here. So I have a static observer, so an observer who is not moving in space. They're only moving through time. And I need to normalize their four-velocity. Bear in mind, this is not a freely-falling observer. OK, this is an observer who must be accelerated, in some sense. And there must be some kind of a mechanism that is allowing this observer to hover at the fixed location
+
+00:09:44
+in spacetime where they are at. So when I put these two constraints together and I tie it into that spacetime, what I find is that the timelike component is 1 square root of 1 minus 2GM over r.  So let's compare the energy that is emitted at radius r to the energy that is absorbed at some radius big R. So I'm going to imagine--  And so the reason I formulate it in this way, what I want to do now is ask myself, well, what is the energy that an observer at little r would measure here?  What is the energy that is observed
+
+00:11:12
+by the person at radius capital R? And now, we know, if I imagine that these are both being measured by static observers, because P sub T, P sub 0 or P sub T, because it is a constant as the light propagates out, I can take the ratio of these two. And the energy observed at capital R versus the energy emitted at little r--  Hang on a second.  As I was looking over my notes, there was a result that made no sense because I had a typo.  So for those of you following along, the four-velocity component should have been a 1
+
+00:12:44
+over the square root of that quantity I had earlier. Suddenly, what I'm about to write down makes a lot more sense.  So this becomes--  Let's imagine that the observer is so far away that they are effectively infinitely far away. So the question I'm asking is, if I imagine that the light pulse is emitted at some radius little r, what would a very distant observer measure the energy of that pulse to be? OK, so my light pulse or radio pulse is emitted at some finite radius. And we'll call e infinity, the value that is measured
+
+00:13:43
+by a very distant observer.  This becomes square root 1 minus 2GM over r. Notice that the energy, no matter how energetic the light is when you emit it, I described it as being a radio pulse, but it could be a laser pointer. It could be ultraviolet. It could be a gamma ray. You know, you could just hawk whatever massively-powerful source of photons you want and you're pointing it out in the radial direction and hoping that your distant friend can measure it. No matter what energy you emit as you are falling in,
+
+00:14:22
+as you approach r equals 2GM, the amount of energy in that beam that reaches a distant observer goes to 0.  No matter how energetic my pulse of light, no energy reaches distant observers as the emitter approaches R equals 2GM. In a similar way, imagine that as you are falling in and you've got this little beacon that you are sending messages out to your distant friends, imagine you send them out with pulses that are separated by delta T. So the person in the falling frame turns his beacon on for a moment every delta
+
+00:16:07
+T. Let's say delta T is every second.  The interval between pulses, as measured far away, one can show using a similar kind of calculation.  You pick up a factor of 1 over square root 1 minus 2GM over r. This goes to infinity as r goes 2GM.  So remember, the time coordinate was originally defined by imagining that I can synchronize all of my clocks using light pulses that are bouncing around. But what we can kind of see here is that light pulses that are emitted in the vicinity of r equals 2GM,
+
+00:17:28
+they're kind of going to hell, OK? So if I imagine, let's just say for the sake of argument, I'm using a green laser pointer as the thing that I use for my Einstein synchronization procedure. And suppose that I communicate what time is on the clock by a modulation of the signal. So suppose that I modulate it by putting little spaces on it that tend to be about a second long. Or let's just say it's like a microsecond long so I can really pack some information into that. Well, the laser pointers that are emitting from r equals 2GM,
+
+00:18:03
+their signal infinitely redshifts away. They lose all their energy. So they're not green. If they're really close to it, maybe they'll be red when they get to the next thing. Instead of being a pulse every microsecond, it'll be every two microseconds. And the closer we get to it, the more redshifted it becomes and the more extended the interval between pulses becomes.  I'm going to post to the 8.962 website a set of notes that sort of cleans up this calculation a little bit, just goes through this
+
+00:18:33
+in a little bit more detail. It was something I wrote in the Spring 2019 semester in response to a good question that a student had asked me about this. And I think they do a nice job of just going over this calculation. And they give a couple of examples of the way this is behaving. The key thing which I want to emphasize is that as r goes to 2GM, what we see is that-- well, let's just put it this way. In fact, let's remove the word "as." The surface r equals 2GM corresponds to infinite redshift.
+
+00:19:12
+OK, we've talked already a little bit about, if I have light climbing out of a gravitational field, the light gets a little bit redder as it climbs out. Well, at this particular surface, the sphere of radius 2GM in this spacetime, if you can get down to there, that redshift then becomes infinite. All of the energy is drained out of it as it climbs out. So what this basically tells us is that this surface breaks the Einstein synchronization procedure and it renders that time coordinate bad,
+
+00:19:56
+at least if we are concerned about understanding things right at this surface.  OK, as long as we're concerned with the exterior of the surface, that's not a problem, OK? Everything works fine as long as we move away from this coordinate singularity, sort of in the same way that many of the pathologies associated with the spherical coordinate system here, the north and south pole, they are fine as long as you're not trying to do things like measure the longitude angle corresponding to the North
+
+00:20:43
+Pole. So this is not even well-defined. In the same way, this is basically telling us that the coordinate T in which we wrote down this spacetime isn't really well-defined at r equals 2GM. So what we need to do, if we want to try to get some-- hey, I'm over here, camera!-- if we want to try to get a little bit of insight as to what is going on here, we need a better time coordinate.  So I'm going to talk about a couple. And the way that we're going to formulate these is all the pathologies are revealed
+
+00:21:30
+when we look at the behavior of light propagating in this spacetime. So let's play around with light. Let's look at null geodesics in this spacetime. So to begin with, let's stick, for just the next couple of moments, with the original Schwarzschild coordinates.  OK, so I'm going to look at null geodesics. So I'm going to set 0, and I'm gonna ask myself, how does it move through an interval at dt and an interval of dr?  OK, so we can solve this to find how, if an object is moving on a radial null geodesic,
+
+00:22:32
+how do dt and dr behave? How does dt dr behave? Put it that way.  OK, so that's what my dt dr looks like. Plus, the plus sign corresponds to a solution that is moving the outward in all direction. Minus sign is an inward directed null geodesic. These define what we consider to be the opening angle. So dt dr defines the opening angle of a light cone.  So if we go to very, very, very large r, OK, we get dt dr equals 1.  And this corresponds in units in which c equals 1 to light moving on a 45 degree angle in a spacetime diagram.
+
+00:24:02
+This is familiar behavior from special relativity.  But as r goes to 2GM, we see dt dr going to 0. Let's make a sketch and see what, sort of, dt dr, what the tangent to a null geodesic looks like in the t-r plane as a function of radius.  So this little dash here means I'm sort of imagining that I'm going to stretch my r axis so that, out here, you're in the asymptotically flat region where things look like special relativity.  So here we are out in this asymptotically flat region.
+
+00:25:43
+My outward-going light ray goes off at 45 degree angle in the r-t plane. Inward one goes at a 45 degree angle pointing inside. Down here in the stronger field, it's going to be a little bit steeper than this. And so the opening angle of my light cone is closing up.  Here, we'll have closed up a lot more.  Here, it's closed up practically all the way. Now, as I approach r equals 2GM, both the inward and the outward direction in these coordinates go parallel to 2GM. So you can see the collapse of the light cone
+
+00:26:36
+in these coordinates as you approach this coordinate singularity. So we need a healthier coordinate system. One thing that we can do is we can move the pathology out of our time coordinate and into our radial coordinate with the following definition.  Suppose you choose a radial coordinate r-star such that dt equals plus or minus dr-star everywhere. OK? So if I replace my horizontal axis with-- pardon me-- if I replace my horizontal axis with the r-star, this will be 45 degree angles everywhere.
+
+00:27:35
+OK? But to make this work, what you find is r-star must look like this. What you basically see is that this coordinate system takes r equals 2GM and it moves it to r-star equals minus infinity.  So the way that this coordinate representation, that this different radial coordinate, the way that this makes the light cones always have 45 degree opening-- really 90 degrees opening-- it makes the light rays always go off at 45 degree angles is by essentially constantly stretching the radial axis so that this guy just
+
+00:28:37
+gets stretched out so that it's opening at 90 degrees. This guy is stretched a little bit less. This guy is stretched a little bit less. Basically, not stretched when you're really far away. But as you approach r equals 2GM, you're infinitely stretching at these coordinates. These are known as tortoise coordinates, basically, because you start walking, taking ever slower and slower steps. Even steps, if you imagine you're stepping evenly in r-star, you're taking ever smaller and smaller steps
+
+00:29:22
+in r, as you approach the infinite redshift surface.  So with that tortoise coordinate defined, you use that as an intermediary to define a couple of new coordinates for your spacetime that are adapted to radiation.  So we're going to define v to be t plus r-star. And the importance of this is that this is a coordinate that's not hard to convince yourself this is constant on an in-going radial null ray.  I'm going to define a coordinate U to be t minus r-star. And this is constant on outgoing radial null rays.
+
+00:30:45
+OK?  So this basically means that if I'm working in this coordinate system, r-star, if I want to know the behavior of this guy, well, an outgoing radial null ray, you just might say, ah, that's the null ray that has U equals 17. OK? And that will then pick out, basically, a whole sequence of events along which that null ray has propagated.  And, you know, as you can see, it vastly simplifies how we describe it. So once you've defined these two coordinates, you can rewrite the Schwarzschild spacetime
+
+00:31:26
+in terms of them. It is generally best to choose-- So we're going to take this another step in just a moment, but we'll start-- you choose either V or U, and you replace the Schwarzschild time.  So let's use V to replace time.  So when you go and you look at what your new coordinate system looks like-- and remember, the way you do this is the usual thing, you're going to make your matrix of partial derivatives between your old coordinate system. So your old coordinates are t, r, theta, and phi.
+
+00:32:23
+And then they go over to v, r, theta, and phi. OK?  So you make your matrix of partial derivatives describing this. And here's what you find when you change to the metric in the new representation.  Notice, there's no dr squared term at all. OK? We do still see something that's, you know, at least a coordinate singularity at r equals 2GM. We haven't quite gotten rid of it entirely here. But we've definitely mollified the impact of this coordinate singularity. So in this coordinate system, you can then
+
+00:33:17
+set ds squared equal to 0, and you find two solutions describing radial null curves.  So dv dr equals 0 for in-going.  And, you know, by definition, these things are constant on an in-going radial null ray. And so as you move along it, V remains constant.  OK, and you get something a little bit more complicated for the outgoing one.  Let's redraw this using my new coordinates, OK?  So I'm going to leave my horizontal axis as r. So I'm going to make my time axis be v. So out here, here's my in-going null ray.
+
+00:34:49
+And here's my, eh-- let's make that a little closer to 45 degrees. Here's my outgoing null ray. OK? As I move in to smaller and smaller values of r, notice in the limit, as r goes to 2GM, the slope becomes infinite. OK, so this thing gets steeper. This one keeps pointing in, so this guy gets steeper, steeper. Right here, it lies pointing exactly straight up. What's kind of cool is that in these coordinates, I can actually look at what it looks like inside this thing. And so inside, this guy tips over and gets a negative slope
+
+00:35:42
+and looks like this.  Now, bear in mind, these two things, they denote the null rays. All radial timelike trajectories, and indeed all timelike trajectories, not just the radial ones, all timelike trajectories must follow a world line that is bounded by these two sides.  OK, so if I'm out here, everything in here describes trajectories that a timelike observer can follow. Everything in here describes a trajectory a timelike observer can follow, everything in here, everything in here.  Notice, when I am at this one here, right at r equals 2GM,
+
+00:36:55
+every allowed timelike trajectory points towards r equals 0. At best, I can imagine an observer who's very close to the speed of light who sort of skims along inside of this thing. But they are timelike, so they will have a little bit of a slope that points them inward.  OK. As you move inside r equals 2GM, it's even more so. OK, you can't even sort of go parallel to the r equals 2GM line. They all point towards this thing.  Once you get to r equals 2GM, all trajectories, as they move to the future, must move to smaller radius.
+
+00:38:08
+What this tells us, in particular, is that once you have reached r equals 2GM, you are never coming back.  All allowed trajectories, everything that is permissible by the laws of physics, moves along a trajectory that points towards r equals 0 once you hit that r equals 2GM line. Because of this, this surface r, this surface of infinite redshift is given the name--  Let me come back to the point I was making. So the surface r equal 2GM, nothing that crosses it is ever going to come back. This surface of infinite redshift,
+
+00:39:48
+we call an event horizon.  OK? No events that are on the other side of r equals 2GM can have any causal influence on events on the outside.  If you have a spacetime with an event horizon like this and this one that we are talking about right here, I'm going to talk at the end of my final lecture that I record about-- Maybe, actually, I'm gonna do it in this one. Yeah, I am. So at the end of this lecture that I'm recording, I'm going to go over a couple of other spacetimes that have this structure.
+
+00:41:00
+Such spacetimes are called--  wait for it-- such spacetimes are called black holes. They are black because light cannot get out of them. And they are holes because you just jump into 'em, and you ain't never coming out. So let me pause for just one moment. I want to send a quick note to the ODL person who is helping me out here. I just want to let her know that this lecture may run a tiny bit long, since I spent a moment chatting with a police officer who checked in on me.  OK, if you're watching, Elaine, hi!
+
+00:42:35
+So I just sent you a quick note, letting you know that I'm likely to run a little bit long. All right, let's get back to black holes. So to sort of call out some of the structure of this spacetime, I want to spend just a few minutes talking about one final coordinate transformation that is very useful, but looks really weird. So just bear with me as I go through this-- a very useful, but unquestionably somewhat obtuse coordinate transformation.  What I'm going to do is I'm going
+
+00:43:23
+to define a coordinate v-prime.  This is given by taking the exponential of the in-going coordinate time V, normalized for GM. U prime will be the exponent of U, a time that works well for the outgoing coordinate system divided by 4GM. I'm then going to define capital T to be 1/2 V-prime plus U-prime, capital R to be 1/2 V-prime minus U-prime.  It's then simple to show, where simple is professor speak for "a student can probably do it in an hour or so." It's sort of tedious, but straightforward,
+
+00:44:35
+just hooking together lots of definitions and slogging through a couple of identities.  It's simple to show that capital T relates to Schwarzschild time T and Schwarzschild radius r like so. There's two branches.  OK, so this is how one relates capital T and capital R to Schwarzschild t and Schwarzschild r in the region r greater than or equal to 2GM.  You find a somewhat different solution in the region r less than 2GM. So if you're looking at this and kind of going, "what the hell are you talking about here,"
+
+00:46:56
+that's fine.  Let me just write down two more relationships.  And then I'll describe what this is good for.  So a particularly clean inversion between TR and the original Schwarzschild tr, both the r greater than 2GM and r less than 2GM branches can be subsumed into this.  And you find T over R looks like the hyperbolic tangent T over 4GM when you're in the exterior and the hyperbolic cotangent in the interior. So these rather bizarre-looking coordinates, these are known as Kruskal-Szekeres coordinates.
+
+00:48:53
+I'll just leave that down like so.  So when one goes into this, I'm not going to deny it, this is a bizarre looking coordinate system. OK, but it's got several features that make it very useful for understanding what is going on physically in this spacetime.  So first, if you rewrite your metric in terms of capital T and capital R, what you get is a form that has no singularities. It's well-behaved everywhere, except at r equals 0.  So you do get a singularity there, things blow up as r goes to 0.
+
+00:50:15
+There's no other coordinate pathologies.  And then you get sort of an angular sector. It's actually cleanest in terms of the Schwarzschild radius r, so we'll leave it in terms of that. One thing which is nice is notice that radial null geodesics, they simply obey dt equals plus or minus dr everywhere, OK? The only place where you run into a little bit of problem is as r goes to 0. And that's special, OK? So I got that just by setting ds squared equal to 0. It's radial, so my D-omega goes to 0.
+
+00:51:13
+And then just dt equals plus or minus dr. So that's really nice, OK? I'm gonna make a sketch in just a moment. And the fact that I know light always moves along 45 degree lines in this coordinate system is going to help me to understand the causal structure of this spacetime.  The causal structure is what I mean by which events can influence other events.  What can exert a causal influence on what?  So as I move on, I'm going to make a sketch in just a moment, I want to highlight a couple of behaviors
+
+00:52:10
+that we see that are really sort of called out in this mapping between the two coordinate systems.  So notice that a surface of constant Schwarzschild radius, constant r forms a hyperbola in the Kruskal-Szekeres coordinates.  Notice that surfaces of constant time, they form lines in that they form lines of slope t over r equal to some constant.  So they are lines with t over r equaling, on the exterior, let's just focus on the exterior, they have a slope that's given by the hyperbolic tangent of t
+
+00:53:46
+over 4GM.  On the interior-- replaced with cotangent, hyperbolic cotangent.  The last thing which I'd like to note before I make a sketch here is let's look at the special surface of infinite redshift, this event horizon.  So if I plug in r equals 2GM, plug this in over here, I get t squared minus r squared equals 0. This is the asymptotic limit to those hyperbolae. They just become lines t equals plus or minus r. So the event horizon in this coordinate representation is just going to be a pair of lines crossing
+
+00:54:58
+in the origin of these coordinate systems, OK, a pair of 45 degree lines crossing into this coordinate system. Notice, also, that t equals plus or minus r, this corresponds to Schwarzschild t going to plus or minus infinity. So this, indeed, is a weird, singular limit of the Schwarzschild time coordinate. So you can find much prettier versions of this figure than the one I'm about to attempt to sketch. Let's see what I can do with this. So horizontal will be the Kruskal-Szekeres coordinate
+
+00:55:57
+r, vertical will be the coordinate t.  Here is the event horizon, r equals t or little r equals 2GM. Some different surface of r equal to some constant value greater than 2GM will live on a hyperbola like so.  Some value of r equals constant, but less than 2GM, lies on a hyperbola like so.  In particular, there is one special hyperbole corresponding to r equals 0.  And this is where my artistry is going to truly fail me. This is an infinite tidal singularity.  Now, the thing which is particularly
+
+00:57:38
+useful about this particular coordinate system is, remember, light always moves in the capital R, capital T coordinates. It always moves on lines that go dt equals plus or minus dr. So what you can see is that imagine I start here and I send out a little light pulse, OK, a radially outgoing light pulse, it will always go away and go to larger and larger values of r, just sort of constantly moves along this particular trajectory. Let me write out again what I'm doing here. So a radial outgoing light ray, it will follow dt equals dr.
+
+00:58:37
+But notice that this line goes parallel to the event horizon. If I am on the inside of this guy and I try to make a light pulse that goes outside, points in the radial direction, all it does is, in these coordinates, it moves parallel to the event horizon. It can never cross it. And in fact, because this is a hyperbola, one finds that even though you have tried to make this guy as outgoing as outgoing can be, it will eventually intersect the r equals 0 tidal singularity. Since I cannot have any event, here,
+
+00:59:17
+that communicates with any event on the other side of this, this region, everything at r less than 2GM, these will be causally disconnected-- not "casually," pardon me.  They are causally disconnected from the world that lies outside of r is 2GM.  So in my notes and in Carroll's textbook, there is another coordinate system that you can do which essentially takes points that are infinitely far away and brings them into a finite coordinate location. And that final thing, it puts it in what
+
+01:00:36
+are called Penrose coordinates and it allows you make what's called the Penrose diagram, which displays, in a very simple way, how different events are either causally connected or causally disconnected from the others. Fairly advanced stuff, not important, but many of you may find it interesting. Happy to talk further, once we all have the bandwidth to have those kinds of conversations.  So let me summarize.  So the summary is that this spacetime, so earlier we were looking at the spacetime of a spherically symmetric fluid
+
+01:01:35
+object. We found a particularly clean form for the exterior of that object, where it was a vacuum solution.  If we imagine a spacetime that has this everywhere, then we get this solution that we call a black hole. So I emphasize this is vacuum everywhere, but sort of the analysis kind of goes to hell at r equals 0. So there are some singular field equations there trying to describe the stress energy. Its behavior as you approach there, let's just say we're not quite sure what's going on.
+
+01:02:36
+In this coordinate system, we see weird things happening as we approach r equals 2GM. This is simply a coordinate singularity. There's really nothing going bad with the physics here. But our attempts to use a time coordinate that's based on, essentially, the way light moves in empty space, it's failing in this region. And all of this lecture is about uncovering this and seeing that, in fact, this is a surface of infinite redshift beyond which things cannot communicate. So this is one of the big discoveries that came out
+
+01:03:24
+of general relativity, OK, this creature we call the black hole. It is not the only solution of the Einstein field equations that we call a black hole. Let me talk briefly about two others.  So another one has a spacetime that looks like this.  So where did this come from? Well, suppose I bung this through the Einstein field equations, what I find is that it comes from a non-zero stress energy tensor. In fact, it's a stress energy tensor that looks like this. Pardon me.  This is a stress energy tensor of a Coulomb electric field
+
+01:05:19
+with total charge q.  This represents a charged black hole.  It turns out if you analyze this thing carefully, you find it has an event horizon.  It turns out to be located at G quantity that involves the square root of m squared minus q squared. Now, if q-- don't even ask me what the units are that this is being measured in, they're pretty goofy units-- but if, in these units, the magnitude of q is greater than m, there is no horizon. There is still, however, an infinite tidal singularity at r
+
+01:06:52
+equals 0. So such a solution would give us what is known as a naked singularity.  I have a few comments and I have a couple notes on these. But they're not as important as other things I'd like to talk about. You might wonder, where does that r horizon actually come from? OK, that is what you get when you find the route, where you look for the place where the metric function vanishes. OK, you notice there's only one metric function that appears in there, 1 minus 2GM over r plus q squared over r squared.
+
+01:07:25
+So in general, if you have what's known as a stationary spacetime, you can find coordinates such that surfaces of constant r are spacelike surfaces. If you look for the place where a surface of constant r makes a transition from being a spacelike surface to being a null surface, that tells you that you have located an event horizon.  OK, this is discussed in a little bit more detail in my notes. There's also some very nice discussion in Carroll's textbook. What it boils down to is that if you
+
+01:08:42
+can find a radial coordinate that allows you to do this, then the condition G upstairs r upstairs r equals 0 defines your event horizon, OK? It just so happens that it's also equal to G downstairs t downstairs t equals 0, in this case and in the Schwarzschild case. But it's not like that for all black holes that you can write down. In particular, let me write down the final black hole spacetime I want to discuss in this lecture.  This is gonna take a minute, so bear with me.  OK, so in this spacetime, the symbol delta I've written here,
+
+01:10:54
+this is r-squared minus 2GM r plus a squared. Rho squared is r squared plus a squared cosine of the square root of theta.  This thing turns out, if you compute the inverse metric components, you find that g upstairs r upstairs r is proportional to delta. And so there is a horizon where delta equals 0.  Sorry.  That turns out to be located at a radius that looks like this.  This represents the spacetime of a spinning black hole. It was discovered by Roy Kerr, a mathematician from New Zealand.  I think this was actually a big part of his PhD work.
+
+01:12:25
+So it is known as a Kerr black hole. The parameter a is related to the angular momentum, the spin angular momentum of the black hole in the units that we measure these, normalized to the mass.  So notice that in order for this to actually have a horizon, you need that a to be less than or equal to GM. If it saturates that bound, then you get what's known as a maximal black hole. So it has a couple of noteworthy features.  First, it is not spherically symmetric.  If it were spherically symmetric,
+
+01:13:47
+we could write the d theta squared d phi squared piece, we could find some radial coordinate such that there was some simple radius such that G theta theta was simply sine squared G theta theta. This is the condition that defines spherical symmetry. And there is no angle-independent radial coordinate that allows you to do that. Notice also that there is a connection in this coordinate system between t and phi.  Gt phi is equal to minus 2 GM a r sine squared theta over rho squared. Why minus 2 and not minus 4?
+
+01:15:01
+Well, remember what I have there is Gt phi dt d phi plus G phi t d phi dt. One can show that this term, it reflects the kind of physics in which the spin of the black hole introduces a spinning, almost magnetic-like element to gravitation. If you guys do the homework assignment I have assigned in which you compute the linearized effect on a spacetime of a spinning body, you'll get a flavor of this, OK? This ends up giving you, that calculation gives you a similar term in the spacetime which further analysis
+
+01:15:44
+shows leads to bodies. Essentially, what you find is that if you have an orbit that goes in the same sense as the body's spin versus an orbit that goes in the opposite sense of the body's spin, there's a splitting in the orbit's properties due to that. OK? So it breaks the symmetry between what we call a prograde orbit and a retrograde orbit. This is one of the most important solutions that we know of in general relativity because of a result that I'm going to discuss now.  Oh, first of all, I should mention that, in fact, you
+
+01:16:24
+can combine charge with spin. I'm not going to write down the result because it's just kind of messy. But it does exist in closed form.  If you're interested in this, read about what is called the Kerr-Newman solution. So if you're keeping score, we have this spherically symmetric black hole, which only has a mass, you have the charged black hole whose name I forgot to list. Ah! Sorry about that. This guy is known as the Reissner-Nordstrom black hole. One of those O's, I believe, is supposed
+
+01:17:24
+to have a stroke through it. Those of you who speak Scandinavian languages can probably spell it and pronounce it better than I can. So we have Schwarzschild, which is only mass, Reissner-Nordstrom, which is mass in charge, Kerr, which is mass and spin, and Kerr-Newman, which is mass, spin, and charge. You might start thinking, all right, well, does this keep going? Do I have a solution for a black hole that's got, you know, northern hemisphere bigger than the southern hemisphere? You know, every time you think about adding
+
+01:18:00
+a bit of extra sort of schmutz to this thing, do I need another solution? Well, let me describe a remarkable theorem.  The only stationary spacetimes in 3 plus 1 dimensions with event horizons are the Kerr-Newman black holes--  completely parameterized by mass, spin, and charge.  If you take the Kerr-Newman solution, you set charge to 0, you get Kerr. If you take Kerr and you set spin to 0, you get Schwarzschild. So the Kerr-Newman solution gives me something that includes these other ones as sort of a subset.
+
+01:19:37
+And what this theorem states is that the only-- so stationary means time-independent.  So in other words, the only spacetimes that are not dynamical, but that have event horizons, at least with three space and one time dimension, are the Kerr-Newman black holes. Once you know these, you have characterized all black holes you can care about. And in fact, in any astrophysical context, any macroscopic object with charge is rapidly neutralized by ambient plasma that just sort of fills all of space.
+
+01:20:29
+And so this Kerr solution, in fact, gives an exact mathematical description to every black hole that we observe in the universe. That is an amazing statement. OK? Of course, as a physicist, you want to test this. And this, in fact, is much of what my research and research of many of my colleagues is about. Can we actually formulate tests of this Kerr hypothesis? And many of us have spent our careers coming up with such things. Suffice it to say, in the roughly negative 5 minutes I have left in this lecture, that the Kerr metric has
+
+01:21:07
+survived every test that we have thrown at it.  So this metric, like I said, was essentially derived by the mathematician Roy Kerr as his PhD thesis. And it has really earned him a place in physicist Valhalla.  Let me just conclude this lecture by making one comment here.  An important word in this theorem is the statement that the only stationary spacetimes are the Kerr-Newman ones, stationary spacetimes with event horizons, so the Kerr-Newman black holes. What this means is that when a black hole forms,
+
+01:21:56
+it may be dynamical, it may not yet be stationary. And so the way that this theorem, which is known as the No-Hair theorem, the way that it is enforced is that, imagine I have some kind of an object that due to physics that we don't have time to go into here, imagine that this thing, its physics changes in such a way that its fluid can no longer support its own mass against gravity, and it collapses to a black hole. OK? Initially, this could be a huge, complicated mess.  So we have a mass, charge, spin, magnetic fields, who knows?
+
+01:23:08
+The No-Hair theorem guarantees that after some period of time, it will be totally characterized by three numbers-- the mass, the spin parameter a and the charge q. What goes on is that during the collapse process, radiation is generated.  What this radiation does is it carries away gravitational waves, carries away electromagnetic waves. Some of this is actually absorbed by this black hole. And it does so in such a way that it precisely cancels out everything in the spacetime that does not fit the Kerr-Newman form.
+
+01:24:03
+You wind up-- so this is one of these things where we really can only probe this either with observations that sort of look at things like black holes and compact bodies colliding and forming black holes and looking at what the end state looks like. Or we can do this with numerical experiments where we simulate very complicated collapsing or colliding objects on a supercomputer and look at what the end result is. And what we always find is that the complex radiation that is generated in the collapse and the collision process
+
+01:24:39
+always shaves away every bit of structure, except for exactly what is left to leave it in the Kerr-Newman form at the end. Really, when we do these calculations, we generally wind up with a Kerr black hole because we tend to study astrophysical problems that are electrically neutral. So this is a result that is sometimes called Price's theorem, based on sort of foundational calculations that were done by my friend Richard Price. He did much of this right around the time I was born in the days
+
+01:25:16
+of being a PhD student and looking at the behavior of highly distorted black holes and seeing how the No-Hair theorem-- You can imagine making a spacetime that contains what should be a black hole, but you somehow distort it. What you find is it becomes dynamical and it vibrates in such a way as to get rid of that distortion. And you leave behind something that is precisely Kerr or Kerr-Newman if you have charge. Price's theorem is a semi-facetious statement that tells me everything in the spacetime that can be radiated,
+
+01:25:48
+is radiated. In other words, any bit of structure, any bit of structure in the spacetime that does not comport with the Kerr-Newman solution radiates away and only Kerr-Newman is left.  So that concludes this lecture. My final lecture, which I will record in about 15 minutes, is one in which we are going to look at one of the ways in which we test this spacetime, which is by studying the behavior of orbits going around a black hole. So I will stop here.
+

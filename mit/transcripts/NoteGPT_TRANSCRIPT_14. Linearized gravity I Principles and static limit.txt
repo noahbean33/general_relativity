@@ -1,0 +1,216 @@
+00:00:00
+[SQUEAKING] [RUSTLING] [CLICKING] SCOTT HUGHES: All right, so in today's recorded lecture, I would like to pick up where we started-- excuse me. I'd like to pick up where we stopped last time. So I discussed the Einstein field equations in the previous two lectures. I derived them first from the method that was used by Einstein in his original work on the subject. And then I laid out the way of coming to the Einstein field equations using an action principle, using what we call the Einstein Hilbert action.
+
+00:00:42
+Both of them lead us to this remarkably simple equation, if you think about it in terms simply of the curvature tensor. This is saying that a particular version of the curvature. You start with the Riemann tensor. You trace over two indices. You reverse the trace such that this whole thing has zero divergence. And you simply equate that to the stress energy tensor with a coupling factor with a complex constant proportionality that ensures that this recovers the Newtonian limit. The Einstein Hilbert exercise demonstrated
+
+00:01:25
+that this is in a very quantifiable way, the simplest possible way of developing a theory of gravity in this framework. The remainder of this course is going to be dedicated to solving this equation, and exploring the properties of the solutions that arise from this. And so let me continue the discussion I began at the end of the previous lecture. We are going to find it very useful to regard this as a set of differential equations for the spacetime metric given a source. That, after all, is how we typically
+
+00:02:21
+think of solving for fields given a particular source. And just pardon me while I make sure this is on. It is.  I give you a distribution of mass. You compute the Newtonian gravitational potential for that. I give you a distribution of currents and fields. You calculate the electric and magnetic fields that arise from that. So I give you some distribution of mass and energy. You compute the spacetime that arises from that. But let's stop before we dig into this, and look at what this actually means
+
+00:02:53
+given the mathematical equations that we have. So G alpha beta is the Einstein tensor. I construct it by taking several derivatives of the metric. I first make my Christoffel symbols. I combine those Christoffel symbols and derivatives of the Christoffel symbols to make the Riemann tensor. I hit it with another power of the metric in order to trace and get the Ricci tensor. I combine it with the trace of the Ricci tensor and the metric to get the Einstein. Schematically, I can think of G alpha beta
+
+00:03:25
+as some very complicated linear-- excuse me, some very complicated nonlinear differential operator acting on the metric.  So thinking about this is just a differential equation for the metric. The left hand side of this equation is a bit of a mess. Unfortunately, the right hand side can be a mess too. Let's think about this for a particular example. Suppose I choose as my force-- my source-- a perfect fluid.  Well, then my right hand side is going to be something that involves the density and the pressure
+
+00:04:30
+of that fluid, the fluid velocity, and then the metric. OK, so if I'm thinking about this as a differential equation for the metric, the metric is appearing under this differential operator on the left hand side, and explicitly in the source on the right hand side. Oh, and by the way, don't forget my fluid needs to be normalized. My fluid flow velocity needs to be normalized. So I have a further constraint, that the complement to the four velocity are related to each other by the spacetime metric.
+
+00:05:10
+So if I am going to regard this as just a differential equation for the space time metric. In general, we're in for a world of pain. So as I described at the end of the previous lecture, we are going to examine how to solve this equation. In what's left of 8.962, we're going to look at three routes to solving this thing. The one that we will begin to talk about today is we solve this for what I will define a little bit more precisely in a moment as weak gravity.  And what this is going to mean is that I only
+
+00:05:58
+consider space times that are in a way that can be quantified close to flat space time. Method two will be to consider symmetric solutions.  Part of the reason the general framework is so complicated is that there are in general, 10 of these coupled non-linear differential equations. When we introduce symmetries, or we consider things like static solutions or stationary solutions that don't have any time dynamics. That at least reduces the number of equations we need to worry about. They may still be coupled non-linear and complicated,
+
+00:06:50
+but hopefully, maybe we can reduce those from 10 of these things we need to worry about to just a small number them, one, or two, or three. Makes it at least a little easier. In truth, symmetric solutions-- if you can then add techniques for perturbing around them, these turn out to be tremendously powerful.  My own research career is-- uses this technique a tremendous amount.  Finally, just basically say, you know what? Let's just dive in and solve this puppy.  Just do a numerical solution of the whole monster,
+
+00:07:47
+no simplifications.  Eminent members of our field have dedicated entire careers to item three. I will give you an introduction to the main concepts in the last lecture. But it's not something we're going to be able to explore in much detail in this class. We're going to do one in a fair amount of detail. We will look at a couple of the most important symmetric solutions, so that you can see how these techniques work. And then in my last two lectures, I'm going to describe a little bit about what
+
+00:08:24
+happens when you perturb some of the most interesting symmetric solutions. And we'll talk about numerical solutions for the general case. All right, so let's begin. We'll begin with choice one. Look at weak gravity, also known as linearized general relativity.  So linearized general relativity is a situation in which we are only going to consider space times that are nearly flat.  If I am in this situation, then I can choose coordinates, such that my space time metric is the metric of flat space
+
+00:09:38
+time plus a tensor H-alpha beta, all of whose components--  so this notation that I'm sort of inventing here, double bars around H-alpha beta. This means the magnitude of H-alpha beta's components.  These all must be much, much less than one. When you are in such a coordinate system you are in what we call nearly Lorenz coordinates.  Such a coordinate system is as close to a globally inertial coordinate system as is possible to make. There are other coordinate choices we could make. So for instance, you're working in a system like that.
+
+00:10:50
+This basically boils down to coordinates that are Cartesian like on their spatial slices. You could work in other ones. These are particularly convenient. Because for instance, if I work in a coordinate system whose spatial sector is spherical like, well, then there's going to be some components that grow very large as I go to large radius away from some-- the source of my gravitation. And this just makes my analysis quite convenient. In particular, where I'm going to take advantage of this.
+
+00:11:22
+Whenever I come across a term that involves the perturbations squared or to a higher power, I'm just going approximate it as zero. I will always neglect terms beyond linear, hence the term linearized GR, in my analysis.  Now, there are a couple of properties, before I get into how to develop weak gravity, linearized GR. I want to discuss a little bit some of the properties of spacetimes of this form. What are the particularly important properties of these? So let's consider coordinate transformations.
+
+00:12:28
+My space time metric is a tensor, like any other. And so the usual rules pertain here, that I can change my coordinates using some matrix that relates my original coordinate system, which I've denoted without bars, to some new coordinate system that is barred.  Now, recall that when we worked in flat space time, there was one category of coordinate transformations that was special. Those were the Lorentz transformations.  So we are not working in flat space time. So on the face of it, we don't expect Lorentz transformations
+
+00:14:19
+to play a particularly special role, except perhaps in the domain of a freely falling frame.  But you know what? This is a nearly flat space time, so just for giggles, let's see what happens if you apply the Lorentz transformation to your nearly flat spacetime.  So if I look at G mu bar nu bar as being a Lorentz transformation applied to my nearly flat metric. Well, what I get [INAUDIBLE] side is this. Now, one of the reasons why the Lorentz transformation was special in flat spacetime is that it
+
+00:15:45
+leaves the metric of flat spacetime unchanged. And so this just maps to eta mu nu.  I'm going to define what comes out here as h mu nu.  I'm doing this in a fairly, I hope, obvious way.  This is interesting. What this has told me is that when I apply the Lorentz transformation to my nearly flat space time, the background is unchanged. And the perturbation to the background transforms just like any tensor field would transform in flat space.  Now, it should be emphasized, we are not working in flat space.
+
+00:16:57
+We can compute curvature tensors. If we parallel transport-- If we consider two geodesics moving through the space time, we will see that parallel transport along those two geodesics, if they start out initially parallel, they do not remain parallel. So this is not flat space time. But in many ways, it's close enough that we can borrow many of the mathematical tools that were used in flat space time. In particular, we can introduce the following. Think of it as a useful fiction, which is that in this framework, we can regard
+
+00:17:48
+the perturbation that pushes us away from flat spacetime as just an ordinary tensor field living in the manifold of special relativity, living in the eta alpha beta metric.  It's worth bearing in mind in a fundamental sense, it's not. Space time is curved. h alpha beta is telling me about that curvature. But the mathematics works in such a way that you can borrow a lot of tools that we used in special relativity. And just imagine h as a tensor field living in that special relativity manifold.
+
+00:18:34
+OK, so that's useful fact one that we want to bear in mind as we work in this nearly flat space time. Useful fact two is we want to think about what happens when we raise and lower indices.  So suppose now that I'm going to regard h alpha beta as an ordinary tensor field living in this thing. I might want to know what it looks like with its indices raised. So I'm going to do what I usually do when I want to raise the indices on a tensor. I hit it with the metric.  We're going to talk about what my upstairs metric looks
+
+00:19:42
+like in just a moment. But clearly, it's going to be something that looks like the metric of flat space time plus terms that are on the order of h. Because I always drop terms of order h squared and higher, I can immediately say that this must simply be the metric of flat space time with the indices in the upstairs position acting on h. In other words, at least when I am acting on tensors that are built from the space time metric itself, I'm going to always want to raise and lower them using my flat space time, eta alpha
+
+00:20:57
+beta. Bearing this in mind, let's carefully think about what the metric inverse actually looks like.  I actually used this in one of my calculations in the previous lecture. And I said, I'm going to justify this in the next lecture. So here we are. Now we're going to justify it. So let's use this definition.  So the upstairs metric is defined such that when it contracts with the downstairs metric, I get the identity back. This is the definition of the metric inverse. Working in linear theory, I know that this thing
+
+00:21:49
+is going to be something like eta alpha beta plus a term of order h. I don't know what that term is yet, so let me just give it a new name. I'm going to call it m alpha beta. Whoops.  Hopefully, the math will soon show me what this m actually is. It will be of order h, but as of yet, unknown.  OK, so you know what? Let's rewrite that over here.  So let's now multiply this guy out. Eta alpha beta hitting eta beta gamma. That gives me delta alpha gamma. m hitting eta. Now, remember what I just said over here.
+
+00:23:26
+When I'm working with spacetime tensors, I always raise and lower indices using eta alpha beta. So when m alpha beta hits eta beta gamma, this is going to give me m alpha gamma. This eta hits that h. I get h, alpha upstairs, gamma downstairs. And then this guy is of order h, that guy is of order h. So additional terms of order h squared.  So these guys cancel. And what I am left with is m alpha gamma equals negative h alpha gamma. I can raise my two indices, raise the gammas on both sides here.
+
+00:24:21
+And we deduce from this that my inverse metric is eta alpha beta in the upstairs position, minus h alpha beta. At least two linear order in h.  I'll just comment that what this is-- essentially, the matrix or tensor equivalent of a binomial expansion. 1 over 1 plus epsilon is approximately 1 minus epsilon. That's all this is. But this is important to do. In fact, I will just sort of remark somewhat anecdotally that when I work with graduate students on projects, where we have to do things in linearized theory,
+
+00:25:11
+getting a sign wrong here is one of the most common mistakes that people make. All right, one final detail.  So this detail, as I just labeled it, is a particularly important one. We talked about general coordinate transformations. And I immediately went in to discuss a Lorentz transformation. There's a different category of coordinate transformation that plays a very important role in understanding the physics of systems that we analyze in linearized theory. So let's consider a different kind
+
+00:26:15
+of coordinate transformation. Let's consider a coordinate shift, which I'm going to define by x alpha prime. Really, they should be x prime alpha, but you'll see why I need to name it this way right now. So this is my original coordinate, x alpha, plus some little offset that's a function of the coordinates x beta. So think of this as suppose I have a coordinate grid that looks like this.  And I have some function that says, I want to consider a different system of coordinates that
+
+00:27:10
+maybe pushes me a little bit along away from each of these coordinate lines in a way that varies as a function of position here.  This notation is kind of an abuse of the indices. I am really not trying to define a coordinate invariant relationship here. I am just trying to connect two quantities, and I'm trying to connect quantities in two specific coordinate systems. And as we'll see, even though this is a bit ugly. It works well for what we want to do. So my coordinate transformation matrix.
+
+00:27:46
+OK, so I just take the matrix of-- I developed the Jacobian-- my matrix of partial derivatives-- of the new coordinate with respect to the old coordinate in the usual way. This is going to be my first term. It's just a Kronecker delta. And then I'm going to get a term that looks like matrix of derivatives of the function that defines my infinitesimal-- defines my shift. I just gave away what I was about to say. I'm going to require [in?] my work in these nearly Lorentz coordinates, all of these entries need to be small.
+
+00:28:39
+These will all be much, much less than 1. And so we call this an infinitesimal coordinate transformation.  We are going to need to use the inverse of this guy.  And using the definition of the inverse of this, saying essentially that when I take this, and I contract-- Let me put it this way. I'll just write it out. So if I compute this. I get my Kronecker delta back. Taking advantage of the smallness of the transformation. It's not terribly hard to demonstrate that what comes out of it is this.
+
+00:30:10
+The minus sign is the key thing which I want to emphasize here. That minus sign is very similar to the minus sign that I have here. What we're doing is, again, just kind of the matrix equivalent of expanding 1 over 1 plus epsilon for small epsilon.  The reason that I am doing this is that I would now like to look at how the metric changes under this coordinate transformation.  So what I'm going to do is define g mu nu in the new coordinate system.  Usual operation. Let's now insert the many different definitions
+
+00:31:19
+that we have introduced here. Notice that what I am using for my transformation matrix there is the inverse that I just wrote down.  So let's fill that in. So I'm going to get a term that involves a Kronecker minus a matrix of partial derivatives. My other one gives me a nether Kronecker matrix of partial derivatives. And then finally, don't forget we are working in this nearly flat space time metric.  And so I insert in my last term, eta alpha beta plus h alpha beta. So now, let's go and expand all of these terms out.
+
+00:32:31
+My Kronecker, first, I get a term where both of the Kroneckers hit the metric of flat space time. So what I get is eta mu nu. Then I get a term which both the Kroneckers hit, the perturbation h alpha beta. Gives me h mu nu. Then, I'm going to get terms that involve these matrices of partial derivatives hitting the metric of flat space time.  And what that's going to do is in keeping with our principle that when we're dealing with spacetime quantities, we raise and lower indices with eta.
+
+00:33:14
+This is going to now give me-- pardon me just one moment--  a term that looks like partial-- everything in the downstairs position, d mu xi nu minus d nu xi mu. And then all the other terms are on the order of h times derivatives of the generators of my coordinate transmission. Small times small. These are infinitesimal squared. We are going to neglect them. Suppose that I insist that I have gone from one nearly flat spacetime to another. Bear in mind this picture. I'm just changing my representation a little bit.
+
+00:34:04
+I've not changed the physics. So if I write this as eta mu prime nu prime, plus h mu prime nu prime. Well, I've got etas on both.  The thing which is interesting is that I have generated a shift to my perturbation to the metric.  Let's drop the primes for a second. And I'll just say that my nu, h mu nu is the old h mu nu minus the symmetrized combination of derivatives of-- the symmetrized combination of derivatives of infinitesimal coordinate transformation.  Does this remind us of anything?
+
+00:35:25
+This is starkly reminiscent of the way in which when we work with electromagnetic fields, I can take a potential, and shift it by the gradient of some scalar to generate a new potential. In so doing, what we find is that this leaves the fields unchanged. If you compute your Faraday tensor associated with this, it is unchanged.  Similarly, we're going to write out the details of this in just a moment. When I generate the Riemann curvature from this, we find that although the metric has been tweaked a little bit
+
+00:36:35
+by this coordinate transformation, Riemann is left unchanged.  In acknowledgment of this, we call an infinitesimal coordinate transformation of this kind a gauge transformation.  What the gauge transformation does is it allows us to change the metric, or change the way that we are representing our metric. And it's going to turn out to leave curvature tensors unchanged, in the same way that changing the potential and electrodynamics with a gauge transformation leaves our fields unchanged. And we're going to exploit this in exactly the same way
+
+00:38:01
+that we exploit this in electrodynamics. We use this in electrodynamics in order to recast the equations governing our potentials into a form that is maximally convenient for whatever calculation we are doing right now. We're going to find-- and then we're going to derive this probably in about 20 minutes-- that the equations that govern h mu nu. If we leave things as general as possible, they're a bit of a mess. But by choosing the right gauge, we can simplify them, and wind up with a set
+
+00:38:30
+of equations that are-- they cover all physical situations that matter, and that allow us to just cast things into a form that is much better for us to work with. All right. So we have now developed all of the sort of linguistics of linearized geometry that I want to use. Let's now go from linearized geometry to linearized gravity by running this through, and making some physics. What I want to do is look at the field equations in this framework.  I am not going to run through every step of the next couple
+
+00:39:14
+calculations. Doing so is a good illustration of the kind of calculation that a physicist likes to call straightforward but tedious. So I'm going to just write down what the results turned out to be. So let's run the metric through the machinery that we need to make all of our curvature tensors.  OK, I'll remind you when we do this, we are linearizing. So anytime we see a term that looks like h squared, it dies. So we're only keeping things to linear order in h. So the first thing we find is the Riemann tensor turns
+
+00:40:14
+into the following combination of partial derivatives of the metric perturbation h.  In my notes, I have written out what happens when you switch from some original tensor h to a modified one using this gauge transformation. And what I show is that-- just a quick aside--  the gauge transformation generates a delta Riemann that looks like it's a whole bunch of-- let's see. Let's count them up. 1, 2, 3, 4, 5, 6, 7, 8. You have eight terms. Of course there's eight, because there's four terms here,
+
+00:41:29
+and you get two more for each one. So you're going to wind up with eight additional terms that involve three partial derivatives of the gauge generator.  So they're of the form d cubed on xi. And it's not hard to show. You just sort of look at them. They cancel in pairs.  And so delta Riemann is zero. The Riemann tensor is invariant to the gauge transformation.  All right, we want to take this Riemann and use it to build the Einstein tensor. Our goal here is to make the field equation
+
+00:42:27
+in linearized coordinates.  So let's start by making the Ricci tensor. So we're going to raise and lower indices in linearized theory with the flat spacetime. So when we make this guy, what we get is this.  I've introduced a couple of definitions here. One of them, you've seen before. The box operator is just a flat spacetime wave operator. And h with no indices is what I get when I trace over h using the flat background spacetime.  And let's do one more.  Evaluating r, I get one further contraction.
+
+00:44:08
+And this turns out to be d alpha, d mu, h alpha mu minus box of h. So we now have all the pieces we need to make the Einstein tensor. So I'm going to write out the result. And then we're going to stop and just look at it for a second.  Einstein is Ricci minus 1/2 metric Ricci scalar. Keeping things to leading order in h.  This becomes flat spacetime metric going into there.  So when you put all these ingredients together, there's an overall prefactor of 1/2. And then there are 1, 2, 3, 4, 5, 6 terms.
+
+00:45:18
+Let me write them out.  OK.  So recall at the beginning of the lecture, I pointed out that when one regards G alpha beta as just a differential operator on the spacetime metric, it's kind of a mess. Bearing in mind that what I have here is a simplified version of that, I have discarded all of the terms that are higher order in h than linear. This is already pretty much a bloody mess as it is. So you can sort of see my point there. If this were done in its full generality, it would be kind of a disaster.
+
+00:46:27
+Now, in linearized theory, there is a bit of sleight of hand that lets us clean this up a little bit. Let me emphasize that the next few lines of calculation I'm going to write down, there's nothing profound. All I'm going to do is show a way of reorganizing the terms, which simplifies this in an important way.  So what we're going to do is define the following tensor. h bar is h minus 1/2 eta alpha beta h. So this is a good point to go, well, who ordered that? Let's take the trace of this.
+
+00:47:16
+Let's define h bar with no indices is what I get when I trace on this. That's going to be the trace of h. This would be the trace of h alpha beta, so I just get h back, minus 1/2 h times the trace of eta alpha beta. And the trace of eta alpha beta. This is what I get when I raise one index, and sum over the diagonal. That is 4.  So the trace of h bar is negative the trace of h.  We call h bar alpha beta the trace reversed metric perturbation. It's got exactly the same information as my original metric perturbation,
+
+00:48:07
+but I've just redefined a couple terms in order to give it a trace that has the opposite sign of the original perturbation h. The reason why this is useful is recall the Einstein tensor is itself the trace reversed Ricci tensor. What we're going to see is that if we-- in acknowledgment that it's sort of a trace reverse thing, if I plug in a trace reverse metric perturbation, a couple of terms are going to get cleaned up. So here's how we do this. So let's now insert h bar. This guy is going to be equal to--
+
+00:48:49
+oops, pardon me. Insert h. This guy is h bar plus 1/2 eta alpha beta h. So just move that to the other side. All I'm doing is taking the definition, and I am moving part of it to the other side, so that I can substitute in for h. When you plug this into here, you'll see that there are certain cancellations. In particular, every term that involves the trace of h, h without any indices, is canceled out.  And so what you find doing this algebra is that your Einstein tensor turns into--  that can't be right.
+
+00:49:59
+OK. So now, my Einstein tensor has no trace of h in it. Every h that appears on its right hand side is the tensor with both of the indices. But now, it's the trace reverse version of that. This is still a bit of a mess. Now, we're going to do something that's got a little bit more-- it's not just sleight of hand. This is something that's got a little bit more of sort of the meaning of some of these manipulations that we've worked out. It's going to play a role in helping us to understand this.
+
+00:50:56
+Notice this term involves delta mu on h mu. Excuse me, partial mu on h mu, partial mu on h mu. Partial mu and partial nu on h mu. This is the only term that does not look like a divergence.  Three of the terms in my Einstein tensor look like divergences of the trace reverse metric.  Wouldn't it be nice if we could eliminate them somehow?  Well, if you studied gauge transformations and electrodynamics, you'll note that there's something similar that is done. You can choose a gauge, such the divergence of the vector
+
+00:52:06
+for potential vanishes.  Can we set the divergence of this guy equal to zero? So if you look at this, mu is a dummy index. This is four conditions that we are trying to set. This has to happen for mu-- well, we're going to sum over mu. Pardon me. It's going to happen for nu equal time, and for my three spaces. These are four conditions.  My gauge generators, my xi nu are four free functions.  That suggests that the gauge generators give me enough freedom that I can adjust my gauge such that if I start out with some original,
+
+00:53:23
+I have an h old that is not divergence free. Perhaps I can make an h new that is.  Well, let's try it.  So remember, I just erased it. But in fact, I'll just write it down right now. The shift to the metric perturbation arising from the gauge transformation, it's on h. We need to look at how it affects the trace reverse stage.  So if I start with my new perturbation is related to my old perturbation as follows.  It's not too hard to show that your trace reversed metric perturbation.
+
+00:54:38
+Pardon, pardon, pardon.  My trace reverse perturbation transforms in almost the exact same way. I get one extra term.  So now, what I want to do is look at how the divergence of this transforms.  So I'm going to get one term here, d mu of this. It gives me a wave operator acting on my gauge generator.  And then I get another term here that looks like-- remember, partial derivatives commute. So you can think of this as d nu of the divergence of xi, eta mu nu acting on this changes this into d
+
+00:56:20
+nu on the convergence of xi. And I messed up the sign, my apologies. That plus sign should have come down here. These are equal but opposite. They cancel.  So let me just highlight the result. So what this tells me is if I choose my gauge generators just right, I can adjust my trace reverse metric, so that it is divergence free.  If I do that, then the first three terms in my Einstein tensor here vanish.  And if I do that, then here is my Einstein tensor.  So just as in e and m, all that you need to do is say,
+
+00:58:31
+I'm going to change my gauge such that the following condition holds.  The condition that describes going into this gauge such that the divergence of your trace reverse perturbation vanishes. This is a simple wave equation. So solutions to this are guaranteed to exist.  If you sit down and you ask, can I come up with some kind of a pathological spacetime, or a pathological-- no. Imagine I'm in some original spacetime sufficiently pathological that doesn't allow me to do this. If you do that, you're going end up
+
+00:59:29
+violating the conditions that define weak spacetime. You can't do that in linearized gravity anyway. So in practice, we can always choose the gauge that puts in linearized gravity my Einstein tensor in this form. This form is exactly analogous to the Lorentz gauge condition that is used in electrodynamics. And so we call this Lorentz gauge in linearized gravity.  Once we've done that, here's what my Einstein field equations turn into.  In the next lecture, we will solve this exactly.
+
+01:01:10
+See, what you want to emphasize is this is one of those situations where the answer is so easy and simple for us all to work out, we don't actually really need to even do that much calculation. I'll remind you that in electrodynamics, if you work in Lorentz gauge of electrodynamics, the wave equation that governs the electromagnetic potential turns out to be-- could be factors of c and things like that, depending on which units you're working in. But we find an equation that has exactly
+
+01:02:08
+the same mathematical structure. Possibly there's a plus sign. I should have looked that up. Wave operator on my vector potential is a source. And this is very easily solved using what's called a radiative Green's function.  I will discuss this in the next lecture. You can look up the details in any advanced electrodynamics textbook. Jackson has very nice discussion of this. I have an extra index. I have a different coefficient. But the mathematical structure is identical. So as far as linearized theory is concerned,
+
+01:02:59
+we're basically done. So I'm going to talk about the exact solution of this in the next lecture. To wrap up today's lecture, to wrap up this current lecture. Let me look at the solution of this in a particular limit.  So I'm going to take my source to be a static, non-relativistic, perfect fluid.  The fact that it is static means that all of my time derivatives will be zero.  And if that's true for my source, it has to be true for the field that arises from it. Non-relativistic tells me that the fluid density greatly
+
+01:04:23
+exceeds its pressure. And as a consequence, I can write my stress energy tensor as approximately density four velocity four velocity. And when you go and you look at the magnitude of these things, I sort of looked at this a little bit in the previous lecture.  T00 is approximately rho.  All others will be negligible. Probably there's a small correction to this, but we can neglect that on a first pass.  So my field equation is dominated by the zero zero component.  That's going to be the most important piece of this.
+
+01:05:47
+Since this is static, I can immediately say--  I can change that wave operator into the plus operator.  And we now notice this is exactly the equation governing the Newtonian gravitational potential, modulo a factor of four.  Pardon me, factor of minus four. And so we see from this that h bar zero zero is just negative 4 times the Newtonian gravitational potential.  At this order in the calculation, all other contributions to the trace reverse metric are zero.  OK, so let's go from the trace reverse metric back
+
+01:07:08
+to the metric.  We use the fact that h mu nu is the trace reversed h mu nu. If we trace reverse it, we'll get the original metric back. Basically, we trace reverse twice.  So the trace of this guy.  OK, and so putting all these ingredients together, what we see are that the only non-zero contributions here are 8 0 0. Let's do this one carefully. This is minus 4 times Newtonian potential minus 1/2 times 8 0 0 and 4 times Newtonian potential. I have a c of minus sign here. This turns into minus 2 phi n.
+
+01:08:23
+And h1 1 equals h2 2. h equals h3 3. This is going to be 0 minus 1/2 times 1 times 4 phi n.  We put all these together.  And what we get is--  And I'll remind you. This is a metric that I quoted in a previous lecture that I said we would prove in an upcoming one. Well, here it is. This is the Newtonian limit of general relativity.  And it's worth remarking that this thing-- we are now in the very first lecture after having derived the Einstein field equations. 20 years ago, almost all laboratory tests, laboratory
+
+01:10:29
+and astronomical observational tests of general relativity essentially came from this based on. This ends up being the foundation of gravitational lensing. This is used to look at post-Newtonian corrections in our solar system. To a good approximation, it describes a tremendous number of binary systems that we see in our galaxy and in a few other galaxies. You really need to look for a much more extreme systems before the way in which the analysis changes due to going beyond linear order starts to become important.
+
+01:11:07
+There is an upcoming homework exercise. And for students taking this course in spring of 2020, it remains to be determined how we are going to do problem sets at this point. I will be making a decision on that in coming days. But I want to tell you about an exercise on P set number 7, in which you do a variation of this calculation. So instead of just having a static body with a body who has massive density rho, consider a rotating body.  And the thing which is interesting here is that in general relativity,
+
+01:11:59
+all forms, all fluxes of energy and momentum contribute to gravity through the stress energy tensor. So if I have a body that is rotating about an axis, there's a mass flow. There are mass currents that arise. And what you find if you do this calculation correctly is that there is a correction to the spacetime that enters into here, which reflects the fact that a rotating body generates a unique contribution to the gravity that is manifested in this space time. Now, when one looks at the behavior
+
+01:12:35
+of a body in a spacetime like the one I've written down right here. It's very reminiscent of-- well, it's just like Newtonian gravity. It's the Newtonian limit. And Newtonian gravity looks a lot like the Coulomb electric attraction. So this is often called a gravito electric field. People use that term, particularly when they're talking about linearized general relativity. If I have a rotating body, I now have mass currents flowing in this thing. And the correction to the spacetime
+
+01:13:05
+that arises from this, it's qualitatively quite different from us. It doesn't have that simple gravito electric Coulombic type of form. It, in fact, looks a lot more like a magnetic field. And in fact, when you ask, how does this new term that is generated affect the motion of bodies? You find something that looks a lot like the magnetic Lorentz force law describing its motion. So this is a very, very powerful tool. But it's already not enough. So we can go a lot further than this. We have done so far, the simplest possible thing
+
+01:13:42
+that we can do with this toolkit that we have derived so far. In the next lecture that I will record, we're going to return to my linearized Einstein field equations. And I am going to explore general solutions of this. This is going to lead us into a discussion of how things behave when my gravitational source is dynamic.  I do not want to lose the time derivatives that are present in that wave operator. And so this is going to lead us quite naturally, then, to a discussion of gravitational radiation.
+
+01:14:21
+And so after the next lecture, we'll spend a lecture or two discussing the nature of gravitational radiation. And there will be an upcoming homework assignment or two in which you explore the properties of gravitational radiation.
+

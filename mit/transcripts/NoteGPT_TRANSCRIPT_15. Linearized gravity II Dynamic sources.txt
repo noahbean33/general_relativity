@@ -1,0 +1,210 @@
+00:00:00
+[SQUEAKING] [RUSTLING] [CLICKING] SCOTT HUGHES: In the previous lecture, I began with the Einstein field equations in the most general form. And then I specialized to linearized gravity, to taking the spacetime metric, assuming that I can find a coordinate system in which it is close to the eta alpha beta form that we use for flat space time, plus a small perturbation, something that's defined. So I set whenever I have that h multiplied by itself I can neglect it. Doing so I was able to recast the Einstein field
+
+00:00:45
+equation as a simple linear equation, which is the wave operator acting on a variant to that perturbation, the trace reverse version of that perturbation. It is minus 16 pi g times the stress energy tensor. So in doing this recasting, I have-- this is essentially just a trick of reorganizing the variables. I have taken my h alpha beta, which describes the way in which spacetime is shifted away from that of flat spacetime, the perturbation of flat spacetime, and I've just rearranged that to give it
+
+00:01:15
+the trace with the opposite sign. And I've chosen a gauge such that the divergence of that trace reverse metric perturbation is zero. If we take this equation, which is completely general for linearized spacetime, the only thing which I had to do is choose a particular gauge. And there's no physics in that. That's essentially a coordinate choice.  If I then imagine that my source is static, I will have static fields.  And so my wave operator goes over to a simple Laplace operator. And that it's not too hard to show that the solution that
+
+00:02:05
+emerges from this looks like this, where phi n is Newtonian gravitational potential, which arises from a distribution of mass like so. So this is the leading solution. And it's one that is very powerful and very useful. And it's actually using tremendous number of physics and astronomical applications.  This restriction to a static source, though, is-- well, it's restrictive. What if I do not want to simply consider a static source? What if I am interested in sources of the gravitational interaction that are themselves dynamical?
+
+00:03:17
+And so I emphasized last time that this wave equation, my box h bar alpha beta equals minus 16 pi GT alpha beta, this is something that I hope you have already seen in the context of electrodynamics, in particular whenever we have a wave equation, who's not even a wave equation, but any differential equation that is of the form linear differential operator on field is equal to a source.  OK, so I'm separating out time and spatial behavior here. Whenever I have a situation in which I'm
+
+00:04:28
+interested in studying a field in which some differential linear operator acting on that field is equal to a source, we can solve this using the technique of Green's functions.  I am not going to be able to go through the technique of Green's functions in detail. I will quickly give you a synopsis of how it works and then I will look at the particular Green's function that applies to the wave operator. Students who would like to read more about this, I would point you to the textbook by Arfken.
+
+00:05:14
+I believe it is called Mathematical Methods for Physicists. And in the third edition, Green's functions are described in Section 16.5 to 16.6. So in a nutshell, let me just give you a very brief synopsis of how this technique works.  Suppose we take our source, which may be some complicated, very ornate entity. And what we're going to do is replace that source with a delta function.  So imagine that I take s of t and x over 2a delta at some time t prime and a three-dimensional delta at some location x prime.
+
+00:06:44
+What I'm basically saying here is I'm imagining I might have some source that's extended in time and extended in space, and I'm just going to look at the little blip at one particular event and see if I replace my source with this one single blip, what field emerges from that? What we're going to do is assert that a solution exists.  And we will call the field that arises when my source is replaced with a delta function, we'll call it capital G. OK? This notation means that this is the amount of field at t, x,
+
+00:07:47
+arising from my source at t prime x prime.  So my differential equation for this solution G now looks like so.  So whatever my linear operator is when it acts on this G, it gives me the source, which is now the delta function.  Let me just introduce a little bit of notation here. So t and x, I call this the field point. This is the point at which the field G is being measured.  t prime, x prime is my source point.  This is the point at which the source is non-zero. In this particular case, it's actually
+
+00:09:05
+a little delta function spike. The reason why we do this is pretty much by definition.  Pardon me one second. Yes, pretty much by definition. If I take the source and integrate it against the delta function--  integrate over all time, integrate over all space--  I must get the source back. This is a tautology. All I'm doing here is really saying this is the properties of delta functions. However, what's sort of remarkable is if instead of integrating the source against the delta functions--
+
+00:10:19
+if instead of integrating the source against the delta functions-- I integrate the source against the Green's function, if I do this, then what I must get out of it is the solution f. This is actually very easy to prove. Simply take this equation-- let's call this equation A-- if you take a equation A and operate on it with your differential operator D, so if I hit equation A with D-- remember D, it's a differential operator that acts on only the unprimed coordinates.  You know what?
+
+00:11:59
+Let's just go and write this out.  So D on this integral, when I hit D on this, it goes straight through the integral. This only acts on the unprimed coordinates. So it ignores the integrals. It ignores the s.  The only thing that operator hits when I act on the integral is the Green's function itself. But I have asserted that the Green's function is such that when D acts on it, I get the delta functions out.  And by the definition of delta functions, this just gives me my source back.
+
+00:13:40
+So what this means is that if we can find the Green's function for our differential operator, all we need to do is integrate it against our source. And the result must be the solution to our field equation. It's a beautiful technique. So if you haven't seen this before, I highly recommend that you turn to that reading in Arfken. I'm going to take advantage of this. I'm going to use this technique now. In particular, I'm going to take advantage of the fact that if my differential operator is in fact the flat spacetime
+
+00:14:26
+wave operator, there is a very well-known solution for the Green's functions. It's called the radiative Green's function in this case.  I'm just going to write down what the solution is.  So I'm going to talk about the properties of this in just a moment. So I'll just comment that this is something that you should be able to find developed in any good quality, advanced electrodynamics textbook. In my notes here I suggest looking at this place where I originally went through this carefully
+
+00:15:59
+was in the second edition of Jackson. It's presumably also present in the latest edition. But it might be in a slightly different place. In the second edition, you can find this discussed in Section 6.6. When I have taught MIT's junior level electrodynamics course, I actually go through this. And by essentially introducing a Fourier transform, a Fourier decomposition, turning the wave operator into an algebraic operator, just rearrange a bunch of terms, then invert a Fourier transform. It's not too hard to show that this is the result that
+
+00:16:32
+comes out of that.  Notice the argument of that delta function. And please bear in mind, we are working in units in which we have set the speed of light equal to 1.  So the delta function, it has support only at--  well, what's going on here is this is taking into account the amount of time it takes for information to travel from the source point to the field point.  OK, if I can illustrate this with a little cartoon, imagine I have some dynamical source of mass and energy that's down here wiggling away.
+
+00:18:06
+Here is my one example of a source point that is going to end up inside the integral when I integrate up the Green's function against my source. Here I am. I'm an observer making my measurement out here at position x.  Whatever is happening at x prime takes time to be communicated to me making my measurements out here at distance x.  The time lag is the distance that has to be traveled, x minus x prime. And, again, I'll remind you, we're working in units with a speed of light is equal to 1.
+
+00:19:05
+We would divide by c if we were working in normal SI units. OK? So this factor in the Green's function is building in-- I'm going to do the integral in just a moment-- it is building in the fact that we need to account for the amount of time it takes for information about the source's dynamics to be radiatively communicated to observers far away from that source.  All right, so we are now going to apply this to the linearized--  the Einstein field equation for linearized gravity.  So here is our field equation.
+
+00:20:06
+Sadly, the letter capital G is doing multiple duties in this lecture.  So when we solve this, what we need to do is integrate t alpha beta regarded as a function of prime-- time t prime, position x prime against the radiative Green's function.  Plug in the radiative Green's function, which we use.  This is the Green's function that corresponds to that wave operator. We have a minus 1 over 4 pi hitting our minus 16 pi out front there.  We're going to do the integral over the time variable.
+
+00:21:27
+And we're going to leave our result expressed as an integral over space.  This is an exact solution of the linearized field equations of general relativity. This is telling me that what happens-- the field that is measured, the trace reverse perturbation that is measured at time t and position x prime is given by integrating over my source, all the dynamics that happened earlier than that time t. What I need to do is take into account that over this source I have to fold in the amount of time
+
+00:22:40
+it takes for information from source point x prime to go out to x. I integrate over the source. At every point in the integrand, I divide by the distance between the field point and the source point. Do that integral, multiply by 4G. There's my solution.  This is wonderful. It's actually an exact solution. Like most exact solutions, it's not always the most useful thing in the world. There's one problem which we need to diagnose, which is that in the way that this has been formulated,
+
+00:23:26
+it looks like every component of this trace reverse metric looks radiative.  What do I mean by it looks radiative? Well, it came from a wave equation. They all depend on information that traveled out at the speed of light with a time lag appropriate to the speed with which radiation moves in flat spacetime. You know, you look at that, and you sort of say, wow, the entire metric has this sort of character that we associate with a propagating wave. All of spacetime is radiative. We need to be careful about that, because here
+
+00:24:32
+is where we need to revisit and think carefully about what happens when we choose our gauge. What I'm going to show you is a little demonstration that in this case, the gauge we chose--  and let me emphasize that was a wonderful gauge for putting the horribly messy field equation into a form where we could actually solve it-- but the gauge we chose is unfortunately masking some of the physical character of the spacetime.  So this Lorenz gauge was great for producing a set of field equations that we could
+
+00:25:37
+bring to bear powerful mathematical techniques and get a closed form actually exact within the context of linearized theory, an exact solution. But it might be misleading us as to what the resulting solution means.  Let me illustrate this with an example from electrodynamics.  Suppose I gave you a vector potential that was of the form at a time-like component that was q over r minus q omega sine q dot r minus omega t capital R over r.  Little r is square root of x squared plus y squared plus z squared.
+
+00:26:40
+And capital R is some parameter with the dimensions of length.  And my three spatial components of this thing, I'm going to write them as kqi sine k dot r minus omega t capital R over r minus qxi.  OK, this is the potential that has a form that kind of looks like if I were to sort of give this to you on an oral exam and say without doing any calculation, what would you guess this is? And that would actually be, as you'll see in a moment, that'd be a very unfair question of me to ask.
+
+00:27:40
+And I look at this and I say, you know what? That looks kind of like a Coulomb field. And then there is something radiative that it's embedded in, kind of a funny amplitude associated with that radiation. But maybe this is sort of like a dipole radiator with a net monopole moment going on it. You know, we've got things that involve fields that oscillate in space and time. They fall off as 1 over r's. A component falls off as 1 over r cubed. Yeah, that would be my guess-- a point charged with radiation.
+
+00:28:11
+So your oral examiner, the next thing they say is, great, work out the electromagnetic field tensor corresponding to this.  So you do this by taking some derivatives.  And what results is this. This is the electromagnetic field tensor corresponding to a Coulomb electric field with no magnetic field. This potential is nothing more than a Coulomb point charge in a really dumb gauge. The way I actually generated this was I started with the q over r potential of a Coulomb point charge. And I just applied some crazy gauge generator to it
+
+00:29:46
+to see what happened. So the parable of this story is whenever you are working with quantities that are subject to gauge transformations, you have to be careful about drawing conclusions about what those quantities mean in terms of the physics you want to get out of it. Gauge can obscure the physics if we are not careful. And in particular-- there's almost like a conservation of pain principle here-- it is often the case that the best gauge for formulating tractable equations for solving your problem turn out to be gauges that give you
+
+00:30:26
+just kind of crappy results if you want to interpret what's going on physically. In the remainder of this lecture, I am going to introduce something that's a slightly advanced topic. And I pretty shamelessly stole this from a paper that I wrote, something that I did with a colleague of mine, Eanna Flanagan. And it's based on an idea that was developed in a different context by my MIT colleague Ed Bertschinger. So here is what we're going to do in the remainder of this lecture. What we're going to do is recast the metric and the source
+
+00:31:12
+in a form, which allows us to categorize the radiative and non-radiative degrees of freedom of the spacetime.  This will, in fact-- we're going to do this in a way where the results are, in fact, completely generic, provided we stick to linearized gravity, gravity linearized around flat spacetime, which will be sufficient for our discussion right now.  I will give you the punch line upfront.  What we will discover is that spacetime has four physical degrees of freedom that are non-radiative.
+
+00:32:42
+And the hallmark of this is that they are going to be governed by differential equations that look like the Poisson equation. They will look like the Laplace operator on some potential is equal to a source.  Let me rewrite that. This handwriting is terrible.  Spacetime has two more degrees of freedom that are radiative.  These are governed by wave equations.  The metric tensor of spacetime has 10 components, 10 unique components. It's represented by about 4 by 4 symmetric matrix. OK? So it has 10 components in it.
+
+00:34:20
+4 plus 2 does not equal 10. You might look at this and think, what about the other four components of this thing? I've got 4 degrees of freedom. That must correspond in some sense to 4 of those components. I've got another 2 degrees of freedom. That must correspond to two of those components. What's going on the other four? Well, the other 4 degrees of freedom are essentially eaten up by our gauge freedom. OK, we are free to specify our coordinates via an infinitesimal coordinate shift.
+
+00:34:47
+And so we have 4 degrees of freedom under our control. General relativity insists on giving physics to the other six. These four non-radiative degrees of freedom, the two radiative ones, and the four gauge degrees of freedom completely describe the spacetime metric. And just to use an analogy, these non-radiative of degrees of freedom are kind of like the non-radiative electric and magnetic fields that you get in electrodynamics. Your two radiative degrees of freedom are going to turn out to two polarization states associated
+
+00:35:20
+with waves in the gravitational field in the same way that in electrodynamics, the electric and magnetic field also have two polarizations associated with them. So this is all worked out in great detail in a paper that Eanna Flanagan of Cornell University and I wrote about 16 years ago. And so I will make available through the 8.962 website a copy of that paper. And it was Flanagan who sort of got this started. And he and I then figured out all the details together. Ed Bertschinger is sort of the grandfather of this idea
+
+00:36:02
+since he did something very similar in an analysis that characterized perturbations to cosmological spacetimes. All right, so here's how we proceed.  Let's consider h mu nu as a tensor field on a flat background.  In the previous lecture that I recorded, I described how when I am working in linearized theory, it's a useful fiction to think of h mu nu. Even though we know it's actually telling us about the curvature of spacetime, it's a useful fiction to think of it as a tensor
+
+00:36:53
+field in a flat background. And we're going to take advantage of that. We are going to choose time and space coordinates.  Once I have chosen time and space coordinates, I then think about how this 4 by 4 tensor, how its different components break up and how they behave with respect to rotations in the spatial coordinates. I can imagine going in and tweak my spatial coordinate system. And what I want to do is examine how the components break up into subgroups with respect to spatial only coordinate transformations.
+
+00:38:07
+What we'll see is h mu nu is going to break up into-- you're going to get one piece. It's your time-time piece. OK? If I have chosen my time and my space coordinates and I imagine messing around with my spatial coordinate system, htt is unchanged. And so this-- I'm actually going to give it a name. I'm going to call it minus 2 phi-- this behaves as a scalar.  My spacetime piece-- so components of this, of the form hti--  I'm going to characterize this in more detail a little bit
+
+00:39:02
+later. But these three numbers are going to behave with respect to spatial only coordinate transformations like a vector.  Likewise hij is going to behave like a 3 by 3 tensor.  So let's break this down a little bit further. Whenever I am dealing with a function that is vector in nature-- and bear mind it's a field. So I'm dealing with a vector field--  I'm going to write this as a divergence-free function plus the gradient of some scalar.  So what I'm going to do is say hti
+
+00:40:17
+is equal to beta i plus the gradient of some gamma.  And I'm going to require that the divergence of that beta be equal to 0. Notice, since all of my indices are spatial indices and I am working in nearly Lorenz coordinates--  the placement of the indices, whether it's upstairs or downstairs, is immaterial--  I will tend to write them all in the downstairs position. And so repeated indices-- we're going to sort of abuse the Einstein notation a little bit-- repeated indices will be summed over.
+
+00:41:07
+Let's extend this logic to the tensor piece, to hij.  This takes a little bit of thought. So let me just write out the answer and then describe the character of every piece that goes into this.  So hij can be written as hij tt-- I will define that in a moment-- plus 1/3 hij plus d, sort of a symmetrized gradient of a vector epsilon, plus delta i delta j minus 1/3 delta ij plus operator on some function lambda.  So let me go through and describe what each of these things mean. And while I'm at it, let me count up
+
+00:42:42
+the number of degrees of freedom associated with them. Let's back up for just a second and do that over here. Gamma is a scalar.  So there's 1 degree of freedom associated with gamma.  Let me move this over to here. So that's 1 degree of freedom.  Beta is a vector, but it's divergenceless.  Because it's a vector, I have three components.  But being divergence-free, those three components obey a constraint. So that's 3 minus 1. So this scalar and this divergence-free vector
+
+00:43:38
+give me the 3 degrees of freedom I need to specify the 3 independent components of hti.  Over here, as I look through all of these different functions, h is a scalar.  I have defined it in such a way--  hold on just one second. I'm going to come back to that point in just a moment.  Epsilon j is a vector. It is defined such that its divergence is 0. OK? So what is going on here is this contribution to hij, it gives me a piece of this thing that looks like the gradient of vector.  This has 3 degrees of freedom minus 1 constraint.
+
+00:44:52
+This is a scalar. It only has 1 degree of freedom associated with it.  Lambda is another scalar.  Notice whereas h feeds directly into hij its derivatives of lambda that feed into this.  So this has one degree of freedom.  But this is defined in such a way that if I take the trace of hij, this operator gives me 0. Right? So the trace-- what the trace will do is sum over elements when i and j are equal. So this will give me essentially the Laplace operator. But the trace of delta ij is 3. So I get Laplace operator minus Laplace operator,
+
+00:46:12
+I get the 0 operator acting on lambda. So this gives me 1 degree of freedom.  This gave me 1 degree of freedom. hij tt-- and you know what, I'm going to go to a separate board for this one.  This is a tensor. tt stands for transverse and traceless. This is defined so that if I take its trace-- oops, I said this would all be downstairs-- if I evaluate this, I get 0. OK? So hij is a tensor but with no trace. And it's defined so that if I take it's divergence, I get 0. So this guy has 6 independent components.
+
+00:47:43
+This is 1 constraint.  This is 3 constraints, right? Because it holds for every value of j.  So this ends up giving me 2 free functions. So as we sum all these up-- let's see, did I miss anyone here?  Right. So I have totally characterized h mu nu by a set of scalar, vector, and tensor functions.  I have a scalar phi, which I have over here with my time-time piece. I have a scalar gamma. I have a vector, beta i. I have a scalar h, a scalar lambda, a vector epsilon i, and finally, a tensor hij tt.
+
+00:49:14
+OK? So what I've done is-- let me just step back for a second. What I've been doing in this exercise is trying to figure out with respect to its behavior under rotations and then just because it'll prove to be convenient in a moment its behavior when I sort of look at casting quantities in this irreducible form that involves divergence-free vectors and gradients of scalars. This is sort of the equivalent of doing that for a tensor function. The 10 independent components in h mu nu have now been encapsulated by--
+
+00:49:51
+I've got one function here 1 here, 2 here, 1 here, 1 here 2 here, 2 here. 1, 2, 4, 5, 6, 8 and 10. So all I've done is rewrite those 10 independent components of h mu nu into a form, that as we're going to see, is particularly convenient for allowing us to understand what the gauge invariant degrees of freedom in spacetime are, at least in linearized theory.  All right, so, so far, all I've really done is rewrite my metric using a set of auxiliary variables that might look a little bit crazy.
+
+00:50:52
+What we would like to do is examine what my linearized Einstein field equation looks like in terms of all of these new fields.  So in terms of the phi gamma beta h lambda epsilon hij tt, I would like to run this through the mechanism, make my Einstein field equation, but express it in terms of these things. We'll see why that is in just a moment. But before I do this, we have to be a little bit careful. We have 10 functions here. We have 4 gauge degrees of freedom. And the whole point of this exercise
+
+00:51:48
+is to try to understand how to deal with the fact that a gauge that is convenient for doing my calculation may leave me with a result that is confusing in terms of the physics I'm trying to understand. So what we're going to do is say that I can take my generator of a gauge transformation, xi alpha. I can write this since I have chosen time and space coordinates. I can break it into a time-like piece and a spatial piece.  I'm going to say that the timeline piece is some scalar field A. And spatial piece looks like a vector field B
+
+00:52:43
+sub i plus the gradient of some scalar c. And I'm going to require Di Bi to be equal to 0.  The reason why I'm doing this is these functions that I came up with, my phis and gammas and betas and epsilons, whatever, they are going to change if I introduce a gauge transformation.  So suppose I change gauge as we learned how to do in the previous lecture.  When you do this, what you discover is the function phi changes to the original phi, so something that looks like the time derivative of that scalar
+
+00:54:12
+A. The beta picks up a term that looks like the time derivative of the vector field B. Gamma goes to gamma minus A minus time derivative of c.  H goes to H minus 2 nabla square root of c.  So all of these functions that we sort of cleverly introduced trying to write these different pieces of the metric of spacetime in an irreducible form, when we change gauge, they change in this way. I left one out. It turns out when you change gauge, hij tt goes to hij tt. This piece is actually gauge invariant.
+
+00:55:37
+That's really interesting, because that tells me that once I have worked out my field equations, the piece of it that describes this transverse and traceless piece of the metric perturbation, it has meaning in any representation that I write down. So the piece that looks radiative in one representation, in fact, is radiative in all representations. We still have to figure out what's going on with all this stuff. OK? So we have a little bit more work to do. But we've just learned something very interesting about this.
+
+00:56:26
+So at this point, there's really no simple way to describe what you do next. Honest to god, what you essentially do is you just stare at these things for a while. And you start to notice that there are certain combinations of these different functions that, like hij tt, certain combinations of them are gauge invariant.  So if I define capital Phi to be little phi plus the time derivative of my gamma minus 1/2 2 derivatives of lambda, if I define theta as 1/2 h minus Laplace operator on lambda.
+
+00:58:17
+I define the vector field, psi i to be beta i minus 1/2 epsilon i-- note, this vector field is divergence-free-- and, of course, hij tt.  Every one of these combinations is unchanged under a gauge transformation.  But let's note something. Phi is a scalar field.  Theta is a scalar field.  So I have 1 plus 1 functions associated with them.  This is a divergence-free vector.  So it has 3 minus 1 degrees of freedom associated with it.  And hij, this is traceless and divergence free. And as I already counted up, this guy
+
+01:00:22
+has 6 minus 1 minus 3 degrees of freedom in it, also 2. So when I characterize the gauge invariant degrees of freedom in the spacetime, I've only got 6 functions left.  But this is good, right? My original 10 degrees of freedom in the spacetime metric are characterized by these sort of 6 fundamental degrees of freedom in the gravitational field plus 4 gauge degrees of freedom that are bound up in my gauge generators.  So what I would like to do is see if I can write the Einstein field equations in terms of these gauge invariant
+
+01:01:21
+degrees of freedom.  And you know what, I'm going to write it in its full form. We're, of course, going to linearize this.  But what I'm going to do is take this thing, write it in linearized gravity, using my gauge invariant variables.  Before I do this, it's really helpful to first decompose the stress energy tensor in a manner similar to how we decomposed our metric.  So what I'm going to do is I've chosen time and space directions. So I'm going to call the time-time piece
+
+01:02:38
+rho in energy density.  The timespace piece, we know that this tells me something about the flow of energy or the density of momentum. And I'm going to write this as a divergence-free vector plus a gradient of some scalar. And I am going to describe the space-space piece as an isotropic pressure, an anisotropic term-- I'm going to give you a constraint on this in just a moment--  some kind of a gradient of a vector field, and then a second order trace free operator acting on a scalar.  So, yeah, I'm going to want to introduce
+
+01:03:48
+a couple of constraints here.  I'm going to require-- I've already written out that the ISI is 0-- I'm also going to require that the divergence of sigma be equal to 0, the divergence of the sigma ij be equal to 0. And I'm going to require that the trace of this trace be equal to zero. Let me strongly emphasize that really all I'm doing is rearranging terms. I'm just trying to rewrite the components of my stress energy tensor using this decomposition under rotations and then looking at fields that can
+
+01:04:36
+be written as divergence-free vectors plus gradients of scalars. And I have a typo. I'm just trying to do this in a way that parallels what I did for the metric. OK?  Before I do this, don't forget that I am required to make sure that my stress energy tensor satisfies a law of local conservation of energy and momentum. When we do this, what we find is that these various things that I introduced here, some of them are related to each other. So in particular, what you find is the Laplace operator on s
+
+01:05:51
+is equal to the time derivative of the density, the energy density. Laplace operator on the scalar sigma is related to the pressure and the time derivative of this s.  Finally, Laplace operator on that sigma i is related to also the time derivative of this derivative of si. What this tells us is that-- so I really want to make sure people don't get too hung up on this. This is really just sort of the a convenient way of reorganizing the information in those terms. But if you do want to think about this,
+
+01:06:45
+this is telling us that only rho, p, si, and sigma ij are freely specifiable.  If you know these, there's a total of 6 functions here-- 1 scalar, 1 scalar, 3 vectors minus 1 constraint, 6 tensors minus 4 constraints, because this is divergenceless and trace-free. These are the only ones that are freely specifiable. They determine the other 4 fields.  OK? So density, pressure, kind of an energy flow, and anisotropic stresses.  OK, redemption is at hand.  Take all of the framework that we developed
+
+01:08:02
+and that we discussed in the previous lecture. And let's grind out the components of the Einstein tensors.  Doing so to linear order in h, which is equivalent to saying linear order in all of these fields that we've introduced, what you find is Gtt minus Laplace operator times this field theta.  Gti is minus 1/2 Laplace operator on this vector field psi minus the time derivative, the gradient of the time derivative of your theta.  And Gij, it's like a wave operator on the tt piece of your metric.
+
+01:09:08
+OK, that's a lot.  Let's equate them to the source.  And we'll take advantage of the fact that when you do this, you're always going to associate like with like, OK? Terms that are divergence-free, you're going to equate to a source that is divergence-free, things like that.  This completely characterizes the Einstein field equations, solutions to the Einstein field equations in linearized gravity. Now, I want to make a couple of remarks about this. Part of what was the motivation for this entire lecture
+
+01:11:39
+was this observation that when we solve the field equations using the radiative Green's function, by construction, the entire spacetime solution had this radiative character associated with it. Everything sort of fell off as 1 over r and had a time dependence that reflected a time delay, the time it takes for radiation to travel from the source to the point at which the field is being measured. But we saw via this electrodynamic example that we put up just for intuition's sake, that it's entirely possible to have
+
+01:12:19
+a totally non-radiative field that looks radiative basically because we chose a gauge that masked its physical character. This was a lengthy and-- I'll be blunt-- a somewhat advanced calculation. I do not expect everyone to be able to follow this in great detail. But I want you to understand how we got to this final end result here. By decomposing the spacetime, the perturbation to spacetime in linearized theory, into sort of as irreducible as possible a set of functions, we found that there are exactly 6 degrees
+
+01:12:56
+of freedom in that spacetime that are completely gauge invariant. These functions, they will have this form. They will obey these equations. In principle, you can solve these things and understand how these fields behave no matter what gauge you are working in. And what we see is 2 degrees of freedom-- remember, hij tt is a 3 by 3 tensor, but its traceless and its divergenceless. So there's actually only 2 degrees of freedom here-- it is indeed a wave equation. It is the only piece of the metric
+
+01:13:33
+that is a wave equation in every gauge and in every representation. All other gravitational degrees of freedom obey something more like a Poisson equation. These are non-radiative. This is radiative.  The way that we are going to use this-- the next thing which I want to talk about is gravitational radiation. And what this calculation told you is that if you are interested in gravitational radiation, this is the only piece of the spacetime and the source that you need to be concerned about. If you solve that equation, it will give you
+
+01:14:12
+the gauge invariant radiative degrees of freedom in a spacetime no matter what representation you use. So we are going to-- for the next couple of lectures, we are going to focus on this. We're going to show how we can sort of solve the Einstein field equations in a particularly convenient gauge and then say, all right, I know I've now got these 10 functions. Four of them are just purely things I can get rid of by choosing my gauge. There's only six that are sort of truly physical. Of those six, four of them don't constitute true radiative
+
+01:14:54
+degrees of freedom. There's only 2 degrees of freedom in my solution that described radiation. We're going to talk about how to pull them out, how to characterize them, and the important physical content that this gravitational radiation carries. So in a nutshell, you should take this lecture as demonstrating that in a very deep way spacetime always has some kind of a radiative component associated with it. But it's really only encapsulated in 2 degrees of freedom in the spacetime. It may look otherwise.
+
+01:15:30
+But just be careful that because your gauge has confused you essentially. And with that, I will stop this lecture here.
+

@@ -1,0 +1,225 @@
+00:00:00
+[SQUEAKING] [RUSTLING] [CLICKING]  SCOTT HUGHES: So we'll pick up where we ended last time. We're looking at the spacetime of a compact spherical body, working in what we call Schwarzschild coordinates. We deduce that the line element describing this body is of the form ds squared equals negative e to the 2 phi dt squared plus tr squared divided by 1 minus 2g m of r over r plus r squared d omega, where d omega is the usual solid element, line element. And let's see.  Yes, the body is described, interior,
+
+00:00:49
+as a perfect fluid with particular density profile rho of r, a pressure profile p of r. That describes this thing. Everywhere inside some radius r star, which gives its surface.  Sorry, I just distracted myself. I don't know why I've been calling this d omega. Should be d omega squared. Whatever.  Fluff in that notation. OK, so in the exterior of this thing-- so for everywhere for r greater than our star, it is vacuum. There is no density. There is no pressure. Once we're outside this thing, the only mass you see
+
+00:01:31
+is the mass of the star. So another way of saying this is that when-- you know what? I'll get to that in just a moment. And in the exterior, the e to the 2, 5 becomes 1 minus 2g, that same mass over r. Everywhere in the interior, the pressure, the function phi, and the mass r are governed by these equations. So the mass, as I described last time, it looks like a deceptively simple spherical integral. But just be aware that when you do this, you are not integrating over a proper volume. If you were to integrate over a proper volume,
+
+00:02:04
+you would get a larger mass, and such a mass, in fact, does have meaning to it. And the difference between that mass and this mass tells you something about how gravitationally bound this object is. And these two equations actually have a Newtonian limit associated with them. So this is a relativistic version of the equation of hydrostatic equilibrium, and this has a simple Newtonian analog. Did they drop the minus sign? No. This has a simple Newtonian analog, describing the gravitational potential
+
+00:02:42
+inside a fluid object. These whole things taken together are called the Tolman-Oppenheimer-Volkoff equations, or the TOV equations. So the comment I was making was that we require m of r star to equal m, the total mass of this object. So that's another condition on this. Once you integrate up, then you switch over to the mass, the total mass, that is used in the exterior of the star. So if you wish to solve these things, what you basically do is just choose a central density.  You have to choose an equation of state,
+
+00:03:41
+which allows you to relate the pressure to the density. We'll talk about that a little bit more later in this class. And then you just start integrating. So you basically then integrate until you find that the pressure equals 0. The radius at which this occurs defines the star surface.  As you integrate along, this allows you to build up. You then build the mass profile of the star, the pressure profile of the star. You are building up how the phi changes as you integrate along the star. So note, if you integrate this up,
+
+00:04:41
+this is only defined up to a constant of integration. And so what you then need to do is once you have reach the surface of the star, you know m of r. And so what you're going to need to do is adjust the phi that you found in order to match with the exterior solution 1 minus 2gm over r. This is an exercise you will do on an upcoming homework assignment. This is one of my favorite assignments in the class. It's a really good chance to actually see the way we solve these equations. And this kind of an exercise, it's
+
+00:05:13
+done all the time as part of modern research, and you will do this for a particularly simple kind of equation of state. So I want to look at what some examples of objects like this actually look like. So what we're going to do is consider an unrealistic but instructive idealized limit.  So imagine a star that has rho equal constant.  That is something where no matter how hard you squeeze it, you cannot change its density. The only way that that can happen is if you have an object that is infinitely stiff.
+
+00:06:02
+This corresponds to a speed of sound, which is defined as dpd rho that is infinite. Now, of course, no speed of sound can actually exceed the speed of light. So this is a somewhat pathological object. Nonetheless, it's useful for us for the simple reason that the mass function that emerges for this is quite trivial.  Rho is constant, so m of r just goes as the volume inside radius r times rho.  The star then has a total mass of 4/3 pi r, to be pi rho r star cubed.  So we know how its density behaves, it's a constant,
+
+00:07:19
+we know how the mass function behaves. The challenge is solving for the pressure profile.  So the pressure is governed by taking this differential equation and basically plug in that mass, plug in this mass function, and see what you get. So if I go and I throw this guy in here, this is what you end up getting. So bear in mind as you go through this-- yeah, I see what I did here. So what I do as I just pulled out my factor of 4/3, 4/3 pi rho r cubed-- excuse me, my 4/3 pi r cubed. I factor that out, and then cancel
+
+00:08:39
+it an overall factor of r squared in the denominator. So this is simply what I have over here with this mass function defined. We want to solve this to find p.  This is one of those rare moments where nature and analysis conspire and a miracle occurs.  OK, it's a somewhat messy looking kind of solution, but nonetheless, it turns out that the pressure profile is determined by-- you can manipulate this equation. You can integrate it up. And this ends up describing what the pressure profile looks like, p sub c is the pressure at r equals 0.
+
+00:10:00
+We define the surface of the star as being the location at which the pressure goes to 0. So by using that, so by exploiting that condition, we can use this equation to make a mapping between the radius of the star and the central pressure. So it's a spherically symmetric thing. Once we have chosen what this density is, then there is essentially a one parameter family of solutions. We-- if we choose a central pressure, that determines what the radius would be. Conversely, if we want to have a particular radius,
+
+00:10:41
+that determines what the central pressure must be.  Let's just do a little of analysis that follows from this. So p equals 0 at r equals r star. That defines the surface. So putting all that together, you can manipulate this equation to find that the radius of the star is determined from the central pressure, like so. If you prefer, you can write this as an equation for the central pressure in terms of the radius of the star.  I've written this in terms of m tot but m tot is, of course, simply related
+
+00:12:13
+to this radius-- excuse me, to this density and the star's radius cubed.  So what's the importance of this? This is, as I've emphasized, a fairly idealized problem. Nature will never give us an object that has constant density. Any object, if you give it a little bit of a squeeze, the density will change. Causality requires that the speed of sound be less than the speed of light. So clearly, this is a somewhat fictional limit. But we can learn something very interesting about this. Notice that this formula for the central pressure,
+
+00:13:00
+it diverges for a particular compactness of the star.  So p usb c goes to infinity. Perhaps a little bit more easily to see, the denominator goes to 0, for a certain compactness, m over r. So let's look at the value at which the denominator goes to 0.  So let's see. Move my 1 to the other side. Divide by 3. Square it.  Rearrange terms.  So if the ratio of this star's total mass to its radius is such that gm over r star exceeds 4/9 than the pressure diverges.  What this tells me is that I cannot construct a physically
+
+00:14:52
+allowable static object, even using this stuff as we can imagine fluid, a fluid that has an infinite sound speed. I cannot make a star more compact than that.  Making it that compact requires infinite pressure at the core.  This implies that stars have a maximum compactness.  We cannot have physically realizable pressure profiles if-- and let's turn that around-- if the ratio of the radius to g times the total mass is smaller than 9/4. Now, this holds for the stiffest possible fluid that we can even
+
+00:16:19
+imagine, one which the laws of physics actually do not permit. And so one infers from this, actually, that this bound basically tells me that given any physical fluid, any physically realizable star that I can construct, I must have a maximum allowed compactness.  Putting this a little bit more precisely brings us to a result that is known as Buchdahl's theorem.  Buchdahl's theorem tells me that there is no stable spherical fluid configuration in which the configuration's radius is smaller than 9/4 of gm total.
+
+00:17:45
+For those of you who like to put factors of c in there, divide by c squared, and this tells you something that you can convert to SI units, which tells you how small you are allowed to make an object.  So this is clear. It emerges, and very nicely, in this idealized but unphysical fluid limit. But it can be proven more generally. You just have to make a few assumptions about the way that the pressure profile is not singular in any place.  Proof of this can be found in the beautiful, old textbook
+
+00:18:31
+by Weinberg, section 11.6. Well, when you hear something like that, you gotta think to yourself, well, suppose I made a star with some kind of a fluid and I gave it a radius of 10/4 gm total over c squared. And I just came along and squeezed it. What would happen? Well, notice the word "stable" in this definition. You're free to do that, and should you do so, you would simply no longer have a stable object. So remember, part of what went into this analysis is we were assuming the spacetime and the fluid that
+
+00:19:19
+is the source of the spacetime, we were assuming everything is static. OK, we're making sure everything just sits still. This is telling us you can't do that if you want to have a star as compact as that. So if you were to do this, it would collapse. It would become dynamical and the spacetime would transition into something else. What that something else might be will be a topic that we get into a little bit more after we have developed some additional material.  So let's talk a little bit.
+
+00:19:54
+This will help you with the homework assignment, where you guys are going to construct relativistic stellar models.  Let's talk a little bit about how we describe real objects. They are not of constant density, and they instead have some p that is a function of the density. It's worth noting that in an even more general case-- this is actually worth a brief aside--  the equation of state relates the pressure to local density and s, where s is the entropy.  For the kind of applications where general relativity tends
+
+00:20:58
+to be important, for instance, when we're studying the stellar structure of a neutron star, the fluid ends up being so cold that you don't need to worry about the entropy. And where that comes from is that when I revisit my first law of thermodynamics and I include temperature and entropy effects, so the term that I left out in my earlier accounting, TDS. If t is small, I can ignore that term, and it ends up being something where my local energy, or energy density, ends up only depending on the pressure.
+
+00:21:41
+But "cold" is a wiggle word. I have to define a scale to say whether an object is cold or hot. There's a few notes laying this out right in my notes. Let me just sketch the key idea.  Cold depends on the fluids, and it's worth noting that the kind of fluid you're playing with here tend to be made out of fermions. And so it depends on the fluids' Fermi temperature.  So the Fermi temperature is defined as the Fermi energy normalized to a Boltzmann factor. You get the Fermi energy by looking
+
+00:22:30
+at how the energy levels are filled in your fermion fluid here. I have a few additional notes to lay out the way in which you can relate this to the local density, the mass of each particle that goes into this Fermi fluid. The punchline is that for neutron stars, one of the cases where we do, in fact, make dense general relativistic fluid stars, the Fermi temperature tends to be on the order of 10 to the 13 Kelvin, so about 10 trillion Kelvin. When we actually observe these objects, they are on the order of 10 to the 6 to 10 to the 9 Kelvin.
+
+00:23:23
+So they're a factor of about 10 of the 7, 10 to the 4 to 10 to the 7 times colder than the Fermi temperature. Even though they may be a billion Kelvin, they are cold. So we're going to use what are called cold equations of state to describe these guys.  So with that out of the way, let's talk a little bit about the kinds of equations of state that we will tend to use.  So people who study the physics of dense matter, a lot of their lives is really down to understanding what the equation of state of that cold matter looks like.
+
+00:24:09
+Some of them are concerned about hot matter as well, in which case they might be actually worrying about things at tens of trillions of Kelvin. But if you're looking at astrophysical applications, you're generally interested in the cold matter. And so they end up putting the other very complicated models using QCD and effective field theories to try to understand how it is that a particular fluid of dense matter, how its pressure and its density are related. And what I'm sort of wheeling around here
+
+00:24:41
+is that you generally do not have a simple analytic form. You wind up with some kind of a fairly complicated function that emerges from a numerical calculation. It often ends up being-- if you are a user of this equation of state-- it ends up being in the form of a table. So they might actually just give you a file that's got a bunch of numbers, which says if the density is this, then the pressure is this. And you can fit little functions to that that allow you to look things up and do your calculations.
+
+00:25:10
+But it's not in the form of a clean thing that you can write down on the blackboard. I want something clean I can write down the blackboard. So I'm going to introduce an approximation, which is useful for testing things out, test cases, and for pedagogy. What we do is we take the pressure to be a power law of the density. So what we do is we write p equals k rho 0 to the gamma, where k and gamma are constants.  A form that looks like this, this is called a polytrope.  Now, the thing which I particularly want to highlight,
+
+00:26:25
+and for those of you who are going to do this highly recommended homework exercise, please pay attention at this point. This rho 0 is not-- oh, I erased it. This rho 0 is not the rho-- oh, there it is-- it's not the rho that appears in the equation of state. It's slightly different. Rho 0 is not the rho that appears, for instance, in the t of e equations.  Rho 0 is what is called the rest mass density.  It does not take into account the fact that if I take a big-- let's say I've got a big bucket of nuclear fluid.
+
+00:27:18
+So I take my bucket here and I squeeze down on it.  When I squeeze down, its density is going to increase, first of all, because I have decreased the volume. So the number of particles remains fixed, but I decrease the space in there. But I have also done work on it, because this thing exerts a pressure that opposes my squeezing. And I need to take into account the fact that the work I do in squeezing this fluid increases the density rho.  So when you write out your t of e equations, rho is energy density.
+
+00:28:31
+All forms of energy gravitate. This is just the way people traditionally write the equation of state. This is when one is doing nuclear physics. There's good reasons for doing this, but it's not the most convenient form for the kind of calculations that we want to do, and that you are going to want to do, in the problem set.  Fortunately, it's not too difficult to convert, so let me describe to you how you do that.  So we are going to use the first law of thermodynamics in a form in which I've written now a couple times.
+
+00:29:26
+Interestingly, it showed up in our cosmology lecture.  So my first law tells me du equals minus pressure dv. So this is my total energy in a fluid element and this is the work done on a fluid element. So rho is equal to the amount of energy in a fiducial volume.  My rest energy-- excuse me, my rest density--  is the rest energy of every little body that goes into this per unit volume.  This means that I can write du as d rho over rho 0, provided I throw in an extra factor of m rest to get the dimensions right.
+
+00:30:49
+And I can write d volume as d1 over rho 0, provided I throw in that factor of m rest to get the dimensions right. I know this looks weird but, it's perfectly valid. So I'm going to rewrite my first law of thermodynamics as d rho over rho 0 equals minus pd 1 over r 0.  Let's manipulate that right-hand side.  So I'm going to assume this polytropic form. I'm going to use p equals k rho 0 to the gamma.  But I'm going to switch that around. I'm going to write this as rho 0 equals p over k
+
+00:32:13
+to the power of 1 over gamma.  So when I do that, I get d rho over rho 0 equals kappa 1 over gamma over kappa pdp over p to the 1 plus 1 over gamma.  Pardon me just one moment. I did something clever in my notes here and I'm just trying to make sure I understand what the hell I actually did.  So I'm going to level with you. I've gone through this several times. There's a step in the calculation that at this point, I, for some stupid reason, didn't write down. I'm going to trust I knew what I was doing, though,
+
+00:33:21
+because I know the final result was right. You can integrate up both sides here. Oh, I think I see what I did. OK. So you integrate up both sides here. And what you find is this becomes rho equals p over gamma minus 1 plus a constant.  Yeah, not 100% sure how I actually did that, so my apologies on that.  I'm going to assume I knew what I was doing. I will try to fix this and I may post an addendum here. The next step, actually, is you want to determine what that constant is. So the way you determine the constant
+
+00:34:03
+is you take advantage of the fact that rho goes to rho 0. The energy density becomes the rest energy density if there is no pressure exerted.  And so this gives us our final relationship here, which is that rho equals rho 0 plus p over gamma minus 1.  OK, I will double check how I went from line 2 line 3 there, but the final thing that I have boxed online for is, indeed, exactly what you need to do in order to build a stellar model. I guess I've been emphasizing this is something you will do on an upcoming problem set.
+
+00:34:57
+Let me just sketch the recipe. I've said this verbally, but let me just write it out explicitly here.  So I will give you an equation of state. You then need to pick rho 0 at r equals 0.  Using your equation of state and using that relationship between rho and rho 0, this will give you rho at the center, pressure at the center.  Set m of r at the center to 0. I emphasize, again, that this may seem obvious, but it is somewhat important that you get it right. When you do this homework assignment,
+
+00:35:52
+I'll give you a little hint as to how to build that in smoothly. It can be a little bit-- I don't want to say tricky, but it's worth thinking about a little bit. Then what you do is integrate your equations for the pressure in the mass from r equals 0. And this cannot be done analytically. You have to use a numerical integrator.  If you have never used one of these before, I will give you a Mathematica notebook that demonstrates how to use it. This is a skill that is worth knowing. The plain truth of the matter is that the class of problems
+
+00:36:47
+that are amenable to purely analytic solutions, those are interesting. They're illustrative. They're good to work with. But they tend to be unphysical and they're just not the ones that are of interest for many things that we study in science. So show while you're doing this-- this is not necessary to make your model, but it's very useful to do this.  You can also integrate, whoops, d5 er from the center.  So a caution is that you do not know phi at r equals 0. So what you should do is just temporarily set it equal to 0.
+
+00:37:50
+And what you're going to be doing then when you integrate this up is you will calculate the delta phi that describes your model from the center to the surface, which brings me to step 4.  When you find p equals 0, you've hit the surface.  So what we do is we use the fact that p of r equals 0 defines the star's radius r star. Once you've done that, you now know the total mass and the radius. So you will find, when you're doing this, that your numerical integrator is not super well-behaved
+
+00:39:12
+as you approach the surface. This is a feature, not a bug. What's going on is that as you begin to approach the surface, the gradient and the pressure gets quite steep. And so the way one numerically integrates a set of couple equations like this is by, essentially, if you take advantage of the fact that an integral, it's what you get by sort of dividing things up into tiny little pieces and add up like little rectangles. And when you're solving a differential equation like this, you're essentially taking the continuum solution--
+
+00:39:45
+that you guys have learned how to do in many cases-- and you're approximating it by a series of smaller and smaller finite steps. Because the gradient in the pressure gets large as you approach the surface, numerical integrators typically try taking an infinite number of infinitesimal steps, which makes the CPU sad, and so it's likely to exit with an error condition. Generally, when that has happened, you've gotten an answer that's probably good to within a part in a million, or something like that.
+
+00:40:17
+Fine for our purposes. If you need to do something a little bit more careful, that's a subject for a numerical analysis class. For us, I will give you some hints on this when you begin exploring these solutions. So you have an additional boundary condition. You know by Birkhoff's theorem that the Schwarzschild metric describes the exterior.  That means gtt is minus 1 minus, given by this for everywhere greater than r star. This gives us a boundary condition that phi of r star must be 1/2 log 1 minus 2m total over r star.
+
+00:41:30
+By enforcing this boundary condition, you can go back to your solution for phi and you can figure out what the value at r equals 0 should have been to give you a continuous function that matches at the surface.  So that's it for spherical stars. I look forward to you doing these exercises. My own biases are perhaps coming out, but these are a lot of fun.  The one thing which I will do for you, and I regret that my notes didn't really have this, is I will try to figure out how on earth I went from line 2
+
+00:42:11
+to line 3 in this calculation over here, going from the rest mass density, the rest energy density to the energy density. My apologies that that's not there. All I can say is that there are many distractions these days and I overlooked that when I was reviewing my notes and preparing for today's lectures.  I'd like to take this moment to take a little bit of a detour. Let's imagine that we have a spacetime that is Schwarzschild everywhere.  In other words, it has this form for all r, not simply
+
+00:43:26
+the exterior of some object.  We already know that this spacetime is a vacuum solution.  I know that t mu nu equals 0. Back up for a second. If I generate the Einstein tensor for this, I will get identically 0, which implies that this corresponds to a solution, which has t mu equals 0.  I also know, though, that if I examine the behavior of radial geodesics in the weak field of this spacetime, I find that they fall towards this like an object that is falling towards a mass m.  So this spacetime appears to be something
+
+00:44:48
+that is everywhere vacuum. There is nothing in this spacetime, and that nothing has a mass of m.  I hope that bothers you. That is among the sillier things that has been said in the name of physics. That sure sounds silly. But let me remind you that we, in fact, have seen something very similar in a much less complicated theory of physics.  So if I look at the electric field of a point charge at the origin--  so that's the three vector e is just q displacement factor over r cubed.  If I compute the divergence of this electric field--
+
+00:46:28
+the divergence, of course, tells me about the charge density-- and I get 0.  So this is an electric field that has no charge density anywhere, but that lack of charge density has a total charge of q.  This was something that we easily learn how to resolve. Usually at the MIT curriculum, this often shows up when you take a course like 8.07. What we do is we say, oh, all that's going on here is that I have a singular point charge at r equals 0. So yeah, I've got no charge density, but I have a total charge.
+
+00:47:29
+Fine. We were happy with that. I want you to think of the Schwarzschild metric as doing something similar for gravity. There is no source anywhere, but there is mass. Maybe there's just something singular and a little funny going on at r equals 0.  You might be concerned about what's happening there at r equal 0.  When I say it plays a similar role, it plays a similar role to the pull on point charge.  So there'll be nothing there, but perhaps there's something funny going on at r equals 0.
+
+00:48:33
+And by the way, the field equations that govern gravity, my relativistic theory of gravity, they're non-linear. So when I say there's something funny going on at r equals 0, it could be really funny. So we're not going to get too worked up about that, but we're just going to bear in mind this is odd. t mu equals 0 but it has mass. So let's look at the spacetime itself. Just staring at this, we can see two radii where it appears something odd is going on.  So you can see right away, lots of stuff kind of blows up
+
+00:49:21
+and behaves badly at r equals 0. And you can also see that your gtt and your grr, they are behaving in a way that is potentially problematic when the radius is 2gm. So you look at that and think, yeah, there's two radii there that look sick. I am worried about this spacetime. Well, we should be cautious. One of the parables that we learned about when we studied linearized gravity is that we can sometimes put ourselves into a coordinate system that confuses us. When we study linearized gravity,
+
+00:50:03
+we found a solution that looked everywhere. It looked like the entire spacetime metric was radiated. And it turned out only two of those 10 components were radiative. That turned out to be something that we were able to cure by introducing a gauge transformation. Doing that here's a little bit trickier, but we're going to need to think about, how can I more clearly call out the physical content of this spacetime? So one of the lessons that I hope has been imparted in this class so far is that if you really want understand
+
+00:50:34
+the nature of gravity, you want to go from the metric to the curvature. So what I'm going to do is assemble an invariant scalar from my curvature.  And I'm going to use the Riemann tensor because I know Ricci vanishes in this spacetime, so that wouldn't give me anything interesting. So what I'm going to do is assemble an object. I'm going to call it capital I. And that's just Riemann contracted into Riemann. This actually has a name. It is known as the Kretschmann scalar.
+
+00:51:24
+And you can go in. You can work out all these components. The gr tool that is posted to the 8.962 website is something you can explore with us. And this is just a number. Turns out to be 48 g squared m squared over r to the sixth. What does this guy mean? Well, in an invariant way, it's kind of Riemann squared. Riemann tells me to go back and think about things like geodesic deviation. It tells me about the strength of tides. So roughly speaking, square root I is an invariant way of characterizing tidal forces.
+
+00:52:14
+So if you're sitting around in the Schwarzschild spacetime and you want to give yourself an estimate of what kind of tidal forces are likely to act on you, compute the Kretschmann scalar, take its square root, and that'll give you an idea of how strong they typically tend to be.  So notice, when we look at this, this tells us r equals 2gm. If you plug r equals 2gm in there, nothing special about it.  It's a radius just like any other. As you go from 2.001gm gm to 1.99999gm, it increases a little bit.
+
+00:53:25
+Of course, it's got the 1 over r to the sixth behavior, but it's not like there's a sudden transition, or anything particularly special happens right at that radius. But it is hella singular at r equals 0.  So sure enough, r equals 0 is a place where tidal forces blow up.  OK, fine. We're going to need to do a little bit more work then, because I still want understand, yeah, OK, r equals 2gm. There's no diverging tidal forces there, but that metric still looks wacky at that point.
+
+00:54:13
+So what is going on there?  So let's think about the geometry of the spacetime in the vicinity of 2gm.  So let's imagine. Let's do the following exercise. Suppose I draw a circle at some radius r that's in the theta equals pi over 2 plane. So I'm just sweeping around in phi. I'm making this like so.  So here is my r cosine phi axis. Here is my r sine phi axis. Here is my circle of radius r. And let's ask, what is the surface area that this guy sweeps out as an advance forward in time?
+
+00:55:29
+So as this thing goes forward in time, it sort of sweeps out a cylinder in a spacetime diagram. Let's compute the proper area associated with this cylinder that this circle is sweeping out as it moves forward in time.  So the surface area of my tube, I integrate from some start time to some end time.  I'm going to integrate around in phi, and then the proper area element that I need to do this is going to be gtt g5 phi, the 1/2. There's actually a minus sign in there to get the sign right.
+
+00:56:21
+Let's write it like this.  To remind you how I do this, think of this area element as a 2 volume. Go back to some of our earlier discussion of defining integrals in spacetime, and this is the proper area associated with a figure that has some extent in time and extent in angle.  So let's compute that guy.  So I take my Schwarzschild metric. g5 phi in the theta equals pi over 2 plane is just r. gtt is the square root of 1 minus 2gm over r. So the area of my tube is going to be r, integrate from my start time to my end time, dt.
+
+00:57:38
+So this is easy. So I get a 2 pi 2 pi r square root 1 minus 2g m over r, and let's just say my interval is delta t.  Notice what happens as I take the radius of this thing down to 2gm.  This goes to 0. This r goes to 2gm. If I go inside 2gm, I don't even want to compute that. Something has gone awry. But look, I can draw this thing just fine. Clearly, there's a surface there. It's got to have an area associated with it. Why are you telling me that the area of this thing is 0 in that limit and is a nonsense integral if I
+
+00:58:50
+go inside this thing?  Well, what's happening is we have uncovered a coordinate singularity. The time coordinate is badly behaved as we-- not well-- as we approach this radius, r equals 2gm.  Let me give you an analogy that describes, essentially-- it's something that is very similar to that tube, that world tube that I just drew. But let me do it in a, perhaps, more familiar context.  Suppose I want to draw a sphere, and all that I know about a sphere is that it has got two coordinates to cover it, an angle phi and an angle theta.
+
+01:00:05
+And so I could say, OK, here is my sphere.  Here is theta equals 0, phi equals 0. Here is phi equals pi over 2. Here's phi equals pi. Pi equals 3 pi over 2. Phi equals 2 pi. Theta equals pi over 2. Theta equals pi.  There's my sphere.  So this chart that I've just drawn here, it's true. This does represent the coordinate system, but it's a horrible rendering of a sphere's geometry.  What I didn't realize when I wrote this down here is that, in fact, at theta equals 0 and theta equals pi,
+
+01:01:16
+every phi value should be collapsed to a single point.  This is reflecting the fact that if you look at a globe, all lines of longitude cross the north pole and the south pole. Every value of the azimuthal angle on the surface of the earth, they become singular at the north pole and the south pole. This drawing, well, it's like one of those, I forget the names of them, but the various renderings of a map that try to take the earth and write it on a flat space, and you wind up with Greenland being three times the size of Africa,
+
+01:02:07
+or something like that. And it's because there should be zero area at the top here. As you approach the top the area, it should be getting much stronger. And when you do representation of your map like this, you're spreading everything way, way out.  What is going on? And why this idea of drawing this world tube that is swept out by my circle of radius r as it advances forward in time?  That drawing does not account for the fact that the Schwarzschild time coordinate is singular as you approach r equals 2gm.
+
+01:02:51
+It's going to turn out all times t map to a single sphere, and r equals 2gm.  To get some insight into what's going on here, let's do a little thought experiment.  What I'm going to do is imagine I'm at rest in the Schwarzschild spacetime. So let's say that I'm at some finite radius r. I am not in a weak field. OK, maybe I am at something like r equals 4gm, or something like that. And what I'm going to do is drop a little rock, drop a particle.  So I'm going to drop a particle from r equals r0.
+
+01:04:04
+I'm going to integrate the geodesic equation, and I'm going to parameterize what its radial motion looks like as a function of "time."  I put "time" in quotes here because you should be saying at this point, well, you just told me that time is doing something kind of funny here. What do you mean by that? I'm actually going to do this for two different notions of time.  I'm going to do this for the coordinate time t, and I'm also going to do this for proper time,
+
+01:05:07
+tau, as measured along that world, that infall.  So I'm not going to go through the details of this calculation. It's a straightforward, moderately tedious exercise.  I would just quote to you what the result ends up looking like.  So let's first write down what the solution looks like, parameterized by the proper time. So this is most easily written as tau, proper time, and 2gm. Essentially, I'm just going to use it to set a system of units. I write this thing as a function of r.
+
+01:06:11
+My solution turns out to be--  it looks like this. So if I were to make a plot of what this thing's motion looks like as a function of time, so here's our 0. Here is r of tau.  And let's just put in, for fun, let's say this is 2gm.  Zoom, fallen. You reach r equals 0 in finite proper time. The parable of the Kretschmann scalar is that as you do so, the tidal forces acting on you are diverging. So if you have any last wishes, send them out because you're not going to have a lot of time
+
+01:07:23
+to tell people about them.  Let's now write it as a function of coordinate time t.  This ends up being-- bear with me while I write this out, this is slightly lengthy.  OK, so what I mean on this last line is if you want to get the complete solution, just write both of these functions down. Again, subtract them off and place the r's with r0. When you look at this, here's what you see.  The motion expressed in times of the coordinate time t asymptotically approaches the radius 2gm, but it never quite reaches it.
+
+01:09:00
+As t goes to infinity, it eventually reaches-- so r, you can see it appearing in the behavior of this natural log. r gets to 2gm as t goes to infinity.  So as measured by clocks on the infalling body, it rapidly reaches r equals 0. According to this coordinate time, it never even crosses r equals 2gm.  What the hell is going on with that? Well, to give a little bit of insight into this, it's useful to stop for a second and ask ourselves, what is that coordinate time t actually measuring? So let me write down the Schwarzschild metric
+
+01:09:58
+and let's think about this.  So kind of hard to see what t means in this, but let's consider a limit. Suppose I consider observers who are very far away. If I look at people who are at r, much, much larger than 2gm.  For such observers, spacetime looks like this, and this is nothing more than flat spacetime in spherical coordinates. This is what we call an asymptotically flat spacetime. As you get sufficiently far away from the source, it looks just like flat spacetime. essentially, special relativity rules apply.
+
+01:11:14
+And that gives us some insight into what this coordinate t means. The t that we are using in the Schwarzschild coordinate system, this is time as measured by distant observers.  Tau is time, as measured by this infalling observer. So what we are seeing here is the infalling observer crosses 2gm, reaches r equals 0, and has a very short life. But those who are using clocks, adapted to things very, very far away, never even see it cross 2gm. Why is that? Well, we will pick this up in the next lecture,
+
+01:12:05
+but let me remind you that when we initially began working on this subject, one of the very first lectures, we talked about something called the Einstein synchronization procedure, where what we did was we imagined spacetime was filled with a conceptual lattice of measuring rods and clocks. And we synchronized all of those clocks by requiring that the time delay between different clocks is synchronized according to the time it takes for light to travel from one to the other. This is telling us we are actually working--
+
+01:12:40
+when we use Schwarzschild time, we are working in a system that reflects an underlying inheritance from special relativity. These are clocks that have been synchronized by the Einstein synchronization procedure. And so the pathological behavior that we see here, it must ultimately owe to the behavior of these clocks that we use to define our coordinate system, and the behavior of those clocks is linked to the behavior of light. So in order to get insight as to what is going on with this, why is it that if I use a clock adapted to the infalling body,
+
+01:13:14
+I see painful death, but if I use a clock adopted to someone very far away, I don't even see it approach that dangerous r equals to a radius. In order to resolve that mystery, I'm going to need to examine what the motion of light looks like in this spacetime. We'll pick that up in the next lecture.
+
