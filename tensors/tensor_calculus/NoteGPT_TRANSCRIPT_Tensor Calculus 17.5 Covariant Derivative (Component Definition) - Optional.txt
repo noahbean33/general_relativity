@@ -1,0 +1,93 @@
+00:00:00
+in this video I'm going to quickly talk about another approach to the covariant derivative which is the component definition and this is used a lot in more engineering oriented classes so this is a follow up to the flat space definition from video 17 a link to that video is in the description and just as a reminder the Cartesian variables x and y are going to be written as c1 and c2 and the polar variables R and theta will be written as p1 and p2 so in video 17 I introduced the covariant derivative and
+
+00:00:33
+flatspace which is just the ordinary derivative when we take the covariant derivative of a vector field we use product rule to differentiate both the vector components and the basis vectors and this expression is often written using the Christoffel symbols which are defined like this so if we have this vector field here the covariant derivative of this vector field would be another vector field which tells us the rate of change of the first vector field in a given direction so if we take this first vector field and look for the rate
+
+00:01:06
+of change along a radial line which is a line given by a changing lowercase R variable we Det this new vector field on the right notice that along a radial line the vectors are getting a larger and larger component upwards in the angular theta direction and so for all these vectors along this line the rate of change would be vectors pointing upward in the angular direction as well so this is the vector field we get when we ask for the rate of change in the r direction and if we look for the rate of
+
+00:01:37
+change given by the angular direction theta we'd get this vector field now one viewer pointed out that they had been taught that the covariant derivative of a vector field is a rank two tensor which is basically something like a matrix and they wondered how the covariant derivative could result in both a matrix and a vector field since a matrix and a vector field seem like different things it turns out that there's no contradiction here it's just that we're looking at the covariant
+
+00:02:06
+derivative from different points of view the matrix point of view focuses on components and I found that this major component approach is often the approach taken by engineering students whereas the vector field approach focuses on geometry and I find this approach is taken more by students of pure mathematics so since mathematicians like geometry they really like writing out derivatives like this this is the derivative of a vector field V in the direction of some curve parameterize by lambda mathematicians would really like this
+
+00:02:41
+because it's just a curve and a bunch of arrows there's no components or coordinate system here we're dealing with purely geometrical objects but of course we can expand things out in a coordinate system if we want we can expand the vector field into a linear combination of basis vectors using its components and we can expand this lambda derivative using multivariable chain rule and we can take this derivative using the product rule getting a derivative for the components and the basis vectors and we can rewrite this
+
+00:03:12
+derivative of the basis vector using our Christoffel symbol notation so this is the expansion of the covariant derivative in Cartesian coordinates but we could also do a similar expansion in polar coordinates or any other coordinate system that we like but at the end of the day no matter which coordinate system we use all of these expansions all describe these same geometry the same vector field V and the same curve with parameter lambda these covariant derivatives describe the same geometry even if the components
+
+00:03:43
+look different in different coordinate systems now if we look at this formula for the covariant derivative you'll notice this eye index here so in 2d space will often deal with two different covariant derivatives in the directions C 1 and C 2 which are basically the x and y directions since the C 1 and C 2 directions form a basis for all possible vectors in flat space we can describe the covariant derivative in any direction using a linear combination of the C 1 and C 2 directions you'll also notice that there
+
+00:04:19
+is a summation over the K index here and that's because both of these derivatives have mo school components added together in linear combination so we could expand out the summation over k to get the full linear combinations like this so you'll notice that we have all of these components here for the covariant derivatives and what engineers like to do is to give these components their own symbol which is V with a superscript K and a subscript semicolon I where the semicolon indicates that we're getting
+
+00:04:49
+the components of the covariant derivative in the direction of the CI coordinate or if you prefer we could think of this as just the ice coordinate another possible notation for the same thing is taking the VK component and applying the Nablus symbol with a subscript I so these two notations are how engineers usually write the covariant derivative they focus on the components of the covariant derivative so this would be the case component of a vector field where we take the covariant derivative in the eigth direction so we
+
+00:05:24
+can rewrite these covariant derivatives using this notation like this so right here would be the first component of V when we take the covariant derivative in Direction number one and this would be the second component of the when we take the covariant derivative in Direction number one and the same things would apply here but these are the components when we take the covariant derivative in Direction number two and we can store all of these components in a matrix like this and this is why engineers think of
+
+00:05:53
+the covariant derivative as a rank two tensor the covariant derivative actually adds a covariant index to the tensor components so all of these V components are getting a new lower index or covariant index and the new covariant index results from taking the covariant derivative and looking at the components of the resulting vector field so I just like to review what covariant and contravariant indexes are so recall that basis vectors obey the covariant transformation rule and because of that we write basis vectors using lower
+
+00:06:30
+indexes or covariant indexes right recall that basis vectors are just partial derivatives of a position vector capital R in the direction of the coordinate variables and to convert between the different sets of basis vectors we just use the well-known multivariable chain rule these partial derivatives here that do the conversion for us are the components of the Jacobian matrix for Cartesian and polar coordinates now on the other hand vector components are contravariant if we take some curve parameterize by
+
+00:07:05
+lambda we can look at the vector field of tangent vectors along the curve by differentiating a position vector R with respect to the curve variable lambda so this is a vector field of tangent vectors along the curve and we can expand it as a linear combination of basis vectors again using the multivariable chain rule and depending on which basis we use will get different components and the components are just the derivatives with respect to the curved parameter lambda and to convert between the components and different
+
+00:07:36
+coordinate systems we again just use the multivariable chain rule and notice here we're using the components of the inverse Jacobian matrix to do the conversion so since the vector components behave in the opposite way that basis vectors do using the inverse Jacobian matrix instead of the Jacobian matrix we call vector components contra variance they obey the opposite transformation rule and this is why we often write vector components using superscripts because vector components are contravariant
+
+00:08:08
+now when it comes to the components of the covariant derivative we see that we have a contravariant index and a covariant index so how do we convert between these formulas in different coordinate systems well to do the conversion we can just start with the familiar formula for the covariant derivative and I'm going to actually write these basis vectors using the partial derivative notation now I'm going to use the multivariable chain rule to convert both of these derivatives into polar coordinates so
+
+00:08:39
+I'm going to do that using the inverse Jacobian matrix components here next I want to isolate for this covariant derivative so I'm going to sum on both side with the jacobian matrix here and the Jacobian and inverse Jacobian will cancel out to give us the Kronecker Delta which is kind of like the identity matrix and since we only care about the Kronecker Delta when N equals a we can change this end index to a since all of the other terms in the chronicler Delta go to 0 so just rearranging things we
+
+00:09:12
+end up with this formula for the covariant derivative in polar coordinates so we can write out the covariant derivative in polar coordinates using the normal formula or we can write the formula that we just derived in the last slide and since both of these formulas are equal to each other that must mean that the components are also equal to each other so we found the transformation between these covariant derivative components we see they are indeed a rank two tensor that requires 1 inverse Jacobian matrix and
+
+00:09:43
+one Jacobian matrix so just as we expected they have one contravariant Index and one covariant index the inverse Jacobian transforms the contravariant index and the Jacobian transforms the covariant index so just to summarize what I've talked about in this video the covariant derivative of a vector field is another vector field that depends on the direction of differentiation so if we look at the two main directions in 2d space we actually get two resulting vector fields for the covariant derivative one for each
+
+00:10:20
+covariant derivative in the main coordinate directions and we can write the components of these vector fields using this semicolon notation here these would be the K components of the covariant derivative vector field we get when differentiating in the direction of the ith coordinate and to convert between these components we use one covariant transformation rule with the Jacobian and one contravariant transformation rule with the inverse Jacobian so these covariant derivative components with the semicolon form a 1:1
+
+00:10:53
+tensor 1 contravariant transformation rule and one covariant transformation rule one last thing I'll mention is that Christoffel symbols are not actually tensors Christoffel symbols are an array of numbers with indexes but they do not transform with the expected tensor transformation law using jacobians and inverse jacobians like this instead they transform with this more complex law which you can see here and because of this additional term here this is not the ordinary tensor transformation law
+
+00:11:27
+so Christoffel symbols are not tensors so I'm going to go through a derivation of this law but it's going to take four slides so if you don't want to sit through all that you can stop watching now just remember that the Christoffel symbols are not tensors okay so we determined that this covariant derivative of a vector field V with respect to the P I coordinate can be written like this using the Cartesian covariant derivative components and the Jacobian and inverse Jacobian or we can
+
+00:11:58
+write it like this using the polar covariant derivative components and writing these components that explicitly gives us this now to derive the transformation law for the Christoffel symbols what we want to do is make everything on the left side of this equation look the exact same as the right side of the equation except for these blue cartesian Christoffel symbols so we're going to need to transform these vector field components as well as these partial derivatives so remember vector components are contravariant so
+
+00:12:29
+we go from our old Cartesian components to the new polar components using the inverse Jacobian and that means that we go from polar components to Cartesian components with the ordinary Jacobian so we're going to transform these Cartesian components V B and V J using this formula with the Jacobian and we get this so B be expanded to this and be J expanded to this also notice that I've expanded this partial derivative and Cartesian coordinates out as a summation of partial derivatives in polar
+
+00:13:03
+coordinates using the multivariable chain rule and we get an inverse Jacobian here since these partial derivatives are Co bear okay so what we need to do now is take this derivative and since we have the derivative of a product we need to use product rule so we get a sum of two terms in the first term the derivative is applied to this other derivative so we get a second-order derivative and in this other term we just differentiate the vector components next I'm going to take this partial C by partial P I and
+
+00:13:37
+distribute it into these parentheses so we get a copy here and a copy here now notice here that we have a summation of a Jacobian with an inverse Jacobian summed with the index A so these would cancel out and give us a Kronecker Delta M I and since we only care about these summation terms where M equals I we can rewrite the M indexes as eyes instead okay now we're going to distribute this inverse Jacobian to all three terms inside the parentheses and I'm going to drop these square brackets since we
+
+00:14:12
+don't need them and once again we have a summation of an inverse Jacobian with a Jacobian using the summation index B so once again these cancel out to give us a Kronecker Delta and since we only care about the summation terms where K equals n we can just replace the N index with K and I'm going to do a bit of factoring so notice that the first term and the last term both have the R components and have this inverse Jacobian partial PK by partial C B so I'm just going to factor those out and this right here is the
+
+00:14:48
+main result that we wanted to get so we showed that this covariant derivative could be written using the Cartesian covariant derivative components or the polar covariant derivative components which would expand like this and on those past three slides we just showed that this can instead be written as this huge big formula and on the left side we have this vector component written with the our index but on the right we have the vector component written with the J index so to make both sides match I'm
+
+00:15:19
+just going to swap the rnj indexes on the left here and these indexes are just dummy summation indexes so there's no problem with me swapping them okay so these formulas on the left and the right are the exact same in every way except for the Christoffel symbol terms and since both sides of the equation are equal were forced to conclude that the polar Christoffel symbols are equal to this big huge formula here so we've derived the Christoffel symbol transformation law and if we expand this transformation
+
+00:15:51
+law you'll see that this part looks a lot like what we would expect for a tensor transformation law with the jacobians and the inverse jacobians but this formula has an extra part added on so the Christoffel symbols are not tensors because they transform with the tensor transformation law in addition to this extra term here so Christoffel symbols are not tensors and they do not represent invariant geometrical objects so we can't make up some sort of Christoffel tensor that's independent of
+
+00:16:24
+coordinates and can be written as a linear combination of a tensor product of basis vectors and Co vectors ok so doing this is impossible so in conclusion we've shown that the covariant derivative components form a 1:1 tensor and transform with a contravariant rule and a covariant rule whereas the Christoffel symbols are not tensors because they follow this different transformation rule here
+

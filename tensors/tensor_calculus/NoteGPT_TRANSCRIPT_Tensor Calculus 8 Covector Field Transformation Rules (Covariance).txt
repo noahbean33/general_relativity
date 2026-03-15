@@ -1,0 +1,78 @@
+00:00:00
+in this video I'm going to talk about the transformation rules for differential forms which are also called Co vector fields this video is mostly going to be an upgraded version of my video from my tensors for beginner series on Co vector transformation rules so if you find this video confusing I would highly recommend you check the link in the description and watch that video first so if you've watched my tensors for beginners series you've already learned a number of things you've learned how we can take a vector
+
+00:00:27
+and expand it out as linear combinations of basis vectors where we get different components depending on which basis we use you've also learned that to go from one set of basis vectors to another we use the covariant transformation rule where the forward transform takes us from the old basis to the new basis and the backward transform takes us from the new basis to the old basis we also learned that vector components obey the contravariant transformation rule which is the opposite of the covariant
+
+00:00:54
+transformation rule where we use the backward transform to go from old components to new components and we use the forward transform to go from new components to old components likewise we also learned we can expand a co vector out into linear combinations of basis Co vectors and the basis Co vectors obey the contravariant transformation rule while Co vector components obey the covariant transformation rule now in this tensor calculus series we've been discovering all these concepts all over
+
+00:01:23
+again but in the case of calculus instead of expanding individual vectors into linear combinations we expand tangent vector fields along curves into linear combinations of vector fields using the chain rule where these partial derivative operators are the basis vectors we also discovered that basis vectors obey the covariant transformation rule and vector components obey the contravariant transformation rule and just now in the previous video we discussed how Co vector fields or differential forms can
+
+00:01:55
+be written out as linear combinations of these basis Co vector fields here now the remaining questions are how do the basis Co vector fields transform and how do the Co vector field components transform and that's what I'll be discussing in this video so in the last video we went through this short argument to show that any Co vector field DF no matter what it is can be broken up into linear combinations of basis Co vector fields so we can expand DF into a linear combination of DX and dy
+
+00:02:26
+but since DF can be any Co vector field we like that means we can also expand ER and D theta out into linear combinations of DX and dy and these coefficients we get here are just the entries of the inverse Jacobian matrix with the polar coordinates up top and the Cartesian coordinates on the bottom which we can also think of as the backward transform so because we use the inverse Jacobian or backward transform to go from the old basis to the new basis these equations describe a contravariant transformation
+
+00:02:58
+rule so we can sum up these two equations using Einstein notation like this where as c1 and c2 are the Cartesian variables and p1 and p2 are the polar variables also another way of writing these two equations is using matrix notation so here we use the inverse Jacobian matrix and on the right here we have a column vector containing the basis Co vectors as the entries and we put them in a column vector like this because contravariant objects always go inside column vectors we put contravariant things inside column
+
+00:03:32
+vectors so that the transformation equations work out the way we want and if I actually wrote out what these derivatives are I'd get these formulas here so let's check if these formulas make sense so when it comes to the KO vector field dr the KO vector curves are always pointing outward we can show that this makes sense by taking a look at the x axis where the y value is equal to 0 and therefore the dy component which is equal to Y over R will vanish because Y is equal to 0 when we have positive x
+
+00:04:02
+locations we orient the curves to the right just like with the DX KO vector field but with negative x locations we reverse the direction of the DX KO vector and orient to the left we can also look at the y axis where the x value is equal to 0 and likewise the DX component will vanish because x over R is equal to 0 positive wide locations have an upward orientation just like dy and negative Y locations have a downward orientation which is the opposite of dy we can also do the same check for D theta in the
+
+00:04:39
+positive x locations we get an upward orientation just like dy here and in the negative x locations we get the opposite of dy which is a downward orientation also for the positive y locations we get an orientation to the left which is the opposite of DX which makes sense because this component has a negative sign in front and in the negative Y locations we are in toward the right which agrees with DX here because the two negative signs here would cancel out giving us a positive component value now moving in
+
+00:05:12
+the other direction if we want to build the Cartesian basis Co vector fields out of the polar basis Co vector fields we use these coefficients here which are the entries of the Jacobian matrix also called the forward transform and we can summarize these equations using Einstein notation like this we can also write these equations in matrix notation like this where this is the Jacobian matrix and we put the basis Co vector fields in a column vector like this since the basis Co vector fields are contravariant
+
+00:05:43
+and if we take these derivatives and write in the actual formulas we get this matrix here so just like before we can check that these formulas actually make sense let's start by looking at the formulas for DX now along the x-axis we only have the dr component since the d theta component goes to 0 and when X is positive we point to the right just like dr and when X is negative we reverse the direction of dr which means we're still pointing to the right now along the y axis we only use the d theta component
+
+00:06:15
+since the dr component goes to 0 so for positive y we get negative d theta and so we reverse the direction of d theta because of this minus sign and we point to the right for negative y-values we follow the direction of D theta and again we point to the right and everywhere else in space when we add the D R and D theta orient and densities the vertical densities will always cancel out to zero and the horizontal densities will always point to the right so we always end up with Co vectors pointing to the right which is
+
+00:06:48
+exactly what we'd expect for the DX co vector field and for the dy co vector field things are very similar it's just that the d r and d theta K vector fields will always add together in such a way that the results always points upward which is exactly what we would expect for the DUI co vector field so in summary these are the transformation rules for the basis Co vector fields and here they are again summarized in Einstein notation remember that this is the inverse Jacobian or backward
+
+00:07:18
+transform and this is the Jacobian or forward transform so these match up with the contravariant transformation rule so we figured out the transformation rule for basis Co vector fields and it's the contravariant rule just like we would expect for Co vectors now let's figure out the code vector component transformation rules so here I've shown that we can expand the DF Co vector field using either Cartesian coordinates or polar coordinates and since these components are partial derivatives we
+
+00:07:48
+already know how to convert between them we just use the multivariable chain rule so these chain rules here give us the transformations from Cartesian to polar components and these chain rules here give us the transformations from polar components to Cartesian components and we can summarize these rules using the Einstein notation here so while the basis Co vector fields obey the contravariant transformation rule the KO vector field components obey the covariant transformation rule going from old to new with the Jacobian and going
+
+00:08:20
+from new to old with the inverse Jacobian and the fact that Co vector components are covariant isn't very surprising remember that we get Co vector components by Counting how many Co vector lines are pierced by the basis vectors so in this case the components are 2 2 because both basis vectors Pierce to stack lines each now if we double the length of the basis vectors the components end up becoming 4 4 because each basis vector is as long it also Pierce's twice as many stack lines so when basis vectors grow
+
+00:08:53
+Cove actor components also grow Cove actor components vary in the same way as basis vectors do and that means that they are covariant so now let's go through a couple concrete examples of the covariant transformation law for Co vector components recall in the last video we started talking about this scalar field F and in Cartesian coordinates the scalar field F is given by this function here y squared plus X minus 1/2 and in polar coordinates it's given by this function here R squared sine theta squared plus R cosine theta
+
+00:09:27
+minus 1/2 now we already got the components of this Cove Ector field DF in the previous video which I've listed here so let's see if we can confirm that the covariant transformation rule is correct for changing between these components so this matrix here is the Jacobian and since Kove Ector components are covariant we put them in a row vector like this basically if something is covariant we always put it in a row on the left side of the transformation matrix if we want the equations to work
+
+00:09:58
+out correctly so let's just rewrite things using the actual variable names and now let's substitute the formulas in for all these functions now we're going to want the answer to be completely in terms of polar coordinates right so let's just replace X with our cosine theta and we'll replace Y with our sine theta and so we get this so we have this row vector and this matrix and if we carry out this matrix multiplication we get this and if we just rearrange the order of the terms a little bit you can
+
+00:10:31
+see that we do indeed get the correct components for the Co vector field EF in polar coordinates now let's try going in the other direction from polar components to Cartesian components and to do this we use the inverse Jacobian so in matrix notation that would look like this again with the co vector field components inside a row vector and again I'm just going to rewrite this using the actual variable names and if we substitute in the actual formulas for the part derivatives we get this now this time
+
+00:11:01
+we're going to want to write all the answers in Cartesian coordinates so I'm going to simplify this as much as possible to give us X's and Y's instead of ours and Thetas so cosine theta is really just equal to x over R so I'll write these in and sine theta is really just equal to Y over R so I'll write those in as well and we can simplify things a little bit more by cancelling out some factors of R and we get this okay so we have this matrix multiplication formula here and it's
+
+00:11:32
+going to take a little bit of work to turn through all this but if you carry out the matrix multiplication you get this so here you can see the entries of the row vector and they're all multiplied by one of the entries of the matrix now if we go through all these multiplications we'll get this line here and you can see that this term cancels with this and this term cancels with this so we're left with this simple line here and you'll notice here I've factored out 2y from both of these terms
+
+00:12:01
+just to make things simpler now here you'll notice that we get the expressions x squared plus y squared over R squared and as you probably know x squared plus y squared is equal to R squared so that means that both of these expressions will just become 1 and so finally we're left with the components 1 2y which is exactly what we were expecting so we really have confirmed that these chain rule formulas for converting between Co vector field components really do work we use the Jacobian or
+
+00:12:33
+forward transform here to go from old to new and we use the inverse Jacobian or backward transform to go from new to old and that's just the covariant transformation rule so finally we can fill in this last box with the covariant transformation rules for converting between Co vector field components and so this marks the point where we figured out everything we need to know about vector fields and Co vector fields as we see them in calculus so we've spent the last three videos working out everything
+
+00:13:02
+we need to know about Co vector fields including how to get their components and the transformation rules that they follow in the next video we're finally going to complete the link between the Co vector field interpretation of DX and the differential interpretation of DX that we see in integrals and we're going to do that by reinterpreting what integration means
+

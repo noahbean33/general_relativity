@@ -1,0 +1,75 @@
+00:00:00
+in this video we're going to continue talking about why derivatives are vectors and also show how they follow the contravariant transformation rule this video is mostly going to be an upgraded version of my video on vector transformation rules from my tensors for beginner series so I would highly encourage you to watch that video if you haven't already so just as a reminder in the previous video we showed that we can take individual vectors and expand them as linear combinations of basis vectors
+
+00:00:29
+and depending on which basis vectors we use will get different components and in the same way we can take the vector field of tangent vectors to a curve and expand it out using chain rule and get linear combinations of basis vectors and depending on which set of basis vectors we use we end up with different components so here we have two examples of basis vector expansions using the Cartesian basis vectors and the polar basis vectors but we can write these formulas more compactly using the Einstein summation notation where c1 and
+
+00:01:04
+c2 are the Cartesian coordinates and p1 and p2 are the polar coordinates and we went through an example involving a circular curve and calculated the components of the tangent vectors along this curve in both Cartesian and polar coordinates now in this video I'd like to talk about how the components of these vectors are contravariant so let's go through a reminder of what it means for vector components to be contravariant so when we have an individual vector V we can write it as a linear combination of the old basis or a
+
+00:01:39
+linear combination of the new basis and the way we change between the old and new basis are by using the forward and backward transform coefficients given by F and B now if we expand the vector V out in the old basis we can replace the old basis vectors with the new basis vectors using the backward transform B and looking at this now we have a linear combination of the new basis vectors just like we have up here so that means that these V tilde components up here must be equal to these V components
+
+00:02:12
+multiplied by the backward coefficients so we end up with an equation for how the vector components transform we create the new vector components by using the old vector components and multiplying by the backward coefficients and notice that when we go from the old basis vectors to the new basis vectors we use the forward transform F but when we go from the old vector components to the new vector components we use the backward transform B so the basis vectors and the vector components transform in opposite ways one uses the
+
+00:02:46
+forward transform F and the other uses the backward transform B and since vector components transform contrary to the basis vectors we call vector components contravariant and this contravariant behavior also makes geometrical sense because when we have a vector with components 1 1 in some basis if we double the size of the basis vectors we actually shrink the components of the vector to 1/2 1/2 so in basis vectors grow vector components shrink so the fact that vector components are contravariant isn't
+
+00:03:19
+really surprising now it turns out that we can follow the same reasoning for vector fields of tangent vectors along curves so we can write out the expansion of the tangent vectors in the Cartesian and polar basis and we can also write out the forward and backward transforms between the Cartesian and polar basis vectors remember that these partial derivatives here with the C on top are just the forward transform also called the Jacobian and these partial derivatives over here with P on top are just the backward transform also called
+
+00:03:53
+the inverse Jacobian so we can follow a similar procedure and expand the vector field out in the Cartesian basis and we'll replace the Cartesian basis vectors using the polar basis vectors using the backward transform just like we did up here and so we're left with a linear combination of the polar basis vectors now up here we also have a linear combination of the polar basis vectors so that means that the polar components have to be equal to the Cartesian component multiplied by the backward transform so
+
+00:04:27
+we get this transformation formula for the components of the tangent vectors and again note that up here we go from the Cartesian basis vectors to the polar basis vectors using the forward transform or Jacobian but down here we go from the Cartesian vector components to the polar vector components using the backward transform or inverse Jacobian so the vector field components are indeed contravariant because they transform in the opposite way compared to the basis vectors so in the tensors for beginner series we learned that
+
+00:04:59
+basis vectors transform one way and the vector components transform the opposite way and so they're called contravariant and just now we've shown that since partial derivative basis vectors transform one way and the vector component derivatives transform the other way the vector components are contravariant notice that these derivative coefficients are opposites and if you're looking at these formulas and you're worried about how you're going to memorize them you don't actually have to memorize them at all
+
+00:05:27
+each of these four formulas is just the multivariable chain rule here we have chain rule expansions over Cartesian coordinates up here and here we have chain rule expansions over polar coordinates down here so it's all just multivariable chain rule we get the formulas for free right out of that so a lot of this might seem pretty abstract so let's again take an example to make things more concrete so before when we had an individual vector V represented in two different faces we could transform the old components into the
+
+00:05:57
+new components using the backward matrix B and you can check that this matrix multiplication actually does work out correctly now we have a vector field D R by D lambda and we should try to confirm that the backward matrix transforms the Cartesian components into the polar components correctly so remember the backward transform is the same thing as the inverse Jacobian matrix and the inverse Jacobian matrix looks like this where we have the partial derivatives with P up top and C on the bottom now a
+
+00:06:27
+couple videos ago we calculated all of these derivatives using the Cartesian to polar formulas and got this matrix here and now since we're talking about these case of a circular curve of radius two we have these parameterizations for X Y R and theta and if we subl these n we get this matrix here so this is our backward transform matrix B for the case of a circular curve going from Cartesian coordinates to polar coordinates so let's confirm that the backwards matrix B actually transforms the Cartesian
+
+00:07:00
+components correctly so first we just replace B with the actual matrix and then we carry out the matrix multiplication and this negative 1/2 cancels with this negative 2 and this positive 1/2 cancels with this positive 2 and here in the first entry we have a negative and positive version of the same thing being added together so that goes to 0 and in the second entry we have sine squared plus cosine squared and by the well-known trig identity this is equal to 1 so this tells us that the polar vector components are 0 and 1
+
+00:07:32
+which is exactly what we expect and calculated in the last video we can also confirm things work in the other direction using a forward transform or the ordinary Jacobian so we start with this matrix which is the Jacobian matrix where we have partial derivatives with C up top and P on the bottom now we use the polar to Cartesian formulas from a couple videos ago to compute these derivatives and get this matrix here and again we use these circular curved parameterizations to get this matrix here which is our forward matrix so we
+
+00:08:05
+can confirm that the forward matrix converts polar components to Cartesian components correctly so we sub in this matrix for F and since we have 0 here and 1 here we essentially just take the second matrix column to get our result and this also gives us the expected components for the vector field in Cartesian coordinates so we've shown as we expect that the backward matrix or the inverse Jacobian takes us from Cartesian components to polar components and we use the forward matrix or Jacobian to go from the polar components
+
+00:08:38
+to the Cartesian components and this is very similar to the tensors for beginner series where the basis vectors use the forward and backward transforms one way and the vector components transform in the opposite way we have the exact same behavior for vector fields where the basis vectors transform one way and the vector components transform the other way using the Jacobian and Jacobian inverse matrices as the forward and backward transforms and for the specific example we showed for the circular curve
+
+00:09:08
+of radius 2 these vectors and matrices take these special forms here all parameterize by the curved parameter lambda so the main takeaway of this video is that just as we learned with individual vectors we can expand them out as linear combinations in different bases and the basis vectors transform one way and the vector components transform in the opposite ways so we call the components contravariant and the same thing applies for vector fields of tangent vectors we can expand them out as linear combinations in different
+
+00:09:40
+bases and the basis vectors will transform one way and the vector components will transform in the opposite way and so again we call these components contravariant and all these formulas here are just the results of applying multivariable chain rule we have chain rule expansions over Cartesian coordinates and we have chain rule expansions over polar coordinates so as long as you know chain rule you don't need to memorize these formulas so there's just one last thing I want to mention before I end this video if you
+
+00:10:09
+look at these formulas we've come up with you'll notice that the position vector capital R appears in a few of them and what I'm going to do is I'm actually going to get rid of the capital our position vector like this and so we're left with these formulas here which are still multivariable chain rules and they still make sense even if we don't include the position vector capital R so we don't actually need that position vector at all we can get along fine without it
+
+00:10:36
+the multivariable chain rule formulas still make sense so this might seem like a bit of a confusing choice right now but in future videos instead of referring to these derivatives of a position vector as the basis vectors were actually going to call these partial derivative operators the basis vectors so these things will be considered basis vectors from now on so again this might seem like a really strange choice how can derivative operator be considered a vector well it's actually not that
+
+00:11:07
+strange as you know we can scale derivative operators and we can also add them together just like we do with vectors and we can make linear combinations out of these derivative operators and also if you think about it each derivative operator has a direction associated with it the partial derivative with respect to X points in the X Direction the partial derivative with respect to Y points in the Y direction and the derivative with respect to lambda points in the lambda direction along the curve so in a
+
+00:11:37
+certain sense derivative operators can have a magnitude and a direction just like ordinary vectors can moreover these partial derivative operators also obey the forward and backward transform rules that we would expect vectors to obey where the forward and backward transforms are given by the Jacobian and inverse Jacobian matrices so while it might seem a bit strange calling derivative operators vectors actually makes a lot of sense so I know this probably still seems like a weird thing to do but I hope it will become clear in
+
+00:12:09
+future videos why we're choosing to do this really the main reason we're trying to get rid of the position vector capital r is because position vectors require us to define an origin point and later on in this video series when we deal with curved surfaces and things called manifolds we're not going to be able to rely on the existence of an origin point so the idea of position vectors isn't going to make a whole lot of sense but we're still going to be able to talk about vectors and vector
+
+00:12:38
+fields if we use these derivative operators instead so for now I just want you to remember these formulas here and these formulas are all given by the multivariable chain rule and also remember that vector field components are contravariant because they behave in the opposite way that basis vectors do
+

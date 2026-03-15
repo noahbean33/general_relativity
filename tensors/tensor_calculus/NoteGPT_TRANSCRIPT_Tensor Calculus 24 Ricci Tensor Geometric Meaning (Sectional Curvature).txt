@@ -1,0 +1,147 @@
+00:00:00
+in this video I'm going to talk about the geometrical meaning of the Ricci curvature tensor and the Ricci scalar both of these are derived from the Riemann curvature tensor which I talked about in videos 22 and 23 so check the description for links to those videos if you haven't seen them this video is about being able to get a visual intuition for what the Ricci tensor means I'm going to cover the more algebraic mathematical properties of the Ricci tensor in a later video tensor calculus number 26 so you can watch that
+
+00:00:31
+video as well if you want to learn more so both the Ricci tensor and Ricci scalar can be thought of as summarizing the Riemann tensor that we learned about before the Ricci tensor tracks volume changes along geodesics so as we can see in this picture if we take this rabbit and make all its points travel along geodesic curves it actually shrinks in size so the Ricci tensor tells us about how volumes grow or shrink as they move along geodesics and there are two geometrical approaches to understanding
+
+00:01:05
+the Ricci tensor that I'll discuss sectional curvature and the volume element derivative also the Ricci scalar is a number that's used to compare the volume of a ball and curved space to the volume of a ball of the same radius in flat space so as I said the Ricci tensor is the thing that helps us keep track of volume changes along geodesics so let's take a look at an example of this on a 2d surface the 2d surface of the Moon let's say that we have two people standing on the moon's equator facing
+
+00:01:39
+north and both of them are going to walk straight forward along geodesics that point north because of the curvature of the moon's surface these two people will naturally get closer and closer together until they meet each other at the North Pole and if we imagine a circle sitting between them this circle will get smaller and smaller as they each move farther and farther along their geodesics so in some sense the change of the size of this circle given by the Ricci tensor represents how quickly
+
+00:02:12
+these two people get drawn together and this is why the Ricci tensor represents gravity in general relativity as we can see here in the Einstein field equations the more space-time is curved the more quickly bodies will get drawn together so in general relativity gravitational attraction is just the natural result of curved space-time it doesn't require any forces like we see with Newtonian gravity now the Ricci scalar keeps track of how the size of a ball and curved space deviates from the
+
+00:02:46
+standard size of a ball and flat space now when we're thinking in two dimensions a two dimensional ball is basically a circle so if we were thinking of a plane in two dimensional flat space a two dimensional ball would basically be a circle in this flat space so thinking in two-dimensional flat space if we took this circle the area of this circle would be given by the blue colored portion on the inside and this is the standard flat circle now if we were to live in curved space say living on a giant sphere like the moon or a
+
+00:03:23
+planet we could also draw a circle with the exact same circumference so this circle and flat space and this circle in curved space have the exact same perimeter but if we were to look at this circle and curved space and asked what its area is we'd get this entire blue region here which is sort of like an upside-down bowl that sits on the sphere like a cap and the area of this cap in curved space is actually larger than the area here in flat space so even though these circles have the exact same
+
+00:03:57
+perimeter in both cases the circle and curved space can fit more area inside it because of the nature of curved space and the Ricci scalar helps us quantify how much more space we can fit inside this circle compared to the flat space circle so through the power of curved space and the Ricci scalar we can fit a lot more space inside a tiny boundary and this is a phenomenon we often see in science fiction and fantasy see if we think about the TARDIS from Doctor Who or MARY POPPINS magic bag or that tent from Harry Potter all of these
+
+00:04:35
+things are bigger on the inside and that's because all these characters are experts in differential geometry and they know the power of curved space and the Ricci scalar okay so we've looked at some visualizations now let's look at some real math there will be quite a number of mathematical concepts in this video we're going to start with geodesic deviation then talk about sectional curvature then Ricci curvature and finally we'll get to the Ricci tensor so we're going to cover a lot of topics but
+
+00:05:05
+it will ultimately lead to the Ricci tensor recall that I use any of these three notations for basis vectors and they all mean the same thing and I'm hoping you recall from previous videos the formula for the Riemann tensor and also its components which are computed using the connection coefficients now recall that when we have a family of geodesic curves with a tangent velocity vector field V we can also look at these separation vectors along these curves which are given by the vector field s
+
+00:05:38
+and we showed that starting with the standard definition of a geodesic which is parallel transporting a vector along itself so that the covariant derivative of V in the direction of V is zero we can take the covariant derivative again in the direction s on both sides and then subtract and add this term and here is the definition of the Riemann tensor when the lee bracket is zero and here we can swap the order of V and s using the torsion free property so we found that the second derivative of this separation
+
+00:06:13
+vector s which is also called the geodesic deviation is given by the output of this Riemann tensor expression with a negative sign in front now I'm going to warn you about the sign convention here in my videos I'm going to say that the geodesic deviation is equal to the negative of the Riemann tensor of s and B acting on V or equivalently we can swap the order of these inputs here and get positive Riemann tensor of the NS acting on V some textbooks or articles might use the opposite sign convention using
+
+00:06:50
+the positive Riemann of SN V or the negative Riemann of the NS neither of these is more correct than the other the negative sign is just a matter of convention so I'm going to use this convention but don't get tripped up if you see this version in other sources it's just a different sign convention that they're using so knowing this formula tells us how geodesics move relative to one another so what would the geodesic deviation be in this case where the geodesic curves are both travelling straight upwards like this if
+
+00:07:25
+we were to look at the separation vector S at various points we would see that these separation vectors are all the same size so this means that the second derivative of s is 0 so there's no geodesic deviation and the geodesics aren't moving relative to each other now what about a situation like this where the geodesics are accelerating toward each other this would mean that the separation vectors are getting smaller and smaller in other words the second derivative of these separation vectors would point to the left in the
+
+00:07:58
+opposite direction of the S vectors themselves right if the S vectors are getting smaller and smaller pointing to the right that's the same thing as the vectors accelerating towards the left so because the s vector and the geodesic deviation vector point in opposite directions that means that their dot product will be negative and since the geodesic deviation vector is equal to the negative of this Riemann tensor here that means that the dot product of the riemann term and the s vector is positive and again this is when
+
+00:08:36
+geodesics accelerate toward each other now in this other case the geodesics are accelerating apart meaning these separation vectors are getting bigger and bigger this means that the acceleration of the S vector points toward the right because the SV ders are getting larger and larger and pointing towards the right this means that the geodesic deviation vector dotted with the s vector is positive or in other words the riemann term dotted with the s vector is negative now you might be asking why I'm using the second
+
+00:09:11
+derivative of the separation vector instead of the first derivative and the answer is that it's possible for geodesics in flat space which are straight lines to spread apart at a constant rate meaning the first derivative of s is nonzero however the second derivative of s will always be zero for geodesics in flat space in curved space geodesics can accelerate toward each other or accelerate apart so the second derivative can be nonzero so we use the second derivative to detect geodesics spreading because it will tell
+
+00:09:46
+us about the spreading due to the curvature of space and not the spreading that could happen in flat space because the geodesics are angled in specific directions so looking at this dot product here the sign of this dot product is very important if it's negative the geodesics are splitting apart if it's positive then the geodesics are converging towards each other and if it's zero the geodesics aren't spreading at all so again the sign of this dot product is important because it tells us if geodesics are
+
+00:10:21
+converging or diverging however the size of this dot product depends on our choice of s and B it would be nice if we could normalize this result so that it doesn't depend on our choice of the s and B vectors and I'm going to tell you now that if we take this term and divide by the square of the area of the parallelogram formed by s and V then the result no longer depends on the size of the SNB vectors it only depends on the choice of plane that s and D live in so now I'll cover how we get the area of
+
+00:10:57
+the parallelogram formed by s and B when we first learn the area of a parallelogram were usually taught that it's base times height in other words the length of you which is the base times the length of W times sine theta which is the height this is also the same thing as the magnitude of the cross product of u and W if we were to take the square of this area formula we get the magnitude of U squared times the magnitude of W squared times sine squared but as we know sine squared is also equal to one minus cosine squared
+
+00:11:35
+and expanding it we get these two terms now the magnitude of U squared is just uu and the magnitude of W squared is just W W and this entire term with the cosine is just equal to u W all squared by the well-known dot product formula involving cosine so this formula here is really the square of the area of the parallelogram spanned by U and W so now that we've discovered this formula we now know the formula for the square of the area of the parallelogram formed by s and E so this normalized formula
+
+00:12:17
+doesn't depend on our choice of the s and B vectors it only depends on the plane that SNB live in in other words if we use this formula on the vectors U and W which live in this orange plane and then evaluated the formula on another two vectors rnt which are linear combinations of U and W and therefore live in the same orange plane the results of these two formulas would be equal this is because when we change the vector U to AU plus BW and change W to CU plus DW this formula gets a factor of
+
+00:12:55
+ad minus BC squared in both the numerator and the denominator and these cancel out leaving the result of the formula the same I'll go ahead and prove this now starting with the numerator so recall that since tensors are multi linear Maps we can either scale the input or the output and get the same result and we can either add the inputs or at the outputs and get the same results when we start with the Riemann tensor of U and W and then change to a new pair of vectors in the same plane we can use
+
+00:13:31
+multi linearity to split this sum in the first input into two terms then we split these sums in the second input into two terms each then we use multi linearity to put all these scalars out in front then using the property of swapping the U and W inputs to get a negative sign we know that R of U and U and our of W and W go to zero since when a number equals the negative of itself it must be zero finally we can swap the U and W vectors here and get a negative sign so we find changing the vectors in the plane gives
+
+00:14:11
+us a factor of ad minus BC out in front now let's look at these other inputs of Rieman if we apply Rieman of two vectors to a dot product like this we learned in video 23 that we can use the product rule to get a sum of two dot products like this we also learned that the Riemann tensor of two vectors acting on a scalar equals zero since the covariant derivative of a scalar is just the partial derivative so we get the Lee bracket - the Li bracket which is zero so this tells us that when we have the U
+
+00:14:51
+and W vectors arranged like this with the dot product we can swap them and get a negative sign so when we start with this and then change to two new vectors in the plane we can split this sum into two terms using multi linearity and we can split these sums into two terms each using multi linearity of the dot product and that will give us four terms and recalling this property we're swapping these two inputs it gives us a negative sign we know the terms containing to use and to double use go to zero and taking
+
+00:15:29
+these scalars out in front we get this and swapping these to get a negative sign gives us a factor of ad minus BC once again so this Riemann term with uww you when we change to two new vectors in the same plane we get two factors of ad minus BC out in front one from this UW pair and one from this w/u pair so now we know where this term comes from in the numerator now let's see how we get the same factor out in front from the denominator now one option for the proof is to just plug in all the A's and B's
+
+00:16:12
+and C's and DS and just do a ton of algebra crunching to get the result but that method kind of sucks instead I'm going to cheat a little and rewrite these dot products as a cross product since both are perfectly good formulas for the area of the parallelogram formed by U and W you might criticize this approach and tell me that the cross product only works in three dimensions so this wouldn't work in four dimensional space-time but this isn't too important since the result we get
+
+00:16:43
+doesn't depend on the third dimension anyway since we're taking the magnitude so starting with this cross product we can change the vectors and then distribute out over the cross product to get four terms then we pull these scalars out in front and then send these terms to zero since a vector crossed with itself gives zero then swap these two vectors to get a negative sign and then we see that we get ad minus BC out in front with a square so this explains where the denominator term comes from
+
+00:17:19
+and proves that this formula only depends on the plane containing U and W not on the actual vectors themselves and this finally brings us to our definition of the sectional curvature which we denote by K of s and B the term in the numerator gives us the sign we need to determine how the geodesics traveling in Direction B are either can urging or diverging either zero when the geodesics are not separating positive when the geodesics are converging or negative when the geodesics are spreading apart the term and the
+
+00:18:00
+denominator is a normalization factor that keeps the result the same regardless of the length of s and V this way the sectional curvature only depends on the plane that contains s and B now this is the definition of the sectional curvature but I'm now going to talk about a related concept called the Ricci curvature the Ricci curvature involves taking an orthonormal basis of vectors e1 e2 all the way to en and then selecting a direction vector V which is equal to the last basis vector en we say
+
+00:18:39
+that the Ricci curvature in the direction vector V denoted here is equal to the sum of all sectional curvatures along every other basis vector direction so in some sense the Ricci curvature in some Direction V is like an average of all possible sectional curvatures containing the vector V so this might be a little bit hard to visualize so let's look at some examples with pictures let's imagine a situation where all the geodesics are straight lines and therefore all these sectional curvatures
+
+00:19:16
+are zero since all these sectional curvatures are zero this means that their average the Ricci curvature is also zero so when a ball travels along these geodesics in the direction V we just get a ball of the exact same volume moved slightly to the right now if this is our coordinate system here there are two sectional curvatures that we need to worry about the sectional curvature of V and the e one basis vector has to be zero because the separation between these geodesics is constant they're not
+
+00:19:55
+converging or diverging similarly the Technol curvature involving V and the e2 basis vector is also zero because these geodesics are not diverging or converging so since all these sectional curvatures are 0 that means that there's some the Ricci curvature is also 0 so this would be an example of visualizing a situation where the Ricci curvature is zero now let's take a situation where all the geodesics are converging towards each other so this means a situation where all these sectional curvatures are
+
+00:20:32
+positive if we look at the sectional curvature of V and E 1 the geodesics are converging so it's positive also the sectional curvature of V and E 2 involves converging geodesics so the sectional curvature is also positive and adding these two positive sectional curvatures together will give us a Ricci curvature that is also positive so this is an example of a situation where Ricci curvature is positive in this case the ball moving along these geodesics will shrink in volume because the geodesics
+
+00:21:07
+are converging so positive Ricci curvature means that the ball will shrink in volume now let's consider the situation of geodesics spreading apart so these sectional curvatures are negative again the sectional curvature of V and E 1 is negative because these geodesics are separating and the sectional curvature of V and E 2 is negative since these geodesics are separating and when we add these two negative sectional curvatures together the total which is the Ricci curvature is also negative so this is an example
+
+00:21:47
+of a situation with a negative Ricci curvature and we can see that the ball moving along these geodesics increases in volume because the geodesics are spreading apart finally let's take a look at an interesting case where some geodesics are diverging and some geodesics are converging so in this case the top and bottom geodesics on the ball are spreading apart and the geodesics on either side of the ball are converging together so the sectional curvature of V and E 1 is negative because these geodesics are
+
+00:22:24
+spreading apart but the sectional curvature of V and E 2 is positive because the geodesics here are converging together and it turns out in this case if we add the negative sectional curvature for e 1 with the positive sectional curvature for e 2 they end up cancelling out perfectly giving us 0 so this is another situation where the Ricci curvature is zero note that when the Ricci curvature is zero the ball can still change shape what isn't changing is the ball's volume when we move the ball along the
+
+00:23:03
+geodesics it will get squished from the sides but the top and bottom will get pulled apart and in this case even though the ball is getting squashed and stretched the volume hasn't actually changed the compression along the sides and the stretching of the top and bottom cancel out exactly so that the volume of the ball doesn't change and we can see this because when we add all these sectional curvatures together the resulting Ricci curvature is 0 which means that the volume of the ball is not
+
+00:23:34
+changing so it's important to remember that the Ricci curvature can only tell us about volume changes it can't tell us about whether or not a ball is changing shape it will only tell us if the ball has changed in volume so hopefully you can now visualize the idea of Ricci curvature I'll now explain how this is related to the Ricci tensor let's write out the formula for Ricci curvature which is the sum of all these sectional curvatures for an orthonormal basis with the direction vector V being one of the
+
+00:24:10
+basis vectors so I'm not writing this explicitly but there's a summation over I going on here since the basis is orthonormal EEI EEI equals 1 VV equals 1 and e IG equals 0 since all the e eyes are orthogonal to B this means that the denominator of the formula is always 1 for an orthonormal basis now let's expand the V vectors as linear combinations of the basis vectors and since the Riemann tensor is a multi linear map we can pull these scalars out in front and this expression here just
+
+00:24:49
+means the Riemann tensor component with lower indexes kij and upper index i since there's a summation or contraction over i we can write this contracted Riemann tensor using this notation with to lower indexes and these are the components of the Ricci tensor they're the components of a tensor with two lower indexes that we get when we do this summation with the Riemann tensor involving the top index and the lower middle index so when the Ricci tensor acts on the same vector twice the result
+
+00:25:24
+we get is the Ricci curvature it's also important to note that the value of the Ricci curvature for a given vector is always the same and doesn't depend on the orthonormal basis that we choose if we change to a new orthonormal basis using the forward matrix F the resulting vector components of the vector V will transform using the backward matrix B which is the inverse of F this is because vector components are contravariant and transform in the opposite way that basis vectors do and since F and B are inverses when we sum
+
+00:26:01
+them together we get the Kronecker Delta the Riemann tensor components will transform using three covariant rules and one contravariant rule so we get three FS and one B and if we compute the Ricci curvature in the new basis and expand everything out this B and this F cancelled to a Kronecker Delta this B and this F cancelled to a Kronecker Delta and this B and this F cancel to a Kronecker Delta and by the Kronecker Delta cancellation rules this becomes a k' index this becomes a J index and this becomes
+
+00:26:39
+one so you can see that we get the same result we originally had even though we're using a different orthonormal basis so the answer doesn't depend on our choice of orthonormal basis finally we'll look at a specific example of Ricci curvature we'll look at the case of the sphere which we've been looking at throughout this series in the u1 and YouTube coordinates there is only one independent nonzero component of the Riemann tensor which is the one-to-one two component and the metric tensor for
+
+00:27:09
+the sphere is here where the lowercase R is the spheres radius for the Ricci tensor half the components go to zero and the to two component can be read directly from the Riemann tensor the one one component takes a little bit more work with raising and lowering the indexes using the metric tensor and using the Riemann tensor symmetry properties but we can determine that it's equal to one so if we compute the Ricci curvature using the spheres Ricci tensor we find that we get a formula where all the terms are squared which
+
+00:27:44
+means the Ricci curvature must be positive positive Ricci curvature means the geodesics will always converge which is what we would expect for the sphere as we saw for the example of two people on the moon walking along geodesics that meet at the North Pole so the sphere is a curved space where the Ricci curvature is positive everywhere which means that geodesics will always converge now this interpretation of the Ricci tensor is nice enough however it only makes sense when we're dealing with a
+
+00:28:17
+basis that's orthonormal I'd like to give another interpretation about how the Ricci tensor is about changing volumes and this is an interpretation that works in any basis and to do that I'm going to have to talk about the idea of a volume element unfortunately this video has gone on long enough so I'm going to leave a link in the description to the next video where I'll continue talking about the interpretations of the Ricci tensor and Ricci scalar as always if you enjoy my videos and would like to
+
+00:28:48
+leave a tip you can check the description for a link to my donations page
+

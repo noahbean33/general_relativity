@@ -1,0 +1,102 @@
+00:00:00
+in this video I'll be introducing the covariant derivative for flatspace if you haven't watched videos 15 and 16 in this series on geodesics you might be interested in watching those as well I wouldn't say that they're required for understanding the covariant derivative but the covariant derivative and geodesics are two highly related concepts so you might want to check out videos 15 and 16 at some point so if I were to describe the covariant derivative in one sentence I would say
+
+00:00:27
+that it's a tool for understanding the rate of change of vector fields in a way that takes changing basis vectors into account and in its most general form the covariant derivative works for general tensor fields as well now the problem is that different sources will describe the covariant derivative in different ways and it can be confusing to understand what the covariant derivative really is when you're looking at a multitude of different sources so my plan right now is to do four videos that give four
+
+00:00:53
+different definitions of the covariant derivative there's the flat space definition there's the curved space extrinsic definition there's the curved space intrinsic definition and finally there's the abstract definition these definitions form sort of a staircase where the easiest and least powerful one is on the left and the hardest and most powerful one is on the right and really these definitions aren't totally separate from each other there's definitely some overlap between them but
+
+00:01:21
+I find this staircase to be a useful way to think about how to approach learning the covariant derivative for the first time so in this video we're going to look at the easiest definition which is the flat space definition and before we start I just one reminds you about our Cartesian and polar coordinate systems where the basis vectors in each system are equivalent to the partial derivatives of a position vector capital R with respect to the coordinate variables if this seems strange to you
+
+00:01:50
+I'd recommend watching video 2 in this series on basis vectors the link to that video is in the description and recall that for Cartesian variables I'll sometimes write C 1 and C 2 instead of x and y and for the polar variables I'll sometimes write P 1 and P 2 instead of R and theta so for example with this multivariable chain rule expression with X&Y here I might write it instead using c1 and c2 like this this makes it easier to write expressions with summations like this and also don't
+
+00:02:23
+forget that when there's an eye on top and an eye on the bottom sometimes I'll leave these summation sign out altogether and just pretend it's there and this notation of leaving out the summation signs is called Einstein notation so to start talking about the covariant derivative let's consider the rate of change of some vector field V which can be expanded out in the XY Cartesian basis like this or written in the Einstein notation like this with an implied summation over I and if you
+
+00:02:51
+prefer the partial derivative notation for basis vectors you could also write it like this so let's consider a vector field with components 2 1 this vector field would look like this so I think we can all agree that this vector field is constant and doesn't change all the arrows are facing the same direction and have the same length so we would expect that the derivatives of this vector field in the X or Y directions to be 0 so we can go ahead and confirm that and take the derivative of the vector field V with respect to X
+
+00:03:21
+so we can expand be out in the Cartesian basis and just take the derivative of these two parts now you need to be careful here and remember that we have a derivative of a product here the product of the X component and the X basis vector so we need to use the product rule to take the derivative properly and we get one term for differentiating the components and another term for differentiating the basis vector and we get two similar terms for the Y variable now remember this is the Cartesian basis
+
+00:03:54
+where the basis vectors are constant everywhere so the derivatives of the basis vectors go to 0 and we're left with this and recall that for this vector field the components are just the constants 2 & 1 so these component derivatives go to 0 as well so since everything has gone to 0 the total rate of change of the vector field in the X Direction is just the zero vector and you could show the same is true for the derivative in the Y direction as well now we can also can sitter a vector field expressed in the
+
+00:04:28
+polar coordinate basis and take note that I am NOT normalizing the e theta basis vector so the basis vector partial R by partial theta gets longer and longer as we move farther away from the origin and that's just the result of the arc length increasing for a constant angle as we move away from the origin now if we take the vector field with components to one we might think that this vector field looks constant because the components are constant but if we take a look at a picture of this vector
+
+00:04:59
+field we can see that the vectors are clearly changing lengths and direction and you might be confused about why this is since the components to one are constant but you need to remember that the basis vectors ER and E theta are changing from point to point and that causes the vectors in the vector field to change length and direction so when we take the derivative of this vector field V will take the derivative of the are parts and the theta parts and again we need to use product rule to differentiate both the components and
+
+00:05:30
+the basis vectors now in polar coordinates the rates of change of the basis vectors are nonzero since we know that the basis vectors are changing from point to point so the derivative of this vector field with respect to the theta coordinate has four terms two terms track the rate of change of the components and two terms track the rate of change of the basis vectors so the derivative with respect to theta would give us this and the derivative with respect to R would give us this and so we have these four basis vector
+
+00:06:03
+derivative terms that we need to figure out so when we ask about the rate of change of the basis vectors with respect to R what we mean is we need to look at how the basis vectors are changing as we travel along different points along a radial line and when we asked about the rate of change of the basis vectors with respect to theta we need to look at how the basis vectors are changing as we travel along and are given by some change in the angle theta so to compute all these basis vector derivatives it's
+
+00:06:33
+actually a lot easier to expand out the polar basis vectors in terms of the Cartesian basis vector like this and if you're wondering how I got these partial derivative coefficients remember that the basis vectors are just these partial derivatives of a position vector capital R and these coefficients are just what we get when we look at the multivariable chain rule equations so if we recall the change between XY coordinates and our theta coordinates we use these equations x equals R times cos theta and y equals
+
+00:07:06
+R times sine theta and if we compute all these derivatives we would just get these equations here so we have our polar basis vectors expanded out in Cartesian basis vectors now we can take the derivatives of the basis vectors in the r direction so we just plug this in here and take the derivative of each term in this sum and if we use the product rule to differentiate both the components and the basis vectors we end up with these four terms now recall that the Cartesian basis vectors e^x and ey
+
+00:07:38
+are constant everywhere so their derivatives go to zero and this derivative with respect to R doesn't actually contain the are variable so it goes to zero and same goes with this derivative here so there's nothing left and we get that the rate of change of the e.r basis vector in the r direction is just the zero vector and we can do the same thing for the derivative of the ER basis vector with respect to theta so we expand take the derivative of each part of the sum and then use product
+
+00:08:10
+rule now again the Cartesian basis vectors are constant everywhere so these derivatives go to zero and this time we get nonzero terms when we take the component derivatives so we get that the derivative of the ER basis vector with respect to theta is negative sine theta e X plus cos theta e Y so that's the derivative of the ER basis vector with respect to theta but remember that the ER basis vector is actually equivalent to this derivative of the position vector capital R with respect to the our
+
+00:08:43
+variable so this entire thing is really a second order derivative of the position vector our but since the order of partial differentiation doesn't matter this ends up being the same thing as the second order derivative of the capital our position vector with respect to R and theta which is actually the same thing as the partial derivative of e theta with respect to R so these two basis vector derivatives are the same and finally we'll do the derivative of e theta with respect to theta and churning
+
+00:09:16
+through all that we get this expression here so we have the four partial derivatives of the basis vectors expressed in Cartesian coordinates but we would prefer to have these expanded in the polar basis instead so to convert between them we use these equations which means we need to take the derivatives of these formulas up here and honestly to get these expressions I just looked up the answers on the internet inside a table of derivatives so these coefficients are in terms of X and y but we prefer for them to be in
+
+00:09:48
+terms of R and theta so these denominators all contain an x squared plus y squared term and we can replace that with R squared or just R if we have a square root surrounding it and we can replace these X's and Y's in the numerators with these formulas and we can cancel out some factors of R and so we get these final versions of the formulas to convert between Cartesian basis vectors and polar basis vectors so we can sub these into our basis vector derivative formulas and these results look pretty ugly but notice that if we
+
+00:10:23
+were to expand this and this using multiplication we'd have a positive and a negative version of the same thing so they'd cancel out and same thing with this and this if we expanded things out with multiplication this positive term and this negative term would cancel out and we can make things even simpler here we can factor out 1 over R from both terms and here we can factor out negative R from both terms and in both cases here sine squared plus cosine Phi lowing the well-known trig identity and
+
+00:11:01
+so we're left with this so we did a ton of math but in the end were rewarded with relatively simple results for these polar basis vector derivatives and I'm going to take some time now just to make sure that these answers make intuitive sense so when we look at the rates of change of the basis vectors with respect to R we need to look at how the basis changes as we move along a radial line so notice that the ER basis vector actually keeps the same length and same direction so it makes sense that the derivative of the ER
+
+00:11:34
+basis vector is zero because it's constant along a radial line but notice that the e-theta basis vector keeps growing and growing as we move outward and although it is growing at a constant rate we have to keep in mind that we're measuring the growth using the e-theta basis vector so this might be confusing but we're measuring the rate of change of the e-theta basis vector using the theta basis vector so notice that if we go from here to here the e theta basis vector doubles in size and if we go from
+
+00:12:09
+here to here the e theta basis vector is still growing but it only grows by a factor of 1.5 and from here to here it grows by a factor of one point three three so the e theta basis vector is growing but the rate of growth relative to the e theta basis vector gets smaller and smaller as we go outward and that's why we have this 1 over R here the 1 over our rate of growth gets smaller and smaller as R gets bigger and for the rate of change with respect to theta we have to consider how these basis vectors
+
+00:12:44
+change when we travel along a circular arc length given by the angle theta and I'm actually going to superimpose these basis vectors so that they have the same origins so that we can more easily compare them so the ER basis vector changes by the same amount every time it moves upward in the e-theta direction but again since the e theta basis vector grows as we move outward the relative change measured with the e theta basis vector actually shrinks as we go outward and that's why we get this one
+
+00:13:16
+over our coefficient here and finally the e-theta basis vector always ends up having a change that points toward the origin so that's why we have a negative sign here since the change points in the opposite direction of e are back toward the origin and the change gets bigger and bigger as we move outward so that's why we have a factor of R here so getting back on track we had these big equations for taking the derivative of a vector field in polar coordinates and now that we have these basis vector
+
+00:13:49
+derivatives we can sub them into these equations to get this so if we wrote the ER and E theta components of these derivative vectors as columns we'd get this so notice how each component has one part for tracking the component changes and has an extra part for keeping track of the basis vector changes some people like to call these parts correction terms but they're really just the normal results of taking the derivative of properly so getting back to this original vector field that we started with if we sub everything
+
+00:14:23
+into the derivative formulas all these partial derivatives would go to zero since the components are constant and plugging the components into these variables we get these results for the derivatives of the vector fields and note that these are nonzero so remember when we have a vector field constant components do not mean a constant vector field to get the derivative of a vector field we need to track both the changes in the vector components and the changes in the basis vectors and both of those
+
+00:14:56
+could result in changes in the vector field and again this is just the natural result of using product rule when taking the derivative of a vector field no matter which coordinate system we use we'll always get some terms for the component derivatives and some terms for the basis vector derivatives and here I'm using the Einstein summation notation so this is actually multiple terms involving a summation over J and same goes for these other summations over J so how does all of this relate
+
+00:15:28
+back to the variant derivative well in flatspace the covariant derivative of a vector field is really just the ordinary derivative where we make sure to differentiate both the vector components and the basis vectors so that might be a really boring definition but in flatspace taking the covariant derivative of a vector field really just means taking the ordinary derivative of the vector field and doing the derivative properly now one last thing I'll mention is that sometimes when working with basis vector
+
+00:16:02
+derivatives like this it's pretty common to expand the derivative of the eej basis vector with respect to the eighth coordinate as a linear combination where these gamma coefficients are called the Christoffel symbols and we can also write this expression with an Einstein summation over K like this so it's pretty common to see the covariant derivative expressed like this or if we change these summation indexes to K we can write it like this now in Cartesian coordinates the basis vectors are all
+
+00:16:36
+constant so all of these basis vector derivatives go to zero and that means that all the Christoffel symbols go to zero as well but in polar coordinates if we write things out in a similar way we would see that some of the Christoffel symbols would go to zero as in the case of the Christoffel symbols keeping track of the rate of change of the ER basis vector in the r direction but other Christoffel symbols won't go to zero like the derivative of the e theta basis vector with respect to theta has an r component
+
+00:17:11
+so this theta theta Christoffel symbol with the R on top would be non zero because of this R component and some of the other Christoffel symbols would be non zero as well so these are the Christoffel symbols for polar coordinates in flat space and the non zero Christoffel symbols are sort of telling us that hey these basis vectors over here are changing so you're going to end up with extra terms in your derivative that keep track of how the basis vectors change so in summary in flat space the covariant derivative of a
+
+00:17:43
+vector field is just the ordinary derivative where we make sure to use product rule to differentiate both the vector components and the basis vectors and we can either write it out like this or we can use the Christoffel symbol notation and write it like this so if you like this video and want to learn even more about the covariant derivative please check out the next video where I cover the covariant derivative on curved surfaces and talk about parallel transport
+

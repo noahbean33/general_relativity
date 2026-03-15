@@ -1,0 +1,81 @@
+00:00:00
+in this video I'm going to talk about how the metric tensor is used to get the arc lengths of curves if you haven't watched my first video on the metric tensor where I cover using the metric tensor to get the length of vectors I would recommend you check out the link in the description and watch that video first since we're going to be building on top of the ideas in that video so moving forward I'd like to cover three uses of the metric tensor first I'm going to very quickly review using the
+
+00:00:26
+metric tensor forgetting the lengths of vectors then I'm going to explain using the metric tensor for getting arc lengths and flatspace and finally I'm going to explain using the metric tensor for getting arc lengths and curved space so in this video I'm going to cover the first two topics the third topic I'm going to cover in the next video so first I'm going to do an extremely fast review of getting the lengths of vectors so the way we get the squared magnitude of a vector V in any coordinate system
+
+00:00:54
+is to use the dot product and calculate V B so if we choose some basis e1 e2 we can expand the vector V out as a linear combination of the basis vectors and distributing this dot product gives us this formula here we can also do the same thing using any basis we like and get a similar formula but using different basis vectors and different vector components so in the Cartesian basis which is an orthonormal basis the basis vector dot products look like this and so our squared magnitude formula becomes very simple we basically get
+
+00:01:29
+Pythagoras's theorem C squared is equal to a squared plus B squared and in this other basis we can sub in these dot products and we end up with this formula for the vectors squared magnitude so this formula is sort of like the Pythagoras theorem for this particular basis and you'll find for this yellow vector V with these components in the blue basis and these components in the red basis when we sub in these vector components into the corresponding squared vector magnitude formula for that basis we get that the vector V
+
+00:02:01
+squared magnitude is equal to 5 and so of course that means the length of B is the square root of 5 so we can summarize these equations for vector lengths conveniently as these array multiple stations like this and we can see that the key to calculating the vector length are these matrices here and these matrices are called the metric tensor they both represent the same metric tensor it's just that this is the metric tensor in the blue basis and this is the metric tensor in the red basis different
+
+00:02:32
+bases end up giving us different components so in summary the metric tensor can be represented in any given basis by a matrix where the components of the matrix are given by the basis vector dot products finally if we take the metric tensor components and plug in the forward transform formula for converting between the basis vectors we end up seeing that to convert between the metric tensor in the old basis and the metric tensor in the new basis we use two forward transform matrices and so the metric tensor is a zero two
+
+00:03:05
+tensor because it obeys two covariant transformation laws okay so all of that should be review let's now focus on using the metric tensor to get the lengths of curves in flat space so hopefully you recall how to get the length of a curve from multivariable calculus basically we approximate the curve by a series of straight line segments and as we increase the number of line segments we get a better approximation of the curve so if this point is at time I and this point is at time I plus 1 the position vectors at
+
+00:03:40
+these points would be R of T sub I and R of T sub I plus 1 and the length of this segment would be equal to the magnitude of the difference between these vectors so to get the arc length approximation we just add up the lengths of all these segments in a sum like this now to change this from an approximation of the curves length to an exact answer we take the limit as the length of time between each of these points delta T goes to 0 and if we multiply by delta T over delta T here we can write things like this and
+
+00:04:16
+this term is just the rate of change of the position vector R with respect to T so with the limit this just becomes the derivative of dr by dt and this delta t just becomes DT and the sum becomes an integral so really the key to getting the arc length of a curve is getting the magnitude of this vector here which is the tangent velocity vector along the curve and then integrating it over time and for consistency with my previous videos I'm going to change the time parameter T to lambda but you can still
+
+00:04:50
+think of lambda as being like a time parameter that increases as we move along the curve so in order to get the arc length the thing we really need to go after is the magnitude of this tangent vector D R by D lambda so recall to get the squared magnitude of a vector V we just take the dot product V dot B and if we expand V out in a basis we end up with this equation here and we can also choose to expand B out in a different basis and get a similar equation but with different basis vectors and different components and
+
+00:05:22
+when we want to calculate the squared magnitude of D R by D lambda we do the exact same thing we just calculate this dot product and we can expand D R by D lambda with Cartesian coordinates out like this using the multivariable chain rule and that will give us this formula here so I know this formula probably looks really ugly but it's really similar to what we have up here these are just the dot products between the basis vectors and these are just the vector components and of course we can
+
+00:05:54
+also expand this out in polar coordinates instead and get a similar formula that uses the lowercase R and theta variables instead of x and y and if we want to write these formulas more compactly we can write the vector components using c1 equals x and c2 equals y and write the vector expansion using Einstein notation where we have implied summations over I and J here and that gives us this compact formula so this is really the same thing as this formula down here just written using Einstein notation so in order to
+
+00:06:30
+calculate the arc length of a curve we need to get the magnitude of the tension vectors and in order to get the magnitude of the tension vectors we need to compute these dot products so let's compute these dot products in Cartesian coordinates so the Cartesian basis vectors have length 1 and are perpendicular and also they're the same everywhere in space so the dot products are really easy xx and y dot y are both equal to 1 since the basis vectors are length 1 and x dot y is 0 since the
+
+00:07:03
+vectors are perpendicular everywhere now let's also get the dot products for the polar coordinates and to do that we're going to have to use the multivariable chain rule to convert from the Cartesian basis vectors to the polar basis vectors and I've already shown how to get these derivatives into previous videos so I'm not going to go through them again so we'll start with the radial basis vector dotted with itself and we sub in these expansions into the Cartesian basis like
+
+00:07:32
+this and expanding out this dot product will give us this equation here so now all the dot products here are in terms of the Cartesian basis so X dot X and y dot y go to 1 and X dot Y goes to 0 so we can get rid of this term entirely and so we end up with cosine squared plus sine squared which is equal to 1 so the dot product of the little R basis vectors is 1 now we'll do the dot product for the theta basis vectors so we expand them out in the Cartesian basis and distribute the dot product and
+
+00:08:06
+again these two dot products go to 1 and X dot Y goes to 0 so we get R squared sine squared plus R squared cosine squared and we can factor out the R squared and see that sine squared plus cosine squared goes to 1 and so we get that the dot product of the theta basis vectors is R squared finally for little R theta we again expand out in the Cartesian basis and after distributing we get these four terms here so again these go to 1 and x dot y and y dot X both go to 0 and notice that these two expressions are the same except that one
+
+00:08:47
+is positive and one is negative so they cancel out and we get zero so we find that for the Cartesian basis we get these dot products here and subbing these into the formula for the tangent vectors squared magnitude we get this simple formula here which is just Pythagoras theorem a squared plus B squared and for polar coordinates we sub in these and we get something that looks like a slightly modified version of Pythagoras's theorem with this R squared term in here so the metric tensor for the flat 2d plane when written in
+
+00:09:21
+Cartesian coordinates looks like this matrix of dot products and when written in polar coordinates it looks like this matrix of dot products so remember these arrays both represent the same metric tensor it's just represented in different coordinate systems and if we actually write out the values of these dot products we get these matrices here and again these represent the same metric tensor just represented in different coordinates and I'm also going to remind you that my version of the theta basis
+
+00:09:52
+vector is not normalized so it changes length as the radius from the origin changes so if you normalize this basis vector so that it has length 1 this metric tensor would look different in fact it would be the identity matrix instead because e theta u theta would be 1 so now that we have the metric tensor matrices let's compute the arc length of this circular curve so this is the parameterization in Cartesian coordinates where the lambda parameter goes from 0 to 2pi so to get the squared magnitude of the tangent vectors we need
+
+00:10:28
+the derivatives of x and y with respect to lambda so these end up being negative 2 sine of lambda and 2 cosine of lambda and subbing these into our formula we get this so the negative 2 squared becomes 4 and this positive 2 squared also becomes 4 so we can factor the 4 out and get this now sine squared plus cosine squared is equal to 1 so the squared magnitude of these tangent vectors is 4 and that means that the actual magnitude is 2 which matches up with our picture so we can go ahead and compute the
+
+00:11:04
+length of this curve using the arc length formula and again if these squared magnitude is four that means the actual magnitude is two so we can pull this two out in front and the antiderivative of D lambda is just lambda which we evaluate at the endpoints 2 pi and zero and simplifying this we get that the length of this circular curve is 4 pi which is correct for a circle of radius 2 and we can do the same thing in polar coordinates here's the parameterization for the circle in polar coordinates and we can
+
+00:11:35
+compute the derivatives with respect to lambda D R by D lambda is 0 and D theta by D lambda is 1 and throwing those into our squared magnitude equation along with the radius we once again get a squared magnitude of 4 and since the squared magnitude of the tangent vector is the same churning through this integral is the exact same and we get that the curve length is 4 pi once again now recall before we showed that in tensor algebra the metric tensor was a zero two tensor because it obeyed two covariant transformation laws when
+
+00:12:11
+changing the basis and we can go ahead and show that that's also true in tensor calculus we start with the metric tensor components in polar coordinates and we use the forward transform here which uses the Jacobian matrix to write the polar basis vectors in terms of the Cartesian basis vectors and if we turn through the dot product this ends up being the metric tensor components in the Cartesian basis so just like before the metric tensor components require two forward transformations or two Jacobian
+
+00:12:44
+matrices to go from the old components to the new components so the metric tensor is indeed a zero two tensor and the reverse of this rule would use two backward matrices or two inverse jacobians and using the Jacobian matrix for Cartesian and polar coordinates we can actually check that this formula does transform the Cartesian metric tensor components properly so this probably isn't obvious but to get this formula to work out we need to write the array multiplication in this specific way with a transpose
+
+00:13:20
+operator here and after doing the transpose and churning through the matrix multiplication we see that we do in fact get the correct metric tensor components for the polar coordinates so in summary the equation for calculating the arc length of a curve is an integral that depends on the magnitude of the curves tangent vectors and to calculate the squared magnitude of the tangent vectors we need to use the dot product and we end up with this equation in Cartesian coordinates and this equation in polar coordinates and these basis
+
+00:13:55
+vector dot products give us the components of the metric tensor so the key to getting the arc length of a curve is the tangent vector magnitude and the key to getting the tangent vector magnitude is the metric tensor components and remember the metric tensor is a zero two tensor because its components obey two covariant transformation laws so if we have the metric tensor matrix for a given coordinate system that means that we can calculate the arc length of any curve as long as we can do this integral in the
+
+00:14:27
+next video we're going to discuss how to use the metric tensor for getting the arc lengths of curves in curved spaces
+

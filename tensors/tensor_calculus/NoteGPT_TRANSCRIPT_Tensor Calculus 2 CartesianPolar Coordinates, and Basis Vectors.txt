@@ -1,0 +1,69 @@
+00:00:00
+in this video we're going to review Cartesian and polar coordinates in two dimensions and also introduce basis vectors in each coordinate system so in front of us here we can see a painting that's living on a flat two-dimensional plane this two-dimensional space is completely physical and all the shapes lines and curves exist physically independent of any coordinate system now we can see all these geometrical objects in front of us but it can be difficult to say anything interesting about these
+
+00:00:29
+geometrical objects without using numbers in some way and this is where coordinate systems come in coordinate systems are like little grids that we put over top of a geometrical space so that we can calculate things like the distance between two points or getting the length of a curve the two most common coordinate systems for the flat two-dimensional plane are the Cartesian coordinate system and the polar coordinate system with the Cartesian system we use the coordinates x and y to measure the horizontal and vertical
+
+00:00:59
+positions of a point relative to a special origin point with the polar coordinates we use the coordinates lowercase R and theta which represents a points radius from the origin and the angle of counterclockwise rotation of the point from a horizontal axis so you might wonder why we go through the trouble of inventing different coordinate systems at all after all the Cartesian system looks pretty simple why don't we just use that for everything so there's two reasons for inventing multiple coordinate systems the first
+
+00:01:27
+reason is that some problems are easier to solve in certain coordinate systems for example a problem of a ball being thrown up and falling down is easier to solve in the Cartesian coordinate system since some of the coordinate lines are aligned with the up and down motion of the ball on the other hand the problem of an object orbiting the Earth in a circular path will be easier to solve in the polar coordinates since some of the coordinate curves are also circular the second reason why it's important to
+
+00:01:53
+understand different coordinate systems is because coordinate systems are invented by humans and the laws of physics that describe real physical objects shouldn't depend on things that were invented by humans so when studying the laws of physics we need to make sure that the physical laws we come up with work and coordinate systems or else they wouldn't make much sense so we have our two-dimensional Cartesian and polar coordinate systems and the first step we need to take is to be able to express
+
+00:02:19
+point P in both coordinate systems and be able to convert between XY coordinates and our theta coordinates easily so to get the XY coordinates we simply take this point P and form this triangle here with the origin and measure the lengths of the horizontal and vertical sides of the triangle using the coordinate lines and in this case we get X is equal to 1 and Y is equal to the square root of 3 with polar coordinates to get the our theta coordinates we used the same triangle but instead we use the length of the
+
+00:02:51
+hypotenuse to get the radius little R and we get the angle of counterclockwise rotation theta from this angle here so in this case we get a radius of 2 and an angle of PI over 3 or 60 degrees so we know how to measure points in each coordinate system using the coordinate lines as measuring sticks but consider this problem given a point with known coordinates and polar coordinates how can we get the corresponding Cartesian coordinates well the answer is to use this triangle again this triangle illustrates the relationships between X
+
+00:03:25
+Y R and theta we know that cosine is equal to adjacent over hypotenuse so that means cosine theta is equal to x over R in other words X is equal to R times cos theta similarly sine is equal to opposite over hypotenuse so that means that sine theta is equal to Y over R or in other words Y is equal to R times sine theta so these two equations help us convert from polar coordinates the R theta coordinates into Cartesian XY coordinates but what about the other direction from Cartesian to polar well in this case we know from
+
+00:04:01
+Pythagoras's theorem for right angle triangles that x squared plus y squared is equal to R squared so that means that R is equal to the positive square root of x squared plus y squared also we know that tangent is equal to opposite over adjacent so that means that tan theta is equal to Y over X or in other words theta is equal to to arctan y over X where arctan is the inverse function of tangent so these equations help us convert from Cartesian XY coordinates into the polar R theta coordinates so we're able to convert
+
+00:04:35
+between the Cartesian and polar coordinates of a point the next question to ask is how do we define basis vectors in Cartesian and polar coordinates well we can answer that by looking at coordinate systems where all the grid lines are parallel like we did in the tensors for beginner series here we have two different vector bases for two-dimensional space and their associated coordinate grid lines now notice if we make the basis vectors disappear but leave the grid lines we can still figure out what the basis
+
+00:05:04
+vectors should be we simply pick a point on the plane and follow one of the coordinate lines and this direction here gives us the e one basis vector and following this other coordinate line gives us the direction of the e two basis vector and again following this line over here gives us the direction of the e 1 tilde basis vector and this line gives us the direction of the e 2 tilde basis vector so it turns out that we can use the same reasoning for polar coordinates just as we follow the directions of the coordinate lines and
+
+00:05:36
+Cartesian coordinates to get the e ex and ey basis vectors we can follow this line to get the e our basis vector and follow this line to get the direction of the e theta basis vector and notice that since the theta coordinate lines are actually curved we need to pick the straightest possible direction when moving along the curve so this would result in a direction given by the vector tangent to the curve so we can think of basis vectors as being given by the directions we get from following the
+
+00:06:06
+coordinate curves now in the introduction video of this series I told you that this symbol here which you normally think of as a vector can be reinterpreted in tensor calculus to be a partial derivative and that might seem strange at first but I'll show you what I mean let's start with a position vector capital R in Cartesian coordinates and put its tip at the coordinates X Y so when I write this notation here I just mean a position vector which starts at the origin and at the point XY now let's take a second
+
+00:06:38
+position vector R H which is moved by some amount H in the X direction away from our the change between these two vectors is this blue vector here RH minus R now we can consider the rate of change between RH and R as H goes to zero and this is basically the partial derivative of the position vector R with respect to the x coordinate since H acts like a small step in the X direction so if we start with H equals 1 then our H minus R is this vector here and dividing by H is just dividing by 1 so the vector
+
+00:07:13
+length stays the same now if we use H equals 1/2 then our H minus R is this vector and dividing by H is dividing by 1/2 which is the same thing as multiplying by 2 so it turns out we end up with the same vector of length 1 once again and using H equals 1/4 RH minus R is this vector and dividing by H equals 1/4 is like multiplying by 4 and so we end up with this same vector of length 1 and we can continue on with a smaller and smaller H and it turns out that we get this same vector of length 1 pointing in the X direction for any
+
+00:07:49
+positive H and this vector is really just the basis vector in the X direction so this limit as H goes to 0 is really equal to this unit vector in the X direction which is the e X basis vector so as we can see this partial derivative of a position vector capital R in the direction of the x coordinate is in fact equal to the e X basis vector so this might be a strange way of thinking about things but partial derivatives and vectors are kind of like the same thing and we can follow a similar line of
+
+00:08:22
+reasoning with the y coordinate here we can start with a position vector R and take a small step in the direction of the y coordinate and then take this limit as H approaches 0 to compute the partial derivative and we can see that the result is the basis vector e Y we can also do this for polar coordinates in the radial direction which is given by the lowercase R coordinate we can take a position vector capital R take some small step H in the direction of the R coordinate and then we take the change between our H and R to get this
+
+00:08:54
+red vector and taking the limit as H approaches 0 we get the partial derivative with respect to lowercase R which is equal to the basis vector ER and what's interesting about the ER basis vector is that it changes direction from point to point in space since the R coordinate lines are always moving outward from the origin the ER basis vector always points away from the origin meaning that it can point in different directions depending on where we are in the 2d plane and again we can do the same thing for the theta
+
+00:09:26
+coordinate by moving along the theta coordinate lines the changes are H minus R and as we let H go to zero we get this vector here which is tangent to the theta coordinate curves and what's interesting about the e theta vector is that not only does it change direction from point to point it also changes lengths as we move farther away from the origin a small change in the theta coordinate results in a bigger change of the position vector as capital R moves farther and farther outward a lot of textbooks
+
+00:09:58
+actually go an extra step and force the e theta basis vector to have length 1 by dividing it by little R but I feel like this is a very artificial choice because it breaks this idea of acquitting basis vectors with partial derivatives so as you're watching this video series keep in mind that your textbooks to find the e theta vector differently than I do so the results that your textbooks give about polar coordinates might look a little different than the results I give because of this factor of the R
+
+00:10:28
+coordinate so it turns out that with Cartesian coordinates the basis vector is e^x + ey are constant everywhere in space but in polar coordinates the basis vectors ER and E theta change direction and length from point to point so to sum up what we've learned in this video we've learned the formulas for taking a point on the two-dimensional plane and converting its coordinates between Cartesian coordinates and polar coordinates and we also learned a new interpretation for basis vectors where
+
+00:10:57
+we equate basis vectors with partial derivatives of a position vector along the direction of coordinate curves so after having heard all this you might feel like this use of partial derivatives as basis vectors is kind of convoluted and silly but there's actually an extremely good reason for doing things this way and that's when we figure out the forward and backward Transformus between the old basis and the new basis and I'm going to talk about the forward and backward transforms for polar and Cartesian
+
+00:11:25
+coordinates in the next video but in the meantime try and see if you can guess what the forward transformation might be and as a hint I'll let you know that the forward transform is related to the multivariable chain rule
+

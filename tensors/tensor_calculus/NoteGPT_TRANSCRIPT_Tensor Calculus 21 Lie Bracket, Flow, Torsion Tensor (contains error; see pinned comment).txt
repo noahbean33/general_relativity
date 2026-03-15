@@ -1,0 +1,120 @@
+00:00:00
+in this video I'm going to talk about the lead bracket flow curves and torsion for the torsion part I'm expecting that you already have a good understanding of the covariant derivative so if you don't understand the covariant derivative I'd check out the links in the description for my videos on that so the lis bracket or commutator of two vector fields U and V is an operation that computes the difference between applying u to V and applying B to you the Leigh Brackett is required for
+
+00:00:31
+understanding the Riemann curvature tensor as we can see here and this tensor is related to the Ricci tensor which appears in the Einstein field equations in general relativity another reason to study the Lee bracket is so that we can get a better understanding of torsion and understand what it means for a connection to be torsion free and just a reminder I'll be using any of these three notations to denote basis vector partial derivatives all of these three symbols mean the same thing so the
+
+00:01:02
+first thing I'm going to ask is what does it mean to travel along a vector field now another way to think about traveling along a vector field is to consider flow fields and for flow fields the vector arrows tell us about velocity so if we take a look at this example vector field 1x plus x ey an object starting here would immediately travel in the direction of the arrows and it would follow a path like this so all the arrows along this path would be tangent to the path and they would indicate the
+
+00:01:35
+velocity as we travel along the path now if we want to solve for the equation of a path like this we would write the path as a position vector capital R as a function of a curved parameter lambda and all these tangent vectors along the curve would be given by the derivative D R by D lambda and we could expand this derivative out using multivariable chain rule to get this and these partial derivatives of the coordinate variables are basically like basis vectors and these derivatives with respect to lambda
+
+00:02:08
+would be the components so looking at these components we end up with two differential equations that we need to solve so DX by D lambda equals 1 is easy to solve we just take the integral with respect to lambda on both sides and we get x equals lambda plus some constant C and for dy by D lambda equals X we can replace X with lambda plus C like we have over here and again integrate both sides so we get Y of lambda equals 1/2 lambda squared plus C times lambda plus some constant K so these C and K
+
+00:02:48
+constants basically determine the starting point of the curve and we're free to pick them to be whatever we want but for simplicity I'm just going to choose the starting point at the origin 0 0 and that would mean that the C and K constants are both 0 and that would give us the curve parameterised by x of lambda equals lambda and y of lambda equals 1/2 lambda squared so this would give us a parabolic path like this and of course choosing other values for C and K would give us different starting
+
+00:03:22
+points and different possible paths so this concept we've just learned about here is called flow curves or integral curves these are curves that are always tangent to vectors in the vector field and it turns out that flow curves will be related to the physical interpretation of the Leigh Brackett which I'm going to discuss now so the Lee bracket involves this expression here now remember that in differential geometry vector fields are really derivative operators so in each term here we're taking the derivative of
+
+00:03:58
+one vector field in the direction of another vector field so let's take two vector fields U and B and we'll find the derivative of one vector field along the other so let's start by finding the change of U in the direction of B so that's denoted like this where V is acting on you like a derivative operator so we can expand each vector field out into linear combinations of basis vectors using their components and remember these basis vectors are really just partial derivative operators
+
+00:04:31
+so I'm going to rewrite them like this and now we'll take this derivative using the product rule so we differentiate the U components in the first term and differentiate the basis vector in a second and distributing the V components gives us this now we can sub in the X and y components here normally we'd get eight different terms from all these summations over I and J but most of them go to 0 and we only get two nonzero terms so the X component of U is 1 and the y component of V is X so we sub
+
+00:05:07
+those in and the derivative of 1 is just 0 so this goes to 0 and here we have the derivative of the X basis vector in the Y direction and this actually goes to 0 since the X basis vector is constant everywhere in Cartesian coordinates so in other coordinate systems a derivative like this might not go to 0 but in Cartesian coordinates it does go to 0 since basis vectors are constant everywhere so our final answer is the zero vector and next we'll do the opposite we'll find the change of V along the direction of U so
+
+00:05:45
+we go through the same steps expand as a linear combination use product rule and distribute the U components and looking at the nonzero terms we can sub in these components the X component of U which is 1 and the y component of V which is X and the derivative of X with respect to X goes to 1 and again the derivative of the Y basis vector goes to 0 since in Cartesian coordinates the Y basis vector is constant everywhere and so our final result is just the Y basis vector now let's see if the answers we got makes
+
+00:06:22
+sense so notice that if we travel in the V Direction the U vector isn't changing at all so the derivative of U in the V Direction should be the zero vector which is exactly what we got but if we move in the U Direction the V vector field is changing it's getting stronger in the y-direction so it makes sense that the derivative of B in the U Direction is the ey basis vector so these two derivatives are not the same and the fact that these two derivatives are not the same has geometrical significance
+
+00:06:58
+so I've overlaying the U and D vector fields here and let's pretend we're sitting at the lower left corner right here and now what I'm going to do is I'm going to draw the flow curves along these vector fields that would result from taking a small step along B followed by a small step along U so if we take a small step along the and travel along the flow curve we'll just move upward and the V vectors are small here so that means we have a low velocity and we don't move upward very
+
+00:07:31
+much and then taking a step along U we just move to the right so we end up right here now let's go back to our starting point and do the opposite so we travel along U to the right and then we travel along the upward but notice that the V vectors are stronger here so we travel at a higher velocity and move farther so you'll notice that where we ended up by walking along U then V is different than where we ended up by walking along V and then you write these paths don't meet each other at the same
+
+00:08:07
+point these four lines don't give us a nice closed rectangle instead we get an open shape that has a gap right here and so the lead bracket is defined like this it just computes the difference between these two derivatives and the result of the Li bracket is actually the separation between these two points so when we travel along U then V and travel along the than you the Li bracket will give us the separation vector between these two paths and in this case the separation vector is just the ey vector
+
+00:08:44
+now we can go through the same process with the you vector field and this new W vector field which equals y ey and so if you go through the computations you'll find that W acting on u and u acting on W are both equal to 0 so they're both equal to each other and again if we look at the flow curves we can go along W and here the velocity is increasing as we move upward so we start to move slowly and then move more quickly and then we can move along U and this actually brings us to the exact
+
+00:09:20
+same point as moving along U and then moving along W so the two final points actually end up being the same and this rectangle closes properly without any gaps and that's because the Li bracket for the U and W vector fields is 0 so the separation vector between this point and this point is the zero vector and that means that there's no gap and the rectangle closes properly so looking at these two examples here each has a pair of vector fields and the first example U of V is not equal to V of U and if we
+
+00:09:59
+look at the flows along V than you and you then V we end up with a gap the rectangle doesn't close properly and this gap here is exactly described by the result of the Li bracket the Y basis vector but since u of W equals W of you when we look at the two flows of W than you and you then W we end up at the same point the rectangle closes properly without a gap because the Li bracket is equal to 0 and this is really what the Li bracket does for us the Lee bracket takes two vector fields and tells us if the rectangle of flow
+
+00:10:37
+curves closes properly if the Lee bracket is nonzero like here we end up with a gap but if the Li bracket does equal zero we get a nice closed rectangle without a gap now another way to visualize this is to take vectors from the U and V vector fields like this now if we move along you the D vector is going to change a little bit and the change is given by how much it moves away from this parallel line so the change of V in the U Direction is given by this vector here likewise if we're moving along V and
+
+00:11:14
+look at the U vector it will have changed somewhat and the change is given by this vector which is the derivative of U along V and this gap here this gap indicates the failure of the shape to close properly and this gap is really just the difference between U of V and V of U which by definition is the Li bracket of U and V and this is also called the commutator of und so if this Lee bracket vector was the zero vector then this parallelogram would close properly so this has really zoomed into a small region here if we zoomed out and
+
+00:11:53
+looked at the bigger vector field these flow curves do not close properly if the Lee bracket is nonzero and one interesting fact that I'll point out is that coordinate lines are really just the flow curves along basis vectors right the coordinate lines in Cartesian space are just the flows along the x and y basis vectors and in polar coordinates these radial lines are just the flow curves along the our basis vectors and these circles are just the flow curves along the theta basis vectors and the
+
+00:12:29
+same is true for any coordinate system so you'll notice that for coordinate lines these flow curves always form these little rectangles that close without gaps if they didn't close properly we'd end up with a lot of really weird and crazy coordinate lines that don't really make a ton of sense so because coordinate flow curves always close that means that the Libra k't of basis vectors always has to be zero right if basis vectors are defined tangent to coordinate curves since the coordinate curves always close
+
+00:13:03
+without a gap that means that the lis bracket of basis vectors always has to be zero in fact polar coordinates are a very interesting example of a ly bracket that goes to zero when it's not totally obvious so the main conclusion here is that the lead racket also called the vector field commutator measures how much field flow lines fail to close together in a box with four sides and for the last part of this video I'm going to talk about the torsion tensor so we've already defined the lis bracket of U and V as the
+
+00:13:42
+difference between u acting on V and B acting on u and to define the torsion tensor we need to consider the covariant derivative of V in the direction u and the covariant derivative of U in the direction B so there are three different things that contribute to what the result of this formula is there is the two vector fields U and V and there's also the connection itself which is defined by the connection coefficients so just to review the formula for the covariant derivative we can expand the U
+
+00:14:15
+and B vectors as linear combinations and we can put the U components out in front by linearity and then since we have a product here we use the product rule and we expand the derivative using the connection coefficients and here the covariant derivative of a scalar is just the partial derivative and changing these indexes to K we get this formula and you can check out videos seventeen to twenty if you want more info on the covariant derivative so recall that there are many possible ways to define
+
+00:14:50
+the connection coefficients but the main definition is given by the levy chibita connection seen here and also recall the condition for parallel transporting a vector V in the direction u is to make this covariant derivative zero and recall that different definitions for the connection coefficients will give us different instructions for parallel transporting a vector so on a sphere with the levy chavita connection parallel transport looks like this but with the boring connection where the connection coefficients are all equal to
+
+00:15:25
+zero in these standard coordinates parallel transport looks like this so the particular Connection we use will give us different definitions of parallel transport so here we see a parallelogram that showcases the standard idea of parallel lines and parallel transporting the U vector along V would just result in this vector here but if we were to use a different connection parallel transporting you along the might give us this and parallel transporting V along you could give us this and if we used yet another
+
+00:16:02
+different Connection we might get these results for parallel transport so in polar coordinates using the levy chavita connection parallel transporting a vector around a circle would look like this but if we use the boring connection with all zeroes parallel transporting a vector around a circle would look like this so again different definitions for the connection coefficients will give us different instructions for performing parallel transport so let's say we have vector fields U and B and we have a
+
+00:16:38
+connection that gives these results for parallel transport of vectors along each other so since we're doing parallel transport these would be the vectors for which the covariant derivative would be 0 for this particular choice of connection coefficients now what we'd like to do is figure out the seperation between these two vectors and it turns out we can do this by using the covariant derivatives of the vector fields U and B so let's say that the actual vectors in the vector field look
+
+00:17:11
+like this we can measure how much these vectors deviate from parallel transport just by looking at the result of the covariant derivatives so remember that these dashed lines would be the result of parallel transporting the vector and that's what we get when the covariant derivative is zero these difference vectors tell us how much the vector fields U and B deviate away from parallel transport so since these covariant derivatives are nonzero that means that the vector fields are deviating away from these
+
+00:17:48
+dashed lines also as we learned previously the separation vector between these two vector tips is just the Leigh Brackett finally this blue separation vector here which I'm calling T of U and V is given by this formula here so it's this vector minus this vector minus this vector so this blue operator T here is called the torsion tensor and the torsion tensor acts on two vector fields and gives us the separation vector that results when the two vector fields are parallel transported along each other as
+
+00:18:32
+we see here so this is the formula for the torsion tensor acting on the vector fields U and V and if we set this result to be the zero vector then this means that the separation between the parallel transported vectors is zero and in that case we get a completely closed four-sided shape another way of writing this formula is by saying that the difference of the covariant derivatives is equal to the Li bracket which is the difference of the ordinary derivatives and visualizing this formula looks like
+
+00:19:10
+this so the difference between these covariant derivative vectors is the same as the lead racket which is the separation between the vector field vectors so when this result is 0 for all vector fields we say that the connection is torsion free and always remember when we talk about something being torsion free we're always talking about the connection torsion free is a property of the connection and it does not depend on the vector fields that we use so that's the geometric intuition but let's see how we
+
+00:19:47
+can get the torsion tensors components so the formula is just the difference of the covariant derivatives minus the difference of the ordinary derivatives which is the Li bracket so we can expand the covariant derivatives like this and expand the ordinary derivatives like this and we can again expand these ordinary derivatives using product rule now this term over here applying the I basis derivative to the J basis derivative this is the same thing as applying the J basis derivative to the I basis derivative and we can also
+
+00:20:25
+swap the order of these components so we find that this term and this term are the same and since we're subtracting them they cancel out and if we distribute this basis vector to both terms in the covariant derivative and also change these summation indexes from J to K we see that this cancels with this and this cancels with this so the result of the torsion tensor acting on the vectors U and B gives us this formula and in the second term I'm going to swap the inj summation indexes and now we can factor out UI VJ and partial
+
+00:21:07
+K from both of these terms and we get this so this difference of the ki j and k ji connection coefficients are the components of the torsion tensor TK IJ and recall that we said that the torsion tensor only depends on the connection never on the vector fields so here we can see that the torsion tensor only depends on the connection coefficients not on the vector field components and again if the connection is torsion free that means that T of U and B is to zero and that means that the components of the torsion tensor must
+
+00:21:47
+always be zero so when a connection is torsion free we're really just saying that we can swap the lower indexes of the connection coefficients so to summarize this video we learned that flow curves are curves that are always tangent to the vectors in a vector field and we learn that given two vector fields U and V if we pick any point and try traveling along the flow curves of U then V and compare it to traveling along the flow curves of the than u then the separation between the two resulting
+
+00:22:23
+points will be given by the lead bracket of the vector fields U and V which is really just the commutator of the vector fields and if we zoom in really close to a point like this we can also visualize the Li bracket like this as the separation vector between the vector V when we travel along U and the vector u when we travel along V and if the Li bracket is equal to zero these flow curves will close together in a nice four-sided shape and these vectors also close together in a four-sided shape finally we learned about the torsion
+
+00:23:02
+tensor T the torsion tensor takes two vector fields U and V as inputs and returns the separation between the parallel transport of U along V and the parallel transport of V along U and the separation vector is given by this formula here and the torsion tensor only depends on the connection itself not on the vector fields that we use and as we can see the components of the torsion tensor only depend on the connection coefficients and if a connection is torsion free that means that the U and V vectors and they're parallel transported
+
+00:23:42
+versions form a closed four-sided shape torsion free also means that we can swap the lower indexes on the connection coefficients in the next video I'm going to discuss the Riemann curvature tensor which helps us determine if a space is curved or flat if you like my videos please check the links in the description and consider supporting me
+

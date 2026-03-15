@@ -1,0 +1,81 @@
+00:00:00
+in this video I'm going to expand on my explanation of the differences between the gradient operator del and the D operator the exterior derivative the original video on del versus D is in a link in the description so please watch that one first if you haven't already so if you watched the last video you should already know the basic differences between del F and D F del F which I also called the gradient of F is a vector field where the vector arrows point toward the positive values of F on the
+
+00:00:29
+other hand DF is a co vector field where the co vector curves are oriented towards the positive values of F and the way we convert between the components of del F and DF are by using these formulas here which use the components of the metric tensor and the inverse metric tensor for the conversions now in this video I'd like to cover two other things I'd like to do a more formal derivation of this formula for the components of DF using the tensor product and if you aren't familiar with the tensor product I have
+
+00:00:59
+links in the description to my videos that explain that and the second thing I'd like to do is to give some examples of computing del F in different coordinate systems so first I'm going to give a deeper explanation of this formula so to explain this formula we're going to need to understand the tensor product of two Co vectors so given this vector basis here u 1 and e 2 we can define the cove Ector basis epsilon 1 epsilon 2 using this formula here so these are the basis vectors e1 e2 and
+
+00:01:30
+these are the basis Co vectors epsilon 1 epsilon 2 and to figure out the output of a Cove Ector stack acting on some vector V we just count the number of lines that the vector pierces so in this example the output would be 2 so given some vectors and Co vectors we know how to figure out the outputs now what the tensor product of 2 Co vectors creates is a sort of double Co vector it's a function that takes two vector inputs and to compute the output we just pass the vectors to the Co vectors like this
+
+00:02:02
+and we just multiply the outputs of each of these two code vectors here so speaking informally these four tensor products of the epsilon basis Co vectors are sort of kind of like these four matrices here so this tensor product of Co vectors acting on the vectors V and W if we write this in array notation we would write it like this using this matrix for epsilon 1 tensor with epsilon 2 and turning through the array multiplications we get the first component of V multiplied by the second component of W and that is exactly the
+
+00:02:38
+output of epsilon 1 acting on V multiplied by the output of epsilon 2 acting on W so when we want to compute the output of the metric tensor acting on two vectors V and W the output is equal to this summation formula here or equivalently we could write it out an array notation like this so this metric tensor array here can be written as a linear combination of these matrices so in a sense the metric tensor which takes two vector inputs is sort of like a double Co vector and we can write out the metric tensor as a linear
+
+00:03:12
+combination of tensor products of Co vectors where each of these tensor products is a bit like one of the matrices I showed earlier and we can write this linear combination using the Einstein notation like this so the V and W vectors can be written as a linear combination of basis vectors which can be written in Einstein's like this and the metric tensor which can be written as a linear combination of Co vector tensor products can be written in Einstein's like this so when we want to compute V dot W which is equal to the
+
+00:03:45
+metric tensor acting on V and W we can just expand GB and W out into their linear combinations and then we can pass these vectors to the tensor product of Co vectors like this and since the Co vectors are linear we can take out these scalar constants and put them in front and these by definition will become chroniker deltas and finally we can use the index cancellation rule for kronecker deltas to get this final formula here so this is the formula for the dot product of V and W now if we want to compute the components of the Co
+
+00:04:20
+vector V dot something we can just give the metric tensor one vector input and leave the second vector input slot empty and so we can expand out the metric tensor and the vector V as linear combinations and we can pass this vector to the first co vector as an input and by linearity we can take these scalars out in front and this again becomes a chronicler Delta and we can cancel out the indexes to get this so as you can see the co vector V dot something can be expanded out as a linear combination of
+
+00:04:55
+the basis Co vectors which are the epsilon s-- so that derivation relied on an understanding that the metric tensor is a linear combination of Co vector tensor products and also knowing how basis Co vectors act on basis vectors now to get the calculus versions of these formulas we replace these bases Co vectors with the basis Co vector fields DCI and DC J where C stands for Cartesian and C 1 equals x and C 2 equals Y and these DC Co vector fields are defined by this formula here where DC J acting on the partial derivative of
+
+00:05:33
+C I gives us the Kronecker Delta and these formulas are actually true for any coordinate system not just the Cartesian one but I'm going to be using the Cartesian coordinates just to make things simple so we can use a similar line of thought when calculating del F dot V which is the same as the metric tensor acting on Del F and V we just expand everything out as linear combinations where G is a linear combination of co vector tensor products and the vectors are expanded out as linear combinations of basis vectors
+
+00:06:05
+which are these partial derivative operators and we can get the KO vectors to act on the vectors like this and then take the scalars out in front and then turn these into chroniker deltas and then cancel these indexes to get this formula and we saw this in the previous video and if we want to get the components of del F dot something we just remove the vector input and go through the exact same steps so expand in linear combinations give the vector to the co vector pull these scalars out in front turn this into
+
+00:06:38
+chroniker Delta and then cancel the indexes and so you can see that del f dot something is really just a linear combination of basis Co vector fields DC J with these as the components so I've shown you that this formula is correct now I'm going to go through a couple examples of computing del F in two different coordinate systems so this will involve the C coordinate system and the D coordinate system and in each one we'll need to compute the inverse metric tensor components and these partial
+
+00:07:12
+derivatives and remember that these basis vectors are just the same things as these partial derivative operators so the C coordinate system will be our standard Cartesian coordinate system where C 1 is just X and C 2 is just Y and the basis vectors are these partial derivatives here now our D coordinate system will be given by these transformation equations here so we basically just double the number of grid lines so you can see that in the SI system this point would have the coordinates 1 1 but in the D coordinate
+
+00:07:47
+system the same point would have the coordinates 2 2 so just as this formula says we basically just multiplied the C coordinates by 2 to get the D coordinates of the same point and the reverse transformation would be the opposite just multiplying by 1/2 so given these coordinate transformations we can compute the Jacobian matrix also called the forward transformation matrix and if you compute all these derivatives you'll find that you get this matrix here now remember that we can use the Jacobian matrix to convert between the
+
+00:08:20
+basis vectors in each coordinate system and since the Jacobian matrix is just the identity matrix multiplied by 1/2 we can write these Jacobian matrix components as the Kronecker Delta multiplied by 1/2 and if we cancel these indexes we get this formula here and this makes sense it's telling us that the D basis vectors are half as long as the C basis vectors so remember this formula because we're going to be using it later now let's consider the metric tensor tricks for the C coordinate system
+
+00:08:53
+remember that the metric tensor matrix is just a matrix of the basis vector dot products and for the Cartesian coordinate system where the basis vectors are orthonormal so that they have length 1 and are perpendicular to each other the metric tensor is just the identity matrix so this is basically by definition for the Cartesian coordinate system the metric tensor is the identity matrix or if you like the components are just the Kronecker Delta now let's compute the metric tensor components for
+
+00:09:23
+the D coordinate system these are just the basis vector dot products for the D system now remember in the D system the D basis vectors are half the length of the C basis vectors so we can write them like this and we can pull both of these factors out in front and multiply them to get 1/4 and these dot products of the C basis vectors are just the metric tensor components in the SI system which if you recall this is just the Kronecker Delta so the metric tensor components in the D system are the Kronecker Delta x
+
+00:09:58
+1/4 so it's basically a matrix with 1/4 along the diagonal and the values of 1/4 makes sense since you'll notice that this square made by the basis D vectors is 1/4 the size of this square made by these C basis vectors now let's take a look at the inverse metric tensor for the Cartesian system the metric tensor components are the Kronecker Delta so that means that the inverse metric tensor components are also the Kronecker Delta since the inverse of the identity matrix is also the identity matrix now
+
+00:10:34
+for the D system if the metric tensor components are the Kronecker Delta with a factor of 1/4 here then the inverse metric tensor components will be the chronicler Delta with a factor of 4 because the diagonal matrix of fours is the inverse of a diagonal matrix with 1 quarters ok so that's basically everything we need to figure out about the coordinate systems themselves now let's try looking at a function so let's say we have this function in the C orna system here now if we wanted to
+
+00:11:06
+visualize this the function would look like this where red are positive values and blue are negative values and white represents the value of zero so in order to get a formula for the function in the D coordinates we need to do these substitutions for the c1 and c2 variables and so we get this so the formulas for F in the two coordinate systems are different now remember to compute the LF we need the partial derivatives of F so it's not too hard to see that if we compute these partial derivatives we get these values here
+
+00:11:42
+okay so we now have everything we need to compute del F so let's compute it in the SI system first so we know that the inverse metric tensor components are just the Kronecker Delta so we can write this and cancel the J indexes to get this now if we expand the summation explicitly in terms of c1 and c2 we'll get this and we can replace these partial derivatives of F with one and two as we calculated before so this shows us that the del F vector field has components one and two now let's compute
+
+00:12:18
+del F in the D system so the inverse metric tensor components are the Kronecker Delta x 4 and again we can cancel out these J indexes and again we can expand this summation out explicitly in terms of D 1 and D 2 and we get this and we can replace these partial derivatives with the values of 1 half and 1 and if we do these multiplications we see that del F in the D coordinate system has the components 2 and 4 which we could also write like this so in the C coordinate system the components of del F would be 1 2 so that would be a
+
+00:12:58
+vector that looks like this and of course since del F is a vector field that vector is repeated everywhere in space but in the D system the components are 2 & 4 which seems different but because the basis vectors in the D system are half as long we end up getting the exact same vector field as before so the vector field del F is invariant the geometric vectors are always the same and don't depend on the coordinate system but the components of del F might look different in different coordinate systems because the basis
+
+00:13:36
+vectors in each coordinate system are different and so to get the correct components of del F in a given coordinate system we really do need both the partial derivatives of the function f and the inverse metric tensor components for that coordinate system if we forget about the inverse metric tensor components then we're going to end up with the wrong answer so again all these extra factors in the formulas for del F in cylindrical and spherical coordinates these are just components of the inverse metric tensor for that
+
+00:14:07
+coordinate system so keep in mind that if a textbook ever tells you that the gradient of a function looks like this or that the del operator is like a list of partial derivative operators this is really only true in the cartesian coordinate system where the inverse metric tensor components are the identity matrix and they don't really matter that much but in general in most other coordinate systems this isn't true and we'll need to use the inverse metric tensor components to get the correct
+
+00:14:37
+formula for del F
+

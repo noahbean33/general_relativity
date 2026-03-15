@@ -1,0 +1,123 @@
+00:00:00
+in this video I'm going to discuss the intrinsic definition of the covariant derivative this is a continuation of videos 17 and 18 where I discussed the flat space and curved space definitions of the covariant derivative so please watch those first if you haven't already the links to those videos are in the description I'm also going to talk a little bit about geodesics in this video but my main videos on geodesics are videos 15 and 16 so check those out if you want to learn about geodesics so
+
+00:00:29
+previously we learned that the covariant derivative on a curved surface is the rate of change of a vector field V in some direction W with the normal component of the rate of change subtracted so this is the covariant derivative in the direction of the U coordinate and we can also write it using this expression where the Christoffel symbols represent this formula we also learned that when the covariant derivative is zero it means we're parallel transporting a vector along a curve and I showed you some
+
+00:00:57
+examples of what parallel transport looks like and one viewer actually sent me this animation which conveys parallel transport on the sphere really nicely there's a link to this animation in the description so in this video we're going to move on to our third definition of the covariant derivative which is the intrinsic definition for curved spaces so I'm just going to quickly remind you that there's generally two ways of looking at curved spaces there's the extrinsic approach where you look at a
+
+00:01:27
+curved surface living in 3d space and you often work with XYZ coordinates and 3d position vectors then there's also the intrinsic approach where you pretend like you're a little bug that lives on the surface and you have no idea that the outside world exists so instead of working with XYZ coordinates in 3d you would only work with the coordinate lines on the surface labeled here as U and V and for this video instead of calling the coordinates U and V I'm going to be calling them u1 and u2
+
+00:01:59
+instead so when it comes to intrinsic geometry a lot of what we've learned about the covariant derivative is still the same the formula is still the same and the concept of parallel transport is still the same the thing that's going to change however is our formula for the Christoffel symbols you'll notice that the formula for the Christoffel symbols has a dot product in it and this dot product is actually a big problem for intrinsic space previously when we calculated the Christoffel symbols on
+
+00:02:30
+the sphere we expanded all the basis vectors and basis vector derivatives out in terms of the XYZ basis and doing this expansion is what let us compute the dot products but now with intrinsic space we basically have to pretend that the XYZ variables don't exist we can only see the coordinate lines directly on the surface so we can't expand these vectors out in terms of X Y Z and so getting the Christoffel symbols is going to be more difficult in intrinsic geometry now before I show you how to compute the
+
+00:03:02
+Christoffel symbols I think it's worth asking why we should care about intrinsic geometry in the first place I mean if extrinsic geometry gets the job done why would we bother making our lives more difficult with intrinsic geometry well one of the main applications of the covariant derivative is in general relativity where space-time is a curved four dimensional space and when Einstein came up with general relativity he did not think of four-dimensional space-time as living in some sort of higher
+
+00:03:31
+dimensional space he didn't make up some higher dimensional origin that we could use to point position vectors at our universe he just thought of space-time as intrinsically curved with no outside space existing outside our universe at all so it's important for us to study intrinsically curved spaces because they'll help us understand four-dimensional curved space-time and that means we're going to have to abandon the idea of extrinsic XYZ coordinates and the origin and position
+
+00:04:00
+vectors that extend from the origin all we really have is a space with curved coordinate lines so this brings up one of the main differences between extrinsic and intrinsic spaces in extrinsic geometry we defined basis vectors as the rate of change of a position vector capital R along curves so the basis vectors end up being the tangent vectors along the curve but now with intrinsic geometry we don't really have an Origin that we can use to extend position vectors from since the space is curved so we can no longer think of
+
+00:04:34
+basis vectors as derivatives of a position vector capital R like we do in extrinsic geometry where we work with vector spaces like r2 or r3 instead with intrinsic geometry the basis vectors were using are the partial derivative operators themselves so these derivative operators point in a specific direction just like ordinary vectors point in a specific direction so these derivative operators would point in the directions of the u1 and u2 coordinates and these basis vectors live in the vector space
+
+00:05:09
+called the tangent vector space at some point P so given a curved space M there is a different tangent vector space TPM at every point P on the curved space and we use M here to stand for the word manifold and a manifold is basically just another word for a curved space okay so let's start computing a formula for the covariant derivative for intrinsically curved spaces so before we said that the covariant derivative of a vector field is just the ordinary derivative with the normal component of
+
+00:05:42
+the rate of change subtracted but since we're dealing with intrinsic geometry now there's no such thing as the normal vector since using normal vectors would imply that there's some sort of outside space that we can point into so we're just going to ignore the normal vector part of this formula so we just expand the vector field into its components and take the derivative using product rule so we get a component derivative term and a basis vector derivative term and recall previously that we expanded out
+
+00:06:13
+this basis vector derivative as a linear combination of the basis vectors and the normal vector but again in intrinsic geometry there's no such thing as the normal vector so we just ignore this so we expand the basis vector derivatives entirely in terms of the basis vectors using the Christoffel symbols as the coefficients and we could also write this using the Einstein summation like this so subbing this in and changing this summation index here 2k we end up with this final expression for the covariant
+
+00:06:46
+derivative and this is pretty similar to what we saw before but the problem ends up being with these Christoffel symbols before we derived an expression for the Christoffel symbols by taking the dot product on both sides with a basis vector then doing a summation with the inverse metric tensor to get this formula but again the problem here is that we have a dot product of basis vectors and basis vector derivatives and since we no longer have the XYZ extrinsic basis we can't easily compute these dot products so we need a new
+
+00:07:18
+strategy for computing the Christoffel symbols so to get the intrinsic version of the Christoffel symbol formula we're going to need to recognize a couple facts first we need to remember that the metric tensor components are just the dot products of the basis vectors and since the order of the dot product doesn't matter the metric tensor components gij are the same as the components gji so the metric tensor components are symmetric in the I and J indexes and if you prefer writing things
+
+00:07:52
+using the derivative operator notation for the basis vectors you'd write things like this and you might ask well how do we compute this dot product if we can't expand the vectors in Xyz space well the metric tensor is so important that we require the dot products of AI and EJ to be defined for us so we can either just declare a metric tensor that we already know so like this metric tensor for the sphere or sometimes the laws of physics can help us get the metric tensor like we do here with the
+
+00:08:27
+Einstein field equations in general relativity which help us solve for the metric tensor components here either way an intrinsic geometry the metric tensor needs to be given to us somehow the second thing I want you to notice is that the derivative of the EJ basis vector in the direction of the UI coordinate really just means this second order derivative here and since the or differentiation doesn't matter that means that this is also equal to the derivative of the e aí basis vector in the UJ direction so if we look at these
+
+00:09:04
+two basis vector derivative expressions expanded using the Christoffel symbols and you'll notice that the I and J indexes are reversed here since this derivative is equal to this derivative that means that these two Christoffel symbols are the same so the Christoffel symbols are symmetric in their lower indexes if we swap the lower indexes the Christoffel symbol stays the same so given these two facts and a bit of mathematical ingenuity we can actually solve for the Christoffel symbols so we
+
+00:09:38
+start by taking the derivative of the IJ metric tensor components in the direction of the UK coordinate and remember the metric tensor is just the dot product of the basis vectors now to differentiate this we're going to sort of use a special version of the product rule that lets us do this so this is sort of like the ordinary product rule where we have a sum of two terms and the first term the derivative is applied to the first factor and in the second term the derivative is applied to the second
+
+00:10:10
+factor the difference here is that this product rule is working for the dot product of vectors instead of working for ordinary multiplication so the property that lets us do this is called metric compatibility so this metric compatibility isn't too important right now but it's going to be very important in the next video when I cover the abstract definition of the covariant derivative anyway we can replace these basis vector derivatives with the Christoffel symbol formula and the Christoffel symbols are just scalars so
+
+00:10:43
+we can take them out in front and these dot products are just the metric tensor components now remember we're free to switch the indexes of the metric tensor so I'm going to go ahead and switch the L and J indexes of the metric tensor here okay so we have this formula here where the derivative of the I J of the metric tensor with respect to the K coordinate gives us this with summations over the L index now I'm actually going to write out this same formula twice more but with different
+
+00:11:18
+indexes so here I have the derivative of K I with respect to J and here I have the derivative of JK with respect to I and those would give us similar formulas just with the ijk indexes shuffled around a bit now I'm going to color code the terms we have in these three formulas you'll notice that the blue terms here are actually the same right since we're free to swap the lower indexes of the Christoffel symbols these two terms highlighted in blue are actually equal and these red terms are
+
+00:11:57
+also the same again since we can swap the lower indexes of the Christoffel symbols and again these green terms are also the same so if we do this derivative plus this derivative minus this derivative we'd get this and looking at this expression the blue terms cancel out the green terms cancel out and the red terms get added together so we have this and again these red terms are the same so I'm just going to combine them together and I'm also going to sum on both sides with the inverse
+
+00:12:32
+metric tensor and that will cause the metric and inverse metric to cancel out and become a chronic or Delta on the left side here and you'll notice I've also divided by 2 on both sides so we get a factor of 1/2 over here and using the Kronecker Delta index cancellation rule I can cancel the l's and write em and we get this so this is our new formula for the Christoffel symbols and this completes our definition of the covariant derivative that works for any intrinsically curved space as long as
+
+00:13:07
+we're given the metric tensor so let's do a sanity check and make sure this formula works you'll remember in the last video we computed the Christoffel symbols on the sphere to be these so let's recompute these symbols using the new formula so we know the metric tensor for the sphere is this and this would be the corresponding inverse metric tensor now if we took the derivative of these tensor components the only nonzero term would be taking the derivative of the g22 component with
+
+00:13:40
+respect to the U 1 variable and that would give us 2 times sine of U 1 times coast of U 1 which would also be equal to sine of 2 times u 1 all the other metric tensor component derivatives would be 0 for all other combinations of ijk so given these two facts let's compute the Christoffel symbol for I equals to J equals to K equals 1 so we sub in 2 for I 2 for J and 1 for K now this derivative is the special nonzero derivative we have here partial G 2 2 by partial u 1 and all the other derivatives go to 0 and looking at the
+
+00:14:23
+inverse metric tensor here in the second column the only nonzero element is the 2 2 element at the bottom so this tells us that M equals 2 is the only M that we care about because the G 1 2 component just goes to 0 so we sub this term in for the G 2 2 term of the inverse metric components so this is the formula for the Christoffel symbol 2 2 1 and we can cancel the 1/2 and the 2 and we can cancel out one of the signs here so we get that the two-two-one Christoffel symbol equals coasts over sign or in
+
+00:15:02
+other words cotangent of U 1 which is exactly what we would expect and that's also equal to the 2 1 to Christoffel symbols since we can swap the bottom indexes without changing the answer now let's try the I equals 1 J equals to K equals 2 case so subbing in we get this and all the derivatives go to 0 except the partial G 2 2 by partial you wonder and now in the first column of the inverse metric only the g11 element is nonzero so this tells us that we only care about M equals 1 so we sub this
+
+00:15:42
+value in for the g11 metric component and taking this result we can turn all this into sine of 2 times u 1 which gives us the answer that we were expecting so if you worked it out all the other Christoffel symbols go to 0 and we get the exact same Christoffel symbols as before except this time we computed them completely intrinsically without using the X Y Zed variables so the intrinsic formula for the Christoffel symbols gave us the same result as the extrinsic formula and this isn't too surprising since if we recall
+
+00:16:18
+that the derivative of the gij metric component is given by this and also recall that partial ej by partial UI is equal to partial AI by partial UJ when we compute this expression here we get this and after color coding the terms that are equal the blue terms will cancel the green terms will cancel and the red terms will add together to give us this so these three metric derivatives added and subtracted together are equal to this and so you can see that when converting this into this and canceling the 1/2 and 2 we end
+
+00:16:57
+up with the extrinsic formula that we're used to so it's possible to start with the intrinsic formula for the Christoffel symbols and derive the extrinsic formula we saw in the last video so to summarize this video in intrinsic geometry we can't make any reference to the outside space so that means that there are no surface normal vectors and no position vectors we require the basis vectors at a point to be the partial derivative operators of the coordinate variables at that point and using the fact that the metric
+
+00:17:32
+tensor is symmetric in its indexes that the Christoffel symbols are symmetric and their lower indexes and also using this special metric compatibility property we can derive the intrinsic formula for the Christoffel symbols and this works for both intrinsic and extrinsic cases it's just that the intrinsic case only relies on the metric tensor being defined and doesn't depend on our ability to use the XYZ variables in the outside space and since the covariant derivative formulas end up being the same for both intrinsic
+
+00:18:05
+and extrinsic spaces the idea of parallel transport works the same for both so this would be a vector getting parallel transported along the equator of a sphere and this would be the vector getting parallel transported along a circle of latitude at a higher latitude now I'm also going to throw in one last fact about geodesics again I talked about geodesics a lot in videos 15 and 16 but the covariant derivative gives us a new way to define geodesics that we haven't seen before so remember geodesics are the curves we
+
+00:18:42
+get when we just walk in a forward direction in a curved space and we can define this idea of walking forward using the covariant derivative the idea of walking forward on a curved space is captured mathematically by the idea of parallel transporting a vector along itself so remember parallel transport means that the covariant derivative of a vector is equal to zero so when we say that a vector is parallel transported along itself we mean that the vector that we're taking the covariant derivative of and the direction that we
+
+00:19:20
+choose are the same so when the covariant derivative of a vector in the direction of itself is equal to zero the resulting curve that we get is a geodesic curve so if our curve is a function of some curved parameter lambda then the tangent vectors along the curve would be given by the derivative operator D by D lambda so a geodesic curve is described by the covariant derivative of the D by D lambda vector in the direction of the D by D lambda vector and the geodesic would set this covariant derivative equal
+
+00:19:55
+to zero so to take this covariant derivative we just take the D by D lambda vector and differentiate it in the direction of the D by D lambda vector now we can expand D by D lambda out using multivariable chain rule and write it as a linear combination of these basis vectors and remember these are defined as the EJ basis vectors now to take the derivative of this with respect to lambda we need to use product rule so we get two terms the first where we take the derivative of this and the second where we take the derivative of
+
+00:20:30
+this now here we're just taking the derivative with respect to lambda twice so we can rewrite it as a second order derivative like this and to figure out what this second term means we can again replace this D by D lambda vector as a linear combination of these basis vectors using multivariable chain rule and remember this is just like the EEI basis vector so now here we have two derivatives and now we can turn this into a second-order derivative which differentiates with respect to you J and
+
+00:21:04
+UI okay so we have this expression here and I'm just going to rewrite this and this using the vector notation for the basis vectors it's still the same thing I'm just writing it out slightly differently and remember we can expand these basis vector derivatives out using the Christoffel symbols like this so subbing this into here we'd get this and finally replacing this summation of J as a summation over K we can factor out the EK basis vector and get this and if you've watched my previous videos on
+
+00:21:40
+geodesics this formula should look very familiar to you this set of differential equations are the geodesic equations so any curve parameterised by lambda that satisfies these equations is considered a geodesic it's just that now we're defining a geodesic to be a curve resulting from parallel transporting a vector along itself and speaking in plain English a geodesic is just a curve that get from walking straight forward in a curved space so it's like the straightest possible path and a curved
+
+00:22:14
+space now if this formula looks like a bunch of nonsense to you I would encourage you to watch videos fifteen and sixteen to learn more about geodesics I go through an example of finding geodesics on the sphere in video 16 so that was the intrinsic definition of the covariant derivative and a little bit of information on geodesics in the next and final video on the covariant derivative I will give you the abstract definition of the covariant derivative which lets us take the covariant derivative of general tensor fields not
+
+00:22:47
+just vector fields
+

@@ -1,0 +1,186 @@
+00:00:00
+in this video I'm going to introduce the covariant derivative for curved surfaces and also talk about parallel transport if you haven't done so already I'd highly recommend you watch the previous video video 17 which describes the covariant derivative for flat space and the link to that video is in the description so in the previous video I told you that in flat space the covariant derivative of a vector field is just the ordinary derivative where we make sure to use the product rule to
+
+00:00:28
+differentiate both the vector components and the basis vectors so if we want to differentiate a vector field V we expand the vector field out as a linear combination of basis vectors and use the product rule to take this derivative which gives us both a component derivative term and a basis vector derivative term and we also sometimes write this derivative like this using the Christoffel symbols which are defined with this formula which expands the basis vector derivatives as linear combinations of the basis vectors and we
+
+00:00:58
+can use similar formulas for any coordinate system that we choose so this was the flat space definition in this video I'm going to cover the curved surface definition of the covariant derivative also called the extrinsic definition so we're going to be looking at the rates of change of vector fields on curved surfaces like the ones you see here and we're going to be using the sphere as our main example of a surface in this video so dealing with vector fields on curved surfaces turns out to
+
+00:01:26
+be a lot trickier than dealing with vector fields in flat space and I'll try to explain why that's the case so if we look at these two vector fields in flat space we can clearly see that the first vector field is constant because all the vector arrows have the same length and direction and the second vector field is not constant because the vector arrows are changing length and direction so it makes sense that the covariant derivative of the first vector field is zero since the rate of change
+
+00:01:55
+of the vectors is zero and likewise the covariant derivative of the second vector field is nonzero because the vectors are changing so again when I say this vector field is constant I'm saying that all the vectors are the same now I'm going to ask what might seem like a silly question how do I know that this blue vector and this red vector are the same how do I know for sure that these are the same vector well what I can do is I can just sort of slide this red vector over here and I can see that it
+
+00:02:26
+overlaps perfectly with the blue vector and that's how I know that they're the same I slide one vector over to the other vector and compare them now let's consider instead a vector field that exists on the surface of this 2d sphere so every point on the sphere has a vector associated with it now I'll ask the same question as before if we have this red vector and this blue vector how can we tell if they're the same so you might be tempted to do the same thing we did before just take the red vector
+
+00:02:56
+slide it over to the blue vector and see that they overlap perfectly and using this approach we might think yes the red and blue vectors are the same but there's a problem with this method to see why pretend the sphere is like a planet and imagine yourself standing here at the North Pole at the red point what would this red vector look like to you well the red vector would be pointing off towards the horizon right now if you were standing here at the blue point on the equator what would this blue vector look like
+
+00:03:27
+well this blue vector would be pointing up toward the sky so from the point of view of a person living on this planet the red vector and the blue vector are not the same one points off to the horizon and the other points up toward the sky so if we're going to invent a derivative that makes sense for the inhabitants of this planet we need to invent a new way of comparing vectors on the sphere that works for the people living on the sphere so I'm going to introduce an idea called parallel
+
+00:03:57
+transport parallel transport is a way of moving vectors around on a surface that sort of keeps them straight and this is how it works imagine you're at the red point holding a sphere the sphere represents our vector we want to transport the sphere down to the blue point to do this we follow the path while holding the sphere as straight as possible as we walk the sphere will always point toward the horizon so when we parallel transport a vector we're just moving the vector along the path keeping the vector as straight as
+
+00:04:31
+possible so using the parallel transport method for moving vectors around we would say that this red vector and this blue vector are sort of like the same vector from the point of view of a person that traveled along this path now unfortunately there is a problem with the idea of parallel transporting a vector around on a surface to see why imagine after parallel transporting our vector from the North Pole down to the equator imagine we start parallel transporting it along the equator like this so remember the vector is sort of
+
+00:05:06
+like a spear or a harpoon that were pointing to the southern horizon so parallel transporting the spear means sort of walking sideways along this path in order to keep the spear steady pointing in the same direction and after that what if we parallel transport it again but along this curve back up toward the North Pole so keeping the arrow steady we'd be walking backward up until we got to the North Pole and now you can see the problem supposedly we've been keeping this arrow constant for our entire journey but
+
+00:05:38
+clearly this starting vector and this ending vector are different the vector has clearly changed direction so this shows us that parallel transport doesn't really keep a vector constant and the reason for that is that it's impossible to define a constant vector field on a curved surface from the point of view of someone living on the curved surface the idea of a constant vector field for a person living on this surface just doesn't really make any sense so the idea of parallel transport is sort of
+
+00:06:10
+the best that we can do parallel transport means we're keeping a vector as constant as possible as we move around step by step the downside is that if we walk in a loop we might notice that the vector is twisting somewhat when we compare how it started and how it ended but this twisting behavior is just an unavoidable fact of life when living on a curb space so when it comes to defining a constant vector field on a curve surface the best we can do is with parallel transport and keeping a vector
+
+00:06:42
+as constant as possible as we take small steps so that's the basic idea behind parallel transport but how do we describe it mathematically well let's take a look at the case of a curve where this vector at the red point is parallel transported along it if we take the first two vectors and compare them we see that the change between them is this vector here which points toward the center of the sphere and if we compare these two vectors we get this vector which also points toward the center of
+
+00:07:13
+the sphere and comparing these two vectors also gives us a vector that's pointing towards the center of the sphere so what we've shown is that when we parallel transport a vector the rate of change of that vector always points in a direction that's normal to the surface so recall that normal vectors always point directly out of the surface perpendicular to the tangent plane so when we parallel transport a vector forward the vectors rate of change is always completely normal to the surface
+
+00:07:45
+so it sticks directly in or out of the surface perpendicular to the tangent plane so if we parallel transport this vector along this path we end up with a vector field defined at every point on the curve and this vector field will obey this relationship where the rate of change of the vector field will always be some normal vector n pointing out of the surface in other words if we take the rate of change of the vector field and subtract the normal part we'll always get zero now remember I said
+
+00:08:19
+earlier that it's impossible to define a constant vector field on a surface the idea doesn't really make a ton of sense but the best that we can do for defining a constant vector field is by parallel transporting a vector along a curve and the vector field that we get on that curve resulting from parallel transport is the closest thing that we can get to a constant vector field and this is actually where the covariant derivative on curved surfaces comes in the covariant derivative on curved
+
+00:08:51
+surfaces can help us find vector fields like this vector fields that are the result of parallel transport and are as constant as possible on a curved surface so we're going to define the covariant derivative given by this symbol here as the derivative that gives the rate of change of a vector field V in some direction given by a vector W with the normal component of the rate of change subtracted so let's say we have some curve that's defined using a curve parameter lambda where as lambda
+
+00:09:26
+increases we travel forward along the curve and we have a vector field V defined along this curve and we want to find the rate of change of the vector field as we travel along the curve so the covariant derivative of a vector field V in a direction given by D by D lambda which is basically like the direction along the curve would be the rate of change of the vector field V in the lambda direction with the component that's normal to the surface subtracted and remember we said that when this quantity is zero
+
+00:10:00
+that's when V is being parallel transported along the curve so when the covariant derivative is zero that means that the vector field V is being parallel transported in the direction W so all of this probably seems really abstract let's go through an example to clear things up so we're going to be going through an example of the covariant derivative and parallel transport on a sphere whose radius is equal to one so in previous videos I've talked about how we describe 2d surfaces
+
+00:10:33
+by taking the UV plane and then putting it through a function which stretches and bends the UV plane into a surface that lives in 3d space so each point on the UV plane gives us a vector capital R which lives in Xyz space and for the sphere the functions x y and z are given here you can check out the tensor calculus video number 12 if you want to learn why these formulas make sense and in this vid oh I'm largely going to keep this same approach for describing services except I'm going to change the variables U and
+
+00:11:09
+V to the variables u1 and u2 so the u1 curves are the curves of longitude on the sphere that go from north to south and the u2 curves are the curves of latitude that go from west to east and just as a reminder the tangent basis vectors on the sphere are given by these two partial derivatives of a position vector which I also sometimes write as the basis vectors e1 and e2 so the e1 basis vectors are just the tangent vectors along the u1 curves and the e2 basis vectors are just the tangent vectors along the u2 curves so
+
+00:11:52
+let's take the covariant derivative of some tangent vector field V on the sphere in the direction of the UI coordinate and I'm specifically dealing with a vector field where all the vectors are tangent to the surface it turns out that in most physics applications were always going to be concerned with vector fields that are tangent to the curved space so all the vectors in the vector field B are tangent to the sphere and remember the covariant derivative is just the ordinary derivative with the normal
+
+00:12:24
+component subtracted now since the V vectors are always tangent to the sphere we can always expand them as a linear combination of the e1 and e2 basis tangent vectors with these components and we can rewrite this linear combination using Einstein notation and a summation over J like this now remember that we're taking the derivative of a product here so we need to use product rule so this derivative becomes two terms one where we differentiate the vector field components and one where we differentiate the basis vectors and if
+
+00:13:02
+you've watched my tensor calculus video number 15 on geodesics you'll already know that we can write out this derivative of the EJ basis vector with respect to the ice coordinate has this your combination here so this is a linear combination of the two tangent basis vectors and the surfaces normal vector these L coefficients are called the second fundamental form and these capital gamma coefficients are called the Christoffel symbols so to help visualize what's going on if this is our
+
+00:13:36
+3d basis consisting of two tangent basis vectors and the normal vector to the surface and this is our derivative vector that we want to expand in a linear combination the two Christoffel symbols tell us how much of the e1 and e2 basis vectors we need and the second fundamental form tells us how much of the normal vector that we need and to write this expression more compactly I'm going to write these two terms with the Christoffel symbols using an Einstein summation over K and now if we substitute this into here we get this
+
+00:14:12
+and I'm going to bring this term outside the parentheses to get this now I actually want to factor out the basis vectors from these two terms but notice one has index J and one has index K so I'm just going to change this summation index here to K because for the summation we can use any index we want the index doesn't matter and now I can factor out the EK basis vectors like this okay so looking at this expression all of this exists in the tangent plane because it's made of tangent basis
+
+00:14:48
+vectors and that means that the entire normal component of the partial derivative is here and since we're subtracting away the normal component these just cancel out and so we're left with this which is our final formula for the covariant derivative now the problem here is that we don't know how to solve for the Christoffel symbols so to do that we're going to start with this formula for the expression of the basis vector derivatives and remember this normal vector is normal to the tangent
+
+00:15:22
+plane by definition so by definition it's perpendicular to with the tangent basis vectors so if we take the dot product on both sides of this formula with a tangent vector e L then this dot product will go to zero since n hat and L are perpendicular and this dot product of the basis vectors just gives us the components of the metric tensor by definition and to get rid of the metric tensor we know we can just use a summation with the inverse metric tensor to get a Kronecker Delta which is 1 if the indexes are the same
+
+00:16:01
+and zero if they're different so if we do a summation with the inverse metric on both sides then this would become a Kronecker Delta and this only matters when M equals K which gives us 1 all the other summation terms would go to zero so we can cancel out these k indexes and just write em here and so this is our formula for the Christoffel symbols so we finally know how to compute the covariant derivative of a vector field on a curved surface we just use this formula here where the Christoffel
+
+00:16:37
+symbols are defined here so as I said before the covariant derivative of a vector field V in some direction W is really just the ordinary derivative with the normal component subtracted and as we just showed the covariant derivative is also equal to this formula here now you might be a bit confused because in the previous video I said that the covariant derivative is just the ordinary derivative in flat space but now for curved surfaces I'm saying that the covariant derivative is the ordinary
+
+00:17:12
+derivative with the normal component subtracted so it seems like we have two different definitions here but if you think about it when we're working in flat 2d space since all the vectors live in the flat 2d plane were guaranteed that there's no rate of change in the normal direction so the normal part of the rate of change of the vector field just goes to 0 anyway so really our definition of the covariant derivative as the rate of change of a vector field with the normal components subtracted this
+
+00:17:44
+definition works for both curved spaces and flat spaces it's just that in flat space we have the special case where the normal component of the rate of change is zero so getting back on track to compute the covariant derivative on the sphere we're going to need to compute the Christoffel symbols and to get the Christoffel symbols we need to get the tangent basis vectors the basis vector derivatives and the inverse metric tensor and I've actually done all these calculations already in
+
+00:18:13
+tensor calculus videos 16 on geodesics so check that video if you want the detailed calculations I'm just going to run through them quickly in this video so these are the parametric formulas for the XYZ coordinates of the sphere in terms of u1 and u2 and to get the tangent basis vectors for the u1 and u2 direction we can expand these partial derivatives in terms of the XYZ partial derivatives using multivariable chain rule and computing these derivatives we get these formulas and we know that the
+
+00:18:47
+metric tensor is just the matrix of dot products of the tangent basis vectors so we can compute all these dot products and get this metric tensor matrix here now given the tangent basis vectors we can also get the derivatives of the tension basis vectors in each coordinate direction the derivative of the U one basis vector in the U one Direction is this the derivative of the u 2 basis vector in the U 2 Direction is this and the mixed u 1 u 2 derivative is this and both of these derivatives are the same
+
+00:19:18
+since the order of differentiation doesn't matter ok so we now have the tangent basis vectors the tangent basis vector derivatives and the metric tensor and given the metric tensor we can easily get the inverse metric tensor just by taking the inverse of the matrix so for a diagonal matrix we just take the reciprocal of the diagonal elements and if we recall our notation for the tangent basis vectors which says that this partial derivative of a position vector capital R is the same thing as a
+
+00:19:48
+basis vector we can rewrite these formulas like this just using the basis your notation instead okay so given all these formulas we can calculate the eight Christoffel symbols and this involves working through a lot of dot products which is very boring but again you can check out the tensor calculus video 16 if you want to see it done so it turns out that most of these Christoffel symbols end up going to 0 and the ones that are left end up looking like this so here we can cancel out some of the signs and to save some
+
+00:20:21
+space here I'm going to use the well-known trig identity sine of 2x equals 2 x cos x sine x and we can use that to change this into a 1/2 sine of 2x and I'm also going to change cos'è view 1 over sine of u 1 into 1 over tangent of U 1 also known as cotangent of u 1 so here we have all the Christoffel symbols so going back to the covariant derivative formulas there's actually two formulas here one for i equals one and one for i equals two and we have implied summations over J and K
+
+00:20:59
+here but since so many of the Christoffel symbols are 0 we just end up with a few terms in this summation so subbing in the formulas for the Christoffel symbols we get this and these are the final formulas for the covariant derivatives in the U 1 and u 2 directions okay so now let's finally do a real example so let's take this yellow curve on the sphere that travels along the equator from u 2 equals 0 to u 2 equals PI over 2 the formula for this curve is a function from the curve parameter lambda to the points with u 1
+
+00:21:36
+equals PI over 2 which is the equators latitude and u 2 equals lambda so as lambda increases we travel along the equator and on this curve we're going to assign a vector field where the first component is Co sub u 2 and the second component is sine of u 2 so at the start of the curve where u 2 equals zero we just get the vector e1 for the vector field which points straight downward and we move along until we get to the end of the curve and at the end of the curve where you two equals PI over to the vector field
+
+00:22:11
+just gives us the vector e 2 which is tangent to the equator so normally when we take the covariant derivative along a curve parameterize by lambda we take the covariant derivative using the direction D by D lambda but in this case since u 2 is equal to lambda we can take the covariant derivative in the direction of the YouTube variable and that would be the same thing and since derivatives in the U 2 Direction are basically the same thing as the e 2 basis vector we can also write the covariant derivative like
+
+00:22:46
+this where the direction is the e 2 basis vector so given this curve and this vector field we can take the covariant derivative so since u 1 is always equal to PI over 2 this gives us sine of Pi which is 0 and this gives us cotangent of PI over 2 which is also 0 so we're left with this very simple formula and plugging in the first and second components of V and then taking the derivatives gives us this so you can see that the covariant derivative along the equator is in fact nonzero and that
+
+00:23:22
+makes sense because if you look at the tangent planes for each of these vectors you can see that the vector is sort of spinning around in the tangent plane so the rate of change of the vector field is not completely normal to the surface there is a tangential part that exists in the tangent plane so a nonzero covariant derivative makes sense now let's try this vector field along the same curve in this case the vector field is just given by the e2 basis vector so at all points on the curve the vector
+
+00:23:53
+field points in the e2 direction so I've written this vector field as a full linear combination here just to show the first and second components and again since u1 is always PI over 2 all of these go to 0 and since both of the components are constant these component derivatives also go to 0 so we end up with the covariant derivative in the e2 direction B the zero vector and this makes sense since if we look at the tangent planes there's no vector change in the tangent plane all the rates of change of the
+
+00:24:28
+vectors are pointing in a normal direction to the spherical surface pointing inward toward the center and remember since the covariant derivative is zero we are in fact parallel transporting this vector along the curve since a zero covariant derivative is the condition for parallel transport now so far we've been given a vector field and we've taken the covariant derivative of that vector field and looking at the covariant derivative we've been able to check if the vector field involves the
+
+00:24:59
+parallel transport of a vector now I'd like to go in the opposite direction starting with a single vector and given a curve I'd like to parallel transport the vector along the curve and get a resulting vector field so as an example let's try parallel transporting this vector along this curve so in this case our curve is the standard equator curve and the initial starting vector is equal to the e one basis vector and parallel transporting this vector along the curve means requiring that the covariant
+
+00:25:34
+derivative of the vector along the curve is equal to zero so to do that we start with the initial condition that the covariant derivative must be equal to zero so we start with our standard covariant derivative formula and again since we're on the equator where u 1 is equal to PI over 2 these two terms go to 0 and remember we're enforcing that the covariant derivative is the zero vector so we get that this expression is equal to the zero vector and really this means that both of these partial derivatives
+
+00:26:06
+of the vector field components are both equal to zero and that simply means the vector field components are equal to constants C 1 and C 2 so as functions of lambda the vector components are equal to C 1 and C 2 and remember we do have an initial vector which is located at lambda is equal to 0 and at lambda equals 0 we require that the vector has components 1 & 0 so this helps us solve for the constants we get that C 1 is equal to 1 and C 2 is equal to 0 so this means that the vector field components
+
+00:26:42
+are constant everywhere we always get 1 and 0 so that means that the vector field that results from parallel transport is equal to 1 e 1 plus 0 e 2 and if we visualize this vector field we just get a vector field that's always pointing in the e 1 direction so all of these vectors along the curve are pointing downward toward the South Pole and this is what it looks like when we parallel transport this initial vector along the curve now let's do a slightly less obvious example of parallel
+
+00:27:14
+transport we're going to take this curve where the U 1 variable is equal to PI over 4 so that corresponds to this line of latitude on the sphere and we're going to make the initial vector V not equal to the e one basis vector which looks like this and again to get parallel transport we have to demand that the covariant derivative of the vector field is equal to 0 so again we start with the standard covariant derivative formula but this time since u 1 is equal to PI over 4 when we do this
+
+00:27:47
+substitution we don't get the terms going away to 0 instead this becomes sine of PI over 2 which is 1 and this becomes cotangent of PI over 4 which is also 1 and remember we're forcing the covariant derivative to be the zero vector so we end up with this final formula here which means that this component and this component must be equal to zero and just to make things easier to read I'm going to replace these u two variables with lambda since u 2 is equal to lambda so what we have here are two coupled
+
+00:28:24
+differential equations and they're going to be a little bit tricky to solve because we have V 1 and V 2 in both equations now one trick for solving these is to take the derivative with respect to lambda of both equations and after we do that you'll notice that we get second derivatives with respect to lambda on the left hand side and first derivatives with respect to lambda on the right hand sides and doing some basic rearranging of terms we can solve for the first order derivatives with
+
+00:28:52
+respect to lambda so you can see now that we've actually solved for the first derivatives of lambda and so we can sub these back into the original equations here and the results we get are these two equations and these are actually much easier to solve because they are decoupled differential equations this first equation only contains V two and this second equation only contains V one so if you've studied differential equations you'll know that if we take the second order derivative of a
+
+00:29:22
+function and set it equal to some multiple of the function itself the solutions to this differential equation are cosine and sine where we use these square roots of these constants as the angular frequency so if you don't really believe this you can just try taking the second derivative of both of these functions and you'll see that it satisfies these differential equations okay so we have these functions here what we need to do now is solve for a B C and D the first step is to realize that we know the initial vector at
+
+00:29:55
+lambda is equal to 0 so we just sub in lambda is equal to 0 and remember sine of 0 is equal to 0 so these go away to 0 and Co sub 0 is equal to 1 so these become 1 so we just get that a is equal to the first initial component which is 1 and C is equal to the second initial component which is 0 so we can sub these back into our original equations now we need to solve for B and D and to do that I'm going to get you to recall this first differential equation that we had and if we sub in the first derivative of
+
+00:30:30
+B 1 and sub in V 2 here then get this equation and if we look at the initial point lambda is equal to zero then the sine terms will go away to zero and the cosine term will be one and so given this result we get that B is equal to zero and we can sub that back into our original function and using the other differential equation we had we can sub in the derivative of v2 and set it equal to negative V one and we get this and this basically means that D is equal to negative square root of 2 so we can sub that back into our equations so
+
+00:31:06
+finally we have the solution for our vector field components as we parallel transport this initial vector along the curve we end up with this vector field which would look like this so as you can see this vector sort of looks like it's twisting as we move along the path and that might be a bit surprising to you but remember since this curve is not the equator it doesn't represent a person moving forward in a straight direction a person walking along this path is actually veering slightly toward the
+
+00:31:37
+left so if the person walking along this curve wants to keep the vector as straight as possible they'll have to constantly change the angle between their feet and the direction of the vector another way of thinking about it is by imagining a cone that intersects the sphere along the path like this if you can imagine us taking a pair of scissors and cutting open the cone here we could sort of unravel the cone and lay it flat like this and here in flat space if we start parallel transporting this vector around
+
+00:32:09
+the curve you'll notice that the angle it makes with the curve keeps changing as we move along the curve so it might be a little hard to wrap your head around but in fact this is what parallel transporting a vector along this curve looks like because the curve is not on a great circle the angle that the vector makes with the path is going to constantly be changing so this video has been going on for a long time but I did want to mention that parallel transport keeps the vectors length the same so if
+
+00:32:39
+you look at this vector field and the spheres metric tensor and remember the formula for the length of a vector if you turn through the map you'll find that every vector in this vector field has length one and remember this is for a line of latitude where u 1 is equal to PI over 4 so parallel transport preserves the vectors length so to summarize this video I want you to remember it's impossible to define a constant vector field on a curved surface and the best we can do to approximate a constant vector field is
+
+00:33:09
+parallel transport along a curve and this is the closest we can get to a constant vector field and the covariant derivative is a tool that helps us find parallel transported vector fields the covariant derivative is just the rate of change of a vector field V in some direction W with the normal component subtracted so we can write it like this or we can write it using the Christoffel symbol notation like this and when the covariant derivative is 0 that means that we're parallel transporting the
+
+00:33:40
+vector and this formula also works for flat space it's just that in flat space we work with the special case where the normal component of the rate of change is equal to 0
+

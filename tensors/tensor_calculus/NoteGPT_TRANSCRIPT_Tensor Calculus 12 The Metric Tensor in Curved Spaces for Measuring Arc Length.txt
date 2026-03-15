@@ -1,0 +1,123 @@
+00:00:00
+in this video I'm going to discuss how to calculate the lengths of curves in curved spaces using the metric tensor I'm also going to cover the differences between extrinsic and intrinsic geometry if you haven't seen my first two videos on the metric tensor I would highly recommend you check the links in the description and watch those first since this video is going to build on the concepts from those videos also if you're interested in learning more about the geometry of curved spaces you can
+
+00:00:27
+check out this professors course notes on this website which is also in the description in particular the surfaces part to PDF talks about the metric tensor which is also called the first fundamental form so if you've watched the previous videos you'll already know how to use the metric tensor to get the lengths of vectors and how to compute curved lengths in flat space now we're going to talk about curved lengths and curved space so some examples of some curved 2d spaces are these 2d surfaces here we
+
+00:00:58
+have the cylinder the hyperbolic paraboloid which is sort of like a saddle shape and we have the sphere and in this video we're going to be focusing on the sphere so the first question to ask is how do we describe a 2d surface mathematically well the most common way is to start with the flat 2d plane with UV coordinates and put the UV plane through some sort of function which will stretch and transform the plane so that it becomes a 2d surface living in 3d space basically we take every UV point
+
+00:01:29
+in this plane and assign it some coordinates in 3d space given by capital X capital y and capital Z so as an example of that let's take this UV plane here which has an image of my youtube icon on it and put it through the function to map it onto a sphere so you can see that the V coordinate lines which are the horizontal lines end up being curves of latitude on the sphere and the U coordinate lines ends up being lines of longitude on the sphere so this is very similar to taking a flat map of
+
+00:02:01
+the earth and stretching it and bending it so that it becomes a spherical globe the flat map lives in the UV plane and the resulting surface lives in X Y Zed space so in order to do this trance we need to determine the three equations for x y and z so for this example of the sphere the transformation equations are here and these might look a bit complicated but if you look at this set equation Zed is equal to cosine of U this is basically saying that the U curves are the lines of longitude so if
+
+00:02:34
+you remember the graph of cosine when u is equal to zero cosine of U is equal to 1 which is up here at the North Pole where is that is equal to plus 1 and as we increase you all the way to PI we end up decreasing cosine of U all the way to negative 1 and Z equals negative 1 is at the South Pole here and you might think that the x and y formulas look complicated but remember X is equal to cosine of V and y is equal to sine of V are just the equations of a circle in the X Y variables right well you can think of
+
+00:03:06
+these equations as just giving the equation of a circle whose radius is sine of U so remember what the graph of sine of U at U equals 0 which remember is at the North Pole we have a circle of radius 0 so that's just a point and then as u gets bigger we end up with the radius getting bigger until we get to the equator at U is equal to PI over 2 and then we shrink down again to a point at u equals PI so now that we have the equations for a spherical surface how do we draw curves on the sphere like if I
+
+00:03:39
+have some path on my map in the UV plane here how do I move that path into XYZ space well basically we take the equation of the path in our UV plane and just put it through this function so that it gets stretched and transformed into a path living on the 2d spherical surface in Xyz space so if I have this path here going from Alaska to Singapore we just put it through the same function and we end up with a path drawn on our 2d surface so let's try that out for the sphere let's take this really simple
+
+00:04:13
+path that takes a path parameter or lambda and maps it to the point u equals lambda v equals lambda in the UV plane so this is just a diagonal line where the U and V coordinates are equal at all points like this and to put this path through the function here and move it on to the surface we just sub in U is equal to lambda here and sub in V is equal to lambda here and so we end up with these equations here and that would result in a path on the sphere that looks like this right you can see how the path in the uv-plane is sort of
+
+00:04:47
+cutting diagonally across the grid line squares and we would just do the same thing on the sphere and make the path cut diagonally through the grid boxes of longitude and latitude and remember if we want to get the length of this curve the key to getting the lengths of curves is to use the magnitude of the tangent vector D R by D lambda where R is just the position vector of a point on the curve in Xyz space so to get the arc length we need to compute the magnitude of this tangent vector D R by D lambda
+
+00:05:18
+and we can get the squared magnitude by taking the dot product of the tangent vector with itself so we can expand out this tangent vector in Xyz space using the multivariable chain rule like this and so we have a sum of three terms dotted with a sum of three terms so in total expanding out the dot product that gives us nine terms and you might think this looks really ugly but remember that since the XYZ basis vectors are orthonormal any of the dot products where the basis vectors are different like X dot Y or Y dot Z those dot
+
+00:05:53
+products go to zero and any dot products where the basis vectors are the same go to one so we're left with a really simple formula here just the X component squared plus the Y component squared plus the Zed component squared so this formula that we're using here it's really just like Pythagoras theorem for three dimensions x squared plus y squared plus that squared so we already have the formula for the path on our sphere in terms of XY and Z so we can compute the derivatives of x y&z with
+
+00:06:25
+respect to lambda so DX by D lambda can be found using the product rule and it ends up being negative sine squared plus cosine squared and by a well-known trig identity this ends up being cosine of two lambda likewise dy by D lambda can be found using product rule and it ends up being two times Coast x sine and by another trig identity this just ends up being sine of two lambda and finally DZ by D lambda is just negative sine so plugging all that in for our formulas for the squared magnitude of the tangent vector we see
+
+00:07:03
+that we get cosine squared plus sine squared where the argument in both is the same two times lambda so all of this becomes 1 and so the formula we get is 1 plus sine of lambda squared so we can try taking this integral from lambda equals 0 to lambda equals 1 but it turns out that the antiderivative of the square root of 1 plus sine squared is actually pretty difficult so I'm just gonna go ahead and cheat here by using Wolfram Alpha and you'll see that the arc length is about one point 1 2 3 8 9
+
+00:07:38
+and this is interesting because it's not equal to the square root of 2 which is what we might have expected if we had measured the length in the uv-plane using the normal Pythagoras's theorem formula but remember since this curve doesn't exist in flat space we can't use this line of thinking so what we really did when we calculated the arc length is we worked in 3d space and used this big giant formula to get the squared magnitude of the curves tangent vector and this big ugly formula can also be
+
+00:08:10
+written as this series of array multiplications where this matrix of basis vector dot products is the metric tensor and since we're working with the 3d orthonormal Cartesian basis this metric tensor is really just the identity matrix so what I really want you to realize is that to compute the arc length we were working in terms of the XYZ coordinates in other words even though we were analyzing a 2d surface we were working in the 3d space around the surface in order to understand it and this approach to studying surfaces is
+
+00:08:45
+called extrinsic geometry because it involves analyzing curved 2d spaces like the sphere you the surrounding 3d space that the surface lives in but there's also another way to examine curved spaces and that's by analyzing them without looking at the surrounding space so in other words instead of looking at the X Y Z space we would only be looking at the UV plane and this point of view is called intrinsic geometry because we only focus on the curved space itself and not the surrounding space that it lives in so if
+
+00:09:20
+you like you can think of intrinsic geometry as a bit like studying the Earth's surface from the perspective of a tiny person living on the earth rather than looking at the earth from outer space so to look at things from the intrinsic point of view instead of expanding the tangent vector in terms of X Y Z which are the coordinates of the surrounding space will instead expand the tangent vector in terms of U and V which are the coordinates of the curved space itself so when calculating the squared magnitude of the curves tangent
+
+00:09:52
+vector we would now expand the dot product in terms of the U and V variable and expanding that dot product gives us this formula with four terms and we can also write this more nicely using this series of array multiplications like this where this matrix here is now our intrinsic metric tensor for the surface so this is the metric tensor that we're going to use to compute the lengths of curves on our surface and sometimes as an alternative to the derivative of notation for the basis vectors we can
+
+00:10:23
+also use the EU and evey vector notation like this for the basis vectors instead so using that notation the metric tensor would look like this and remember these GU and evey basis vectors are just the tangent vectors along the U curves and the V curves on the surface so at this point the tangent vector along the U curve would look like this and the tangent vector along the V curve would look like this and at this point up here the U tangent vector would be this and the V tangent vector would be this so notice how the basis vectors
+
+00:11:02
+can sometimes change size depending on where we are on the surface so let's compute the components of this metric tensor for the sphere so recall that these are the equations that map the UV coordinates into 3d space for the sphere which has radius 1 now we can expand these tangent vectors D R by D U and D R by D V in terms of the 3d Cartesian variables XY Z using the multivariable chain rule like this so if we calculate these components DX by D u dy by D u and DZ by D u we get these formulas here
+
+00:11:40
+basically after differentiating this sine becomes a cosine and this sine becomes a cosine and this cosine becomes a negative sign and likewise we can also compute DX by DV dy by DV and DZ by DV to get this where this cosine becomes a negative sign this sign becomes a cosine and this term just goes to 0 since there are no B variables in it and I'm going to rewrite these formulas using the vector notation instead of the partial derivative notation so we're now ready to compute the metric tensor using the
+
+00:12:16
+basis vector dot products so let's start with evb we can plug this formula in and expanding out the dot product gives us these four terms and the x dot y and y dot x terms go to 0 because the basis vectors are orthogonal so we're left with these two terms and of course X dot x and y dot y go to 1 so we're left with sine V squared sine u squared plus coast be squared sine u squared so we can factor out the sine U squared term and the sum of sine squared plus cosine squared with DV variables goes to 1 and
+
+00:12:55
+so we're left with just sine of U squared for the V basis vector dotted with itself now for the u dot u term I'm going to skip all the cross terms that involve X dot y Y dot said and X dot said since they all go to 0 anyway and just give us the terms that we care about so basically this component squared this component squared plus this component squared so we can factor out the cosine of U squared from these two terms and get this and again cosine V squared plus sine V squared goes to one
+
+00:13:30
+and yet again cosine u squared plus sine u squared also goes to one so we get that the dot product of the U basis vector with itself is just equal to one finally we'll compute u dot V which is the same thing as V dot u and again i'm ignoring the cross terms which i'll go to zero and just focusing on the terms that we care about so we get this times this for the first term and this times this for the second term and this times zero for the final term obviously this third term goes to zero and the two
+
+00:14:06
+remaining terms are actually the exact same except one is positive and one is negative so they end up cancelling out and we get zero so the metric tensor we're looking for looks like this VB equals sine of u squared u u is equal to 1 and the cross terms you BNV you go to 0 so with this equation of array multiplications for the squared magnitude of the curves tangent vector we just computed the elements of this metric tensor here which are the basis vector dot products and so we got this and so multiplying all of that out we
+
+00:14:44
+get this expression here which is sort of like Pythagoras theorem but we have this extra multiplying factor here of sine of U squared so let's once again compute the length of this diagonal path given by u equals lambda and V equals lambda and remember this actually represents a path on the sphere that looks like this so we have this equation that we derived for the squared magnitude of the curve tangent vector using the metric tensor components and this is the path we care about so in this case D u by D lambda and DV by D
+
+00:15:21
+lambda are extremely easy we just get 1 and 1 so plugging one into here and one into here and lambda into here for you we get this which is really just one plus sign of lambda squared and if you recall this is exactly what we got before using the extrinsic approach with the XYZ variables so again this integral is pretty hard to do by hand but giving it to Wolfram Alpha we see once again that the answer is about one point one two three eight nine so using this intrinsic approach notice that the formula for the squared
+
+00:15:57
+magnitude of the tangent vector only depends on the U and V variables it doesn't make any reference to the surrounding XYZ space and again this looks very similar to Pythagoras theorem C squared is equal to a squared plus B squared except we have this extra sign of U squared part attached to the V component term so what exactly does this part mean well this part is telling us that the way we measure distance in the V coordinate direction changes depending on where we are on the sphere so I'll
+
+00:16:30
+show you what I mean by that let's take the path with the parameterization U is equal to PI over four and V is equal to lambda so in the uv-plane with this map of the world that would correspond to this path here and on the spherical earth this would be traveling along this line of latitude so if we try and compute the length of this curve along one unit of lambda we start with the metric equation here so d u by D lambda is equal to zero and DV by D lambda is equal to 1 and U is equal to PI over 4
+
+00:17:05
+so we get this and since sine of PI over 4 is equal to root 2 over 2 that squared is just 2 over 4 or 1/2 which is the squared magnitude of the tangent vector and if we compute the length of the curve over one unit of lambda we get a total length of the square root of 1/2 now we can try going through that exact same exercise again but for u equals PI over 2 so that would correspond to this path here in the UV plane and this line of latitude here on the globe at the equator so we can go and plug all
+
+00:17:43
+these values in again and now sine of PI over 2 is just 1 + 1 squared is just 1 and churning through this integral for one unit of lambda we get a length of 1 which is longer than what we got before where we got the square root of 1/2 so what we just showed is that along this curve number 1 and this curve number 2 even though they look like they're the same length in the uv-plane they actually aren't the same lengths and that's because this curve is at a higher latitude meaning it would be
+
+00:18:17
+shorter than this curve which is on the equator so even though the curves look like they're the same length in the uv-plane we have to remember that the rules for measuring distance change from point to point in curved space because of this sine of U squared term here ok so we've learned that in curved space you can't trust your eyeballs to measure distance if you want to measure distance properly you can only trust the metric tensor because with curved geometry our eyes will get a distorted view of
+
+00:18:48
+distance and this is exactly what we see when we look at flat maps of the earth right like here we have a projection of the earth onto the flat plane and I should mention that this projection also involves distortions in the north-south directions that we didn't see in our previous example but my point is we all know that maps like this distort the sizes of countries right looking at this map here we might think that Greenland is really big and Australia is really small but if we drag Greenland over
+
+00:19:20
+showing its actual size next to Australia we see that Greenland is a fair bit smaller and likewise if we drag Australia up here while preserving the size we see that it's bigger than Greenland so the reason for all this geometric distortion is because the space were in is curved and that means that the rules for measuring distance change from place to place in other words the metric tensor is changing from place to place and that means that we have a metric tensor field so you know that a vector field involves
+
+00:19:54
+vectors placed everywhere in space that change from point to point and you know that a CO vector field involves Co vectors that are placed everywhere in space that change from point to point and now a metric tensor field involves a different metric tensor being placed everywhere in space that changed from point to point and every curved space whether it's the sphere or the cylinder or the saddle every curved space has its own metric tensor field associated with it that gives you the rules for
+
+00:20:25
+measuring distance on it and you can try computing these metric tensors for yourself if you like using these equations to get the U and V tangent vectors so in summary there are two ways of looking at curved spaces there's the extrinsic view where we view the surface as living inside the surrounding space the XYZ space and this is sort of like a bird's eye view where we look at the surface from far away outside and then there's the intrinsic view where we're only allowed to talk about the space
+
+00:20:57
+itself without reference to anything outside in this case we use the UV plane and this is sort of like a bugs eye view for a bug wandering around the surface that has no idea that an outside space exists and in the extrinsic view we expand the tangent vector using the Cartesian XYZ variables and get this metric tensor and for the intrinsic view we expand the tangent vectors using the UV variables and get this metric tensor and we can also write the metric tensors using this vector notation now if we
+
+00:21:34
+change the variable names and use u 1 u 2 instead of U and V and use X 1 X 2 X 3 instead of XYZ then we can write the metric tensor equations a lot more easily using Einstein notation we can expand the vectors like this with implied summations and write the metric tensor components like this using the dot products and we can write the formula for the squared magnitude of the tangent vectors like this in both cases using the dot prod and we can replace these dot products of the basis vectors using the metric
+
+00:22:10
+tensor components and summarize the metric equations compactly like this now the last thing you might be worried about is that in our intrinsic geometry we're still making use of the our position vector and the R vector lives in 3d space which means we're making reference to the space outside our curved surface so what mathematicians often do when they want to stay completely intrinsic in the surface is they just remove the R vectors from the equations completely and treat the derivative operators themselves as the
+
+00:22:44
+vectors and if this confuses you I'd encourage you to check the link in the description for more information on why derivative operators can be viewed as vectors but the main takeaway of this video is that when we study services intrinsically they all have their own metric tensor field that gives you the rules for measuring distance at various places in the curved space
+

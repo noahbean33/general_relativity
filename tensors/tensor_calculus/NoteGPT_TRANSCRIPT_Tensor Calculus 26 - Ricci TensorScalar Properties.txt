@@ -1,0 +1,150 @@
+00:00:00
+in this video I'm going to talk about some properties of the Ricci tensor and the Ricci scalar this video will probably make more sense if you've already watched videos 22 and 23 on the Riemann tensor and video 24 on the geometric meanings of the Ricci tensor and scalar the links to those videos are in the description I'm going to cover five different properties of the Ricci tensor and scaler the first property is showing the different contractions of the Riemann tensor and how it relates to
+
+00:00:29
+the Ricci tensor next I'll show that the Ricci tensor is symmetric then I'll prove the second Bianchi identity and I'll do this with and without the use of normal coordinates then I'll prove the contracted Bianchi identity and introduce the Einstein tensor which is the capital G here and finally I'll talk about how the Ricci tensor and Ricci scalars show up in the Einstein field equations of general relativity which are the equations that predict the existence of black holes and the
+
+00:01:00
+expansion of the universe before I start I just want to remind you that in this video all these notations for basis vectors mean the same thing and again here's the formula for the Riemann curvature tensor and we get the Riemann tensor components by plugging in basis vectors into this formula and the components can be computed using this big ugly formula involving the connection coefficients I also want to remind you of some of the properties of the Riemann tensor first we can lower this upper index d by doing
+
+00:01:31
+a summation with the inverse metric tensor like this also there's the first Bianchi identity which means we can cycle the ABC indexes and add all the terms together to get 0 also we can flip the first and second indexes and pick up a negative sign or flip the third and fourth indexes and pick up a negative sign finally we can flip the first and second indexes with the third and fourth indexes and the sign stays the same also remember in the last video that we defined the Ricci tensor Rab by doing a
+
+00:02:05
+summation which is also called a contraction over the upper index and the middle lower index of the Riemann answer afterward we defined the Ricci scalar as the contraction of the Ricci tensor with one upper index and one lower index and we can move one of the indexes upward using the metric tensor like this so with the review out of the way let's get to our first property of the Ricci tensor which is asking if there are any other interesting contractions of the Riemann tensor so there are three possible contractions
+
+00:02:38
+that we can do with the Riemann tensor which are summing the upper index with either the first middle or last lower index and before we start with these I'm just going to remind you that flipping the third and fourth or the first and second indexes of the Riemann tensor will give us a negative sign and also remember that we can lower the upper index by summing with the inverse metric tensor so if we look at this contraction with the first lower index we can use this property of summing with the
+
+00:03:08
+inverse metric tensor to give the Riemann tensor with for lower indexes just as we said here also I'm going to swap the first and second indexes here and pick up a negative sign just as we said here note that I'm also swapping the indexes of the metric tensor and I'm able to do that because the metric tensor is symmetric so gij always equals gji finally I can use this index lowering property in reverse to raise the first index again so we get the upper index J so note that this term and
+
+00:03:44
+this term are exactly the same the only difference is that here we use the dummy summation index I and here we use the dummy summation index J but since the indexes don't matter these two numbers are the exact same and when a number is equal to the negative of itself that means that that number has to be equal to zero so this contraction on the first lower index of the Riemann tensor is not very interesting using the above properties we've shown that this contraction equals zero next there's the
+
+00:04:18
+contraction on the middle index here which is just the definition of the Ricci tensor we gave earlier but notice if I swap the third and fourth indexes like this and get a negative sign I just get the negative of this contraction on the last index here so all this goes to show that there is really only one interesting contraction of the Riemann tensor the first contraction gives us zero which is boring and the other two contractions give us either the Ricci tensor or the Ricci tensor with a negative sign in
+
+00:04:50
+front so the Ricci tensor is really the only interesting contraction of the riemann tensor that we can get so that's the first property i wanted to show next for the second property i'm going to prove that the Ricci tensor is symmetric so that means that we can flip the indexes and get the same result RCB equals our BC this just means that when we look at the Ricci tensor as a matrix this lower triangle is like a mirror image of this upper triangle the proof starts with the first bianchi
+
+00:05:24
+identity of the Riemann tensor where we add all cycles of the lower indexes ABC together and get zero then we look at the special case where the upper index D is equal to a so we get this where all the upper indexes are a so we have three different contractions here and remember we just proved that this contraction on the first lower index is just equal to zero next we swap the third and fourth indexes here and pick up a negative sign in front and here this is just the definition of the Ricci tensor CB and
+
+00:06:02
+this is just the definition of the Ricci tensor BC and bringing this term over to the other side we've proven that the Ricci tensor is symmetric when we swap the indexes the result stays the same the third property is called the second Bianchi identity which is actually a property of the Riemann tensor but it's used to prove other properties about the Ricci tensor you can see it written here in its abstract form and you can see it written here in the component form in the component form the first upper and
+
+00:06:33
+lower indexes are the same and we add together all cycles of the lower three indexes the semicolon dye notation refers to the covariant derivative of the Riemann tensor in the direction of the e I basis vector I'm going to start by going through a proof of the second Bianchi identity in component form but first I want to talk a little bit more about this semicolon notation if you've watched my previous videos on the covariant derivative you should know that in order to take the covariant derivative of a vector V in
+
+00:07:06
+the direction of the e I basis vector we expand the vector V as a summation of basis vectors then use the product rule to take the derivative then rewrite this covariant derivative using the connection coefficients then rewrite the indexes to get this formula this larger expression for the components of the resulting vector can be written compactly like this where the upper index before the semicolon is just the summation index with the basis vector and the lower index after the semicolon indicates the direction that we're
+
+00:07:41
+taking the covariant derivative in we could do something similar with the metric tensor G by expanding it as a linear combination of tensor products involving Co vectors which I write either with epsilon or using the DX notation and after doing product rule with the components and e2 basis Co vectors we get this big formula which can again be compactly written using the semicolon notation again the index is before the semicolon are summed with the basis and the index after the semicolon indicates the direction of the covariant
+
+00:08:16
+derivative we can also do this with the Riemann tensor which is a rank four tensor and the product rule will give us a sum of five terms which again we can write compactly using the semicolon notation but if you recall each of these riemann tensor components is itself given by a big formula involving the connection coefficients so given all these massive formulas the second bianchi identity is not going to be fun to prove to make proving the second bianchi identity easier we use a special case of the Riemann normal
+
+00:08:51
+system at a point P which is also called the local inertial frame at point P this is a coordinate system where the metric tensor is the identity at P and the connection coefficients are all zero at P if we use this simplifying assumption the formula for the components of the covariant derivative of the Riemann tensor becomes much easier since all the connection coefficients go to zero at the point P now plugging this into the derivative we can distribute the partial derivatives with respect to I and use
+
+00:09:25
+the product rule on these terms since the connection coefficients are 0 at P we end up with this much simpler formula for the components of the covariant derivative of riemann at the point P writing this formula out for each of these three terms we get three formulas however recall that the order of partial derivatives doesn't matter so partial I partial a is the same thing as partial a partial I this means that these blue terms are equal to each other as are these two red terms and these two
+
+00:09:56
+green turns when we add all the terms together the blue terms cancel the red terms cancel and the green terms cancel leaving the result to be zero this proves the second bianchi identity in the special case of normal coordinates at point P now there is a way to prove the second bianchi identity in the abstract in a general way that works in all coordinate systems however the proof is long and boring so if you want to skip ahead to the next part of the video that's fine if not I'm going to go ahead
+
+00:10:29
+and do the full proof now so in order to prove this I'm going to use the product rule for when one tensor acts on another through contraction for example when we have this linear map L acting on a vector V and take the covariant derivative we can use the product rule to get a sum of two terms one with the derivative acting on linear map L and one with the derivative acting on vector V you can prove that this works if we write L and B in terms of a basis and also expand ellaby out in a base if we take the covariant derivative of
+
+00:11:07
+all of these we can prove that the above formula with the product rule is true for now I'm just going to assume this product rule works whenever a tensor acts on input vectors so if we have the Riemann tensor of U and V acting on a vector W and take the covariant derivative of the output in the direction of the Zed vector by the product rule we get a sum of four terms one for each of the derivatives of the Riemann tensor U V and W and I'm just going to bring these three terms to the other side of the equal sign and this
+
+00:11:43
+will give us a formula for the covariant derivative of the Riemann tensor the second Bianchi identity uses this formula three times just by cycling the Zed U and B vectors so if we take this formula and use it on each of the three terms in the second Bianchi identity we get these twelve terms next I'm going to swap the order of the input vectors in these three terms and that will change the minus sign to a plus sign next I'll point out that both of these terms have V in the first input and both of these
+
+00:12:20
+terms have u in the first input and both of these terms have Z in the first input as we know tensors like the Riemann tensor are multilinear maps so we can add the inputs in one input slot if all the other input slots are constant so I'll do that and turn these six terms into three terms so this equation I'm going to call the star equation and we're going to come back to it later right now I'm going to focus on these three terms if we expand out the definition of the Riemann tensor in each
+
+00:12:54
+of these cases we get this this and this and distributing these outer covariant derivatives into the brackets gives us this so if we add these three terms on the Left together we get these nine terms on the right so I'm just going to rewrite this sum and the resulting nine terms like this now if I were to write these brackets in here might notice that these two terms look a little bit like the formula for the Riemann tensor of Z and you acting on the covariant derivative of W the only difference is that this third term with
+
+00:13:30
+the lead bracket is missing if we bring this lis bracket to the other side of the equation we find that we can rewrite these two terms as these two terms we can do this a total of three times here here and here I will also move these negatively bracket terms back up here into the equation now if we focus on these two terms you might notice they look a bit like the formula of the Riemann tensor of the Li bracket of Zetas and U and V acting on the vector W but again this third term with the lis bracket is
+
+00:14:05
+missing we can move this double Lee bracket term over to the other side of the equation and this means we can replace these two terms with these two terms and I can do this three times here here and here now if we add all these double Lee bracket terms together we get this and if you work out all these Li bracket terms manually it turns out you get the zero vector this fact is called the Jacobi identity and the proof is pretty straightforward but very boring so you can search the Jacobi identity online if
+
+00:14:41
+you want the proof or try it yourself but I'm not going to show it here so these three terms cancel when added together so it turns out that these three covariant derivatives on the outside of the Riemann tensor equal these six terms I'm going to write this equation in a somewhat strange way these three terms equals these three terms plus these three terms and if I take these three terms and move them over to the other side of the equal sign we get this now if we bring back the star equation we came up with earlier we
+
+00:15:17
+can see that these three terms are positive and these three terms are negative which matches exactly what we have here so I'm going to replace all these terms with these three terms on the right we have this and I'm going to flip the input vectors in these terms which will make them negative now notice in each pair of terms here the left input vectors are all the same and also the terms are all acting on the W vector this means that for each pair of terms we can add the middle inputs together
+
+00:15:53
+since the Riemann tensor is a multi linear map now the second input slots all contain the definition of the torsion tensor and if we assume the torsion free property holds the torsion tensor is equal to zero that means that all these second input slots are the zero vector and by multi linearity this means that all the terms go to 0 since multi linear Maps output 0 when any of their input slots are 0 so this completes the abstract proof of the second bianchi identity where the sum of these three riemann covariant
+
+00:16:30
+derivatives go to 0 and we can also express this in the component form in addition to the abstract form the fourth property we're going to prove is the contracted Bianchi identity which is related to the covariant derivative of the Ricci tensor to prove it we start with the second Bianchi identity and we do a summation with two inverse metric tensors we use the first one to raise the a index on all of these terms and have it become an M index up top now some of you might be wondering whether
+
+00:17:07
+or not we can raise this index so easily because there are covariant derivatives going on here and the answer is that we can raise the index I'll show you why we start by taking the covariant derivative in the direction of the EEI basis vector of the metric tensor contracted with the Riemann tensor we use the product rule to get these two terms with the derivative of the metric and the derivative of the Riemann tensor now you may remember from video 20 we discussed the metric compatibility of the
+
+00:17:42
+covariant derivative the metric compatible the property can be stated in several different equivalent ways but the statement relevant for us here is this one where the covariant derivative of the metric tensor in any direction is zero so this means that this term goes to zero so what this says is that contracting the metric with Riemann and then taking the covariant derivative is the same thing as taking the covariant derivative of riemann and then contracting with the metric tensor basically the metric compatibility
+
+00:18:17
+property lets us slide the G in and out of the covariant derivative as we like the result doesn't change and since all this metric tensor is doing is just raising an index of the Riemann tensor components we can in fact raise an index of the Riemann tensor components even when there's a covariant derivative here okay so we've proven that this step makes sense now I'm going to swap the third and fourth indexes here and get a negative sign I'm also going to swap the first and second indexes and get another
+
+00:18:52
+negative sign and since I'm contracting on the middle lower index in both cases here these can both become Ricci tensor x' next I'm going to use this metric tensor to raise the bee index on both these Ricci tensor x' and on this Riemann tensor and I get this where the upper index has become N and using this contraction this also becomes another Ricci tensor and using this inverse metric tensor I'm going to raise the a index so that it becomes an M index so now we have this and this contraction of
+
+00:19:33
+the Ricci tensor just gives us the Ricci scalar still with this covariant derivative in the L direction and I'm also going to real able these M indexes to n indexes since they're just dummy summation indexes anyway and the particular letter we use doesn't matter and I'm going to combine these two terms together and multiply everything by 1/2 and now I'm going to add in this Kronecker Delta n L here and change this L index to an end remember the Kronecker Delta is 1 when L equals N and 0 otherwise so putting this
+
+00:20:15
+chroniker Delta here hasn't really changed anything next I'm going to sum every term with the inverse metric tensor GML like this and this will let us raise the L index of the Ricci tensor to an M index again we can raise this index even though there's a covariant derivative here because of the metric compatibility property and using the Kronecker Delta a cancellation rule I can turn this L index into an N index and keep in mind since the Ricci tensor is symmetric I can swap the N and M
+
+00:20:51
+indexes like this that was property number 2 that we proved earlier in the video so we've proven the contracted Bianchi identity here and what this is saying is that the covariant derivative of the Ricci tensor when these two indexes are the same is not 0 so this covariant derivative is nonzero but if we make this slight little change to the Ricci tensor and subtract off this part involving the metric and the Ricci scalar we do get 0 when we take the covariant derivative so by adding this small modification to the Ricci tensor
+
+00:21:30
+we can make this covariant derivative go to 0 and if this semi colon notation confuses you what this is really saying when we write everything out explicitly is that when we take the Ricci tensor expanded out in a basis and subtract off 1/2 the metric tensor expanded in a basis times the Ricci scalar and take the covariant derivative with respect to the second basis vector we get 0 another shorthand way of writing this that you might see in some books is this where the tensor components are inside
+
+00:22:06
+the brackets and this symbol represents getting the components of the tensor when we take the Co berry derivative in the e n basis vector direction now this tensor in the brackets here is a special tensor it's a special modified version of the Ricci tensor that has a zero covariant derivative when these indexes match and we give this new modified version of the Ricci tensor a new special name we call it the Einstein tensor and denote it with the symbol capital G so this is the fourth property that I've proven the
+
+00:22:44
+covariant derivative of the Einstein tensor when these indexes match is equal to 0 with the Einstein tensor defined I can finally get to the fifth topic I want to talk about which is the Einstein field equations from general relativity I'm not going to go into all the details of the Einstein equations now I'm going to save that for my next video series on general relativity but I'll talk about the general idea the tensor T denotes the energy momentum tensor which describes the energy and
+
+00:23:18
+momentum in a given region of space-time the laws of conservation of energy and conservation of momentum are given in the statement that the covariant derivative of the energy momentum tensor is 0 when these indexes match now the basic idea behind the Einstein field equations is that energy and momentum cause space-time to curve and Bend the energy momentum on the right hand side is given by the energy momentum tensor and since this covariant derivative of the right-hand side is zero we need the
+
+00:23:55
+covariant derivative of the left hand side of the equation to also be zero so we need some sort of tensor representing the curvature of space-time with a zero covariant derivative and we just discovered this tensor earlier it's the Einstein tensor the Ricci tensor alone is not enough since it's covariant derivative is nonzero but with this extra correction term we get the Einstein tensor which does have a zero covariant derivative so we end up saying that the energy-momentum tensor basically equals
+
+00:24:32
+the Einstein tensor or in other words energy and momentum equals space-time curvature now it turns out that this equality isn't exact and we need a few physical constants like Newton's gravitational constant G and the speed of light C to make this equation work out correctly and these right here are Einstein's field equations of general relativity which described black holes and the expansion of the universe so these are the Einstein field equations which you might see written using the
+
+00:25:07
+Einstein tensor or you might see it written in expanded form using the Ricci tensor Ricci scalar and the metric tensor and since space-time has four dimensions these tensors are all 4x4 tensors meaning that there are 16 total equations but recall that we learned that the Ricci tensor and metric tensor are symmetric and it turns out that the energy momentum tensor is also symmetric so since the m n entry of these tensors equal the n m entries it turns out that six of these equations are exact duplicates of the other ones so there
+
+00:25:50
+are really only ten unique equations here now recall that the covariant derivative in the M index is zero on both sides of the equation if this were only true for one side of the equation things wouldn't make sense but recall the metric compatibility property which says that the covariant derivative of the metric tensor in any direction is zero this means that we could theoretically add an extra term to this equation which is made up of the metric tensor and a scaling constant and this would not violate the condition that the
+
+00:26:29
+covariant derivative of the left-hand side is zero since this term would also go to zero when we take the covariant derivative and this red constant here the capital lambda is called the cosmological constant which is one possible form of what physicists called dark energy and it is related to the expansion of the universe so a lot of what I said just now probably doesn't make a ton of sense but as I said I'll be covering the Einstein field equations in more detail in my upcoming video series on general relativity so to
+
+00:27:09
+summarize the properties of the Ricci tensor that we learned in this video first of the three possible contractions of the Riemann tensor two of them give the Ricci tensor up to a sign change and one of them gives zero so the Ricci tensor is the only meaningful contraction of the riemann tensor we also learned that the Ricci tensor is symmetric so our IJ equals our ji we also learned the second bianchi identity where we add these three covariant derivatives of the Riemann tensor components cycling these last three
+
+00:27:45
+indexes and these add together to get zero we also learned the contracted Bianchi identity which said that when we take the covariant derivative of this expression where the covariant derivative index matches one of these indexes here we get zero and this combination of the Ricci tensor Ricci scalar and metric tensor with a zero covariant derivative is called the Einstein tensor denoted with a capital G finally we showed how the Ricci tensor Ricci scalar and metric tensor play a role in the Einstein field equations of
+
+00:28:22
+general relativity which basically tells us that energy momentum equals space-time curvature so this marks the end of all the videos that I had planned in the tensor calculus series next I'm going to move on to a new series that specifically talks about general relativity and goes through the mathematical explanations of how black holes can cause rays of light to bend and why the universe is expanding as always if you enjoy my videos and would like to leave a tip you can check the description for a link
+
+00:28:55
+to my donations page Thanks
+

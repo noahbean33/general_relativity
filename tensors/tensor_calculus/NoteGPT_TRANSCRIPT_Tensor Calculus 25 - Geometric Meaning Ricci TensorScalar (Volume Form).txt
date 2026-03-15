@@ -1,0 +1,159 @@
+00:00:00
+in this video I'm going to continue talking about the geometrical meanings of the Ricci curvature tensor and the Ricci scalar I started this discussion in the last video number 24 and the link to that video is in the description in that previous video we introduced the idea of sectional curvature which measured how neighboring geodesics either converged together or diverged apart due to the curvature of space we also showed how in an orthonormal basis we could define the Ricci curvature which is the sum of all scalar
+
+00:00:30
+curvatures in every basis vector direction I also showed that we can compute the Ricci curvature using the Ricci tensor I also showed how the Ricci curvature could tell us how the volume of a ball is changing as it moves along geodesics in this example since the Ricci curvature is zero the volume of the ball isn't changing I want to correct a mistake I made here since there are only two curvature directions in this example which are the e1 and e2 basis vectors I should have been using a two dimensional ball which would be a
+
+00:01:03
+flat 2d disc the Ricci curvature would be measuring the change in area of this disc as it spreads out or contracts in the e1 e2 directions I apologize for getting the number of dimensions wrong but the basic idea that I explained is still correct the Ricci curvature still does track the change in size of a ball as it travels along geodesics in space now this approach to the Ricci tensor using sectional curvature is nice but it only works in an orthonormal basis in this video I'm going to talk about a new
+
+00:01:36
+approach to the Ricci tensor which arises from considering the volume element derivative and this approach works in any basis so first off what is the volume element or volume form we denote the volume form by the lowercase Omega symbol the volume form is a tensor that gives us the volume enclosed by a set of vectors for example we can see that the a and B vectors here can be used to form a two-dimensional parallelogram if we want to know the two-dimensional volume or the area of this parallelogram
+
+00:02:12
+this would be given by the volume form Omega acting on the a and B vectors similarly the volume of this parallelogram shape formed by the x y&z vectors is omega of x y&z now how do we figure out the actual numerical output of the volume form let's start with a simple example if we are given a set of orthonormal basis vectors these orthonormal basis vectors will always form a box that has volume one the output of the volume form is always 1 for example the two-dimensional volume or area of this square formed by a
+
+00:02:53
+2-dimensional orthonormal basis is equal to 1 because orthonormal vectors have length 1 by definition and similarly the volume of this cube formed by a 3d orthonormal basis is also equal to 1 now what about the volume created by vectors that are not orthonormal like the vectors U and W here well if we expand U and W into components in an orthonormal basis we can compute the volume of this parallelogram given by Omega of U and W by computing the determinant of this matrix with the components of each
+
+00:03:30
+vector arranged in columns this is because these vector components arranged in a matrix basically form a linear map which takes us from the unit square to this parallelogram if you've taken a first linear algebra course I'm hoping you remember that the change in volume that results from a linear map is given by the determinant of the matrix for that linear map so since this matrix containing the vector components forms a linear map from this square of area 1 to this parallelogram the area of the
+
+00:04:05
+parallelogram should be the determinant of this matrix so taking the determinant of this matrix we find that the area of this parallelogram is u 1 times W 2 minus u 2 times W 1 another way of writing this more compactly is by doing a summation with this epsilon symbol which is called the levy chavita symbol the levy chavita symbol in 2d has indexes I J when the indexes are one two the levy chavita symbol equals plus 1 when the indexes are 2 1 the levy chavita symbol equals negative 1 and when the indexes are repeated such as 1
+
+00:04:45
+1 or 2 2 the symbol equals 0 so if we expand the summation of the levy chibita symbol with the U and W components we get four terms the 1 1 and 2 2 terms go to 0 because they have repeated indexes the one to levy chibita symbol is positive 1 and the 2 1 levy chibita symbol is negative 1 we can see that this gives us the expected formula for the determinant of this matrix we can get the volume created by a set of 3 vectors in 3 dimensions in a similar way we get the components of the vectors in an orthonormal basis and arrange them in
+
+00:05:26
+this matrix then take the determinant of this 3 by 3 matrix we can also use the three dimensional levy chibita symbol in a summation to get the answer for the determinant the levy chavita symbol in 3d is a little more complicated than in 2d we get plus 1 for the levy chibita symbol if the ijk indexes are an even permutation of 1 2 3 we can see some examples of even permutations here an even permutation just means we start with 1 2 3 and then do an even number of swaps between the digits for example 2 3
+
+00:06:05
+1 is an even permutation because we get it by starting with 1 2 3 and then swapping the left and middle indexes then swapping the middle and right indexes to swaps is an even number of swaps so it's an even permutation the levy chavita symbol is negative 1 for odd permutations 1 3 2 is an odd permutation because we get it by starting with 1 2 3 and then swapping the right and middle indexes 1 swap is an odd number of swaps so we -1 and similar to 2d if there are any repeated indexes in the levy to be
+
+00:06:44
+dissemble we just get 0 such as with 1 1 3 or 2 2 2 you can check for this summation with 27 terms only 6 of them are not 0 and they result in the correct formula for the determinant of this 3x3 matrix so the lesson here is that the levy chibita symbol is a useful tool for getting the volume of the parallelogram shape formed by a set of vectors all we do to get the volume is to take the levy chavita symbol and summit with all the components of the vectors that form the parallelogram shape although please note
+
+00:07:22
+that this method only works if the vector components are measured in an orthonormal basis now what if we're working in a basis that isn't orthonormal well let's think about what it means to change basis we already know that the volume of the shape forms by two vectors U and W is the determinant of this matrix this is very similar to what happens when we change from an old basis e1 e2 to a new basis e1 tilde and e2 tilde in previous videos I've labeled the coefficients that change from one
+
+00:07:57
+basis to another with the letter F for forward these coefficients can be put together in a matrix which in previous videos I've called the forward matrix the volume created by the new basis vectors would then just be the determinant of the matrix with the F coefficients if we're dealing with curvilinear coordinates where the basis vectors are partial derivative operators the volume change we get by moving from an old basis to a new basis is the determinant of this matrix of partial derivatives also known as the
+
+00:08:31
+determinant of the Jacobian so the important takeaway for this slide is that the volume enclosed by a set of basis vectors is given by the determinant of the forward matrix or equivalently the determinant of the Jacobian if our coordinate system is curvilinear now recall that the components of the metric tensor in given bases are just the dot products of the basis vectors and if we expand the new basis vectors in terms of the old basis vectors using summations with the forward F coefficients we get this and
+
+00:09:05
+these dot products are just the components of the metric tensor in the old basis now if we take the determinant of both sides of these equations we can write the new basis metric tensor determinant as a product of the determinant of F the determinant of F and the determinant of the old basis metric tensor matrix this is because the determinant of a product of matrices is the same thing as a product of the determinants and since the old basis is orthonormal the metric tensor matrix is the identity matrix and so this
+
+00:09:40
+determinant is equal to 1 in the previous slide we said that the volume change we get when we change basis is the determinant of the F matrix but as we've shown the square of the determinant of F is equal to the determinant of the metric tensor matrix in the new basis and so the volume change is equal to the determinant of F but it is also equal to the square root of the determinant of the metric tensor in the new basis and if we're dealing with curvilinear coordinates we can come to the same conclusion that the volume
+
+00:10:14
+change which is normally the determinant of the Jacobian can also be written as the square root of the determinant of the metric tensor matrix so the volume enclosed by a new set of basis vectors can be written in several different ways including the determinant of the forward matrix the determinant of the Jacobian or the square root of the metric tensor matrix determinant so let's say we have two vectors U and W written in terms of a basis which is not orthonormal how do we get the volume Omega of U and W the
+
+00:10:51
+volume formula has two parts first the square root of the determinant of the metric tensor matrix in the new basis this computes the change in volume that we get from changing from an orthonormal basis to this new non orthonormal second we multiply that by the determinant of the matrix of vector components as measured in the new basis this takes care of the volume change we get by building up the U and W vectors from the new basis vectors e1 tilde and e2 tilde if we write this determinant using the
+
+00:11:26
+levy chavita symbol we get this formula and this combination of the square root of the metric tensor and the levy chavita symbol gives us the components of the volume form tensor Omega so in an orthonormal basis the levy chibita symbol alone gives us the components of the volume form but in an arbitrary non orthonormal basis we also need the square root of the metric tensor matrix determinant from that basis to get the correct components of the volume form so we've learned about a number of tensors
+
+00:12:01
+in this series like the metric tensor Riemann tensor and Ricci tensor and we know that when they act on vectors to get the output values we just do summations with the tensor components the volume form is yet another tensor and the components we use to do the summation are the determinant of the metric tensor times the leve chavita symbol so now that we understand what the volume form is let's take two covariant derivatives of the volume form along some geodesic path this will give us the second rate of change of a volume
+
+00:12:35
+formed by a set of basis vectors as we move along a geodesic path we'll find that taking this derivative will lead us to the Ricci tensor the first thing we need to do is show that the covariant derivative of the volume form is zero this doesn't mean that volumes don't change as they move along geodesics we saw in the previous video that volumes can in fact change along geodesics what this does mean is that the rules for measuring volumes don't change along geodesics so to prove this we start with
+
+00:13:09
+a geodesic path and by taking a set of vectors that form a box we then parallel transport these vectors along the path we've in previous videos that the levy chavita connection has the property of metric compatibility this means that when we parallel transport vectors along a path using the levy chibita connection the lengths of the vectors stay the same and the angles between the vectors stay the same this means that when we parallel transport these vectors the volume created by these vectors will not change
+
+00:13:43
+in size therefore the covariant derivative of this volume is zero when we apply this covariant derivative we are actually applying it to a product of four terms the volume form and each of these three vectors using product rule we get four terms each with the covariant derivative applied to a different part of the formula now since these vectors a B and C are all parallel transported this means that their covariant derivative is zero by definition and since Omega is a tensor and a multi linear map when one of the
+
+00:14:21
+inputs is zero that means that the entire output is zero this can be proven using the multi linearity properties of a tensor so we're left with the conclusion that the covariant derivative of the volume form must be equal to zero in other words the derivative of the volume form components along this path are zero so knowing this let's look at what happens when we apply two covariant derivatives to an arbitrary volume spanned by some vectors we know that the volume of this shape formed by the u W
+
+00:14:57
+and T vectors is just the summation of the volume form components summed with the vector components now recall previously when thinking about curvature we looked at the separation vector between two neighboring geodesics now when you look at these three vectors that create the volume u W and T I want you to think of these as separation vectors each keeping track of the separation distance with its own neighboring geodesic path so I'm going to rename u W and T as s1 s2 and s3 since they are all
+
+00:15:36
+separation vectors for some geodesic I'm also going to replace the summation indexes with mu1 mu2 and mu3 I realize this notation might be a bit confusing but it basically just means that up here I is the first summation index mu 1 J is the second summation index mu 2 and K is the third summation index finally I'm going to rewrite the product of these three separation vector components using this product notation where we do the product of D separation vector components where D is the dimension of
+
+00:16:16
+the space and if we take two covariant derivatives of the volume along this geodesic since the volume is a scalar this is the same thing as the ordinary derivative along the geodesic path using the path parameter lambda and recall that since the volume form has a derivative of zero we can take the volume form components and put them outside the derivative so let's apply this first derivative to the product of the S vector components you should know by now that using product rule on a product gives us a sum of terms where
+
+00:16:53
+every term has the derivative applied to a different factor I'm denoting the derivative here by an overhead dot we can do the same thing here when we take the derivative of this product by pulling the S J components outside of the product and applying a dot to take the derivative there is a summation over J here so this means that we get a sum of terms where in every term a different SJ component gets the derivative this is very similar to what we've written out here where in each term a different
+
+00:17:27
+component gets the derivative dot now for the second derivative we can think of it as doing product rule on this factor and then this factor the first factor is easy we just apply the derivative to s J dot and get sjws for the second factor we can use these same reasoning as above and pull out another index out in front SK this time and apply a dot for the derivative and removing the K index from the product now recall that taking two derivatives of a separation vector along a geodesic just gives us this negative
+
+00:18:06
+Riemann tensor term this means that this separation vector component with two derivatives equals this summation with the Riemann tensor components and the s and V vector components this s and V are given in the Y and Zed summations and this V is given in the X summation so now we can sub this expression in for the S double dot now here notice in this product that all the MU in Dex's are used except form you J and recall in the Levy chavita symbol that if there are any repeated indexes it goes to zero now
+
+00:18:49
+this S term out here has a superscript y that's involved in a summation so it can take on many different values like mu 1 mu 2 and so on but if we use mu 1 or mu 2 and it's already in the leve chavita symbol the term will go to 0 because there's a repeated index this means that the only term that will end up being nonzero in the summation occurs when y equals mu J because mu J does not already occur in this product so we can set y equals mu J because all other versions of y in this summation go to 0
+
+00:19:28
+and now since this product doesn't include the J index we can simply take the S component with the J index and put it back in the product so we get this where the product goes from I equals 1 to D without skipping any indexes but you'll notice that all of this right here is really just the original formula that defined the volume of the parallelogram shape we were originally talking about it has the components of the volume form and the product of all these separation vector components so all of this is just equal to the
+
+00:20:03
+volume capital B and notice that since the Riemann tensor components have a summation on the upper index and the lower middle index this is actually just the definition of the Ricci tensor XZ and of course this summation just gives us the Ricci curvature in the direction of the e vector so the conclusion after all of this is that the Ricci tensor tells us how volumes change in size as we move around in space along geodesics the second order derivative of the volume has a term that is proportional
+
+00:20:39
+to the original volume with the Ricci curvature being the constant of proportionality now you might be wondering about this other term here that involves the first derivative of the separation vector components recall in the last video that I said geodesics spread apart for two different reasons when they accelerate apart this is due to the curvature of the space but when they move apart at a constant velocity this can occur in flat space because of the way the geodesics are angled so this first term in the second derivative with
+
+00:21:14
+the Ricci tensor detects how volumes change due to the curvature of the space while the second term measures the volume changes that can occur in flat space because of the aligning of geodesics so the conclusion is that the Ricci tensor tells us how volumes change specifically because of the curvature of the space were in when we're traveling along geodesics recall that for the sphere the Ricci curvature is always positive and with this negative sign here this means that volume is moving along geodesics on the sphere will
+
+00:21:49
+always shrink in volume because the geodesics on the sphere are always converging the last thing I'll talk about is the Ricci scalar which is the scalar we get when we do a summation on the Ricci tensor with one upper index and one lower index and recall that raising an index involves doing a summation with the inverse metric in the last video I said that the Ricci scalar tells us how much the size of a ball in curved space deviates from the standard volume of a ball in flat space so in 2d the standard flat disk with the
+
+00:22:27
+given circumference will contain an area equal to PI R squared and this area is less than the surface area of an upside-down bowl shape that sits on the top of a sphere even though the bowl has the exact same circumference so given this circular circumference we don't actually know how much area will fit inside the answer could change depending on the curvature of space there's the completely flat space area but the area will increase slightly if this circle sits on a very large ball which causes
+
+00:23:01
+the area to bulge a little and as the sphere gets smaller and smaller the amount of curvature increases and the amount of surface area contained within the perimeter also increases in the edge cases when we have flat space the surface area is PI R squared and in the case where the circle is the boundary on the equator of a sphere the surface area is 2 PI R squared so we can see that the surface area inside the circle can double if the curvature of the space is large enough now when it comes to the
+
+00:23:38
+Ricci scalar were generally interested in comparing ball sizes by their radius not by their circumference and when I'm talking about the radius I don't mean this distance I mean the radius as seen from the point of view of someone traveling from the North Pole of the ball out to the edge of the circle so this radius is really an arc length given by the radius of the ball times this angle Phi so let's start by getting the surface area of this upside-down Bowl shape on a sphere of radius capital
+
+00:24:13
+script R we can compute this by taking a collection of thin disks of radius Rho and integrating over their thickness D s we know from trigonometry tree that row is equal to the sphere radius times the sine of this angle theta we also know that the thickness of each disc is equal to this tiny arc length D s which is equal to the spheres radius times the small angle D theta so subbing those formulas into our area integral and taking the constants out in front we get to PI capital R squared times the integral of sine theta D theta
+
+00:24:56
+from zero to Phi and remember Phi is the angle measured from the vertical to the edge of the upside-down Bowl shape the antiderivative of sine is negative cosine and subbing in the limits of integration we get cosine of 0 which is 1 and since these negative signs cancel out we end up with this formula for the surface area of the bowl and recall that we said that the radius of this circle as seen by someone walking from the North Pole to the edge of the bowl is given by this arc length lowercase R and
+
+00:25:34
+by the familiar arc length formula since lowercase R equals capital R Phi and this means that the angle Phi is given by the radius of the bowl as seen by someone walking from the North Pole divided by the radius of the entire sphere so this here is the formula for the surface area of the upside-down Bowl as a function of the bowls radius as measured using the walking distance from the North Pole now let's compare the surface area of this bowl shape against the standard flat space area of a circle
+
+00:26:10
+PI R squared we can immediately cancel these pies and to handle this cosine I'm going to expand it as a Taylor series where we get a summation of all the even powers of little R over big R with alternating positive and negative signs this positive one and this negative one cancel and if we distribute this negative sign into the brackets containing the Taylor series all these signs end up next I'll distribute this term out in front to all the terms inside the Taylor series in the first term we can see that
+
+00:26:49
+all the numerators cancel with all the denominators and were left with just one in the second term some of the powers cancel and we're left with 1 over 24 times 2 over big R squared times little R squared and I'm not going to bother with the higher-order terms because they aren't as important you might be wondering why I'm keeping this 2 here instead of writing 1 over 12 that will become clear soon so now given that we know the metric tensor and the Ricci tensor for the sphere of radius capital
+
+00:27:24
+R let's compute these spheres Ricci scalar so we have a double summation over i and j for the metric and Ricci tensor x' that gives us four terms but two of them go to zero in the remaining terms these sign terms in the numerator and denominator cancel and we're left with two over big R squared so we can see that the Ricci scalar does appear in the second order term in the Taylor series expansion between the area of the bowl on the sphere and the area of a circle in flat space because this ratio
+
+00:28:04
+is a little less than 1 it means that the surface area of the bowl is slightly less than the area of a flat disc given the same radius little R so this might be a bit confusing but just to review the sphere has positive curvature and that means that for a given boundary circle the surface area on the sphere given by this bowl shape is greater than the area of the flat circle with the same circumference but for a given radius the surface area of the bowl shape on the sphere is less than the area of the circle in flat space with
+
+00:28:44
+the same radius so when we think of positive curvature it can either mean more area for the same circumference or it can mean less area for the same radius in a negatively curved space it would be the opposite where we get less area for the same circumference or more area for the same radius so this is what the Taylor series looks like for the ratio of circle areas in the specific case where our curved space is a sphere for general curved spaces in d dimensions the ratio of the volumes has this Taylor expansion where the
+
+00:29:23
+second-order coefficient is the Ricci scalar divided by 6 times the number of dimensions plus 2 you might ask where this formula comes from but unfortunately I don't know I tried searching for a proof online but I wasn't able to find a proof that I understood so unfortunately I can't prove this for you if I do find a proof that's understandable I may upload another video about it but for now all I can do is give you some links in the description to the complex proofs that I don't understand
+
+00:29:56
+so to summarize these past two videos we've learned two interpretations of the Ricci tensor and how it tracks volume changes along geodesics one interpretation involves sectional curvature and the other interpretation involves the derivative of the volume form the sectional curvature tracks how neighboring geodesics either converge with positive curvature or diverge with negative curvature by measuring the second rate of change of a separation vector when we look at all these sectional curvatures along geodesics in
+
+00:30:32
+every direction in an orthonormal basis we can add all these sectional curvatures together to get the Ricci curvature the Ricci curvature tells us the overall volume change as a ball travels along geodesics the Ricci curvature does not tell us about how the ball changes shape but it will tell us how the ball changes volume the Ricci curvature can be calculated using the components of the Ricci tensor for the second interpretation we learned that the volume of a box formed by a set of vectors is given by
+
+00:31:06
+the volume form acting on those vectors and the components of the volume form tensor is given by the square root of the determinant of the metric tensor matrix multiplied by the levy chibita symbol we found that the second derivative of the volume due to the curvature of space is given by the Ricci tensor term which computes the Ricci curvature finally we discussed the Ricci scalar which tells us how the volume of a given radius and curved space deviates from the volume of a ball with the same radius and flat space if the Ricci
+
+00:31:42
+scalar is positive the volume will be smaller than expected for a given radius as seen on the sphere if the Ricci scalar is negative the volume will be bigger than expected for that radius in the next video I'll talk about the algebraic properties of the Ricci tensor and Ricci scalar as always if you enjoy my videos and would like to leave a tip you can check the description for a link to my donations page thanks
+

@@ -1,0 +1,156 @@
+00:00:00
+in this video I'll be explaining the abstract definition of the covariant derivative if you're just joining this series now you'll probably want to watch videos seventeen eighteen and nineteen first so you can understand the easier definitions of the covariant derivative first the link to those videos are in the description so the abstract definition of the covariant derivative is the last definition I'm going to cover and it's going to be the hardest one because it's mostly just pure
+
+00:00:27
+algebra also in this video I might use any one of these three symbols to represent basis vectors this one here is new but it's the same thing as the other two it's just a partial derivative in the direction of the eighth coordinate so when it comes to the abstract definition of the covariant derivative there are basically two main reasons why we'd want to study it the first reason is that using the abstract definition we're going to find that there are actually several different covariant
+
+00:00:57
+derivatives not just one so the abstract definition of the covariant derivative is more general than what we were using before however there's still going to be one main version of the covariant derivative that we care about and that is called the levy chavita connection which comes from the fundamental theorem of romani and geometry the second reason for using the abstract definition is that it allows us to extend covariant derivatives to all tensor fields and that includes scalar fields vector
+
+00:01:27
+fields Kove Ector Fields metric tensor fields as well as all other tensor fields and to help you understand how we invent the abstract definition of the covariant derivative I'd like to talk about how we invented the idea of vector spaces because vector spaces are a somewhat abstract idea as well so you're probably familiar with r2 which is the set of pairs of real numbers and the members of the set are to serve as an inspiration for vector spaces so let's look at some properties of the elements
+
+00:02:01
+of r2 so this might be pretty obvious but we find that there's a reasonable way to add to elements of r2 together right we just add the top numbers together and the bottom numbers together and we get a new member of our two so this property shows that given to members of our two we can define their sum which is also a member of our two similarly there's also a reasonable way to scale elements in our two we just multiply the top and bottom numbers by the scaler and we get a new element in our two so given
+
+00:02:33
+an element V in our two and a scalar real number the scaled version of V is also NR 2 another property is that we can add elements of our to either frontwards or backwards and we end up with the same result so the order of addition doesn't matter we also find there's a special zero element in r2 where if we add a vector with the zero element we get back the same vector so that's another property also we find each element has a negative version of itself where if we add the positive version and the negative
+
+00:03:07
+version together we get the zero element so if we keep going we can gather together a whole bunch of properties that the members of our to follow we get some addition properties some scalar multiplication properties and some properties for distributing multiplication over addition now given this mathematicians basically took all these properties and turn them into a definition and that's the definition of a vector space a vector space is a set of vectors and a set of scalars along with rules for addition and scaling that
+
+00:03:39
+follow all of these laws so we started with the properties of r2 and use those to define a vector space which is a more abstract idea so a vector space is sort of like a generalized version of r2 but given this new definition of a vector space we can find other examples of things in mathematics that obey the same vector space laws for example the set RN is a vector space also the set of polynomials in the X variable form a vector space and the set of partial derivatives of coordinate variables also
+
+00:04:16
+form a vector space right we can add and scale all of these things in a way that makes sense and linear combinations so the advantage of inventing the abstract idea of a vector space is so that we can take a lot of things that seem different on the surface but on a deeper level they behave in a way that's similar and we can use the framework of vector spaces to understand all these different ideas in math now inventing the abstract definition of the covariant derivative follows a similar process we start with
+
+00:04:48
+the definition of the covariant derivative that we're familiar with and look at some of its properties and then use those properties to create a new abstract definition and using that abstract definition we can define many other types of covariant derivatives as well so let's take a look at a few properties of this covariant derivative that we're used to so we can invent the abstract definition and just as a reminder the intrinsic covariant derivative that we're used to from the
+
+00:05:16
+previous video just takes the derivative of a vector field in a given direction and after using product rule and defining the Christoffel symbols we end up with this expression so let's say we have the covariant derivative of this vector in a direction given by this linear combination and to save space I'm actually going to change the partial derivative notation to this so remember these are just partial derivative operators so we just apply the derivative in this direction and then distribute and then we can change these
+
+00:05:49
+partial derivatives back into covariant derivatives and we get this so we basically just showed that the covariant derivative is linear for the direction vector input we can either add and scale the direction vectors before taking the covariant derivative or we can add and scale the results after taking the covariant derivative so that gives us this property here we can also take the covariant derivative of a sum of vectors and turning this into a partial derivative we get this and so we can distribute it to both vectors and then
+
+00:06:24
+switch back to the covariant derivatives so this shows that the covariant derivative is additive for the vector field part we can either add before taking the covariant derivative or add after and we get the same result now if we take the covariant derivative of a vector field scaled by a scalar we can change this to a partial derivative and then use product rule so we get one term with the derivative of the scalar and one term with the derivative of the vector and then turning these back into covariant derivatives we see that the
+
+00:06:59
+covariant derivative basically obeys a kind of product rule sometimes called the Leibniz rule also taking the covariant derivative of a scalar function is the same thing as taking the directional derivative of that scalar function so this tells us how to compute these scalar derivatives in the product rule here and this is actually why we write the covariant derivative using these same notation as the directional derivative the covariant derivative is basically like a generalization of the directional derivative for scalar fields
+
+00:07:32
+that also works for vector fields so we're going to take these four properties and start using them as a new definition for the abstract covariant derivative so a covariant derivative is an operator with two input slots it takes a direction vector and then it takes an input field and then the output would be the rate of change of that yield which would be a new field and sometimes this covariant derivative operator is also called a connection and I'll take a couple minutes to explain where the name connection comes from so
+
+00:08:09
+let's say I have a spherical surface which I'm calling s now from previous videos you should already be familiar with the idea of parallel transporting a vector along a curve as you can see here and parallel transport is given by the condition of the covariant derivative of the vector field being zero now what parallel transport is doing is it's connecting the tangent vector space at the red point P to the tangent vector space at the blue point Q so in the tangent vector space at Point P which we
+
+00:08:46
+call TPS the vector points in this two action and after parallel transporting it along this curve in the tangent vector space at point Q which we call tqs the vector points in this direction so this is what I mean when I say parallel transport connects vector spaces it gives us instructions for turning a vector in the tangent space TPS into a vector in another tangent space tqs so parallel transport gives us a way to map vectors from TPS to tqs and since parallel transport is defined using the covariant derivative it's
+
+00:09:29
+really the covariant derivative that's providing the connection between the tangent spaces in this curved space so that's why a covariant derivative is sometimes called a connection because we can use it to connect different tangent spaces at different points in the curved space now you might recall from previous videos that we defined the Christoffel symbols like this where we expand the partial derivative of the basis vectors out as linear combinations and the abstract version of this using the
+
+00:09:59
+covariant derivative would be this and when we're talking more abstractly these Christoffel symbols are also sometimes called connection coefficients now it turns out that given the information we have now we don't actually have enough information to solve for a unique set of Christoffel symbols and that's why I said at the beginning of the video that there are many possible covariant derivatives that's because there are many possible ways to define these connection coefficients but there is a
+
+00:10:32
+way that we can get a unique solution for the Christoffel symbols and that's by introducing two new properties called the torsion free property and the metric compatibility property and I should probably mention that although I've defined the torsion free property like this a lot of textbooks will use this more advanced definition where this symbol here is the Li bracket of vectors and the Lee bracket basically just tests for the difference between the vectors when we apply them in it orders now in our case where the
+
+00:11:06
+vectors are partial derivative operators since partial differentiation works the same in both directions the result of the lead racket ends up being zero anyway so with a zero Li bracket we can use this simplified version of the torsion free property there are more advanced situations where the Lee bracket is nonzero but I'm not going to cover those in this video so the torsion free property says that the covariant derivative of each a in the EEI direction is the same thing as the covariant derivative of e i in the
+
+00:11:40
+ej direction it's sort of inspired by this rule with traditional derivatives where the order of partial differentiation doesn't matter so given the Christoffel symbol expansion of these two derivatives since these two covariant derivatives are equal we're forced to conclude that these two sets of Christoffel symbols are equal so the torsion free property means that we're free to swap the lower indexes of the Christoffel symbols without changing their value the second property is the metric compatibility
+
+00:12:14
+property and this is sort of a special version of the product rule that's applied to the dot product so the results of this derivative of this dot product is a sum where in the first term the first factor is differentiated and in the second term the second factor is differentiated so this might seem like a really abstract rule but what this property is really saying in plain English is that when we parallel transport two vectors their dot product will stay the same so remember the condition for parallel transport of a
+
+00:12:48
+vector is that the covariant derivative of the vector is zero so these formulas would mean we're parallel transporting the vectors V and u along a curve so if we take this metric compatibility property and these parallel transport conditions this means that this goes to zero and this goes to zero so the entire right hand side here goes to zero and that means that the covariant derivative of the dot product is zero or in other words the dot product stays constant and remember since the results of a dot
+
+00:13:24
+product is just a scalar the covariant derivative of the scalar is just the partial derivative of that scalar that was one of the four properties of the covariant derivative we stated earlier so if we were to visualize this if we start with these two vectors v and u and start parallel transporting them along the curve the angle between these two vectors would stay constant because the rate of change of their dot product is zero and of course since the vector these squared length is just V dot V the
+
+00:13:58
+metric compatibility property also means that the vector will have constant lengths when it's parallel transported along a curve now one consequence of the metric compatibility property can be obtained if we replace these vectors with the basis vectors EEI ej + EK and of course we can replace these covariant derivatives with the Christoffel symbol expansions and again we can replace this covariant derivative with a partial derivative since the dot product is a scalar now bringing the Christoffel
+
+00:14:32
+symbols out in front we can convert all these basis vector dot products into metric tensor components so we get this result now I'd like you to notice what happens when we use the torsion free property and the metric compatibility property together using metric compatibility we can write out these three equations and these are all basically the same equation just with the I J and K indexes switched around and let's say we want to compute this expression right here it's just these two derivatives added together with this
+
+00:15:04
+one subtracted so I'm going to color code these terms here notice how the blue terms are the same because the torsion free property lets us swap the lower indexes of the Christoffel symbols and by the same reasoning the red terms are both equal and the green terms are both equal so since this third derivative is negative I'm going to write negative signs in front of this third equation and adding all these together we see that the blue terms cancel the green terms cancel and the red terms add
+
+00:15:35
+together so this expression is just equal to twice the red term and if we sum on both sides with the inverse metric tensor we get this equation where we've solved for the Christoffel symbols so using the torsion free property and the metric compatibility property together we are able to solve for the Christoffel symbols and that means we've found one particular version of a covariant derivative and the covariant derivative that uses these Christoffel symbols is called the levy chibita connection and this is basically the
+
+00:16:08
+results stated by the fundamental theorem of Romani and geometry and when we're talking about Romani and geometry a Romani and manifold is basically just a curved space where we have a metric for measuring distances anyway this theorem states that there is a unique connection or a unique covariant derivative that is torsion free and has the metric compatibility property and again this unique connection is called the levy chavita connection and it's the connection where the Christoffel symbols
+
+00:16:40
+which are sometimes called connection coefficients are given by this equation so I've basically spent three and a half videos describing the levy chavita connection which is the covariant derivative we're all familiar with but at the beginning of this video I told you that there are other covariant derivatives as well so let's take a look at an example of another covariant derivative so this will be a covariant derivative where all the Christoffel symbols are zero and I'm going to call
+
+00:17:09
+this the boring connection so just to remind you from the previous videos we derived these Christoffel symbols for the sphere and these were the Christoffel symbols for the levy chavita connection and when we use this covariant derivative to perform parallel transport of this vector along the curve we ended up with this vector field where the vector ends up sort of spinning relative to the basis vectors and this spinning behavior is because the general solution for the vector components during parallel transport
+
+00:17:41
+this curve involved sine and cosine with an angular frequency and the angular frequency depends on the latitude of the curve so that's parallel transport with the levy chavita connection now if we try the boring connection where all the Christoffel symbols are zero we'd get a different covariant derivative where all these terms go to 0 and the parallel transport equations end up being much simpler just setting these partial derivatives to zero so these solutions for the vector field components are just
+
+00:18:14
+constants so parallel transporting this vector results in the vector always facing the southward direction so the levy chavita connection and boring connection are both covariant derivatives since they both satisfy these four properties but when we look at the metric tensor for the sphere only the levy chavita connection satisfies the metric compatibility condition the boring connection always has the right-hand side of this equation equal to zero and the derivative of this component is not always equal to zero so
+
+00:18:48
+the boring connection is not metric compatible and both the levy chavita connection and boring connection can be used to perform parallel transport but the results of the parallel transport are different and they end up connecting the tangent spaces on the sphere in different ways and we can define all sorts of other connections but most of the time the levy chibita connection is going to be the one that's most important to us so hopefully you see why there are many possible different covariant derivatives
+
+00:19:18
+now let's move on to extending covariant derivatives to all tensor fields let's start by defining covariant derivatives for Co vector fields so way back in my testers for beginners video number four I introduced the epsilon basis Co vectors which are defined by this equation here so when the Co vector epsilon J acts on the basis vector EE I we get the Kronecker Delta ji and these epsilon Co vectors act as a basis so we can write any code vector as a linear combination of these epsilon Co vectors
+
+00:19:52
+and in the tensor calculus video numbers say I talked about how just as this partial derivative is the calculus equivalent of the basis vector e I this differential D UJ is the calculus version of the co vector epsilon J so if we take the covariant derivative of a Kove Ector alpha we can expand alpha as a linear combination of the epsilon basis KO vectors and then we can use the covariant derivative version of the product rule or the Leibniz rule now the covariant derivative of a scalar is just
+
+00:20:27
+the partial derivative and we can expand the covariant derivative of the basis Co vectors using this formula here where these lambda coefficients play a similar role as the Christoffel symbols but for Co vectors instead and changing these J indexes to K we get this formula now it turns out we don't need to put any more work in to solve for these lambda coefficients we actually already know what they are and to show that I'm going to examine the covariant derivative of a cofactor alpha acting on a vector V now
+
+00:21:01
+it's a known fact that every Co vector can be written as a vector and a dot product with the right side of the dot product left empty so in the case of the Alpha Co vector we're going to say that the alpha Co vector is equal to a dot something and so we can write alpha of the as a dot V instead and we can again use the metric compatibility property to expand this out using a product rule and now I'm going to convert these a dot some things back into alphas next we're going to expand everything so we can
+
+00:21:37
+expand the co vector alpha with the epsilon basis and expand the vector V with the e basis and we can expand this covariant derivative of the Cove Ector alpha using the formula we derived on the previous slide and we can expand the covariant derivative of the vector V using our normal well-known formula so now I'm going to take the vr components outside since code vectors are linear and we can scale either the inputs or the outputs and I'm going to take this term outside Iko vector as well so epsilon k of ER is
+
+00:22:14
+the Kronecker Delta K R so we can cancel out the r indexes and get K here and epsilon K a V is just the component the K by definition and alpha of ek is the component alpha K by definition and expanding all this out we get this now notice that this derivative of a product can be expanded using product rule and the product rule would give us exactly what we see on the right side of the equation here so because this and this are equal we can just cancel them from either side of the equation and looking
+
+00:22:52
+at this I'm just going to real able some of the indexes here so I'm going to switch the J and K indexes around and that gives us this and we can divide both sides by the alpha and B components to get rid of them so what we found here is that the lambda coefficients are really just the negative of the Christoffel symbols so the covariant derivative of a Kove Ector field has basically the same formula as the covariant derivative of a vector field except we just have a negative sign here now in addition to vectors and Co
+
+00:23:26
+vectors we can also define the covariant derivative of a general tensor field if we just declare this property here to be true where the covariant derivative of a tensor product can be expanded out using another version of the product rule where we get a sum of tensor products where the first term has the first factor differentiated and the second term has the second factor differentiated so this would let us take the covariant derivative of the metric tensor because the metric tensor can be written as a linear combination of Co
+
+00:23:58
+vector Co vector tensor products so starting with this we can use the product rule once to get two terms where we differentiate the components in the first term and differentiate the tensor product in the second term now we can use this property to differentiate the tensor product and get another two terms so you'll notice that we can write the covariant derivative of these Co vector basis vectors which we said earlier we could expand out using the lambda coefficients which are equal to the
+
+00:24:31
+negative of the Christoffel symbols so making these substitutions gives us this so given this formula we're going to try and write all these tensor products of Co vectors using these same indexes so we're going to switch the R and K indexes here and we're going to switch the s and K indexes here and now we can factor out this tensor product of basis Co vectors to get this so you'll notice that the covariant derivative of the metric tensor has two negative Christoffel symbol terms so there's a
+
+00:25:06
+pattern going on here vectors are one zero tensors because they obey one contravariant transformation rule and zero covariant transformation rules so they get one positive Christoffel symbol term and KO vectors are zero one tensors because they obey zero contravariant transformation rules and one covariant rule so they get one negative Christoffel symbol term and the metric tensor is a zero two tensor that obeys two covariant transformation rules so it gets to negative Christoffel symbol terms so basically the covariant
+
+00:25:44
+derivative of an MN tensor will give us m+ Christoffel terms and n- Christoffel terms basically the covariant derivative gives us a derivative term for the components and one extra term for every basis vector or Co vector that we have so using this rule we can determine the covariant derivative of any arbitrary tensor also if we recall the metric compatibility property we can see that this partial derivative is equal to this and so all of this actually cancels out to 0 so it turns out that the metric
+
+00:26:24
+compatibility property means that the covariant derivative of the metric tensor in any direction is always going to be 0 another way of writing this is as follows where we just leave out the direction vector of the covariant derivative because the covary derivative of the metric tensor is zero in every direction and if you recall the Christoffel symbols that we derived for the sphere if we compute the covariant derivative of the metric tensor we do indeed find that the result is equal to zero and that's true for all curved
+
+00:26:58
+spaces as long as the metric compatibility property is true so we've learned a lot in this video but to summarize everything the abstract covariant derivative is defined using these four properties here and we can expand the covariant derivative using the Christoffel symbols also remember a covariant derivative provides a connection between the tangent spaces in a curved space and it does this by providing a definition of parallel transport which means that the covariant derivative of a tensor is equal to zero
+
+00:27:31
+and we introduced the torsion free and metric compatibility properties and remember metric compatibility if we're speaking in plain English it just means that parallel transport keeps the dot product of vectors constant as they are being parallel transported so given these parallel transport conditions the rate of change of the dot product is zero and using the torsion free and metric compatibility properties we can derive a unique set of Christoffel symbols which define a unique covariant derivative called the levy chavita
+
+00:28:05
+connection and this fact is called the fundamental theorem of Riemannian geometry and remember while the levy chavita connection is very important it's not the only covariant derivative we can easily define another covariant derivative just by picking different Christoffel symbols and different covariant derivatives will result in different instructions for parallel transport and in total we've shown the covariant derivative of a scalar field a vector field a co vector field and a metric tensor field and we can use this
+
+00:28:40
+property to get the covariant derivative of any general tensor field anyway this finishes my discussion of the co-vary derivative I hope you found these videos helpful
+

@@ -1,0 +1,87 @@
+00:00:00
+In this video we're going to be talking about how differential forms are basically like covector fields. This video is mostly going to be an upgraded version of my earlier video in my Tensors for Beginners series called "What are Covectors?", so if you haven't watched that video already, I would highly recommend you watch it first, because I'm going to assume you know what a covector is from now on. And a link to that video is in the description. So you'll recall that differentials are these little small changes in a variable that you see on the right-hand side of integrals.
+
+00:00:30
+And if you watch that Tensors for Beginners video I suggested, you'll know that covectors are like these stacks of lines that eat a vector and produce a scalar. And so in this video, I'm going to tell you that differentials are covectors. So this probably seems pretty nonsensical because these two concepts of differentials and Co vectors seem totally separate. So how on earth can these two things be related? Well, it's actually going to take a few videos for me to explain this connection
+
+00:00:56
+But the first step to showing this connection is going to involve us reinterpreting the "d" symbol in differentials. Normally we think of this "d" symbol as meaning "a small change in", but we're going to reinterpret it to mean something different. So before we do that, let's just do a quick review of differentials and covectors. So to remind ourselves about differentials, we can recall how to calculate the area under a curve. Normally, we break up the area into small thin rectangles with width ∆x and add up the areas of the rectangles together.
+
+00:01:25
+To get the most accurate answer, we take the limit as the width of the rectangles goes to zero, and this sum then becomes an integral where dx is like the width of an infinitely small rectangle. Now if we want to do a change of variables in this integral, we use this formula here to change between the differentials. As an example, if u is equal to sin(x), to convert between the differentials we zoom in on the sine function and see that up close the function resembles a straight line. And for this small zoomed in region,
+
+00:01:55
+the width dx and the height du are related by the slope: du by dx. And so we see that the correct conversion factor between the differentials du and dx is cos(x). And this is what lets us change variables in integration. And the differentials formula can also be generalized to multiple dimensions. Here we have a function f of two variables, x and y, and if we zoom in on the function up close, we see that it resembles a flat plane. And for the zoomed in region, the change in vertical height df is equal to
+
+00:02:27
+the change from a small step in the x-direction dx, multiplied by this slope here, plus the change from a small step in the y-direction dy, multiplied by this slope here. So this would be the formula relating differentials for this function of two variables. And this is what that formula would look like for this specific function here. So this sums up all you need to know about differentials; they're basically just infinitesimally small changes in some variable. Now, covectors, if you'll recall, are like oriented stacks
+
+00:02:56
+that take a vector as the input and produce a scalar as the output. And the way we calculate the scalar output is by counting the number of lines that are pierced by the vector. So in this case with the covector α, the vector v⃗ pierces two lines, so the output α(v⃗) gives us 2. Here the vector gets halfway to the first line, so we output ½. Here the vector pierces three lines, but it's in the opposite direction of the orientation of the stack, so the output is -3. And here the vector is parallel to the stack and doesn't pierce anything, so the output is 0.
+
+00:03:29
+Also, by their very nature, covectors obey these two linearity properties here: The first property is that we can add the inputs of the covector or add the outputs and get the same answer. So here you can see that α acting on this green vector v⃗ gives an output of 3, and α acting on this purple vector w⃗ gives an output of 2, and if we add v⃗ and w⃗ together, we get this new vector which pierces five lines. So as we can see 2 plus 3 is equal to 5, so that means we can either add the outputs or add the inputs and get the same result.
+
+00:04:01
+The second property is that we can scale the input or scale the output and get the same result. And we can see here that this green vector v gives an output of 2 and when we double the length of the vector we double the size of the output to get 4. So covectors are functions from vectors to scalars that obey these two linearity properties here. So 2D covectors can be visualized like this, as a stack of lines, and 3D covectors can be visualized like this, as a stack of planes. So differentials and Co vectors seem pretty different. Why do I say that differentials are covectors?
+
+00:04:32
+Well, the key to understanding this is to reinterpret the "d" symbol we see in differentials. Normally when we think of the "d" symbol, we think of something that takes a variable and gives us an infinitesimally small change in that variable. So if x is a variable, then dx would be an infinitesimally small change in x. Now we're going to create a new interpretation where d is an operator that takes a scalar field and outputs a covector field. So a scalar field f is just a space where a scalar is assigned to every point in space,
+
+00:05:04
+and a covector field df Is just a space where a covector is assigned to every point in space. So how does this d operator turn a scalar field into a covector field? Well, if we have this scalar field here with a scalar defined at every point (and by the way this color scheme is a bit like temperature where red is hot and positive and blue is cold and negative), the way we get this covector field is by tracing out the level sets of this scalar function. So the level sets of this scalar function here would look like this, right?
+
+00:05:35
+The level set curves are just the curves of constant value. So this curve here looks roughly like the curve where the scalar field is equal to 0. And this curve looks roughly like the curve where the scalar field is equal to 1. And over here this curve shows where the scalar field is equal to -1. And since the function is increasing toward the red area, the orientation of these stacks point in this direction here. So here's another example of a scalar field, and if we trace out the level sets we'll get this covector field here.
+
+00:06:06
+So these red portions would be the more positive regions of the function, so these stacks would be oriented inward, toward the top, and these blue portions are the more negative regions of the function, so the orientations of the stack would point outward away from the bottom. So this new interpretation of the d operator turns a scalar field into a covector field. Another way of saying this is that d takes a function and returns the function's level sets. Sometimes people also call scalar fields "0-forms" and covector fields "1-forms",
+
+00:06:38
+so d would take a 0-form and give us back a 1-form. And algebraically d would take the scalar field f and output the covector field df. So let's consider a few more examples of the d operator here. Let's start by considering what dx and dy mean. So we have our Cartesian coordinate system here, and if we think of x as a scalar field, it would look like this, right? It's a scalar field where each point is given the x value at that point. So on the right we see that we have positive x values and on the left we have the negative x values,
+
+00:07:13
+and the covector field DX would look like this with the level set curves being vertical lines and the orientation pointing toward the right. And if we consider the scalar field y, it would look like this, with the positives up top and the negatives down at the bottom. And so the covector field dy would look like this, where the level set curves are horizontal and oriented upward toward positive Y. We can also consider dr and dθ. So the scalar field given by r is just a set of scalars showing the radius of any given point.
+
+00:07:45
+So the radius at the origin is obviously 0 and the radius gets larger and larger as we move outward. So the covector field dr would look like this. The level set curves would be circles since the circles are the curves of constant radius. And the curves are oriented outward since the radius is growing in the outward direction. And the θ scalar field would look like this, where it's increasing as we rotate in the counterclockwise direction. Now the scalar field θ is a little bit problematic for a couple reasons.
+
+00:08:19
+Firstly each point has multiple possible θ values. For any given point we can take the theta value and add 2π and we would still get a valid description for the θ coordinate of that point, since 2π makes us rotate one full circle. And the second problem is that the θ coordinate isn't really well defined at the origin since the origin doesn't really have an angle of rotation. So I'm actually not going to formally deal with all of these annoying issues. I'm sort of just going to ask that you wave your hand and informally think of the θ coordinate as
+
+00:08:52
+increasing as we travel in the counterclockwise direction. And if we use this reasoning the covector field dθ would look like this, where the curves of constant value extend outward from the origin and are oriented in the counterclockwise direction. So these covector fields that we've talked about here would be our new interpretations for dx, dy, dr, and dθ. So if this thing df really is a covector field, we know that covectors act on vectors to give us scalars. So how do covector fields like df act on vectors v  to give us output values?
+
+00:09:31
+So here's a covector field df. And let's take the vector v  at some point p here. How do we calculate the result of df of v? Well, you might think we do what we normally do and just count the number of lines pierced by v in this picture here. But that's actually not quite correct. You have to remember that [at] every point in this field we have a different covector. So at this point here we have a covector that looks like this. And at this point here the covector looks like this. And at this point the covector looks like this and so on.
+
+00:10:03
+What we need to do is to look at the covector that exists at point p, since that's where the vector is located. So if we zoom in on this point p, we can see that the covector at this point would be a stack tangent to these curves with the same spacing and orientation. So the covector at point p would look like this and now we calculate df of v just by counting how many stack lines v pierces in this covector. And this ends up being five, so df(v) is equal to 5 [at p]. We can also look at this other example here with the vector u located at the point q.
+
+00:10:39
+So if we zoom in on this point and look at the covector at point q, we would see that the covector looks like this. And that means that df(u) would be -1, since u⃗ pierces one stack line but it's going against the orientation of the covector df. So df(u) is equal to -1 [at q]. And we should also notice that just like ordinary covectors, covector fields also obey the linearity laws. We can take a look at df(v) and df(w) and add the results together to get this output, but we could also add the vectors v and w⃗ together and then have df act on their sum and we would find that we get the same results.
+
+00:11:20
+So we can add the inputs or add the outputs. We can also scale a vector v and then have df act on it and get the same result as just scaling df(v) by the same amount. So we can scale the inputs or scale the outputs, just like we would expect. The last thing I'm going to get you to consider in this video is: What is the geometrical meaning of df(v)? So to answer that I'm going to bring back this example of a mountain from my previous video on covectors. Remember I told you that when map makers need to convey mountain slopes on a flat page, they draw out
+
+00:11:53
+curves of constant elevation (which are the same things as level sets). So we can think of this level set drawing of a mountain as a covector field associated with the mountain. So let's consider what it would mean for df to act on this vector v. Now this vector v is pointed straight up the mountain slope, so we end up getting a fairly large number: df(v) is equal to 8000. Now if we consider this other vector w pointing in a different direction, we end up getting df(w) is equal to 4000, which is a smaller number. And this is because the w direction doesn't point straight up the mountain; it points
+
+00:12:29
+up the mountain at an angle. And because of that, the w vector doesn't end up piercing as many lines, because it's traveling up a shallower slope. So what we've learned here is that df of some vector is proportional to the steepness of the function f in the direction of that vector. So when that vector points up a steeper slope, the value of df of that vector will increase. So we have this vector v. Where df(v) is equal to 8,000. Now let's consider a shorter vector u which points in the same direction.
+
+00:12:59
+Now because u is shorter it also pierces fewer stack planes and we get df(u) is equal to 4,000. So what we've learned here, is that the value of df(v) gets bigger when the vector v is longer. So if we think of v as sort of like a velocity vector, we observe a larger value for df(v) when we're moving faster through this point. So at these two facts, that the value of df(v) is proportional to the steepness of f and also proportional to the length of v, this basically tells us that df(v) measures the rate of change of f when moving through a point at velocity v.
+
+00:13:38
+Right? If f changes more steeply, then the stack lines will be more dense so we get a bigger value for df(v). And if we pass through the point with a faster velocity, the velocity vector v is longer, which also gives us a bigger value for df(v). So this means that df(v) is really just the directional derivative of f with respect to the velocity vector v. So you might be used to writing the directional derivative using any of these notations here, but df(v) is going to be yet another way of writing the directional derivative.
+
+00:14:10
+So the geometrical interpretation of df(v) is the directional derivative of f with respect to the vector v because it tells us how quickly this slope of a function f is changing at a point when we pass through that point with a velocity vector v. So to summarize what we learned in this video: We reinterpreted the d symbol to be an operator that takes a scalar field and outputs a covector field where the covector stacks are given by the level set curves of the scalar field. And this new covector field df will obey the normal linearity laws that covectors
+
+00:14:44
+do, where we can add or scale the inputs or add or scale the outputs and get these same results. Also, we learned how to compute the output of the covector field df acting on a vector v by zooming in on the covector field and then counting how many stack lines that the vector v pierces for that covector. Finally we talked about the geometrical interpretation of df(v) and we talked about how df(v) is actually the directional derivative of the function f when moving with a velocity v. So both the direction of v and the length of v will [determine] how fast we see the function f changing at any given point.
+
+00:15:24
+So hopefully you understand now how df is actually a covector field (also sometimes called a "differential form"), but you probably don't understand how this relates back to the differentials that you see in integrals. So we're going to continue expanding on the connection between covector fields and differentials in the next two videos, and that will involve a new interpretation of what integrals mean.
+

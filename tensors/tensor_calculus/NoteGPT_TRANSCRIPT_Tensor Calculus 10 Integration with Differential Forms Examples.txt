@@ -1,0 +1,96 @@
+00:00:00
+this is the second video or in discussing integration with differential forms and in this video I'm going to go through some real integration examples if you haven't watched the previous video I would highly recommend you check the link in the description and watch that one first because if you haven't watched it this video might not make a ton of sense so as a reminder the differential form interpretation of integrals tells us that every integral involves a path and a co vector field
+
+00:00:26
+also called the differential form and the path is indicated here with the endpoints and the co vector field which is like a set of contour curves is written here and the way we compute the integral is by counting the number of Co vector curves that the path Pierce's we add plus 1 when the direction of the path is aligned with the co vector orientation and we add minus 1 when the path is aligned in the opposite direction of the co vector and recall that the fundamental theorem of calculus tells us that the value of this integral
+
+00:00:56
+only depends on the value of Phi at the endpoints of the path a and B and geometrically this means that the result of the integral doesn't depend on the particular path that we take as long as the end points are the same so this is our new interpretation of integrals let's go through a couple of examples to see how it compares with our old interpretation of integrals that involves areas under curves so this integral is an example of a path integral in the 2d plane and this one is just an ordinary single variable
+
+00:01:27
+integral in the X direction so let's start with this one so in our old interpretation of integrals we would be taking the line negative 6x plus 4 and finding the area between it and the x-axis between x equals 0 and x equals 2 so this area here would be positive and this area here would be negative so to compute it we just go ahead and compute the antiderivative which is negative 3x squared plus 4x and evaluate it at the endpoints of 2 and 0 and if we do that we get negative 12 plus 8 which is equal
+
+00:02:03
+to negative 4 so now let's try computing it with the new interpretation with differential forms so we have this integral with our path points and our differential form so this expression right here can be viewed as the derivative of some function f with respect to X and so all of this can be re-written as just DF so this integral here is really simple if we can just figure out what F is right it would just be F of 2 minus f of 0 by the fundamental theorem of calculus so if DF by DX is negative 6x plus 4 to get f of
+
+00:02:40
+X we just compute the antiderivative which is negative 3x squared plus 4x plus some constant C now if we want to visualize f we could draw it as a curve like this and it doesn't really matter what the constant C is so I'm just gonna pick C equals 1 arbitrarily but it doesn't really matter either way I'm just picking something so that we can graph it so here f is visualized as a curve drawn on a pair of axes but we could also visualize f as a scalar field like we've done here where red indicates
+
+00:03:12
+positive values and blue is negative values so this is the scalar field F and that means that the co vector field DF would be the level sets of F oriented towards the positive values so this is the cove Ector field DF and in this case our path would go from x equals 0 to x equals 2 so let's just draw this path here and as you can see we get plus 1 minus 1 minus 1 minus 1 minus 1 and minus 1 so we cancel this plus 1 with this minus 1 and we see that the total value is negative 4 which is exactly
+
+00:03:49
+what we got before so the answer we get by taking a path and looking at how many contour curves it Pierce's is the same answer we get by looking at the area underneath the curve now let's take the example of this other integral so notice that we have both x and y variables here so this integral involves a path P in the 2d plane and this path is parametrized by a time parameter T that goes from 0 to 2 the paths x-coordinate is equal to 1/2 T plus 1 and the paths y-coordinate is equal to 3 over 2 t
+
+00:04:24
+minus 1 so the path would look like this at T equals zero we start at the point plus one minus one and at time T equals two we end up at the point 2 2 so the normal way to compute this is to expand the differentials DX and dy in terms of DT so we can use the formulas DX equals DX by DT times DT and dy equals dy by DT times DT now to get all of this in terms of T we can grab Y from here and the derivative of X with respect to T is just 1/2 as we can see here also we can grab X from here and the derivative dy
+
+00:05:04
+by DT is just 3 over 2 as we can see here so adding these two terms together we get the integral of 6 over 4 T plus 1 DT and to compute this we figure out the antiderivative which is 3 over 4 T squared plus T and evaluated at the endpoints 0 and 2 evaluating at 2 we get 3 over 4 times 2 squared plus 2 and evaluating at 0 just gives us 0 so we can ignore that part so this just ends up being 3 plus 2 which is equal to 5 so that's the old way of doing things let's try doing the integral using the
+
+00:05:42
+differential form interpretation instead so we start off with the same integral with the same path and our goal is now to turn this sum of Ko vector fields into a single cove Ector field DF so how are we going to do that well remember we can expand DF in terms of DX and dy like this using these partial derivatives and this expression here looks pretty similar to the one we have up here right so we're going to have to take this expression here Y DX plus X dy and write it in this format here partial F by
+
+00:06:15
+partial x times DX plus partial F by partial Y times dy so obviously this means that partial F by partial X has to be equal to Y and likewise partial F by partial Y has to be equal to X so we need to figure out some function f which satisfies these equations here this function does exist it's simply F is equal to x times y plus some constant and you can check that these derivatives work out so now we have our function f which is like a scalar field and this scalar field looks like this here we're
+
+00:06:50
+using the special case where the constant C is equal to 0 but it really doesn't matter which value of C we use so we have positive scalar values where x and y have the same sign and negative scalar values where x and y have opposite signs so if this is the scalar field F we can get the co vector fields DF just by looking at its level sets so this would be the level sets of F with the black arrows pointing in the positive direction and this Cove Ector field is called DF and if we put this path here and count how many contour
+
+00:07:24
+curves it Pierce's we get a total of 5 which is exactly what we expect and if we do things algebraically and evaluate the differential DF using the fundamental theorem of calculus all we need to do is subtract the value of F at the endpoints of the paths which are at T equals 2 and T equals 0 and if we plug in those values of T into the path equations the corresponding X Y points are 2 2 and plus 1 minus 1 and evaluating at those points we just use the function f of X Y is equal to x times y so we get 2 times 2 minus 1
+
+00:08:04
+times negative 1 which again is equal to 5 which is exactly what we expect so what we've shown here is that there's a new way to think about these integrals instead of thinking of integrals in terms of computing an area under a curve we're thinking about them in terms of a co vector field and a path and just counting the number of Co vector curves that the path Pierce's and as I mentioned in the last video this interpretation is really nice because it doesn't depend on any coordinate systems
+
+00:08:32
+these paths and Co vector fields are geometric objects that don't depend on our choice of coordinates so it doesn't matter if we're using Cartesian coordinates or polar coordinates or whatever else we choose the result of the integral will always be the same and I like to show you what I mean by that so earlier I showed that with this integral if we assume that this expression is the derivative of F with respect to X then we can compute the antiderivative to get this expression here and this scalar
+
+00:09:01
+field F looks like this or if you prefer we could graph it as a function like this so what would happen if we were to change coordinates and you might be wondering what I mean by changing coordinates since we're only dealing with one dimensional space well basically I just mean that we do a change of variables so what would happen if I do a change of variables where u is equal to 2x or equivalently X is equal to 1/2 you well this expression negative 6x plus 4 would become negative 3 u plus 4 and since X is equal to 1/2 u we also
+
+00:09:36
+have DX is equal to 1/2 D U and finally these endpoints of x equals 0 and x equals 2 would become U equals 0 and U equals 4 so this entire integral would become negative 3 u plus 4 times 1/2 D u going from u equals 0 to u equals 4 and distributing out the 1/2 we'd get negative 1 point 5 u plus 2 D u so after this change of variables we get this integral here and if we write this expression as DF by D u then the antiderivative of F as a function of U would be this function here and if we like we can also visualize this function
+
+00:10:15
+as a scalar field or a curve and you'll notice that these pictures here are exactly identical the only difference is that in the first image we measure things using the x coordinate system and in the second image we measure things using the u coordinate system so even though that the numbers that appear in these integrals look different the underlying geometry here the underlying scalar field is the same the only thing we've changed is the measuring sticks that we're using and if the scalar field
+
+00:10:43
+F is the same in both cases that means that the co vector field DF is also the same in both cases and the paths that travels from x equals 0 to x equals 2 is the exact same as the path that travels from u equals 0 to u equals 4 so since the co vector field the paths are the same in both cases the result of the integral which is negative for is also the same in both cases so the fundamental underlying geometry here is the co vector field DF and we can choose to expand DF in terms of the X variable or the U variable and we
+
+00:11:18
+might get a bunch of different numbers when we use X compared to when we use U but at the end of the day these are just two different ways of describing the co vector field DF so DF doesn't depend on any coordinate system so this Cove Ector field DF is purely geometrical and it doesn't depend on the coordinate system we choose to use now let's go through the other example so here we have a path integral over a 2d space where this is the path and recall we wrote the integrand out like this and deduced that
+
+00:11:48
+the function f had to be equal to x times y plus some constant c that didn't really matter and visualizing this scalar field F looks like this and for simplicity I'm using C equals zero here but it doesn't really matter which value we use now let's try changing coordinates from the XY variable to the UV variables where u equals 2x and V equals 2y so this means that X is equal to 1/2 U and Y is equal to 1/2 V which also means that DX is equal to 1/2 D U and dy is equal to 1/2 DV so we would
+
+00:12:25
+get that the new integral would look like this which ends up being 1/4 VD u plus 1/4 u DV and we would also need to reframe at rise the path to be in terms of U and V instead of x and y so if you work all that out we end up with u is equal to t plus 2 and V is equal to 3t minus 2 so you'll notice that the numbers in the co vector field got smaller but the numbers in the paths got bigger and we'll find that the combination of these getting smaller and these getting bigger sort of cancel out
+
+00:12:58
+so that the result stays the same so writing all this out again we look for the underlying function f that describes this expression and we end up with F of U and V is equal to 1/4 u times V plus some constant K and visualizing this function we get this scalar field here and again I'm using K equals 0 for simplicity it really doesn't matter what we use and the new path parameter is in terms of U and V would look like this so you'll notice that once again the scalar field and the path look the exact same in both
+
+00:13:31
+cases the only thing that's changed is the measuring sticks that we're using so if the scalar field F is the same in both cases that means that the co vector field DF is also the same in both cases and so the result of both of these integrals is v because they use the same path in same co vector field so once again this Cove Ector field DF is a geometric object that doesn't depend on our choice of coordinate system we can choose to expand DF in two different sets of variables like x and y or U and
+
+00:14:02
+V and the coefficients that result from these variable choices might look different but at the end of the day these are just two different ways of describing the co vector field DF these are both really just describing the same thing and this is really the main point I want to get across in this video Kove Ector fields are invariant to the choice of coordinates but the co vector field components do depend on the choice of coordinates so this is just like when we're dealing with simple vectors if we
+
+00:14:30
+take this yellow vector V and try measuring it using different sets of basis vectors using this blue set we'll get the components 11.5 but using this red set of basis vectors we get the components 1 2 and if we use this green set of basis vectors we get the components 1.25 0.25 and with this purple set we get the components 0 1 so this is the same vector V in all these cases we're not changing the vector but when we change basis we end up describing the vector using different numbers or different components so the
+
+00:15:08
+vector itself is invariant but the components are not invariant they depend on the basis and it's the same thing with Co vector fields in integrals we can have some integral like this with this Kove Ector field and then change variables and get another co vector field that looks totally different and we can change variables again get yet another Co vector field that looks different and change variables again and get something that's even more different but really all of these expressions are describing the same Co
+
+00:15:38
+vector field EF it's just that in each of these four cases we've expanded the co vector field differently using different variables and so we've gotten different components so this expression is really just DF by DX and this is DF by D U and this is DF by dy and this is DF by D s so we get different components in each case because we're using a different coordinate system in each case but at the end of the day these all described the same co vector field DF which is invariant to the choice of
+
+00:16:10
+coordinates and the same thing goes for the path all these endpoints are just different ways of describing the same path P with different coordinate systems so in summary just as we can expand the same vector in different coordinate systems and end up with different components each time we can also expand the same co vector field using different variables and get different components each time but at the end of the day vectors are just arrows and Co vector fields are just level sets these are all
+
+00:16:41
+geometric objects that don't depend on any coordinate system so the main takeaway of this video is that Co vector fields are invariant to the choice of coordinates and that's why when we change the variable in an integral we still get the same answer because integration isn't really about the choice of variable that we use it's just about crossing Co vector curves using a path but Co vector field components do depend on the choice of coordinates so when we look at integrals using
+
+00:17:11
+different variables we're gonna see different numbers even if the underlying Kove Ector field and path were describing is the same
+

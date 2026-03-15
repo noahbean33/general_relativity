@@ -1,0 +1,78 @@
+00:00:00
+ In this video I'm going to talk a little bit more about why derivative operators are vectors. This is an optional follow-up to the last video where I introduced this idea, so you can feel free to skip ahead to the next video if these definitions here already make sense to you. So in the previous video I brought up how we're going to change the definitions of our basis vectors. The old way of thinking was to consider basis vectors to be partial derivatives of a position vector r with respect to the coordinate variables.
+
+00:00:27
+ and the new way of thinking is to consider the basis vectors to be the partial derivative operators themselves. So it looks like this new way of thinking took a couple people off guard and that's understandable since I sort of introduced this new idea out of nowhere. So in this video I thought I'd go into a little more detail about why we use this definition and why it makes sense.
+
+00:00:47
+ So to begin, I want to take a couple steps back and talk about why I started learning tensor calculus in the first place. It started a few years ago when I decided that I wanted to learn general relativity. I started looking for resources and textbooks online and a lot of the notes I found threw a ton of things at me all at once. They made me do tensor calculus in curved space in four dimensions.
+
+00:01:09
+ They threw new ideas at me like differentials and the covariant derivative, and I found it really hard to understand things and make progress. So when I started making these videos, I decided I wanted to do my best to introduce the ideas one step at a time. First, I wanted to start with tensor algebra and talk about tensors without doing any calculus. Then I wanted to talk about tensor calculus but keep things simple and talk about tensor calculus in flat spaces only.
+
+00:01:35
+ after that i would move on to the study of curved spaces which is called differential geometry and finally with all the math under our belts i'd move on to the physics of general relativity now the problem with this approach is that i've introduced these new definitions for basis vectors as partial derivatives in the tensor calculus section where we're dealing with flat spaces only
+
+00:01:55
+ But you won't really be able to appreciate the reason we're making this definition until we've studied curved spaces in differential geometry. So in this video, I'm going to jump ahead a little bit and look at curved geometry to help you understand why these definitions make sense. And then we'll jump back to studying tensor calculus and flat spaces for the rest of this video series.
+
+00:02:15
+ so i've already shown you that when we take a position vector capital r and another position vector rh a small step away in the x direction and take the limit of their difference as h approaches zero the result of this derivative is a unit vector pointing in the x direction so this derivative partial r by partial x is just another way of thinking of the ex basis vector
+
+00:02:38
+ I've also shown that for tangent vectors along a curve parameterized by the variable lambda, we can take a position vector r and another position vector a small step away down the curve, r of lambda plus h, and we can compute the vector tangent to this curve by taking their difference and taking the limit as h approaches zero, and this lets us define tangent vectors anywhere on the curve. dr by d lambda at any given point on the curve is just the tangent vector.
+
+00:03:04
+ And we can expand the tangent vector out into a linear combination of the x and y basis vectors using chain rule. Now you'll note that all of this has been done in the flat two-dimensional plane. So let's try taking a look at a curved two-dimensional surface to see how the situation is different.
+
+00:03:21
+ So a two-dimensional surface that everyone's familiar with is the surface of the Earth, which is approximately a spherical surface. And let's consider someone who's driving a car along the surface of the Earth. So as this person drives along, they'll go from this position to this position. And let's say we want to get the velocity of this car as it travels around.
+
+00:03:42
+ So in order to use the limiting procedure we used before, we need to use position vectors. And in order to use position vectors, we need to define an origin point. So we're going to cut the earth in half here and define an origin point right at the center of the earth. So the position vector of the driver's initial position is here. And after we take a small step h in the forward direction, the driver's position vector is this.
+
+00:04:08
+ And so we take the difference of these two vectors and take the limit as the step size gets very small, and we end up with this velocity vector here. So there's a couple things that make this situation different than the situation where we were in the flat 2D plane. Firstly, the origin point that we've chosen isn't actually on the surface that we're studying. We picked an origin point that was exterior to the surface.
+
+00:04:33
+ Secondly, the tangent velocity vector actually leaves the surface that we're studying and goes off into the outside space.
+
+00:04:41
+ So these two facts make this type of geometry extrinsic. And when we use the word extrinsic, which is related to the word exterior, when we talk about extrinsic geometry, we're talking about geometry where we're allowed to talk about things that exist outside or exterior to the surface. So in this example, both the origin point and the velocity vector are defined using three-dimensional space, even though we're only studying a two-dimensional spherical surface.
+
+00:05:10
+ So this doesn't seem to be that big of a problem, but what if instead of dealing with a globe, which is like a two-dimensional sphere living in a three-dimensional space, we're forced to look at the surface of the Earth like this, using a map? How would we define position vectors?
+
+00:05:25
+ Well, since the surface of the Earth is no longer living in a three-dimensional space and exists entirely in two-dimensional space, there's no convenient outside place where we can put the origin. And you might be thinking, well, we can just pick any old point on the map and let that be our origin, and we can draw position vectors from there. And you can try doing this, but there's actually a problem with this approach. Vectors are supposed to be straight, right? But the path that goes from the origin point to the tip of the vector
+
+00:05:55
+ this path isn't straight, right? Since the surface of the Earth is curved, this path is actually a curved path. There's no such thing as a straight line on the surface of the Earth because the Earth isn't flat, and so it's actually impossible to draw straight lines. The straight line that does connect these two points would end up digging through the ground and going outside the two-dimensional surface that we're studying.
+
+00:06:19
+ So this method of studying curved surfaces where we aren't allowed to leave the surface is called intrinsic geometry because we're forced to stay inside or interior to the surface and never refer to anything outside of it. And in general relativity, when we're studying four-dimensional spacetime geometry, we run into this exact situation. Spacetime in general relativity is curved, so we can't draw straight lines in the curved space.
+
+00:06:48
+ so that means we can't draw position vectors, and we can't pick an origin point outside four-dimensional spacetime because that would mean we'd be picking a point outside the universe, and I don't really even know what that would mean. So we have a problem here in general relativity. We're forced to use intrinsic geometry to study spacetime, but how can we study things like velocity if we're not allowed to use position vectors?
+
+00:07:12
+ Well, the solution is to realize that while we can't draw straight lines on the surface, we can still draw curved paths. And you'll notice that on the surface of the Earth here, we already have some grid lines defined on the map already. And if we have curves, that means that we can still define derivatives with respect to those curves, right? If this is a curve of increasing x, then we can still define derivatives with respect to x.
+
+00:07:38
+ And if this is a curve of increasing y, then we can still define derivatives with respect to y. So we can't use normal position vectors to talk about directions on the surface, but we can use these derivative operators to talk about different directions. The partial derivative with respect to x points in the x direction, and the partial derivative with respect to y points in the y direction.
+
+00:08:01
+ And if we have some path that's traveling around in our curved space, we can still consider the direction that the path is pointing in using the derivative with respect to the curve parameter. And we can break this direction up into its x and y components using the multivariable chain rule that we have for derivative operators. So you shouldn't think of this direction vector as actually connecting these two points on the earth. This derivative just gives the general direction that the curve is traveling in at any given point.
+
+00:08:31
+ So derivatives give us a way to talk about directions on a curved surface in a way that is completely intrinsic to the surface and doesn't require an outside space in any way. And we can use the same approach in four-dimensional spacetime. While we can't draw straight lines, we can still draw curved paths, and that means we can take derivatives with respect to the path parameters to get a sense of different directions.
+
+00:08:54
+ So the old notation uses actual vectors from the vector spaces R2 and R3 to define directions, but the new notation uses the vector space of derivative operators, which is formally called the tangent vector space and is denoted TPM, which is the vector space of derivatives at some point P on a surface M. So keep in mind that these vectors and these vectors are in fact different vectors from different vector spaces.
+
+00:09:24
+ And remember, these derivative operators can be scaled and added together just like ordinary vectors can. And since we can add and scale them, they really do form a vector space. So these partial derivatives really are vectors in the tangent space TPM.
+
+00:09:40
+ so the reason we're defining basis vectors like this now is because this definition will eventually become useful when we talk about curved spaces in the next video we're going to go back to discussing flat spaces but we're going to continue using these definitions if these definitions with the partial derivative operators still make you feel uncomfortable you can feel free to imagine that the position vector capital R is still there as long as we're dealing with flat spaces or extrinsic geometry there's no problem with putting a position vector here
+

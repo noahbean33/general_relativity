@@ -1,0 +1,108 @@
+00:00:00
+in this video I'm going to explain how integration is done with differential forms and also explain how integration with differential forms relates back to the traditional understanding of integration about areas under curves I'm hoping you've watched the previous three videos on differential forms already if you haven't the links are in the description so recall in the previous videos we reinterpreted the D operator to be an operator that takes a scalar field F and produces a Co vector field D
+
+00:00:27
+F which is basically just the level sets of F oriented towards the positive values of F and this Cove Ector field D F can behave like a function that acts on vectors if we want to know how D FX on a vector V we just zoom in on the cofactor at that point and count how many lines the vector Pierce's to get the output so this interpretation of the D operator gives us co vector fields which are also called differential forms but how does this relate back to the DX that we see in integrals that denotes an
+
+00:00:57
+infinitesimally small change in the X variable well the short answer is that for every single integral we're ignoring double and triple integrals here every single integral involves a differential form and a path and the way we compute the integral is just by Counting how many contour lines in the differential form that the path crosses so in this video I'm going to explain why this interpretation makes sense using some examples from physics and to start I'm going to ask you to remember two
+
+00:01:27
+important theorems from calculus there's the fundamental theorem of calculus that says in order to compute an integral of a function f of X all we need to do is compute the antiderivative of F which i've written as capital f and notice that the result of this integral only depends on the values of capital F at the endpoints a and B and we could also rewrite this formula like this since the lowercase F function is just the derivative of the uppercase F function the second theorem is the fundamental theorem of calculus for line
+
+00:02:00
+integrals which is also called the gradient theorem and this tells us that in order to compute the line integral involving the gradient of some function capital F along some path P we only need to know the value of F at the endpoints and B so for both theorems here we have an integral that we can compute only by knowing the values of a function at some endpoints and this idea of computing an integral by only looking at the values of a function at the end points of a path is going to be very important to us in this
+
+00:02:32
+video so to explain how integration with differential forms works I'm actually going to prove the gradient theorem for you proving the gradient theorem will help us get a lot of insight into why doing integrals with differential forms makes a lot of sense so to start I'm going to remind you about a certain idea in physics called work so work is the quantity that we get by applying a force on an object over some distance and the formula for work is just the dot product of the force vector with the
+
+00:03:01
+displacement vector the dot product helps tell us how much of this force was actually used to move the object so let's say that we have some force maybe it's wind maybe it's gravity but let's say we have some force that's pushing toward the upper-right like we see in this force field here where the force vectors are given by 2x plus 1 ey now let's say it pushes some object along this purple vector here so maybe there's like some kind of wall here that constrains the object to only travel in
+
+00:03:31
+the horizontal direction so what would the work done by this force on the object be in this situation well we just compute F dot R and we can expand these vectors out using our basis like this so 2 times 3 is 6 and 1 times 0 is 0 so we end up with the total work being 6 and work has the same units as energy so this would be 6 joules so this is a very simple example because it involves a force that's only pointing in one direction let's try looking at a more complicated example one example of a
+
+00:04:04
+force field that we see in nature is the force due to Earth's gravitational pull and the force from this force field involves some gravitational constant G the two masses of the two bodies being attracted to each other which I've written as uppercase M Aten lowercase M and the formula also depends on the distance between the two masses which I've written as the magnitude of this vector R squared and we use this negative radial basis vector here to ensure that the force is always pointing inward towards Earth so let's
+
+00:04:35
+say that we have some object traveling along some path like this how do we compute the work done on this object by the Earth's gravitational field so some of this object's motion along this path is going to be due to gravity and the other portion will be due to something else like maybe this object has some Rockets on it that are propelling the object in different directions so we want to only compute the work that's done by gravity so normally to compute work we take the dot product of the
+
+00:05:04
+force vector F and the vector R that the object travels along but since the force field is changing everywhere in space and the path we're traveling along is curved this formula isn't good enough anymore we actually need to do an integral that computes the dot product between the force vector and the vector D are everywhere along this path and if you're wondering what this D R vector is that's just a short way of writing D R by D lambda times D lambda where lambda is like a time parameter that increases
+
+00:05:35
+as we travel along the path so D R by D lambda is just the rate of change of the position vector with respect to time so really it's just the velocity vectors or the tangent vectors along this path so with this formula here we're really just computing the dot products between the force vectors and the tangent velocity vectors adding up all the dot products as we go along the path so let's do an example of calculating the work done by this force field using this semi circle path here and this path has a
+
+00:06:06
+parameterization where the radius is always 2 and the angle is increasing with time and we can get the formula for the tangent vector D R by D lambda by using the chain rule so recall these vectors here are just the polar basis vectors ER and E theta and the components of this tangent vector can easily be calculated from the parameterization up here so we can compute these derivatives and we get that the tangent vector always points along the theta basis vector because the radial component is zero now
+
+00:06:41
+to compute the work we just throw this formula for the force field in here and use this formula for the tangent vector so this probably looks really messy but recall that the radius along this path is always a constant value of two so that means that this entire term can come out of the integral like this since it doesn't depend on the lambda time parameter and so the only part we care about in this integral is this dot product of the R and theta basis vectors but recall that since the R vector
+
+00:07:11
+always points outward and the theta basis vector always points counterclockwise these two basis vectors are always at right angles to each other so since the vectors in this dot product are perpendicular the dot product always goes to zero which means this entire integral will go to zero so at this particular path the field does no work on the object and that makes sense since the path doesn't line up with the direction of the force field at all all right so here's another example in this
+
+00:07:42
+case the path is traveling outward in a straight line and the parameterization is that the radius is equal to the time parameter lambda and the angle is always zero and if we calculate the tangent vectors using chain rule like before we get that the tangent vector is just the e.r basis vector which makes sense since the path is always pointing outward so we just take the integral equation for work and we plug this in for the field and plug this in for the tangent vectors and we get this now all of these are
+
+00:08:15
+constants so we can bring them outside the integral and the radius is just equal to the lambda parameter so we can sub this in and get this now ERD r goes to 1 and finally the antiderivative of negative 1 over lambda squared is just 1 over lambda and so we evaluate this integral at the endpoints of the curve to get this now since the path travels outward the value of B will always be bigger than the value of a and if B is than a that means that one over B is less than one over a and so one over B
+
+00:08:54
+minus one over a is a negative number and that means that the work we've computed will always be a negative number and that makes sense since this path is travelling against the gravitational field so in this case gravity does negative work on the object if this path were reversed and we were travelling inward then we'd get the same amount of work but the work done would be positive instead so it turns out that in this particular vector field moving around in a circle involves no work done
+
+00:09:23
+by the field but moving inward or outward does involve work positive work going in and negative work going out so overall when we have two points no matter which path we take between them it's only the inward and outward motions that contribute to the overall work so this sort of makes some intuitive sense but when we're looking at the geometric picture here it's kind of really hard to believe that if we took this path and drew out all the tangent vectors and force vectors it's pretty amazing that
+
+00:09:55
+all of these dot product results would add up in such a way that the results only depends on the end point right like the idea of adding up all these dot products along these paths and the result o is being the same and only depending on the end points that that almost seems like a miracle just looking at this picture now fortunately there's actually a new and better way to visualize the gravitational force that actually makes this fact of the work only depending on the end points it makes this fact completely obvious it's
+
+00:10:26
+so obvious that you barely even need to think about it and to talk about this new way of visualizing the gravitational force I need to introduce gravitational potential so often when physicists talk about forces to help simplify their work they'll take one of the masses out and call this entire term here the gravitational field so this is the gravitational force but this is the gravitational field the gravitational field isn't a force itself but it becomes a force when it acts on a mass
+
+00:10:58
+and this gravitational field is a field that can be written as the negative gradient of a scalar field Phi and this scalar field Phi is called the gravitational potential so another way of writing the gravitational force vector acting on a mass is by taking the mass m and multiplying it by the negative gradient of this gravitational potential field Phi so when we visualize the gravitational potential it looks like this and in this case red is positive and blue is negative now normally gradient vectors point toward
+
+00:11:37
+the positive values of a scalar field but since we're using the negative gradient the vectors actually point inward toward the earth like we would expect for gravity so we can take our integral for work and replace the force vector with the mass times the negative gradient of the potential like this and we know that in Cartesian coordinates the gradient of a function will look like this okay so the formula for the gradient and other coordinate systems like polar coordinates is a bit less straightforward but for the sake of
+
+00:12:10
+simplicity I'm going to be working with Cartesian coordinates and use this formula here so that's the formula for the gradient and we know that the formula for the tangent vectors along the path can be written using chain rule like this where these derivatives here are just the Cartesian basis vectors so we can take this dot product between the gradient vectors and the tangent velocity vectors and write everything out in terms of the Cartesian basis and working through the dot products we get
+
+00:12:40
+this expression but of course this is nothing more than the multivariable chain rule expansion for the derivative D Phi by D lambda so this big dot product between the gradient and the tangent velocity vectors is really just D Phi by D lambda and together when multiplied by D lambda all of this is really just D Phi so really when we write out the integral for work like this with the gradient and the tangent velocity vectors we're sort of over complicating our lives really all of this is just an expanded version of
+
+00:13:14
+defy and of course the integral of defy along this path is actually extremely easy we just evaluate Phi at the endpoints of the path and then subtract by the fundamental theorem of calculus so this big huge formula here with the gradient makes things look a lot more confusing than it really is when we want to compute work all we really need to focus on is the integral of D Phi Phi being the gravitational potential scalar field so using gradients kind of overcomplicates our lives and that is also true when it comes to visualizing
+
+00:13:48
+the gravitational force when we draw a path and want to calculate the work we have to do all these dot products and it's really hard to visualize what's going on but if we stop looking at the gradient of Phi which gives us a vector field and instead just look at Phi itself which is a scalar field things make a lot more sense we just draw our path and look at how the potential changes at the starting point and the ending point and that gives us the work or yet another way of looking at things
+
+00:14:17
+instead of looking at the scalar field Phi itself we can look at the level sets of Phi and when we draw a path through these level sets if we want to calculate the work all we need to do is look at the level set where the path starts and the level set where the path ends and see how much the function has changed another way of thinking about this is just by Counting how many contour lines the path Pierce's as it travels from the start to the end so for example if we start the path here and n here we end up
+
+00:14:49
+piercing four contour curves so the total work done would be four and in this path we Pierce three curves but since we're going against the orientation of the contour curves we get a total work of negative three and if we travel around in this circular path we don't pierce any contour curves at all so we get zero total work so before we were looking at a vector field which was the gradient of Phi and it was really hard to visualize how to compute work using the vector field but over here
+
+00:15:21
+we're using the level sets of Phi and that makes it a lot easier to compute the work visually and using the level sets it becomes a lot more obvious how much work is done when an object travels along a path and really these level sets of the scalar field Phi these level sets are just the co vector field D Phi so instead of visualizing things with a vector field the gradient of Phi it's a lot easier to visualize things with the co vector field D Phi and now the fundamental theorem of calculus for
+
+00:15:53
+line integrals were also called the gradient theorem this now has an extremely easy interpretation when we have a path with the starting point and an ending point it really doesn't matter which path we take to get from the start to the end we just choose any path we want and add +1 for every contour curve we Pierce where the co vector orientation aligns with the path and we add negative 1 for every curve we Pierce where the orientation of the co vector is opposed to the path and when viewing
+
+00:16:23
+things like this it becomes a lot more obvious that the choice of path doesn't change the resulting work so it's only the endpoints that matter right so if we start here and end here and we start moving outward and cross all these curves no matter where we go we're just going to have to cross them again in the opposite direction to get to the ending point so we get plus ones here that get cancelled out by minus ones here so the choice of path really doesn't matter at all so at the end of
+
+00:16:54
+the day computing the work integral can be visualized by drawing a path through a CO vector field and just counting the contour curves that we Pierce and this is a pretty general idea that works for all integrals so really the main point I want to get across in this video is every single integral involves a path and a co vector field also called a differential form so here these two examples of integrals the red parts are the co vector fields and the path that we travel along are given by the endpoints of the integral here and here
+
+00:17:29
+so the differential form interpretation of integrals tells us that the result of an integral is just the number of Co vector stacks pierced by the path and remember we have to consider the orientation of the co vector so we get plus 1 when the co vector Direction is aligned with the path and minus 1 when the path and Co vector are aligned in opposite directions and what's really nice about this interpretation is that it doesn't depend on coordinate systems at all right we just need a co vector
+
+00:17:59
+field and a curve and we can go ahead and compute the integral just by looking at the picture it doesn't matter which coordinate systems we use whether it's Cartesian or polar the answer is always going to be the same so I'm gonna keep digging into this idea of how to interpret integration with differential forms and how it doesn't depend on the coordinate system in the next video so if you thought that this video was enlightening I would strongly recommend that you watch the next video in the
+
+00:18:25
+series as well since we'll be working through some real examples and showing how integrals don't depend on our choice of coordinate system
+

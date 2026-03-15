@@ -1,0 +1,99 @@
+00:00:00
+in this video I'm going to discuss the differences between the gradient operator and the D operator I'd highly recommend looking at the description for a link to my video on raising and lowering tensor indexes before watching this one since I'm going to be building on the ideas from that video so in this tensor calculus series I've been talking about two different operators that act on functions there's the gradient operator also called the Dell operator and there's the D operator
+
+00:00:30
+and these two operators are highly related but they are technically different and I'd like to compare and contrast them unfortunately there's some confusion in the math and physics Community about what these operators are actually called some sources like this textbook called gravitation actually call DF the gradient of f while various articles on Wikipedia give DF different names like the exterior derivative and differential one form to add to the confusion in some articles Wikipedia calls the gradient a vector field and in
+
+00:01:05
+other articles it calls the gradient a co- Vector field for the purposes of this video I'm going to be calling this symbol d f or also sometimes the gradient of F and I'm going to be calling this symbol DF and also sometimes the differential of f or sometimes the exterior derivative of f so there may be some sources you come across that call this the gradient of f but for for the purposes of this video when I talk about the gradient of f I'm talking about this symbol here so both the gradient operator and the D operator
+
+00:01:39
+act on scalar Fields now the difference is that the gradient of a scalar field gives us a vector field where the vectors point in the direction of steepest increase with larger vectors indicating a steeper change on the other hand DF gives us a co- Vector field also called a one form where the co- Vector curves are given by the level sets of the function f and the level sets are oriented towards the positive values of f so DF and DF are clearly different DF is a vector field and DF is a covector
+
+00:02:17
+field so these two ideas are clearly different but they're also fairly similar we can see that the orientation of these vectors and these co- vectors are the same both of them Point towards the positive value of the function f also the larger vectors which are shown by long arrows in this image match up with large covectors which are shown by densely packed Curves in this image likewise these smaller vectors which are short match up with these smaller co- vectors which are sparsely spaced curves
+
+00:02:51
+so again DF and DF are different concepts but they're also highly related so what's the connection between the two well in my previous video on raising and lowering tensor indexes I talked about how there was a special connection between the vector space V and the Dual space of co- vectors V Star and the connection is made by taking the vector v in our Vector space and partnering it with the co- Vector v. something in the Dual space so this V do something is like a dotproduct with an empty slot on
+
+00:03:25
+the right hand side that's waiting to eat another vector and when we give it another Vector it will will produce a scalar now it turns out we can make a very similar connection between DF and DF so I'll show you what I mean so recall that when the co- Vector DF acts on the vector v it gives us the directional derivative of f in the direction of the vector v and another way of writing the directional derivative of f relative to a velocity vector v is like this and we know that to compute the directional derivative we
+
+00:03:58
+can just take the dotproduct between the gradient of F and the velocity vector v so this is interesting on the left we have DF acting on a vector v and on the right we have the gradient of f with a dotproduct acting on the vector v so in a sense this means that DF is equal to DF dotted with something right these are both functions that take a vector input and produce a scalar and when we plug in the same Vector into each we get get the same answer the directional derivative so DF and DF do something are actually
+
+00:04:37
+the same function so just as we can pair up a vector v with a partner Co vector v do something we can also partner the vector field DF with the partner covector field DF do something and this is equal to the coor field DF so DF is the Dual coor field of the Vector field d f which in this video I call the gradient of f so if you recall from my previous video on raising and lowering indexes when we had vector and coor partners the way we changed from V to V do something was by using the metric tensor and the reverse process to go in
+
+00:05:20
+the other direction was done using the inverse metric tensor where the components of the inverse metric tensor are defined by this formula here where when we do a summation with the components of the ordinary metric tensor we get the chroner Delta so let's just remind ourselves how we can use the metric tensor to change between the vector v and the coor V do something well recall that to compute theproduct v.w we can just expand out the vectors as linear combinations of basis vectors in a given basis so we have the vector
+
+00:05:56
+components here and the basis vectors here and if we like we can rewrite these linear combinations using Einstein notation with implied summations over I so if we write this dot product we can expand V and W out as linear combinations using the Einstein notation and this dotproduct of the basis vectors just gives us the metric tensor components so we can see that the key to Computing v.w is done using the components of V and W as well as the components of the metric tensor now if we want to compute V do something we
+
+00:06:32
+just remove the vector W from the input slot of the dot product here and likewise to get the full component expansion of V do something we can take this formula here and just sort of remove the w Vector components and get this and you'll notice I've added these Epsilon JS here these Epsilon JS are the co Vector bases for the Dual space defined by this form here so I do a more proper derivation of this expression in my tensors for beginners video number 16 on raising and lowering tensor indexes but for this
+
+00:07:11
+video I'm just going to sort of wave my hand and hope that you can believe me when I say when we're trying to construct this Co Vector we need to expand it out in a co- Vector basis which are the epsilons and the components of this Co Vector would be these components here so we can in fact see see that the metric tensor components help us convert the vector components of V into the covector components of V do something so just as we learned in the video on raising and lowering tensor indexes when we have the
+
+00:07:44
+vector v and the covector V do something we can use the metric tensor to convert between components of v and components of V do something and to go in the opposite direction we use the inverse metric tensor whose components are defined by by this summation equation here with the metric tensor components and the chroner Delta so just as this is true with the vector v and the covector v. something this is also true with the vector field DF and the covector field DF which is really just DF do something
+
+00:08:19
+so I'll show you why this is true so we know that the directional derivative DF of V is equal to the gradient of f also called d f dotted with the vector v and we can expand each of these vectors out in the cartisian basis using the cartisian basis vectors so this here is just the J component of the vector v and this here is just the I component of the gradient Vector DF and we can bring the components outside and write this dotproduct of the basis vectors and now this dotproduct of basis vectors just
+
+00:08:57
+gives us the metric tensor components so this formula right here is the formula for the directional derivative now notice here that both DF and d f are acting on the vector v so if we like we can just remove the vector v from these formulas to get a co- Vector so both DF and DF do something are co- vectors and to get this summation formula for this Co Vector we just remove the V components and replace them with the covector basis dcj so since we're building a CO Vector we need to build these out of basis Co
+
+00:09:37
+vectors so we're adding the basis Co vectors dcj so if you're confused about following this step right here that's because I'm sort of waving my hand and not giving the full explanation for why this is true a full explanation of this line of reasoning requires an understanding of the tensor product so I'm actually going to include the proof for this line of reasoning in my next video since it will require a little bit of time to explain but for now you're just going to have to trust me that this
+
+00:10:07
+is true and just believe that since these are co- vectors we need to build them out of basis Co vectors which are the DCJS here all right so we know from our previous videos that the DF covector field can be expanded out in the covector basis like this where these partial derivatives are the components so we've discovered that DF is equal to two different things there's this formula right here which is the expansion in the co- Vector basis and there's this formula here which uses the
+
+00:10:38
+components of Del of F and the metric tensor components so DF is equal to both of these formulas here now notice that both of these formulas involve the basis Co vectors D CJ so if these formulas are equal that means that their components must also be equal so we get this equation between the components with partial derivatives on the left hand side and a summation over the components of DF and the metric tensor components okay so here we have in fact confirmed that the metric tensor components help us change between the
+
+00:11:14
+components of the vector field DF and the components of the covector field DF which are these partial derivatives here now it would be nice if we could isolate the components of DF on one side so we need to get of these metric tensor components now to do that we just remember the definition of the inverse metric tensor components here and we can see that this gives us the chroner Delta so if we do summations on both sides using the inverse metric tensor components we can change this term here into the chroner Delta i k and by the
+
+00:11:52
+chroner Delta index cancellation rule we can cancel out these I indexes and just write this as k all right so basically what we've done is we've derived a formula for the components of d f and these end up being equal to these partial derivatives summed up with the components of the inverse metric tensor okay so we can see that the inverse metric tensor really does take us from the components of DF which are these partial derivatives to the components of d f or the gradient of F and this
+
+00:12:27
+formula here is really interesting because it gives us the true formula for the components of DF or the gradient of f so we can write the gradient of f as a linear combination of these basis vectors where these components are equal to this term here or if you prefer we can write it in the alternative Vector notation where the basis vectors would look like this now you might be a bit surprised by this formula because you've probably calculated the gradient many times before but never seen the inverse
+
+00:13:00
+metric tensor components here like this so do these inverse metric tensor components really belong in here well recall that in the cartisian basis the basis vectors are orthonormal so the metric tensor components are just the chroner Delta which is a bit like the identity Matrix and that means that the components of the inverse metric tensor are also the chroner Delta and so that also gives us the identity Matrix so if we use this formula for d f or the gradient of F this inverse metric tensor just becomes a chroner Delta and we can
+
+00:13:37
+use the cancellation rule to cancel the J's here and get K and then we get this formula and if we write out this summation over K explicitly we can see that we get our familiar old formula for the gradient in cartisian coordinates now in polar coordinates the metric tensor looks like this Matrix as we calculate back in video 11 in this tensor calculus Series so that means that the inverse metric tensor looks like this so because the Matrix is diagonal we can just take the reciprocal of the diagonal elements to get the
+
+00:14:12
+inverse Matrix so that means when we take this formula for d f or the gradient of f all of the off diagonal elements are zero so this summation ends up only having two terms the RR term and the Theta Theta term so with these inverse Metro tensor components this is just one and this is just 1 / R2 so the formula for d f or the gradient of f in polar coordinates actually looks like this where we need this extra one over R squar term to make things correct and again I might remind you that my definition of the E Theta basis Vector
+
+00:14:53
+is not normalized so it gets longer as we move farther away from the origin a lot of textbook will normalize the E Theta basis vector by dividing by R so that it has length one and if you're using this definition of the E Theta basis Vector then you would end up with only 1 / R here instead of 1 / R 2 but my point is that the formula for d f or the gradient of f looks like a linear combination of basis vectors with these partial derivatives but depending in which coordinate system we're using we
+
+00:15:29
+might end up with extra terms like this 1 / R 2 term in polar coordinates and we sometimes need these extra terms in order to get the formula for the gradient right in that coordinate system and these extra multiplying terms actually come from the components of the inverse metric tensor so it turns out that these inverse metric tensor components really do belong in this formula for the gradient of f or d f right in the C Ian coordinate system the inverse metric tensor just ends up being the identity Matrix so we don't need any
+
+00:16:06
+extra terms other than the partial derivatives and this means that the components of DF end up being the exact same as the components of DF but in other coordinate systems we might not be so lucky and we might need extra terms so if you've ever seen the formula for the gradient in spherical coordinates you probably know that it looks a little bit crazy with all these extra terms here and all these extra terms actually just come from the inverse metric tensor components so the inverse metric tensor
+
+00:16:39
+really does help us get the gradient formula right in every coordinate system so in your multivariable Calculus classes you might have derived all these terms manually by doing a bunch of substitutions and coordinate changes but in tensor calculus we like to think of these extra terms as just the components of the inverse metric tensor so to summarize this video If we have some scalar field F then d f or the gradient of f is a vector field where the arrows point along the direction of greatest increase and DF also called the
+
+00:17:15
+differential of f or the exterior derivative of f is a covector field which is basically like the level sets of f oriented towards positive values and just as we compare a vector v with a partner Co vector V do something we can also pair the vector field DF with the coor field DF do something which also turns out to be equal to DF and to move back and forth between vectors and their partner covectors we just use the metric tensor and to go in the opposite direction from Co vectors to partner vectors we use the inverse
+
+00:17:52
+metric tensor whose components are defined by this equation so more concretely to go back and forth between between the components of DF and DF we can use these two formulas here with the metric tensor components and inverse metric tensor components and I'd like to add one last point about notation so the normal notation for switching between DF and DF is normally done using the letter G for the metric tensor and the inverse metric tensor but there's also this alternative notation I introduced in my
+
+00:18:26
+video on raising and lowering indexes that involve the flat and sharp symbols from music so the flat operator can also be used to change DF into DF and the sharp operator can be used to change from DF into DF so this Sharp flat notation is a bit strange but you might see it in some textbooks or online articles so in the next video I'm going to more carefully go over the proof of why this formula for DF do something makes sense and that will be done using tensor products and I'll also give a
+
+00:19:01
+concrete example of computing the components of DF in two different coordinate systems
+

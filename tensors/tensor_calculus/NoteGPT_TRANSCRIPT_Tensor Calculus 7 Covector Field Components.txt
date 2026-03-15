@@ -1,0 +1,84 @@
+00:00:00
+in this video I'm going to talk about breaking up differential forms into their components this video is mostly going to be an upgraded version of my tensors for beginners videos on Co vector components and Co vector transformation rules so I would highly recommend you watch those videos first before watching this one the links to those videos are in the description so in the last video we talked about how the d operator takes a scalar field and produces a co vector field by tracing out the level set curves of constant
+
+00:00:27
+value and orienting the curves toward the positive scalar direction we also saw that Co vector fields which are also called differential forms obey these linearity laws where we can add and scale the inputs or add and scale the outputs and get the same answer we also saw how to compute the results of a co vector field acting on a vector at a point by taking the co vector at that point and Counting how many Co vector lines that the vector Pierce's and finally we talked about how the geometrical interpretation of DF OB is
+
+00:00:55
+the directional derivative of the function f moving through a point with velocity vector V in this video I want to show that just as we can write vectors as linear combinations of special basis vectors scaled by some components we can also write differential forms as linear combinations of special basis differential forms which are also scaled by some components and we'll figure out what these a and B components are in this video so to start off our investigation of breaking code vector fields up into their components let's
+
+00:01:25
+begin by looking at how a bunch of different Co vector fields act on these two basis vectors which are the partial derivatives with respect to X and y so let's take this scalar field F and look at its corresponding cofactor field DF now what happens when DF acts on the e X basis vector well that's the same thing as having it act on the partial derivative with respect to X and remember as we said in the last video this is basically just the directional derivative of F in the X direction and
+
+00:01:53
+the directional derivative of F in the X Direction is the same thing as partial F by partial X and the same thing goes for DF acting on the vector ey this is just the directional derivative of F in the Y direction which is partial F by partial Y now let's take a look at the scalar field X in this scalar field the scalar value at a point is just the value of x at that point so the positives are on the right and the negatives are on the left and here's the corresponding code vector field DX so DX
+
+00:02:24
+of the e^x basis vector is equal to the rate of change of X in the x-direction which of course is equal to 1 and this matches up with this picture here since the e^x basis vector pierces one line and DX of the ey basis vector is equal to the rate of change of X in the Y direction which is zero and this matches up with this picture here where the ey basis vector pierces zero lines and again we can do this same process for the scalar field Y and its corresponding code vector field dy dy of the e X
+
+00:02:56
+vector is just partial Y by partial X which is 0 which makes sense because there are zero lines pierced by this e X basis vector in this picture and dy of the ey basis vector is just partial Y by partial Y which is 1 and again that makes sense because there is one line that is pierced by the ey basis vector in this picture okay so to sum up what we just covered we have these relationships here where the co vector fields DF acting on the basis vectors give us these partial derivatives here and when the DX and dy co vector field
+
+00:03:28
+act on these basis vectors we get either 1 or 0 we get 1 when the top and bottom variables are the same and we get 0 when they are different okay so why did we bother going through all this why do we care what does this have to do with breaking up Co vector fields into their components well if you'll recall when I originally introduced Co vectors and my tensors for beginner series I told you about these two special Co vectors epsilon 1 and epsilon 2 which we defined to obey these special relationships here
+
+00:03:57
+basically if the Co vector index matches the basis vector index we get 1 and if the indexes are different then we get 0 so these four relationships can be summarized by this one relationship here epsilon I of EJ gives us the Kronecker Delta IJ so if you think about it the relationships we discovered in the previous slide are actually very similar right these partial derivative operators are just like these basis vectors and these differential forms are like these epsilon co vectors and if we replace the X variable with c1 and the Y
+
+00:04:33
+variable with c2 we can summarize these relationships like this where DC I of the partial derivative with respect to C J gives us the Kronecker Delta IJ and if you'll recall these epsilon Co vectors actually ended up being the dual basis for the space of all Co vectors so any arbitrary code vector alpha can be written out as a linear combination of epsilon 1 and epsilon 2 and the components alpha 1 and alpha 2 are just the amount of lines each basis vector pierces so the first basis vector Pierce's two lines and the second basis
+
+00:05:09
+vector Pierce's one line so the components of the co vector alpha would be 2 1 so it turns out that just as epsilon 1 and epsilon 2 end up being a basis for the set of all code vectors it turns out that DX and dy end up being a basis for the set of all differential forms so if we pick these coefficients properly we can build this Kove Ector field to DF as a linear combination of the co vector fields DX and dy now you might ask how do we get these a and B coefficients well it turns out we can
+
+00:05:41
+determine what they are in just a couple lines to get the coefficients let's take some function f and let's also take a curve parameterize by lambda where the tangent vectors along the curve are given by D by D lambda and let's consider the rate of change of this function as we travel along the curve which is given by the derivative DF by D lambda now recall that the co vector f acting on the vector d by D lambda is equal to the derivative DF by D lambda so whenever we see derivatives like this
+
+00:06:12
+we can always replace it with a KO vector field acting on a vector so if we choose to expand this derivative out in Cartesian coordinates using the chain rule we can notice that these three terms each have derivatives with respect to lambda so we can rewrite each of these derivatives as a KO vector field acting on the vector D by D lambda and since Kove Ector fields just like KO vectors can be added and scaled together we can rewrite this of Ko vector fields like this with this being a linear combination of co vector
+
+00:06:46
+fields acting on this vector now since both the left and right sides of this equation involve a co vector field acting on the vector D by D lambda we can deduce that this and this are actually the same Co vector field they are just different ways of writing the same function so this means that the Co vector field DF can be written as a linear combination of DX and dy using these partial derivatives as these scaling coefficients so we've shown that any Co vector field DF can be written as a linear combination of DX and dy and
+
+00:07:21
+that means that DX and dy form a basis for the set of all code vector fields DX and dy are the dual basis of the vector basis for the x and y partial derivatives so just as the x and y partial derivatives are the calculus versions of basis vectors the differentials or also called Co vector fields DX and dy are the calculus versions of basis Co vectors so this formula here probably seems a little bit abstract let's go through a concrete example so we can understand things a bit better so let's take the scalar
+
+00:07:55
+field F here in Cartesian coordinates the point X Y is assigned the scalar value y squared plus X minus 1/2 the co vector field D F associated with this scalar field is here and we'd like to expand this Kove Ector field as a linear combination of the co vector fields DX and dy the correct scaling coefficients for DX and dy are given here by these partial derivatives so let's calculate them we find that partial F by partial X is equal to 1 and partial F by partial Y is equal to 2y and so this tells us that
+
+00:08:30
+DF is equal to 1 DX plus 2y dy so do these coefficients make sense well let's look at this Cove Ector field DF note that no matter where we are in this field the horizontal spacing between the curves is always equal and this makes sense because the d X component of this field is constant everywhere so that means that the spacing between the curves in the X direction is also going to be constant everywhere also note that the curves in the DF co vector field are generally oriented toward the right and this makes sense
+
+00:09:02
+because the curves in the DX co vector field are also generally oriented toward the right now let's look at the vertical spacing notice that the vertical spacing is larger toward the center but the curves get closer and closer together as we move up or down this matches up with the D Y component getting bigger as Y grows in size because remember a larger co vector means a co vector where these stacks are more dense so when the value of y increases we end up with a denser bigger co vector in the y direction also
+
+00:09:35
+note how the curves in the top half of the DF co vector field are oriented upward but the curves in the bottom half are oriented downward this makes sense because when y is positive we'll get positive versions of the upward facing dy co vector but when y is negative we reverse the direction of dy and get curves that point downward now again there's nothing special about the Cartesian coordinate system we can also do the same thing in polar coordinates so recall these formulas for changing
+
+00:10:05
+between Cartesian and polar coordinates we just sub this in for X and subsys in for Y and we get this function here for the scalar field F so again this scalar field F has a corresponding Kove Ector field DF and we'd like to expand it as a linear combination of the d r and d theta Kove Ector fields to get the correct coefficients we need to compute these partial derivatives so partial F by partial R gives us two R sine theta squared plus cosine theta and partial F by partial theta gives us two R squared
+
+00:10:38
+sine theta cosine theta minus R sine theta now these coefficients are quite a bit more complicated than the Cartesian ones but we can still check that they make sense if we look at the locations where theta equals zero which is basically this line here where the angle of rotation is zero these coefficients end up being one zero these coefficients end up being one for the D R component and zero for the D theta component and this makes sense since the vector here is equally spaced and pointing to the right just like dr is
+
+00:11:13
+equally spaced and pointing to the right if we look at the points where theta is equal to pi over 2 which is this line here where the angle of rotation is PI over 2 or 90 degrees the coefficients end up being 2 are for the D R component and negative R for the D theta component so along this line of 90-degree rotation the d'arco vector field points in the upward direction and the D theta K vector field points in the left direction so since the d r component is positive we would expect the curves in
+
+00:11:44
+DF to point in the same direction as the curves in d r which is upward which is exactly what we see and since the d theta component is negative we would expect to see the curves in DF point in the opposite direction of D theta which would be toward the right and that's exactly what we see here so while these polar coordinate components might look pretty complicated it isn't too hard to believe that they're an accurate description of this Cove Ector field so just as we can expand individual Co
+
+00:12:13
+vectors into linear combinations of dual basis vectors and of course we get different components depending on which basis we use we can also expand differential forms also called Co vector fields into linear combinations of other Co vector fields where we get different components depending on which basis we use and we can also write these formulas out more compactly using the Einstein notation like this so these situations of individual Co vectors and Co vector fields are very similar in both cases we
+
+00:12:46
+have a Co vector that we want to expand we have the dual basis Co vectors and we have the components that tell us how much of each basis Co vector is present inside the Co vector we want to expand and these formulas here are the exact formulas we saw before when we talked about changes of variables and integration we saw that a small step differential DF could be broken up into a small step DX multiplied by this slope plus a small step dy multiplied by this slope and these formulas here that we
+
+00:13:18
+discovered in this video look the exact same as the differential formulas that we've known for multivariable calculus all along it's just that we're reinterpreting them before we thought of these differentials as small changes in a variable but now we're thinking of them as Co vector fields and this formula tells us how to break up one Co vector field into a linear combination of basis Co vector fields so the main takeaway of this video is that we can expand Co vector fields into linear
+
+00:13:47
+combinations of basis Co vector fields and when we use different Co vector field basis we get different Co vector field components and really this is just the same thing we've been doing all along with individual Co vectors where we take a Co vector expand it out into a basis and then get components depending on which basis we use in the next video we're going to learn the transformation rules for Co vector fields and we're going to learn that basis Co vector fields are contravariant but Co vector
+
+00:14:15
+field components are covariant
+

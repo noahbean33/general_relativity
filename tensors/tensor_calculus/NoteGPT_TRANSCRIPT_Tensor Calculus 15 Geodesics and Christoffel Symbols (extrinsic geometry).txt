@@ -1,0 +1,111 @@
+00:00:00
+In this video, I'll be introducing  geodesics and Christoffel symbols in extrinsic geometry. I'm gonna come back to  these ideas later with intrinsic geometry, but for this video, all the geometry I do  will involve 2d services living in 3d space. This video will also be the first step toward  understanding a very important idea in tensor calculus called the Covariant derivative,  which I'll talk about in future video. If you want to learn more about geodesics  you can check out this professor's course
+
+00:00:29
+notes. The link to them is in the description.  So geodesics are basically the answer to the question of finding the shortest distance  between two points. In flat space, this is pretty easy. The shortest distance between  two points A and B is just a straight line. And the formula for this straight line is  also pretty easy to get. We just take A as the starting point and add a vector pointing  from A to B scaled by some time parameter λ, and by choosing different values of λ, we can  get any point on this line. But things get more
+
+00:01:03
+challenging when we try to find the shortest  distance between two points on a curved surface. We generally can't draw straight lines on  curve surfaces. So the process of finding the shortest distance between two points involves  finding a special curve called a geodesic, which is basically like the  straightest possible path in a curve space that also minimizes  the distance between two points. So before we study geodesics, why should we  bother caring about them? Well, one of the main physics applications is in general relativity  where space time is curved. Since space,
+
+00:01:37
+time is curved light, doesn't travel in straight  lines. Instead light gets bent around massive objects like stars and black holes, and  these curved paths that light travels. Are actually the geodesic curves in  space time. These curves are basically the straightest possible paths that can be  drawn in curved space time. Now space time is a four dimensional space and the geodesics,  there can be pretty complicated. In this video, we're going to focus on geodesics on two  dimensional curved surfaces for simplicity,
+
+00:02:08
+but the basic idea is more or  less the same in any dimension. So to start off our discussion of geodesics, I'm going to ask a pretty basic question.  How do we know if a path is straight in flat space? And to answer that we're gonna take  a look at a curve's velocity, vectors and acceleration vectors. So let's pretend we're  traveling along this road at a constant speed. What would the velocity vectors look like? Well, the velocity vectors would just be the tangent  vectors to this curve. So they would look like
+
+00:02:39
+this. Now what about the acceleration vectors? So  the acceleration vectors would just be the change we see when looking at two tangent velocity  vectors that are right next to each other. So the change between this tangent  vector and this tangent vector would be this acceleration vector. And if  we keep doing this, we find that the acceleration vectors basically always point  inward when the path curves in a C-curve like this. So the acceleration vector  points to the opening of the C-shape. Now let's take a look at this other road here. If  we wanted to travel along this at constant speed,
+
+00:03:17
+the velocity vectors would look like this.  They would all be the same. And if the velocity vectors remain constant, that would mean that the  acceleration vectors would all be zero, right? So, what we found here is one way to detect if a  path is straight or no: basically, in flat space, a straight path has zero acceleration when  we travel along it at a constant speed. So we know that this path is curved because we  see non-zero acceleration vectors, but this path is straight because the acceleration is zero.  Now let's consider the equivalent of straight
+
+00:03:52
+paths on curved surfaces. So again, let's take  a look at the tangent velocity vectors along this road. So this path is zig-zagging back  and forth, but it's also traveling uphill. So the tangent velocity vectors will be  zig-zagging back and forth, but they'll also be pointing upwards somewhat to go up the  slope of the hill. And the inclination of the velocity vectors will change depending on how seep  the hill is at any given point. So this means that the acceleration vectors... not only will they  point inward at the C-curves, they will also point
+
+00:04:28
+slightly upward or downward in certain places  when the car's vertical velocity is changing. Now let's take a look at this other road.  It moves up and down over some hills. So while the velocity vectors will point forward,  they'll also have an upward or downward slope to them. Now the acceleration vectors will  sort of point downward for this C-curve here, and they'll point upward for this C-curve over  here, which is somewhat hidden behind this hill. So you'll notice that both of these roads  have acceleration vectors. So neither of
+
+00:05:05
+these roads is perfectly straight. And that's  because the ground surface in both of these cases is curved. So it's impossible to  travel in a completely straight line because the ground is curved. But there  IS a difference between these two roads. This road over here is sort of going  as straight as possible in the forward direction. Whereas this road over here is  sort of wandering back and forth instead of going directly from the start to the finish.  So in fact, this path is a geodesic curve
+
+00:05:37
+because it travels in the forward direction as  straight as possible, along the curved surface. Whereas this path is NOT a geodesic because  it wanders back and forth. And this difference isn't just something we can see with our eyes.  There's a very real mathematical difference between these two curves. You'll notice that on  the geodesic curve, the acceleration vectors all exist in the same vertical plane that  slices vertically through the path. In fact, all of these acceleration vectors are
+
+00:06:08
+actually NORMAL to the surface. So just  to be clear when looking at a surface, the normal vectors are always pointing directly  out of the surface. Whereas tangential vectors will lie in the plain tangent to the surface,  which is perpendicular to the normal vector. So the acceleration vectors are always  pointing directly in or out of the surface, but never from side-to-side in a direction that's  tangent to the surface. Whereas with this curve that wanders around the acceleration  vectors have a normal component that
+
+00:06:42
+points directly out of the surface, but  there's also a tangential component of the acceleration that points from side-to-side  because the curve is wandering around. So this brings us to our definition  of a geodesic curve in curved space. A geodesic path has zero tangential  acceleration when we travel along it at constant. So when we say zero tangential  acceleration, we mean that the acceleration vector is always pointing directly out  of the surface in the normal direction. So now that we have a definition for geodesic  curves, we need a plan to find geodesic curves
+
+00:07:22
+on a surface. So to compute geodesic  curves, we need to find curves whose acceleration vector is only pointing in  the normal direction to the surface. So the acceleration vector will normally have a  normal component and a tangential component. And we need to find curves where the  tangential acceleration is equal to zero, so that only the normal component exists. And  this property will give us curves that give these straightest possible path between two  points. So before we go looking for geodesic
+
+00:07:56
+curves on surfaces, I'm going to give you a  quick reminder of how surfaces and curves work. So usually we start with the two dimensional  UV plane and put the UV plane through some sort of function which stretches and bends it  so that it becomes a 2d surface living in 3d space. So a given point in the UV plane will  get mapped to some X, Y, Z point in 3d space. And I usually write the function as R(U,V)  where R is a position vector in 3d space. And if we want to draw a curve on this surface,  we just draw the curve in the UV plane first as
+
+00:08:30
+a function of some curve, parameter λ. And then  we put it through the function to bring it into 3d space onto the surface. So I'm kind of  abusing notation here, but I'm using the position vector capital R to denote the curve as  R(λ), as well as the surface, which is R(U,V). And recall that the partial derivatives of the  position vector are, are just tangent vectors to the surface. So ∂R/∂U gives us tangent vectors  along the U curves. ∂R/∂V gives us tangent vectors along the V curves. And dR/λ gives us tangent  vectors along the curve parameterized by λ.
+
+00:09:10
+All right. So to go after geodesic  curves, now we need to look at the acceleration vector along a curve,  which is the second derivative of our, with respect to λ. So if you watched video  12 in this series on the metric tensor, you'll be familiar with the tangent  velocity vector along a curve, which we've expanded here out in terms of the U and V  variables using the multi-variable chain rule. So to get the acceleration vector, we just  take the derivative of this velocity vector. So that means taking the derivative of this  term and this term. So with this derivative,
+
+00:09:48
+since we have a product of two terms, we need to use the product rule. So the derivative  of this term results in two new terms. In the first one, the derivative is  applied to dU/dλ. And in the second term, the derivative is applied to the basis tangent  vector ∂R/∂U. And similarly, we get two extra terms for the V variable portion. So this term  and this term are easy enough to understand, but these two terms have the derivative of  the U and V basis vector with respect to λ. So that is going to take a little bit of work  to figure out. So we know by multi-variable
+
+00:10:30
+chain rule that the λderivative operator can  be expanded out in a linear combination of the U and V derivative operators like this. So  d/dλ of the U basis factor is really equal to this. So we act on the U basis factor with these  partial derivatives, with respect to you and V. So we get this expression with these two second  order derivative. And we can do something similar for the V basis vector. And we get an expression  with these two second order derivatives. So originally we had this expression for the  acceleration vector and on the previous slide,
+
+00:11:09
+we've derived expressions for this derivative  and this derivative, which are here and here. So we're just going to sub in these expressions  here. And we end up with this big expression here. So you'll notice that with this big  expression, we have two types of terms. These two terms here only involve the first derivative  of the position vector R. So we know that these exist in the tangent plane since first derivative  velocity vectors are always tangent vectors. But these other four terms here involve second  order derivatives of the position vector R.
+
+00:11:46
+So we don't know if these lie tangent to the  surface or not. So I'm just gonna rearrange this expression a bit. And again, these  two vectors are definitely in the tangent plane to the surface. And these four terms at  the bottom might be tangent to the surface, or they might be normal to the surface,  or they might be a mix of both. So this formula for the acceleration is  getting pretty ugly. So I'm gonna suggest a way to make it look nicer. What I'm gonna  do is I'm going to replace the U variable
+
+00:12:15
+with U^1 and replace the V variable with  U^2. And adding these indexes 1 and 2 will allow us to rewrite this big expression  using the Einstein summation convention. So these first two terms can be written  as a summation like this. It's a single summation over i, where i goes from 1 to 2.  And these four terms here can be written as this term with two summations, one over i and  one over j, each from 1 to 2. And we can write this summation because each of these four terms  has two single derivatives with respect to λ.
+
+00:12:54
+And then one second order derivative  of the position vector R. Okay, so we've cleaned things up a bit. And  again, we know for sure that this part is definitely a vector that's in  the tangent plane to the surface, but these parts over here might not be tangent  to the surface. So to go after the geodesic, we need to figure out if this portion is tangent  or normal to the surface or a mix of both. So with this expression, these vectors  here, which are second order derivatives of the position vector R. These are the  mysteries. We need to understand these
+
+00:13:31
+better. So these second order derivatives  here are just 3d vectors living in 3d space. And that means we can expand them out as  a linear combination of 3d basis vectors. So we could expand these out in terms of the  standard X, Y, Z vector basis, but we're actually going to choose a different basis. Instead,  we're actually going to use the two tangent vectors from the U^1 and U^2 coordinates along the  surface, which give us a basis for the 2d tangent plane. And for the third basis, vector, we're  going to use a vector normal to the surface.
+
+00:14:10
+So, what we're gonna do is... we're going  to build these vectors out of a linear combination of these three basis vectors here:  these two tension vectors in the tension plane and this normal vector. Now how much of  each of these basis vectors do we need, or in other words, what are the  components of this vector in this basis? Well, we don't actually know the components  at all, so we're just going to make up new variables for the components since they're  unknown. So we're gonna use these variables
+
+00:14:40
+here. These L_ij terms. These are called the  second fundamental form. And L_ij tells us the normal components of this second order,  derivative with respect to U^i and U^j. And these capital gamma (Γ) symbols. These are  called the Christoffels symbols and these give us the tangential components of the second order,  derivative vector. So Γ^1_ij tells us how much of the U^1 basis vector we need. And Γ^2_ij tells  us how much of the U^2 basis factor we need. So here is our 3d vector basis with the surface  normal vector and the two tangent vectors.
+
+00:15:25
+So if this is the second order, derivative  vector that we want, then Γ^1_ij would be this component along the first tangent  vector Γ^3_ij would be this component along the second tangent factor direction.  And L_ij would be this component along the normal direction. Okay. So we have this formula  here for the second order, derivative vectors. And I'm going to group these two terms together  using Einstein notation with a sum over "k" to make things even more compact. Now, the next  thing we need to do is solve for these Γ terms,
+
+00:16:01
+the Christoffel symbols. So notice that  this normal vector n-hat is by definition, always going to be normal  to this tangent plane here. And that means that the dot product of  n-hat with any of the tangent vectors is always going to be zero because  the normal vector and the tangent vectors are perpendicular by definition.  So to solve for the Christoffels symbols, we can take this formula here and take the dot  product with a tangent vector on both sides. And so we get this. And this term will go to zero,
+
+00:16:37
+since n-hat is perpendicular to the tangent  vector. And so on the right hand side, we're left with the Christoffel symbols  summed with this dot product of tangent vectors. But this thought product of tangent basis  factors is just the metric tensor by definition. So we can rewrite this as the components of  the metric tensor. So now we have this and to isolate the Christoffel symbols, we need to  get rid of these metric tensor components. So recall that by definition, the summation  of the metric tensor components with the
+
+00:17:13
+inverse metric tensor components  gives us the Kronecker Delta (δ). So we can sum on both sides with  the inverse metric components. And this becomes the δ^m_k. And by the  chronic or Delta cancellation rule, we can cancel these k-indexes and just write the  m-index. And so we get this, this is our formula for the Christoffel symbols. And we're not as  concerned with the second fundamental form here, but we can also solve for it in a similar way  by dotting both sides with the normal vector.
+
+00:17:48
+Now this term will go to zero. Since the normal  vector is perpendicular to the tension vector. And by definition, the length of the normal  vector is one. So n-dot-n just goes to 1. So this is the formula for the second fundamental  form components right here. And if we want a concrete expression for the normal vector,  you can just use this formula here involving cross products where e_i and e_j are just the  tangent vectors for the U^i and U^j coordinates. And since these two vectors lie on the tangent  plane, their cross product will always be a
+
+00:18:25
+vector that's perpendicular to the tangent  plane. And we also divide this vector by its length to ensure it has length one. Okay.  So we're done basically all the painful math in this video. And what we have here is  our equation for the acceleration vector along a curve right here where these second  order derivatives are given by this formula here where the Christoffel symbols and second  fundamental form are given by these formulas. So, if you're wondering why we did all this  extra work, when this first formula seemed to
+
+00:18:58
+be perfectly good... you'll notice that if we plug  this formula into the second derivatives up here, we get this equation here and notice how all  these terms in this equation are either given, using the tangent vectors or the normal vector. So we can actually group these terms together  since they're all just multiples of the tangent vector, ∂R/∂U^k (with index  k). So how does that help us? Well, recall our plan all along was to find  geodesic curves, which are curves, where the acceleration vector  is always normal to the surface.
+
+00:19:36
+And earlier we talked about how we can  break up the acceleration vector into a tangential part and a normal part. Well, that's  exactly what we've just done with this formula here. We broke up the acceleration vector into  a tangential part and a normal part. And if the geodesics are curves where the acceleration  vector is always normal, that means that geodesics will always have a tangential part  of the acceleration that is equal to zero. So setting this formula here to zero is an  effective way of detecting whether or not
+
+00:20:12
+a curve is a geodesic. So setting  the expression for the tangential component equal to zero gives us the geodesic  equation. So any curve parameterized by λ, which satisfies this geodesic equation  is, in fact, a geodesic curve. And these geodesic curves are the paths  that beams of light will follow in curved spacetime. So if this geodesic equation looks  like a bunch of random nonsense symbols, please watch the next video in the  series where I will walk through an example of using this equation to  find geodesics on a curve surface.
+
+00:20:49
+so just to summarize this video, we said that  geodesic curves are the equivalent of straight lines in curved spaces and will give us the  shortest distance between two points. And our definition of geodesic curves on a surface  are curves whose acceleration vector points completely in a direction, normal to the surface,  and doesn't have any tangential acceleration. And then we derived this formula  for the acceleration vector, which involves the Christo symbols and  the second fundamental form. And since
+
+00:21:24
+geodesics have zero tangential acceleration,  that means that geodesic curves must obey this equation here where the tangential  component of acceleration is zero. And this is called the geodesic equation.
+

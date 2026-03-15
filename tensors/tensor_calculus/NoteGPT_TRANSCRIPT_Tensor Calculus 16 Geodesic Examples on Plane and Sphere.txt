@@ -1,0 +1,114 @@
+00:00:00
+in this video I'm going to go through a couple examples of finding geodesics on surfaces this video is a continuation of the previous video in the series on geodesics and Christoffel symbols so please watch that video first using the link in the description if you haven't already seen it so just a reminder from the previous video we said that geodesics are like the straightest possible paths that we can draw on a curved surface and our formal definition of a geodesic curve is a curve where
+
+00:00:28
+there is zero acceleration tangential to the surface when traveling along the curve at a constant speed so in other words on geodesics the acceleration vector is pointing in a direction that's completely normal to the surface and we computed this formula for the acceleration vector along a curve which uses the Christoffel symbols and the second fundamental form and by setting the tangential components of the acceleration to zero we got the geodesic equation so any curve that satisfies this equation will
+
+00:00:58
+be a geodesic curve I'd also like to bring up a mistake I made in the previous video I said that geodesics give the shortest distance between two points on a curved surface while this is sometimes true like with this curve on the sphere it isn't necessarily true in general this curve that joins the two points that goes around the sphere in the other direction is also a geodesic so it's better to think of a geodesic as a curve that gets drawn when you move straight ahead in a forward direction
+
+00:01:28
+when walking along a curved surface so a geodesic is the straightest possible path because it's what you get when you move forward so our general plan for computing geodesics on a surface has two steps first we calculate the Christoffel symbols which give us information about how basis vectors change from point to point on the surface and second we plug the Christoffel symbols into the geodesic equation and solve for the path which is a set of u coordinates as a function of the path parameter or lambda
+
+00:02:01
+so computing the Christoffel symbols for a surface is going to take a fair amount of work because we need to compute all these parts of the equation here first we need to calculate the first derivatives of the vector R with respect to the U coordinates so these would just be the tangent vectors of the coordinate curves on the surface and as an alternative notation for the U 1 and u 2 coordinate variables I'll sometimes just use the U and V variables instead now on top of the tangent vectors we also need to
+
+00:02:32
+compute these second order derivatives of the position vector R so there are four different second order derivatives but two of them end up being equal because the order of differentiation doesn't matter and finally we need to compute the components of the inverse metric tensor so there's going to be a lot of number crunching in this video and it's not going to be very fun but it will be nice to show that the geodesic equation does what we want and helps us get geodesics and really the important
+
+00:03:00
+thing to focus on here is the results that we get not necessarily all the algebra that we do so for our first example we're going to look at geodesics in the flat plane which as you probably know these will just end up being straight lines so this is a pretty boring example but it's a nice sanity check for us to do to make sure that the geodesic equation works properly in a really simple example so the general vector equation for a plane is here basically we start with some position vector P which sort of gives us a
+
+00:03:30
+starting point on the plane and then we take two vectors a and B and add them together in different amounts given by the U and B variables and this lets us get to any point in a flat 2d space by specifying the right U and V coordinates so hopefully it's pretty obvious that the partial derivative with respect to U is just the a vector and the partial derivative with respect to V is just the B vector and given these first order derivatives which are constants these second order derivatives would just all
+
+00:04:01
+be equal to the zero vector since the rate of change of a constant is zero so all these second order derivatives are equal to zero now let's take a look at the formula for the Christoffel symbols now notice how these second order derivatives of the position vector will always be zero so it doesn't even matter what the tangent vector is or what the inverse metric tensor is the Christoffel symbols are all going to go to for all the I J and K indexes and for the flat plane with this coordinate
+
+00:04:31
+system having zero Christoffel symbols makes sense remember the Christoffel symbols track how the basis vectors change from point to point and since the basis vectors everywhere in this plane are constant and don't change it makes sense that the Christoffel symbols are zero so now let's go on to step two solving the geodesic equation now since all the Christoffel symbols are zero this entire term in the equation goes away so for the flat plane our geodesic equation becomes really simple it basically just
+
+00:05:03
+tells us that the second-order derivative along the curve is equal to zero or in other words the acceleration as we move along the curve is zero so notice that there's this K index here so what this means is that we actually have two equations here one for you one and one for you two and instead of writing u 1 and u 2 I'm just going to use the U and V variables instead so we have two differential equations here and we need to come up with solutions for them and what these equations are saying is that
+
+00:05:34
+the second derivative of the U and V coordinates are 0 so the solution to these differential equations would just be linear equations for both U and V where these numbers ke ke V U naught and V naught are just constants so it's easy to check that the second derivative of these equations with respect to lambda goes to 0 so these are valid solutions to these differential equations so again here's our equation for the plane and here are the formulas for geodesic curves and we can sub U and V into here
+
+00:06:08
+and get this formula for a geodesic curve and we can group the lambda terms together here and rewrite the equation like this so really all of this is just a single position vector of a point on the plane and all this is is really just a vector living in the plane scaled by lambda so it's pretty clear that this formula just gives the equation of a line that lives in the plane we just changed the value of lambda to move back and forth along it and basically these constants here just specify the initial
+
+00:06:40
+position and the initial velocity of the curve so given an initial position and an initial velocity there is a unique geodesic on the plane which is just the straight line heading in the direction of the velocity vector so we have in fact shown that the geodesics on the flat 2d plane are straight lines so now let's look at the second example which is a sphere of radius one so again the first step is to get the Christoffel symbols and the second step is to solve the geodesic equation now to get the
+
+00:07:12
+Christoffel symbols we need to start taking derivatives so if you've watched video 12 in this tensor calculus series you'll already know that the parametric formulas for the sphere of radius 1 are these these are the equations for the XYZ coordinates in 3d space parameterised in terms of U and D now recall that the tangent vectors along the sphere are just the partial derivatives along the U and B curves so along the U curves we get these tangent vectors and along the V curves we get these tangent vectors and we calculated
+
+00:07:46
+the formulas for these tangent vectors using the multivariable chain rule and just something in these partial derivatives calculated from these formulas and again since I've already gone through this in video 12 I'm not going to do it again but it's not hard to check that these are the formulas you'll get from chain rule and so given these tangent basis vectors we can compute the metric tensor for the sphere which is just the matrix of basis vector dot products and we also showed in video
+
+00:08:12
+12 that the metric tensor matrix looks like this so see video 12 if you want the full derivation of the metric tensor now we also need these second derivatives of the position vector along the U and V coordinates so if we want to take the derivative with respect to u twice then we just grab this u basis vector and take the derivative with respect to U so this Coast becomes negative sign this Coast becomes negative sign and this sign becomes cosine and we can do the same thing for the second derivative with respect to V
+
+00:08:46
+we just grab this V basis vector and take the derivative with respect to V so sine becomes coast and this coast becomes negative sign and finally for the mixed second derivative of U n V we can either do this or do this because the order of differentiation doesn't matter and either way you'll find we get this formula so we have everything we need to compute the Christoffel symbols we have the first derivatives the second derivatives and the metric tensor and since the metric tensor is diagonal we
+
+00:09:19
+can easily get the inverse metric tensor just by taking the reciprocal of all the matrix elements like this all right so finally we're ready to get the Christoffel symbols so just to help you understand what's going on here the Christoffel symbols have indexes I J and K and each of these go from 1 to 2 so that means that there are two times two times two Christoffel symbols that we need giving a total of eight and notice that this L index on the right hand side this L index is summed over so there's a
+
+00:09:53
+summation over L going on here now what I'm going to do is I'm going to write out the K equals 1 equation so you'll see in this equation I have left I and J alone but I've written K equals 1 here and here and what I'm going to do is I'm going to write out the summation over L explicitly so I'm basically going to write out these expressions twice the first with l equals 1 and the second with l equals 2 so we have this expanded summation here and we can also write out a very similar formula for K equals 2
+
+00:10:27
+like this so the equations are the exact same except DK index is set equal to 2 now writing everything out like this you'll notice that we have all four components of the inverse metric tensor written out explicitly and just to remind ourselves the inverse metric tensor looks like this so some of the inverse metric tensor components are actually equal to zero these off diagonal components G 1 2 and G 2 1 are 0 so we can just kill off these parts of the Christoffel symbol formulas because the inverse metric tensor component
+
+00:11:03
+inside them is 0 and what we can do now is we can sub in the rest of the inverse metric tensor components for G 1 1 and G 2 2 so that leaves us with these formulas here ok so now what we need to do is we computed the first order derivatives of R and the second order derivatives of our already but now we need to compute all their dot products so there are 2 first derivatives and for second derivatives so there are two times four possible dot products and that will give us those eight total Christoffel symbols that we need so
+
+00:11:38
+these vectors are three dimensional vectors and normally when we take the dot product of two 3d vectors we'd end up with nine total terms but since we're dealing with the Cartesian Xyz coordinate system all these off-diagonal dot products go to 0 because the basis vectors are perpendicular and all these diagonal dot products go to 1 since the basis vectors all have length 1 so working in the Cartesian coordinate system it makes the dot product a lot easier and we only need to calculate a
+
+00:12:10
+sum of three multiplications so let's start with the U basis velocity vector dotted with the u u acceleration vector the dot product would just be this times this Plus this times this Plus this times this so notice that these first two terms have Cosi u times sine U in common so we can factor that out and get coasts of the squared plus sign of V squared here and that goes to 1 by the well-known trig identity so we have negative coast time sign and positive coast time sign and those cancel to give
+
+00:12:46
+us 0 next we'll do the U basis velocity vector dotted with the VV acceleration vector so this times this Plus this times this and the third term goes to 0 so again we have coasts of U times sine of U in common and we can factor those out and again cosa v squared plus sine of e squared goes to 1 and so this dot product gives us negative coast of U times sine of u now I'm not going to bother reading out the answers for the rest of the dot products because it's really just a lot of mindless work if you want to read
+
+00:13:18
+through the calculations more carefully you can just pause the video so this dot product goes to zero and remember it's the same as this dot product because the order of differentiation doesn't matter this dot product goes to zero this dot product goes to zero and this dot product equals coasts of U times sine of U and that's also the same as this dot product since the order of differentiation doesn't matter okay so really the only non zero dot products are these two here and I can rewrite
+
+00:13:49
+them using u1 and u2 instead of U and V so the dot products that we care about are two 2.1 and one 2.2 so recall we took the formula for the Christoffel symbols and put in the inverse metric tensor components to get these two equations now we can sub in the dot products that are nonzero so here I and J are two two so the Christoffel symbol one two two is just this dot product negative coast of u times sine of u and here i and j are one two so the Christoffel symbol two one two is this dot product divided by sine of u squared
+
+00:14:32
+so we can sub this in here and cancel out one of the signs on the top and bottom and we get cosa view over sine u and i would just like to point out that in the equation for the Christoffel symbols we have a second order derivative of the position vector r and as you know the order of differentiation for second derivatives doesn't matter so the derivative with respect to UI and UJ is the same as the derivative with respect to u j and UI and because the order of differentiation doesn't matter
+
+00:15:05
+that means that the Christoffel symbol k IJ is equal to the Christoffel symbol k ji and so looking at the Christoffel symbols we've calculated so far we now know that the Christoffel symbol 2 1 2 is equal to the Christoffel symbol 2 2 1 ok so that math was pretty painful but we've calculated the nonzero Christoffel symbols here now we need to do step two and solve the geodesic equations so we're lucky that so many of the Christoffel symbols went to zero because that will make our geodesic
+
+00:15:39
+equations much easier to deal with so we get one equation from the 1/2 to Christoffel symbol and we get another equation from the two one two and two to one Christoffel symbols now again since the two one two and two to one Christoffel symbols are equal these two terms and the second equation are actually the same so I'm going to combine them and just put a factor of 2 here and summing those Christoffel symbols in gives us this and again I'm going to replace you 1 with you and you two with V just to make things easier
+
+00:16:16
+for us to understand I'm also going to write cosa view over sine of U as cotangent of U which is really just 1 over tangent of U I'm just writing that to save space okay so we have our geodesic equations for the sphere and these are nonlinear coupled differential equations and they are not easy to solve in the general case so what I'm going to do is I'm going to work with the special case of a circle of latitude on the sphere so that means that the latitude variable U will just be some constant
+
+00:16:51
+value say 2 not and the longitude variable V will just go around at a constant speed so V will be equal to K times lambda where lambda is like the time parameter for the curve and K is just some constant telling us the speed ok so hopefully it's easy to see that the first derivatives along this curve with respect to lambda are zero and K and the second derivatives with respect to lambda are both zero so bringing these derivative values back up here into the geodesic equations and substituting so this second equation
+
+00:17:28
+becomes zero equals zero and we don't really need to worry about it anymore since it's automatically true we just need to worry about this first equation so what we need to do is to get a geodesic we need to choose K and theta-not so that this term goes to zero so that the equation will hold true so we have a few options here option one is to set K to zero but that's not very interesting because it just gives us a single stationary point at a constant V another option is to make this sign part
+
+00:18:03
+go to zero by setting theta naught to either zero or pi but that also isn't very interesting because this just gives us the points at the North and South Poles so again those are stationary points not geodesic curves so that's not what we want the last option is to make this cosine part go to zero by setting theta not equal to PI over two and this is a path that goes around the equator right it's the curve where the latitude is exactly halfway between the North and South Poles halfway between 0 and PI so
+
+00:18:38
+what we found here is that going around the equator where u is equal to PI over 2 and V is equal to K times lambda this path is a geodesic curve on the sphere so the shortest way to get between two points on the equator is just to travel straight along the equator on the geodesic path but the other circles of latitude are actually not geodesics so if we take this circle of latitude the fastest way to get from this point to this point is actually this curve here which is not along the circle of latitude so the only circle of latitude
+
+00:19:16
+that is a geodesic is the equator and that makes sense since if we travel around the equator our acceleration vector points directly inward towards the center of the circle which is also the center of the sphere you could think of it as like the center of the earth so the acceleration vector is pointing completely normal to the surface but if we travel around another circle of latitude our acceleration vector is pointing towards the center of the circle which is not the center of the sphere so we end up with a tangential
+
+00:19:49
+component as well as a normal component for the acceleration vector now if the equator is a geodesic then by a symmetry argument since we have spherical symmetry this means that all great circles on the sphere must also be geodesics where a great circle is just a circle whose Center is located at the center of the sphere so all these curves here are geodesics on the sphere and this matches up with our intuition because if you were to walk straight in a forward direction on a sphere you would end up tracing out a path like
+
+00:20:25
+this so to summarize this video we learned the process for computing geodesics on a curved surface step one is to compute the Christoffel symbols and step two is to solve the geodesic equations so going through this process for any general surface can often end up being pretty hard but for some simple surfaces like the sphere we can still get the actual explicit formulas for geodesics without the help of computers
+

@@ -1,0 +1,63 @@
+00:00:00
+In this video I'm going to introduce the Jacobian, which is used to transform basis vectors between coordinate systems. This is basically going to be an upgraded version of my video on forward and backward transforms from my tensors for beginners series, and I would recommend you watch that video first if you haven't already. So in that original video, I showed how we can take two sets of basis vectors and convert between them in one direction. We can build the new basis vectors using the old basis vectors.
+
+00:00:30
+By figuring out these scaling coefficients here and these scaling coefficients. When taken together in a matrix, we call them the forward transform F. Now, if we consider the Cartesian and polar coordinate systems, the polar coordinate system has basis vectors that change direction and length from point to point. So if we want to try and invent the forward transform, we need to build the polar basis vectors, which are changing from point to point out of the Cartesian basis vectors. So this is probably going to seem really challenging when the basis vectors are changing at every
+
+00:01:03
+point in space. But it turns out that inventing the forward transform for every point in space is extremely easy because of what we did in the last video where we made basis vectors equivalent to partial derivatives of a position vector capital R. So instead of asking how to change between the basis vectors, we can ask how to change between these partial derivatives and the answer to that is just the multivariable chain rule. The coefficients used in the transform are just the partial derivatives between the coordinate
+
+00:01:31
+variables. So taking this equation here for changing between coordinate variables, we get that partial X partial R is cosine Theta and partial y partial R is sine Theta. Likewise, partial X partial Theta is minus R sine Theta, and partial y partial Theta is R cosine Theta. And I should probably mention again that the definition I'm using for this basis vector E Theta is not normalized. As you can see here, this basis vector is growing in size when we move farther and farther from the origin.
+
+00:02:04
+And because of that, we end up with these factors of R out here. Some textbooks will normalize E Theta so that it always has length one. And in that case, you wouldn't see these extra factors of R because they're a ctually hiding inside the definition of the basis vector. I'm going to be sticking with the unnormalized version of the east databases vector because I want to be able to think of basis vectors purely as partial derivatives without any weird scaling constants inside. And just like we did with the coefficients at the beginning of the video, these coefficients
+
+00:02:34
+in this matrix would be our forward transform, and I'm just going to rewrite these matrix entries like this just for convenience. And you'll notice that I've written this matrix to be equal to F for forward. But I've also written that it's equal to J. And that's because this matrix is also called the Jacobean matrix. So the Jacobean matrix, this matrix of partial derivatives, it's really just the forward transform matrix that contains all the coefficients needed to build up a new set of basis vectors
+
+00:03:03
+using an old set of basis vectors. In this case, we're building up the polar basis vectors using the Cartesian basis vectors. Okay. So we've basically invented the Jacobian matrix or the forage transform that takes us from Cartesian basis vectors to polar basis vectors. So let's see examples of it being used. So let's take this purple point here which in Cartesian coordinates has the coordinates X equals one, y equals one, and has polar coordinates R equals the square root of two,
+
+00:03:34
+and Theta equals Pi over four radians. So using the Jacobian matrix as a template, we can just submit the coordinate values here and we get this matrix here. So the coefficients in this matrix act as the forward transform, which build up the polar basis vectors out of the Cartesian basis vectors at this specific purple point here. And as we can see these numbers in this matrix, look about right. Another example is this Orange point with Cartesian coordinates minus 10 and polar coordinates one Pi.
+
+00:04:08
+If we plug these coordinates into the Jacobean matrix, then we get this matrix here and using these as the forward transform, we get these transformation equations here. So these negative ones are essentially flipping the direction of the basis vectors while not changing the length. And as we can see over here, that looks about right for this transformation. Finally, there's this green point with Cartesian coordinates one negative square root three, and polar coordinates two Pi over three. And when we plug in those coordinates into the Jacobian matrix, we get this matrix which
+
+00:04:42
+of course generates these forward transform equations here. And once again, these numbers look about right. So using this Jacobian matrix, we can get a different forward transform matrix for every single point in space that takes the Cartesian basis vectors and gives us the polar basis vectors. So the Jacobian is sort of like a master forward transform that works everywhere in space. We just pick a point, substitute the coordinates of that point into the Jacobian matrix, and we have the forward transport matrix for that point.
+
+00:05:15
+Now we can also go in the reverse direction and build up the Cartesian basis vectors out of the polar basis vectors. Using the same reasoning, we just write out the basis vectors as partial derivatives and use the multivariable chain rule to get these equations here. So I'm not going to go through the work of calculating these derivatives. You can calculate the derivative of the square root using chain rule. And I actually had to look up the derivative of a ten and a table online because I didn't
+
+00:05:42
+know it off by heart. But the coefficients we get from these partial derivatives are here and I'm going to simplify this a bit and rewrite like this. So this would be our backward transform B, also known as the inverse Jacobian matrix, which we denote by J with a little minus one exponent. So this matrix of partial derivatives is the inverse Jacobian and gives us the coefficients needed to build the Cartesian basis vectors out of the polar basis vectors. And just like before, we can sub in the coordinates into the inverse Jacobian at any point and
+
+00:06:18
+get the backward transform matrix for that point. So the key to the forward transform, whether we're writing it using partial derivative notation or basis vector notation. The key to these forward transform coefficients is just the multivariable chain rule, and that tells us how to use Cartesian basis vectors to build up polar basis vectors, and the same thing goes for the backward transform. We just use multivariable chain rule to get these coefficients, and these coefficients tell us how to use polar basis vectors to build up Cartesian basis vectors, and we can
+
+00:06:50
+store the forward coefficients in a matrix either called F for forward or J for Jacobian, and we can store the backward coefficients in a matrix either called B for backward or J to the minus one for the inverse Jacobian. Now, this probably won't be too surprising, but I'm going to prove to you that the Jacobean matrix and the Jacobian inverse matrix are in fact inverses of each other. So that means that when we multiply them, we get the identity matrix. So just carrying out the standard matrix multiplication rule gives us this.
+
+00:07:22
+And it's not totally obvious how we can simplify this, but to see how we can simplify things, let's focus on the upper left entry here. So recall that according to multivariable chain rule, the derivative DF by DX gives us this expression here. Now I'm going to do something a bit strange. I'm going to get you to consider the derivative DX by DX expanded out as multivariable chain rule. Now notice that this expression here is exactly what we have as the entry of our matrix up here.
+
+00:07:54
+And obviously DX by DX is just one, since the rate of change of X with respect to X is just one. So this matrix entry up here is equal to one. And if we use a similar approach for every term in this matrix, we find the entries are just DX by Dy, Dy by DX, and Dyby Dy. Now the rate of change of X with respect to Y is zero because changing Y doesn't affect X in any way. And the same thing goes for Dyby DX, and of course Dy by Dy is also one. So it turns out, in fact, that we did get the identity matrix.
+
+00:08:32
+So the inverse Jacobian really is the inverse of the Jacobian matrix, and we can show this very easily if we use the Einstein notation. So in order to use the Einstein notation, I'm going to write the Cartesian coordinates X and Y as C one and C two. And I'm also going to write the polar coordinates R and Theta as P one and P two C for Cartesian and P for polar. Now, I'm going to rewrite this matrix using the C and P coordinates instead. But it's basically the same thing. And now this matrix multiplication.
+
+00:09:07
+This actually becomes this formula here where we have an implicit summation over J because we see J down low and J up top. But of course, this summation here is really just the multi variable chain rule. Again, it's the chain rule we get by differentiating coordinate CI with respect to coordinate CK. And since changing one C coordinate has no effect on any of the others, this is always equal to zero, except when I is equal to K, in which case it's equal to one. So this summation here really just gives us the Kronecker Delta IK.
+
+00:09:43
+And since the Kronecker Delta gives us the entry of the identity matrix, we have in fact, shown that the Jacobean matrix and the inverse Jacobian matrix are inverses of each other. Okay. So to sum up what we learned in this video, we learned that for curvilinear coordinates where the basis vectors change from point to point, the analogs of the forward and backward transform formulas are given here, and these formulas are basically just writing out the multi variable chain rule. And if we want instead of writing out partial derivative notation, we can use the basis
+
+00:10:16
+vector notation instead. And just as we can store the forward and backward coefficient in the F and B matrices, respectively, we can store the partial derivatives needed for the forward and backward transforms inside the Jacobean matrix and the inverse Jacobian matrix. And we can write things out more generally for any number of dimensions like this, using the C and P coordinates. And just as the F and B matrices are inverses and give the Kronecker Delta when multiplied, the Jacobian and inverse Jacobian matrices are also inverses that give the Kronecker
+
+00:10:49
+Delta when multiplied. And again, we can write all this out using the vector notation instead of the partial derivative notation. Okay, so the main takeaway of this video is that the Jacobian is just the forward transform, and the Jacobean inverse is just the backward transform, and we get the coefficients of the Jacobean and Jacob inverse using the multivariable chain rule. In the next video, we're going to cover why derivatives are vectors and show that the components of these vectors are contravariant.
+

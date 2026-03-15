@@ -1,0 +1,126 @@
+00:00:00
+in this video I'm going to introduce the Riemann curvature tensor components and also talk about these symmetries of those components at the end I'll compute the Riemann tensor components for 2d polar coordinates as well as the 2d surface of a sphere this video is a continuation from the video where I derived the Riemann tensor so check the link in the description for that video if you haven't seen it yet as a reminder in the previous video we derived the formula for the Riemann curvature tensor
+
+00:00:32
+which is this and this represents taking a vector W and parallel transporting it around a parallelogram defined by the vector fields U and B are of U and V acting on W is this difference vector here the difference between the original W vector and the result after parallel transporting it around the parallelogram so when this difference vector is nonzero that means the space is curved I also went through a proof that the Riemann tensor is a multi linear map so it's linear for each of the U V and W
+
+00:01:11
+inputs and that means that to compute the Riemann tensor acting on any three vector inputs since we can take the vector components outside the formula we really only need to know how the Riemann tensor acts on a set of three basis vectors so for the next part of this video we're going to compute this here the result of the Riemann tensor acting on a set of three basis vectors now I'm just going to remind you that the Li bracket of basis vectors is always zero one way to think of why this is true is
+
+00:01:45
+to just understand that these basis vectors are really partial derivatives and the order of partial derivatives shouldn't matter so taking the partial derivative with respect to X I and then XJ is the same as taking the partial derivative with respect to XJ and then X I another way to understand this result is to go back to the previous video on Li brackets in that video we discussed how coordinate lines are really just flow curves along basis factors and we discussed healthy coordinate lines always form tiny grid boxes or
+
+00:02:19
+tiny parallelograms with no gaps between the flow curves and since the lee bracket normally measures the gap between the flow curves since there's no gaps the Leigh Brackett is always zero so at this fact in mind when the Riemann tensor is acting on a set of basis vectors we can always just forget about the third term in the formula here since the lead racquet goes to zero okay so looking at this formula here we can forget about the third term and we can also recall the definition of the connection coefficients and we can
+
+00:02:52
+rewrite these covariant derivatives using the connection coefficients now since we have a covariant derivative of a product here we use the product rule so this term gets one term for the covariant derivative of the connection coefficient and one term for the covariant derivative of the basis vector and the same goes for using the product rule on this term now for these two terms the covariant derivative is acting on a scalar and for scalars we know that the covariant derivative is just the partial derivative so here we write
+
+00:03:26
+partial a and partial B here finally I'm just going to change some of these summation indexes so that all the basis vectors have the same index D and if we factor out the D basis vector we get this so the Riemann curvature tensor acting on the ABC basis vectors outputs another vector whose components are given by this big ugly expression involving the connection coefficients and these are actually the components of the Riemann curvature tensor are with superscript D and subscripts CA B so to
+
+00:04:05
+sum up all the math in this video that we've done here's the original formula for the Riemann curvature tensor acting on vectors u V and W but since the tensor is linear in all of its inputs we can pull all the vector components out and just focus on computing the result of the Riemann tensor on the basis vectors ijk only and this will the components of the Riemann tensor with subscripts K IJ and the formula for these Riemann tensor components is given by this big ugly expression involving
+
+00:04:37
+the connection coefficients so so far the Riemann curvature tensor looks like a big nightmare but thankfully it has some symmetries that make computing it easier so in two dimensions since the Riemann tensor has four indexes there are 2 times 2 times 2 times 2 which is 16 different components and in 4 dimensions such as with space-time in general relativity there are 4 times 4 times 4 times 4 which are 256 components in the Riemann tensor so it might seem like a nightmare that we have to compute
+
+00:05:16
+all of these different components but again the symmetries in the Riemann tensor can save us a lot of work so that we don't have to compute every single component so here's what I mean by symmetries the first symmetry we'll find is the three for symmetry and this means that we can swap the third and fourth index of the Riemann tensor and get the same result just with a negative sign in front there's also the Bianchi identity which means if we add these three components of the Riemann tensor together we'll get
+
+00:05:49
+zero there's also the 1/2 symmetry where if we swap the first and second indexes of the Riemann tensor we get the same result just with a negative sign and finally there's the flip symmetry where if we exchange the first and second with the third and fourth index we get the same answer with the same sign so I'm going to go through and prove all of these symmetries now but to do that I'm going to assume that I'm using the levy chibita connection and remember from video xx the levy Tomita connection
+
+00:06:21
+obeys the metric compatibility property where the covariant derivative obeys a sort of product rule over the dot product and I'm also going to use the torsion free property where the covariant derivative of the J basis vector in the direction of the I basis vector is the same thing as the covariant derivative the I basis vector in the direction of the J basis vector equivalently we can just swap the lower indexes of the connection coefficients so for our first symmetry note that R of U and V acting
+
+00:06:54
+on W has this formula but we're not going to be too concerned about the W input so we're just going to ignore it now notice what happens when we reverse the order of the inputs and write R of V and u we get this now notice that this term is just the negative version of this term and this term is just the negative version of this term and also note that the Li bracket of U and V is just the negative of the Li bracket of B and you so really these two expressions are the same but the second one has a
+
+00:07:30
+minus sign in front so that means that our B and U is just the negative of our of U and V and if we were to replace the input slots with basis vectors we would get R of the B and a basis vectors equals the negative of the R of a and B basis vectors or in other words the our DC be a component is equal to the negative of the our DC a B component so this shows the symmetry of the Riemann tensor components in the third and fourth index they're the same except when we reverse them we put a minus sign
+
+00:08:08
+in front so this is the symmetry between the third and fourth index the next symmetry will involve adding these three expressions together so this is the Riemann tensor acting on the a B and C basis vectors and in the next two terms we just cycle the order of the basis vectors so here we have C a B and here we have B C a and if we explicitly write out the formulas for these expressions we get this this and this we get nine terms in total now I just like to remind you that if a connection is torsion free
+
+00:08:46
+we can freely swap the lower indexes of the connection coefficients as I've done here and this means that we take the covariant derivative of ej in the EEI direction that's the same thing as taking the covariant derivative of e i in the ej direction so knowing that i'm going to color code these terms here and these terms that have the same color are actually equal for a torsion free connection so for example we can swap these two basis vectors because the connection is torsion free so these blue
+
+00:09:20
+terms cancel and these red terms cancel and these green terms also cancelled and finally since the lee bracket of basis vectors goes to 0 we can just cancel all of these terms to 0 so adding these 3 riemann tensor expressions with cycled basis vectors is equal to 0 and this symmetry where these three terms add together to give 0 is called the first bianchi identity and it applies only to torsion free connections and if I write this expression using the Riemann tensor components I get this and if we factor
+
+00:09:59
+out the D basis vector we see that the sum of these three components goes to 0 so all this is really saying is that when we make the upper index the same and add all cycles of the lower indexes CA B BCA and ABC B result is 0 another symmetry can be found by applying our of two basis vectors to a dot product of vectors in this case the dot product of r and s and again since the Li bracket of basis vectors goes to 0 I'm going to ignore this third term here now if we recall the metric compatibility property
+
+00:10:39
+eat from tensor calculus video xx when we take the covariant derivative of a dot product we can apply a version of the product rule where we get a sum of two terms and in each term the covariant derivative applies to one of the two vectors so when the Riemann tensor of these two basis vectors applies to this dot product we can use the metric compatibility property on this covariant derivative and this code derivative and the two product rules will give us four terms in total so with these terms we can distribute the outer
+
+00:11:15
+covariant derivatives and write the four terms separately like this and we can use the metric compatibility product rule again in each of these four terms to get eight terms now this and this cancel and this and this cancel and we can factor out a dot s on the right side of these terms and we can factor out an r dot on the left side of these terms so really this is just the Riemann tensor of the basis vectors acting on lowercase R vector and this is just the Riemann tensor of the basis vectors acting on
+
+00:11:53
+the S vector so this up here is really equal to this sum here so the Riemann tensor operator with the first two vector input slots filled basically obeys its own version of the product rule when it acts on a dot product the result is a sum of terms that resembles the product rule where capital R acts on the first vector in the first term and acts on the second vector in the second term now the formula for this term is given by these covariant derivatives and since the dot product of vectors is a
+
+00:12:29
+scalar remember that the covariant derivative of a scalar is just the partial derivative so we get this and since the order of partial differentiation doesn't matter these two terms are the same and the result of their subtraction is zero so knowing that this term is equal to 0 for any lowercase R and s vectors I'm going to replace the dot product with a CED and then I'll use the product rule we just learned to get a sum of two terms and I'll replace this with the Riemann tensor components with subscripts C a B
+
+00:13:08
+and I'll replace this with the Riemann tensor components with subscripts D a B now I'll bring these two dot products out in front and as we know the products of basis vectors just gives us the components of the metric tensor G and as we learned in a previous video the metric tensor can be used to lower indexes so as an alternative notation for these terms I'm just going to lower the eye index and replace it with D here and with C here so in conclusion for the Riemann curvature tensor with lowered
+
+00:13:46
+indexes when we swap the first two indexes as we have here with C and D the result is the same but with a negative sign out in front so that's another asymmetry of the Riemann tensor the one to symmetry for the first and second index so we've learned about three symmetries of the Riemann tensor so far swapping the third and fourth indexes the Bianchi identity and swapping the first and second indexes when the indexes are lowered and for convenience we often write these symmetries by doing
+
+00:14:22
+a summation with the metric tensor and lowering the upper index to the bottom now there is a fourth and final symmetry which can be derived from the other three and I'll show that now the proof starts by taking the Bianchi identity and moving these two terms to the other side of the equals sign so that they're negative so starting here and knowing the one two index asymmetry I'm going to swap the first and second indexes here and that will make these negative terms into positive terms next I'm going to
+
+00:14:58
+use the Bianchi identity on each of these terms to replace them with two negative terms each so I'm replacing the D ABC indexes with negative D CA B and negative dbca and I'm replacing the C ADB indexes with negative C BA D and negative C D da now notice these two terms I've written in red are actually the same if we swap the first and second index in this term and the third and fourth index in this term and since this will flip the negative sign in both terms both terms now become positive and here I'm
+
+00:15:40
+going to swap the first and second indexes on these two components and this will remove the negative signs next you'll see that these two terms make up two of the terms in the D on key identity equation the first index is B and the other indexes are cyclic shifts of ADC so we replaced these two terms with this negative term next we swapped both the first and second indexes and the third and fourth indexes and we pick up two negative signs from that so the sign doesn't change finally we just move
+
+00:16:18
+this to the other side of the equation and divide by two and we get this symmetry where we swap indexes one and two with indexes three and four so we've learned four symmetries of the Riemann curvature tensor there's the Bianchi identity which we get if the connection is torsion free there's the first and second index swap which we get if the connection is metric compatible there's the third and fourth index swap which is true for all connections and finally we flip the first and second indexes with the third
+
+00:16:54
+and fourth indexes and this symmetry is derived from the other three now I'd like to point something out using the first and second index symmetry as an example any time we exchange two indexes that are the same such as here where we've swapped these indexes that are both ones we get a term which is equal to the negative of itself and when a number is equal to the negative of itself that means that that number has to be zero so because of some of these symmetries we're going to find that a
+
+00:17:29
+lot of the Riemann curvature tensor components actually go to zero whenever we perform a swap on two indexes that are the same so right now I'm going to list off all of these zero components for the Riemann curvature tensor in two dimensions so the indexes can either be 1 or 2 so the component with all ones is equal to 0 since if we swap the first two indexes we get our 1 1 1 1 equals negative R 1 1 1 1 1 to symmetry this is also true for the component with all twos as well as the components with 1 1
+
+00:18:09
+to 2 and the 2 2 1 1 indexes next all of these components that have two ones which can be swapped are all equal to 0 by the 1 to index symmetry and the 3 4 index symmetry and these components all have a pair of two's that can be swapped so they're all 0 finally if we take the are 1 2 1 2 component and swap indexes 3 & 4 we get this result but negative and we can swap indexes 1 & 2 & get the negative of that and finally swapping indexes 3 & 4 we get this with a negative sign so what
+
+00:18:52
+this really means is that in two dimensions the Riemann curvature tensor only has one free parameter which is the component with the indexes 1 2 1 2 on the previous slide we showed that in two dimensions 12 of the 16 Riemann curvature tensor components are equal to 0 and the final four components are all equal to each other up to a difference in the positive or negative sign so by learning all of those symmetries we helped avoid needing to compute 16 components for the Riemann tensor in two dimensions and now we only need to
+
+00:19:31
+compute one component because this single component describes all of the nonzero components in the Riemann tensor in two dimensions so let's try computing the Riemann curvature tensor components for polar coordinates in 2d so recall this big formula for the Riemann tensor components and from video 17 here are the connection coefficients for 2d polar coordinates now since we only need to compute one component of the Riemann tensor let's compute the r theta r theta component so this connection coefficient
+
+00:20:08
+is 0 and all coefficients with our up top and are on the lower left are also zero so this summation goes to zero as well so we're left with this derivative and this summation only has nonzero entries for when J is equal to theta so this is negative R and this is negative R and this is 1 over R so the derivative of negative R is negative 1 and in this product the RS cancel and subtracting this gives us positive 1 so the components of the Riemann tensor for polar coordinates in 2d are 0 and since
+
+00:20:49
+the Riemann tensor in 2d only has one free parameter that means that all the components in the tensor are zero and this confirms that the space described by 2d polar coordinates is indeed flat because the Riemann tensor is all zeroes that means that parallel transporting a vector around in a small loop doesn't change the vectors direction so the space is indeed flat next we can compute the Riemann curvature tensor components for the sphere of radius 1 we computed the connection coefficients for this back in
+
+00:21:25
+video 18 so again for a 2d space we only need to compute the 1/2 1/2 component of the Riemann tensor and this coefficient goes to 0 and a bunch of these terms go to 0 as well based on the zero connection coefficients and subbing in everything here we get this expression so the derivative of sine of 2 of you is coasts of two of you with a factor of 2 in front and we know that the cotangent of U is really just Coase of U over sine of U and by a well-known trig identity 1/2 of sine of U is just cos'è view
+
+00:22:06
+times sine of U and these negative signs cancel so I put a plus here and these signs cancel so we get coasts of two of u plus coasts of u squared and by another well-known trig identity Co sub 2 of U is equal to Kosovo squared minus sine of u squared so these cancel and we're left with sine of u squared so this shows that the 2d surface of a sphere is curved since the Riemann curvature tensor has nonzero entries that means that a vector will twist when it's parallel transported around in a small loop so as
+
+00:22:46
+promised the Riemann curvature tensor can help us determine if a space is curved or flat in flat spaces the Riemann tensor will have zero components everywhere but if the space is curved the Riemann tensor will have nonzero components so to summarize what we've learned about the Riemann curvature tensor in the past two videos we learned its definition which gave this formula here and geometrically this represents a vector W being parallel transported around a small parallelogram defined by the
+
+00:23:20
+vectors U and B and the output of the Riemann tensor is the difference vector between the initial vector W and it's parallel transported version and when this difference vector is zero the space is flat and when the difference vector is nonzero the space is curved we also learned that the Riemann tensor is a multi linear map in other words it's linear for all the inputs u V and W this means we can take all the input vector components and pull them out front so this means that to compute the output of
+
+00:23:55
+the Riemann tensor we only ever need to know how the Riemann tensor acts on a set of basis vectors in this case the basis vectors ijk and the components for the output of the Riemann tensor are these with the subscripts kji and the formula for computing these components is given here using a formula involving the connection coefficients we also learned about for symmetries for the indexes in the Riemann tensor the Bianchi identity the 1/2 symmetry the 3/4 symmetry and the flip symmetry using these symmetries we find that a lot of
+
+00:24:36
+the Riemann tensor components actually end up being equal to 0 and many of the remaining components end up being equal to each other up to a change in the positive or negative sign in the case of two dimensions using these symmetries we find that the 16 components are actually reduced to a single independent component and in the case of four dimensions such as four-dimensional space-time in relativity the 256 components of the Riemann tensor are reduced to 20 independent components in the next video we'll talk about the
+
+00:25:11
+Ricci curvature tensor which is another important tensor which describe the curvature of a space and also appears in the Einstein field equations from general relativity if you like my videos please check the links in the description and consider supporting me
+

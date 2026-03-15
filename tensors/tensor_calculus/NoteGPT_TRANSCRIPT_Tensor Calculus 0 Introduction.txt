@@ -1,0 +1,75 @@
+00:00:00
+Hey everyone, welcome to this new video series I'm  doing on tensor calculus. So in this introduction video, I'm going to answer three questions you  might have: What is tensor calculus? Why would you want to study it? And what do you need to do  to get started learning tensor calculus? Well, to answer what tensor calculus is: tensor calculus  is the study of how tensors change over space. So before getting into the calculus, let's take a  moment to review tensors. So if you've watched
+
+00:00:28
+my tensors for beginners series, you'll already  be familiar with a bunch of different types of tensors, you'll have seen vectors (which are like  arrows), covectors (which are like stacks), linear maps (which are spatial transforms that keep lines  parallel and evenly spaced), and the metric tensor (which is like a machine for measuring lengths  and angles in space). So all of these geometrical objects are tensors. And if we have a set of  coordinate basis vectors, we can measure the components of these tensors. So vector components  are obtained by measuring how many basis vectors
+
+00:00:59
+are needed to make up the vector. And of course,  if we measure the vector using a different basis, we'll get different vector components. Covector  components are obtained by counting how many stack planes are pierced by each basis vector.  So at this covector stack here, the first basis vector pierces 4 stacks, and the second  basis vector pierces 2 stacks. And again, if we use different basis vectors, we would get  different components for the covector. Linear map components are obtained by taking copies of basis  vectors, and transforming them with a linear map,
+
+00:01:32
+and then measuring the components of the output  vectors using the basis. And usually we store the components of a linear map inside a matrix like  this. And again, using different basis vectors, we would get different linear map components.  And finally, metric tensor components are obtained by taking the dot products of all the  basis vectors with one another and storing the results in a matrix. And as you probably know,  the dot product can help us get vector lengths, as well as the angle that exists between a pair of  vectors. So we know that when we have a tensor and
+
+00:02:04
+a set of basis vectors, we can always find a way  to measure the tensors components using the set of basis vectors. And if we change the basis vectors  that we're using, we're going to get a different set of components for that same tensor. So since  the same tensor can have different components, based on which coordinate system we use, we're  left with the problem of how to convert tensor components from one basis to another. And the  secret to solving this problem is the forward and
+
+00:02:30
+backward transforms. When we have an old basis and  a new basis, the forward transform is just the set of coefficients that we use to build a new basis  vectors out of the old basis vectors. And we can store these coefficients inside a matrix called F.  Likewise, the backward transform is just the set of coefficients that we use to build the old basis  vectors out of the new basis vectors. And we store these coefficients inside a matrix called B. B is  the inverse matrix of F, which makes sense because
+
+00:02:59
+the forward and backward transforms are opposite  processes. So it turns out that if we know the forward and backward transforms for a pair of  basis vectors sets, then we automatically know how to transform the components of any tensor:  we just apply some number of forward transforms, and some number of backward transforms to the  tensor components, depending on the number of contravariant and covariant transformation rules  that that tensor obeys. So all of that more or less sums up what you would have learned in my  tensors for beginners video series. And all of
+
+00:03:32
+this stuff is what I would call "tensor algebra",  which is the study of manipulating individual tensors in different coordinate systems. Now in  basic tensor algebra, we usually consider only a few tensors at a time. We might take a pair of  vectors, for example, and try to measure the angle between the vectors using the metric tensor. With  tensor calculus, however, we stop dealing with individual tensors and start considering "tensor  fields", which are infinite collections of tensors,
+
+00:04:01
+where the tensor changes at every point in space.  If you studied Multivariable Calculus already, you're probably already familiar with the ideas  of scalar fields and vector fields. Scalars are essentially ordinary numbers. But a scalar field  is an infinite collection of numbers that varies everywhere over space. Temperature and voltage  are examples of scalar fields from physics. You might also think of scalar fields as just  functions where the input is a point in space, and the output is just a number. Also, rather than  dealing with individual vectors, a vector field
+
+00:04:35
+is an infinite collection of vectors, where the vectors vary everywhere in space. The electric and gravitational fields are examples of vector  fields that you would find in physics. Using vector calculus, we can talk about how scalars  and vectors change over space in these scalar and vector fields. For example, we can consider  the directional derivative of a scalar field, which tells us how the scalar field changes  in a given direction. Tensor calculus is a generalization of vector calculus, where we  consider not only scalar and vector fields,
+
+00:05:06
+but general tensor fields as well. For example,  instead of considering individual covector stacks, we consider covector fields, which are also called  "differential forms" or "one forms". And these are fields where a different covector exists at every  point in space. Also, instead of considering a single metric tensor that works everywhere in the  universe, we might consider a metric tensor field where the metric tensor changes from point to  point. A situation where this might come in useful
+
+00:05:33
+is when we have a map of the earth projected  onto a flat plane. Because the Earth is a sphere, projecting it onto a flat plane will always lead  to distortion in the size of objects. So when measuring lengths and angles, we need to be sure  to use the correct metric tensor for that region of space so that we can measure sizes correctly.  Also, in tensor calculus, instead of using individual coordinate basis vectors, we consider  basis vector fields, in a sense, where the basis vectors will change from point to point everywhere  in space. This is something you would find when
+
+00:06:07
+changing from standard Cartesian coordinates to  polar coordinates in 2d. And instead of having a single forward and backward transform that works  everywhere in space, we have different forward and backward transforms for every single point.  So it's almost as if we have a forward transform field and a backward transformed field. So to  sum up, tensor calculus is basically the study of scalar fields, vector fields, covector fields,  metric tensor fields, and any other tensor fields that we can come up with, and also how coordinate  basis vectors change from point to point in space.
+
+00:06:43
+So now that you know a bit about what tensor  calculus is, why would you want to study it? Well, it turns out that a lot of concepts in  intermediate and advanced physics can be described by tensor fields. For example, you might be  used to thinking of electric fields and magnetic fields as two different vector fields that are  separate. However, we can combine electric and magnetic field vectors together into a single  tensor field given by the Faraday tensor. And the four equations of electricity and magnetism,  which are Maxwell's equations, can be combined
+
+00:07:16
+together and simplified into two tensor equations  that describe the behavior of the Faraday tensor everywhere in space. This is usually how  electricity and magnetism are described in special relativity. Another area where tensor  fields are useful is in continuum mechanics, where we study the deformations of continuous materials  under stress. The internal stresses and strains inside a material are given by the Cauchy stress  tensor, which will vary from point to point inside the object forming a tensor field. If we imagine  all materials as being made up of small cubes,
+
+00:07:50
+the T_ij component of this tensor will measure  the force vector on face "i" have the cube acting in direction "j". This means that the diagonal  elements of the tensor will measure normal stress, which is basically like stretching and squashing  of the cube. And the off diagonal elements will measure shear stress, which are the stresses which are PARALLEL (voice error) to the faces of the cube. This can be used to study mechanical parts  used in machinery, but it can also be used to
+
+00:08:18
+understand the stresses of the Earth's tectonic  plates, which cause earthquakes. A final example is in Einstein's general relativity, which is the  theory that describes how energy and momentum can bend space time. This curvature of spacetime is  the ultimate source of gravity in the universe, and can even cause light to bend from an  apparently straight path, if it's in the presence of enough mass energy. It turns out that  general relativity is full of tensors. There's the energy momentum tensor, which describes how energy  and momentum vary throughout space time. There's
+
+00:08:52
+also the Ricci tensor, Riemann curvature tensor,  and metric tensor, which describe how spacetime curves and bends. In fact, one of the reasons why  general relativity is so much more mathematically complicated than special relativity is because of  the metric tensor. In special relativity there's a single metric tensor called the Minkowski  metric, which is constant everywhere in the universe. In general relativity, the metric tensor  will change at every point in space and time, depending on how much energy and momentum  is in the local region. And since the metric
+
+00:09:24
+tensor varies from point to point, we need tensor  calculus in order to understand it properly. So all of that information might have been a little  bit overwhelming, but hopefully, it's given you some motivation to learn tensor calculus, even  if you don't understand all of that right now. So the final question is, what do you need to do  in order to learn tensor calculus? Well, the rest of this video series is going to be dedicated to  helping you learn tensor calculus, but I do have some advice before you start. First of all, you  need to be relatively comfortable with concepts
+
+00:09:55
+from multivariable calculus. There's really no way  getting around this since two tensor calculus is built on top of multivariable calculus. If  concepts like partial derivative, gradients, line integral, and directional derivative don't  sound familiar to you, these videos might be a little too advanced for you right now. However,  there are a lot of free resources online that can help you learn multivariable calculus. If you've  already taken a multivariable calculus class, but you're a bit rusty, I'm going to do a very  quick review of multivariable calculus in my next
+
+00:10:27
+video to help refresh your memory. Next, it's  important to be comfortable with basic concepts from linear algebra, you should understand  concepts like vectors, linear combinations, dot products, and matrix multiplication. Also,  it's my personal opinion that before studying tensor calculus, you should also spend a little  bit of time studying tensor algebra. This might make you a little worried as a lot of people have  never heard of tensor algebra before. But a lot of tensor calculus courses jump straight into tensor  calculus without covering tensor algebra at all.
+
+00:10:58
+I personally feel like this is a mistake. To me,  jumping straight into tensor calculus without doing tensor algebra feels like skipping a really  important step, and you end up paying the price later on for not having a good foundation at the  beginning. The good news is that I already have the video series called tensors. For beginners,  that will teach you the basics of tensor algebra, the series is about three hours long, but I would  say you only need to watch the first hour or so to get started. So before going forward with  the tensor calculus videos, I would strongly
+
+00:11:28
+recommend you watch videos one through six of  my tensors for beginner series. This should get you familiar with forward and backward transforms  between coordinate systems, as well as the ideas of vectors and covectors and how their components  change in different coordinate systems. The last piece of advice I'm going to give you is to  warn you that when studying tensor calculus, we will often take mathematical symbols that  you're familiar with and reinterpret the symbols to give them new meaning. For example, if you know multivariable, calculus and linear algebra, you
+
+00:11:59
+might see the symbols and think of vector arrow,  small change in X and directional derivative. In tensor calculus, we reinterpret the symbols to  mean different things like partial derivative, differential form, and covariant derivative, the  reinterpretation of symbols can be confusing if you're trying to look for help online and you  see all these symbols being used in a strange way that you're not familiar with. To help  avoid confusion, I'll do my best to be very clear about what the symbols I use mean and  when I'm going to reinterpret them to mean
+
+00:12:31
+something new. So that's it for this introduction.  I hope this video series will be helpful to you. We're going to start off the next video with a  very quick review of multivariable calculus.
+
